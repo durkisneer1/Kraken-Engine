@@ -1,0 +1,7 @@
+# ninja log v5
+4	549	7198695640534804	CMakeFiles/DurkGame.dir/library.cpp.obj	f6a59f2f7291307a
+1	515	7198668395584893	CMakeFiles/DurkGame.lib.dir/library.cpp.obj	1df9c7df463b470d
+550	621	7198695641283578	libDurkGame.a	5413e1dd56212005
+1	128	7198698297312621	build.ninja	3757b9c67e17f350
+0	461	7198698314150601	CMakeFiles/DurkGame.dir/src/library.cpp.obj	bf30899c2255078
+473	547	7198698315009706	libDurkGame.a	3e09ad5c2f381ddc

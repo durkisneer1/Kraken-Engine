@@ -1,0 +1,3 @@
+C:/git code/Engine Library/DurkGame/cmake-build-debug/CMakeFiles/DurkGame.dir
+C:/git code/Engine Library/DurkGame/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/git code/Engine Library/DurkGame/cmake-build-debug/CMakeFiles/rebuild_cache.dir
