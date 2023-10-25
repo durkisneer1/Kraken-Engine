@@ -27,6 +27,6 @@ int main(int argc, char** argv) {
 	}
 	DK_Quit(window, renderer);
 
-    return 0;
+	return 0;
 }
 ```
