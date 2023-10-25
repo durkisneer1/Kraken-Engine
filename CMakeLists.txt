@@ -3,4 +3,25 @@ project(DurkGame)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_library(DurkGame src/library.cpp)
+include_directories(
+    include
+    include/SDL2
+)
+link_directories(lib/SDL2)
+
+set(LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../lib)
+#set_target_properties(${PROJECT_NAME} PROPERTIES
+#    LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../lib
+#    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../lib
+#)
+
+add_library(${PROJECT_NAME} SHARED
+    src/durk_game.cpp
+    src/display.cpp
+)
+
+target_link_libraries(${PROJECT_NAME}
+    SDL2
+    SDL2_image
+    SDL2_ttf
+)
