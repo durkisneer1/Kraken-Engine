@@ -5,7 +5,7 @@
 			"path" : "libDurkGame.dll"
 		},
 		{
-			"path" : "libDurkGame.dll.a"
+			"path" : "G:/Code/c++/Engine Lib/DurkGame/lib/libDurkGame.dll.a"
 		},
 		{
 			"path" : "libDurkGame.pdb"
@@ -33,7 +33,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 12,
+				"line" : 14,
 				"parent" : 0
 			},
 			{
@@ -45,7 +45,7 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 17,
+				"line" : 20,
 				"parent" : 0
 			},
 			{
@@ -94,7 +94,8 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2
 			]
 		}
 	],
@@ -148,7 +149,8 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2
 			]
 		}
 	],
@@ -164,6 +166,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/display.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/clock.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

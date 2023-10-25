@@ -65,6 +65,14 @@ build CMakeFiles/DurkGame.dir/src/display.cpp.obj: CXX_COMPILER__DurkGame_unscan
   OBJECT_DIR = CMakeFiles\DurkGame.dir
   OBJECT_FILE_DIR = CMakeFiles\DurkGame.dir\src
 
+build CMakeFiles/DurkGame.dir/src/clock.cpp.obj: CXX_COMPILER__DurkGame_unscanned_Debug G$:/Code/c++/Engine$ Lib/DurkGame/src/clock.cpp || cmake_object_order_depends_target_DurkGame
+  DEFINES = -DDurkGame_EXPORTS
+  DEP_FILE = CMakeFiles\DurkGame.dir\src\clock.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"G:/Code/c++/Engine Lib/DurkGame/include" -I"G:/Code/c++/Engine Lib/DurkGame/include/SDL2"
+  OBJECT_DIR = CMakeFiles\DurkGame.dir
+  OBJECT_FILE_DIR = CMakeFiles\DurkGame.dir\src
+
 
 # =============================================================================
 # Link build statements for SHARED_LIBRARY target DurkGame
@@ -73,7 +81,7 @@ build CMakeFiles/DurkGame.dir/src/display.cpp.obj: CXX_COMPILER__DurkGame_unscan
 #############################################
 # Link the shared library libDurkGame.dll
 
-build libDurkGame.dll libDurkGame.dll.a: CXX_SHARED_LIBRARY_LINKER__DurkGame_Debug CMakeFiles/DurkGame.dir/src/durk_game.cpp.obj CMakeFiles/DurkGame.dir/src/display.cpp.obj
+build libDurkGame.dll G$:/Code/c++/Engine$ Lib/DurkGame/lib/libDurkGame.dll.a: CXX_SHARED_LIBRARY_LINKER__DurkGame_Debug CMakeFiles/DurkGame.dir/src/durk_game.cpp.obj CMakeFiles/DurkGame.dir/src/display.cpp.obj CMakeFiles/DurkGame.dir/src/clock.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -g
   LINK_LIBRARIES = -lSDL2  -lSDL2_image  -lSDL2_ttf  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   LINK_PATH = -L"G:/Code/c++/Engine Lib/DurkGame/lib/SDL2"
@@ -82,7 +90,7 @@ build libDurkGame.dll libDurkGame.dll.a: CXX_SHARED_LIBRARY_LINKER__DurkGame_Deb
   PRE_LINK = cd .
   RESTAT = 1
   TARGET_FILE = libDurkGame.dll
-  TARGET_IMPLIB = libDurkGame.dll.a
+  TARGET_IMPLIB = "G:\Code\c++\Engine Lib\DurkGame\lib\libDurkGame.dll.a"
   TARGET_PDB = DurkGame.dll.dbg
 
 

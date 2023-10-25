@@ -9,4 +9,3 @@ namespace DK_Display {
 	void cls(SDL_Renderer* renderer);
 	void flip(SDL_Renderer* renderer);
 }
-

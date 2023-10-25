@@ -1,9 +1,18 @@
 # ninja log v5
-4	118	7199093700000000	libDurkGame.dll.a	6381f31cc1d36282
-3	1177	7199036080000000	CMakeFiles/DurkGame.dir/src/durk_game.cpp.obj	60df9f72b8770aa5
-8	1184	7199036080000000	CMakeFiles/DurkGame.dir/src/display.cpp.obj	d702c56afbd2627e
-4	118	7199093700000000	libDurkGame.dll	6381f31cc1d36282
+67	193	7199116160000000	libDurkGame.dll.a	470ec550d5fe345b
+8	1168	7199095200000000	CMakeFiles/DurkGame.dir/src/durk_game.cpp.obj	60df9f72b8770aa5
+3	1190	7199095200000000	CMakeFiles/DurkGame.dir/src/display.cpp.obj	d702c56afbd2627e
+67	193	7199116160000000	libDurkGame.dll	470ec550d5fe345b
+3	67	7199116160000000	CMakeFiles/DurkGame.dir/src/clock.cpp.obj	e2f790e282a5650c
 3	516	7198978700000000	CMakeFiles/DurkGame.dir/src/engine.cpp.obj	f84e36e305c79401
-1	334	7199093860000000	build.ninja	291fb1c9db09ae95
+1	334	7199116860000000	build.ninja	291fb1c9db09ae95
 1	491	7198894020000000	CMakeFiles/DurkGame.dir/src/library.cpp.obj	d324c8cb36c710e4
 1	1135	7198987800000000	CMakeFiles/DurkGame.dir/src/DurkGame.cpp.obj	1555cf5a5db29146
+3	114	7199116880000000	libDurkGame.dll	b75db1f9996752b
+3	114	7199116880000000	G:/Code/c++/Engine Lib/DurkGame/lib/libDurkGame.dll.a	b75db1f9996752b
+4	812	7199122960000000	CMakeFiles/DurkGame.dir/src/clock.cpp.obj	e2f790e282a5650c
+812	939	7199122960000000	libDurkGame.dll	b75db1f9996752b
+812	939	7199122960000000	G:/Code/c++/Engine Lib/DurkGame/lib/libDurkGame.dll.a	b75db1f9996752b
+3	1160	7199123660000000	CMakeFiles/DurkGame.dir/src/durk_game.cpp.obj	60df9f72b8770aa5
+1160	1280	7199123660000000	libDurkGame.dll	b75db1f9996752b
+1160	1280	7199123660000000	G:/Code/c++/Engine Lib/DurkGame/lib/libDurkGame.dll.a	b75db1f9996752b
