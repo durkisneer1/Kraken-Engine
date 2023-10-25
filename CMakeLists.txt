@@ -9,12 +9,6 @@ include_directories(
 )
 link_directories(lib/SDL2)
 
-set(LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../lib)
-#set_target_properties(${PROJECT_NAME} PROPERTIES
-#    LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../lib
-#    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../lib
-#)
-
 add_library(${PROJECT_NAME} SHARED
     src/durk_game.cpp
     src/display.cpp
