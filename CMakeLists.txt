@@ -15,6 +15,7 @@ add_library(${PROJECT_NAME} SHARED
     src/durk_game.cpp
     src/display.cpp
     src/clock.cpp
+    src/texture.cpp
 )
 
 target_link_libraries(${PROJECT_NAME}
