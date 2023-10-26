@@ -24,7 +24,7 @@ void DK_Texture::blit() {
 	SDL_RenderCopy(renderer, texture, nullptr, &rect);
 }
 
-DK_Math::Vector2 DK_Texture::getSize() const {
+DK_Math::Vector2i DK_Texture::getSize() const {
 	return {rect.w, rect.h};
 }
 
@@ -42,6 +42,10 @@ DK_Rect DK_Texture::getRect() const {
 	return rect;
 }
 
-void DK_Texture::setCenter(DK_Math::Vector2 pos) {
+void DK_Texture::setCenter(DK_Math::Vector2i pos) {
 	rect.setCenter(pos);
+}
+
+void DK_Texture::setCenterF(DK_Math::Vector2f pos) {
+	rect.setCenterF(pos);
 }

@@ -32,6 +32,11 @@ namespace DK_Display {
 		SDL_RenderClear(renderer);
 	}
 
+	void fill(SDL_Renderer *renderer, SDL_Color color) {
+		SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
+		SDL_RenderFillRect(renderer, nullptr);
+	}
+
 	void flip(SDL_Renderer *renderer) {
 		SDL_RenderPresent(renderer);
 	}

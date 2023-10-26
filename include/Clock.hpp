@@ -7,6 +7,7 @@ namespace DK_Time {
 	public:
 		Clock() = default;
 		~Clock() = default;
+
 		float tick(int frameRate = 0);
 	private:
 		Uint32 startTicks = 0;

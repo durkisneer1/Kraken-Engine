@@ -84,6 +84,13 @@ build CMakeFiles/DurkGame.dir/src/rect.cpp.obj: CXX_COMPILER__DurkGame_unscanned
   OBJECT_DIR = CMakeFiles\DurkGame.dir
   OBJECT_FILE_DIR = CMakeFiles\DurkGame.dir\src
 
+build CMakeFiles/DurkGame.dir/src/input.cpp.obj: CXX_COMPILER__DurkGame_unscanned_Debug G$:/Code/c++/Engine$ Lib/DurkGame/src/input.cpp || cmake_object_order_depends_target_DurkGame
+  DEP_FILE = CMakeFiles\DurkGame.dir\src\input.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"G:/Code/c++/Engine Lib/DurkGame/include" -I"G:/Code/c++/Engine Lib/DurkGame/include/SDL2"
+  OBJECT_DIR = CMakeFiles\DurkGame.dir
+  OBJECT_FILE_DIR = CMakeFiles\DurkGame.dir\src
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target DurkGame
@@ -92,7 +99,7 @@ build CMakeFiles/DurkGame.dir/src/rect.cpp.obj: CXX_COMPILER__DurkGame_unscanned
 #############################################
 # Link the static library G:\Code\c++\Engine Lib\DurkGame\lib\libDurkGame.a
 
-build G$:/Code/c++/Engine$ Lib/DurkGame/lib/libDurkGame.a: CXX_STATIC_LIBRARY_LINKER__DurkGame_Debug CMakeFiles/DurkGame.dir/src/durk_game.cpp.obj CMakeFiles/DurkGame.dir/src/display.cpp.obj CMakeFiles/DurkGame.dir/src/clock.cpp.obj CMakeFiles/DurkGame.dir/src/texture.cpp.obj CMakeFiles/DurkGame.dir/src/rect.cpp.obj
+build G$:/Code/c++/Engine$ Lib/DurkGame/lib/libDurkGame.a: CXX_STATIC_LIBRARY_LINKER__DurkGame_Debug CMakeFiles/DurkGame.dir/src/durk_game.cpp.obj CMakeFiles/DurkGame.dir/src/display.cpp.obj CMakeFiles/DurkGame.dir/src/clock.cpp.obj CMakeFiles/DurkGame.dir/src/texture.cpp.obj CMakeFiles/DurkGame.dir/src/rect.cpp.obj CMakeFiles/DurkGame.dir/src/input.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles\DurkGame.dir
   POST_BUILD = cd .

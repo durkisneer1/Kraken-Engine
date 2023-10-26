@@ -17,6 +17,7 @@ add_library(${PROJECT_NAME} STATIC
     src/clock.cpp
     src/texture.cpp
     src/rect.cpp
+    src/input.cpp
 )
 
 target_link_libraries(${PROJECT_NAME}
