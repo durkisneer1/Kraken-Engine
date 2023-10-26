@@ -11,11 +11,12 @@ link_directories(lib/SDL2)
 
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../lib)
 
-add_library(${PROJECT_NAME} SHARED
+add_library(${PROJECT_NAME} STATIC
     src/durk_game.cpp
     src/display.cpp
     src/clock.cpp
     src/texture.cpp
+    src/rect.cpp
 )
 
 target_link_libraries(${PROJECT_NAME}

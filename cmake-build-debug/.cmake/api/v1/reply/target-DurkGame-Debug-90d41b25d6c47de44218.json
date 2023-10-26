@@ -1,14 +1,9 @@
 {
+	"archive" : {},
 	"artifacts" : 
 	[
 		{
-			"path" : "libDurkGame.dll"
-		},
-		{
-			"path" : "G:/Code/c++/Engine Lib/DurkGame/lib/libDurkGame.dll.a"
-		},
-		{
-			"path" : "libDurkGame.pdb"
+			"path" : "G:/Code/c++/Engine Lib/DurkGame/lib/libDurkGame.a"
 		}
 	],
 	"backtrace" : 1,
@@ -17,8 +12,6 @@
 		"commands" : 
 		[
 			"add_library",
-			"link_directories",
-			"target_link_libraries",
 			"include_directories"
 		],
 		"files" : 
@@ -39,18 +32,6 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 10,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 21,
-				"parent" : 0
-			},
-			{
-				"command" : 3,
-				"file" : 0,
 				"line" : 6,
 				"parent" : 0
 			}
@@ -65,20 +46,14 @@
 					"fragment" : "-g -std=gnu++20 -fdiagnostics-color=always"
 				}
 			],
-			"defines" : 
-			[
-				{
-					"define" : "DurkGame_EXPORTS"
-				}
-			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 4,
+					"backtrace" : 2,
 					"path" : "G:/Code/c++/Engine Lib/DurkGame/include"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 2,
 					"path" : "G:/Code/c++/Engine Lib/DurkGame/include/SDL2"
 				}
 			],
@@ -96,48 +71,14 @@
 				0,
 				1,
 				2,
-				3
+				3,
+				4
 			]
 		}
 	],
 	"id" : "DurkGame::@6890427a1f51a3e7e1df",
-	"link" : 
-	{
-		"commandFragments" : 
-		[
-			{
-				"fragment" : "",
-				"role" : "flags"
-			},
-			{
-				"backtrace" : 2,
-				"fragment" : "-L\"G:\\Code\\c++\\Engine Lib\\DurkGame\\lib\\SDL2\"",
-				"role" : "libraryPath"
-			},
-			{
-				"backtrace" : 3,
-				"fragment" : "-lSDL2",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 3,
-				"fragment" : "-lSDL2_image",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 3,
-				"fragment" : "-lSDL2_ttf",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
-				"role" : "libraries"
-			}
-		],
-		"language" : "CXX"
-	},
 	"name" : "DurkGame",
-	"nameOnDisk" : "libDurkGame.dll",
+	"nameOnDisk" : "libDurkGame.a",
 	"paths" : 
 	{
 		"build" : ".",
@@ -152,7 +93,8 @@
 				0,
 				1,
 				2,
-				3
+				3,
+				4
 			]
 		}
 	],
@@ -181,7 +123,13 @@
 			"compileGroupIndex" : 0,
 			"path" : "src/texture.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/rect.cpp",
+			"sourceGroupIndex" : 0
 		}
 	],
-	"type" : "SHARED_LIBRARY"
+	"type" : "STATIC_LIBRARY"
 }

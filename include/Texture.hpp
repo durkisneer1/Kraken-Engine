@@ -3,17 +3,21 @@
 #include <SDL_image.h>
 #include <iostream>
 #include "Math.hpp"
+#include "Rect.hpp"
 
 
 class DK_Texture {
 public:
-	DK_Texture(SDL_Renderer* renderer, const char* fileDir, float scale = 1.0f);
+	DK_Texture(SDL_Renderer* renderer, const char* fileDir);
 	~DK_Texture() = default;
-	void blit() const;
+	void blit();
 	[[nodiscard]] DK_Math::Vector2 getSize() const;
-	[[nodiscard]] SDL_Rect getRect() const;
+	void setSize(int w, int h);
+	void scaleBy(float scale);
+	[[nodiscard]] DK_Rect getRect() const;
+	void setCenter(DK_Math::Vector2 pos);
 private:
 	SDL_Renderer* renderer;
 	SDL_Texture* texture;
-	SDL_Rect rect = {};
+	DK_Rect rect = {};
 };

@@ -7,6 +7,7 @@
 #include "Clock.hpp"
 #include "Texture.hpp"
 #include "Math.hpp"
+#include "Rect.hpp"
 
 void DK_Init();
 void DK_Quit(SDL_Window* window, SDL_Renderer* renderer);

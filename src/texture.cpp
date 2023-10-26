@@ -1,7 +1,7 @@
 #include "../include/Texture.hpp"
 
 
-DK_Texture::DK_Texture(SDL_Renderer *renderer, const char *fileDir, float scale) {
+DK_Texture::DK_Texture(SDL_Renderer *renderer, const char *fileDir) {
 	this->renderer = renderer;
 	SDL_Surface* surface = IMG_Load(fileDir);
 	if (!surface) {
@@ -17,12 +17,10 @@ DK_Texture::DK_Texture(SDL_Renderer *renderer, const char *fileDir, float scale)
 
 	int w, h;
 	SDL_QueryTexture(texture, nullptr, nullptr, &w, &h);
-	int scaleW = int(float(w) * scale);
-	int scaleH = int(float(h) * scale);
-	this->rect = { 0, 0, scaleW, scaleH };
+	this->rect = { 0, 0, w, h };
 }
 
-void DK_Texture::blit() const {
+void DK_Texture::blit() {
 	SDL_RenderCopy(renderer, texture, nullptr, &rect);
 }
 
@@ -30,6 +28,20 @@ DK_Math::Vector2 DK_Texture::getSize() const {
 	return {rect.w, rect.h};
 }
 
-SDL_Rect DK_Texture::getRect() const {
+void DK_Texture::setSize(int w, int h) {
+	rect.w = w;
+	rect.h = h;
+}
+
+void DK_Texture::scaleBy(float scale) {
+	rect.w = int(float(rect.w) * scale);
+	rect.h = int(float(rect.h) * scale);
+}
+
+DK_Rect DK_Texture::getRect() const {
 	return rect;
+}
+
+void DK_Texture::setCenter(DK_Math::Vector2 pos) {
+	rect.setCenter(pos);
 }
