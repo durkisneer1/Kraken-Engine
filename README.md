@@ -11,7 +11,7 @@ const int WIN_HEIGHT = 600;
 const int MOVE_SPEED = 250;
 
 
-int main(int argc, char** argv) {
+int main() {
 	// Window Setup
 	DK_Init();
 	SDL_Window* window = DK_Display::setMode("DurkGame", WIN_WIDTH, WIN_HEIGHT);
