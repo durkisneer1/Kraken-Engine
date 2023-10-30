@@ -6,21 +6,38 @@ namespace DK_Input {
 		return SDL_GetKeyboardState(nullptr);
 	}
 
-	DK_Math::Vector2f getVector(Uint8 up, Uint8 down, Uint8 left, Uint8 right) {
+	DK_Math::Vector2f getVector(
+        const std::vector<SDL_Scancode>& up,
+        const std::vector<SDL_Scancode>& left,
+        const std::vector<SDL_Scancode>& down,
+        const std::vector<SDL_Scancode>& right
+        ) {
 		const Uint8* keys = getKeysPressed();
 		DK_Math::Vector2f vector;
-		if (keys[up]) {
-			vector.y = -1;
-		}
-		if (keys[down]) {
-			vector.y = 1;
-		}
-		if (keys[left]) {
-			vector.x = -1;
-		}
-		if (keys[right]) {
-			vector.x = 1;
-		}
+        for (auto scancode : up) {
+            if (keys[scancode]) {
+                vector.y -= 1;
+                break;
+            }
+        }
+        for (auto scancode : left) {
+            if (keys[scancode]) {
+                vector.x -= 1;
+                break;
+            }
+        }
+        for (auto scancode : down) {
+            if (keys[scancode]) {
+                vector.y += 1;
+                break;
+            }
+        }
+        for (auto scancode : right) {
+            if (keys[scancode]) {
+                vector.x += 1;
+                break;
+            }
+        }
 		if (vector.length() > 0) {
 			vector.normalize();
 		}

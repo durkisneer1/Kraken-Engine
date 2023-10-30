@@ -10,6 +10,8 @@ struct DK_Rect : public SDL_Rect {
 
 	DK_Math::Vector2i getPos();
 	DK_Math::Vector2f getPosF();
+    bool collidePoint(DK_Math::Vector2i pos);
+    bool collidePointF(DK_Math::Vector2f pos);
 
 	void setCenter(DK_Math::Vector2i pos);
 	void setCenterF(DK_Math::Vector2f pos);
