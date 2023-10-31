@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "C:/git code/Engine Library/DurkGame/lib/libDurkGame.a"
+			"path" : "G:/Code/c++/Engine Lib/DurkGame/lib/libDurkGame.a"
 		}
 	],
 	"backtrace" : 1,
@@ -50,11 +50,11 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "C:/git code/Engine Library/DurkGame/include"
+					"path" : "G:/Code/c++/Engine Lib/DurkGame/include"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/git code/Engine Library/DurkGame/include/SDL2"
+					"path" : "G:/Code/c++/Engine Lib/DurkGame/include/SDL2"
 				}
 			],
 			"language" : "CXX",
