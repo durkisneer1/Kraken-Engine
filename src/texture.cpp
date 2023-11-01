@@ -41,11 +41,3 @@ void DK_Texture::scaleBy(float scale) {
 DK_Rect DK_Texture::getRect() const {
 	return rect;
 }
-
-void DK_Texture::setCenter(DK_Math::Vector2i pos) {
-	rect.setCenter(pos);
-}
-
-void DK_Texture::setCenterF(DK_Math::Vector2f pos) {
-	rect.setCenterF(pos);
-}

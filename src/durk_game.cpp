@@ -17,7 +17,7 @@ void DK_Init() {
 		SDL_Quit();
 		IMG_Quit();
 		exit(3);
-	};
+	}
 }
 
 void DK_Quit(SDL_Window* window, SDL_Renderer* renderer) {

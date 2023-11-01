@@ -5,27 +5,87 @@ DK_Math::Vector2i DK_Rect::getPos() {
 	return {x, y};
 }
 
-DK_Math::Vector2f DK_Rect::getPosF() {
-	return {float(x), float(y)};
-}
-
-void DK_Rect::setCenter(DK_Math::Vector2i pos) {
-	x = pos.x - w / 2;
-	y = pos.y - h / 2;
-}
-
-void DK_Rect::setCenterF(DK_Math::Vector2f pos) {
-	x = int(pos.x - float(w) / 2);
-	y = int(pos.y - float(h) / 2);
-}
-
 bool DK_Rect::collidePoint(DK_Math::Vector2i pos) {
     return (pos.x >= x && pos.x <= x + w && pos.y >= y && pos.y <= y + h);
 }
 
-bool DK_Rect::collidePointF(DK_Math::Vector2f pos) {
-    return (
-        pos.x >= float(x) && pos.x <= float(x) + float(w) &&
-        pos.y >= float(y) && pos.y <= float(y) + float(h)
-    );
+void DK_Rect::setCenter(DK_Math::Vector2i pos) {
+    x = pos.x - w / 2;
+    y = pos.y - h / 2;
+}
+
+void DK_Rect::setTopLeft(DK_Math::Vector2i pos) {
+    x = pos.x;
+    y = pos.y;
+}
+
+void DK_Rect::setTopMid(DK_Math::Vector2i pos) {
+    x = pos.x - w / 2;
+    y = pos.y;
+}
+
+void DK_Rect::setTopRight(DK_Math::Vector2i pos) {
+    x = pos.x - w;
+    y = pos.y;
+}
+
+void DK_Rect::setBottomLeft(DK_Math::Vector2i pos) {
+    x = pos.x;
+    y = pos.y - h;
+}
+
+void DK_Rect::setBottomMid(DK_Math::Vector2i pos) {
+    x = pos.x - w / 2;
+    y = pos.y - h;
+}
+
+void DK_Rect::setBottomRight(DK_Math::Vector2i pos) {
+    x = pos.x - w;
+    y = pos.y - h;
+}
+
+void DK_Rect::setLeftMid(DK_Math::Vector2i pos) {
+    x = pos.x;
+    y = pos.y - h / 2;
+}
+
+void DK_Rect::setRightMid(DK_Math::Vector2i pos) {
+    x = pos.x - w;
+    y = pos.y - h / 2;
+}
+
+DK_Math::Vector2i DK_Rect::getCenter() {
+    return {x + w / 2, y + h / 2};
+}
+
+DK_Math::Vector2i DK_Rect::getTopLeft() {
+    return {x, y};
+}
+
+DK_Math::Vector2i DK_Rect::getTopMid() {
+    return {x + w / 2, y};
+}
+
+DK_Math::Vector2i DK_Rect::getTopRight() {
+    return {x + w, y};
+}
+
+DK_Math::Vector2i DK_Rect::getBottomLeft() {
+    return {x, y + h};
+}
+
+DK_Math::Vector2i DK_Rect::getBottomMid() {
+    return {x + w / 2, y + h};
+}
+
+DK_Math::Vector2i DK_Rect::getBottomRight() {
+    return {x + w, y + h};
+}
+
+DK_Math::Vector2i DK_Rect::getLeftMid() {
+    return {x, y + h / 2};
+}
+
+DK_Math::Vector2i DK_Rect::getRightMid() {
+    return {x + w, y + h / 2};
 }

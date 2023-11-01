@@ -18,6 +18,7 @@ add_library(${PROJECT_NAME} STATIC
     src/texture.cpp
     src/rect.cpp
     src/input.cpp
+        src/font.cpp
 )
 
 target_link_libraries(${PROJECT_NAME}
