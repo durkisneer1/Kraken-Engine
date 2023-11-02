@@ -1,26 +1,20 @@
 #include "../include/Texture.hpp"
 
 
-DK_Texture::DK_Texture(SDL_Renderer *renderer, const char *fileDir) {
-	this->renderer = renderer;
-	SDL_Surface* surface = IMG_Load(fileDir);
-	if (!surface) {
-		std::cout << "IMG_Load Error: " << IMG_GetError() << std::endl;
-		exit(3);
-	}
-	texture = SDL_CreateTextureFromSurface(renderer, surface);
-	if (!texture) {
-		std::cout << "SDL_CreateTextureFromSurface Error: " << SDL_GetError() << std::endl;
-		exit(3);
-	}
-	SDL_FreeSurface(surface);
+void DK_Texture::loadTextureFile(SDL_Renderer* renderer, const char *fileDir) {
+    texture = IMG_LoadTexture(renderer, fileDir);
+    if (!texture) {
+        std::cout << "SDL_CreateTextureFromSurface Error: " << SDL_GetError() << std::endl;
+        exit(3);
+    }
 
-	int w, h;
-	SDL_QueryTexture(texture, nullptr, nullptr, &w, &h);
-	this->rect = { 0, 0, w, h };
+    int w, h;
+    SDL_QueryTexture(texture, nullptr, nullptr, &w, &h);
+    this->rect = { 0, 0, w, h };
 }
 
-void DK_Texture::blit() {
+void DK_Texture::blit(SDL_Renderer* renderer, DK_Rect newRect) {
+    rect = newRect;
 	SDL_RenderCopy(renderer, texture, nullptr, &rect);
 }
 
