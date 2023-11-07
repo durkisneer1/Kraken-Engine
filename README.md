@@ -26,8 +26,10 @@ int main() {
 		float deltaTime = clock.tick(60) / 1000.0f;
 
 		while (SDL_PollEvent(&event)) {
-			if (event.type == SDL_QUIT) {
-				run = false;
+			switch (event.type) {
+				case SDL_QUIT:
+					run = false;
+					break;
 			}
 		}
 
