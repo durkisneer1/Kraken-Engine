@@ -1,4 +1,8 @@
 # DurkGame
+<p align="center">
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg">
+  <a href="https://app.codacy.com/gh/durkisneer1/DurkGame/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/17028e01d32f4441be4bd5e37edb94ce"/></a>
+</p>
 DurkGame is an extention of SDL2. There will be different object types to inherit from in the future such as `CharacterBody`s, `RigidBody`s, and `PhysicsBody`s. Eventually, I plan to also implement handy mathematical functions such as pathfinding and raycasting.
 
 # Documentation
