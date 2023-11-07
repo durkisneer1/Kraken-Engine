@@ -1,8 +1,8 @@
 # DurkGame
-DurkGame is an extention of SDL2. There will be different object types to inherit from in the future such as `CharacterBody`s, `RigidBody`s, and `PhysicsBody`s.
+DurkGame is an extention of SDL2. There will be different object types to inherit from in the future such as `CharacterBody`s, `RigidBody`s, and `PhysicsBody`s. Eventually, I plan to also implement handy mathematical functions such as pathfinding and raycasting.
 
 # Documentation
-I don't have a documentation page yet, but I plan on it soon.
+I don't have a documentation page yet, but I plan on making one soon.
 In the very least, here is a basic window setup program using DurkGame:
 ```c++
 #include <DurkGame.hpp>
