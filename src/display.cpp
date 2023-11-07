@@ -2,11 +2,11 @@
 
 
 namespace DK_Display {
-	SDL_Window *setMode(const char *title, int width, int height) {
+	SDL_Window *setMode(const char *title, DK_Math::Vector2 size) {
 		SDL_Window *window = SDL_CreateWindow(
 			title,
 			SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-			width, height, SDL_WINDOW_SHOWN);
+			(int)size.x, (int)size.y, SDL_WINDOW_SHOWN);
 		if (window == nullptr) {
 			std::cout << "SDL_CreateWindow Error: " << SDL_GetError() << std::endl;
 			SDL_Quit();

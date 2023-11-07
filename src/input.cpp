@@ -2,18 +2,24 @@
 
 
 namespace DK_Input {
+	DK_Math::Vector2 getMousePos() {
+		int x, y;
+		SDL_GetMouseState(&x, &y);
+		return {x, y};
+	}
+
 	const Uint8* getKeysPressed() {
 		return SDL_GetKeyboardState(nullptr);
 	}
 
-	DK_Math::Vector2f getVector(
+	DK_Math::Vector2 getVector(
         const std::vector<SDL_Scancode>& up,
         const std::vector<SDL_Scancode>& left,
         const std::vector<SDL_Scancode>& down,
         const std::vector<SDL_Scancode>& right
         ) {
 		const Uint8* keys = getKeysPressed();
-		DK_Math::Vector2f vector;
+		DK_Math::Vector2 vector;
         for (auto scancode : up) {
             if (keys[scancode]) {
                 vector.y -= 1;
