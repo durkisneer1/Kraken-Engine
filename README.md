@@ -1,7 +1,9 @@
 # DurkGame
- SDL2 wrapper
+DurkGame is an extention of SDL2. There will be different object types to inherit from in the future such as `CharacterBody`s, `RigidBody`s, and `PhysicsBody`s.
 
-Here is a basic window setup program using DurkGame:
+# Documentation
+I don't have a documentation page yet, but I plan on it soon.
+In the very least, here is a basic window setup program using DurkGame:
 ```c++
 #include <DurkGame.hpp>
 
@@ -35,3 +37,8 @@ int main() {
     return 0;
 }
 ```
+
+# License
+[MIT](LICENSE) @ Derrick Martinez
+
+DurkGame is a non-profit, free, and open-source extended library for SDL2.
