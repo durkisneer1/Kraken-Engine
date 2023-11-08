@@ -21,9 +21,9 @@ namespace DK_Math {
 		}
 
 		void normalize() {
-			float length = sqrtf(x * x + y * y);
-			x /= length;
-			y /= length;
+			float c = length();
+			x /= c;
+			y /= c;
 		}
 
 		Vector2 operator*(float scalar) const {

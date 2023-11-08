@@ -1,6 +1,7 @@
 #pragma once
 #include <SDL.h>
 #include <vector>
+#include <algorithm>
 #include "Math.hpp"
 
 namespace DK_Input {
