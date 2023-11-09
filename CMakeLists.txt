@@ -3,14 +3,17 @@ project(DurkGame)
 
 set(CMAKE_CXX_STANDARD 20)
 
+find_package(SDL2 REQUIRED)
+
+# Header Files
+set(SDL2_INCLUDE_DIRS "${CMAKE_CURRENT_LIST_DIR}/include/SDL2")
 include_directories(
+    ${SDL2_INCLUDE_DIRS}
     include
     include/SDL2
 )
-link_directories(lib/SDL2)
 
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../lib)
-
+# Source Files
 add_library(${PROJECT_NAME} STATIC
     src/durk_game.cpp
     src/display.cpp
@@ -18,13 +21,28 @@ add_library(${PROJECT_NAME} STATIC
     src/texture.cpp
     src/rect.cpp
     src/input.cpp
-        src/font.cpp
+    src/font.cpp
     src/character.cpp
     src/math.cpp
 )
 
-target_link_libraries(${PROJECT_NAME}
-    SDL2
-    SDL2_image
-    SDL2_ttf
-)
+# SDL2 Libraries
+if (${CMAKE_SIZEOF_VOID_P} MATCHES 8)
+    set(SDL2_LIBRARIES
+        "${CMAKE_CURRENT_LIST_DIR}/lib/x64/SDL2.lib"
+        "${CMAKE_CURRENT_LIST_DIR}/lib/x64/SDL2main.lib"
+        "${CMAKE_CURRENT_LIST_DIR}/lib/x64/SDL2_image.lib"
+        "${CMAKE_CURRENT_LIST_DIR}/lib/x64/SDL2_ttf.lib"
+    )
+else ()
+    set(SDL2_LIBRARIES
+        "${CMAKE_CURRENT_LIST_DIR}/lib/x86/SDL2.lib"
+        "${CMAKE_CURRENT_LIST_DIR}/lib/x86/SDL2main.lib"
+        "${CMAKE_CURRENT_LIST_DIR}/lib/x86/SDL2_image.lib"
+        "${CMAKE_CURRENT_LIST_DIR}/lib/x86/SDL2_ttf.lib"
+    )
+endif ()
+string(STRIP "${SDL2_LIBRARIES}" SDL2_LIBRARIES)
+
+# Link Libraries
+target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARIES})

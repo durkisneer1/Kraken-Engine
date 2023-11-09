@@ -152,7 +152,7 @@ extern "C" {
  *  The prototype for the application's main() function
  */
 typedef int (*SDL_main_func)(int argc, char *argv[]);
-extern SDLMAIN_DECLSPEC int SDL_main([[maybe_unused]] [[maybe_unused]] int argc, [[maybe_unused]] [[maybe_unused]] char *argv[]);
+extern SDLMAIN_DECLSPEC int SDL_main(int argc, char *argv[]);
 
 
 /**
@@ -262,6 +262,13 @@ extern DECLSPEC int SDLCALL SDL_UIKitRunApp(int argc, char *argv[], SDL_main_fun
  * \since This function is available since SDL 2.24.0.
  */
 extern DECLSPEC int SDLCALL SDL_GDKRunApp(SDL_main_func mainFunction, void *reserved);
+
+/**
+ * Callback from the application to let the suspend continue.
+ *
+ * \since This function is available since SDL 2.28.0.
+ */
+extern DECLSPEC void SDLCALL SDL_GDKSuspendComplete(void);
 
 #endif /* __GDK__ */
 

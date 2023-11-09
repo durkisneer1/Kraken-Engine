@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2023.2.2/bin/ninja/win/x64/ninja.exe" -G Ninja -S "G:\Code\c++\Engine Lib\DurkGame" -B "G:\Code\c++\Engine Lib\DurkGame\cmake-build-debug"
+"C:\Program Files\JetBrains\CLion 2022.3.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2022.3.3/bin/ninja/win/x64/ninja.exe" -G Ninja -S "C:\git code\Engine Library\DurkGame" -B "C:\git code\Engine Library\DurkGame\cmake-build-debug"
 -- Configuring done (0.2s)
 -- Generating done (0.0s)
--- Build files have been written to: G:/Code/c++/Engine Lib/DurkGame/cmake-build-debug
+-- Build files have been written to: C:/git code/Engine Library/DurkGame/cmake-build-debug

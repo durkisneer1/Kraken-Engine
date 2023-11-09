@@ -1,21 +1,12 @@
 # ninja log v5
-3	1290	7210386340000000	CMakeFiles/DurkGame.dir/src/durk_game.cpp.obj	1e9d8817e3bd3c21
-13	1528	7210299040000000	CMakeFiles/DurkGame.dir/src/character.cpp.obj	6d05360da6e5415e
-4	1280	7210317840000000	CMakeFiles/DurkGame.dir/src/display.cpp.obj	140ee1d48a9f8301
-13	994	7209386780000000	CMakeFiles/DurkGame.dir/src/clock.cpp.obj	426e80588c7fdf4c
-1	344	7212046320000000	build.ninja	291fb1c9db09ae95
-8	1505	7210299040000000	CMakeFiles/DurkGame.dir/src/texture.cpp.obj	273f446bc3a5629d
-13	916	7209393400000000	CMakeFiles/DurkGame.dir/src/rect.cpp.obj	73a0d6f524c304c
-15	880	7210261560000000	CMakeFiles/DurkGame.dir/src/font.cpp.obj	115b51b8030465b1
-32	1390	7209386780000000	CMakeFiles/DurkGame.dir/src/input.cpp.obj	43fcac3cc3281d4a
-1290	1600	7210386340000000	G:/Code/c++/Engine Lib/DurkGame/lib/libDurkGame.a	9fef8852a5a0863c
-43	487	7212050100000000	CMakeFiles/DurkGame.dir/src/math.cpp.obj	bf8ec5414ac5622
-17	1055	7212050100000000	CMakeFiles/DurkGame.dir/src/clock.cpp.obj	426e80588c7fdf4c
-21	1257	7212050100000000	CMakeFiles/DurkGame.dir/src/rect.cpp.obj	73a0d6f524c304c
-4	1745	7212050100000000	CMakeFiles/DurkGame.dir/src/display.cpp.obj	140ee1d48a9f8301
-27	1756	7212050100000000	CMakeFiles/DurkGame.dir/src/font.cpp.obj	115b51b8030465b1
-32	1764	7212050100000000	CMakeFiles/DurkGame.dir/src/character.cpp.obj	6d05360da6e5415e
-13	1769	7212050100000000	CMakeFiles/DurkGame.dir/src/texture.cpp.obj	273f446bc3a5629d
-9	1796	7212050100000000	CMakeFiles/DurkGame.dir/src/durk_game.cpp.obj	1e9d8817e3bd3c21
-4	1147	7212050300000000	CMakeFiles/DurkGame.dir/src/input.cpp.obj	43fcac3cc3281d4a
-1147	1567	7212050300000000	G:/Code/c++/Engine Lib/DurkGame/lib/libDurkGame.a	43130af7f816eb40
+31	2985	7212517803339567	CMakeFiles/DurkGame.dir/src/character.cpp.obj	86d2b5681e84be29
+10	3082	7212506353905309	CMakeFiles/DurkGame.dir/src/display.cpp.obj	d15cb142642f91ef
+3159	3366	7212517807104745	libDurkGame.a	81c0855fb0f89951
+10	3158	7212517805110660	CMakeFiles/DurkGame.dir/src/durk_game.cpp.obj	f3f09bd982996acb
+4	254	7212517924435246	build.ninja	3757b9c67e17f350
+28	2027	7212506343236592	CMakeFiles/DurkGame.dir/src/clock.cpp.obj	52140ef5ff154412
+16	2888	7212517802294060	CMakeFiles/DurkGame.dir/src/texture.cpp.obj	b8a6bc06ec4899b7
+63	2499	7212506348067168	CMakeFiles/DurkGame.dir/src/rect.cpp.obj	25f9dccda2f8afe7
+38	2913	7212517802544089	CMakeFiles/DurkGame.dir/src/font.cpp.obj	6ee16af12628032e
+55	2934	7212506352428863	CMakeFiles/DurkGame.dir/src/input.cpp.obj	852136ef017c4fe9
+90	1044	7212506333411673	CMakeFiles/DurkGame.dir/src/math.cpp.obj	d072ab97cc0debc8

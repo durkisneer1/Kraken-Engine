@@ -169,7 +169,7 @@ extern DECLSPEC int SDLCALL IMG_Init(int flags);
  * Deinitialize SDL_image.
  *
  * This should be the last function you call in SDL_image, after freeing all
- * other res. This will unload any shared libraries it is using for
+ * other resources. This will unload any shared libraries it is using for
  * various codecs.
  *
  * After this call, a call to IMG_Init(0) will return 0 (no codecs loaded).
@@ -2116,7 +2116,7 @@ extern DECLSPEC IMG_Animation * SDLCALL IMG_LoadAnimation_RW(SDL_RWops *src, int
 extern DECLSPEC IMG_Animation * SDLCALL IMG_LoadAnimationTyped_RW(SDL_RWops *src, int freesrc, const char *type);
 
 /**
- * Dispose of an IMG_Animation and free its res.
+ * Dispose of an IMG_Animation and free its resources.
  *
  * The provided `anim` pointer is not valid once this call returns.
  *

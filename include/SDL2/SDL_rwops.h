@@ -521,7 +521,7 @@ extern DECLSPEC size_t SDLCALL SDL_RWwrite(SDL_RWops *context,
  * Close and free an allocated SDL_RWops structure.
  *
  * SDL_RWclose() closes and cleans up the SDL_RWops stream. It releases any
- * res used by the stream and frees the SDL_RWops itself with
+ * resources used by the stream and frees the SDL_RWops itself with
  * SDL_FreeRW(). This returns 0 on success, or -1 if the stream failed to
  * flush to its output (e.g. to disk).
  *
