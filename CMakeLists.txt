@@ -26,23 +26,5 @@ add_library(${PROJECT_NAME} STATIC
     src/math.cpp
 )
 
-# SDL2 Libraries
-if (${CMAKE_SIZEOF_VOID_P} MATCHES 8)
-    set(SDL2_LIBRARIES
-        "${CMAKE_CURRENT_LIST_DIR}/lib/x64/SDL2.lib"
-        "${CMAKE_CURRENT_LIST_DIR}/lib/x64/SDL2main.lib"
-        "${CMAKE_CURRENT_LIST_DIR}/lib/x64/SDL2_image.lib"
-        "${CMAKE_CURRENT_LIST_DIR}/lib/x64/SDL2_ttf.lib"
-    )
-else ()
-    set(SDL2_LIBRARIES
-        "${CMAKE_CURRENT_LIST_DIR}/lib/x86/SDL2.lib"
-        "${CMAKE_CURRENT_LIST_DIR}/lib/x86/SDL2main.lib"
-        "${CMAKE_CURRENT_LIST_DIR}/lib/x86/SDL2_image.lib"
-        "${CMAKE_CURRENT_LIST_DIR}/lib/x86/SDL2_ttf.lib"
-    )
-endif ()
-string(STRIP "${SDL2_LIBRARIES}" SDL2_LIBRARIES)
-
 # Link Libraries
-target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} SDL2::SDL2)

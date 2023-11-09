@@ -12,7 +12,8 @@
 		"commands" : 
 		[
 			"add_library",
-			"include_directories"
+			"include_directories",
+			"target_link_libraries"
 		],
 		"files" : 
 		[
@@ -34,6 +35,12 @@
 				"file" : 0,
 				"line" : 10,
 				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 30,
+				"parent" : 0
 			}
 		]
 	},
@@ -50,11 +57,16 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "C:/git code/Engine Library/DurkGame/include/SDL2"
+					"path" : "G:/Code/c++/Engine Lib/DurkGame/include/SDL2"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "C:/git code/Engine Library/DurkGame/include"
+					"path" : "G:/Code/c++/Engine Lib/DurkGame/include"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "G:/Code/c++/Engine Lib/DurkGame/cmake-build-debug/../include"
 				}
 			],
 			"language" : "CXX",
