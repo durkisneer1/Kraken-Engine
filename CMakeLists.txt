@@ -20,6 +20,7 @@ add_library(${PROJECT_NAME} STATIC
     src/input.cpp
         src/font.cpp
     src/character.cpp
+    src/math.cpp
 )
 
 target_link_libraries(${PROJECT_NAME}

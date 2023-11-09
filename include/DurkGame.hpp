@@ -17,4 +17,4 @@
 
 
 void DK_Init();
-void DK_Quit(SDL_Window* window, SDL_Renderer* renderer);
+void DK_Quit(SDL_Window *window, SDL_Renderer *renderer);

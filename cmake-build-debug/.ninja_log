@@ -1,48 +1,21 @@
 # ninja log v5
-4	1250	7206431024844565	CMakeFiles/DurkGame.dir/src/durk_game.cpp.obj	d01893b1111a096a
-8	2497	7205607799032467	CMakeFiles/DurkGame.dir/src/display.cpp.obj	70b43ca60fc98cb3
-24	1966	7205607793673059	CMakeFiles/DurkGame.dir/src/clock.cpp.obj	9e8670323a86937e
-1	344	7209384040000000	build.ninja	291fb1c9db09ae95
-9	1201	7206431024354638	CMakeFiles/DurkGame.dir/src/texture.cpp.obj	a18812ed6d20df78
-30	2250	7205607796526816	CMakeFiles/DurkGame.dir/src/rect.cpp.obj	d415bef87b14eb3
-77	2402	7205607798077398	CMakeFiles/DurkGame.dir/src/input.cpp.obj	1ca38bdbc8bc299a
-58	1980	7205607793843099	CMakeFiles/DurkGame.dir/src/font.cpp.obj	90864cc7662b815c
-22	342	7209386780000000	CMakeFiles/DurkGame.dir/src/character.cpp.obj	6d05360da6e5415e
-13	994	7209386780000000	CMakeFiles/DurkGame.dir/src/clock.cpp.obj	426e80588c7fdf4c
-26	1009	7209386780000000	CMakeFiles/DurkGame.dir/src/font.cpp.obj	115b51b8030465b1
-10	1207	7209386780000000	CMakeFiles/DurkGame.dir/src/rect.cpp.obj	73a0d6f524c304c
-32	1390	7209386780000000	CMakeFiles/DurkGame.dir/src/input.cpp.obj	43fcac3cc3281d4a
-1	1413	7209386780000000	CMakeFiles/DurkGame.dir/src/display.cpp.obj	140ee1d48a9f8301
-6	1592	7209386780000000	CMakeFiles/DurkGame.dir/src/durk_game.cpp.obj	1e9d8817e3bd3c21
-13	916	7209393400000000	CMakeFiles/DurkGame.dir/src/rect.cpp.obj	73a0d6f524c304c
-9	1301	7209393400000000	CMakeFiles/DurkGame.dir/src/texture.cpp.obj	273f446bc3a5629d
-5	1308	7209393400000000	CMakeFiles/DurkGame.dir/src/durk_game.cpp.obj	1e9d8817e3bd3c21
-1308	1592	7209393400000000	G:/Code/c++/Engine Lib/DurkGame/lib/libDurkGame.a	9fef8852a5a0863c
-4	272	7209418200000000	CMakeFiles/DurkGame.dir/src/character.cpp.obj	6d05360da6e5415e
-272	556	7209418200000000	G:/Code/c++/Engine Lib/DurkGame/lib/libDurkGame.a	9fef8852a5a0863c
-15	880	7210261560000000	CMakeFiles/DurkGame.dir/src/font.cpp.obj	115b51b8030465b1
-19	1461	7210261560000000	CMakeFiles/DurkGame.dir/src/character.cpp.obj	6d05360da6e5415e
-9	1468	7210261560000000	CMakeFiles/DurkGame.dir/src/texture.cpp.obj	273f446bc3a5629d
-4	1518	7210261560000000	CMakeFiles/DurkGame.dir/src/durk_game.cpp.obj	1e9d8817e3bd3c21
-1519	1850	7210261560000000	G:/Code/c++/Engine Lib/DurkGame/lib/libDurkGame.a	9fef8852a5a0863c
-8	1469	7210271360000000	CMakeFiles/DurkGame.dir/src/character.cpp.obj	6d05360da6e5415e
-4	1476	7210271360000000	CMakeFiles/DurkGame.dir/src/durk_game.cpp.obj	1e9d8817e3bd3c21
-1476	1803	7210271380000000	G:/Code/c++/Engine Lib/DurkGame/lib/libDurkGame.a	9fef8852a5a0863c
-7	1339	7210294880000000	CMakeFiles/DurkGame.dir/src/character.cpp.obj	6d05360da6e5415e
-3	1396	7210294880000000	CMakeFiles/DurkGame.dir/src/durk_game.cpp.obj	1e9d8817e3bd3c21
-1397	1710	7210294900000000	G:/Code/c++/Engine Lib/DurkGame/lib/libDurkGame.a	9fef8852a5a0863c
-3	1247	7210295500000000	CMakeFiles/DurkGame.dir/src/durk_game.cpp.obj	1e9d8817e3bd3c21
-1248	1566	7210295520000000	G:/Code/c++/Engine Lib/DurkGame/lib/libDurkGame.a	9fef8852a5a0863c
-8	1505	7210299040000000	CMakeFiles/DurkGame.dir/src/texture.cpp.obj	273f446bc3a5629d
-13	1528	7210299040000000	CMakeFiles/DurkGame.dir/src/character.cpp.obj	6d05360da6e5415e
-4	1548	7210299040000000	CMakeFiles/DurkGame.dir/src/durk_game.cpp.obj	1e9d8817e3bd3c21
-1548	1874	7210299040000000	G:/Code/c++/Engine Lib/DurkGame/lib/libDurkGame.a	9fef8852a5a0863c
-4	1248	7210315420000000	CMakeFiles/DurkGame.dir/src/durk_game.cpp.obj	1e9d8817e3bd3c21
-1248	1568	7210315420000000	G:/Code/c++/Engine Lib/DurkGame/lib/libDurkGame.a	9fef8852a5a0863c
-4	1280	7210317840000000	CMakeFiles/DurkGame.dir/src/display.cpp.obj	140ee1d48a9f8301
-8	1340	7210317840000000	CMakeFiles/DurkGame.dir/src/durk_game.cpp.obj	1e9d8817e3bd3c21
-1341	1663	7210317840000000	G:/Code/c++/Engine Lib/DurkGame/lib/libDurkGame.a	9fef8852a5a0863c
-4	1386	7210385240000000	CMakeFiles/DurkGame.dir/src/durk_game.cpp.obj	1e9d8817e3bd3c21
-1386	1702	7210385240000000	G:/Code/c++/Engine Lib/DurkGame/lib/libDurkGame.a	9fef8852a5a0863c
 3	1290	7210386340000000	CMakeFiles/DurkGame.dir/src/durk_game.cpp.obj	1e9d8817e3bd3c21
+13	1528	7210299040000000	CMakeFiles/DurkGame.dir/src/character.cpp.obj	6d05360da6e5415e
+4	1280	7210317840000000	CMakeFiles/DurkGame.dir/src/display.cpp.obj	140ee1d48a9f8301
+13	994	7209386780000000	CMakeFiles/DurkGame.dir/src/clock.cpp.obj	426e80588c7fdf4c
+1	344	7212046320000000	build.ninja	291fb1c9db09ae95
+8	1505	7210299040000000	CMakeFiles/DurkGame.dir/src/texture.cpp.obj	273f446bc3a5629d
+13	916	7209393400000000	CMakeFiles/DurkGame.dir/src/rect.cpp.obj	73a0d6f524c304c
+15	880	7210261560000000	CMakeFiles/DurkGame.dir/src/font.cpp.obj	115b51b8030465b1
+32	1390	7209386780000000	CMakeFiles/DurkGame.dir/src/input.cpp.obj	43fcac3cc3281d4a
 1290	1600	7210386340000000	G:/Code/c++/Engine Lib/DurkGame/lib/libDurkGame.a	9fef8852a5a0863c
+43	487	7212050100000000	CMakeFiles/DurkGame.dir/src/math.cpp.obj	bf8ec5414ac5622
+17	1055	7212050100000000	CMakeFiles/DurkGame.dir/src/clock.cpp.obj	426e80588c7fdf4c
+21	1257	7212050100000000	CMakeFiles/DurkGame.dir/src/rect.cpp.obj	73a0d6f524c304c
+4	1745	7212050100000000	CMakeFiles/DurkGame.dir/src/display.cpp.obj	140ee1d48a9f8301
+27	1756	7212050100000000	CMakeFiles/DurkGame.dir/src/font.cpp.obj	115b51b8030465b1
+32	1764	7212050100000000	CMakeFiles/DurkGame.dir/src/character.cpp.obj	6d05360da6e5415e
+13	1769	7212050100000000	CMakeFiles/DurkGame.dir/src/texture.cpp.obj	273f446bc3a5629d
+9	1796	7212050100000000	CMakeFiles/DurkGame.dir/src/durk_game.cpp.obj	1e9d8817e3bd3c21
+4	1147	7212050300000000	CMakeFiles/DurkGame.dir/src/input.cpp.obj	43fcac3cc3281d4a
+1147	1567	7212050300000000	G:/Code/c++/Engine Lib/DurkGame/lib/libDurkGame.a	43130af7f816eb40

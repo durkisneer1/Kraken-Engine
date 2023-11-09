@@ -2,16 +2,17 @@
 
 #include <SDL.h>
 #include <SDL_ttf.h>
+#include <iostream>
+#include "Texture.hpp"
 
 
 class DK_Font {
 public:
-    DK_Font() = default;
-    DK_Font(TTF_Font* font, int ptSize) : font(font) {}
+	DK_Font(SDL_Renderer *renderer, const char *fileDir, int ptSize);
+	DK_Texture *render(const char *text, SDL_Color color, int wrapLength = 0);
+	~DK_Font() { if (font) TTF_CloseFont(font); }
 
-    SDL_Surface* render(const char* text, SDL_Color color, int wrapLength = 0);
-
-    ~DK_Font() { TTF_CloseFont(font); }
 private:
-    TTF_Font* font;
+	SDL_Renderer *renderer;
+	TTF_Font *font;
 };

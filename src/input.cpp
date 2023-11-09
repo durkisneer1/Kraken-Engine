@@ -42,7 +42,7 @@ namespace DK_Input {
 			vector.x += 1;
 		}
 
-		if (vector.length() > 0) {
+		if (vector.getLength() > 0) {
 			vector.normalize();
 		}
 

@@ -1,4 +1,5 @@
 #pragma once
+
 #include <cmath>
 
 
@@ -8,40 +9,16 @@ namespace DK_Math {
 		float y = 0.0f;
 
 		Vector2() = default;
-		Vector2(float x, float y) : x(x), y(y) {}
-		Vector2(int x, int y) : x((float)x), y((float)y) {}
+		Vector2(float x, float y);
+		Vector2(int x, int y);
 
-		void ZERO() {
-			x = 0.0f;
-			y = 0.0f;
-		}
+		void ZERO();
+		[[nodiscard]] float getLength() const;
+		void normalize();
 
-		[[nodiscard]] float length() const {
-			return sqrtf(x * x + y * y);
-		}
-
-		void normalize() {
-			float c = length();
-			x /= c;
-			y /= c;
-		}
-
-		Vector2 operator*(float scalar) const {
-			return {x * scalar, y * scalar};
-		}
-
-		Vector2 operator/(float scalar) const {
-			return {x / scalar, y / scalar};
-		}
-
-		Vector2 operator+(const Vector2& other) const {
-			return {x + other.x, y + other.y};
-		}
-
-		Vector2 operator+=(const Vector2& other) {
-			x += other.x;
-			y += other.y;
-			return *this;
-		}
+		Vector2 operator*(float scalar) const;
+		Vector2 operator/(float scalar) const;
+		Vector2 operator+(const Vector2 &other) const;
+		Vector2 operator+=(const Vector2 &other);
 	};
 }
