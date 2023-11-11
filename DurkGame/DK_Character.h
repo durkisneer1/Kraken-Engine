@@ -7,22 +7,25 @@
 #include "DK_Globals.h"
 
 
-class DK_Character {
-public:
-	DK_Character(SDL_Renderer* renderer, DK_Texture* texture);
-	~DK_Character() = default;
+namespace dk {
+	class Character {
+	public:
+		Character(SDL_Renderer* renderer, dk::Texture* texture);
+		~Character() = default;
 
-	[[nodiscard]] DK_Math::Vector2 getPosition() const;
-	[[nodiscard]] DK_Rect getRect() const;
+		[[nodiscard]] dk::math::Vector2 getPosition() const;
+		[[nodiscard]] dk::Rect getRect() const;
+		void process();
 
-protected:
-	SDL_Renderer* renderer;
-	DK_Texture* texture;
-	DK_Rect rect = {};
+	protected:
+		SDL_Renderer* renderer;
+		dk::Texture* texture;
+		dk::Rect rect = {};
 
-	DK_Math::Vector2 velocity;
-	DK_Math::Vector2 position;
+		dk::math::Vector2 velocity;
+		dk::math::Vector2 position;
 
-	void move();
-	void draw();
-};
+		void move();
+		void draw();
+	};
+}

@@ -18,6 +18,9 @@
 #include "DK_Surface.h"
 
 
-void DK_Init();
+namespace dk {
+	void init();
 
-void DK_Quit(SDL_Window* window, SDL_Renderer* renderer);
+	void quit(SDL_Window* window, SDL_Renderer* renderer);
+}
+

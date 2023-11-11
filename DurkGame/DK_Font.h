@@ -7,13 +7,15 @@
 #include "DK_Surface.h"
 
 
-class DK_Font {
-public:
-	DK_Font(SDL_Renderer* renderer, const char* fileDir, int ptSize);
-	DK_Texture* render(const char* text, SDL_Color color, int wrapLength = 0);
-	~DK_Font() { if (font) TTF_CloseFont(font); }
+namespace dk {
+	class Font {
+	public:
+		Font(SDL_Renderer* renderer, const char* fileDir, int ptSize);
+		dk::Texture* render(const char* text, SDL_Color color, int wrapLength = 0);
+		~Font() { if (font) TTF_CloseFont(font); }
 
-private:
-	SDL_Renderer* renderer;
-	TTF_Font* font;
-};
+	private:
+		SDL_Renderer* renderer;
+		TTF_Font* font;
+	};
+}

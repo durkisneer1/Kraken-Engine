@@ -5,23 +5,25 @@
 #include "DK_Rect.h"
 
 
-class DK_Surface {
-public:
-	DK_Surface() = default;
-	DK_Surface(DK_Math::Vector2 size);
-	~DK_Surface() {
-		if (surface) SDL_FreeSurface(surface);
-	}
+namespace dk {
+	class Surface {
+	public:
+		Surface() = default;
+		Surface(dk::math::Vector2 size);
+		~Surface() {
+			if (surface) SDL_FreeSurface(surface);
+		}
 
-	void fill(SDL_Color color);
-	DK_Math::Vector2 getSize();
-	DK_Rect getRect();
-	void free() { SDL_FreeSurface(surface); }
+		void fill(SDL_Color color);
+		dk::math::Vector2 getSize();
+		dk::Rect getRect();
+		void free() { SDL_FreeSurface(surface); }
 
-	SDL_Surface* get() { return surface; }
-	void set(SDL_Surface* setSurface);
+		SDL_Surface* get() { return surface; }
+		void set(SDL_Surface* setSurface);
 
-private:
-	SDL_Surface* surface = nullptr;
-	DK_Rect rect = {};
-};
+	private:
+		SDL_Surface* surface = nullptr;
+		dk::Rect rect = {};
+	};
+}

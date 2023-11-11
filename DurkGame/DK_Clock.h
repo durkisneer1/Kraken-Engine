@@ -3,16 +3,18 @@
 #include <SDL.h>
 
 
-namespace DK_Time {
-	class Clock {
-	public:
-		Clock() = default;
-		~Clock() = default;
+namespace dk {
+	namespace time {
+		class Clock {
+		public:
+			Clock() = default;
+			~Clock() = default;
 
-		float tick(int frameRate = 0);
+			float tick(int frameRate = 0);
 
-	private:
-		Uint32 startTicks = 0;
-		Uint32 endTicks = 0;
-	};
+		private:
+			Uint32 startTicks = 0;
+			Uint32 endTicks = 0;
+		};
+	}
 }
