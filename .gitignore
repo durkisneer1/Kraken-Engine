@@ -16,6 +16,8 @@ mono_crash.*
 *.userosscache
 *.sln.docstates
 *.dll
+*.lib
+*.idb
 *.pdb
 *.ipch/
 *.obj/
