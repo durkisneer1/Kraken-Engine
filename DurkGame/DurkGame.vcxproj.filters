@@ -21,37 +21,37 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DurkGame.h">
+    <ClInclude Include="DurkGame.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DK_Clock.h">
+    <ClInclude Include="Clock.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DK_Display.h">
+    <ClInclude Include="Font.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DK_Font.h">
+    <ClInclude Include="Globals.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DK_Globals.h">
+    <ClInclude Include="Input.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DK_Input.h">
+    <ClInclude Include="Rect.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DK_Rect.h">
+    <ClInclude Include="Texture.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DK_Texture.h">
+    <ClInclude Include="Character.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DK_Character.h">
+    <ClInclude Include="Math.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DK_Math.h">
+    <ClInclude Include="Surface.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DK_Surface.h">
+    <ClInclude Include="RenderWindow.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -62,31 +62,31 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dk_character.cpp">
+    <ClCompile Include="character.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dk_clock.cpp">
+    <ClCompile Include="clock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dk_display.cpp">
+    <ClCompile Include="font.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dk_font.cpp">
+    <ClCompile Include="input.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dk_input.cpp">
+    <ClCompile Include="math.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dk_math.cpp">
+    <ClCompile Include="rect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dk_rect.cpp">
+    <ClCompile Include="texture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dk_texture.cpp">
+    <ClCompile Include="surface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dk_surface.cpp">
+    <ClCompile Include="render_window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

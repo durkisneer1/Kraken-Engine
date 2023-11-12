@@ -2,7 +2,7 @@
 //
 
 #include "pch.h"
-#include "DurkGame.h"
+#include "DurkGame.hpp"
 #include <iostream>
 
 
@@ -31,10 +31,8 @@ namespace dk {
 		}
 	}
 
-	void quit(SDL_Window* window, SDL_Renderer* renderer) {
+	void quit() {
 		Mix_CloseAudio();
-		SDL_DestroyRenderer(renderer);
-		SDL_DestroyWindow(window);
 		IMG_Quit();
 		TTF_Quit();
 		SDL_Quit();

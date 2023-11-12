@@ -153,37 +153,37 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="DK_Character.h" />
-    <ClInclude Include="DK_Clock.h" />
-    <ClInclude Include="DK_Display.h" />
-    <ClInclude Include="DK_Surface.h" />
-    <ClInclude Include="DurkGame.h" />
-    <ClInclude Include="DK_Font.h" />
+    <ClInclude Include="Character.hpp" />
+    <ClInclude Include="Clock.hpp" />
+    <ClInclude Include="RenderWindow.hpp" />
+    <ClInclude Include="Surface.hpp" />
+    <ClInclude Include="DurkGame.hpp" />
+    <ClInclude Include="Font.hpp" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="DK_Globals.h" />
-    <ClInclude Include="DK_Input.h" />
-    <ClInclude Include="DK_Math.h" />
+    <ClInclude Include="Globals.hpp" />
+    <ClInclude Include="Input.hpp" />
+    <ClInclude Include="Math.hpp" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="DK_Rect.h" />
-    <ClInclude Include="DK_Texture.h" />
+    <ClInclude Include="Rect.hpp" />
+    <ClInclude Include="Texture.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dk_character.cpp" />
-    <ClCompile Include="dk_clock.cpp" />
-    <ClCompile Include="dk_display.cpp" />
-    <ClCompile Include="dk_surface.cpp" />
+    <ClCompile Include="character.cpp" />
+    <ClCompile Include="clock.cpp" />
+    <ClCompile Include="render_window.cpp" />
+    <ClCompile Include="surface.cpp" />
     <ClCompile Include="durk_game.cpp" />
-    <ClCompile Include="dk_font.cpp" />
-    <ClCompile Include="dk_input.cpp" />
-    <ClCompile Include="dk_math.cpp" />
+    <ClCompile Include="font.cpp" />
+    <ClCompile Include="input.cpp" />
+    <ClCompile Include="math.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="dk_rect.cpp" />
-    <ClCompile Include="dk_texture.cpp" />
+    <ClCompile Include="rect.cpp" />
+    <ClCompile Include="texture.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
