@@ -11,13 +11,12 @@ In the very least, here is a basic window setup program using DurkGame:
 ```c++
 #include <DurkGame.hpp>
 
-const dk::math::Vector2 WIN_SIZE = {800, 600};
+const dk::math::Vector2 WIN_SIZE = { 800, 600 };
 
 int main() {
 	dk::init();
 
-	SDL_Window* window = DK_Display::setMode("DurkGame", WIN_SIZE);
-	SDL_Renderer* renderer = DK_Display::setRenderer(window);
+	dk::RenderWindow window({ 800, 600 }, "DurkGame App");
 	dk::time::Clock clock;
 
 	SDL_Event event;
@@ -27,19 +26,18 @@ int main() {
 
 		while (SDL_PollEvent(&event)) {
 			switch (event.type) {
-				case SDL_QUIT:
-					run = false;
-					break;
+			case SDL_QUIT:
+				run = false;
+				break;
 			}
 		}
 
-		dk::display::cls(renderer);
-		dk::display::fill(renderer, {40, 40, 40});
-		dk::display::flip(renderer);
+		window.fill({ 40, 40, 40 });
+		window.flip();
 	}
 
-	dk::quit(window, renderer);
-    return 0;
+	dk::quit();
+	return 0;
 }
 ```
 
