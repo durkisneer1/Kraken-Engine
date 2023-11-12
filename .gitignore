@@ -29,6 +29,9 @@ mono_crash.*
 *.opendb
 *.log
 *.vscode/
+*Debug/
+*x64/
+*.vs/
 
 # Rider
 .idea/
