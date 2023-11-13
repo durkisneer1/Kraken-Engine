@@ -156,7 +156,6 @@
     <ClInclude Include="Character.hpp" />
     <ClInclude Include="Clock.hpp" />
     <ClInclude Include="RenderWindow.hpp" />
-    <ClInclude Include="Surface.hpp" />
     <ClInclude Include="DurkGame.hpp" />
     <ClInclude Include="Font.hpp" />
     <ClInclude Include="framework.h" />
@@ -171,7 +170,6 @@
     <ClCompile Include="character.cpp" />
     <ClCompile Include="clock.cpp" />
     <ClCompile Include="render_window.cpp" />
-    <ClCompile Include="surface.cpp" />
     <ClCompile Include="durk_game.cpp" />
     <ClCompile Include="font.cpp" />
     <ClCompile Include="input.cpp" />

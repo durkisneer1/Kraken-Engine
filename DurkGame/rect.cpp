@@ -15,6 +15,14 @@ namespace dk {
 		return (pos.x >= x && pos.x <= x + w && pos.y >= y && pos.y <= y + h);
 	}
 
+	void Rect::clamp(dk::math::Vector2 min, dk::math::Vector2 max) {
+		if ((max.x - min.x < this->w) || max.y - min.y < this->h) {
+			return;
+		}
+		setTopLeft(clampVec(getTopLeft(), min, max));
+		setBottomRight(clampVec(getBottomRight(), min, max));
+	}
+
 	void Rect::setCenter(dk::math::Vector2 pos) {
 		x = pos.x - w / 2;
 		y = pos.y - h / 2;

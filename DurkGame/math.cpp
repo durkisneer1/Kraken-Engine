@@ -34,10 +34,27 @@ namespace dk {
 			return { x + other.x, y + other.y };
 		}
 
+		Vector2 Vector2::operator-(const Vector2& other) const {
+			return { x - other.x, y - other.y };
+		}
+
 		Vector2 Vector2::operator+=(const Vector2& other) {
 			x += other.x;
 			y += other.y;
 			return *this;
+		}
+
+		Vector2 clampVec(Vector2 vec, Vector2 min, Vector2 max) {
+			vec.x = clamp(vec.x, min.x, max.x);
+			vec.y = clamp(vec.y, min.y, max.y);
+			return vec;
+		}
+
+		template <class digit>
+		digit clamp(digit val, digit min, digit max) {
+			if (min > max) return val;
+			val = std::min(max, std::max(min, val));
+			return val;
 		}
 	}
 }

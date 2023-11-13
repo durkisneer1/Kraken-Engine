@@ -2,6 +2,7 @@
 
 #include <SDL.h>
 #include "Math.hpp"
+#include "Globals.hpp"
 
 
 namespace dk {
@@ -14,6 +15,7 @@ namespace dk {
         dk::math::Vector2 getPos();
         dk::math::Vector2 getSize();
         bool collidePoint(dk::math::Vector2 pos);
+        void clamp(dk::math::Vector2 min = {}, dk::math::Vector2 max = WIN_SIZE);
 
         void setCenter(dk::math::Vector2 pos);
         void setTopLeft(dk::math::Vector2 pos);

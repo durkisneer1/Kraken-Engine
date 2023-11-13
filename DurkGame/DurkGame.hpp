@@ -11,7 +11,6 @@
 #include "Font.hpp"
 #include "Character.hpp"
 #include "Globals.hpp"
-#include "Surface.hpp"
 #include "RenderWindow.hpp"
 
 

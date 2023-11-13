@@ -5,7 +5,6 @@
 #include <iostream>
 #include "Math.hpp"
 #include "Rect.hpp"
-#include "Surface.hpp"
 #include "RenderWindow.hpp"
 
 
@@ -14,7 +13,9 @@ namespace dk {
 	public:
 		Texture() = default;
 		Texture(dk::RenderWindow& window, const char* fileDir);
-		Texture(dk::RenderWindow& window, dk::Surface& surface);
+		Texture(dk::RenderWindow& window, dk::math::Vector2 size, SDL_Color color);
+		Texture(dk::RenderWindow& window, SDL_Surface* surface);
+		Texture(dk::RenderWindow& window, SDL_Texture* texture);
 		~Texture() { if (texture) SDL_DestroyTexture(texture); }
 
 		[[nodiscard]] dk::math::Vector2 getSize() const;
@@ -25,6 +26,7 @@ namespace dk {
 		void scaleBy(float scale);
 		void blit(dk::Rect rect);
 		void blitAngle(dk::Rect rect, float angle);
+		void query();
 	private:
 		dk::RenderWindow& window;
 		SDL_Texture* texture = nullptr;
