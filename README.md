@@ -19,12 +19,11 @@ int main() {
 	dk::RenderWindow window({ 800, 600 }, "DurkGame App");
 	dk::time::Clock clock;
 
-	SDL_Event event;
 	bool run = true;
 	while (run) {
 		float deltaTime = clock.tick(60) / 1000.0f;
 
-		while (SDL_PollEvent(&event)) {
+		for (const auto& event : window.getEvents()) {
 			switch (event.type) {
 			case SDL_QUIT:
 				run = false;
