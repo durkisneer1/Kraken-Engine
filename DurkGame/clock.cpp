@@ -4,18 +4,20 @@
 
 namespace dk {
 	namespace time {
-		float Clock::tick(int frameRate) {
-			endTicks = SDL_GetTicks() - startTicks;
-			if (frameRate > 0) {
-				int frameDelay = 1000 / frameRate;
-				if (endTicks < frameDelay) {
-					Uint32 neutralTicks = frameDelay - endTicks;
-					SDL_Delay(neutralTicks);
-					endTicks = neutralTicks;
-				}
+		float Clock::tick(Uint32 frameRate) {
+			if (frameRate <= 0) return 0.0f;
+
+			endTick = SDL_GetTicks() - startTick;
+			Uint32 frameTime = 1000 / frameRate;
+
+			if (endTick < frameTime) {
+				Uint32 neutralTicks = frameTime - endTick;
+				SDL_Delay(neutralTicks);
+				endTick = neutralTicks;
 			}
-			startTicks = SDL_GetTicks();
-			return (float)endTicks;
+
+			startTick = SDL_GetTicks();
+			return (float)endTick;
 		}
 	}
 }

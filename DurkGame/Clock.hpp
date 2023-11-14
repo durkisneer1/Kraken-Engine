@@ -10,11 +10,11 @@ namespace dk {
 			Clock() = default;
 			~Clock() = default;
 
-			float tick(int frameRate = 0);
+			float tick(Uint32 frameRate = 0);
 
 		private:
-			Uint32 startTicks = 0;
-			Uint32 endTicks = 0;
+			Uint32 startTick = 0;
+			Uint32 endTick = 0;
 		};
 	}
 }
