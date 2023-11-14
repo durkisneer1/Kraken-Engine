@@ -32,6 +32,14 @@ namespace dk {
 		SDL_DestroyWindow(window);
 	}
 
+	const std::vector<SDL_Event>& RenderWindow::getEvents() {
+		events.clear();
+		while (SDL_PollEvent(&event)) {
+			events.push_back(event);
+		}
+		return events;
+	}
+
 	void RenderWindow::fill(SDL_Color color) {
 		SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
 		SDL_RenderClear(renderer);

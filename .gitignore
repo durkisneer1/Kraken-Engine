@@ -200,3 +200,4 @@ mono_crash.*
 
 # JetBrains Rider
 .idea/
+*.vcxproj
