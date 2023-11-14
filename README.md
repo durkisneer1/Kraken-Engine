@@ -16,7 +16,7 @@ const dk::math::Vector2 WIN_SIZE = { 800, 600 };
 int main() {
 	dk::init();
 
-	dk::RenderWindow window({ 800, 600 }, "DurkGame App");
+	dk::RenderWindow window(WIN_SIZE, "DurkGame App");
 	dk::time::Clock clock;
 
 	bool run = true;
