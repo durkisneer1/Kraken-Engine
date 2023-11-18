@@ -14,6 +14,10 @@ namespace dk {
 		return (pos.x >= x && pos.x <= x + w && pos.y >= y && pos.y <= y + h);
 	}
 
+	bool Rect::collideRect(Rect rect) {
+		return (x < rect.x + rect.w && x + w > rect.x && y < rect.y + rect.h && y + h > rect.y);
+	}
+
 	void Rect::clamp(dk::math::Vector2 min, dk::math::Vector2 max) {
 		if ((max.x - min.x < this->w) || (max.y - min.y < this->h)) {
 			return;
@@ -25,6 +29,22 @@ namespace dk {
 	void Rect::setCenter(dk::math::Vector2 pos) {
 		x = pos.x - w / 2;
 		y = pos.y - h / 2;
+	}
+
+	void Rect::setLeft(float x) {
+		this->x = x;
+	}
+
+	void Rect::setRight(float x) {
+		this->x = x - w;
+	}
+
+	void Rect::setTop(float y) {
+		this->y = y;
+	}
+
+	void Rect::setBottom(float y) {
+		this->y = y - h;
 	}
 
 	void Rect::setTopLeft(dk::math::Vector2 pos) {
@@ -69,6 +89,22 @@ namespace dk {
 
 	dk::math::Vector2 Rect::getCenter() {
 		return { x + w / 2, y + h / 2 };
+	}
+
+	float Rect::getLeft() {
+		return x;
+	}
+
+	float Rect::getRight() {
+		return x + w;
+	}
+
+	float Rect::getTop() {
+		return y;
+	}
+
+	float Rect::getBottom() {
+		return y + h;
 	}
 
 	dk::math::Vector2 Rect::getTopLeft() {

@@ -16,8 +16,13 @@ namespace dk {
         dk::math::Vector2 getSize();
         bool collidePoint(dk::math::Vector2 pos);
         void clamp(dk::math::Vector2 min = {}, dk::math::Vector2 max = WIN_SIZE);
+        bool collideRect(Rect rect);
 
         void setCenter(dk::math::Vector2 pos);
+        void setLeft(float x);
+        void setRight(float x);
+        void setTop(float y);
+        void setBottom(float y);
         void setTopLeft(dk::math::Vector2 pos);
         void setTopMid(dk::math::Vector2 pos);
         void setTopRight(dk::math::Vector2 pos);
@@ -28,6 +33,10 @@ namespace dk {
         void setRightMid(dk::math::Vector2 pos);
 
         dk::math::Vector2 getCenter();
+        float getLeft();
+        float getRight();
+        float getTop();
+        float getBottom();
         dk::math::Vector2 getTopLeft();
         dk::math::Vector2 getTopMid();
         dk::math::Vector2 getTopRight();

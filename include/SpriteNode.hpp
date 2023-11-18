@@ -22,6 +22,7 @@ namespace dk {
         static const std::vector<SpriteNode*>& getStaticSprites();
 
         virtual void process(double deltaTime) = 0;
+
     protected:
         dk::RenderWindow& window;
         dk::Texture& texture;
