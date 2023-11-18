@@ -1,5 +1,4 @@
-#include "pch.h"
-#include "Rect.hpp"
+#include "../include/Rect.hpp"
 
 
 namespace dk {
@@ -16,7 +15,7 @@ namespace dk {
 	}
 
 	void Rect::clamp(dk::math::Vector2 min, dk::math::Vector2 max) {
-		if ((max.x - min.x < this->w) || max.y - min.y < this->h) {
+		if ((max.x - min.x < this->w) || (max.y - min.y < this->h)) {
 			return;
 		}
 		setTopLeft(clampVec(getTopLeft(), min, max));

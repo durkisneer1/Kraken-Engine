@@ -18,8 +18,8 @@ namespace dk {
 		Texture(dk::RenderWindow& window, SDL_Texture* texture);
 		~Texture() { if (texture) SDL_DestroyTexture(texture); }
 
-		[[nodiscard]] dk::math::Vector2 getSize() const;
-		[[nodiscard]] dk::Rect getRect() const;
+		dk::math::Vector2 getSize() const;
+		dk::Rect getRect() const;
 
 		void loadTextureFile(const char* fileDir);
 		void setSize(int w, int h);

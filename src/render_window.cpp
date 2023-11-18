@@ -1,5 +1,4 @@
-#include "pch.h"
-#include "RenderWindow.hpp"
+#include "../include/RenderWindow.hpp"
 #include <iostream>
 
 

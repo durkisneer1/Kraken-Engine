@@ -1,7 +1,6 @@
 #pragma once
 
 #include <SDL.h>
-#include <stdint.h>
 
 
 namespace dk {
@@ -11,11 +10,11 @@ namespace dk {
 			Clock() = default;
 			~Clock() = default;
 
-			float tick(uint32_t frameRate = 0);
+			double tick(int frameRate = 360);
 
 		private:
-			uint32_t startTick = 0;
-			uint32_t endTick = 0;
+			uint64_t now, last = SDL_GetPerformanceCounter();
+			uint64_t rawTime, frameTime = 0;
 		};
 	}
 }

@@ -1,8 +1,4 @@
-// DurkGame.cpp : Defines the functions for the static library.
-//
-
-#include "pch.h"
-#include "DurkGame.hpp"
+#include "../include/DurkGame.hpp"
 #include <iostream>
 
 

@@ -1,5 +1,4 @@
-#include "pch.h"
-#include "Math.hpp"
+#include "../include/Math.hpp"
 
 
 namespace dk {
@@ -20,6 +19,10 @@ namespace dk {
 			float c = getLength();
 			x /= c;
 			y /= c;
+		}
+
+		float Vector2::distanceTo(const Vector2& other) const {
+			return sqrtf(powf(other.x - x, 2) + powf(other.y - y, 2));
 		}
 
 		Vector2 Vector2::operator*(float scalar) const {
@@ -53,8 +56,7 @@ namespace dk {
 		template <class digit>
 		digit clamp(digit val, digit min, digit max) {
 			if (min > max) return val;
-			val = std::min(max, std::max(min, val));
-			return val;
+			return std::min(max, std::max(min, val));
 		}
 	}
 }

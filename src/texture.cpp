@@ -1,5 +1,4 @@
-#include "pch.h"
-#include "Texture.hpp"
+#include "../include/Texture.hpp"
 
 
 namespace dk {

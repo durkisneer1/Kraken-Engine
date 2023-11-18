@@ -1,5 +1,4 @@
-#include "pch.h"
-#include "Input.hpp"
+#include "../include/Input.hpp"
 
 
 namespace dk {

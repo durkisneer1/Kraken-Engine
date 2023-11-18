@@ -13,8 +13,12 @@ namespace dk {
 		Character(dk::RenderWindow& window, dk::Texture& texture);
 		~Character() = default;
 
-		[[nodiscard]] dk::math::Vector2 getPosition() const;
-		[[nodiscard]] dk::Rect getRect() const;
+		dk::math::Vector2 getPosition() const;
+		dk::Rect getRect() const;
+
+		static const std::vector<Character*>& getCharacters();
+
+		virtual void process(double deltaTime) = 0;
 
 	protected:
 		dk::RenderWindow& window;
@@ -24,6 +28,9 @@ namespace dk {
 		dk::math::Vector2 velocity;
 		dk::math::Vector2 position;
 
+		static std::vector<Character*> characters;
+
+		void moveAndSlide();
 		void move();
 		void draw();
 	};

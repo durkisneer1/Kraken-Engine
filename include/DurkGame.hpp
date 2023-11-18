@@ -3,15 +3,16 @@
 
 #include <SDL_mixer.h> // FIXME: Remove once dk::mixer implemented.
 
+#include "Character.hpp"
 #include "Clock.hpp"
-#include "Texture.hpp"
+#include "Font.hpp"
+#include "Globals.hpp"
+#include "Input.hpp"
 #include "Math.hpp"
 #include "Rect.hpp"
-#include "Input.hpp"
-#include "Font.hpp"
-#include "Character.hpp"
-#include "Globals.hpp"
 #include "RenderWindow.hpp"
+#include "Texture.hpp"
+#include "Constants.hpp"
 
 
 namespace dk {
