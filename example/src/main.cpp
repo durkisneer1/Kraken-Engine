@@ -46,7 +46,7 @@ int main() {
 		window.fill({ 40, 40, 40 });
 
 		// Update and draw character objects
-		for (const auto& chars : dk::Character::getCharacters()) {
+		for (const auto& chars : dk::SpriteNode::getSpriteNodes()) {
 			chars->process(deltaTime);
 		}
 

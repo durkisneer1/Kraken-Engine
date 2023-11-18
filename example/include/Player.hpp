@@ -4,7 +4,7 @@
 #include <vector>
 
 
-class Player : public dk::Character {
+class Player : public dk::CharacterSprite {
 public:
     Player(dk::RenderWindow& window, dk::Texture& texture);
     ~Player() = default;

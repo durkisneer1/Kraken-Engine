@@ -3,7 +3,7 @@
 #include <DurkGame.hpp>
 
 
-class Wall : public dk::Character {
+class Wall : public dk::CharacterSprite {
 public:
     Wall(dk::RenderWindow& window, dk::Texture& texture);
     ~Wall() = default;
