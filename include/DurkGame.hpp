@@ -3,7 +3,6 @@
 
 #include <SDL_mixer.h> // FIXME: Remove once dk::mixer implemented.
 
-#include "CharacterSprite.hpp"
 #include "Clock.hpp"
 #include "Constants.hpp"
 #include "Font.hpp"
@@ -12,7 +11,9 @@
 #include "Math.hpp"
 #include "Rect.hpp"
 #include "RenderWindow.hpp"
+#include "SpriteCharacter.hpp"
 #include "SpriteNode.hpp"
+#include "SpriteStatic.hpp"
 #include "Texture.hpp"
 
 

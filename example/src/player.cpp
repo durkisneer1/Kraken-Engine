@@ -7,12 +7,8 @@ Player::Player(dk::RenderWindow& window, dk::Texture& texture)
 }
 
 void Player::process(double deltaTime) {
-    dk::math::Vector2 direction = dk::input::getVector(moveUp, moveLeft, moveDown, moveRight);
+    dk::math::Vector2 direction = dk::input::getVector(moveLeft, moveRight);
     velocity = direction * speed * deltaTime;
-    moveAndSlide();
-
-    rect.clamp();
-    position = rect.getCenter();
-
+    movePhysicsRect(deltaTime);
     draw();
 }

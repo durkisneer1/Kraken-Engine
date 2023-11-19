@@ -1,4 +1,5 @@
 #include "../include/Texture.hpp"
+#include <iostream>
 
 
 namespace dk {

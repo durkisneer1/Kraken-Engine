@@ -3,8 +3,9 @@
         {
             "name": "x64",
             "includePath": [
-                "${workspaceFolder}/**",
-                "C:/SDL2/include"
+                "C:/SDL2/include",
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/example/include"
             ],
             "defines": [
                 "_DEBUG",
@@ -15,8 +16,7 @@
             "compilerPath": "C:/mingw64/bin/x86_64-w64-mingw32-g++.exe",
             "cStandard": "c17",
             "cppStandard": "c++17",
-            "intelliSenseMode": "windows-gcc-x64",
-            "configurationProvider": "ms-vscode.makefile-tools"
+            "intelliSenseMode": "gcc-x64",
         }
     ],
     "version": 4

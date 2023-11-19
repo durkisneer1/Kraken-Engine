@@ -2,7 +2,6 @@
 
 #include <SDL.h>
 #include <SDL_image.h>
-#include <iostream>
 #include "Math.hpp"
 #include "Rect.hpp"
 #include "RenderWindow.hpp"

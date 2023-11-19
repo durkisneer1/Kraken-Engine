@@ -1,4 +1,6 @@
 #include "../include/Math.hpp"
+#include <cmath>
+#include <algorithm>
 
 
 namespace dk {

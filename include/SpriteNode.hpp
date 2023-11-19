@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SDL.h>
+#include <memory>
 #include "Rect.hpp"
 #include "Texture.hpp"
 #include "Math.hpp"
@@ -16,10 +17,10 @@ namespace dk {
         dk::math::Vector2 getPosition() const;
         dk::Rect getRect() const;
 
-        static const std::vector<SpriteNode*>& getSpriteNodes();
-        static const std::vector<SpriteNode*>& getCharacterSprites();
-        static const std::vector<SpriteNode*>& getPhysicsSprites();
-        static const std::vector<SpriteNode*>& getStaticSprites();
+        static const std::vector<std::unique_ptr<SpriteNode>>& getSpriteNodes();
+        static const std::vector<std::unique_ptr<SpriteNode>>& getCharacterSprites();
+        static const std::vector<std::unique_ptr<SpriteNode>>& getPhysicsSprites();
+        static const std::vector<std::unique_ptr<SpriteNode>>& getStaticSprites();
 
         virtual void process(double deltaTime) = 0;
 
@@ -30,11 +31,14 @@ namespace dk {
         dk::Rect rect;
         dk::math::Vector2 position;
 
-        static std::vector<SpriteNode*> spriteNodes;
-        static std::vector<SpriteNode*> characterSprites;
-        static std::vector<SpriteNode*> physicsSprites;
-        static std::vector<SpriteNode*> staticSprites;
+        static std::vector<std::unique_ptr<SpriteNode>> spriteNodes;
+        static std::vector<std::unique_ptr<SpriteNode>> characterSprites;
+        static std::vector<std::unique_ptr<SpriteNode>> physicsSprites;
+        static std::vector<std::unique_ptr<SpriteNode>> staticSprites;
 
+        void addCharacterSprite(std::unique_ptr<SpriteNode> sprite);
+        void addPhysicsSprite(std::unique_ptr<SpriteNode> sprite);
+        void addStaticSprite(std::unique_ptr<SpriteNode> sprite);
         void draw();
     };
 }

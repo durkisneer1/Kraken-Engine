@@ -1,12 +1,13 @@
 #include "../include/wall.hpp"
+#include <iostream>
 
 
-Wall::Wall(dk::RenderWindow& window, dk::Texture& texture)
-: dk::CharacterSprite(window, texture) {
-    position = { WIN_SIZE.x / 4, WIN_SIZE.y / 2 };
-    rect.setCenter(position);
+Wall::Wall(dk::RenderWindow& window, dk::Texture& texture, dk::math::Vector2 position)
+: dk::StaticSprite(window, texture) {
+    this->position = position;
 }
 
 void Wall::process(double deltaTime) {
+    rect.setBottomLeft(position);
     draw();
 }

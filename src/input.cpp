@@ -14,10 +14,10 @@ namespace dk {
 		}
 
 		dk::math::Vector2 getVector(
-			const std::vector<SDL_Scancode>& up,
 			const std::vector<SDL_Scancode>& left,
-			const std::vector<SDL_Scancode>& down,
-			const std::vector<SDL_Scancode>& right
+			const std::vector<SDL_Scancode>& right,
+			const std::vector<SDL_Scancode>& up,
+			const std::vector<SDL_Scancode>& down
 		) {
 			const Uint8* keys = getKeysPressed();
 			dk::math::Vector2 vector;

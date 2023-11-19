@@ -1,11 +1,11 @@
-#include "../include/CharacterSprite.hpp"
+#include "../include/SpriteCharacter.hpp"
+#include <memory>
 
 
 namespace dk {
 	CharacterSprite::CharacterSprite(dk::RenderWindow& window, dk::Texture& texture)
 	: SpriteNode(window, texture) {
-		rect = texture.getRect();
-		characterSprites.push_back(this);
+		addCharacterSprite(std::make_unique<CharacterSprite>(this));
 	}
 
 	void CharacterSprite::move() {
@@ -16,11 +16,11 @@ namespace dk {
 	void CharacterSprite::movePhysicsRect(double deltaTime) {
 		velocity.y += GRAVITY * deltaTime;
 
-		position.x += velocity.x * deltaTime;
+		position.x += velocity.x;
 		rect.setCenter({ position.x, rect.getCenter().y });
 		rectHorizontalCollision();
 
-		position.y += velocity.y * deltaTime;
+		position.y += velocity.y;
 		rect.setCenter({ rect.getCenter().x, position.y });
 		rectVerticalCollision();
 	}
