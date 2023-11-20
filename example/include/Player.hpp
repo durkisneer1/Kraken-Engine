@@ -16,9 +16,4 @@ private:
     std::vector<DK_KEYS> moveRight = { DKK_d, DKK_right };
 
     float speed = 450.0f;
-    bool onGround = false;
-    bool onCeiling = false;
-
-    void rectHorizontalCollision();
-    void rectVerticalCollision();
 };

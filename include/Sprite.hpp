@@ -30,9 +30,16 @@ namespace dk {
         dk::math::Vector2 position;
         dk::math::Vector2 direction;
         dk::math::Vector2 velocity;
+        bool onGround = false;
+        bool onCeiling = false;
 
         static std::vector<std::unique_ptr<dk::Sprite>> sprites;
 
+        void moveAndCollide(double deltaTime);
         void draw();
+
+    private:
+        void rectHorizontalCollision();
+        void rectVerticalCollision();
     };
 }

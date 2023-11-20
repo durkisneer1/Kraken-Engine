@@ -19,6 +19,7 @@ namespace dk {
 
 		SDL_Renderer* getRenderer() { return renderer; }
 		const std::vector<SDL_Event>& getEvents();
+		
 	private:
 		SDL_Renderer* renderer = nullptr;
 		SDL_Window* window = nullptr;

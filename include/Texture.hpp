@@ -25,10 +25,11 @@ namespace dk {
 		void scaleBy(float scale);
 		void blit(dk::Rect rect);
 		void blitAngle(dk::Rect rect, float angle);
-		void query();
 	private:
 		dk::RenderWindow& window;
 		SDL_Texture* texture = nullptr;
 		dk::Rect rect = {};
+
+		void query();
 	};
 }
