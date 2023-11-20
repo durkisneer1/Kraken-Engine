@@ -8,7 +8,7 @@
 
 // Global variables
 const dk::math::Vector2 WIN_SIZE = { 800, 600 };
-float GRAVITY = 0.0f;
+float GRAVITY = 980.0f;
 
 
 int main() {
@@ -20,13 +20,12 @@ int main() {
 
 	// Create player
 	dk::Texture playerTexture(window, { 50, 50 }, { 255, 0, 0 });
-	Player player(window, playerTexture);
+	dk::Sprite::addSprite(std::make_unique<Player>(window, playerTexture));
 
 	// Create walls
-	std::vector<std::unique_ptr<Wall>> walls;
 	dk::Texture wallTexture(window, { 50, 50 }, { 0, 255, 0 });
 	for (float x = 0.0f; x <= WIN_SIZE.x - wallTexture.getSize().x; x += wallTexture.getSize().x) {
-		walls.emplace_back(std::make_unique<Wall>(window, wallTexture, dk::math::Vector2(x, WIN_SIZE.y)));
+		dk::Sprite::addSprite(std::make_unique<Wall>(window, wallTexture, dk::math::Vector2(x, WIN_SIZE.y)));
 	}
 
 	// Create text
@@ -53,9 +52,8 @@ int main() {
 		window.fill({ 40, 40, 40 });
 
 		// Update and draw character objects
-		player.process(deltaTime);
-		for (const auto& wall : walls) {
-			wall->process(deltaTime);
+		for (const auto& sprite : dk::Sprite::getSprites()) {
+			sprite->process(deltaTime);
 		}
 
 		// Draw text

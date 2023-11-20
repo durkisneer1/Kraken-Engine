@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SDL.h>
+#include <memory>
 #include "Rect.hpp"
 #include "Texture.hpp"
 #include "Math.hpp"
@@ -8,13 +9,16 @@
 
 
 namespace dk {
-    class SpriteNode {
+    class Sprite {
     public:
-        SpriteNode(dk::RenderWindow& window, dk::Texture& texture);
-        ~SpriteNode() = default;
+        Sprite(dk::RenderWindow& window, dk::Texture& texture);
+        ~Sprite() = default;
 
         dk::math::Vector2 getPosition() const;
         dk::Rect getRect() const;
+
+        static const std::vector<std::unique_ptr<dk::Sprite>>& getSprites();
+        static void addSprite(std::unique_ptr<dk::Sprite> sprite);
 
         virtual void process(double deltaTime) = 0;
 
@@ -24,6 +28,10 @@ namespace dk {
 
         dk::Rect rect;
         dk::math::Vector2 position;
+        dk::math::Vector2 direction;
+        dk::math::Vector2 velocity;
+
+        static std::vector<std::unique_ptr<dk::Sprite>> sprites;
 
         void draw();
     };

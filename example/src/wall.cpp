@@ -3,7 +3,7 @@
 
 
 Wall::Wall(dk::RenderWindow& window, dk::Texture& texture, dk::math::Vector2 position)
-: dk::CharacterSprite(window, texture) {
+: dk::Sprite(window, texture) {
     this->position = position;
     rect.setBottomLeft(position);
 }

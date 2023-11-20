@@ -11,8 +11,7 @@
 #include "Math.hpp"
 #include "Rect.hpp"
 #include "RenderWindow.hpp"
-#include "SpriteCharacter.hpp"
-#include "SpriteNode.hpp"
+#include "Sprite.hpp"
 #include "Texture.hpp"
 
 
