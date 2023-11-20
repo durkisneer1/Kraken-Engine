@@ -12,14 +12,5 @@ namespace dk {
 
 	protected:
 		dk::math::Vector2 velocity;
-		bool onFloor;
-		bool onCeiling;
-		
-		void movePhysicsRect(double deltaTime);
-		void move();
-
-	private:
-		void rectHorizontalCollision();
-		void rectVerticalCollision();
 	};
 }

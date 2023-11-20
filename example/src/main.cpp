@@ -1,4 +1,5 @@
 #include <DurkGame.hpp>
+#include <memory>
 #include <vector>
 #include <iostream>
 
@@ -15,19 +16,20 @@ int main() {
 	dk::init();
 	dk::RenderWindow window(WIN_SIZE, "Game");
 	dk::time::Clock clock;
+	dk::Font font(window, "assets/KdamThmorPro-Regular.ttf", 24);
 
 	// Create player
 	dk::Texture playerTexture(window, { 50, 50 }, { 255, 0, 0 });
 	Player player(window, playerTexture);
 
 	// Create walls
+	std::vector<std::unique_ptr<Wall>> walls;
 	dk::Texture wallTexture(window, { 50, 50 }, { 0, 255, 0 });
 	for (float x = 0.0f; x <= WIN_SIZE.x - wallTexture.getSize().x; x += wallTexture.getSize().x) {
-		Wall newWall(window, wallTexture, { x, WIN_SIZE.y });
-	};
+		walls.emplace_back(std::make_unique<Wall>(window, wallTexture, dk::math::Vector2(x, WIN_SIZE.y)));
+	}
 
 	// Create text
-	dk::Font font(window, "assets/KdamThmorPro-Regular.ttf", 24);
 	dk::Texture textTexture = font.render("Hello World!", true, { 255, 255, 255 });
 	dk::Rect textRect = textTexture.getRect();
 	textRect.setCenter({ WIN_SIZE.x / 2, WIN_SIZE.y / 4 });
@@ -35,7 +37,7 @@ int main() {
 	// Main loop
 	bool done = false;
 	while (!done) {
-		double deltaTime = clock.tick();
+		double deltaTime = clock.tick(60);
 
 		// Handle events
 		for (const auto& event : window.getEvents()) {
@@ -51,8 +53,9 @@ int main() {
 		window.fill({ 40, 40, 40 });
 
 		// Update and draw character objects
-		for (const auto& sprite : dk::SpriteNode::getSpriteNodes()) {
-			sprite->process(deltaTime);
+		player.process(deltaTime);
+		for (const auto& wall : walls) {
+			wall->process(deltaTime);
 		}
 
 		// Draw text

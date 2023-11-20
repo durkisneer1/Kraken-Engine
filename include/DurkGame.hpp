@@ -13,7 +13,6 @@
 #include "RenderWindow.hpp"
 #include "SpriteCharacter.hpp"
 #include "SpriteNode.hpp"
-#include "SpriteStatic.hpp"
 #include "Texture.hpp"
 
 

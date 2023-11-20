@@ -2,7 +2,6 @@
 
 #include <SDL.h>
 #include <SDL_ttf.h>
-#include <iostream>
 #include "Texture.hpp"
 #include "RenderWindow.hpp"
 

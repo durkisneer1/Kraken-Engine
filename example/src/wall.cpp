@@ -3,11 +3,11 @@
 
 
 Wall::Wall(dk::RenderWindow& window, dk::Texture& texture, dk::math::Vector2 position)
-: dk::StaticSprite(window, texture) {
+: dk::CharacterSprite(window, texture) {
     this->position = position;
+    rect.setBottomLeft(position);
 }
 
 void Wall::process(double deltaTime) {
-    rect.setBottomLeft(position);
-    draw();
+    texture.blit(rect);
 }

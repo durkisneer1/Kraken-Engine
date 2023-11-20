@@ -1,4 +1,5 @@
 #include "../include/Font.hpp"
+#include <iostream>
 
 
 namespace dk {

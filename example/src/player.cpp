@@ -1,4 +1,5 @@
 #include "../include/player.hpp"
+#include <iostream>
 
 
 Player::Player(dk::RenderWindow& window, dk::Texture& texture)
@@ -7,8 +8,11 @@ Player::Player(dk::RenderWindow& window, dk::Texture& texture)
 }
 
 void Player::process(double deltaTime) {
+    velocity.y += GRAVITY * deltaTime;
     dk::math::Vector2 direction = dk::input::getVector(moveLeft, moveRight);
-    velocity = direction * speed * deltaTime;
-    movePhysicsRect(deltaTime);
-    draw();
+    velocity.x = direction.x * speed;
+    position += velocity * deltaTime;
+
+    rect.setCenter(position);
+    texture.blit(rect);
 }

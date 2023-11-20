@@ -1,4 +1,5 @@
 #include "../include/Input.hpp"
+#include <algorithm>
 
 
 namespace dk {

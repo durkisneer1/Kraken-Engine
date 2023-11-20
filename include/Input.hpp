@@ -2,7 +2,6 @@
 
 #include <SDL.h>
 #include <vector>
-#include <algorithm>
 #include "Math.hpp"
 
 
