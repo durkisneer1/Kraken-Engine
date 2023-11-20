@@ -27,6 +27,6 @@ namespace dk {
 		SDL_Event event;
 		std::vector<SDL_Event> events;
 
-		int mousePosX, mousePosY;
+		int mousePosX, mousePosY = 0;
 	};
 }
