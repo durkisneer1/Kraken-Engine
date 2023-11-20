@@ -41,6 +41,7 @@ int main() {
     return EXIT_SUCCESS;
 }
 ```
+To view a more in-depth use of the library, I am working on a small tech demo in the [example](https://github.com/durkisneer1/DurkGame/tree/main/example) folder.
 
 # License
 [MIT](LICENSE) @ Derrick Martinez
