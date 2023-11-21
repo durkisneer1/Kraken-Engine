@@ -16,7 +16,7 @@ int main() {
 	dk::init();
 	dk::RenderWindow window(WIN_SIZE, "Game");
 	dk::time::Clock clock;
-	dk::Font font(window, "assets/KdamThmorPro-Regular.ttf", 24);
+	dk::Font font(window, "assets/KdamThmorPro-Regular.ttf", 34);
 
 	// Create player
 	dk::Texture playerTexture(window, { 50, 50 }, { 255, 0, 0 });
