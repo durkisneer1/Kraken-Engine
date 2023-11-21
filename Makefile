@@ -3,13 +3,13 @@ CXX := x86_64-w64-mingw32-g++
 SRC_DIR := src
 INCLUDE_DIR := include
 SDL2_INCLUDE_DIR := C:/SDL2/include
-SDL2_LIB_DIR := C:/SDL2/lib/x64
+SDL2_LIB_DIR := C:/SDL2/lib
 
 CXXFLAGS := -std=c++17 -Wall -Werror -m64 -I$(INCLUDE_DIR) -I$(SDL2_INCLUDE_DIR)
-TARGET := DurkGame.lib
+TARGET := DurkGame.a
 SRC := $(wildcard $(SRC_DIR)/*.cpp)
 OBJ := $(SRC:.cpp=.o)
-LIB := $(wildcard $(SDL2_LIB_DIR)/*.lib)
+LIB := $(wildcard $(SDL2_LIB_DIR)/*.a)
 
 all: $(TARGET)
 
