@@ -23,8 +23,8 @@ namespace dk {
 		void loadTextureFile(const char* fileDir);
 		void setSize(int w, int h);
 		void scaleBy(float scale);
-		void blit(dk::Rect rect);
-		void blitAngle(dk::Rect rect, float angle);
+		void drawAt(dk::Rect rect);
+		void drawAtAngle(dk::Rect rect, float angle);
 	private:
 		dk::RenderWindow& window;
 		SDL_Texture* texture = nullptr;

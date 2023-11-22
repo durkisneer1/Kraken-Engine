@@ -9,7 +9,7 @@ Player::Player(dk::RenderWindow& window, dk::Texture& texture)
 
 void Player::process(double deltaTime) {
     if (onGround) {
-        if (window.getKeysPressed()[DKK_space]) {
+        if (dk::input::getKeysPressed()[DKK_space]) {
             velocity.y = -400;
             onGround = false;
         }
@@ -19,10 +19,10 @@ void Player::process(double deltaTime) {
     
     direction = dk::input::getVector(moveLeft, moveRight);
     velocity.x = direction.x * speed;
-
     moveAndCollide(deltaTime);
+    
     rect.clamp();
     position = rect.getCenter();
 
-    draw();
+    texture.drawAt(rect);
 }

@@ -47,13 +47,4 @@ namespace dk {
 	void RenderWindow::flip() {
 		SDL_RenderPresent(renderer);
 	}
-
-	dk::math::Vector2 RenderWindow::getMousePos() {
-		SDL_GetMouseState(&mousePosX, &mousePosY);
-		return { mousePosX, mousePosY };
-	}
-
-	const Uint8* RenderWindow::getKeysPressed() {
-		return SDL_GetKeyboardState(nullptr);
-	}
 }

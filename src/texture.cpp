@@ -58,11 +58,11 @@ namespace dk {
 		query();
 	}
 
-	void Texture::blit(dk::Rect dstRect) {
+	void Texture::drawAt(dk::Rect dstRect) {
 		SDL_RenderCopyF(window.getRenderer(), texture, nullptr, &dstRect);
 	}
 
-	void Texture::blitAngle(dk::Rect dstRect, float angleDeg) {
+	void Texture::drawAtAngle(dk::Rect dstRect, float angleDeg) {
 		SDL_RenderCopyExF(window.getRenderer(), texture, nullptr, &dstRect, angleDeg, nullptr, SDL_FLIP_NONE);
 	}
 

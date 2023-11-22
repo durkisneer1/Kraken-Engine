@@ -14,9 +14,6 @@ namespace dk {
 		void fill(SDL_Color color);
 		void flip();
 
-		dk::math::Vector2 getMousePos();
-		const Uint8* getKeysPressed();
-
 		SDL_Renderer* getRenderer() { return renderer; }
 		const std::vector<SDL_Event>& getEvents();
 		
@@ -26,7 +23,5 @@ namespace dk {
 
 		SDL_Event event;
 		std::vector<SDL_Event> events;
-
-		int mousePosX, mousePosY = 0;
 	};
 }

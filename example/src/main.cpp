@@ -1,7 +1,6 @@
 #include <DurkGame.hpp>
 #include <memory>
 #include <vector>
-#include <iostream>
 
 #include "../include/Player.hpp"
 #include "../include/Wall.hpp"
@@ -57,8 +56,9 @@ int main() {
 		}
 
 		// Draw text
-		textTexture.blit(textRect);
-
+		textTexture.drawAt(textRect);
+		
+		// Flip frame buffer
 		window.flip();
 	}
 	

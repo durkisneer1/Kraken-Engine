@@ -21,10 +21,6 @@ namespace dk {
         sprites.push_back(std::move(sprite));
     }
 
-    void Sprite::draw() {
-        texture.blit(rect);
-    }
-
     void Sprite::moveAndCollide(double deltaTime) {
         position += (velocity * deltaTime);
         rect.x = position.x - rect.w / 2.0f;

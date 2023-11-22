@@ -7,6 +7,12 @@
 
 namespace dk {
 	namespace input {
+		dk::math::Vector2 getMousePos();
+
+		const int getMouseButtonPressed();
+
+		const Uint8* getKeysPressed();
+
 		dk::math::Vector2 getVector(
 			const std::vector<SDL_Scancode>& left = {},
 			const std::vector<SDL_Scancode>& right = {},

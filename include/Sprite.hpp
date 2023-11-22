@@ -36,7 +36,6 @@ namespace dk {
         static std::vector<std::unique_ptr<dk::Sprite>> sprites;
 
         void moveAndCollide(double deltaTime);
-        void draw();
 
     private:
         void rectHorizontalCollision();
