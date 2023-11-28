@@ -46,6 +46,7 @@ int main() {
 					done = true;
 				} else {}
 			} else {}
+			button->handleEvents(event);
 		}
 		
 		window.fill({ 40, 40, 40 });

@@ -62,8 +62,15 @@ namespace dk {
 		SDL_RenderCopyF(window.getRenderer(), texture, nullptr, &dstRect);
 	}
 
-	void Texture::drawAtAngle(dk::Rect dstRect, float angleDeg) {
-		SDL_RenderCopyExF(window.getRenderer(), texture, nullptr, &dstRect, angleDeg, nullptr, SDL_FLIP_NONE);
+	void Texture::drawAtEx(dk::Rect dstRect, float angleDeg, bool flipX, bool flipY) {
+		SDL_RendererFlip flip = SDL_FLIP_NONE;
+		if (flipX) {
+			flip = (SDL_RendererFlip)(flip | SDL_FLIP_HORIZONTAL);
+		} else {}
+		if (flipY) {
+			flip = (SDL_RendererFlip)(flip | SDL_FLIP_VERTICAL);
+		} else {}
+		SDL_RenderCopyExF(window.getRenderer(), texture, nullptr, &dstRect, angleDeg, nullptr, flip);
 	}
 
 	dk::math::Vector2 dk::Texture::getSize() const {

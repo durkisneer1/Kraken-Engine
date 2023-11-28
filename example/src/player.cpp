@@ -24,5 +24,5 @@ void Player::process(double deltaTime) {
     rect.clamp();
     position = rect.getCenter();
 
-    texture.drawAt(rect);
+    texture.drawAtEx(rect, 45, false, false);
 }

@@ -24,7 +24,7 @@ namespace dk {
 		void setSize(int w, int h);
 		void scaleBy(float scale);
 		void drawAt(dk::Rect rect);
-		void drawAtAngle(dk::Rect rect, float angle);
+		void drawAtEx(dk::Rect rect, float angle = 0.0f, bool flipX = false, bool flipY = false);
 		
 	private:
 		dk::RenderWindow& window;
