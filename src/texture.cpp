@@ -14,13 +14,13 @@ namespace dk {
 		if (surface == nullptr) {
 			std::cout << "SDL_CreateRGBSurface Error: " << SDL_GetError() << std::endl;
 			exit(3);
-		}
+		} else {}
 
 		SDL_FillRect(surface, nullptr, SDL_MapRGB(surface->format, color.r, color.g, color.b));
 		texture = SDL_CreateTextureFromSurface(window.getRenderer(), surface);
 		if (texture == nullptr) {
 			std::cout << "SDL_CreateTextureFromSurface Error: " << SDL_GetError() << std::endl;
-		}
+		} else {}
 
 		SDL_FreeSurface(surface);
 		query();
@@ -32,7 +32,7 @@ namespace dk {
 		if (!texture) {
 			std::cout << "SDL_CreateTextureFromSurface Error: " << SDL_GetError() << std::endl;
 			exit(3);
-		}
+		} else {}
 
 		query();
 	}
@@ -53,7 +53,7 @@ namespace dk {
 		if (!texture) {
 			std::cout << "SDL_CreateTextureFromSurface Error: " << SDL_GetError() << std::endl;
 			exit(3);
-		}
+		} else {}
 
 		query();
 	}

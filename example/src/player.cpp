@@ -10,9 +10,9 @@ Player::Player(dk::RenderWindow& window, dk::Texture& texture)
 void Player::process(double deltaTime) {
     if (onGround) {
         if (dk::input::getKeysPressed()[DKK_space]) {
-            velocity.y = -400;
+            velocity.y = -350;
             onGround = false;
-        }
+        } else {}
     } else {
         velocity.y += GRAVITY * deltaTime;
     }

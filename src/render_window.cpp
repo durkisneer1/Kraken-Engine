@@ -4,6 +4,8 @@
 
 namespace dk {
 	RenderWindow::RenderWindow(dk::math::Vector2 size, const char* title) {
+		init();
+
 		this->window = SDL_CreateWindow(
 			title,
 			SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
@@ -14,21 +16,51 @@ namespace dk {
 			std::cout << "SDL_CreateWindow Error: " << SDL_GetError() << std::endl;
 			SDL_Quit();
 			exit(3);
-		}
+		} else {}
+
 		renderer = SDL_CreateRenderer(
 			window, -1, SDL_RENDERER_ACCELERATED
 		);
+		
 		if (!renderer) {
 			std::cout << "SDL_CreateRenderer Error: " << SDL_GetError() << std::endl;
 			SDL_DestroyWindow(window);
 			SDL_Quit();
 			exit(3);
-		}
+		} else {}
 	}
 
 	RenderWindow::~RenderWindow() {
 		SDL_DestroyRenderer(renderer);
 		SDL_DestroyWindow(window);
+		Mix_CloseAudio();
+		IMG_Quit();
+		TTF_Quit();
+		SDL_Quit();
+	}
+
+	void RenderWindow::init() {
+		if (SDL_Init(SDL_INIT_VIDEO)) {
+			std::cout << "SDL_Init Error: " << SDL_GetError() << std::endl;
+			exit(3);
+		} else {}
+		if (!IMG_Init(IMG_INIT_PNG)) {
+			std::cout << "IMG_Init Error: " << IMG_GetError() << std::endl;
+			SDL_Quit();
+			exit(3);
+		} else {}
+		if (TTF_Init() < 0) {
+			std::cout << "TTF_Init Error: " << TTF_GetError() << std::endl;
+			IMG_Quit();
+			SDL_Quit();
+			exit(3);
+		} else {}
+		if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0) {
+			std::cout << "Mix_OpenAudio Error: " << Mix_GetError() << std::endl;
+			TTF_Quit();
+			IMG_Quit();
+			SDL_Quit();
+		} else {}
 	}
 
 	const std::vector<SDL_Event>& RenderWindow::getEvents() {

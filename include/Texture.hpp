@@ -25,6 +25,7 @@ namespace dk {
 		void scaleBy(float scale);
 		void drawAt(dk::Rect rect);
 		void drawAtAngle(dk::Rect rect, float angle);
+		
 	private:
 		dk::RenderWindow& window;
 		SDL_Texture* texture = nullptr;

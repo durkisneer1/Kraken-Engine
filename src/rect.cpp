@@ -19,9 +19,7 @@ namespace dk {
 	}
 
 	void Rect::clamp(dk::math::Vector2 min, dk::math::Vector2 max) {
-		if ((max.x - min.x < this->w) || (max.y - min.y < this->h)) {
-			return;
-		}
+		if ((max.x - min.x < this->w) || (max.y - min.y < this->h)) return;
 		setTopLeft(clampVec(getTopLeft(), min, max));
 		setBottomRight(clampVec(getBottomRight(), min, max));
 	}

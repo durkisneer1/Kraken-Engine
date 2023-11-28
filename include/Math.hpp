@@ -10,6 +10,8 @@ namespace dk {
 			Vector2() = default;
 			Vector2(float x, float y);
 			Vector2(int x, int y);
+			Vector2(float x, int y);
+			Vector2(int x, float y);
 
 			void ZERO();
 			float getLength() const;

@@ -43,8 +43,8 @@ namespace dk {
 
                     velocity.x = 0;
                     position = rect.getCenter();
-                }
-            }
+                } else {}
+            } else {}
         }
     }
 
