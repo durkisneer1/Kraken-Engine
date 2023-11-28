@@ -15,7 +15,6 @@ const dk::math::Vector2 WIN_SIZE = { 800, 600 };
 
 
 int main() {
-    dk::init();
     dk::RenderWindow window(WIN_SIZE, "DurkGame App");
     dk::time::Clock clock;
 
@@ -30,14 +29,13 @@ int main() {
                 if (event.key.keysym.sym == DKK_ESCAPE) {
                     done = true;
                 }
-            }
+            } else {}
         }
 
         window.fill({ 40, 40, 40 });
         window.flip();
     }
 
-    dk::quit();
     return EXIT_SUCCESS;
 }
 ```
