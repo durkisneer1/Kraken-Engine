@@ -35,7 +35,8 @@ namespace dk {
 			exit(3);
 		} else {}
 
-		dk::Texture texture(window, surface);
+		SDL_Texture* sdlTexture = SDL_CreateTextureFromSurface(window.getRenderer(), surface);
+		dk::Texture texture(sdlTexture);
 		SDL_FreeSurface(surface);
 
 		return texture;

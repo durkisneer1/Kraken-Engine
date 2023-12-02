@@ -79,4 +79,8 @@ namespace dk {
 	void RenderWindow::flip() {
 		SDL_RenderPresent(renderer);
 	}
+
+	void RenderWindow::blit(dk::Texture& texture, dk::Rect rect) {
+		SDL_RenderCopyF(renderer, texture.toSDLTexture(), nullptr, &rect);
+	}
 }

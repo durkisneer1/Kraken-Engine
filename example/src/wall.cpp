@@ -9,5 +9,5 @@ Wall::Wall(dk::RenderWindow& window, dk::Texture& texture, dk::math::Vector2 pos
 }
 
 void Wall::process(double deltaTime) {
-    texture.drawAt(rect);
+    window.blit(texture, rect);
 }

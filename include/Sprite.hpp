@@ -33,11 +33,11 @@ namespace dk {
         bool onGround = false;
         bool onCeiling = false;
 
-        static std::vector<std::unique_ptr<dk::Sprite>> sprites;
-
         void moveAndCollide(double deltaTime);
 
     private:
+        static std::vector<std::unique_ptr<dk::Sprite>> sprites;
+
         void rectHorizontalCollision();
         void rectVerticalCollision();
     };

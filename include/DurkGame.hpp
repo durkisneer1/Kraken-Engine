@@ -11,3 +11,4 @@
 #include "RenderWindow.hpp"
 #include "Sprite.hpp"
 #include "Texture.hpp"
+#include "TextureCache.hpp"

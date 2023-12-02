@@ -5,6 +5,7 @@
 #include <SDL_ttf.h>
 #include <SDL_mixer.h>
 #include <vector>
+#include "Texture.hpp"
 #include "Math.hpp"
 
 
@@ -16,6 +17,7 @@ namespace dk {
 
 		void fill(SDL_Color color);
 		void flip();
+		void blit(dk::Texture& texture, dk::Rect rect);
 
 		SDL_Renderer* getRenderer() { return renderer; }
 		const std::vector<SDL_Event>& getEvents();
