@@ -13,7 +13,7 @@ namespace dk {
 
 		dk::math::Vector2 getSize() const { return { rect.w, rect.h }; }
 		dk::Rect getRect() const { return rect; }
-		SDL_Texture* toSDLTexture() const { return texture; }
+		SDL_Texture* getSDLTexture() const { return texture; }
 
 		void setSize(dk::math::Vector2 size);
 		void scaleBy(float scale);

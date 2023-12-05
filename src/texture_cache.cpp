@@ -37,10 +37,14 @@ namespace dk {
     }
 
     void TextureCache::unload(const char* name) {
+        SDL_DestroyTexture(textures[name]->getSDLTexture());
         textures.erase(name);
     }
 
     void TextureCache::unloadAll() {
+        for (auto& texture : textures) {
+            SDL_DestroyTexture(texture.second->getSDLTexture());
+        }
         textures.clear();
     }
 

@@ -81,7 +81,33 @@ namespace dk {
 	}
 
 	void RenderWindow::blit(dk::Texture& texture, dk::Rect rect) {
-		SDL_RenderCopyF(renderer, texture.toSDLTexture(), nullptr, &rect);
+		SDL_RenderCopyF(renderer, texture.getSDLTexture(), nullptr, &rect);
+	}
+
+	void RenderWindow::blitEx(dk::Texture& texture, dk::Rect rect, double angle, bool flipX, bool flipY) {
+		SDL_RendererFlip flip = SDL_FLIP_NONE;
+		if (flipX) {
+			flip = (SDL_RendererFlip)(flip | SDL_FLIP_HORIZONTAL);
+		} else {}
+		if (flipY) {
+			flip = (SDL_RendererFlip)(flip | SDL_FLIP_VERTICAL);
+		} else {}
+		SDL_RenderCopyExF(renderer, texture.getSDLTexture(), nullptr, &rect, angle, nullptr, flip);
+	}
+
+	void RenderWindow::blitEx(dk::Texture& texture, dk::math::Vector2 position, double angle, bool flipX, bool flipY) {
+		SDL_RendererFlip flip = SDL_FLIP_NONE;
+		if (flipX) {
+			flip = (SDL_RendererFlip)(flip | SDL_FLIP_HORIZONTAL);
+		} else {}
+		if (flipY) {
+			flip = (SDL_RendererFlip)(flip | SDL_FLIP_VERTICAL);
+		} else {}
+		SDL_FRect rect = {
+			position.x, position.y,
+			texture.getSize().x, texture.getSize().y
+		};
+		SDL_RenderCopyExF(renderer, texture.getSDLTexture(), nullptr, &rect, angle, nullptr, flip);
 	}
 
 	void RenderWindow::blit(dk::Texture& texture, dk::math::Vector2 position) {
@@ -89,6 +115,6 @@ namespace dk {
 			position.x, position.y,
 			texture.getSize().x, texture.getSize().y
 		};
-		SDL_RenderCopyF(renderer, texture.toSDLTexture(), nullptr, &rect);
+		SDL_RenderCopyF(renderer, texture.getSDLTexture(), nullptr, &rect);
 	}
 }

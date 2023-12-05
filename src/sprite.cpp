@@ -49,6 +49,8 @@ namespace dk {
     }
 
     void Sprite::rectVerticalCollision() {
+        onGround = false;
+        onCeiling = false;
         for (const auto& sprite : dk::Sprite::getSprites()) {
             if (sprite.get() != this) {
                 if (rect.collideRect(sprite->getRect())) {
@@ -58,7 +60,7 @@ namespace dk {
                     } else if (velocity.y < 0) {
                         rect.setTop(sprite->getRect().getBottom());
                         onCeiling = true;
-                    } else {}
+                    }
 
                     velocity.y = 0;
                     position = rect.getCenter();

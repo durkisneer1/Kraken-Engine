@@ -10,7 +10,7 @@ Player::Player(dk::RenderWindow& window, dk::Texture& texture)
 void Player::process(double deltaTime) {
     if (onGround) {
         if (dk::input::getKeysPressed()[DKK_space]) {
-            velocity.y = -350;
+            velocity.y = -340;
             onGround = false;
         } else {}
     } else {
@@ -24,5 +24,5 @@ void Player::process(double deltaTime) {
     rect.clamp();
     position = rect.getCenter();
 
-    window.blit(texture, rect);
+    window.blitEx(texture, rect, 0.0, false, false);
 }

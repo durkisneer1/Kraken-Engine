@@ -19,6 +19,8 @@ namespace dk {
 		void flip();
 		void blit(dk::Texture& texture, dk::Rect rect);
 		void blit(dk::Texture& texture, dk::math::Vector2 position);
+		void blitEx(dk::Texture& texture, dk::Rect rect, double angle = 0.0, bool flipX = false, bool flipY = false);
+		void blitEx(dk::Texture& texture, dk::math::Vector2 position, double angle = 0.0, bool flipX = false, bool flipY = false);
 
 		SDL_Renderer* getRenderer() { return renderer; }
 		const std::vector<SDL_Event>& getEvents();
