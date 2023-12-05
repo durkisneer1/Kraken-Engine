@@ -57,6 +57,10 @@ namespace dk {
 			return vec;
 		}
 
+		Vector2 lerpVec(Vector2 a, Vector2 b, float t) {
+			return a + (b - a) * t;
+		}
+
 		template <class digit>
 		digit clamp(digit val, digit min, digit max) {
 			if (min > max) return val;

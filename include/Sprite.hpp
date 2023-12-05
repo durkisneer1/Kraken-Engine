@@ -25,8 +25,8 @@ namespace dk {
     protected:
         dk::RenderWindow& window;
         dk::Texture& texture;
-
         dk::Rect rect;
+        
         dk::math::Vector2 position;
         dk::math::Vector2 direction;
         dk::math::Vector2 velocity;

@@ -4,7 +4,7 @@
 
 Player::Player(dk::RenderWindow& window, dk::Texture& texture)
 : dk::Sprite(window, texture) {
-    position = { WIN_SIZE.x / 2, WIN_SIZE.y / 2 };
+    position = WIN_SIZE / 2.0f;
 }
 
 void Player::process(double deltaTime) {

@@ -83,4 +83,12 @@ namespace dk {
 	void RenderWindow::blit(dk::Texture& texture, dk::Rect rect) {
 		SDL_RenderCopyF(renderer, texture.toSDLTexture(), nullptr, &rect);
 	}
+
+	void RenderWindow::blit(dk::Texture& texture, dk::math::Vector2 position) {
+		SDL_FRect rect = {
+			position.x, position.y,
+			texture.getSize().x, texture.getSize().y
+		};
+		SDL_RenderCopyF(renderer, texture.toSDLTexture(), nullptr, &rect);
+	}
 }

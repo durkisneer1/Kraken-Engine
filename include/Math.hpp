@@ -26,6 +26,7 @@ namespace dk {
 		};
 
 		Vector2 clampVec(Vector2 vec, Vector2 min, Vector2 max);
+		Vector2 lerpVec(Vector2 a, Vector2 b, float t);
 
 		template <class digit>
 		digit clamp(digit val, digit min, digit max);

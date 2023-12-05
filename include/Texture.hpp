@@ -17,6 +17,8 @@ namespace dk {
 
 		void setSize(dk::math::Vector2 size);
 		void scaleBy(float scale);
+		void fitWidth(float width);
+		void fitHeight(float height);
 		
 	private:
 		SDL_Texture* texture = nullptr;

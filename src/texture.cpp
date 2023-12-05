@@ -23,4 +23,16 @@ namespace dk {
 		rect.w = rect.w * scale;
 		rect.h = rect.h * scale;
 	}
+
+	void Texture::fitWidth(float width) {
+		float scale = width / rect.w;
+		rect.w = width;
+		rect.h = rect.h * scale;
+	}
+
+	void Texture::fitHeight(float height) {
+		float scale = height / rect.h;
+		rect.w = rect.w * scale;
+		rect.h = height;
+	}
 }

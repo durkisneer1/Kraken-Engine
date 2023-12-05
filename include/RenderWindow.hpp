@@ -18,6 +18,7 @@ namespace dk {
 		void fill(SDL_Color color);
 		void flip();
 		void blit(dk::Texture& texture, dk::Rect rect);
+		void blit(dk::Texture& texture, dk::math::Vector2 position);
 
 		SDL_Renderer* getRenderer() { return renderer; }
 		const std::vector<SDL_Event>& getEvents();
