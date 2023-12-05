@@ -23,13 +23,7 @@ int main() {
         double deltaTime = clock.tick(60);
 
         for (const auto& event : window.getEvents()) {
-            if (event.type == KN_QUIT) {
-                done = true;
-            } else if (event.type == KN_KEYDOWN) {
-                if (event.key.keysym.sym == KNK_ESCAPE) {
-                    done = true;
-                }
-            } else {}
+            if (event.type == KN_QUIT) done = true;
         }
 
         window.fill({ 40, 40, 40 });
