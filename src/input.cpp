@@ -2,9 +2,9 @@
 #include <algorithm>
 
 
-namespace dk {
+namespace kn {
 	namespace input {
-		dk::math::Vector2 getMousePos() {
+		kn::math::Vector2 getMousePos() {
 			int x, y;
 			SDL_GetMouseState(&x, &y);
 			return { x, y };
@@ -18,14 +18,14 @@ namespace dk {
 			return SDL_GetKeyboardState(nullptr);
 		}
 
-		dk::math::Vector2 getVector(
+		kn::math::Vector2 getVector(
 			const std::vector<SDL_Scancode>& left,
 			const std::vector<SDL_Scancode>& right,
 			const std::vector<SDL_Scancode>& up,
 			const std::vector<SDL_Scancode>& down
 		) {
 			const Uint8* keys = getKeysPressed();
-			dk::math::Vector2 vector;
+			kn::math::Vector2 vector;
 
 			if (std::any_of(up.begin(), up.end(), [&](auto scancode) {
 				return keys[scancode];

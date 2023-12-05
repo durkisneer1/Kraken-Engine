@@ -6,15 +6,15 @@
 #include "RenderWindow.hpp"
 
 
-namespace dk {
+namespace kn {
 	class Font {
 	public:
-		Font(dk::RenderWindow& window, const char* fileDir, int ptSize);
-		dk::Texture render(const char* text, bool antialias, SDL_Color color, int wrapLength = 0);
+		Font(kn::RenderWindow& window, const char* fileDir, int ptSize);
+		kn::Texture render(const char* text, bool antialias, SDL_Color color, int wrapLength = 0);
 		~Font() { if (font) TTF_CloseFont(font); }
 
 	private:
-		dk::RenderWindow& window;
+		kn::RenderWindow& window;
 		TTF_Font* font;
 	};
 }

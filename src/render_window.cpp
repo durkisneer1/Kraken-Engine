@@ -2,8 +2,8 @@
 #include <iostream>
 
 
-namespace dk {
-	RenderWindow::RenderWindow(dk::math::Vector2 size, const char* title) {
+namespace kn {
+	RenderWindow::RenderWindow(kn::math::Vector2 size, const char* title) {
 		init();
 
 		this->window = SDL_CreateWindow(
@@ -80,11 +80,11 @@ namespace dk {
 		SDL_RenderPresent(renderer);
 	}
 
-	void RenderWindow::blit(dk::Texture& texture, dk::Rect rect) {
+	void RenderWindow::blit(kn::Texture& texture, kn::Rect rect) {
 		SDL_RenderCopyF(renderer, texture.getSDLTexture(), nullptr, &rect);
 	}
 
-	void RenderWindow::blitEx(dk::Texture& texture, dk::Rect rect, double angle, bool flipX, bool flipY) {
+	void RenderWindow::blitEx(kn::Texture& texture, kn::Rect rect, double angle, bool flipX, bool flipY) {
 		SDL_RendererFlip flip = SDL_FLIP_NONE;
 		if (flipX) {
 			flip = (SDL_RendererFlip)(flip | SDL_FLIP_HORIZONTAL);
@@ -95,7 +95,7 @@ namespace dk {
 		SDL_RenderCopyExF(renderer, texture.getSDLTexture(), nullptr, &rect, angle, nullptr, flip);
 	}
 
-	void RenderWindow::blitEx(dk::Texture& texture, dk::math::Vector2 position, double angle, bool flipX, bool flipY) {
+	void RenderWindow::blitEx(kn::Texture& texture, kn::math::Vector2 position, double angle, bool flipX, bool flipY) {
 		SDL_RendererFlip flip = SDL_FLIP_NONE;
 		if (flipX) {
 			flip = (SDL_RendererFlip)(flip | SDL_FLIP_HORIZONTAL);
@@ -110,7 +110,7 @@ namespace dk {
 		SDL_RenderCopyExF(renderer, texture.getSDLTexture(), nullptr, &rect, angle, nullptr, flip);
 	}
 
-	void RenderWindow::blit(dk::Texture& texture, dk::math::Vector2 position) {
+	void RenderWindow::blit(kn::Texture& texture, kn::math::Vector2 position) {
 		SDL_FRect rect = {
 			position.x, position.y,
 			texture.getSize().x, texture.getSize().y

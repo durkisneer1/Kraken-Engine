@@ -2,18 +2,18 @@
 #include <iostream>
 
 
-namespace dk {
+namespace kn {
     void TextureCache::load(const char* name, const char* path) {
         SDL_Texture* texture = IMG_LoadTexture(window.getRenderer(), path);
         if (!texture) {
             std::cout << "Failed to create texture from: " << path << std::endl;
             return;
         } else {
-            textures[name] = std::make_shared<dk::Texture>(texture);
+            textures[name] = std::make_shared<kn::Texture>(texture);
         }
     }
 
-    void TextureCache::create(const char* name, dk::math::Vector2 size, SDL_Color color) {
+    void TextureCache::create(const char* name, kn::math::Vector2 size, SDL_Color color) {
         SDL_Surface* surface = SDL_CreateRGBSurface(0, size.x, size.y, 32, 0, 0, 0, 0);
         if (!surface) {
             std::cout << "Failed to create surface: " << name << std::endl;
@@ -28,12 +28,12 @@ namespace dk {
             return;
         }
 
-        textures[name] = std::make_shared<dk::Texture>(texture);
+        textures[name] = std::make_shared<kn::Texture>(texture);
         SDL_FreeSurface(surface);
     }
 
-    void TextureCache::move(const char* name, const dk::Texture& texture) {
-        textures[name] = std::make_shared<dk::Texture>(std::move(texture));
+    void TextureCache::move(const char* name, const kn::Texture& texture) {
+        textures[name] = std::make_shared<kn::Texture>(std::move(texture));
     }
 
     void TextureCache::unload(const char* name) {
@@ -48,7 +48,7 @@ namespace dk {
         textures.clear();
     }
 
-    std::shared_ptr<dk::Texture> TextureCache::get(const char* name) {
+    std::shared_ptr<kn::Texture> TextureCache::get(const char* name) {
         return textures[name];
     }
 }

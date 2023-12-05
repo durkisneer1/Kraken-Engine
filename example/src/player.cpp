@@ -2,14 +2,14 @@
 #include <iostream>
 
 
-Player::Player(dk::RenderWindow& window, dk::Texture& texture)
-: dk::Sprite(window, texture) {
+Player::Player(kn::RenderWindow& window, kn::Texture& texture)
+: kn::Sprite(window, texture) {
     position = WIN_SIZE / 2.0f;
 }
 
 void Player::process(double deltaTime) {
     if (onGround) {
-        if (dk::input::getKeysPressed()[DKK_space]) {
+        if (kn::input::getKeysPressed()[KNK_space]) {
             velocity.y = -340;
             onGround = false;
         } else {}
@@ -17,7 +17,7 @@ void Player::process(double deltaTime) {
         velocity.y += GRAVITY * deltaTime;
     }
     
-    direction = dk::input::getVector(moveLeft, moveRight);
+    direction = kn::input::getVector(moveLeft, moveRight);
     velocity.x = direction.x * speed;
     moveAndCollide(deltaTime);
     

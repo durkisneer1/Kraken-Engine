@@ -2,8 +2,8 @@
 #include <iostream>
 
 
-Wall::Wall(dk::RenderWindow& window, dk::Texture& texture, dk::math::Vector2 position)
-: dk::Sprite(window, texture) {
+Wall::Wall(kn::RenderWindow& window, kn::Texture& texture, kn::math::Vector2 position)
+: kn::Sprite(window, texture) {
     this->position = position;
     rect.setBottomLeft(position);
 }

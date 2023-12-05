@@ -2,8 +2,8 @@
 #include <iostream>
 
 
-namespace dk {
-	Font::Font(dk::RenderWindow& window, const char* fileDir, int ptSize)
+namespace kn {
+	Font::Font(kn::RenderWindow& window, const char* fileDir, int ptSize)
 	: window(window) {
 		font = TTF_OpenFont(fileDir, ptSize);
 		if (!font) {
@@ -12,7 +12,7 @@ namespace dk {
 		} else {}
 	}
 
-	dk::Texture Font::render(const char* text, bool antialias, SDL_Color color, int wrapLength) {
+	kn::Texture Font::render(const char* text, bool antialias, SDL_Color color, int wrapLength) {
 		SDL_Surface* surface;
 
 		if (antialias) {
@@ -36,7 +36,12 @@ namespace dk {
 		} else {}
 
 		SDL_Texture* sdlTexture = SDL_CreateTextureFromSurface(window.getRenderer(), surface);
-		dk::Texture texture(sdlTexture);
+		if (sdlTexture == nullptr) {
+			std::cout << "Failed to create texture: " << SDL_GetError() << std::endl;
+			exit(3);
+		} else {}
+
+		kn::Texture texture(sdlTexture);
 		SDL_FreeSurface(surface);
 
 		return texture;

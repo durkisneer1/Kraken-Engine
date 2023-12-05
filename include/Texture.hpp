@@ -5,24 +5,24 @@
 #include "Rect.hpp"
 
 
-namespace dk {
+namespace kn {
 	class Texture {
 	public:
 		Texture(SDL_Texture* texture);
 		~Texture() { if (texture) SDL_DestroyTexture(texture); }
 
-		dk::math::Vector2 getSize() const { return { rect.w, rect.h }; }
-		dk::Rect getRect() const { return rect; }
+		kn::math::Vector2 getSize() const { return { rect.w, rect.h }; }
+		kn::Rect getRect() const { return rect; }
 		SDL_Texture* getSDLTexture() const { return texture; }
 
-		void setSize(dk::math::Vector2 size);
+		void setSize(kn::math::Vector2 size);
 		void scaleBy(float scale);
 		void fitWidth(float width);
 		void fitHeight(float height);
 		
 	private:
 		SDL_Texture* texture = nullptr;
-		dk::Rect rect = {};
+		kn::Rect rect = {};
 
 		void query();
 	};

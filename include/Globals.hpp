@@ -3,5 +3,5 @@
 #include "Math.hpp"
 
 
-extern const dk::math::Vector2 WIN_SIZE;
+extern const kn::math::Vector2 WIN_SIZE;
 extern float GRAVITY;

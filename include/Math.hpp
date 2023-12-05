@@ -1,7 +1,7 @@
 #pragma once
 
 
-namespace dk {
+namespace kn {
 	namespace math {
 		struct Vector2 {
 			float x = 0.0f;

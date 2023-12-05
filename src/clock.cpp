@@ -1,7 +1,7 @@
 #include "../include/Clock.hpp"
 
 
-namespace dk {
+namespace kn {
 	namespace time {
 		double Clock::tick(int frameRate) {
 

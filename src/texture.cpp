@@ -2,7 +2,7 @@
 #include <iostream>
 
 
-namespace dk {
+namespace kn {
 	Texture::Texture(SDL_Texture* texture)
 	: texture(texture) {
 		query();
@@ -14,7 +14,7 @@ namespace dk {
 		this->rect = { 0, 0, w, h };
 	}
 
-	void Texture::setSize(dk::math::Vector2 size) {
+	void Texture::setSize(kn::math::Vector2 size) {
 		rect.w = size.x;
 		rect.h = size.y;
 	}

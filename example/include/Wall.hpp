@@ -1,11 +1,11 @@
 #pragma once
 
-#include <DurkGame.hpp>
+#include <KrakenEngine.hpp>
 
 
-class Wall : public dk::Sprite {
+class Wall : public kn::Sprite {
 public:
-    Wall(dk::RenderWindow& window, dk::Texture& texture, dk::math::Vector2 position);
+    Wall(kn::RenderWindow& window, kn::Texture& texture, kn::math::Vector2 position);
     ~Wall() = default;
 
     void process(double deltaTime) override;

@@ -5,45 +5,45 @@
 #include "Globals.hpp"
 
 
-namespace dk {
+namespace kn {
     struct Rect : public SDL_FRect {
         Rect() = default;
 
         Rect(float x, float y, float w, float h) : SDL_FRect{ x, y, w, h } {}
         Rect(int x, int y, int w, int h) : SDL_FRect{ (float)x, (float)y, (float)w, (float)h } {}
 
-        dk::math::Vector2 getPos();
-        dk::math::Vector2 getSize();
-        bool collidePoint(dk::math::Vector2 pos);
-        void clamp(dk::math::Vector2 min = {}, dk::math::Vector2 max = WIN_SIZE);
+        kn::math::Vector2 getPos();
+        kn::math::Vector2 getSize();
+        bool collidePoint(kn::math::Vector2 pos);
+        void clamp(kn::math::Vector2 min = {}, kn::math::Vector2 max = WIN_SIZE);
         bool collideRect(Rect rect);
 
-        void setCenter(dk::math::Vector2 pos);
+        void setCenter(kn::math::Vector2 pos);
         void setLeft(float x);
         void setRight(float x);
         void setTop(float y);
         void setBottom(float y);
-        void setTopLeft(dk::math::Vector2 pos);
-        void setTopMid(dk::math::Vector2 pos);
-        void setTopRight(dk::math::Vector2 pos);
-        void setBottomLeft(dk::math::Vector2 pos);
-        void setBottomMid(dk::math::Vector2 pos);
-        void setBottomRight(dk::math::Vector2 pos);
-        void setLeftMid(dk::math::Vector2 pos);
-        void setRightMid(dk::math::Vector2 pos);
+        void setTopLeft(kn::math::Vector2 pos);
+        void setTopMid(kn::math::Vector2 pos);
+        void setTopRight(kn::math::Vector2 pos);
+        void setBottomLeft(kn::math::Vector2 pos);
+        void setBottomMid(kn::math::Vector2 pos);
+        void setBottomRight(kn::math::Vector2 pos);
+        void setLeftMid(kn::math::Vector2 pos);
+        void setRightMid(kn::math::Vector2 pos);
 
-        dk::math::Vector2 getCenter();
+        kn::math::Vector2 getCenter();
         float getLeft();
         float getRight();
         float getTop();
         float getBottom();
-        dk::math::Vector2 getTopLeft();
-        dk::math::Vector2 getTopMid();
-        dk::math::Vector2 getTopRight();
-        dk::math::Vector2 getBottomLeft();
-        dk::math::Vector2 getBottomMid();
-        dk::math::Vector2 getBottomRight();
-        dk::math::Vector2 getLeftMid();
-        dk::math::Vector2 getRightMid();
+        kn::math::Vector2 getTopLeft();
+        kn::math::Vector2 getTopMid();
+        kn::math::Vector2 getTopRight();
+        kn::math::Vector2 getBottomLeft();
+        kn::math::Vector2 getBottomMid();
+        kn::math::Vector2 getBottomRight();
+        kn::math::Vector2 getLeftMid();
+        kn::math::Vector2 getRightMid();
     };
 }

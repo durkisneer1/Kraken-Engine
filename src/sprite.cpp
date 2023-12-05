@@ -1,23 +1,23 @@
 #include "../include/Sprite.hpp"
 
 
-namespace dk {
-    Sprite::Sprite(dk::RenderWindow& window, dk::Texture& texture)
+namespace kn {
+    Sprite::Sprite(kn::RenderWindow& window, kn::Texture& texture)
     : window(window), texture(texture), rect(texture.getRect()) {}
 
-    dk::math::Vector2 Sprite::getPosition() const {
+    kn::math::Vector2 Sprite::getPosition() const {
         return position;
     }
 
-    dk::Rect Sprite::getRect() const {
+    kn::Rect Sprite::getRect() const {
         return rect;
     }
 
-    const std::vector<std::unique_ptr<dk::Sprite>>& Sprite::getSprites() {
+    const std::vector<std::unique_ptr<kn::Sprite>>& Sprite::getSprites() {
         return sprites;
     }
 
-    void Sprite::addSprite(std::unique_ptr<dk::Sprite> sprite) {
+    void Sprite::addSprite(std::unique_ptr<kn::Sprite> sprite) {
         sprites.push_back(std::move(sprite));
     }
 
@@ -32,7 +32,7 @@ namespace dk {
     }
 
     void Sprite::rectHorizontalCollision() {
-        for (const auto& sprite : dk::Sprite::getSprites()) {
+        for (const auto& sprite : kn::Sprite::getSprites()) {
             if (sprite.get() != this) {
                 if (rect.collideRect(sprite->getRect())) {
                     if (velocity.x > 0) {
@@ -51,7 +51,7 @@ namespace dk {
     void Sprite::rectVerticalCollision() {
         onGround = false;
         onCeiling = false;
-        for (const auto& sprite : dk::Sprite::getSprites()) {
+        for (const auto& sprite : kn::Sprite::getSprites()) {
             if (sprite.get() != this) {
                 if (rect.collideRect(sprite->getRect())) {
                     if (velocity.y > 0) {
@@ -69,5 +69,5 @@ namespace dk {
         }
     }
 
-    std::vector<std::unique_ptr<dk::Sprite>> Sprite::sprites;
+    std::vector<std::unique_ptr<kn::Sprite>> Sprite::sprites;
 }

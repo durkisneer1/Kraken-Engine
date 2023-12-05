@@ -3,7 +3,7 @@
 #include <algorithm>
 
 
-namespace dk {
+namespace kn {
 	namespace math {
 		Vector2::Vector2(float x, float y) : x(x), y(y) {}
 		Vector2::Vector2(int x, int y) : x(static_cast<float>(x)), y(static_cast<float>(y)) {}

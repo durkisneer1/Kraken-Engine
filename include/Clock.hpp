@@ -3,7 +3,7 @@
 #include <SDL.h>
 
 
-namespace dk {
+namespace kn {
 	namespace time {
 		class Clock {
 		public:

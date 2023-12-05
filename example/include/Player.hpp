@@ -1,19 +1,19 @@
 #pragma once
 
-#include <DurkGame.hpp>
+#include <KrakenEngine.hpp>
 #include <vector>
 
 
-class Player : public dk::Sprite {
+class Player : public kn::Sprite {
 public:
-    Player(dk::RenderWindow& window, dk::Texture& texture);
+    Player(kn::RenderWindow& window, kn::Texture& texture);
     ~Player() = default;
 
     void process(double deltaTime) override;
 
 private:
-    std::vector<DK_KEYS> moveLeft = { DKK_a, DKK_left };
-    std::vector<DK_KEYS> moveRight = { DKK_d, DKK_right };
+    std::vector<KN_KEYS> moveLeft = { KNK_a, KNK_left };
+    std::vector<KN_KEYS> moveRight = { KNK_d, KNK_right };
 
     float speed = 450.0f;
 };

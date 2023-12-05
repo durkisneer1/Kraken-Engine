@@ -8,35 +8,35 @@
 #include "RenderWindow.hpp"
 
 
-namespace dk {
+namespace kn {
     class Sprite {
     public:
-        Sprite(dk::RenderWindow& window, dk::Texture& texture);
+        Sprite(kn::RenderWindow& window, kn::Texture& texture);
         ~Sprite() = default;
 
-        dk::math::Vector2 getPosition() const;
-        dk::Rect getRect() const;
+        kn::math::Vector2 getPosition() const;
+        kn::Rect getRect() const;
 
-        static const std::vector<std::unique_ptr<dk::Sprite>>& getSprites();
-        static void addSprite(std::unique_ptr<dk::Sprite> sprite);
+        static const std::vector<std::unique_ptr<kn::Sprite>>& getSprites();
+        static void addSprite(std::unique_ptr<kn::Sprite> sprite);
 
         virtual void process(double deltaTime) = 0;
 
     protected:
-        dk::RenderWindow& window;
-        dk::Texture& texture;
-        dk::Rect rect;
+        kn::RenderWindow& window;
+        kn::Texture& texture;
+        kn::Rect rect;
         
-        dk::math::Vector2 position;
-        dk::math::Vector2 direction;
-        dk::math::Vector2 velocity;
+        kn::math::Vector2 position;
+        kn::math::Vector2 direction;
+        kn::math::Vector2 velocity;
         bool onGround = false;
         bool onCeiling = false;
 
         void moveAndCollide(double deltaTime);
 
     private:
-        static std::vector<std::unique_ptr<dk::Sprite>> sprites;
+        static std::vector<std::unique_ptr<kn::Sprite>> sprites;
 
         void rectHorizontalCollision();
         void rectVerticalCollision();
