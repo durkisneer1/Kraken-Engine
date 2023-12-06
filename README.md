@@ -7,14 +7,10 @@
 
 `Kraken Engine` extends SDL2 with easy-to-use features like <em>texture caching</em> and <em>collision logic</em>. Future plans include implementing handy mathematical functions such as <em>pathfinding</em>, <em>raycasting</em>, and <em>built-in physics</em>.
 
-<br>
-<br>
-
 <h1 align="center">Documentation</h1>
 
 I don't have a documentation page yet, but I plan on making one soon.
 In the very least, here is a basic window setup program using Kraken:
-<br>
 <br>
 
 ```c++
@@ -44,11 +40,9 @@ int main() {
 ```
 
 To view a more in-depth use of the library, I am working on a small tech demo in the [example](https://github.com/durkisneer1/Kraken-Engine/tree/main/example) folder.
-<br>
-<br>
 
 <h1 align="center">Licensing</h1>
 
 [MIT](LICENSE) @ Derrick Martinez
 
-Kraken Engine is a non-profit, free, and open-source framework.
+`Kraken Engine` is a non-profit, free, and open-source framework.
