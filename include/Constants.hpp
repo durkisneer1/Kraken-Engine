@@ -3,6 +3,7 @@
 #include <SDL.h>
 
 typedef SDL_Scancode KN_KEYS;
+typedef SDL_Event KN_Event;
 
 const SDL_Scancode KNK_w = SDL_SCANCODE_W;
 const SDL_Scancode KNK_a = SDL_SCANCODE_A;

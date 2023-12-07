@@ -11,7 +11,7 @@
 namespace kn {
     class Sprite {
     public:
-        Sprite(kn::RenderWindow& window, kn::Texture& texture);
+        Sprite(kn::RenderWindow& window, std::shared_ptr<kn::Texture> texture);
         ~Sprite() = default;
 
         kn::math::Vector2 getPosition() const;
@@ -24,7 +24,7 @@ namespace kn {
 
     protected:
         kn::RenderWindow& window;
-        kn::Texture& texture;
+        std::shared_ptr<kn::Texture> texture;
         kn::Rect rect;
         
         kn::math::Vector2 position;

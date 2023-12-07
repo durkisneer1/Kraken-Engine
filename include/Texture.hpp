@@ -8,7 +8,7 @@
 namespace kn {
 	class Texture {
 	public:
-		Texture(SDL_Texture* texture);
+		explicit Texture(SDL_Texture* texture);
 		~Texture() { if (texture) SDL_DestroyTexture(texture); }
 
 		kn::math::Vector2 getSize() const { return { rect.w, rect.h }; }

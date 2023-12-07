@@ -2,7 +2,7 @@
 #include <iostream>
 
 
-Wall::Wall(kn::RenderWindow& window, kn::Texture& texture, kn::math::Vector2 position)
+Wall::Wall(kn::RenderWindow& window, std::shared_ptr<kn::Texture> texture, kn::math::Vector2 position)
 : kn::Sprite(window, texture) {
     this->position = position;
     rect.setBottomLeft(position);

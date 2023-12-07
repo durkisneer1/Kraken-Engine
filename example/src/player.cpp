@@ -2,7 +2,7 @@
 #include <iostream>
 
 
-Player::Player(kn::RenderWindow& window, kn::Texture& texture)
+Player::Player(kn::RenderWindow& window, std::shared_ptr<kn::Texture> texture)
 : kn::Sprite(window, texture) {
     position = WIN_SIZE / 2.0f;
 }

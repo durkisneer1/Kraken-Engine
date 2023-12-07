@@ -2,8 +2,8 @@
 
 
 namespace kn {
-    Sprite::Sprite(kn::RenderWindow& window, kn::Texture& texture)
-    : window(window), texture(texture), rect(texture.getRect()) {}
+    Sprite::Sprite(kn::RenderWindow& window, std::shared_ptr<kn::Texture> texture)
+    : window(window), texture(texture), rect(texture->getRect()) {}
 
     kn::math::Vector2 Sprite::getPosition() const {
         return position;

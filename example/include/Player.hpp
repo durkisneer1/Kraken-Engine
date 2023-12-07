@@ -2,11 +2,12 @@
 
 #include <KrakenEngine.hpp>
 #include <vector>
+#include <memory>
 
 
 class Player : public kn::Sprite {
 public:
-    Player(kn::RenderWindow& window, kn::Texture& texture);
+    Player(kn::RenderWindow& window, std::shared_ptr<kn::Texture> texture);
     ~Player() = default;
 
     void process(double deltaTime) override;

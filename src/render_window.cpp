@@ -80,11 +80,11 @@ namespace kn {
 		SDL_RenderPresent(renderer);
 	}
 
-	void RenderWindow::blit(kn::Texture& texture, kn::Rect rect) {
-		SDL_RenderCopyF(renderer, texture.getSDLTexture(), nullptr, &rect);
+	void RenderWindow::blit(std::shared_ptr<kn::Texture> texture, kn::Rect rect) {
+		SDL_RenderCopyF(renderer, texture->getSDLTexture(), nullptr, &rect);
 	}
 
-	void RenderWindow::blitEx(kn::Texture& texture, kn::Rect rect, double angle, bool flipX, bool flipY) {
+	void RenderWindow::blitEx(std::shared_ptr<kn::Texture> texture, kn::Rect rect, double angle, bool flipX, bool flipY) {
 		SDL_RendererFlip flip = SDL_FLIP_NONE;
 		if (flipX) {
 			flip = (SDL_RendererFlip)(flip | SDL_FLIP_HORIZONTAL);
@@ -92,10 +92,10 @@ namespace kn {
 		if (flipY) {
 			flip = (SDL_RendererFlip)(flip | SDL_FLIP_VERTICAL);
 		} else {}
-		SDL_RenderCopyExF(renderer, texture.getSDLTexture(), nullptr, &rect, angle, nullptr, flip);
+		SDL_RenderCopyExF(renderer, texture->getSDLTexture(), nullptr, &rect, angle, nullptr, flip);
 	}
 
-	void RenderWindow::blitEx(kn::Texture& texture, kn::math::Vector2 position, double angle, bool flipX, bool flipY) {
+	void RenderWindow::blitEx(std::shared_ptr<kn::Texture> texture, kn::math::Vector2 position, double angle, bool flipX, bool flipY) {
 		SDL_RendererFlip flip = SDL_FLIP_NONE;
 		if (flipX) {
 			flip = (SDL_RendererFlip)(flip | SDL_FLIP_HORIZONTAL);
@@ -105,16 +105,16 @@ namespace kn {
 		} else {}
 		SDL_FRect rect = {
 			position.x, position.y,
-			texture.getSize().x, texture.getSize().y
+			texture->getSize().x, texture->getSize().y
 		};
-		SDL_RenderCopyExF(renderer, texture.getSDLTexture(), nullptr, &rect, angle, nullptr, flip);
+		SDL_RenderCopyExF(renderer, texture->getSDLTexture(), nullptr, &rect, angle, nullptr, flip);
 	}
 
-	void RenderWindow::blit(kn::Texture& texture, kn::math::Vector2 position) {
+	void RenderWindow::blit(std::shared_ptr<kn::Texture> texture, kn::math::Vector2 position) {
 		SDL_FRect rect = {
 			position.x, position.y,
-			texture.getSize().x, texture.getSize().y
+			texture->getSize().x, texture->getSize().y
 		};
-		SDL_RenderCopyF(renderer, texture.getSDLTexture(), nullptr, &rect);
+		SDL_RenderCopyF(renderer, texture->getSDLTexture(), nullptr, &rect);
 	}
 }

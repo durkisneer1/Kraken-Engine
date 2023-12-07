@@ -10,8 +10,8 @@
 namespace kn {
     class TextureCache {
     public:
-        TextureCache(kn::RenderWindow& window) : window(window) {}
-        ~TextureCache() { unloadAll();};
+        explicit TextureCache(kn::RenderWindow& window) : window(window) {}
+        ~TextureCache() { unloadAll(); };
 
         void load(const char* name, const char* path);
         void create(const char* name, kn::math::Vector2 size, SDL_Color color);
