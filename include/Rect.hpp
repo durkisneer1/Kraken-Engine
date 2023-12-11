@@ -6,17 +6,35 @@
 
 
 namespace kn {
+    /// @brief A class to represent a rectangle.
     struct Rect : public SDL_FRect {
         Rect() = default;
 
         Rect(float x, float y, float w, float h) : SDL_FRect{ x, y, w, h } {}
         Rect(int x, int y, int w, int h) : SDL_FRect{ (float)x, (float)y, (float)w, (float)h } {}
 
+        /// @brief Get the position of the rectangle.
+        /// @return The position of the rectangle.
         kn::math::Vector2 getPos();
+
+        /// @brief Get the size of the rectangle.
+        /// @return The size of the rectangle.
         kn::math::Vector2 getSize();
+
+        /// @brief Check if the rectangle collides with a point.
+        /// @param pos The point to check.
+        /// @return Whether the rectangle collides with a point.
         bool collidePoint(kn::math::Vector2 pos);
-        void clamp(kn::math::Vector2 min = {}, kn::math::Vector2 max = WIN_SIZE);
+
+        /// @brief Check if the rectangle collides with another rectangle.
+        /// @param rect The rectangle to check.
+        /// @return Whether the rectangle collides with another rectangle.
         bool collideRect(Rect rect);
+
+        /// @brief Clamp the rectangle.
+        /// @param min The minimum value.
+        /// @param max The maximum value.
+        void clamp(kn::math::Vector2 min = {}, kn::math::Vector2 max = WIN_SIZE);
 
         void setCenter(kn::math::Vector2 pos);
         void setLeft(float x);

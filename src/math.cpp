@@ -10,9 +10,8 @@ namespace kn {
 		Vector2::Vector2(float x, int y) : x(x), y(static_cast<float>(y)) {}
 		Vector2::Vector2(int x, float y) : x(static_cast<float>(x)), y(y) {}
 
-		void Vector2::ZERO() {
-			x = 0.0f;
-			y = 0.0f;
+		Vector2 Vector2::ZERO() {
+			return { 0.0f, 0.0f };
 		}
 
 		float Vector2::getLength() const {

@@ -19,9 +19,9 @@ namespace kn {
 		rect.h = size.y;
 	}
 
-	void Texture::scaleBy(float scale) {
-		rect.w = rect.w * scale;
-		rect.h = rect.h * scale;
+	void Texture::scaleBy(float factor) {
+		rect.w = rect.w * factor;
+		rect.h = rect.h * factor;
 	}
 
 	void Texture::fitWidth(float width) {

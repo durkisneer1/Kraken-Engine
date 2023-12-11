@@ -44,7 +44,7 @@ namespace kn {
         textures.clear();
     }
 
-    std::shared_ptr<kn::Texture> TextureCache::get(const char* name) {
+    std::shared_ptr<kn::Texture> TextureCache::getTexture(const char* name) {
         return textures[name];
     }
 }

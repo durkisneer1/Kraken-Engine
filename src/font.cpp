@@ -9,7 +9,7 @@ namespace kn {
 		if (!font) {
 			std::cout << "Failed to load font: " << TTF_GetError() << std::endl;
 			exit(3);
-		} else {}
+		}
 	}
 
 	kn::Texture Font::render(const char* text, bool antialias, SDL_Color color, int wrapLength) {
@@ -33,17 +33,17 @@ namespace kn {
 		if (surface == nullptr) {
 			std::cout << "Failed to render text: " << TTF_GetError() << std::endl;
 			exit(3);
-		} else {}
+		}
 
 		SDL_Texture* sdlTexture = SDL_CreateTextureFromSurface(window.getRenderer(), surface);
 		if (sdlTexture == nullptr) {
 			std::cout << "Failed to create texture: " << SDL_GetError() << std::endl;
 			exit(3);
-		} else {}
+		}
 
 		kn::Texture texture(sdlTexture);
 		SDL_FreeSurface(surface);
 
-		return texture;
+		return std::move(texture);
 	}
 }

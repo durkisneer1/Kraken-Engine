@@ -12,19 +12,55 @@
 
 
 namespace kn {
+	/// @brief The renderer context.
+	/// @note This class is a mandatory singleton.
 	class RenderWindow {
 	public:
+		/// @brief Create a window.
+		/// @param size The size of the window.
+		/// @param title The title of the window.
 		RenderWindow(kn::math::Vector2 size, const char* title);
 		~RenderWindow();
-
+		
+		/// @brief Clear the window.
+		/// @param color The color to clear the window.
 		void fill(SDL_Color color);
-		void flip();
-		void blit(const std::shared_ptr<kn::Texture> texture, kn::Rect rect);
-		void blit(const std::shared_ptr<kn::Texture> texture, kn::math::Vector2 position);
-		void blitEx(const std::shared_ptr<kn::Texture>, kn::Rect rect, double angle = 0.0, bool flipX = false, bool flipY = false);
-		void blitEx(const std::shared_ptr<kn::Texture>, kn::math::Vector2 position, double angle = 0.0, bool flipX = false, bool flipY = false);
 
+		/// @brief Flip the render frame buffer.
+		void flip();
+
+		/// @brief Draw a texture.
+		/// @param texture The texture to draw.
+		/// @param rect The rectangle to draw on.
+		void blit(const std::shared_ptr<kn::Texture> texture, kn::Rect rect);
+
+		/// @brief Draw a texture.
+		/// @param texture The texture to draw.
+		/// @param position The position to draw at.
+		void blit(const std::shared_ptr<kn::Texture> texture, kn::math::Vector2 position);
+
+		/// @brief Draw a texture.
+		/// @param texture The texture to draw.
+		/// @param rect The rectangle to draw on.
+		/// @param angle The angle to draw the texture.
+		/// @param flipX Whether to flip the texture on the x-axis.
+		/// @param flipY Whether to flip the texture on the y-axis.
+		void blitEx(const std::shared_ptr<kn::Texture> texture, kn::Rect rect, double angle = 0.0, bool flipX = false, bool flipY = false);
+
+		/// @brief Draw a texture.
+		/// @param texture The texture to draw.
+		/// @param position The position to draw at.
+		/// @param angle The angle to draw the texture.
+		/// @param flipX Whether to flip the texture on the x-axis.
+		/// @param flipY Whether to flip the texture on the y-axis.
+		void blitEx(const std::shared_ptr<kn::Texture> texture, kn::math::Vector2 position, double angle = 0.0, bool flipX = false, bool flipY = false);
+
+		/// @brief Get the window renderer.
+		/// @return The window renderer.
 		SDL_Renderer* getRenderer() { return renderer; }
+
+		/// @brief Get user events.
+		/// @return The user events.
 		const std::vector<KN_Event>& getEvents();
 		
 	private:

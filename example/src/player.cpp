@@ -12,7 +12,7 @@ void Player::process(double deltaTime) {
         if (kn::input::getKeysPressed()[KNK_space]) {
             velocity.y = -340;
             onGround = false;
-        } else {}
+        }
     } else {
         velocity.y += GRAVITY * deltaTime;
     }

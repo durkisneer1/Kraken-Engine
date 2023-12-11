@@ -11,7 +11,7 @@ namespace kn {
 				double delay = targetFrameTime - rawTime;
 
 				if (delay > 0) SDL_Delay((uint32_t)delay);
-			} else {}
+			}
 
 			now = SDL_GetTicks64();
 			frameTime = now - last;

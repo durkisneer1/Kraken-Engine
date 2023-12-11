@@ -20,25 +20,26 @@ int main() {
 	textureCache.create("wall", { 50, 50 }, { 0, 255, 0 });
 	textureCache.create("tracker", {20, 20}, { 0, 0, 255 });
 	textureCache.load("background", "assets/background.png");
-	textureCache.move("hello world", font.render("Hello, World!", true, { 255, 255, 255 }));
+	kn::Texture hwTexture0 = font.render("Hello, World!", true, { 255, 255, 255 });
+	textureCache.move("hello world", hwTexture0);
 
-	std::shared_ptr<kn::Texture> bgTexture = textureCache.get("background");
+	std::shared_ptr<kn::Texture> bgTexture = textureCache.getTexture("background");
 	bgTexture->fitWidth(WIN_SIZE.x);
 
-	std::shared_ptr<kn::Texture> hwTexture = textureCache.get("hello world");
+	std::shared_ptr<kn::Texture> hwTexture = textureCache.getTexture("hello world");
 	kn::Rect hwRect = hwTexture->getRect();
-	hwRect.setCenter(WIN_SIZE / 2.0f);
+	hwRect.setCenter({0, 0});
 
-	Player player(window, textureCache.get("player"));
-	Tracker tracker(window, textureCache.get("tracker"));
+	Player player(window, textureCache.getTexture("player"));
+	Tracker tracker(window, textureCache.getTexture("tracker"));
 
 	for (float x = 0.0f; x <= WIN_SIZE.x - 50.0f; x += 50.0f) {
 		kn::Sprite::addSprite(
-			std::make_unique<Wall>(window, textureCache.get("wall"), kn::math::Vector2(x, WIN_SIZE.y))
+			std::make_unique<Wall>(window, textureCache.getTexture("wall"), kn::math::Vector2(x, WIN_SIZE.y))
 		);
 	}
 	kn::Sprite::addSprite(
-		std::make_unique<Wall>(window, textureCache.get("wall"), kn::math::Vector2(WIN_SIZE.x - 150.0f, WIN_SIZE.y - 50.0f))
+		std::make_unique<Wall>(window, textureCache.getTexture("wall"), kn::math::Vector2(WIN_SIZE.x - 150.0f, WIN_SIZE.y - 50.0f))
 	);
 
 	bool done = false;
@@ -51,8 +52,8 @@ int main() {
 			} else if (event.type == KN_KEYDOWN) {
 				if (event.key.keysym.sym == KNK_ESCAPE) {
 					done = true;
-				} else {}
-			} else {}
+				}
+			}
 		}
 		
 		window.fill({ 40, 40, 40 });

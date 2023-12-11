@@ -16,7 +16,7 @@ namespace kn {
 			std::cout << "SDL_CreateWindow Error: " << SDL_GetError() << std::endl;
 			SDL_Quit();
 			exit(3);
-		} else {}
+		}
 
 		renderer = SDL_CreateRenderer(
 			window, -1, SDL_RENDERER_ACCELERATED
@@ -27,7 +27,7 @@ namespace kn {
 			SDL_DestroyWindow(window);
 			SDL_Quit();
 			exit(3);
-		} else {}
+		}
 	}
 
 	RenderWindow::~RenderWindow() {
@@ -43,24 +43,24 @@ namespace kn {
 		if (SDL_Init(SDL_INIT_VIDEO)) {
 			std::cout << "SDL_Init Error: " << SDL_GetError() << std::endl;
 			exit(3);
-		} else {}
+		}
 		if (!IMG_Init(IMG_INIT_PNG)) {
 			std::cout << "IMG_Init Error: " << IMG_GetError() << std::endl;
 			SDL_Quit();
 			exit(3);
-		} else {}
+		}
 		if (TTF_Init() < 0) {
 			std::cout << "TTF_Init Error: " << TTF_GetError() << std::endl;
 			IMG_Quit();
 			SDL_Quit();
 			exit(3);
-		} else {}
+		}
 		if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0) {
 			std::cout << "Mix_OpenAudio Error: " << Mix_GetError() << std::endl;
 			TTF_Quit();
 			IMG_Quit();
 			SDL_Quit();
-		} else {}
+		}
 	}
 
 	const std::vector<SDL_Event>& RenderWindow::getEvents() {
@@ -88,10 +88,10 @@ namespace kn {
 		SDL_RendererFlip flip = SDL_FLIP_NONE;
 		if (flipX) {
 			flip = (SDL_RendererFlip)(flip | SDL_FLIP_HORIZONTAL);
-		} else {}
+		}
 		if (flipY) {
 			flip = (SDL_RendererFlip)(flip | SDL_FLIP_VERTICAL);
-		} else {}
+		}
 		SDL_RenderCopyExF(renderer, texture->getSDLTexture(), nullptr, &rect, angle, nullptr, flip);
 	}
 
@@ -99,10 +99,10 @@ namespace kn {
 		SDL_RendererFlip flip = SDL_FLIP_NONE;
 		if (flipX) {
 			flip = (SDL_RendererFlip)(flip | SDL_FLIP_HORIZONTAL);
-		} else {}
+		}
 		if (flipY) {
 			flip = (SDL_RendererFlip)(flip | SDL_FLIP_VERTICAL);
-		} else {}
+		}
 		SDL_FRect rect = {
 			position.x, position.y,
 			texture->getSize().x, texture->getSize().y

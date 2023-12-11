@@ -39,12 +39,12 @@ namespace kn {
                         rect.setRight(sprite->getRect().getLeft());
                     } else if (velocity.x < 0) {
                         rect.setLeft(sprite->getRect().getRight());
-                    } else {}
+                    }
 
                     velocity.x = 0;
                     position = rect.getCenter();
-                } else {}
-            } else {}
+                }
+            }
         }
     }
 
