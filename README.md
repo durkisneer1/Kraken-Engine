@@ -25,7 +25,7 @@ int main() {
 
     bool done = false;
     while (!done) {
-        double deltaTime = clock.tick(60);
+        double deltaTime = clock.tick(60) / 1000.0f;
 
         for (const auto& event : window.getEvents()) {
             if (event.type == KN_QUIT) done = true;
