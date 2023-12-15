@@ -3,17 +3,17 @@
 
 
 namespace kn {
-	RenderWindow::RenderWindow(kn::math::Vector2 size, const char* title) {
+	RenderWindow::RenderWindow(kn::math::Vector2 size, const std::string &title) {
 		init();
 
 		this->window = SDL_CreateWindow(
-			title,
+			title.c_str(),
 			SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
 			(int)size.x, (int)size.y,
 			SDL_WINDOW_SHOWN
 		);
 		if (!window) {
-			std::cout << "SDL_CreateWindow Error: " << SDL_GetError() << std::endl;
+			std::cerr << "SDL_CreateWindow Error: " << SDL_GetError() << std::endl;
 			SDL_Quit();
 			exit(3);
 		}
@@ -23,7 +23,7 @@ namespace kn {
 		);
 		
 		if (!renderer) {
-			std::cout << "SDL_CreateRenderer Error: " << SDL_GetError() << std::endl;
+			std::cerr << "SDL_CreateRenderer Error: " << SDL_GetError() << std::endl;
 			SDL_DestroyWindow(window);
 			SDL_Quit();
 			exit(3);
@@ -41,22 +41,22 @@ namespace kn {
 
 	void RenderWindow::init() {
 		if (SDL_Init(SDL_INIT_VIDEO)) {
-			std::cout << "SDL_Init Error: " << SDL_GetError() << std::endl;
+			std::cerr << "SDL_Init Error: " << SDL_GetError() << std::endl;
 			exit(3);
 		}
 		if (!IMG_Init(IMG_INIT_PNG)) {
-			std::cout << "IMG_Init Error: " << IMG_GetError() << std::endl;
+			std::cerr << "IMG_Init Error: " << IMG_GetError() << std::endl;
 			SDL_Quit();
 			exit(3);
 		}
 		if (TTF_Init() < 0) {
-			std::cout << "TTF_Init Error: " << TTF_GetError() << std::endl;
+			std::cerr << "TTF_Init Error: " << TTF_GetError() << std::endl;
 			IMG_Quit();
 			SDL_Quit();
 			exit(3);
 		}
 		if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0) {
-			std::cout << "Mix_OpenAudio Error: " << Mix_GetError() << std::endl;
+			std::cerr << "Mix_OpenAudio Error: " << Mix_GetError() << std::endl;
 			TTF_Quit();
 			IMG_Quit();
 			SDL_Quit();

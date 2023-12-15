@@ -3,20 +3,20 @@
 
 
 namespace kn {
-    void TextureCache::load(const char* name, const char* path) {
-        SDL_Texture* texture = IMG_LoadTexture(window.getRenderer(), path);
+    void TextureCache::load(const std::string &name, const std::string &path) {
+        SDL_Texture* texture = IMG_LoadTexture(window.getRenderer(), path.c_str());
         if (!texture) {
-            std::cout << "Failed to create texture from: " << path << std::endl;
+            std::cerr << "Failed to create texture from: " << path << std::endl;
             return;
         } else {
             textures[name] = std::make_shared<kn::Texture>(texture);
         }
     }
 
-    void TextureCache::create(const char* name, kn::math::Vector2 size, SDL_Color color) {
+    void TextureCache::create(const std::string &name, kn::math::Vector2 size, SDL_Color color) {
         SDL_Surface* surface = SDL_CreateRGBSurface(0, size.x, size.y, 32, 0, 0, 0, 0);
         if (!surface) {
-            std::cout << "Failed to create surface: " << name << std::endl;
+            std::cerr << "Failed to create surface: " << name << std::endl;
             return;
         }
 
@@ -24,7 +24,7 @@ namespace kn {
 
         SDL_Texture* texture = SDL_CreateTextureFromSurface(window.getRenderer(), surface);
         if (!texture) {
-            std::cout << "Failed to create texture from surface: " << name << std::endl;
+            std::cerr << "Failed to create texture from surface: " << name << std::endl;
             return;
         }
 
@@ -32,11 +32,11 @@ namespace kn {
         SDL_FreeSurface(surface);
     }
 
-    void TextureCache::move(const char* name, const kn::Texture& texture) {
+    void TextureCache::move(const std::string &name, const kn::Texture& texture) {
         textures[name] = std::make_shared<kn::Texture>(std::move(texture));
     }
 
-    void TextureCache::unload(const char* name) {
+    void TextureCache::unload(const std::string &name) {
         textures.erase(name);
     }
 
@@ -44,7 +44,7 @@ namespace kn {
         textures.clear();
     }
 
-    std::shared_ptr<kn::Texture> TextureCache::getTexture(const char* name) {
+    std::shared_ptr<kn::Texture> TextureCache::getTexture(const std::string &name) {
         return textures[name];
     }
 }

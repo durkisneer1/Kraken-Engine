@@ -4,8 +4,7 @@
 namespace kn {
 	namespace time {
 		double Clock::tick(int frameRate) {
-
-			if (frameRate) {
+			if (frameRate > 0) {
 				double targetFrameTime = 1000.0 / frameRate;
 				rawTime = SDL_GetTicks64() - last;
 				double delay = targetFrameTime - rawTime;

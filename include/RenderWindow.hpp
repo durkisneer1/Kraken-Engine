@@ -19,7 +19,7 @@ namespace kn {
 		/// @brief Create a window.
 		/// @param size The size of the window.
 		/// @param title The title of the window.
-		RenderWindow(kn::math::Vector2 size, const char* title);
+		RenderWindow(kn::math::Vector2 size, const std::string &title);
 		~RenderWindow();
 		
 		/// @brief Clear the window.
