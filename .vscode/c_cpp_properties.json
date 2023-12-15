@@ -6,6 +6,7 @@
                 "C:/SDL2/include",
                 "${workspaceFolder}/include",
                 "${workspaceFolder}/example/include"
+                "${workspaceFolder}/include/tmxlite",
             ],
             "defines": [
                 "_DEBUG",

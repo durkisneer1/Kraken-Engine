@@ -20,8 +20,7 @@ int main() {
 	textureCache.create("wall", { 50, 50 }, { 0, 255, 0 });
 	textureCache.create("tracker", {20, 20}, { 0, 0, 255 });
 	textureCache.load("background", "assets/background.png");
-	kn::Texture hwTexture0 = font.render("Hello, World!", true, { 255, 255, 255 });
-	textureCache.move("hello world", hwTexture0);
+	textureCache.move("hello world", font.render("Hello, World!", true, { 255, 255, 255 }));
 
 	std::shared_ptr<kn::Texture> bgTexture = textureCache.getTexture("background");
 	bgTexture->fitWidth(WIN_SIZE.x);

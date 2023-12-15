@@ -1,23 +1,21 @@
-
+# C++ Compile and Link
 CXX := x86_64-w64-mingw32-g++
-SRC_DIR := src
-INCLUDE_DIR := include
-SDL2_INCLUDE_DIR := C:/SDL2/include
-SDL2_LIB_DIR := C:/SDL2/lib
+CXXFLAGS := -std=c++17 -Wall -Werror -m64 -Iinclude -IC:/SDL2/include -Iinclude/tmxlite
 
-CXXFLAGS := -std=c++17 -Wall -Werror -m64 -I$(INCLUDE_DIR) -I$(SDL2_INCLUDE_DIR)
+# Lib Setup
 TARGET := Kraken.lib
-SRC := $(wildcard $(SRC_DIR)/*.cpp)
+SRC := $(wildcard src/*.cpp)
 OBJ := $(SRC:.cpp=.o)
-LIB := $(wildcard $(SDL2_LIB_DIR)/*.lib)
-
 all: $(TARGET)
 
+# Compile Lib
 $(TARGET): $(OBJ)
-	ar rcs $@ $^ $(LIB)
+	ar rcs $@ $^ $(wildcard C:/SDL2/lib/*.lib) lib/libtmxlite-s-d.lib
 
-%.o: $(SRC_DIR)/%.cpp
+# Build Object Files
+%.o: src/%.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
+# Clean Object and Lib Files
 clean:
 	del $(subst /,\,$(TARGET)) $(subst /,\,$(OBJ))
