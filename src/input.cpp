@@ -4,10 +4,11 @@
 
 namespace kn {
 	namespace input {
-		kn::math::Vector2 getMousePos() {
+		kn::math::Vector2 getMousePos(int scale) {
 			int x, y;
 			SDL_GetMouseState(&x, &y);
-			return { x, y };
+			scale = std::min(std::max(scale, 1), 32);
+			return { x / scale, y / scale};
 		}
 
 		const int getMouseButtonPressed() {

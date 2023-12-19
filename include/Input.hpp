@@ -9,7 +9,8 @@ namespace kn {
 	namespace input {
 		/// @brief Get the mouse position.
 		/// @return The mouse position.
-		kn::math::Vector2 getMousePos();
+		/// @note The scale parameter is temporary.
+		kn::math::Vector2 getMousePos(int scale = 1);
 
 		/// @brief Get the mouse button pressed.
 		/// @return The mouse button pressed.

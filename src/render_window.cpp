@@ -10,7 +10,7 @@ namespace kn {
 		this->window = SDL_CreateWindow(
 			title.c_str(),
 			SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-			(int)WIN_SIZE.x * scale, (int)WIN_SIZE.y * scale,
+			(int)SCREEN_SIZE.x * scale, (int)SCREEN_SIZE.y * scale,
 			fullscreen ? SDL_WINDOW_FULLSCREEN : SDL_WINDOW_SHOWN
 		);
 
@@ -32,7 +32,7 @@ namespace kn {
 		}
 
 		if (scale > 1) {
-			SDL_RenderSetLogicalSize(renderer, WIN_SIZE.x, WIN_SIZE.y);
+			SDL_RenderSetLogicalSize(renderer, SCREEN_SIZE.x, SCREEN_SIZE.y);
 			SDL_RenderSetIntegerScale(renderer, SDL_TRUE);
 		}
 	}
@@ -78,7 +78,7 @@ namespace kn {
 		return events;
 	}
 
-	void RenderWindow::fill(SDL_Color color) {
+	void RenderWindow::cls(SDL_Color color) {
 		SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
 		SDL_RenderClear(renderer);
 	}

@@ -4,7 +4,7 @@
 
 Player::Player(kn::RenderWindow& window, std::shared_ptr<kn::Texture> texture)
 : kn::Sprite(window, texture) {
-    position = WIN_SIZE / 2.0f;
+    position = kn::SCREEN_SIZE / 2.0f;
 }
 
 void Player::process(double deltaTime) {
@@ -14,7 +14,7 @@ void Player::process(double deltaTime) {
             onGround = false;
         }
     } else {
-        velocity.y += GRAVITY * deltaTime;
+        velocity.y += kn::GRAVITY * deltaTime;
     }
     
     direction = kn::input::getVector(moveLeft, moveRight);

@@ -9,29 +9,29 @@
 
 <h1 align="center">Documentation</h1>
 
-I don't have a documentation page yet, but I plan on making one soon.
-In the very least, here is a basic window setup program using Kraken:
+You can find the latest documentation @ https://durkisneer1.github.io/kraken/html/index.html
+Here is the bare window setup program using Kraken:
 <br>
 
 ```c++
 #include <KrakenEngine.hpp>
 
-const kn::math::Vector2 WIN_SIZE = { 800, 600 };
+const kn::math::Vector2 kn::SCREEN_SIZE = { 800, 600 };
 
 
 int main() {
-    kn::RenderWindow window(WIN_SIZE, "Kraken App");
+    kn::RenderWindow window("Kraken App");
     kn::time::Clock clock;
 
     bool done = false;
     while (!done) {
-        double deltaTime = clock.tick(60) / 1000.0f;
+        double deltaTime = clock.tick(60);
 
         for (const auto& event : window.getEvents()) {
             if (event.type == KN_QUIT) done = true;
         }
 
-        window.fill({ 40, 40, 40 });
+        window.cls();
         window.flip();
     }
 

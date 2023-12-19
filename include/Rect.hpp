@@ -34,7 +34,7 @@ namespace kn {
         /// @brief Clamp the rectangle.
         /// @param min The minimum value.
         /// @param max The maximum value.
-        void clamp(kn::math::Vector2 min = {}, kn::math::Vector2 max = WIN_SIZE);
+        void clamp(kn::math::Vector2 min = {}, kn::math::Vector2 max = SCREEN_SIZE);
 
         void setCenter(kn::math::Vector2 pos);
         void setLeft(float x);

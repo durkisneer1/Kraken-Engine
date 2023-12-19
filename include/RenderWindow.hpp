@@ -25,9 +25,9 @@ namespace kn {
 		RenderWindow(const std::string &title, int scale = 1, bool fullscreen = false);
 		~RenderWindow();
 		
-		/// @brief Clear the window.
-		/// @param color The color to clear the window.
-		void fill(SDL_Color color);
+		/// @brief Clear the screen.
+		/// @param color The color to clear the screen.
+		void cls(SDL_Color color = { 0, 0, 0, 255 });
 
 		/// @brief Flip the render frame buffer.
 		void flip();
