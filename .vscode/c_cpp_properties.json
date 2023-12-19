@@ -5,8 +5,8 @@
             "includePath": [
                 "C:/SDL2/include",
                 "${workspaceFolder}/include",
-                "${workspaceFolder}/example/include"
-                "${workspaceFolder}/include/tmxlite",
+                "${workspaceFolder}/example/include",
+                "${workspaceFolder}/include/tmxlite"
             ],
             "defines": [
                 "_DEBUG",

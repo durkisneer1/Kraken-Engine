@@ -1,25 +1,28 @@
 #pragma once
 
+#include <vector>
+#include <memory>
+
 #include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_ttf.h>
 #include <SDL_mixer.h>
-#include <vector>
-#include <memory>
+
 #include "Texture.hpp"
 #include "Math.hpp"
 #include "Constants.hpp"
+#include "Globals.hpp"
 
 
 namespace kn {
 	/// @brief The renderer context.
 	/// @note This class is a mandatory singleton.
-	class RenderWindow {
+	class RenderWindow final {
 	public:
 		/// @brief Create a window.
 		/// @param size The size of the window.
 		/// @param title The title of the window.
-		RenderWindow(kn::math::Vector2 size, const std::string &title);
+		RenderWindow(const std::string &title, int scale = 1, bool fullscreen = false);
 		~RenderWindow();
 		
 		/// @brief Clear the window.

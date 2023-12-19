@@ -16,7 +16,7 @@ namespace kn {
 
 			/// @brief Get a zero vector.
 			/// @return A zero vector.
-			Vector2 ZERO();
+			static Vector2 ZERO();
 
 			/// @brief Get the length of the vector.
 			/// @return The length of the vector.

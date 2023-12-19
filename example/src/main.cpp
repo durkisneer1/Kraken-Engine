@@ -6,12 +6,12 @@
 #include "../include/Wall.hpp"
 #include "../include/Tracker.hpp"
 
-const kn::math::Vector2 WIN_SIZE = { 800, 600 };
+const kn::math::Vector2 WIN_SIZE = { 200, 150 };
 float GRAVITY = 980.0f;
 
 
 int main() {
-	kn::RenderWindow window(WIN_SIZE, "Game");
+	kn::RenderWindow window("Game", 4);
 	kn::TextureCache textureCache(window);
 	kn::time::Clock clock;
 	kn::Font font(window, "assets/KdamThmorPro-Regular.ttf", 34);
@@ -56,14 +56,14 @@ int main() {
 		}
 		
 		window.fill({ 40, 40, 40 });
-		window.blit(bgTexture, bgTexture->getRect());
+		// window.blit(bgTexture, bgTexture->getRect());
 
-		for (const auto& sprite : kn::Sprite::getSprites()) {
-			sprite->process(deltaTime);
-		}
-		window.blit(hwTexture, hwRect);  // FIXME: This is not working
-		player.process(deltaTime);
-		tracker.update(deltaTime, player.getPosition());
+		// for (const auto& sprite : kn::Sprite::getSprites()) {
+		// 	sprite->process(deltaTime);
+		// }
+		// window.blit(hwTexture, hwRect);  // FIXME: This is not working
+		// player.process(deltaTime);
+		tracker.update(deltaTime, kn::input::getMousePos());
 		
 		window.flip();
 	}

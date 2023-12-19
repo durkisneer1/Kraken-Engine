@@ -7,7 +7,7 @@
 
 namespace kn {
 	/// @brief A texture container.
-	class Texture {
+	class Texture final {
 	public:
 		/// @brief Create a texture.
 		/// @param texture The SDL texture.

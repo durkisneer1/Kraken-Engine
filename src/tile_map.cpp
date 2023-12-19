@@ -1,18 +1,21 @@
 #include "../include/TileMap.hpp"
 
 #include <iostream>
-#include <fstream>
 
 
 namespace kn {
-    TileMap::TileMap(const std::string &filePath, kn::math::Vector2 tileSize) {
-        this->tileSize = tileSize;
-
-        std::ifstream file(filePath);
-        if (!file.is_open()) {
-            std::cerr << "Failed to open file: " << filePath << std::endl;
+    TileMap::TileMap(kn::RenderWindow& window, kn::TextureCache& textureCache, const std::string &tmxPath)
+    : window(window), textureCache(textureCache) {
+        if (!map.load(tmxPath)) {
+            std::cerr << "Failed to load and parse tile map: " << tmxPath << std::endl;
             return;
         }
-        file.close();
+
+        tmx::Tileset tileset = map.getTilesets()[0];
+        textureCache.load("tileset", tileset.getImagePath());
+
+        for (const auto& tile : tileset.getTiles()) {
+            std::cout << tile.ID << " " << tile.imagePosition.x << " " << tile.imagePosition.y << std::endl;
+        }
     }
 }

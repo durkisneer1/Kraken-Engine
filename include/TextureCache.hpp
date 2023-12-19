@@ -10,7 +10,7 @@
 namespace kn {
     /// @brief A class to cache textures.
     /// @note This class is a mandatory singleton.
-    class TextureCache {
+    class TextureCache final {
     public:
         /// @brief Instantiate the texture cache.
         /// @param window The renderer context.

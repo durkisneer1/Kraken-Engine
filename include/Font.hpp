@@ -9,7 +9,7 @@
 
 namespace kn {
 	/// @brief A class to render text.
-	class Font {
+	class Font final {
 	public:
 		/// @brief Create a font.
 		/// @param window The renderer context.

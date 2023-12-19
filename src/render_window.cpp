@@ -3,15 +3,17 @@
 
 
 namespace kn {
-	RenderWindow::RenderWindow(kn::math::Vector2 size, const std::string &title) {
+	RenderWindow::RenderWindow(const std::string &title, int scale, bool fullscreen) {
 		init();
+		scale = std::min(std::max(scale, 1), 32);
 
 		this->window = SDL_CreateWindow(
 			title.c_str(),
 			SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-			(int)size.x, (int)size.y,
-			SDL_WINDOW_SHOWN
+			(int)WIN_SIZE.x * scale, (int)WIN_SIZE.y * scale,
+			fullscreen ? SDL_WINDOW_FULLSCREEN : SDL_WINDOW_SHOWN
 		);
+
 		if (!window) {
 			std::cerr << "SDL_CreateWindow Error: " << SDL_GetError() << std::endl;
 			SDL_Quit();
@@ -27,6 +29,11 @@ namespace kn {
 			SDL_DestroyWindow(window);
 			SDL_Quit();
 			exit(3);
+		}
+
+		if (scale > 1) {
+			SDL_RenderSetLogicalSize(renderer, WIN_SIZE.x, WIN_SIZE.y);
+			SDL_RenderSetIntegerScale(renderer, SDL_TRUE);
 		}
 	}
 
