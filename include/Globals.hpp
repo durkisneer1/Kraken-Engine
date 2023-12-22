@@ -5,7 +5,7 @@
 
 namespace kn {
     /// @brief The global size of the window.
-    extern const kn::math::Vector2 SCREEN_SIZE;
+    extern const math::Vec2 SCREEN_SIZE;
 
     /// @brief The global gravity of the game.
     extern float GRAVITY;

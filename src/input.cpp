@@ -4,7 +4,7 @@
 
 namespace kn {
 	namespace input {
-		kn::math::Vector2 getMousePos(int scale) {
+		math::Vec2 getMousePos(int scale) {
 			int x, y;
 			SDL_GetMouseState(&x, &y);
 			scale = std::min(std::max(scale, 1), 32);
@@ -19,14 +19,14 @@ namespace kn {
 			return SDL_GetKeyboardState(nullptr);
 		}
 
-		kn::math::Vector2 getVector(
+		math::Vec2 getVector(
 			const std::vector<SDL_Scancode>& left,
 			const std::vector<SDL_Scancode>& right,
 			const std::vector<SDL_Scancode>& up,
 			const std::vector<SDL_Scancode>& down
 		) {
 			const Uint8* keys = getKeysPressed();
-			kn::math::Vector2 vector;
+			math::Vec2 vector;
 
 			if (std::any_of(up.begin(), up.end(), [&](auto scancode) {
 				return keys[scancode];

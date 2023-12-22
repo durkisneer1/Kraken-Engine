@@ -22,19 +22,19 @@ namespace kn {
     public:
         /// @brief Constructs a tile map from a TMX file.
         /// @param tmxPath The path to the TMX file.
-        TileMap(kn::RenderWindow& window, kn::TextureCache& textureCache, const std::string &tmxPath);
+        TileMap(RenderWindow& window, TextureCache& textureCache, const std::string &tmxPath);
         ~TileMap() = default;
 
-        void drawTiles(kn::RenderWindow &window, const kn::Rect &viewRect) const;
-        const std::vector<kn::Tile>& getObjects() const { return objects; }
-        const std::vector<kn::Tile>& getLayers() const { return layers; }
+        void drawTiles(RenderWindow &window, const Rect &viewRect) const;
+        const std::vector<Tile>& getObjects() const { return objects; }
+        const std::vector<Tile>& getLayers() const { return layers; }
 
     private:
-        kn::RenderWindow& window;
-        kn::TextureCache& textureCache;
+        RenderWindow& window;
+        TextureCache& textureCache;
 
         tmx::Map map;
-        std::vector<kn::Tile> objects;
-        std::vector<kn::Tile> layers;
+        std::vector<Tile> objects;
+        std::vector<Tile> layers;
     };
 }

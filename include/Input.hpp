@@ -10,7 +10,7 @@ namespace kn {
 		/// @brief Get the mouse position.
 		/// @return The mouse position.
 		/// @note The scale parameter is temporary.
-		kn::math::Vector2 getMousePos(int scale = 1);
+		math::Vec2 getMousePos(int scale = 1);
 
 		/// @brief Get the mouse button pressed.
 		/// @return The mouse button pressed.
@@ -26,7 +26,7 @@ namespace kn {
 		/// @param up The keys to move up.
 		/// @param down The keys to move down.
 		/// @return The vector of the keys pressed.
-		kn::math::Vector2 getVector(
+		math::Vec2 getVector(
 			const std::vector<SDL_Scancode>& left = {},
 			const std::vector<SDL_Scancode>& right = {},
 			const std::vector<SDL_Scancode>& up = {},

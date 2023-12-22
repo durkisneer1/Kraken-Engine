@@ -35,12 +35,12 @@ namespace kn {
 		/// @brief Draw a texture.
 		/// @param texture The texture to draw.
 		/// @param rect The rectangle to draw on.
-		void blit(const std::shared_ptr<kn::Texture> texture, kn::Rect rect);
+		void blit(const std::shared_ptr<Texture> texture, Rect rect);
 
 		/// @brief Draw a texture.
 		/// @param texture The texture to draw.
 		/// @param position The position to draw at.
-		void blit(const std::shared_ptr<kn::Texture> texture, kn::math::Vector2 position);
+		void blit(const std::shared_ptr<Texture> texture, math::Vec2 position);
 
 		/// @brief Draw a texture.
 		/// @param texture The texture to draw.
@@ -48,7 +48,7 @@ namespace kn {
 		/// @param angle The angle to draw the texture.
 		/// @param flipX Whether to flip the texture on the x-axis.
 		/// @param flipY Whether to flip the texture on the y-axis.
-		void blitEx(const std::shared_ptr<kn::Texture> texture, kn::Rect rect, double angle = 0.0, bool flipX = false, bool flipY = false);
+		void blitEx(const std::shared_ptr<Texture> texture, Rect rect, double angle = 0.0, bool flipX = false, bool flipY = false);
 
 		/// @brief Draw a texture.
 		/// @param texture The texture to draw.
@@ -56,7 +56,7 @@ namespace kn {
 		/// @param angle The angle to draw the texture.
 		/// @param flipX Whether to flip the texture on the x-axis.
 		/// @param flipY Whether to flip the texture on the y-axis.
-		void blitEx(const std::shared_ptr<kn::Texture> texture, kn::math::Vector2 position, double angle = 0.0, bool flipX = false, bool flipY = false);
+		void blitEx(const std::shared_ptr<Texture> texture, math::Vec2 position, double angle = 0.0, bool flipX = false, bool flipY = false);
 
 		/// @brief Get the window renderer.
 		/// @return The window renderer.

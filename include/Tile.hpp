@@ -8,6 +8,6 @@
 namespace kn {
     struct Tile {
         std::string name;
-        kn::Rect rect;
+        Rect rect;
     };
 }

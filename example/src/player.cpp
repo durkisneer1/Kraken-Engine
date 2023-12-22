@@ -3,14 +3,15 @@
 
 
 Player::Player(kn::RenderWindow& window, std::shared_ptr<kn::Texture> texture)
-: kn::Sprite(window, texture) {
+: kn::sprite::Sprite(window, texture) {
     position = kn::SCREEN_SIZE / 2.0f;
 }
 
-void Player::process(double deltaTime) {
+template <typename T>
+void Player::update(double deltaTime, const kn::sprite::Group<T>& group) {
     if (onGround) {
         if (kn::input::getKeysPressed()[KNK_space]) {
-            velocity.y = -340;
+            velocity.y = -85;
             onGround = false;
         }
     } else {
@@ -19,7 +20,7 @@ void Player::process(double deltaTime) {
     
     direction = kn::input::getVector(moveLeft, moveRight);
     velocity.x = direction.x * speed;
-    moveAndCollide(deltaTime);
+    moveAndCollide(deltaTime, group);
     
     rect.clamp();
     position = rect.getCenter();

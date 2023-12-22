@@ -2,12 +2,12 @@
 #include <iostream>
 
 
-Wall::Wall(kn::RenderWindow& window, std::shared_ptr<kn::Texture> texture, kn::math::Vector2 position)
-: kn::Sprite(window, texture) {
+Wall::Wall(kn::RenderWindow& window, std::shared_ptr<kn::Texture> texture, kn::math::Vec2 position)
+: kn::sprite::Sprite(window, texture) {
     this->position = position;
     rect.setBottomLeft(position);
 }
 
-void Wall::process(double deltaTime) {
+void Wall::update() {
     window.blit(texture, rect);
 }

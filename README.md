@@ -16,7 +16,7 @@ Here is the bare window setup program using Kraken:
 ```c++
 #include <KrakenEngine.hpp>
 
-const kn::math::Vector2 kn::SCREEN_SIZE = { 800, 600 };
+const kn::math::Vec2 kn::SCREEN_SIZE = { 800, 600 };
 
 
 int main() {

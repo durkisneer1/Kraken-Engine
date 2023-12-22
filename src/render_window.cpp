@@ -87,11 +87,11 @@ namespace kn {
 		SDL_RenderPresent(renderer);
 	}
 
-	void RenderWindow::blit(std::shared_ptr<kn::Texture> texture, kn::Rect rect) {
+	void RenderWindow::blit(std::shared_ptr<Texture> texture, Rect rect) {
 		SDL_RenderCopyF(renderer, texture->getSDLTexture(), nullptr, &rect);
 	}
 
-	void RenderWindow::blitEx(std::shared_ptr<kn::Texture> texture, kn::Rect rect, double angle, bool flipX, bool flipY) {
+	void RenderWindow::blitEx(std::shared_ptr<Texture> texture, Rect rect, double angle, bool flipX, bool flipY) {
 		SDL_RendererFlip flip = SDL_FLIP_NONE;
 		if (flipX) {
 			flip = (SDL_RendererFlip)(flip | SDL_FLIP_HORIZONTAL);
@@ -102,7 +102,7 @@ namespace kn {
 		SDL_RenderCopyExF(renderer, texture->getSDLTexture(), nullptr, &rect, angle, nullptr, flip);
 	}
 
-	void RenderWindow::blitEx(std::shared_ptr<kn::Texture> texture, kn::math::Vector2 position, double angle, bool flipX, bool flipY) {
+	void RenderWindow::blitEx(std::shared_ptr<Texture> texture, math::Vec2 position, double angle, bool flipX, bool flipY) {
 		SDL_RendererFlip flip = SDL_FLIP_NONE;
 		if (flipX) {
 			flip = (SDL_RendererFlip)(flip | SDL_FLIP_HORIZONTAL);
@@ -117,7 +117,7 @@ namespace kn {
 		SDL_RenderCopyExF(renderer, texture->getSDLTexture(), nullptr, &rect, angle, nullptr, flip);
 	}
 
-	void RenderWindow::blit(std::shared_ptr<kn::Texture> texture, kn::math::Vector2 position) {
+	void RenderWindow::blit(std::shared_ptr<Texture> texture, math::Vec2 position) {
 		SDL_FRect rect = {
 			position.x, position.y,
 			texture->getSize().x, texture->getSize().y

@@ -2,15 +2,15 @@
 
 
 namespace kn {
-	kn::math::Vector2 Rect::getPos() {
+	math::Vec2 Rect::getPos() {
 		return { x, y };
 	}
 
-	kn::math::Vector2 Rect::getSize() {
+	math::Vec2 Rect::getSize() {
 		return { w, h };
 	}
 
-	bool Rect::collidePoint(kn::math::Vector2 pos) {
+	bool Rect::collidePoint(math::Vec2 pos) {
 		return (pos.x >= x && pos.x <= x + w && pos.y >= y && pos.y <= y + h);
 	}
 
@@ -18,13 +18,13 @@ namespace kn {
 		return (x < rect.x + rect.w && x + w > rect.x && y < rect.y + rect.h && y + h > rect.y);
 	}
 
-	void Rect::clamp(kn::math::Vector2 min, kn::math::Vector2 max) {
+	void Rect::clamp(math::Vec2 min, math::Vec2 max) {
 		if ((max.x - min.x < this->w) || (max.y - min.y < this->h)) return;
 		setTopLeft(clampVec(getTopLeft(), min, max));
 		setBottomRight(clampVec(getBottomRight(), min, max));
 	}
 
-	void Rect::setCenter(kn::math::Vector2 pos) {
+	void Rect::setCenter(math::Vec2 pos) {
 		x = pos.x - w / 2;
 		y = pos.y - h / 2;
 	}
@@ -45,47 +45,47 @@ namespace kn {
 		this->y = y - h;
 	}
 
-	void Rect::setTopLeft(kn::math::Vector2 pos) {
+	void Rect::setTopLeft(math::Vec2 pos) {
 		x = pos.x;
 		y = pos.y;
 	}
 
-	void Rect::setTopMid(kn::math::Vector2 pos) {
+	void Rect::setTopMid(math::Vec2 pos) {
 		x = pos.x - w / 2;
 		y = pos.y;
 	}
 
-	void Rect::setTopRight(kn::math::Vector2 pos) {
+	void Rect::setTopRight(math::Vec2 pos) {
 		x = pos.x - w;
 		y = pos.y;
 	}
 
-	void Rect::setBottomLeft(kn::math::Vector2 pos) {
+	void Rect::setBottomLeft(math::Vec2 pos) {
 		x = pos.x;
 		y = pos.y - h;
 	}
 
-	void Rect::setBottomMid(kn::math::Vector2 pos) {
+	void Rect::setBottomMid(math::Vec2 pos) {
 		x = pos.x - w / 2;
 		y = pos.y - h;
 	}
 
-	void Rect::setBottomRight(kn::math::Vector2 pos) {
+	void Rect::setBottomRight(math::Vec2 pos) {
 		x = pos.x - w;
 		y = pos.y - h;
 	}
 
-	void Rect::setLeftMid(kn::math::Vector2 pos) {
+	void Rect::setLeftMid(math::Vec2 pos) {
 		x = pos.x;
 		y = pos.y - h / 2;
 	}
 
-	void Rect::setRightMid(kn::math::Vector2 pos) {
+	void Rect::setRightMid(math::Vec2 pos) {
 		x = pos.x - w;
 		y = pos.y - h / 2;
 	}
 
-	kn::math::Vector2 Rect::getCenter() {
+	math::Vec2 Rect::getCenter() {
 		return { x + w / 2, y + h / 2 };
 	}
 
@@ -105,35 +105,35 @@ namespace kn {
 		return y + h;
 	}
 
-	kn::math::Vector2 Rect::getTopLeft() {
+	math::Vec2 Rect::getTopLeft() {
 		return { x, y };
 	}
 
-	kn::math::Vector2 Rect::getTopMid() {
+	math::Vec2 Rect::getTopMid() {
 		return { x + w / 2, y };
 	}
 
-	kn::math::Vector2 Rect::getTopRight() {
+	math::Vec2 Rect::getTopRight() {
 		return { x + w, y };
 	}
 
-	kn::math::Vector2 Rect::getBottomLeft() {
+	math::Vec2 Rect::getBottomLeft() {
 		return { x, y + h };
 	}
 
-	kn::math::Vector2 Rect::getBottomMid() {
+	math::Vec2 Rect::getBottomMid() {
 		return { x + w / 2, y + h };
 	}
 
-	kn::math::Vector2 Rect::getBottomRight() {
+	math::Vec2 Rect::getBottomRight() {
 		return { x + w, y + h };
 	}
 
-	kn::math::Vector2 Rect::getLeftMid() {
+	math::Vec2 Rect::getLeftMid() {
 		return { x, y + h / 2 };
 	}
 
-	kn::math::Vector2 Rect::getRightMid() {
+	math::Vec2 Rect::getRightMid() {
 		return { x + w, y + h / 2 };
 	}
 }

@@ -5,16 +5,17 @@
 #include <memory>
 
 
-class Player : public kn::Sprite {
+class Player : public kn::sprite::Sprite {
 public:
     Player(kn::RenderWindow& window, std::shared_ptr<kn::Texture> texture);
     ~Player() = default;
 
-    void process(double deltaTime) override;
+    template <typename T>
+    void update(double deltaTime, const kn::sprite::Group<T>& group);
 
 private:
     std::vector<KN_KEYS> moveLeft = { KNK_a, KNK_left };
     std::vector<KN_KEYS> moveRight = { KNK_d, KNK_right };
 
-    float speed = 450.0f;
+    float speed = 110.0f;
 };

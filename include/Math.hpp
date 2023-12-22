@@ -4,19 +4,19 @@
 namespace kn {
 	namespace math {
 		/// @brief A struct to represent a 2D vector.
-		struct Vector2 {
+		struct Vec2 {
 			float x = 0.0f;
 			float y = 0.0f;
 
-			Vector2() = default;
-			Vector2(float x, float y);
-			Vector2(int x, int y);
-			Vector2(float x, int y);
-			Vector2(int x, float y);
+			Vec2() = default;
+			Vec2(float x, float y);
+			Vec2(int x, int y);
+			Vec2(float x, int y);
+			Vec2(int x, float y);
 
 			/// @brief Get a zero vector.
 			/// @return A zero vector.
-			static Vector2 ZERO();
+			static Vec2 ZERO();
 
 			/// @brief Get the length of the vector.
 			/// @return The length of the vector.
@@ -28,13 +28,13 @@ namespace kn {
 			/// @brief Get the distance to another vector.
 			/// @param other The other vector.
 			/// @return The distance to another vector.
-			float distanceTo(const Vector2& other) const;
+			float distanceTo(const Vec2& other) const;
 
-			Vector2 operator*(float scalar) const;
-			Vector2 operator/(float scalar) const;
-			Vector2 operator+(const Vector2& other) const;
-			Vector2 operator-(const Vector2& other) const;
-			Vector2 operator+=(const Vector2& other);
+			Vec2 operator*(float scalar) const;
+			Vec2 operator/(float scalar) const;
+			Vec2 operator+(const Vec2& other) const;
+			Vec2 operator-(const Vec2& other) const;
+			Vec2 operator+=(const Vec2& other);
 		};
 
 		/// @brief Clamp a vector.
@@ -42,14 +42,14 @@ namespace kn {
 		/// @param min The minimum value.
 		/// @param max The maximum value.
 		/// @return The clamped vector.
-		Vector2 clampVec(Vector2 vec, Vector2 min, Vector2 max);
+		Vec2 clampVec(Vec2 vec, Vec2 min, Vec2 max);
 
 		/// @brief Linearly interpolate a vector.
 		/// @param a The first vector.
 		/// @param b The second vector.
 		/// @param t The time.
 		/// @return The interpolated vector.
-		Vector2 lerpVec(Vector2 a, Vector2 b, float t);
+		Vec2 lerpVec(Vec2 a, Vec2 b, float t);
 
 		/// @brief Clamp a value.
 		/// @param val The value to clamp.

@@ -20,11 +20,11 @@ namespace kn {
 
 		/// @brief Get the size of the texture.
 		/// @return The size of the texture.
-		kn::math::Vector2 getSize() const { return { rect.w, rect.h }; }
+		math::Vec2 getSize() const { return { rect.w, rect.h }; }
 
 		/// @brief Get the rect of the texture.
 		/// @return The rect of the texture.
-		kn::Rect getRect() const { return rect; }
+		Rect getRect() const { return rect; }
 
 		/// @brief Get the SDL texture.
 		/// @return The SDL texture.
@@ -33,7 +33,7 @@ namespace kn {
 
 		/// @brief Set the size of the texture rect.
 		/// @param size The size of the texture rect.
-		void setSize(kn::math::Vector2 size);
+		void setSize(math::Vec2 size);
 
 		/// @brief Scale the texture rect by a factor.
 		/// @param factor The factor to scale by.
@@ -49,7 +49,7 @@ namespace kn {
 		
 	private:
 		SDL_Texture* texture = nullptr;
-		kn::Rect rect = {};
+		Rect rect = {};
 
 		void query();
 	};

@@ -4,7 +4,7 @@
 
 
 namespace kn {
-    TileMap::TileMap(kn::RenderWindow& window, kn::TextureCache& textureCache, const std::string &tmxPath)
+    TileMap::TileMap(RenderWindow& window, TextureCache& textureCache, const std::string &tmxPath)
     : window(window), textureCache(textureCache) {
         if (!map.load(tmxPath)) {
             std::cerr << "Failed to load and parse tile map: " << tmxPath << std::endl;

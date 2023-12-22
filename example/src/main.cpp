@@ -6,39 +6,39 @@
 #include "../include/Wall.hpp"
 #include "../include/Tracker.hpp"
 
-const kn::math::Vector2 kn::SCREEN_SIZE = { 200, 150 };
-float kn::GRAVITY = 980.0f;
+const kn::math::Vec2 kn::SCREEN_SIZE = { 240, 160 };
+float kn::GRAVITY = 245.0f;
 
 
 int main() {
-	kn::RenderWindow window("Game", 4);
+	kn::RenderWindow window("Game", 5);
 	kn::TextureCache textureCache(window);
 	kn::time::Clock clock;
-	kn::Font font(window, "assets/KdamThmorPro-Regular.ttf", 34);
+	kn::Font font(window, "assets/KdamThmorPro-Regular.ttf", 16);
 
 	textureCache.create("player", { 16, 16 }, { 255, 0, 0 });
 	textureCache.create("wall", { 16, 16 }, { 0, 255, 0 });
-	textureCache.create("tracker", {16, 16}, { 0, 0, 255 });
-	textureCache.load("background", "assets/background.png");
-	// textureCache.move("hello world", font.render("Hello, World!", true, { 255, 255, 255 }));  // FIXME: This is not working
+	textureCache.create("tracker", { 8, 8 }, { 0, 0, 255 });
+	auto bgTexture = textureCache.load("background", "assets/background.png");
+	auto hwTexture = textureCache.move("hello world", font.render("Hello, World!", false, { 255, 255, 255 }));
 
-	std::shared_ptr<kn::Texture> bgTexture = textureCache.getTexture("background");
 	bgTexture->fitWidth(kn::SCREEN_SIZE.x);
 
-	std::shared_ptr<kn::Texture> hwTexture = textureCache.getTexture("hello world");
 	kn::Rect hwRect = hwTexture->getRect();
-	hwRect.setCenter({0, 0});
+	hwRect.setCenter({ kn::SCREEN_SIZE.x / 2.0f, kn::SCREEN_SIZE.y / 4.0f });
 
 	Player player(window, textureCache.getTexture("player"));
 	Tracker tracker(window, textureCache.getTexture("tracker"));
 
-	for (float x = 0.0f; x <= kn::SCREEN_SIZE.x - 50.0f; x += 50.0f) {
-		kn::Sprite::addSprite(
-			std::make_unique<Wall>(window, textureCache.getTexture("wall"), kn::math::Vector2(x, kn::SCREEN_SIZE.y))
+	kn::sprite::Group<Wall> wallGroup;
+
+	for (int x = 0; x <= kn::SCREEN_SIZE.x - 16; x += 16) {
+		wallGroup.add(
+			std::make_shared<Wall>(window, textureCache.getTexture("wall"), kn::math::Vec2(x, 0.0f))
 		);
 	}
-	kn::Sprite::addSprite(
-		std::make_unique<Wall>(window, textureCache.getTexture("wall"), kn::math::Vector2(kn::SCREEN_SIZE.x - 150.0f, kn::SCREEN_SIZE.y - 50.0f))
+	wallGroup.add(
+		std::make_shared<Wall>(window, textureCache.getTexture("wall"), kn::math::Vec2(kn::SCREEN_SIZE.x - 48.0f, kn::SCREEN_SIZE.y - 16.0f))
 	);
 
 	bool done = false;
@@ -58,12 +58,12 @@ int main() {
 		window.cls();
 		window.blit(bgTexture, bgTexture->getRect());
 
-		for (const auto& sprite : kn::Sprite::getSprites()) {
-			sprite->process(deltaTime);
+		for (const auto& sprite : wallGroup.getSprites()) {
+			sprite->update();
 		}
-		// window.blit(hwTexture, hwRect);  // FIXME: This is not working
-		player.process(deltaTime);
-		tracker.update(deltaTime, kn::input::getMousePos(4));
+		window.blit(hwTexture, hwRect);
+		player.update(deltaTime, wallGroup);
+		tracker.update(deltaTime, kn::input::getMousePos(5));
 		
 		window.flip();
 	}

@@ -3,7 +3,7 @@
 
 
 namespace kn {
-	Font::Font(kn::RenderWindow& window, const std::string &fileDir, int ptSize)
+	Font::Font(RenderWindow& window, const std::string &fileDir, int ptSize)
 	: window(window) {
 		font = TTF_OpenFont(fileDir.c_str(), ptSize);
 		if (!font) {
@@ -12,7 +12,7 @@ namespace kn {
 		}
 	}
 
-	kn::Texture Font::render(const std::string &text, bool antialias, SDL_Color color, int wrapLength) {
+	std::shared_ptr<Texture> Font::render(const std::string &text, bool antialias, SDL_Color color, int wrapLength) {
 		SDL_Surface* surface;
 
 		if (antialias) {
@@ -41,9 +41,9 @@ namespace kn {
 			exit(3);
 		}
 
-		kn::Texture texture(sdlTexture);
+		std::shared_ptr<Texture> texture = std::make_shared<Texture>(sdlTexture);
 		SDL_FreeSurface(surface);
 
-		return std::move(texture);
+		return texture;
 	}
 }

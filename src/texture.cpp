@@ -14,7 +14,7 @@ namespace kn {
 		this->rect = { 0, 0, w, h };
 	}
 
-	void Texture::setSize(kn::math::Vector2 size) {
+	void Texture::setSize(math::Vec2 size) {
 		rect.w = size.x;
 		rect.h = size.y;
 	}
