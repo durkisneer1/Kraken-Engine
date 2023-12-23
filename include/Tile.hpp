@@ -6,8 +6,10 @@
 
 
 namespace kn {
-    struct Tile {
-        std::string name;
-        Rect rect;
-    };
+
+struct Tile {
+    std::string name;
+    Rect rect;
+};
+
 }

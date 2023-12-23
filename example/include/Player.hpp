@@ -4,14 +4,15 @@
 #include <vector>
 #include <memory>
 
+#include "Wall.hpp"
 
-class Player : public kn::sprite::Sprite {
+
+class Player : public kn::Sprite {
 public:
     Player(kn::RenderWindow& window, std::shared_ptr<kn::Texture> texture);
     ~Player() = default;
 
-    template <typename T>
-    void update(double deltaTime, const kn::sprite::Group<T>& group);
+    void update(double deltaTime, const std::vector<std::shared_ptr<Wall>>& walls);
 
 private:
     std::vector<KN_KEYS> moveLeft = { KNK_a, KNK_left };

@@ -2,7 +2,6 @@
 
 #include <memory>
 #include <vector>
-#include <string>
 
 #include <SDL.h>
 
@@ -13,67 +12,82 @@
 
 
 namespace kn {
-    namespace sprite {
-        template <typename T>
-        class Group;
 
-        /// @brief A container for a sprite.
-        class Sprite {
-        public:
-            /// @brief Create a sprite.
-            /// @param window The renderer context.
-            /// @param texture The texture of the sprite.
-            Sprite(RenderWindow& window, std::shared_ptr<Texture> texture);
-            ~Sprite() = default;
+/// @brief A container for a sprite.
+class Sprite {
+public:
+    /// @brief Create a sprite.
+    /// @param window The renderer context.
+    /// @param texture The texture of the sprite.
+    Sprite(RenderWindow& window, std::shared_ptr<Texture> texture);
+    ~Sprite() = default;
 
-            /// @brief Get the position of the sprite.
-            /// @return The position of the sprite.
-            math::Vec2 getPosition() const;
+    /// @brief Get the position of the sprite.
+    /// @return The position of the sprite.
+    math::Vec2 getPosition() const;
 
-            /// @brief Get the rect of the sprite.
-            /// @return The rect of the sprite.
-            Rect getRect() const;
+    /// @brief Get the rect of the sprite.
+    /// @return The rect of the sprite.
+    Rect getRect() const;
 
-        protected:
-            RenderWindow& window;
-            std::shared_ptr<Texture> texture;
-            Rect rect;
-            
-            math::Vec2 position;
-            math::Vec2 direction;
-            math::Vec2 velocity;
-            bool onGround = false;
-            bool onCeiling = false;
+protected:
+    RenderWindow& window;
+    std::shared_ptr<Texture> texture;
+    Rect rect;
+    
+    math::Vec2 position;
+    math::Vec2 direction;
+    math::Vec2 velocity;
+    bool onGround = false;
+    bool onCeiling = false;
 
-            /// @brief Move the sprite while checking for collisions.
-            /// @param deltaTime The time since the last frame.
-            /// @note This function is not thread-safe.
-            template <typename T>
-            void moveAndCollide(double deltaTime, std::shared_ptr<Group<T>> group);
-        };
+    /// @brief Move the sprite while checking for collisions.
+    /// @param deltaTime The time since the last frame.
+    /// @param others The other sprites to check for collisions with.
+    /// @note This function is not thread-safe.
+    template <typename T>
+    void moveAndCollide(double deltaTime, const std::vector<std::shared_ptr<T>>& others) {
+        onGround = false;
+        onCeiling = false;
 
-        /// @brief A container for sprites.
-        /// @tparam T The type of sprite.
-        /// @warning Not working yet.
-        template <typename T>
-        class Group final {  // FIXME
-        public:
-            Group() = default;
-            ~Group() { empty(); }
+        position += (velocity * deltaTime);
+        rect.x = position.x - rect.w / 2.0f;
 
-            /// @brief Add a sprite to the group.
-            /// @param sprite The sprite to add.
-            void add(std::shared_ptr<T> sprite);
+        for (const auto& sprite : others) {
+            if (sprite.get() != this) {
+                if (rect.collideRect(sprite->getRect())) {
+                    if (velocity.x > 0) {
+                        rect.setRight(sprite->getRect().getLeft());
+                    } else if (velocity.x < 0) {
+                        rect.setLeft(sprite->getRect().getRight());
+                    }
 
-            /// @brief Empty all sprites from group.
-            void empty();
+                    velocity.x = 0;
+                    position = rect.getCenter();
+                }
+            }
+        }
 
-            /// @brief Get the vector list of sprites.
-            /// @return The vector list of sprites.
-            const std::vector<std::shared_ptr<T>>& getSprites() const;
-        
-        private:
-            std::vector<std::shared_ptr<T>> sprites;
-        };
-    }
+        position.y += (velocity.y * deltaTime);
+        rect.y = position.y - rect.h / 2.0f;
+
+        for (const auto& sprite : others) {
+            if (sprite.get() != this) {
+                if (rect.collideRect(sprite->getRect())) {
+                    if (velocity.y > 0) {
+                        rect.setBottom(sprite->getRect().getTop());
+                        onGround = true;
+                    } else if (velocity.y < 0) {
+                        rect.setTop(sprite->getRect().getBottom());
+                        onCeiling = true;
+                    }
+
+                    velocity.y = 0;
+                    position = rect.getCenter();
+                }
+            }
+        }
+    };
+};
+
 }

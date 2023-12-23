@@ -18,7 +18,6 @@ int main() {
 
 	textureCache.create("player", { 16, 16 }, { 255, 0, 0 });
 	textureCache.create("wall", { 16, 16 }, { 0, 255, 0 });
-	textureCache.create("tracker", { 8, 8 }, { 0, 0, 255 });
 	auto bgTexture = textureCache.load("background", "assets/background.png");
 	auto hwTexture = textureCache.move("hello world", font.render("Hello, World!", false, { 255, 255, 255 }));
 
@@ -28,16 +27,15 @@ int main() {
 	hwRect.setCenter({ kn::SCREEN_SIZE.x / 2.0f, kn::SCREEN_SIZE.y / 4.0f });
 
 	Player player(window, textureCache.getTexture("player"));
-	Tracker tracker(window, textureCache.getTexture("tracker"));
 
-	kn::sprite::Group<Wall> wallGroup;
+	std::vector<std::shared_ptr<Wall>> walls;
 
-	for (int x = 0; x <= kn::SCREEN_SIZE.x - 16; x += 16) {
-		wallGroup.add(
-			std::make_shared<Wall>(window, textureCache.getTexture("wall"), kn::math::Vec2(x, 0.0f))
+	for (int x = 0; x < kn::SCREEN_SIZE.x; x += 16) {
+		walls.push_back(
+			std::make_shared<Wall>(window, textureCache.getTexture("wall"), kn::math::Vec2(x, kn::SCREEN_SIZE.y))
 		);
 	}
-	wallGroup.add(
+	walls.push_back(
 		std::make_shared<Wall>(window, textureCache.getTexture("wall"), kn::math::Vec2(kn::SCREEN_SIZE.x - 48.0f, kn::SCREEN_SIZE.y - 16.0f))
 	);
 
@@ -58,12 +56,9 @@ int main() {
 		window.cls();
 		window.blit(bgTexture, bgTexture->getRect());
 
-		for (const auto& sprite : wallGroup.getSprites()) {
-			sprite->update();
-		}
+		for (const auto& wall : walls) wall->update();
 		window.blit(hwTexture, hwRect);
-		player.update(deltaTime, wallGroup);
-		tracker.update(deltaTime, kn::input::getMousePos(5));
+		player.update(deltaTime, walls);
 		
 		window.flip();
 	}
