@@ -39,7 +39,7 @@ int main() {
 		std::make_shared<Wall>(window, textureCache.getTexture("wall"), kn::math::Vec2(kn::SCREEN_SIZE.x - 48.0f, kn::SCREEN_SIZE.y - 16.0f))
 	);
 
-	kn::TileMap tileMap(window, textureCache, "assets/room.tmx");
+	kn::TileMap tileMap(window, textureCache, "assets/room.tmx");  // FIXME: Causing the tmx build seizure.
 
 	bool done = false;
 	while (!done) {
