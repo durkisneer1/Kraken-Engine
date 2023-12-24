@@ -2,23 +2,25 @@
 
 
 namespace kn {
-	namespace time {
-		double Clock::tick(int frameRate) {
-			if (frameRate > 0) {
-				double targetFrameTime = 1000.0 / frameRate;
-				rawTime = SDL_GetTicks64() - last;
-				double delay = targetFrameTime - rawTime;
+namespace time {
 
-				if (delay > 0) SDL_Delay((uint32_t)delay);
-			}
+double Clock::tick(int frameRate) {
+	if (frameRate > 0) {
+		double targetFrameTime = 1000.0 / frameRate;
+		rawTime = SDL_GetTicks64() - last;
+		double delay = targetFrameTime - rawTime;
 
-			now = SDL_GetTicks64();
-			frameTime = now - last;
-			last = now;
-
-			if (!frameRate) rawTime = frameTime;
-
-			return double(frameTime) / 1000.0;
-		}
+		if (delay > 0) SDL_Delay((uint32_t)delay);
 	}
+
+	now = SDL_GetTicks64();
+	frameTime = now - last;
+	last = now;
+
+	if (!frameRate) rawTime = frameTime;
+
+	return double(frameTime) / 1000.0;
+}
+
+}
 }

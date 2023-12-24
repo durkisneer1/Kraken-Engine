@@ -39,6 +39,8 @@ int main() {
 		std::make_shared<Wall>(window, textureCache.getTexture("wall"), kn::math::Vec2(kn::SCREEN_SIZE.x - 48.0f, kn::SCREEN_SIZE.y - 16.0f))
 	);
 
+	kn::TileMap tileMap(window, textureCache, "assets/room.tmx");
+
 	bool done = false;
 	while (!done) {
 		double deltaTime = clock.tick(60);
@@ -54,10 +56,10 @@ int main() {
 		}
 		
 		window.cls();
-		window.blit(bgTexture, bgTexture->getRect());
+		// window.blit(bgTexture, bgTexture->getRect());
 
-		for (const auto& wall : walls) wall->update();
-		window.blit(hwTexture, hwRect);
+		// for (const auto& wall : walls) wall->update();
+		// window.blit(hwTexture, hwRect);
 		player.update(deltaTime, walls);
 		
 		window.flip();

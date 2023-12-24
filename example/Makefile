@@ -1,24 +1,21 @@
-
+# C++ Compile and Link
 CXX := x86_64-w64-mingw32-g++
-SRC_DIR := src
-INCLUDE_DIR := include
-SDL2_INCLUDE_DIR := C:/SDL2/include
-SDL2_LIB_DIR := C:/SDL2/lib
-KN_INCLUDE_DIR := ../include
+CXXFLAGS := -std=c++17 -Wall -m64 -Iinclude -IC:/SDL2/include -I../include/tmxlite -I../include
 
-CXXFLAGS := -std=c++17 -Wall -m64 -I$(INCLUDE_DIR) -I$(SDL2_INCLUDE_DIR) -I$(KN_INCLUDE_DIR)
+# Executable Setup
 TARGET := Game.exe
-SRC := $(wildcard $(SRC_DIR)/*.cpp)
+SRC := $(wildcard src/*.cpp)
 OBJ := $(SRC:.cpp=.o)
-LIB := ../Kraken.lib $(wildcard $(SDL2_LIB_DIR)/*.lib)
-
 all: $(TARGET)
 
+# Compile Executable
 $(TARGET): $(OBJ)
-	$(CXX) $(CXXFLAGS) -o $@ $^ $(LIB)
+	$(CXX) $(CXXFLAGS) -o $@ $^ -L../lib -llibtmxlite -L../ -lKraken -LC:/SDL2/lib -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer
 
-%.o: $(SRC_DIR)/%.cpp
+# Build Object Files
+%.o: src/%.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
+# Clean Object and Executable Files
 clean:
 	del $(subst /,\,$(TARGET)) $(subst /,\,$(OBJ))

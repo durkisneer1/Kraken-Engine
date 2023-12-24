@@ -2,14 +2,11 @@
 
 #include <memory>
 #include <vector>
+#include <string>
 
 #include "tmxlite/Map.hpp"
-#include "tmxlite/Layer.hpp"
-#include "tmxlite/TileLayer.hpp"
-#include "tmxlite/ObjectGroup.hpp"
 
 #include "RenderWindow.hpp"
-#include "Math.hpp"
 #include "Tile.hpp"
 #include "TextureCache.hpp"
 
@@ -26,17 +23,11 @@ public:
     TileMap(RenderWindow& window, TextureCache& textureCache, const std::string &tmxPath);
     ~TileMap() = default;
 
-    void drawTiles(RenderWindow &window, const Rect &viewRect) const;
-    const std::vector<Tile>& getObjects() const { return objects; }
-    const std::vector<Tile>& getLayers() const { return layers; }
-
 private:
     RenderWindow& window;
-    TextureCache& textureCache;
+    std::shared_ptr<Texture> mapTexture;
 
-    tmx::Map map;
-    std::vector<Tile> objects;
-    std::vector<Tile> layers;
+    tmx::Map map;  // FIXME: For some reason having a seizure when building...
 };
 
 }

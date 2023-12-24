@@ -10,7 +10,7 @@ all: $(TARGET)
 
 # Compile Lib
 $(TARGET): $(OBJ)
-	ar rcs $@ $^ $(wildcard C:/SDL2/lib/*.lib) lib/libtmxlite-s-d.lib
+	ar rcs $@ $^
 
 # Build Object Files
 %.o: src/%.cpp
