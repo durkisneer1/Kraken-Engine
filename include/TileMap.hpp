@@ -4,8 +4,6 @@
 #include <vector>
 #include <string>
 
-#include "tmxlite/Map.hpp"
-
 #include "RenderWindow.hpp"
 #include "Tile.hpp"
 #include "TextureCache.hpp"
@@ -27,7 +25,7 @@ private:
     RenderWindow& window;
     std::shared_ptr<Texture> mapTexture;
 
-    tmx::Map map;  // FIXME: For some reason having a seizure when building...
+    tmx::Map m_map;  // FIXME: This is causing a build seizure.
 };
 
 }
