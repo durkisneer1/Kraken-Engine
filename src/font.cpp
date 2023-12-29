@@ -1,5 +1,6 @@
-#include "../include/Font.hpp"
 #include <iostream>
+
+#include "../include/Font.hpp"
 
 
 namespace kn {

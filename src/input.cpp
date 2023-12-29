@@ -1,5 +1,6 @@
-#include "../include/Input.hpp"
 #include <algorithm>
+
+#include "../include/Input.hpp"
 
 
 namespace kn {

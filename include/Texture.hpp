@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SDL.h>
+
 #include "Math.hpp"
 #include "Rect.hpp"
 

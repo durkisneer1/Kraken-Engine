@@ -1,6 +1,7 @@
-#include "../include/Math.hpp"
 #include <cmath>
 #include <algorithm>
+
+#include "../include/Math.hpp"
 
 
 namespace kn {
@@ -49,6 +50,14 @@ namespace math {
 		x += other.x;
 		y += other.y;
 		return *this;
+	}
+
+	bool Vec2::operator==(const Vec2& other) const {
+		return (x == other.x && y == other.y);
+	}
+
+	bool Vec2::operator!=(const Vec2& other) const {
+		return !(*this == other);
 	}
 
 	Vec2 clampVec(Vec2 vec, Vec2 min, Vec2 max) {

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SDL.h>
+
 #include "Math.hpp"
 #include "Globals.hpp"
 
@@ -21,6 +22,10 @@ struct Rect : public SDL_FRect {
     /// @brief Get the size of the rectangle.
     /// @return The size of the rectangle.
     math::Vec2 getSize();
+
+    /// @brief Set the size of the rectangle.
+    /// @param size The new size.
+    void setSize(math::Vec2 size);
 
     /// @brief Check if the rectangle collides with a point.
     /// @param pos The point to check.

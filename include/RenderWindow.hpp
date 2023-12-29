@@ -35,8 +35,9 @@ public:
 
 	/// @brief Draw a texture.
 	/// @param texture The texture to draw.
-	/// @param rect The rectangle to draw on.
-	void blit(const std::shared_ptr<Texture> texture, Rect rect);
+	/// @param crop The rectangle to draw from.
+	/// @param rect The rectangle to draw to.
+	void blit(const std::shared_ptr<Texture> texture, Rect crop, Rect rect);
 
 	/// @brief Draw a texture.
 	/// @param texture The texture to draw.
@@ -45,11 +46,12 @@ public:
 
 	/// @brief Draw a texture.
 	/// @param texture The texture to draw.
-	/// @param rect The rectangle to draw on.
+	/// @param crop The rectangle to draw from.
+	/// @param rect The rectangle to draw to.
 	/// @param angle The angle to draw the texture.
 	/// @param flipX Whether to flip the texture on the x-axis.
 	/// @param flipY Whether to flip the texture on the y-axis.
-	void blitEx(const std::shared_ptr<Texture> texture, Rect rect, double angle = 0.0, bool flipX = false, bool flipY = false);
+	void blitEx(const std::shared_ptr<Texture> texture, Rect crop, Rect rect, double angle = 0.0, bool flipX = false, bool flipY = false);
 
 	/// @brief Draw a texture.
 	/// @param texture The texture to draw.
@@ -73,8 +75,6 @@ private:
 
 	KN_Event event;
 	std::vector<SDL_Event> events;
-
-	void init();
 };
 
 }

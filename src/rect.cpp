@@ -11,6 +11,11 @@ math::Vec2 Rect::getSize() {
 	return { w, h };
 }
 
+void Rect::setSize(math::Vec2 size) {
+	w = size.x;
+	h = size.y;
+}
+
 bool Rect::collidePoint(math::Vec2 pos) {
 	return (pos.x >= x && pos.x <= x + w && pos.y >= y && pos.y <= y + h);
 }

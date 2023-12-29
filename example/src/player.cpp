@@ -4,13 +4,14 @@
 
 Player::Player(kn::RenderWindow& window, std::shared_ptr<kn::Texture> texture)
 : kn::Sprite(window, texture) {
-    position = kn::SCREEN_SIZE / 2.0f;
+    position = kn::SCREEN_SIZE / 4.0f;
+    rect.setCenter(position);
 }
 
-void Player::update(double deltaTime, const std::vector<std::shared_ptr<Wall>>& walls) {
+void Player::update(double deltaTime, const std::vector<std::shared_ptr<kn::Sprite>>& tiles) {
     if (onGround) {
         if (kn::input::getKeysPressed()[KNK_space]) {
-            velocity.y = -85;
+            velocity.y = -200;
             onGround = false;
         }
     } else {
@@ -19,10 +20,7 @@ void Player::update(double deltaTime, const std::vector<std::shared_ptr<Wall>>& 
     
     direction = kn::input::getVector(moveLeft, moveRight);
     velocity.x = direction.x * speed;
-    moveAndCollide(deltaTime, walls);
-    
-    rect.clamp();
-    position = rect.getCenter();
+    moveAndCollide(deltaTime, tiles);
 
-    window.blit(texture, rect);
+    window.blit(texture, crop, rect);
 }

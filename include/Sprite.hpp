@@ -15,29 +15,10 @@ namespace kn {
 
 /// @brief A container for a sprite.
 class Sprite {
-public:
-    /// @brief Create a sprite.
-    /// @param window The renderer context.
-    /// @param texture The texture of the sprite.
-    Sprite(RenderWindow& window, std::shared_ptr<Texture> texture);
-    ~Sprite() = default;
-
-    /// @brief Get the position of the sprite.
-    /// @return The position of the sprite.
-    math::Vec2 getPosition() const;
-
-    /// @brief Get the rect of the sprite.
-    /// @return The rect of the sprite.
-    Rect getRect() const;
-
 protected:
     RenderWindow& window;
     std::shared_ptr<Texture> texture;
-    Rect rect;
     
-    math::Vec2 position;
-    math::Vec2 direction;
-    math::Vec2 velocity;
     bool onGround = false;
     bool onCeiling = false;
 
@@ -55,11 +36,11 @@ protected:
 
         for (const auto& sprite : others) {
             if (sprite.get() != this) {
-                if (rect.collideRect(sprite->getRect())) {
+                if (rect.collideRect(sprite->rect)) {
                     if (velocity.x > 0) {
-                        rect.setRight(sprite->getRect().getLeft());
+                        rect.setRight(sprite->rect.getLeft());
                     } else if (velocity.x < 0) {
-                        rect.setLeft(sprite->getRect().getRight());
+                        rect.setLeft(sprite->rect.getRight());
                     }
 
                     velocity.x = 0;
@@ -73,12 +54,12 @@ protected:
 
         for (const auto& sprite : others) {
             if (sprite.get() != this) {
-                if (rect.collideRect(sprite->getRect())) {
+                if (rect.collideRect(sprite->rect)) {
                     if (velocity.y > 0) {
-                        rect.setBottom(sprite->getRect().getTop());
+                        rect.setBottom(sprite->rect.getTop());
                         onGround = true;
                     } else if (velocity.y < 0) {
-                        rect.setTop(sprite->getRect().getBottom());
+                        rect.setTop(sprite->rect.getBottom());
                         onCeiling = true;
                     }
 
@@ -87,7 +68,25 @@ protected:
                 }
             }
         }
-    };
+    }
+
+public:
+    /// @brief Create a sprite.
+    /// @param window The renderer context.
+    /// @param texture The texture of the sprite.
+    Sprite(RenderWindow& window, std::shared_ptr<Texture> texture);
+    ~Sprite() = default;
+
+    /// @brief Get the sprite's texture pointer.
+    /// @return The sprite's texture pointer.
+    std::shared_ptr<Texture> getTexture() const;
+
+    Rect crop = { 0, 0, 0, 0 };
+    Rect rect;
+    math::Vec2 position;
+    math::Vec2 direction;
+    math::Vec2 velocity;
+
 };
 
 }

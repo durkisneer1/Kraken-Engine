@@ -1,17 +1,18 @@
+#include <iostream>
+
 #include "../include/Sprite.hpp"
 
 
 namespace kn {
 
 Sprite::Sprite(RenderWindow& window, std::shared_ptr<Texture> texture)
-: window(window), texture(texture), rect(texture->getRect()) {}
-
-math::Vec2 Sprite::getPosition() const {
-    return position;
+: window(window), texture(texture), rect(texture->getRect()) {
+    crop.w = rect.w;
+    crop.h = rect.h;
 }
 
-Rect Sprite::getRect() const {
-    return rect;
+std::shared_ptr<Texture> Sprite::getTexture() const {
+    return texture;
 }
 
 }

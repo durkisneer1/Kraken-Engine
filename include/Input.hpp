@@ -1,7 +1,9 @@
 #pragma once
 
-#include <SDL.h>
 #include <vector>
+
+#include <SDL.h>
+
 #include "Math.hpp"
 
 
@@ -10,7 +12,7 @@ namespace input {
 
 /// @brief Get the mouse position.
 /// @return The mouse position.
-/// @note The scale parameter is temporary.
+/// @warning The scale parameter is temporary.
 math::Vec2 getMousePos(int scale = 1);
 
 /// @brief Get the mouse button pressed.

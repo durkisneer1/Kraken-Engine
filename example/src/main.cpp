@@ -3,43 +3,29 @@
 #include <iostream>
 
 #include "../include/Player.hpp"
-#include "../include/Wall.hpp"
-#include "../include/Tracker.hpp"
 
-const kn::math::Vec2 kn::SCREEN_SIZE = { 240, 160 };
-float kn::GRAVITY = 245.0f;
+const kn::math::Vec2 kn::SCREEN_SIZE = { 320, 180 };
+float kn::GRAVITY = 980.0f;
 
 
 int main() {
-	kn::RenderWindow window("Game", 5);
+	kn::RenderWindow window("Game", 4);
 	kn::TextureCache textureCache(window);
 	kn::time::Clock clock;
-	kn::Font font(window, "assets/KdamThmorPro-Regular.ttf", 16);
+
+	kn::TileMap tileMap(window, textureCache, "assets/room.tmx");
+	std::vector<std::shared_ptr<kn::Sprite>> walls;
+	for (const auto& obj : tileMap.getObjects()) {
+		if (obj.type == "Obstacle") {
+			auto newSprite = std::make_shared<kn::Sprite>(window, obj.texture);
+			newSprite->crop = obj.crop;
+			newSprite->rect = obj.rect;
+			walls.push_back(newSprite);
+		}
+	}
 
 	textureCache.create("player", { 16, 16 }, { 255, 0, 0 });
-	textureCache.create("wall", { 16, 16 }, { 0, 255, 0 });
-	auto bgTexture = textureCache.load("background", "assets/background.png");
-	auto hwTexture = textureCache.move("hello world", font.render("Hello, World!", false, { 255, 255, 255 }));
-
-	bgTexture->fitWidth(kn::SCREEN_SIZE.x);
-
-	kn::Rect hwRect = hwTexture->getRect();
-	hwRect.setCenter({ kn::SCREEN_SIZE.x / 2.0f, kn::SCREEN_SIZE.y / 4.0f });
-
 	Player player(window, textureCache.getTexture("player"));
-
-	std::vector<std::shared_ptr<Wall>> walls;
-
-	for (int x = 0; x < kn::SCREEN_SIZE.x; x += 16) {
-		walls.push_back(
-			std::make_shared<Wall>(window, textureCache.getTexture("wall"), kn::math::Vec2(x, kn::SCREEN_SIZE.y))
-		);
-	}
-	walls.push_back(
-		std::make_shared<Wall>(window, textureCache.getTexture("wall"), kn::math::Vec2(kn::SCREEN_SIZE.x - 48.0f, kn::SCREEN_SIZE.y - 16.0f))
-	);
-
-	kn::TileMap tileMap(window, textureCache, "assets/room.tmx");  // FIXME: Causing the tmx build seizure.
 
 	bool done = false;
 	while (!done) {
@@ -56,10 +42,11 @@ int main() {
 		}
 		
 		window.cls();
-		// window.blit(bgTexture, bgTexture->getRect());
 
-		// for (const auto& wall : walls) wall->update();
-		// window.blit(hwTexture, hwRect);
+		tileMap.drawTiles();
+		for (const auto& obj : tileMap.getObjects()) {
+			window.blit(obj.texture, obj.crop, obj.rect);
+		}
 		player.update(deltaTime, walls);
 		
 		window.flip();

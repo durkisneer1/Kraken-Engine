@@ -1,5 +1,6 @@
-#include "../include/Texture.hpp"
 #include <iostream>
+
+#include "../include/Texture.hpp"
 
 
 namespace kn {

@@ -1,6 +1,6 @@
 # C++ Compile and Link
 CXX := x86_64-w64-mingw32-g++
-CXXFLAGS := -std=c++17 -Wall -m64 -Iinclude -IC:/SDL2/include -Iinclude/tmxlite
+CXXFLAGS := -std=c++14 -Wall -m64 -Iinclude -IC:/SDL2/include -Iinclude/tmxlite
 
 # Lib Setup
 TARGET := Kraken.lib
