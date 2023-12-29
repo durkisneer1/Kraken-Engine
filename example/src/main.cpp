@@ -5,7 +5,7 @@
 #include "../include/Player.hpp"
 
 const kn::math::Vec2 kn::SCREEN_SIZE = { 320, 180 };
-float kn::GRAVITY = 980.0f;
+float kn::GRAVITY = 245.0f;
 
 
 int main() {
