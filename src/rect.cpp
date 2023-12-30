@@ -11,26 +11,26 @@ math::Vec2 Rect::getSize() {
 	return { w, h };
 }
 
-void Rect::setSize(math::Vec2 size) {
+void Rect::setSize(const math::Vec2& size) {
 	w = size.x;
 	h = size.y;
 }
 
-bool Rect::collidePoint(math::Vec2 pos) {
+bool Rect::collidePoint(const math::Vec2& pos) {
 	return (pos.x >= x && pos.x <= x + w && pos.y >= y && pos.y <= y + h);
 }
 
-bool Rect::collideRect(Rect& rect) {
+bool Rect::collideRect(const Rect& rect) {
 	return (x < rect.x + rect.w && x + w > rect.x && y < rect.y + rect.h && y + h > rect.y);
 }
 
-void Rect::clamp(math::Vec2 min, math::Vec2 max) {
+void Rect::clamp(const math::Vec2& min, const math::Vec2& max) {
 	if ((max.x - min.x < this->w) || (max.y - min.y < this->h)) return;
 	setTopLeft(clampVec(getTopLeft(), min, max));
 	setBottomRight(clampVec(getBottomRight(), min, max));
 }
 
-void Rect::setCenter(math::Vec2 pos) {
+void Rect::setCenter(const math::Vec2& pos) {
 	x = pos.x - w / 2;
 	y = pos.y - h / 2;
 }
@@ -51,42 +51,42 @@ void Rect::setBottom(float y) {
 	this->y = y - h;
 }
 
-void Rect::setTopLeft(math::Vec2 pos) {
+void Rect::setTopLeft(const math::Vec2& pos) {
 	x = pos.x;
 	y = pos.y;
 }
 
-void Rect::setTopMid(math::Vec2 pos) {
+void Rect::setTopMid(const math::Vec2& pos) {
 	x = pos.x - w / 2;
 	y = pos.y;
 }
 
-void Rect::setTopRight(math::Vec2 pos) {
+void Rect::setTopRight(const math::Vec2& pos) {
 	x = pos.x - w;
 	y = pos.y;
 }
 
-void Rect::setBottomLeft(math::Vec2 pos) {
+void Rect::setBottomLeft(const math::Vec2& pos) {
 	x = pos.x;
 	y = pos.y - h;
 }
 
-void Rect::setBottomMid(math::Vec2 pos) {
+void Rect::setBottomMid(const math::Vec2& pos) {
 	x = pos.x - w / 2;
 	y = pos.y - h;
 }
 
-void Rect::setBottomRight(math::Vec2 pos) {
+void Rect::setBottomRight(const math::Vec2& pos) {
 	x = pos.x - w;
 	y = pos.y - h;
 }
 
-void Rect::setLeftMid(math::Vec2 pos) {
+void Rect::setLeftMid(const math::Vec2& pos) {
 	x = pos.x;
 	y = pos.y - h / 2;
 }
 
-void Rect::setRightMid(math::Vec2 pos) {
+void Rect::setRightMid(const math::Vec2& pos) {
 	x = pos.x - w;
 	y = pos.y - h / 2;
 }

@@ -13,5 +13,5 @@
 #include "Sprite.hpp"
 #include "Texture.hpp"
 #include "TextureCache.hpp"
-#include "TileTypes.hpp"
 #include "TileMap.hpp"
+#include "TileTypes.hpp"

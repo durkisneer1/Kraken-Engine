@@ -86,7 +86,7 @@ void RenderWindow::flip() {
 	SDL_RenderPresent(renderer);
 }
 
-void RenderWindow::blit(std::shared_ptr<Texture> texture, Rect crop, Rect rect) {
+void RenderWindow::blit(const std::shared_ptr<Texture>& texture, Rect crop, Rect rect) {
 	if (crop.getSize() == math::Vec2::ZERO()) {
 		SDL_RenderCopyF(renderer, texture->getSDLTexture(), nullptr, &rect);
 		return;
@@ -99,7 +99,15 @@ void RenderWindow::blit(std::shared_ptr<Texture> texture, Rect crop, Rect rect) 
 	SDL_RenderCopyF(renderer, texture->getSDLTexture(), &src, &rect);
 }
 
-void RenderWindow::blitEx(std::shared_ptr<Texture> texture, Rect crop, Rect rect, double angle, bool flipX, bool flipY) {
+void RenderWindow::blit(const std::shared_ptr<Texture>& texture, const math::Vec2& position) {
+	SDL_FRect rect = {
+		position.x, position.y,
+		texture->getSize().x, texture->getSize().y
+	};
+	SDL_RenderCopyF(renderer, texture->getSDLTexture(), nullptr, &rect);
+}
+
+void RenderWindow::blitEx(const std::shared_ptr<Texture>& texture, Rect crop, Rect rect, double angle, bool flipX, bool flipY) {
 	SDL_RendererFlip flip = SDL_FLIP_NONE;
 	if (flipX) {
 		flip = (SDL_RendererFlip)(flip | SDL_FLIP_HORIZONTAL);
@@ -119,7 +127,7 @@ void RenderWindow::blitEx(std::shared_ptr<Texture> texture, Rect crop, Rect rect
 	SDL_RenderCopyExF(renderer, texture->getSDLTexture(), &src, &rect, angle, nullptr, flip);
 }
 
-void RenderWindow::blitEx(std::shared_ptr<Texture> texture, math::Vec2 position, double angle, bool flipX, bool flipY) {
+void RenderWindow::blitEx(const std::shared_ptr<Texture>& texture, const math::Vec2& position, double angle, bool flipX, bool flipY) {
 	SDL_RendererFlip flip = SDL_FLIP_NONE;
 	if (flipX) {
 		flip = (SDL_RendererFlip)(flip | SDL_FLIP_HORIZONTAL);
@@ -132,14 +140,6 @@ void RenderWindow::blitEx(std::shared_ptr<Texture> texture, math::Vec2 position,
 		texture->getSize().x, texture->getSize().y
 	};
 	SDL_RenderCopyExF(renderer, texture->getSDLTexture(), nullptr, &rect, angle, nullptr, flip);
-}
-
-void RenderWindow::blit(std::shared_ptr<Texture> texture, math::Vec2 position) {
-	SDL_FRect rect = {
-		position.x, position.y,
-		texture->getSize().x, texture->getSize().y
-	};
-	SDL_RenderCopyF(renderer, texture->getSDLTexture(), nullptr, &rect);
 }
 
 }

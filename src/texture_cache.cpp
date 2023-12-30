@@ -17,7 +17,7 @@ std::shared_ptr<Texture> TextureCache::load(const std::string &name, const std::
     return textures[name];
 }
 
-std::shared_ptr<Texture> TextureCache::create(const std::string &name, math::Vec2 size, SDL_Color color) {
+std::shared_ptr<Texture> TextureCache::create(const std::string &name, const math::Vec2& size, SDL_Color color) {
     SDL_Surface* surface = SDL_CreateRGBSurface(0, size.x, size.y, 32, 0, 0, 0, 0);
     if (!surface) {
         std::cerr << "Failed to create surface: " << name << std::endl;

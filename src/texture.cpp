@@ -16,7 +16,19 @@ void Texture::query() {
 	this->rect = { 0, 0, w, h };
 }
 
-void Texture::setSize(math::Vec2 size) {
+math::Vec2 Texture::getSize() const {
+	return { rect.w, rect.h };
+}
+
+Rect Texture::getRect() const {
+	return rect;
+}
+
+SDL_Texture* Texture::getSDLTexture() const {
+	return texture;
+}
+
+void Texture::setSize(const math::Vec2& size) {
 	rect.w = size.x;
 	rect.h = size.y;
 }

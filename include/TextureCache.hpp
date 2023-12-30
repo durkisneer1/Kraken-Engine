@@ -34,7 +34,7 @@ public:
     /// @param color The color of the texture.
     /// @return The texture pointer.
     [[maybe_unused]]
-    std::shared_ptr<Texture> create(const std::string &name, math::Vec2 size, SDL_Color color);
+    std::shared_ptr<Texture> create(const std::string &name, const math::Vec2& size, SDL_Color color);
 
     /// @brief Move an existing texture.
     /// @param name The name of the texture.

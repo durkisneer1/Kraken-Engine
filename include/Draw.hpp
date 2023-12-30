@@ -15,7 +15,7 @@ namespace draw {
 /// @param color The color of the rectangle.
 /// @param thickness The thickness of the rectangle.
 /// @note If thickness remains 0, the rectangle will be filled.
-void rect(RenderWindow& window, Rect& rect, const SDL_Color& color, int thickness = 0);
+void rect(RenderWindow& window, Rect& rect, const SDL_Color color, int thickness = 0);
 
 }
 }

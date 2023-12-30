@@ -60,13 +60,13 @@ namespace math {
 		return !(*this == other);
 	}
 
-	Vec2 clampVec(Vec2 vec, Vec2 min, Vec2 max) {
+	Vec2 clampVec(Vec2 vec, const Vec2& min, const Vec2& max) {
 		vec.x = clamp(vec.x, min.x, max.x);
 		vec.y = clamp(vec.y, min.y, max.y);
 		return vec;
 	}
 
-	Vec2 lerpVec(Vec2 a, Vec2 b, float t) {
+	Vec2 lerpVec(const Vec2& a, const Vec2& b, float t) {
 		return a + (b - a) * t;
 	}
 

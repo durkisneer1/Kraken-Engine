@@ -37,12 +37,12 @@ public:
 	/// @param texture The texture to draw.
 	/// @param crop The rectangle to draw from.
 	/// @param rect The rectangle to draw to.
-	void blit(const std::shared_ptr<Texture> texture, Rect crop, Rect rect);
+	void blit(const std::shared_ptr<Texture>& texture, Rect crop, Rect rect);
 
 	/// @brief Draw a texture.
 	/// @param texture The texture to draw.
 	/// @param position The position to draw at.
-	void blit(const std::shared_ptr<Texture> texture, math::Vec2 position);
+	void blit(const std::shared_ptr<Texture>& texture, const math::Vec2& position);
 
 	/// @brief Draw a texture.
 	/// @param texture The texture to draw.
@@ -51,7 +51,7 @@ public:
 	/// @param angle The angle to draw the texture.
 	/// @param flipX Whether to flip the texture on the x-axis.
 	/// @param flipY Whether to flip the texture on the y-axis.
-	void blitEx(const std::shared_ptr<Texture> texture, Rect crop, Rect rect, double angle = 0.0, bool flipX = false, bool flipY = false);
+	void blitEx(const std::shared_ptr<Texture>& texture, Rect crop, Rect rect, double angle = 0.0, bool flipX = false, bool flipY = false);
 
 	/// @brief Draw a texture.
 	/// @param texture The texture to draw.
@@ -59,7 +59,7 @@ public:
 	/// @param angle The angle to draw the texture.
 	/// @param flipX Whether to flip the texture on the x-axis.
 	/// @param flipY Whether to flip the texture on the y-axis.
-	void blitEx(const std::shared_ptr<Texture> texture, math::Vec2 position, double angle = 0.0, bool flipX = false, bool flipY = false);
+	void blitEx(const std::shared_ptr<Texture>& texture, const math::Vec2& position, double angle = 0.0, bool flipX = false, bool flipY = false);
 
 	/// @brief Get the window renderer.
 	/// @return The window renderer.

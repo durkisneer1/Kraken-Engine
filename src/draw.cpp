@@ -4,7 +4,7 @@
 namespace kn {
 namespace draw {
 
-void rect(RenderWindow& window, Rect& rect, const SDL_Color& color, int thickness) {
+void rect(RenderWindow& window, Rect& rect, const SDL_Color color, int thickness) {
     SDL_SetRenderDrawColor(window.getRenderer(), color.r, color.g, color.b, color.a);
     if (thickness == 0) {
         SDL_RenderFillRectF(window.getRenderer(), &rect);

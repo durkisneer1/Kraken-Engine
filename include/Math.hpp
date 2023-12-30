@@ -45,14 +45,14 @@ struct Vec2 {
 /// @param min The minimum value.
 /// @param max The maximum value.
 /// @return The clamped vector.
-Vec2 clampVec(Vec2 vec, Vec2 min, Vec2 max);
+Vec2 clampVec(Vec2 vec, const Vec2& min, const Vec2& max);
 
 /// @brief Linearly interpolate a vector.
 /// @param a The first vector.
 /// @param b The second vector.
 /// @param t The time.
 /// @return The interpolated vector.
-Vec2 lerpVec(Vec2 a, Vec2 b, float t);
+Vec2 lerpVec(const Vec2& a, const Vec2& b, float t);
 
 /// @brief Clamp a value.
 /// @param val The value to clamp.

@@ -25,36 +25,36 @@ struct Rect : public SDL_FRect {
 
     /// @brief Set the size of the rectangle.
     /// @param size The new size.
-    void setSize(math::Vec2 size);
+    void setSize(const math::Vec2& size);
 
     /// @brief Check if the rectangle collides with a point.
     /// @param pos The point to check.
     /// @return Whether the rectangle collides with a point.
-    bool collidePoint(math::Vec2 pos);
+    bool collidePoint(const math::Vec2& pos);
 
     /// @brief Check if the rectangle collides with another rectangle.
     /// @param rect The rectangle to check.
     /// @return Whether the rectangle collides with another rectangle.
-    bool collideRect(Rect& rect);
+    bool collideRect(const Rect& rect);
 
     /// @brief Clamp the rectangle.
     /// @param min The minimum value.
     /// @param max The maximum value.
-    void clamp(math::Vec2 min = {}, math::Vec2 max = SCREEN_SIZE);
+    void clamp(const math::Vec2& min = {}, const math::Vec2& max = SCREEN_SIZE);
 
-    void setCenter(math::Vec2 pos);
+    void setCenter(const math::Vec2& pos);
     void setLeft(float x);
     void setRight(float x);
     void setTop(float y);
     void setBottom(float y);
-    void setTopLeft(math::Vec2 pos);
-    void setTopMid(math::Vec2 pos);
-    void setTopRight(math::Vec2 pos);
-    void setBottomLeft(math::Vec2 pos);
-    void setBottomMid(math::Vec2 pos);
-    void setBottomRight(math::Vec2 pos);
-    void setLeftMid(math::Vec2 pos);
-    void setRightMid(math::Vec2 pos);
+    void setTopLeft(const math::Vec2& pos);
+    void setTopMid(const math::Vec2& pos);
+    void setTopRight(const math::Vec2& pos);
+    void setBottomLeft(const math::Vec2& pos);
+    void setBottomMid(const math::Vec2& pos);
+    void setBottomRight(const math::Vec2& pos);
+    void setLeftMid(const math::Vec2& pos);
+    void setRightMid(const math::Vec2& pos);
 
     math::Vec2 getCenter();
     float getLeft();

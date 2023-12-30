@@ -22,20 +22,20 @@ public:
 
 	/// @brief Get the size of the texture.
 	/// @return The size of the texture.
-	math::Vec2 getSize() const { return { rect.w, rect.h }; }
+	math::Vec2 getSize() const;
 
 	/// @brief Get the rect of the texture.
 	/// @return The rect of the texture.
-	Rect getRect() const { return rect; }
+	Rect getRect() const;
 
 	/// @brief Get the SDL texture.
 	/// @return The SDL texture.
 	/// @note This function is not meant to be used by the user.
-	SDL_Texture* getSDLTexture() const { return texture; }
+	SDL_Texture* getSDLTexture() const;
 
 	/// @brief Set the size of the texture rect.
 	/// @param size The size of the texture rect.
-	void setSize(math::Vec2 size);
+	void setSize(const math::Vec2& size);
 
 	/// @brief Scale the texture rect by a factor.
 	/// @param factor The factor to scale by.
