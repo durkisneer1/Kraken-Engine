@@ -20,7 +20,7 @@ bool Rect::collidePoint(math::Vec2 pos) {
 	return (pos.x >= x && pos.x <= x + w && pos.y >= y && pos.y <= y + h);
 }
 
-bool Rect::collideRect(Rect rect) {
+bool Rect::collideRect(Rect& rect) {
 	return (x < rect.x + rect.w && x + w > rect.x && y < rect.y + rect.h && y + h > rect.y);
 }
 

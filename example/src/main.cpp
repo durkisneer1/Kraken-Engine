@@ -14,13 +14,19 @@ int main() {
 	kn::time::Clock clock;
 
 	kn::TileMap tileMap(window, textureCache, "assets/room.tmx");
-	std::vector<std::shared_ptr<kn::Sprite>> walls;
+	std::vector<std::shared_ptr<kn::Sprite>> obstacles;
+	std::vector<std::shared_ptr<kn::Sprite>> intractables;
 	for (const auto& obj : tileMap.getObjects()) {
 		if (obj.type == "Obstacle") {
 			auto newSprite = std::make_shared<kn::Sprite>(window, obj.texture);
 			newSprite->crop = obj.crop;
 			newSprite->rect = obj.rect;
-			walls.push_back(newSprite);
+			obstacles.push_back(newSprite);
+		} else if (obj.type == "Intractable") {
+			auto newSprite = std::make_shared<kn::Sprite>(window, obj.texture);
+			newSprite->crop = obj.crop;
+			newSprite->rect = obj.rect;
+			intractables.push_back(newSprite);
 		}
 	}
 
@@ -29,7 +35,7 @@ int main() {
 
 	bool done = false;
 	while (!done) {
-		double deltaTime = clock.tick(60);
+		double deltaTime = clock.tick(90);
 
 		for (const auto &event : window.getEvents()) {
 			if (event.type == KN_QUIT) {
@@ -43,11 +49,13 @@ int main() {
 		
 		window.cls();
 
-		tileMap.drawTiles();
-		for (const auto& obj : tileMap.getObjects()) {
-			window.blit(obj.texture, obj.crop, obj.rect);
+		tileMap.drawAll();
+		for (const auto& i : intractables) {
+			if (player.rect.collideRect(i->rect)) {
+				kn::draw::rect(window, i->rect, { 255, 255, 0, 255 }, 1);
+			}
 		}
-		player.update(deltaTime, walls);
+		player.update(deltaTime, obstacles);
 		
 		window.flip();
 	}

@@ -3,6 +3,7 @@
 
 #include "Clock.hpp"
 #include "Constants.hpp"
+#include "Draw.hpp"
 #include "Font.hpp"
 #include "Globals.hpp"
 #include "Input.hpp"

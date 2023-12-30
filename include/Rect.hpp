@@ -35,7 +35,7 @@ struct Rect : public SDL_FRect {
     /// @brief Check if the rectangle collides with another rectangle.
     /// @param rect The rectangle to check.
     /// @return Whether the rectangle collides with another rectangle.
-    bool collideRect(Rect rect);
+    bool collideRect(Rect& rect);
 
     /// @brief Clamp the rectangle.
     /// @param min The minimum value.
