@@ -5,7 +5,7 @@
 #include "../include/Player.hpp"
 
 const kn::math::Vec2 kn::SCREEN_SIZE = { 320, 180 };
-float kn::GRAVITY = 245.0f;
+float kn::GRAVITY = 980.0f;
 
 
 int main() {
@@ -35,26 +35,23 @@ int main() {
 
 	bool done = false;
 	while (!done) {
-		double deltaTime = clock.tick(90);
+		double deltaTime = clock.tick(240);
 
 		for (const auto &event : window.getEvents()) {
 			if (event.type == KN_QUIT) {
 				done = true;
 			} else if (event.type == KN_KEYDOWN) {
-				if (event.key.keysym.sym == KNK_ESCAPE) {
+				if (event.key.keysym.sym == KNK_ESCAPE)
 					done = true;
-				}
 			}
 		}
 		
 		window.cls();
 
 		tileMap.drawAll();
-		for (const auto& i : intractables) {
-			if (player.rect.collideRect(i->rect)) {
+		for (const auto& i : intractables)
+			if (player.rect.collideRect(i->rect))
 				kn::draw::rect(window, i->rect, { 255, 255, 0, 255 }, 1);
-			}
-		}
 		player.update(deltaTime, obstacles);
 		
 		window.flip();

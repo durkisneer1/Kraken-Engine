@@ -11,7 +11,7 @@ Player::Player(kn::RenderWindow& window, std::shared_ptr<kn::Texture> texture)
 void Player::update(double deltaTime, const std::vector<std::shared_ptr<kn::Sprite>>& tiles) {
     if (onGround) {
         if (kn::input::getKeysPressed()[KNK_space]) {
-            velocity.y = -65;
+            velocity.y = -150;
             onGround = false;
         }
     } else {
