@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT-blue.svg">
-  <a href="https://app.codacy.com/gh/durkisneer1/DurkGame/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/17028e01d32f4441be4bd5e37edb94ce"/></a>
+  <a href="https://app.codacy.com/gh/durkisneer1/Kraken-Engine/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/17028e01d32f4441be4bd5e37edb94ce"/></a>
 </p>
 
 `Kraken Engine` extends SDL2 with easy-to-use features like <em>texture caching</em> and <em>collision logic</em>. Future plans include implementing handy mathematical functions such as <em>pathfinding</em>, <em>raycasting</em>, and <em>built-in physics</em>.
