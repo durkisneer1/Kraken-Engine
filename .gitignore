@@ -38,4 +38,7 @@
 .idea/
 
 # CMake
-/cmake-build-debug/
+/build/
+/example/build/
+/example/cmake-build-debug/
+/example/cmake-build-release/
