@@ -1,4 +1,4 @@
-#include "../include/player.hpp"
+#include "../include/Player.hpp"
 #include <iostream>
 
 

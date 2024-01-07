@@ -1,19 +1,22 @@
-# C++ Compile and Link
-CXX := x86_64-w64-mingw32-g++
-CXXFLAGS := -std=c++14 -Wall -m64 -Iinclude -IC:/SDL2/include -I../include/tmxlite -I../include
-
 # Executable Setup
-TARGET := Game.exe
+TARGET := Game
 SRC := $(wildcard src/*.cpp)
 OBJ := $(SRC:.cpp=.o)
-KRAKEN_LIB := -L../bin -lKraken
-SDL_LIB := -LC:/SDL2/lib -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer
-TMXLITE_LIB := -L../lib -ltmxlite.dll
+INCLUDE_DIRS := -Iinclude -I../bld/_deps/sdl-src/include -I../bld/_deps/sdl_ttf-src -I../bld/_deps/sdl_mixer-src/include -I../bld/_deps/sdl_image-src/include -I../bld/_deps/tmxlite-src/tmxlite/include -I../include
+CXXFLAGS := -std=c++14 -Wall $(INCLUDE_DIRS)
+
+LINK_DIRS := -L../bld -L../bin -L../bld/_deps/sdl_image-build/ -L../bld/_deps/sdl_mixer-build/ -L../bld/_deps/sdl_ttf-build -L../bld/_deps/freetype-build
+KRAKEN_LIB := -lKraken
+SDL_LIB := -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer
+TMXLITE_LIB := -ltmxlite -lfreetype
+ifeq ($(OS), Windows_NT)
+  TMXLITE_LIB += -lz -lbz2 -lwinmm -lbrotlidec
+endif
 all: $(TARGET)
 
 # Compile Executable
 $(TARGET): $(OBJ)
-	$(CXX) $(CXXFLAGS) -o $@ $^ $(KRAKEN_LIB) $(SDL_LIB) $(TMXLITE_LIB)
+	$(CXX) $(CXXFLAGS) -o $@ $^ $(LINK_DIRS) $(KRAKEN_LIB) $(SDL_LIB) $(TMXLITE_LIB)
 
 # Build Object Files
 %.o: src/%.cpp
