@@ -1,4 +1,4 @@
-#include "../include/Clock.hpp"
+#include "../include/Time.hpp"
 
 
 namespace kn {

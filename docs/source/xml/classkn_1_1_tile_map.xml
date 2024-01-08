@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classkn_1_1_tile_map" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>kn::TileMap</compoundname>
+    <includes refid="_tile_map_8hpp" local="no">TileMap.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classkn_1_1_tile_map_1a29a34f6749a6b31a8561e9c5112964db" prot="private" static="no" mutable="no">
+        <type><ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref> &amp;</type>
+        <definition>RenderWindow&amp; kn::TileMap::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <qualifiedname>kn::TileMap::window</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="42" column="18" bodyfile="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classkn_1_1_tile_map_1af0b8d6ff9b53c3477ace43588791889c" prot="private" static="no" mutable="no">
+        <type>tmx::Map</type>
+        <definition>tmx::Map kn::TileMap::m_map</definition>
+        <argsstring></argsstring>
+        <name>m_map</name>
+        <qualifiedname>kn::TileMap::m_map</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="43" column="14" bodyfile="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classkn_1_1_tile_map_1a51eefec828511d1c09dfcd618f7d1e06" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structkn_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
+        <definition>std::vector&lt;Tile&gt; kn::TileMap::tileVec</definition>
+        <argsstring></argsstring>
+        <name>tileVec</name>
+        <qualifiedname>kn::TileMap::tileVec</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="45" column="17" bodyfile="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classkn_1_1_tile_map_1ac58d80f3eaddc20a11506b8fd50c6e7a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structkn_1_1_object" kindref="compound">Object</ref> &gt;</type>
+        <definition>std::vector&lt;Object&gt; kn::TileMap::objectVec</definition>
+        <argsstring></argsstring>
+        <name>objectVec</name>
+        <qualifiedname>kn::TileMap::objectVec</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="46" column="17" bodyfile="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classkn_1_1_tile_map_1abefad7330e18b15f8eee70c624ff6b7b" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, std::shared_ptr&lt; <ref refid="classkn_1_1_texture" kindref="compound">Texture</ref> &gt; &gt;</type>
+        <definition>std::map&lt;int, std::shared_ptr&lt;Texture&gt; &gt; kn::TileMap::tileSetMap</definition>
+        <argsstring></argsstring>
+        <name>tileSetMap</name>
+        <qualifiedname>kn::TileMap::tileSetMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="47" column="14" bodyfile="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classkn_1_1_tile_map_1a0b1c516eb7ae5f70e3ab76771439cdba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>kn::TileMap::TileMap</definition>
+        <argsstring>(RenderWindow &amp;window, TextureCache &amp;textureCache, const std::string &amp;tmxPath)</argsstring>
+        <name>TileMap</name>
+        <qualifiedname>kn::TileMap::TileMap</qualifiedname>
+        <param>
+          <type><ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref> &amp;</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type><ref refid="classkn_1_1_texture_cache" kindref="compound">TextureCache</ref> &amp;</type>
+          <declname>textureCache</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>tmxPath</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a tile map from a TMX file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window to render to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>textureCache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The texture cache to use. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tmxPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the TMX file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="25" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1_tile_map_1ae5fafab74bad33d0a854f932b6ce39dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>kn::TileMap::~TileMap</definition>
+        <argsstring>()=default</argsstring>
+        <name>~TileMap</name>
+        <qualifiedname>kn::TileMap::~TileMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="26" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1_tile_map_1a972a1369a84ab4dad41089e9d5818c02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::TileMap::drawTiles</definition>
+        <argsstring>()</argsstring>
+        <name>drawTiles</name>
+        <qualifiedname>kn::TileMap::drawTiles</qualifiedname>
+        <briefdescription>
+<para>Draw the tile map. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="29" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1_tile_map_1af5095c79b15f2026b86e12fbeb80b4ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::TileMap::drawObjects</definition>
+        <argsstring>()</argsstring>
+        <name>drawObjects</name>
+        <qualifiedname>kn::TileMap::drawObjects</qualifiedname>
+        <briefdescription>
+<para>Draw the objects in the tile map. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="32" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1_tile_map_1af4a5c9d1407b541677296612ed140df8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::TileMap::drawAll</definition>
+        <argsstring>()</argsstring>
+        <name>drawAll</name>
+        <qualifiedname>kn::TileMap::drawAll</qualifiedname>
+        <briefdescription>
+<para>Draw the tile map and objects. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="35" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1_tile_map_1a9c730cee7c34405ad313d0acbe06accf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::vector&lt; <ref refid="structkn_1_1_object" kindref="compound">Object</ref> &gt; &amp;</type>
+        <definition>const std::vector&lt; Object &gt; &amp; kn::TileMap::getObjects</definition>
+        <argsstring>() const</argsstring>
+        <name>getObjects</name>
+        <qualifiedname>kn::TileMap::getObjects</qualifiedname>
+        <briefdescription>
+<para>Get the tile map objects vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The tile map objects vector. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="39" column="23"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A class that represents a tile map. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class reads from TMX files generated by the Tiled map editor. </para>
+    </detaileddescription>
+    <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="19" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" bodystart="19" bodyend="48"/>
+    <listofallmembers>
+      <member refid="classkn_1_1_tile_map_1af4a5c9d1407b541677296612ed140df8" prot="public" virt="non-virtual"><scope>kn::TileMap</scope><name>drawAll</name></member>
+      <member refid="classkn_1_1_tile_map_1af5095c79b15f2026b86e12fbeb80b4ab" prot="public" virt="non-virtual"><scope>kn::TileMap</scope><name>drawObjects</name></member>
+      <member refid="classkn_1_1_tile_map_1a972a1369a84ab4dad41089e9d5818c02" prot="public" virt="non-virtual"><scope>kn::TileMap</scope><name>drawTiles</name></member>
+      <member refid="classkn_1_1_tile_map_1a9c730cee7c34405ad313d0acbe06accf" prot="public" virt="non-virtual"><scope>kn::TileMap</scope><name>getObjects</name></member>
+      <member refid="classkn_1_1_tile_map_1af0b8d6ff9b53c3477ace43588791889c" prot="private" virt="non-virtual"><scope>kn::TileMap</scope><name>m_map</name></member>
+      <member refid="classkn_1_1_tile_map_1ac58d80f3eaddc20a11506b8fd50c6e7a" prot="private" virt="non-virtual"><scope>kn::TileMap</scope><name>objectVec</name></member>
+      <member refid="classkn_1_1_tile_map_1a0b1c516eb7ae5f70e3ab76771439cdba" prot="public" virt="non-virtual"><scope>kn::TileMap</scope><name>TileMap</name></member>
+      <member refid="classkn_1_1_tile_map_1abefad7330e18b15f8eee70c624ff6b7b" prot="private" virt="non-virtual"><scope>kn::TileMap</scope><name>tileSetMap</name></member>
+      <member refid="classkn_1_1_tile_map_1a51eefec828511d1c09dfcd618f7d1e06" prot="private" virt="non-virtual"><scope>kn::TileMap</scope><name>tileVec</name></member>
+      <member refid="classkn_1_1_tile_map_1a29a34f6749a6b31a8561e9c5112964db" prot="private" virt="non-virtual"><scope>kn::TileMap</scope><name>window</name></member>
+      <member refid="classkn_1_1_tile_map_1ae5fafab74bad33d0a854f932b6ce39dc" prot="public" virt="non-virtual"><scope>kn::TileMap</scope><name>~TileMap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

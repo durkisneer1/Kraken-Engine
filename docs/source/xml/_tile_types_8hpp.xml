@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_tile_types_8hpp" kind="file" language="C++">
+    <compoundname>TileTypes.hpp</compoundname>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes refid="_texture_8hpp" local="yes">Texture.hpp</includes>
+    <includedby refid="_kraken_engine_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/KrakenEngine.hpp</includedby>
+    <includedby refid="_tile_map_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/TileMap.hpp</includedby>
+    <incdepgraph>
+      <node id="8">
+        <label>Globals.hpp</label>
+        <link refid="_globals_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Math.hpp</label>
+        <link refid="_math_8hpp"/>
+      </node>
+      <node id="7">
+        <label>Rect.hpp</label>
+        <link refid="_rect_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Texture.hpp</label>
+        <link refid="_texture_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/Code/c++/Kraken-Engine/include/TileTypes.hpp</label>
+        <link refid="_tile_types_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SDL.h</label>
+      </node>
+      <node id="2">
+        <label>memory</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>D:/Code/c++/Kraken-Engine/include/KrakenEngine.hpp</label>
+        <link refid="_kraken_engine_8hpp"/>
+      </node>
+      <node id="3">
+        <label>D:/Code/c++/Kraken-Engine/include/TileMap.hpp</label>
+        <link refid="_tile_map_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/Code/c++/Kraken-Engine/include/TileTypes.hpp</label>
+        <link refid="_tile_types_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structkn_1_1_tile" prot="public">kn::Tile</innerclass>
+    <innerclass refid="structkn_1_1_object" prot="public">kn::Object</innerclass>
+    <innernamespace refid="namespacekn">kn</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_texture_8hpp" kindref="compound">Texture.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacekn" kindref="compound">kn</ref><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="structkn_1_1_tile" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structkn_1_1_tile" kindref="compound">Tile</ref><sp/>{</highlight></codeline>
+<codeline lineno="17" refid="structkn_1_1_tile_1a1ebf237bcfc10d856c978b82adf54467" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structkn_1_1_tile_1a1ebf237bcfc10d856c978b82adf54467" kindref="member">Tile</ref>(std::shared_ptr&lt;Texture&gt;<sp/><ref refid="structkn_1_1_tile_1a8e7d9dbfe6a90692c70b5dbd35eb8f01" kindref="member">texture</ref>,<sp/><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref><sp/><ref refid="structkn_1_1_tile_1a65ccf5af9c9b8459015fcb3caa45e9dc" kindref="member">crop</ref>,<sp/><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref><sp/><ref refid="structkn_1_1_tile_1abe91be0f6c7a3943b5927bf6f4995f66" kindref="member">rect</ref>)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="structkn_1_1_tile_1a8e7d9dbfe6a90692c70b5dbd35eb8f01" kindref="member">texture</ref>(<ref refid="structkn_1_1_tile_1a8e7d9dbfe6a90692c70b5dbd35eb8f01" kindref="member">texture</ref>),<sp/><ref refid="structkn_1_1_tile_1a65ccf5af9c9b8459015fcb3caa45e9dc" kindref="member">crop</ref>(<ref refid="structkn_1_1_tile_1a65ccf5af9c9b8459015fcb3caa45e9dc" kindref="member">crop</ref>),<sp/><ref refid="structkn_1_1_tile_1abe91be0f6c7a3943b5927bf6f4995f66" kindref="member">rect</ref>(<ref refid="structkn_1_1_tile_1abe91be0f6c7a3943b5927bf6f4995f66" kindref="member">rect</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="19" refid="structkn_1_1_tile_1a075c94c72cf25b396a31f4841fac4a69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structkn_1_1_tile_1a075c94c72cf25b396a31f4841fac4a69" kindref="member">~Tile</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="structkn_1_1_tile_1a8e7d9dbfe6a90692c70b5dbd35eb8f01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;Texture&gt;<sp/><ref refid="structkn_1_1_tile_1a8e7d9dbfe6a90692c70b5dbd35eb8f01" kindref="member">texture</ref>;</highlight></codeline>
+<codeline lineno="22" refid="structkn_1_1_tile_1a65ccf5af9c9b8459015fcb3caa45e9dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref><sp/><ref refid="structkn_1_1_tile_1a65ccf5af9c9b8459015fcb3caa45e9dc" kindref="member">crop</ref>;</highlight></codeline>
+<codeline lineno="23" refid="structkn_1_1_tile_1abe91be0f6c7a3943b5927bf6f4995f66" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref><sp/><ref refid="structkn_1_1_tile_1abe91be0f6c7a3943b5927bf6f4995f66" kindref="member">rect</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="structkn_1_1_object" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structkn_1_1_object" kindref="compound">Object</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1_tile" kindref="compound">Tile</ref><sp/>{</highlight></codeline>
+<codeline lineno="36" refid="structkn_1_1_object_1a593099256e65b7eb4f930a462e2b0816" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structkn_1_1_object_1a593099256e65b7eb4f930a462e2b0816" kindref="member">Object</ref>(std::shared_ptr&lt;Texture&gt;<sp/><ref refid="structkn_1_1_tile_1a8e7d9dbfe6a90692c70b5dbd35eb8f01" kindref="member">texture</ref>,<sp/><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref><sp/><ref refid="structkn_1_1_tile_1a65ccf5af9c9b8459015fcb3caa45e9dc" kindref="member">crop</ref>,<sp/><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref><sp/><ref refid="structkn_1_1_tile_1abe91be0f6c7a3943b5927bf6f4995f66" kindref="member">rect</ref>,<sp/>std::string<sp/><ref refid="structkn_1_1_object_1a5b92582712f27acced7d23d68758411a" kindref="member">name</ref>,<sp/>std::string<sp/><ref refid="structkn_1_1_object_1a8a96862d3a8f909b98080a407f77fdc7" kindref="member">type</ref>)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="structkn_1_1_tile" kindref="compound">Tile</ref>(<ref refid="structkn_1_1_tile_1a8e7d9dbfe6a90692c70b5dbd35eb8f01" kindref="member">texture</ref>,<sp/><ref refid="structkn_1_1_tile_1a65ccf5af9c9b8459015fcb3caa45e9dc" kindref="member">crop</ref>,<sp/><ref refid="structkn_1_1_tile_1abe91be0f6c7a3943b5927bf6f4995f66" kindref="member">rect</ref>),<sp/><ref refid="structkn_1_1_object_1a5b92582712f27acced7d23d68758411a" kindref="member">name</ref>(<ref refid="structkn_1_1_object_1a5b92582712f27acced7d23d68758411a" kindref="member">name</ref>),<sp/><ref refid="structkn_1_1_object_1a8a96862d3a8f909b98080a407f77fdc7" kindref="member">type</ref>(<ref refid="structkn_1_1_object_1a8a96862d3a8f909b98080a407f77fdc7" kindref="member">type</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="38" refid="structkn_1_1_object_1ad14e369470ca9a6773a6928a573c1dd4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structkn_1_1_object_1ad14e369470ca9a6773a6928a573c1dd4" kindref="member">~Object</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40" refid="structkn_1_1_object_1a5b92582712f27acced7d23d68758411a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="structkn_1_1_object_1a5b92582712f27acced7d23d68758411a" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="41" refid="structkn_1_1_object_1a8a96862d3a8f909b98080a407f77fdc7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="structkn_1_1_object_1a8a96862d3a8f909b98080a407f77fdc7" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp"/>
+  </compounddef>
+</doxygen>

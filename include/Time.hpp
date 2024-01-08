@@ -7,7 +7,7 @@ namespace kn {
 namespace time {
 
 /// @brief A class to keep track of time.
-/// @note This class is not thread-safe.
+/// @warning This class must be a singleton.
 class Clock final {
 public:
 	Clock() = default;

@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacekn_1_1math" kind="namespace" language="C++">
+    <compoundname>kn::math</compoundname>
+    <innerclass refid="structkn_1_1math_1_1_vec2" prot="public">kn::math::Vec2</innerclass>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacekn_1_1math_1a8707b7484af546b0e9f57d8d78059a51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref></type>
+        <definition>Vec2 kn::math::clampVec</definition>
+        <argsstring>(Vec2 vec, const Vec2 &amp;min, const Vec2 &amp;max)</argsstring>
+        <name>clampVec</name>
+        <qualifiedname>kn::math::clampVec</qualifiedname>
+        <param>
+          <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref></type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref> &amp;</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref> &amp;</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+<para>Clamp a vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector to clamp. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The minimum value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The clamped vector. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="48" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" declline="48" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacekn_1_1math_1a88e50fa7f06deaef4b3fb1f9c26e22a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref></type>
+        <definition>Vec2 kn::math::lerpVec</definition>
+        <argsstring>(const Vec2 &amp;a, const Vec2 &amp;b, float t)</argsstring>
+        <name>lerpVec</name>
+        <qualifiedname>kn::math::lerpVec</qualifiedname>
+        <param>
+          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Linearly interpolate a vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The interpolated vector. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="55" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" declline="55" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacekn_1_1math_1aced32b7b8f0f6ed33afc45afe9c0221c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class digit</type>
+          </param>
+        </templateparamlist>
+        <type>digit</type>
+        <definition>digit kn::math::clamp</definition>
+        <argsstring>(digit val, digit min, digit max)</argsstring>
+        <name>clamp</name>
+        <qualifiedname>kn::math::clamp</qualifiedname>
+        <param>
+          <type>digit</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>digit</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>digit</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+<para>Clamp a value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to clamp. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The minimum value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The clamped value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="63" column="7" declfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" declline="63" declcolumn="7"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="5" column="1"/>
+  </compounddef>
+</doxygen>

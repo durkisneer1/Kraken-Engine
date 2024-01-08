@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_clock_8hpp" kind="file" language="C++">
+    <compoundname>Clock.hpp</compoundname>
+    <includes local="no">SDL.h</includes>
+    <includedby refid="_kraken_engine_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/KrakenEngine.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>D:/Code/c++/Kraken-Engine/include/Clock.hpp</label>
+        <link refid="_clock_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SDL.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>D:/Code/c++/Kraken-Engine/include/Clock.hpp</label>
+        <link refid="_clock_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>D:/Code/c++/Kraken-Engine/include/KrakenEngine.hpp</label>
+        <link refid="_kraken_engine_8hpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classkn_1_1time_1_1_clock" prot="public">kn::time::Clock</innerclass>
+    <innernamespace refid="namespacekn">kn</innernamespace>
+    <innernamespace refid="namespacekn_1_1time">kn::time</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SDL.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="namespacekn" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacekn" kindref="compound">kn</ref><sp/>{</highlight></codeline>
+<codeline lineno="7" refid="namespacekn_1_1time" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">time<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="classkn_1_1time_1_1_clock" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classkn_1_1time_1_1_clock" kindref="compound">Clock</ref><sp/>final<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13" refid="classkn_1_1time_1_1_clock_1a01ac404d47e055669c1a69b79b4a7fd8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1time_1_1_clock_1a01ac404d47e055669c1a69b79b4a7fd8" kindref="member">Clock</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14" refid="classkn_1_1time_1_1_clock_1a56cc398c51d9cb271b2d405999e2152b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1time_1_1_clock_1a56cc398c51d9cb271b2d405999e2152b" kindref="member">~Clock</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classkn_1_1time_1_1_clock_1a739efb40e7d6abf813afaecbc4b40873" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1time_1_1_clock_1a739efb40e7d6abf813afaecbc4b40873" kindref="member">tick</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>frameRate<sp/>=<sp/>360);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>now,<sp/>last<sp/>=<sp/>SDL_GetTicks64();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>rawTime,<sp/>frameTime<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Code/c++/Kraken-Engine/include/Clock.hpp"/>
+  </compounddef>
+</doxygen>

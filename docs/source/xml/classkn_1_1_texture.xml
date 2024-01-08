@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classkn_1_1_texture" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>kn::Texture</compoundname>
+    <includes refid="_texture_8hpp" local="no">Texture.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classkn_1_1_texture_1a49fc0aa588ce35fbc29bff876e6b4479" prot="private" static="no" mutable="no">
+        <type>SDL_Texture *</type>
+        <definition>SDL_Texture* kn::Texture::texture</definition>
+        <argsstring></argsstring>
+        <name>texture</name>
+        <qualifiedname>kn::Texture::texture</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="54" column="13" bodyfile="D:/Code/c++/Kraken-Engine/include/Texture.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classkn_1_1_texture_1adab188c37844140c770355bf866e78d6" prot="private" static="no" mutable="no">
+        <type><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref></type>
+        <definition>Rect kn::Texture::rect</definition>
+        <argsstring></argsstring>
+        <name>rect</name>
+        <qualifiedname>kn::Texture::rect</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="55" column="6" bodyfile="D:/Code/c++/Kraken-Engine/include/Texture.hpp" bodystart="55" bodyend="55"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classkn_1_1_texture_1a896943e8179dd5befdb949834b04bd64" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>kn::Texture::Texture</definition>
+        <argsstring>(SDL_Texture *texture)</argsstring>
+        <name>Texture</name>
+        <qualifiedname>kn::Texture::Texture</qualifiedname>
+        <param>
+          <type>SDL_Texture *</type>
+          <declname>texture</declname>
+        </param>
+        <briefdescription>
+<para>Create a texture. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>texture</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SDL texture. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function is not meant to be used by the user. </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classkn_1_1_texture_cache_1a424624eee8b1e356b12df8f06998f35f" kindref="member">TextureCache::load()</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classkn_1_1_texture_cache_1ac0506c33fe28a0f85085c20b68b4a713" kindref="member">TextureCache::create()</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classkn_1_1_texture_cache_1ac2cc4f423bac33ad8c2865301be31c04" kindref="member">TextureCache::move()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="20" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1_texture_1ae4785568dda681fa59d113386d9a7d4f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>kn::Texture::~Texture</definition>
+        <argsstring>()</argsstring>
+        <name>~Texture</name>
+        <qualifiedname>kn::Texture::~Texture</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="22" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/Texture.hpp" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1_texture_1af30316f09cd6b90c97bc90a6c14be8f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <definition>math::Vec2 kn::Texture::getSize</definition>
+        <argsstring>() const</argsstring>
+        <name>getSize</name>
+        <qualifiedname>kn::Texture::getSize</qualifiedname>
+        <briefdescription>
+<para>Get the size of the texture. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The size of the texture. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="26" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1_texture_1aaba7a220422a6668b367cf389ac4ef8f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref></type>
+        <definition>Rect kn::Texture::getRect</definition>
+        <argsstring>() const</argsstring>
+        <name>getRect</name>
+        <qualifiedname>kn::Texture::getRect</qualifiedname>
+        <briefdescription>
+<para>Get the rect of the texture. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The rect of the texture. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="30" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1_texture_1ad5357fc2ee9cfd5493dfa3011c53ae90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SDL_Texture *</type>
+        <definition>SDL_Texture * kn::Texture::getSDLTexture</definition>
+        <argsstring>() const</argsstring>
+        <name>getSDLTexture</name>
+        <qualifiedname>kn::Texture::getSDLTexture</qualifiedname>
+        <briefdescription>
+<para>Get the SDL texture. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The SDL texture. </para>
+</simplesect>
+<simplesect kind="note"><para>This function is not meant to be used by the user. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="35" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1_texture_1a4cca93b84d6c9ab81da1b6c0d49538b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::Texture::setSize</definition>
+        <argsstring>(const math::Vec2 &amp;size)</argsstring>
+        <name>setSize</name>
+        <qualifiedname>kn::Texture::setSize</qualifiedname>
+        <param>
+          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Set the size of the texture rect. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the texture rect. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="39" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1_texture_1adfd084306118f21108cafc82a5827622" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::Texture::scaleBy</definition>
+        <argsstring>(float factor)</argsstring>
+        <name>scaleBy</name>
+        <qualifiedname>kn::Texture::scaleBy</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>factor</declname>
+        </param>
+        <briefdescription>
+<para>Scale the texture rect by a factor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>factor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The factor to scale by. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="43" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1_texture_1a6723044a4faaaa35526174fc4d36a3da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::Texture::fitWidth</definition>
+        <argsstring>(float width)</argsstring>
+        <name>fitWidth</name>
+        <qualifiedname>kn::Texture::fitWidth</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+<para>Fit the texture rect to a width while maintaining the aspect ratio. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width to fit to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="47" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1_texture_1a558c7e7566f3e2d3c11346cc8179771a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::Texture::fitHeight</definition>
+        <argsstring>(float height)</argsstring>
+        <name>fitHeight</name>
+        <qualifiedname>kn::Texture::fitHeight</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Fit the texture rect to a height while maintaining the aspect ratio. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The height to fit to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="51" column="6"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classkn_1_1_texture_1a9aaf1984bf48c920410c57eddb2c7365" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::Texture::query</definition>
+        <argsstring>()</argsstring>
+        <name>query</name>
+        <qualifiedname>kn::Texture::query</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="57" column="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A texture container. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="12" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/Texture.hpp" bodystart="12" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classkn_1_1_texture_1a558c7e7566f3e2d3c11346cc8179771a" prot="public" virt="non-virtual"><scope>kn::Texture</scope><name>fitHeight</name></member>
+      <member refid="classkn_1_1_texture_1a6723044a4faaaa35526174fc4d36a3da" prot="public" virt="non-virtual"><scope>kn::Texture</scope><name>fitWidth</name></member>
+      <member refid="classkn_1_1_texture_1aaba7a220422a6668b367cf389ac4ef8f" prot="public" virt="non-virtual"><scope>kn::Texture</scope><name>getRect</name></member>
+      <member refid="classkn_1_1_texture_1ad5357fc2ee9cfd5493dfa3011c53ae90" prot="public" virt="non-virtual"><scope>kn::Texture</scope><name>getSDLTexture</name></member>
+      <member refid="classkn_1_1_texture_1af30316f09cd6b90c97bc90a6c14be8f9" prot="public" virt="non-virtual"><scope>kn::Texture</scope><name>getSize</name></member>
+      <member refid="classkn_1_1_texture_1a9aaf1984bf48c920410c57eddb2c7365" prot="private" virt="non-virtual"><scope>kn::Texture</scope><name>query</name></member>
+      <member refid="classkn_1_1_texture_1adab188c37844140c770355bf866e78d6" prot="private" virt="non-virtual"><scope>kn::Texture</scope><name>rect</name></member>
+      <member refid="classkn_1_1_texture_1adfd084306118f21108cafc82a5827622" prot="public" virt="non-virtual"><scope>kn::Texture</scope><name>scaleBy</name></member>
+      <member refid="classkn_1_1_texture_1a4cca93b84d6c9ab81da1b6c0d49538b9" prot="public" virt="non-virtual"><scope>kn::Texture</scope><name>setSize</name></member>
+      <member refid="classkn_1_1_texture_1a49fc0aa588ce35fbc29bff876e6b4479" prot="private" virt="non-virtual"><scope>kn::Texture</scope><name>texture</name></member>
+      <member refid="classkn_1_1_texture_1a896943e8179dd5befdb949834b04bd64" prot="public" virt="non-virtual"><scope>kn::Texture</scope><name>Texture</name></member>
+      <member refid="classkn_1_1_texture_1ae4785568dda681fa59d113386d9a7d4f" prot="public" virt="non-virtual"><scope>kn::Texture</scope><name>~Texture</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

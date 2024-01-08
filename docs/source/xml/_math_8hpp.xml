@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_math_8hpp" kind="file" language="C++">
+    <compoundname>Math.hpp</compoundname>
+    <includedby refid="_globals_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/Globals.hpp</includedby>
+    <includedby refid="_input_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/Input.hpp</includedby>
+    <includedby refid="_kraken_engine_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/KrakenEngine.hpp</includedby>
+    <includedby refid="_rect_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/Rect.hpp</includedby>
+    <includedby refid="_render_window_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp</includedby>
+    <includedby refid="_sprite_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/Sprite.hpp</includedby>
+    <includedby refid="_texture_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/Texture.hpp</includedby>
+    <includedby refid="_texture_cache_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/TextureCache.hpp</includedby>
+    <invincdepgraph>
+      <node id="5">
+        <label>D:/Code/c++/Kraken-Engine/include/Draw.hpp</label>
+        <link refid="_draw_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>D:/Code/c++/Kraken-Engine/include/Font.hpp</label>
+        <link refid="_font_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>D:/Code/c++/Kraken-Engine/include/Globals.hpp</label>
+        <link refid="_globals_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>D:/Code/c++/Kraken-Engine/include/Input.hpp</label>
+        <link refid="_input_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>D:/Code/c++/Kraken-Engine/include/KrakenEngine.hpp</label>
+        <link refid="_kraken_engine_8hpp"/>
+      </node>
+      <node id="1">
+        <label>D:/Code/c++/Kraken-Engine/include/Math.hpp</label>
+        <link refid="_math_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>D:/Code/c++/Kraken-Engine/include/Rect.hpp</label>
+        <link refid="_rect_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp</label>
+        <link refid="_render_window_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>D:/Code/c++/Kraken-Engine/include/Sprite.hpp</label>
+        <link refid="_sprite_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>D:/Code/c++/Kraken-Engine/include/Texture.hpp</label>
+        <link refid="_texture_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>D:/Code/c++/Kraken-Engine/include/TextureCache.hpp</label>
+        <link refid="_texture_cache_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>D:/Code/c++/Kraken-Engine/include/TileMap.hpp</label>
+        <link refid="_tile_map_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>D:/Code/c++/Kraken-Engine/include/TileTypes.hpp</label>
+        <link refid="_tile_types_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structkn_1_1math_1_1_vec2" prot="public">kn::math::Vec2</innerclass>
+    <innernamespace refid="namespacekn">kn</innernamespace>
+    <innernamespace refid="namespacekn_1_1math">kn::math</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacekn" kindref="compound">kn</ref><sp/>{</highlight></codeline>
+<codeline lineno="5" refid="namespacekn_1_1math" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">math<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="structkn_1_1math_1_1_vec2" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref><sp/>{</highlight></codeline>
+<codeline lineno="9" refid="structkn_1_1math_1_1_vec2_1ae19685ae4e0b8df8eb3c79af58133f86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2_1ae19685ae4e0b8df8eb3c79af58133f86" kindref="member">x</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="10" refid="structkn_1_1math_1_1_vec2_1a88c56cf69b89eac88f960b2b707fd9bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2_1a88c56cf69b89eac88f960b2b707fd9bc" kindref="member">y</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="structkn_1_1math_1_1_vec2_1a005043f0542f6a672eb310d2a6b54236" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structkn_1_1math_1_1_vec2_1a005043f0542f6a672eb310d2a6b54236" kindref="member">Vec2</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13" refid="structkn_1_1math_1_1_vec2_1ae0e44d611efc084f001b036294da84f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structkn_1_1math_1_1_vec2_1ae0e44d611efc084f001b036294da84f0" kindref="member">Vec2</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2_1ae19685ae4e0b8df8eb3c79af58133f86" kindref="member">x</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2_1a88c56cf69b89eac88f960b2b707fd9bc" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="14" refid="structkn_1_1math_1_1_vec2_1a0db67ff4376145abda270f094247de15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structkn_1_1math_1_1_vec2_1a0db67ff4376145abda270f094247de15" kindref="member">Vec2</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2_1ae19685ae4e0b8df8eb3c79af58133f86" kindref="member">x</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2_1a88c56cf69b89eac88f960b2b707fd9bc" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="15" refid="structkn_1_1math_1_1_vec2_1abbcec81aa0fe7f8a59cf99f483e3e121" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structkn_1_1math_1_1_vec2_1abbcec81aa0fe7f8a59cf99f483e3e121" kindref="member">Vec2</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2_1ae19685ae4e0b8df8eb3c79af58133f86" kindref="member">x</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2_1a88c56cf69b89eac88f960b2b707fd9bc" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="16" refid="structkn_1_1math_1_1_vec2_1adad010f6748b0710ebf882605382dbbc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structkn_1_1math_1_1_vec2_1adad010f6748b0710ebf882605382dbbc" kindref="member">Vec2</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2_1ae19685ae4e0b8df8eb3c79af58133f86" kindref="member">x</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2_1a88c56cf69b89eac88f960b2b707fd9bc" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="structkn_1_1math_1_1_vec2_1a1d175a651f18b89df7ed11efdd80da8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref><sp/><ref refid="structkn_1_1math_1_1_vec2_1a1d175a651f18b89df7ed11efdd80da8b" kindref="member">ZERO</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="structkn_1_1math_1_1_vec2_1a2ff26209f794ac15a972d2543c4836a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2_1a2ff26209f794ac15a972d2543c4836a7" kindref="member">getLength</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="structkn_1_1math_1_1_vec2_1a0b419df55caf4a47b7fc7bb6ed6897bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2_1a0b419df55caf4a47b7fc7bb6ed6897bf" kindref="member">normalize</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="structkn_1_1math_1_1_vec2_1a5c355bb58ec1633bf40f3a7d8f809f8a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2_1a5c355bb58ec1633bf40f3a7d8f809f8a" kindref="member">distanceTo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref>&amp;<sp/>other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="structkn_1_1math_1_1_vec2_1ab7fffe8ffa01c3efb1a899f4097f0433" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref><sp/><ref refid="structkn_1_1math_1_1_vec2_1ab7fffe8ffa01c3efb1a899f4097f0433" kindref="member">operator*</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>scalar)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35" refid="structkn_1_1math_1_1_vec2_1a62f28b5a432d77a1e8a94b7f5cfdbb35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref><sp/><ref refid="structkn_1_1math_1_1_vec2_1a62f28b5a432d77a1e8a94b7f5cfdbb35" kindref="member">operator/</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>scalar)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36" refid="structkn_1_1math_1_1_vec2_1a42f6f4a2ebd824928d7994fcb1f621f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref><sp/><ref refid="structkn_1_1math_1_1_vec2_1a42f6f4a2ebd824928d7994fcb1f621f9" kindref="member">operator+</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref>&amp;<sp/>other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37" refid="structkn_1_1math_1_1_vec2_1a7d0a14b1cfc5c43a8033ea7550fedb3c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref><sp/><ref refid="structkn_1_1math_1_1_vec2_1a7d0a14b1cfc5c43a8033ea7550fedb3c" kindref="member">operator-</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref>&amp;<sp/>other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38" refid="structkn_1_1math_1_1_vec2_1a39333b3b1e6c7a53eb9c7591b3161238" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref><sp/><ref refid="structkn_1_1math_1_1_vec2_1a39333b3b1e6c7a53eb9c7591b3161238" kindref="member">operator+=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref>&amp;<sp/>other);</highlight></codeline>
+<codeline lineno="39" refid="structkn_1_1math_1_1_vec2_1a9ed5cf168206994dbfcea1fd10a8742a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2_1a9ed5cf168206994dbfcea1fd10a8742a" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref>&amp;<sp/>other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40" refid="structkn_1_1math_1_1_vec2_1a42133229f86b9300809233b6d0a1b7cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2_1a42133229f86b9300809233b6d0a1b7cb" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref>&amp;<sp/>other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="namespacekn_1_1math_1a8707b7484af546b0e9f57d8d78059a51" refkind="member"><highlight class="normal"><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref><sp/><ref refid="namespacekn_1_1math_1a8707b7484af546b0e9f57d8d78059a51" kindref="member">clampVec</ref>(<ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref><sp/>vec,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref>&amp;<sp/>min,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref>&amp;<sp/>max);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="namespacekn_1_1math_1a88e50fa7f06deaef4b3fb1f9c26e22a0" refkind="member"><highlight class="normal"><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref><sp/><ref refid="namespacekn_1_1math_1a88e50fa7f06deaef4b3fb1f9c26e22a0" kindref="member">lerpVec</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref>&amp;<sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref>&amp;<sp/>b,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>t);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>digit&gt;</highlight></codeline>
+<codeline lineno="63" refid="namespacekn_1_1math_1aced32b7b8f0f6ed33afc45afe9c0221c" refkind="member"><highlight class="normal">digit<sp/><ref refid="namespacekn_1_1math_1aced32b7b8f0f6ed33afc45afe9c0221c" kindref="member">clamp</ref>(digit<sp/>val,<sp/>digit<sp/>min,<sp/>digit<sp/>max);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp"/>
+  </compounddef>
+</doxygen>

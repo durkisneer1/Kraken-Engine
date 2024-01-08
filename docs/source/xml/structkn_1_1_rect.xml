@@ -1,0 +1,771 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structkn_1_1_rect" kind="struct" language="C++" prot="public">
+    <compoundname>kn::Rect</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">SDL_FRect</basecompoundref>
+    <includes refid="_rect_8hpp" local="no">Rect.hpp</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structkn_1_1_rect_1a4ddd5a18ffab2852926285955f92a8ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>kn::Rect::Rect</definition>
+        <argsstring>()=default</argsstring>
+        <name>Rect</name>
+        <qualifiedname>kn::Rect::Rect</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="13" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1a29cf43d1e332203115a5db256416059a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>kn::Rect::Rect</definition>
+        <argsstring>(float x, float y, float w, float h)</argsstring>
+        <name>Rect</name>
+        <qualifiedname>kn::Rect::Rect</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="structkn_1_1_rect" kindref="compound">Rect</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>h</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="20" column="5" bodyfile="D:/Code/c++/Kraken-Engine/include/Rect.hpp" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1a1c38171958eca9f653a67f7f6cae86c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>kn::Rect::Rect</definition>
+        <argsstring>(int x, int y, int w, int h)</argsstring>
+        <name>Rect</name>
+        <qualifiedname>kn::Rect::Rect</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="21" column="5" bodyfile="D:/Code/c++/Kraken-Engine/include/Rect.hpp" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1a86586255f5b88ff80d6dbd41486f50a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <definition>math::Vec2 kn::Rect::getPos</definition>
+        <argsstring>()</argsstring>
+        <name>getPos</name>
+        <qualifiedname>kn::Rect::getPos</qualifiedname>
+        <briefdescription>
+<para>Get the position of the rectangle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The position of the rectangle. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="25" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1a1ed727673cfc87e018928b1c11ba2461" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <definition>math::Vec2 kn::Rect::getSize</definition>
+        <argsstring>()</argsstring>
+        <name>getSize</name>
+        <qualifiedname>kn::Rect::getSize</qualifiedname>
+        <briefdescription>
+<para>Get the size of the rectangle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The size of the rectangle. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="29" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1aea0899e6f189bfe35e0d2b9d8df2d2b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::Rect::setSize</definition>
+        <argsstring>(const math::Vec2 &amp;size)</argsstring>
+        <name>setSize</name>
+        <qualifiedname>kn::Rect::setSize</qualifiedname>
+        <param>
+          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Set the size of the rectangle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new size. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="33" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1a7539227428f8bece54ec253f8560e30f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool kn::Rect::collidePoint</definition>
+        <argsstring>(const math::Vec2 &amp;pos)</argsstring>
+        <name>collidePoint</name>
+        <qualifiedname>kn::Rect::collidePoint</qualifiedname>
+        <param>
+          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Check if the rectangle collides with a point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The point to check. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Whether the rectangle collides with a point. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="38" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1a08c4d03cec415ae3f69e6cb5c4ba756d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool kn::Rect::collideRect</definition>
+        <argsstring>(const Rect &amp;rect)</argsstring>
+        <name>collideRect</name>
+        <qualifiedname>kn::Rect::collideRect</qualifiedname>
+        <param>
+          <type>const <ref refid="structkn_1_1_rect" kindref="compound">Rect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+<para>Check if the rectangle collides with another rectangle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle to check. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Whether the rectangle collides with another rectangle. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="43" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1a3d13d89842395715e7a27fc793047bb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::Rect::clamp</definition>
+        <argsstring>(const math::Vec2 &amp;min={}, const math::Vec2 &amp;max=SCREEN_SIZE)</argsstring>
+        <name>clamp</name>
+        <qualifiedname>kn::Rect::clamp</qualifiedname>
+        <param>
+          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <declname>min</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <declname>max</declname>
+          <defval><ref refid="namespacekn_1a4f6693c08dee924dd9d7cf1106f56815" kindref="member">SCREEN_SIZE</ref></defval>
+        </param>
+        <briefdescription>
+<para>Clamp the rectangle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The minimum value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="48" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1a68ab3e17074513f1eefb079ab2aadaea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::Rect::setCenter</definition>
+        <argsstring>(const math::Vec2 &amp;pos)</argsstring>
+        <name>setCenter</name>
+        <qualifiedname>kn::Rect::setCenter</qualifiedname>
+        <param>
+          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="50" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1abede17fdb58e5d0c301cab2ff0d992db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::Rect::setLeft</definition>
+        <argsstring>(float x)</argsstring>
+        <name>setLeft</name>
+        <qualifiedname>kn::Rect::setLeft</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="51" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1a17e302438daeb0b713800e876c069db1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::Rect::setRight</definition>
+        <argsstring>(float x)</argsstring>
+        <name>setRight</name>
+        <qualifiedname>kn::Rect::setRight</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="52" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1a0a5a51b5ef02146b5b6b6869608f6d4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::Rect::setTop</definition>
+        <argsstring>(float y)</argsstring>
+        <name>setTop</name>
+        <qualifiedname>kn::Rect::setTop</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="53" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1add801ec48362102162b110490bf0f628" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::Rect::setBottom</definition>
+        <argsstring>(float y)</argsstring>
+        <name>setBottom</name>
+        <qualifiedname>kn::Rect::setBottom</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="54" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1a0665bdc00e2f4b54529d2177ac3bc70f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::Rect::setTopLeft</definition>
+        <argsstring>(const math::Vec2 &amp;pos)</argsstring>
+        <name>setTopLeft</name>
+        <qualifiedname>kn::Rect::setTopLeft</qualifiedname>
+        <param>
+          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="55" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1afee6ad9269d943754512f8a168a1ae6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::Rect::setTopMid</definition>
+        <argsstring>(const math::Vec2 &amp;pos)</argsstring>
+        <name>setTopMid</name>
+        <qualifiedname>kn::Rect::setTopMid</qualifiedname>
+        <param>
+          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="56" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1ad53eb8f8d221b99c1281b5c8539c7ac9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::Rect::setTopRight</definition>
+        <argsstring>(const math::Vec2 &amp;pos)</argsstring>
+        <name>setTopRight</name>
+        <qualifiedname>kn::Rect::setTopRight</qualifiedname>
+        <param>
+          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="57" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1aac75aec1768fa6f6a506f4d00f6e0210" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::Rect::setBottomLeft</definition>
+        <argsstring>(const math::Vec2 &amp;pos)</argsstring>
+        <name>setBottomLeft</name>
+        <qualifiedname>kn::Rect::setBottomLeft</qualifiedname>
+        <param>
+          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="58" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1a9753a75bae9530ecff0baa551c44375d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::Rect::setBottomMid</definition>
+        <argsstring>(const math::Vec2 &amp;pos)</argsstring>
+        <name>setBottomMid</name>
+        <qualifiedname>kn::Rect::setBottomMid</qualifiedname>
+        <param>
+          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="59" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1aa2a6d65d69954027cf6c39d4226487b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::Rect::setBottomRight</definition>
+        <argsstring>(const math::Vec2 &amp;pos)</argsstring>
+        <name>setBottomRight</name>
+        <qualifiedname>kn::Rect::setBottomRight</qualifiedname>
+        <param>
+          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="60" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1a716cf8a9ed3ae9a8163e0a29c8bb6728" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::Rect::setLeftMid</definition>
+        <argsstring>(const math::Vec2 &amp;pos)</argsstring>
+        <name>setLeftMid</name>
+        <qualifiedname>kn::Rect::setLeftMid</qualifiedname>
+        <param>
+          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="61" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1ad50a17779722f798d055cd2ddb37d904" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::Rect::setRightMid</definition>
+        <argsstring>(const math::Vec2 &amp;pos)</argsstring>
+        <name>setRightMid</name>
+        <qualifiedname>kn::Rect::setRightMid</qualifiedname>
+        <param>
+          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="62" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1a3a10eeee9f62b32e6adbf03ce62a7d9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <definition>math::Vec2 kn::Rect::getCenter</definition>
+        <argsstring>()</argsstring>
+        <name>getCenter</name>
+        <qualifiedname>kn::Rect::getCenter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="64" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1ae707ef317c6259675c0e9a967e093769" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float kn::Rect::getLeft</definition>
+        <argsstring>()</argsstring>
+        <name>getLeft</name>
+        <qualifiedname>kn::Rect::getLeft</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="65" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1a8aab249e226c6a8c1ab0b450721d929b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float kn::Rect::getRight</definition>
+        <argsstring>()</argsstring>
+        <name>getRight</name>
+        <qualifiedname>kn::Rect::getRight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="66" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1a134a42bcde83259f1182be61e3c7495e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float kn::Rect::getTop</definition>
+        <argsstring>()</argsstring>
+        <name>getTop</name>
+        <qualifiedname>kn::Rect::getTop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="67" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1a9199db44899f917b0077e334481e2766" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float kn::Rect::getBottom</definition>
+        <argsstring>()</argsstring>
+        <name>getBottom</name>
+        <qualifiedname>kn::Rect::getBottom</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="68" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1a6987c049da3037ce5df590dc16b82ae1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <definition>math::Vec2 kn::Rect::getTopLeft</definition>
+        <argsstring>()</argsstring>
+        <name>getTopLeft</name>
+        <qualifiedname>kn::Rect::getTopLeft</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="69" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1a8c75e4fd74cd9cd64dfe34506019cf7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <definition>math::Vec2 kn::Rect::getTopMid</definition>
+        <argsstring>()</argsstring>
+        <name>getTopMid</name>
+        <qualifiedname>kn::Rect::getTopMid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="70" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1ab4350c360c565452993af9df311261bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <definition>math::Vec2 kn::Rect::getTopRight</definition>
+        <argsstring>()</argsstring>
+        <name>getTopRight</name>
+        <qualifiedname>kn::Rect::getTopRight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="71" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1af3b29fa1f019a63145478dd6b6d95ba8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <definition>math::Vec2 kn::Rect::getBottomLeft</definition>
+        <argsstring>()</argsstring>
+        <name>getBottomLeft</name>
+        <qualifiedname>kn::Rect::getBottomLeft</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="72" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1a2e62ffc626eaef5c1b70395df0a66338" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <definition>math::Vec2 kn::Rect::getBottomMid</definition>
+        <argsstring>()</argsstring>
+        <name>getBottomMid</name>
+        <qualifiedname>kn::Rect::getBottomMid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="73" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1a7b8e4da3c1667ec7acd73436186499f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <definition>math::Vec2 kn::Rect::getBottomRight</definition>
+        <argsstring>()</argsstring>
+        <name>getBottomRight</name>
+        <qualifiedname>kn::Rect::getBottomRight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="74" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1ab6d716e2afb594ead210b9c7999a0763" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <definition>math::Vec2 kn::Rect::getLeftMid</definition>
+        <argsstring>()</argsstring>
+        <name>getLeftMid</name>
+        <qualifiedname>kn::Rect::getLeftMid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="75" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_rect_1ae2394b363e51897403808dc774976dd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <definition>math::Vec2 kn::Rect::getRightMid</definition>
+        <argsstring>()</argsstring>
+        <name>getRightMid</name>
+        <qualifiedname>kn::Rect::getRightMid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="76" column="16"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A class to represent a rectangle. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>SDL_FRect</label>
+      </node>
+      <node id="1">
+        <label>kn::Rect</label>
+        <link refid="structkn_1_1_rect"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>SDL_FRect</label>
+      </node>
+      <node id="1">
+        <label>kn::Rect</label>
+        <link refid="structkn_1_1_rect"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="12" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/Rect.hpp" bodystart="12" bodyend="77"/>
+    <listofallmembers>
+      <member refid="structkn_1_1_rect_1a3d13d89842395715e7a27fc793047bb3" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>clamp</name></member>
+      <member refid="structkn_1_1_rect_1a7539227428f8bece54ec253f8560e30f" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>collidePoint</name></member>
+      <member refid="structkn_1_1_rect_1a08c4d03cec415ae3f69e6cb5c4ba756d" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>collideRect</name></member>
+      <member refid="structkn_1_1_rect_1a9199db44899f917b0077e334481e2766" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>getBottom</name></member>
+      <member refid="structkn_1_1_rect_1af3b29fa1f019a63145478dd6b6d95ba8" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>getBottomLeft</name></member>
+      <member refid="structkn_1_1_rect_1a2e62ffc626eaef5c1b70395df0a66338" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>getBottomMid</name></member>
+      <member refid="structkn_1_1_rect_1a7b8e4da3c1667ec7acd73436186499f9" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>getBottomRight</name></member>
+      <member refid="structkn_1_1_rect_1a3a10eeee9f62b32e6adbf03ce62a7d9b" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>getCenter</name></member>
+      <member refid="structkn_1_1_rect_1ae707ef317c6259675c0e9a967e093769" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>getLeft</name></member>
+      <member refid="structkn_1_1_rect_1ab6d716e2afb594ead210b9c7999a0763" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>getLeftMid</name></member>
+      <member refid="structkn_1_1_rect_1a86586255f5b88ff80d6dbd41486f50a1" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>getPos</name></member>
+      <member refid="structkn_1_1_rect_1a8aab249e226c6a8c1ab0b450721d929b" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>getRight</name></member>
+      <member refid="structkn_1_1_rect_1ae2394b363e51897403808dc774976dd1" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>getRightMid</name></member>
+      <member refid="structkn_1_1_rect_1a1ed727673cfc87e018928b1c11ba2461" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>getSize</name></member>
+      <member refid="structkn_1_1_rect_1a134a42bcde83259f1182be61e3c7495e" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>getTop</name></member>
+      <member refid="structkn_1_1_rect_1a6987c049da3037ce5df590dc16b82ae1" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>getTopLeft</name></member>
+      <member refid="structkn_1_1_rect_1a8c75e4fd74cd9cd64dfe34506019cf7d" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>getTopMid</name></member>
+      <member refid="structkn_1_1_rect_1ab4350c360c565452993af9df311261bc" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>getTopRight</name></member>
+      <member refid="structkn_1_1_rect_1a4ddd5a18ffab2852926285955f92a8ef" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>Rect</name></member>
+      <member refid="structkn_1_1_rect_1a29cf43d1e332203115a5db256416059a" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>Rect</name></member>
+      <member refid="structkn_1_1_rect_1a1c38171958eca9f653a67f7f6cae86c4" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>Rect</name></member>
+      <member refid="structkn_1_1_rect_1add801ec48362102162b110490bf0f628" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>setBottom</name></member>
+      <member refid="structkn_1_1_rect_1aac75aec1768fa6f6a506f4d00f6e0210" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>setBottomLeft</name></member>
+      <member refid="structkn_1_1_rect_1a9753a75bae9530ecff0baa551c44375d" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>setBottomMid</name></member>
+      <member refid="structkn_1_1_rect_1aa2a6d65d69954027cf6c39d4226487b1" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>setBottomRight</name></member>
+      <member refid="structkn_1_1_rect_1a68ab3e17074513f1eefb079ab2aadaea" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>setCenter</name></member>
+      <member refid="structkn_1_1_rect_1abede17fdb58e5d0c301cab2ff0d992db" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>setLeft</name></member>
+      <member refid="structkn_1_1_rect_1a716cf8a9ed3ae9a8163e0a29c8bb6728" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>setLeftMid</name></member>
+      <member refid="structkn_1_1_rect_1a17e302438daeb0b713800e876c069db1" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>setRight</name></member>
+      <member refid="structkn_1_1_rect_1ad50a17779722f798d055cd2ddb37d904" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>setRightMid</name></member>
+      <member refid="structkn_1_1_rect_1aea0899e6f189bfe35e0d2b9d8df2d2b6" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>setSize</name></member>
+      <member refid="structkn_1_1_rect_1a0a5a51b5ef02146b5b6b6869608f6d4b" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>setTop</name></member>
+      <member refid="structkn_1_1_rect_1a0665bdc00e2f4b54529d2177ac3bc70f" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>setTopLeft</name></member>
+      <member refid="structkn_1_1_rect_1afee6ad9269d943754512f8a168a1ae6b" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>setTopMid</name></member>
+      <member refid="structkn_1_1_rect_1ad53eb8f8d221b99c1281b5c8539c7ac9" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>setTopRight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

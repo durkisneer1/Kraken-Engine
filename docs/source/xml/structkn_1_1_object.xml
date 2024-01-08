@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structkn_1_1_object" kind="struct" language="C++" prot="public" final="yes">
+    <compoundname>kn::Object</compoundname>
+    <basecompoundref refid="structkn_1_1_tile" prot="public" virt="non-virtual">kn::Tile</basecompoundref>
+    <includes refid="_tile_types_8hpp" local="no">TileTypes.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structkn_1_1_object_1a5b92582712f27acced7d23d68758411a" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string kn::Object::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>kn::Object::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" line="40" column="17" bodyfile="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkn_1_1_object_1a8a96862d3a8f909b98080a407f77fdc7" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string kn::Object::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>kn::Object::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" line="41" column="17" bodyfile="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structkn_1_1_object_1a593099256e65b7eb4f930a462e2b0816" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>kn::Object::Object</definition>
+        <argsstring>(std::shared_ptr&lt; Texture &gt; texture, Rect crop, Rect rect, std::string name, std::string type)</argsstring>
+        <name>Object</name>
+        <qualifiedname>kn::Object::Object</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classkn_1_1_texture" kindref="compound">Texture</ref> &gt;</type>
+          <declname>texture</declname>
+        </param>
+        <param>
+          <type><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref></type>
+          <declname>crop</declname>
+        </param>
+        <param>
+          <type><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref></type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Create an object tile. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>texture</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A texture pointer. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>crop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle to crop from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle to draw to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" line="36" column="5" bodyfile="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" bodystart="36" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="structkn_1_1_object_1ad14e369470ca9a6773a6928a573c1dd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>kn::Object::~Object</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Object</name>
+        <qualifiedname>kn::Object::~Object</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" line="38" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A tmx object tile. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This is used for objects and can be assigned to a <ref refid="classkn_1_1_sprite" kindref="compound">Sprite</ref> type. <simplesect kind="note"><para>This is not yet complete. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>kn::Object</label>
+        <link refid="structkn_1_1_object"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>kn::Tile</label>
+        <link refid="structkn_1_1_tile"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>SDL_FRect</label>
+      </node>
+      <node id="1">
+        <label>kn::Object</label>
+        <link refid="structkn_1_1_object"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>kn::Rect</label>
+        <link refid="structkn_1_1_rect"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>kn::Tile</label>
+        <link refid="structkn_1_1_tile"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>crop</edgelabel>
+          <edgelabel>rect</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" line="29" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" bodystart="29" bodyend="42"/>
+    <listofallmembers>
+      <member refid="structkn_1_1_tile_1a65ccf5af9c9b8459015fcb3caa45e9dc" prot="public" virt="non-virtual"><scope>kn::Object</scope><name>crop</name></member>
+      <member refid="structkn_1_1_object_1a5b92582712f27acced7d23d68758411a" prot="public" virt="non-virtual"><scope>kn::Object</scope><name>name</name></member>
+      <member refid="structkn_1_1_object_1a593099256e65b7eb4f930a462e2b0816" prot="public" virt="non-virtual"><scope>kn::Object</scope><name>Object</name></member>
+      <member refid="structkn_1_1_tile_1abe91be0f6c7a3943b5927bf6f4995f66" prot="public" virt="non-virtual"><scope>kn::Object</scope><name>rect</name></member>
+      <member refid="structkn_1_1_tile_1a8e7d9dbfe6a90692c70b5dbd35eb8f01" prot="public" virt="non-virtual"><scope>kn::Object</scope><name>texture</name></member>
+      <member refid="structkn_1_1_tile_1a1ebf237bcfc10d856c978b82adf54467" prot="public" virt="non-virtual"><scope>kn::Object</scope><name>Tile</name></member>
+      <member refid="structkn_1_1_object_1a8a96862d3a8f909b98080a407f77fdc7" prot="public" virt="non-virtual"><scope>kn::Object</scope><name>type</name></member>
+      <member refid="structkn_1_1_object_1ad14e369470ca9a6773a6928a573c1dd4" prot="public" virt="non-virtual"><scope>kn::Object</scope><name>~Object</name></member>
+      <member refid="structkn_1_1_tile_1a075c94c72cf25b396a31f4841fac4a69" prot="public" virt="non-virtual"><scope>kn::Object</scope><name>~Tile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -11,7 +11,7 @@
 namespace kn {
 
 /// @brief A class to cache textures.
-/// @note This class is a mandatory singleton.
+/// @warning This class must be a singleton.
 class TextureCache final {
 public:
     /// @brief Instantiate the texture cache.

@@ -12,6 +12,11 @@ namespace kn {
 struct Rect : public SDL_FRect {
     Rect() = default;
 
+    /// @brief Construct a new Rect object.
+    /// @param x
+    /// @param y 
+    /// @param w 
+    /// @param h 
     Rect(float x, float y, float w, float h) : SDL_FRect{ x, y, w, h } {}
     Rect(int x, int y, int w, int h) : SDL_FRect{ (float)x, (float)y, (float)w, (float)h } {}
 

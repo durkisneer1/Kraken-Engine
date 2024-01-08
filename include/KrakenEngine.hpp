@@ -1,7 +1,6 @@
 #pragma once
 #define SDL_MAIN_HANDLED
 
-#include "Clock.hpp"
 #include "Constants.hpp"
 #include "Draw.hpp"
 #include "Font.hpp"
@@ -15,3 +14,4 @@
 #include "TextureCache.hpp"
 #include "TileMap.hpp"
 #include "TileTypes.hpp"
+#include "Time.hpp"

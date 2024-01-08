@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacekn_1_1input" kind="namespace" language="C++">
+    <compoundname>kn::input</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacekn_1_1input_1ad2963cf8c16bcc43919b2b8ef89c1374" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <definition>math::Vec2 kn::input::getMousePos</definition>
+        <argsstring>(int scale=1)</argsstring>
+        <name>getMousePos</name>
+        <qualifiedname>kn::input::getMousePos</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>scale</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Get the mouse position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The mouse position. </para>
+</simplesect>
+<simplesect kind="warning"><para>The scale parameter is temporary. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Input.hpp" line="16" column="12" declfile="D:/Code/c++/Kraken-Engine/include/Input.hpp" declline="16" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacekn_1_1input_1a56c5538ff782a7797cb2f4c17b96f998" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const int</type>
+        <definition>const int kn::input::getMouseButtonPressed</definition>
+        <argsstring>()</argsstring>
+        <name>getMouseButtonPressed</name>
+        <qualifiedname>kn::input::getMouseButtonPressed</qualifiedname>
+        <briefdescription>
+<para>Get the mouse button pressed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The mouse button pressed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Input.hpp" line="20" column="11" declfile="D:/Code/c++/Kraken-Engine/include/Input.hpp" declline="20" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacekn_1_1input_1a07334d96762236043c84d75f3504d480" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const Uint8 *</type>
+        <definition>const Uint8 * kn::input::getKeysPressed</definition>
+        <argsstring>()</argsstring>
+        <name>getKeysPressed</name>
+        <qualifiedname>kn::input::getKeysPressed</qualifiedname>
+        <briefdescription>
+<para>Get the keys pressed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The keys pressed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Input.hpp" line="24" column="13" declfile="D:/Code/c++/Kraken-Engine/include/Input.hpp" declline="24" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacekn_1_1input_1a8377d83a300ef4ffd6e0ea78839ed6ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <definition>math::Vec2 kn::input::getVector</definition>
+        <argsstring>(const std::vector&lt; SDL_Scancode &gt; &amp;left={}, const std::vector&lt; SDL_Scancode &gt; &amp;right={}, const std::vector&lt; SDL_Scancode &gt; &amp;up={}, const std::vector&lt; SDL_Scancode &gt; &amp;down={})</argsstring>
+        <name>getVector</name>
+        <qualifiedname>kn::input::getVector</qualifiedname>
+        <param>
+          <type>const std::vector&lt; SDL_Scancode &gt; &amp;</type>
+          <declname>left</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type>const std::vector&lt; SDL_Scancode &gt; &amp;</type>
+          <declname>right</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type>const std::vector&lt; SDL_Scancode &gt; &amp;</type>
+          <declname>up</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type>const std::vector&lt; SDL_Scancode &gt; &amp;</type>
+          <declname>down</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Get the vector of the keys pressed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The keys to move left. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The keys to move right. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>up</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The keys to move up. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>down</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The keys to move down. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The vector of the keys pressed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Input.hpp" line="32" column="12" declfile="D:/Code/c++/Kraken-Engine/include/Input.hpp" declline="32" declcolumn="12"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Code/c++/Kraken-Engine/include/Input.hpp" line="11" column="1"/>
+  </compounddef>
+</doxygen>

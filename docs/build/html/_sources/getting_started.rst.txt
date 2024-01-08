@@ -16,7 +16,7 @@ After following the :doc:`installation` guide, you are ready for your first Krak
 
 
     int main() {
-        kn::RenderWindow window("Hello World");
+        kn::RenderWindow window;
         kn::time::Clock clock;
 
         bool done = false;

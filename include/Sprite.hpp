@@ -14,6 +14,7 @@
 namespace kn {
 
 /// @brief A container for a sprite.
+/// @note This class is intended to be inherited from.
 class Sprite {
 protected:
     RenderWindow& window;
@@ -25,7 +26,6 @@ protected:
     /// @brief Move the sprite while checking for collisions.
     /// @param deltaTime The time since the last frame.
     /// @param others The other sprites to check for collisions with.
-    /// @note This function is not thread-safe.
     template <typename T>
     void moveAndCollide(double deltaTime, const std::vector<std::shared_ptr<T>>& others) {
         onGround = false;

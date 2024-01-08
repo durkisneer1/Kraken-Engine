@@ -14,10 +14,11 @@ public:
 	/// @brief Create a texture.
 	/// @param texture The SDL texture.
 	/// @note This function is not meant to be used by the user.
+	/// @see TextureCache::load()
+	/// @see TextureCache::create()
+	/// @see TextureCache::move()
 	explicit Texture(SDL_Texture* texture);
 
-	/// @brief Destroy a texture.
-	/// @note This function is not meant to be used by the user.
 	~Texture() { if (texture) SDL_DestroyTexture(texture); }
 
 	/// @brief Get the size of the texture.

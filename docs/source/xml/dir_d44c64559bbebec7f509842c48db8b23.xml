@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
+    <compoundname>D:/Code/c++/Kraken-Engine/include</compoundname>
+    <innerfile refid="_constants_8hpp">Constants.hpp</innerfile>
+    <innerfile refid="_draw_8hpp">Draw.hpp</innerfile>
+    <innerfile refid="_font_8hpp">Font.hpp</innerfile>
+    <innerfile refid="_globals_8hpp">Globals.hpp</innerfile>
+    <innerfile refid="_input_8hpp">Input.hpp</innerfile>
+    <innerfile refid="_kraken_engine_8hpp">KrakenEngine.hpp</innerfile>
+    <innerfile refid="_math_8hpp">Math.hpp</innerfile>
+    <innerfile refid="_rect_8hpp">Rect.hpp</innerfile>
+    <innerfile refid="_render_window_8hpp">RenderWindow.hpp</innerfile>
+    <innerfile refid="_sprite_8hpp">Sprite.hpp</innerfile>
+    <innerfile refid="_texture_8hpp">Texture.hpp</innerfile>
+    <innerfile refid="_texture_cache_8hpp">TextureCache.hpp</innerfile>
+    <innerfile refid="_tile_map_8hpp">TileMap.hpp</innerfile>
+    <innerfile refid="_tile_types_8hpp">TileTypes.hpp</innerfile>
+    <innerfile refid="_time_8hpp">Time.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Code/c++/Kraken-Engine/include/"/>
+  </compounddef>
+</doxygen>

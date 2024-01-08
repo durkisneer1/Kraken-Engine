@@ -17,13 +17,14 @@
 namespace kn {
 
 /// @brief The renderer context.
-/// @note This class is a mandatory singleton.
+/// @warning This class must be a singleton.
 class RenderWindow final {
 public:
 	/// @brief Create a window.
-	/// @param size The size of the window.
 	/// @param title The title of the window.
-	RenderWindow(const std::string &title, int scale = 1, bool fullscreen = false);
+	/// @param scale The scale of the window.
+	/// @param fullscreen Whether to make the window fullscreen.
+	RenderWindow(const std::string &title = "Kraken", int scale = 1, bool fullscreen = false);
 	~RenderWindow();
 	
 	/// @brief Clear the screen.
@@ -33,18 +34,18 @@ public:
 	/// @brief Flip the render frame buffer.
 	void flip();
 
-	/// @brief Draw a texture.
+	/// @brief Draw a texture using rects.
 	/// @param texture The texture to draw.
 	/// @param crop The rectangle to draw from.
 	/// @param rect The rectangle to draw to.
 	void blit(const std::shared_ptr<Texture>& texture, Rect crop, Rect rect);
 
-	/// @brief Draw a texture.
+	/// @brief Draw a texture to a position.
 	/// @param texture The texture to draw.
 	/// @param position The position to draw at.
 	void blit(const std::shared_ptr<Texture>& texture, const math::Vec2& position);
 
-	/// @brief Draw a texture.
+	/// @brief Draw a texture using rects.
 	/// @param texture The texture to draw.
 	/// @param crop The rectangle to draw from.
 	/// @param rect The rectangle to draw to.
@@ -53,7 +54,7 @@ public:
 	/// @param flipY Whether to flip the texture on the y-axis.
 	void blitEx(const std::shared_ptr<Texture>& texture, Rect crop, Rect rect, double angle = 0.0, bool flipX = false, bool flipY = false);
 
-	/// @brief Draw a texture.
+	/// @brief Draw a texture to a position.
 	/// @param texture The texture to draw.
 	/// @param position The position to draw at.
 	/// @param angle The angle to draw the texture.

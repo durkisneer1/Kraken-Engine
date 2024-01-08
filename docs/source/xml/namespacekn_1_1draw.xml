@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacekn_1_1draw" kind="namespace" language="C++">
+    <compoundname>kn::draw</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacekn_1_1draw_1ac6a59278ed8bc470797aaf2b6b955a3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::draw::rect</definition>
+        <argsstring>(RenderWindow &amp;window, Rect &amp;rect, const SDL_Color color, int thickness=0)</argsstring>
+        <name>rect</name>
+        <qualifiedname>kn::draw::rect</qualifiedname>
+        <param>
+          <type><ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref> &amp;</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref> &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type>const SDL_Color</type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>thickness</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Draw a rectangle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the <ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref> instance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle to draw. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color of the rectangle. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>thickness</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The thickness of the rectangle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>If thickness remains 0, the rectangle will be filled. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Draw.hpp" line="18" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Draw.hpp" declline="18" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Code/c++/Kraken-Engine/include/Draw.hpp" line="10" column="1"/>
+  </compounddef>
+</doxygen>
