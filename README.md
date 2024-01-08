@@ -4,37 +4,7 @@
 
 ## Documentation
 
-You can find the latest documentation @ https://durkisneer1.github.io/kraken/html/index.html
-Here is the bare window setup program using Kraken:
-<br>
-
-```c++
-#include <KrakenEngine.hpp>
-
-const kn::math::Vec2 kn::SCREEN_SIZE = { 800, 600 };
-
-
-int main() {
-    kn::RenderWindow window("Kraken App");
-    kn::time::Clock clock;
-
-    bool done = false;
-    while (!done) {
-        double deltaTime = clock.tick(60);
-
-        for (const auto& event : window.getEvents()) {
-            if (event.type == KN_QUIT) done = true;
-        }
-
-        window.cls();
-        window.flip();
-    }
-
-    return EXIT_SUCCESS;
-}
-```
-
-To view a more in-depth use of the library, I am working on a small tech demo in the [example](https://github.com/durkisneer1/Kraken-Engine/tree/main/example) folder.
+You can find the latest documentation [here](http://kraken-engine.rtfd.io/)
 
 ## Licensing
 
