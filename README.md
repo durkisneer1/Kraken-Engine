@@ -1,13 +1,8 @@
-<h1 align="center">Kraken Engine</h1>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/license-MIT-blue.svg">
-  <a href="https://app.codacy.com/gh/durkisneer1/Kraken-Engine/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/17028e01d32f4441be4bd5e37edb94ce"/></a>
-</p>
+# Kraken Engine <a href="https://app.codacy.com/gh/durkisneer1/Kraken-Engine/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/17028e01d32f4441be4bd5e37edb94ce"/></a> <img src="https://img.shields.io/badge/license-MIT-blue.svg">
 
 `Kraken Engine` extends SDL2 with easy-to-use features like <em>texture caching</em> and <em>collision logic</em>. Future plans include implementing handy mathematical functions such as <em>pathfinding</em>, <em>raycasting</em>, and <em>built-in physics</em>.
 
-<h1 align="center">Documentation</h1>
+## Documentation
 
 You can find the latest documentation @ https://durkisneer1.github.io/kraken/html/index.html
 Here is the bare window setup program using Kraken:
@@ -41,7 +36,7 @@ int main() {
 
 To view a more in-depth use of the library, I am working on a small tech demo in the [example](https://github.com/durkisneer1/Kraken-Engine/tree/main/example) folder.
 
-<h1 align="center">Licensing</h1>
+## Licensing
 
 [MIT](LICENSE) @ Derrick Martinez
 
