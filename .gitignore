@@ -8,9 +8,9 @@
 *.obj
 
 # CMake build folders
-bld
-build
-bin
+/bld
+/build
+/bin
 
 # Precompiled Headers
 *.gch
@@ -41,9 +41,3 @@ bin
 
 # Jetbrains
 .idea/
-
-# CMake
-/build/
-/example/build/
-/example/cmake-build-debug/
-/example/cmake-build-release/
