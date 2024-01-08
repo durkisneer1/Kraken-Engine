@@ -1,7 +1,7 @@
 #include <iostream>
 #include <algorithm>
 
-#include "../include/tmxlite/TileLayer.hpp"
+#include "tmxlite/TileLayer.hpp"
 
 #include "../include/TileMap.hpp"
 

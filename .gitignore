@@ -7,6 +7,11 @@
 *.o
 *.obj
 
+# CMake build folders
+bld
+build
+bin
+
 # Precompiled Headers
 *.gch
 *.pch
