@@ -2,6 +2,7 @@
 
 #include <vector>
 #include <memory>
+#include <string>
 
 #include <SDL.h>
 #include <SDL_image.h>
@@ -24,7 +25,7 @@ public:
 	/// @param title The title of the window.
 	/// @param scale The scale of the window.
 	/// @param fullscreen Whether to make the window fullscreen.
-	RenderWindow(const std::string &title = "Kraken", int scale = 1, bool fullscreen = false);
+	RenderWindow(const std::string &title = "Kraken Window", int scale = 1, bool fullscreen = false);
 	~RenderWindow();
 	
 	/// @brief Clear the screen.

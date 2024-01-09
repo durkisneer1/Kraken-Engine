@@ -1,25 +1,22 @@
 #include "../include/Time.hpp"
+#include "../include/Math.hpp"
 
 
 namespace kn {
 namespace time {
 
 double Clock::tick(int frameRate) {
-	if (frameRate > 0) {
-		double targetFrameTime = 1000.0 / frameRate;
-		rawTime = SDL_GetTicks64() - last;
-		double delay = targetFrameTime - rawTime;
+	if (frameRate < 1) frameRate = 1;
 
-		if (delay > 0) SDL_Delay((uint32_t)delay);
-	}
+	targetFrameTime = 1000.0 / frameRate;
+	frameTime = ((SDL_GetPerformanceCounter() / frequency) - (last / frequency)) * 1000.0;
+	if (frameTime < targetFrameTime) SDL_Delay((uint32_t)(targetFrameTime - frameTime));
 
-	now = SDL_GetTicks64();
-	frameTime = now - last;
+	now = SDL_GetPerformanceCounter();
+	deltaTime = (now / frequency) - (last / frequency);
 	last = now;
 
-	if (!frameRate) rawTime = frameTime;
-
-	return double(frameTime) / 1000.0;
+	return deltaTime;
 }
 
 }

@@ -207,17 +207,57 @@
         <article role="main">
           <section id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h1>
-<p>Kraken Engine as of now has only been tested and confirmed to work on the following systems:</p>
+<p>Kraken Engine as of now has only been tested and confirmed to work on the following systems using <a class="reference external" href="https://github.com/niXman/mingw-builds-binaries/releases">mingw64</a>:</p>
 <ul class="simple">
 <li><p>Windows 10/11</p></li>
-<li><p>Several Linux distributions</p></li>
+<li><p>Manjaro (Arch), Ubuntu (Debian)</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Kraken Engine is still in development and is not ready for production use.
 This means that there aren’t any pre-built binaries for Kraken Engine yet, so you have to build it yourself.</p>
 </div>
-<p>Instructions on building Kraken Engine are coming soon.</p>
+<p>Before starting, ensure you have a C++ compiler, <a class="reference external" href="https://cmake.org/download/">cmake</a>, and <a class="reference external" href="https://www.git-scm.com/downloads">git</a> installed.</p>
+<ol class="arabic simple">
+<li><p>Clone repository.</p></li>
+<li><p>Open install directory in cmd.</p></li>
+<li><p>Enter these commands into your terminal:</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">md build</span>
+<span class="go">cd build</span>
+<span class="go">cmake -G &quot;Unix Makefiles&quot; -D CMAKE_CXX_COMPILER=x86_64-w64-mingw32-g++ ..</span>
+<span class="go">make</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Drag <code class="docutils literal notranslate"><span class="pre">.dll</span></code> files from <code class="docutils literal notranslate"><span class="pre">/bin</span></code> next to your program executable.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You may use your own generator and compiler as long as it compiles to 64-bit.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> file is still under development as it is currently a difficult procress to include and link dependencies.
+As of now, you must include these directories:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/build/_deps/sdl-src/include</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/build/_deps/sdl_ttf-src</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/build/_deps/sdl_mixer-src/include</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/build/_deps/sdl_image-src/include</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/build/_deps/tmxlite-src/tmxlite/include</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/include</span></code></p></li>
+</ul>
+<p>And for linking, you must use these directories:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/build</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/bin</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/build/_deps/sdl_image-build</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/build/_deps/sdl_mixer-build</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/build/_deps/sdl_ttf-build</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/build/_deps/freetype-build</span></code></p></li>
+</ul>
+</div>
 </section>
 
         </article>

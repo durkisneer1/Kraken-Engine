@@ -2,7 +2,7 @@
 <doxyfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="doxyfile.xsd" version="1.9.8" xml:lang="en-US">
   <option  id='DOXYFILE_ENCODING' default='yes' type='string'><value><![CDATA[UTF-8]]></value></option>
   <option  id='PROJECT_NAME' default='no' type='string'><value><![CDATA["Kraken Engine"]]></value></option>
-  <option  id='PROJECT_NUMBER' default='no' type='string'><value><![CDATA["Alpha v1"]]></value></option>
+  <option  id='PROJECT_NUMBER' default='no' type='string'><value><![CDATA[v0.1]]></value></option>
   <option  id='PROJECT_BRIEF' default='no' type='string'><value><![CDATA["The next best SDL2 wrapper engine."]]></value></option>
   <option  id='PROJECT_LOGO' default='no' type='string'><value><![CDATA["C:/Users/Derrick Martinez/Pictures/zerzym_a_grayscale_silhouette_of_a_kraken_cartoon_icon_079f25c9-633c-4d20-93c3-68e2960dd7d1.png"]]></value></option>
   <option  id='OUTPUT_DIRECTORY' default='no' type='string'><value><![CDATA[D:/Code/c++/Kraken-Engine/docs/source]]></value></option>

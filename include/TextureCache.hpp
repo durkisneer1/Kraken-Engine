@@ -17,8 +17,6 @@ public:
     /// @brief Instantiate the texture cache.
     /// @param window The renderer context.
     explicit TextureCache(RenderWindow& window) : window(window) {}
-
-    /// @brief Unload the texture cache.
     ~TextureCache() { unloadAll(); };
 
     /// @brief Load a texture file.

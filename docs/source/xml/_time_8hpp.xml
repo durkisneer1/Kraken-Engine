@@ -48,15 +48,16 @@
 <codeline lineno="13" refid="classkn_1_1time_1_1_clock_1a01ac404d47e055669c1a69b79b4a7fd8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1time_1_1_clock_1a01ac404d47e055669c1a69b79b4a7fd8" kindref="member">Clock</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="14" refid="classkn_1_1time_1_1_clock_1a56cc398c51d9cb271b2d405999e2152b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1time_1_1_clock_1a56cc398c51d9cb271b2d405999e2152b" kindref="member">~Clock</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19" refid="classkn_1_1time_1_1_clock_1a739efb40e7d6abf813afaecbc4b40873" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1time_1_1_clock_1a739efb40e7d6abf813afaecbc4b40873" kindref="member">tick</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>frameRate<sp/>=<sp/>360);</highlight></codeline>
+<codeline lineno="19" refid="classkn_1_1time_1_1_clock_1a6d4652b18060b534cad6dedf9f021c56" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1time_1_1_clock_1a6d4652b18060b534cad6dedf9f021c56" kindref="member">tick</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>frameRate<sp/>=<sp/>60);</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>now,<sp/>last<sp/>=<sp/>SDL_GetTicks64();</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>rawTime,<sp/>frameTime<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>frameTime,<sp/>targetFrameTime,<sp/>deltaTime;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>frequency<sp/>=<sp/>SDL_GetPerformanceFrequency();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>now,<sp/>last<sp/>=<sp/>SDL_GetPerformanceCounter();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp"/>
   </compounddef>

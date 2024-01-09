@@ -1,13 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
   <compound refid="classkn_1_1time_1_1_clock" kind="class"><name>kn::time::Clock</name>
-    <member refid="classkn_1_1time_1_1_clock_1af27af6cf85dff54cc5f4a5982518f811" kind="variable"><name>now</name></member>
-    <member refid="classkn_1_1time_1_1_clock_1ac311f4d32ec9fb9d8662458fab00f28c" kind="variable"><name>last</name></member>
-    <member refid="classkn_1_1time_1_1_clock_1a570e496f6c878bd585405563c6b26360" kind="variable"><name>rawTime</name></member>
-    <member refid="classkn_1_1time_1_1_clock_1abb3577234e1f727262602c95e1ee5dd1" kind="variable"><name>frameTime</name></member>
+    <member refid="classkn_1_1time_1_1_clock_1a7f1f72c3b782c1b2bfc2c8342b9c673b" kind="variable"><name>frameTime</name></member>
+    <member refid="classkn_1_1time_1_1_clock_1a5961b337680bcdeeeaddd95f8e916c2e" kind="variable"><name>targetFrameTime</name></member>
+    <member refid="classkn_1_1time_1_1_clock_1ae17a2688be0a7f31c6ce9edca697085a" kind="variable"><name>deltaTime</name></member>
+    <member refid="classkn_1_1time_1_1_clock_1ae61b9cac713eae497f93f6958086263a" kind="variable"><name>frequency</name></member>
+    <member refid="classkn_1_1time_1_1_clock_1a7c0b8024e62cde73189387621ef14e53" kind="variable"><name>now</name></member>
+    <member refid="classkn_1_1time_1_1_clock_1a336ee3c672af4dea1d9e3a1ddff8cea3" kind="variable"><name>last</name></member>
     <member refid="classkn_1_1time_1_1_clock_1a01ac404d47e055669c1a69b79b4a7fd8" kind="function"><name>Clock</name></member>
     <member refid="classkn_1_1time_1_1_clock_1a56cc398c51d9cb271b2d405999e2152b" kind="function"><name>~Clock</name></member>
-    <member refid="classkn_1_1time_1_1_clock_1a739efb40e7d6abf813afaecbc4b40873" kind="function"><name>tick</name></member>
+    <member refid="classkn_1_1time_1_1_clock_1a6d4652b18060b534cad6dedf9f021c56" kind="function"><name>tick</name></member>
   </compound>
   <compound refid="classkn_1_1_font" kind="class"><name>kn::Font</name>
     <member refid="classkn_1_1_font_1ac367391d305a0f78e6e79634e85adcfa" kind="variable"><name>window</name></member>
@@ -64,7 +66,7 @@
     <member refid="classkn_1_1_render_window_1a59d594e2a9aefd834bdb706f68c1de80" kind="variable"><name>window</name></member>
     <member refid="classkn_1_1_render_window_1ae4dbc584867242f37a8ebb9466310e0d" kind="variable"><name>event</name></member>
     <member refid="classkn_1_1_render_window_1ab3fe2bd2a21de52f799cd24d28807bf4" kind="variable"><name>events</name></member>
-    <member refid="classkn_1_1_render_window_1afaf3261b823ce27eeb36975583f2f02a" kind="function"><name>RenderWindow</name></member>
+    <member refid="classkn_1_1_render_window_1a553f2003d5eb88aee940926a6f482f56" kind="function"><name>RenderWindow</name></member>
     <member refid="classkn_1_1_render_window_1a0e5af334903645c870c713f53b754823" kind="function"><name>~RenderWindow</name></member>
     <member refid="classkn_1_1_render_window_1a72531bd5ff3c09b07185ac7fcbe57a85" kind="function"><name>cls</name></member>
     <member refid="classkn_1_1_render_window_1a7d04089325a8080a1f4b7c5cb9e4f12c" kind="function"><name>flip</name></member>
