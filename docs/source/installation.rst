@@ -30,7 +30,7 @@ Before starting, ensure you have a C++ compiler, `cmake <https://cmake.org/downl
     You may use your own generator and compiler as long as it compiles to 64-bit.
 
 .. warning::
-    The ``CMakeLists.txt`` file is still under development as it is currently a difficult procress to include and link dependencies.
+    The ``CMakeLists.txt`` file is still under development as it is currently a difficult process to include and link dependencies.
     As of now, you must include these directories:
 
     * ``Kraken-Engine/build/_deps/sdl-src/include``
