@@ -3,7 +3,6 @@
 #include <map>
 #include <memory>
 
-#include "RenderWindow.hpp"
 #include "Texture.hpp"
 #include "Math.hpp"
 
@@ -20,10 +19,8 @@ class TextureCache final
 public:
     /** 
      * @brief Instantiate the texture cache.
-     * 
-     * @param window The renderer context.
      */
-    explicit TextureCache(RenderWindow &window) : window(window) {}
+    TextureCache() = default;
     ~TextureCache() { unloadAll(); }
 
     /** 
@@ -90,7 +87,6 @@ public:
     std::shared_ptr<Texture> getTexture(const std::string &name) const;
 
 private:
-    RenderWindow &window;
     std::map<std::string, std::shared_ptr<Texture>> textures;
 };
 

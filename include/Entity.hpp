@@ -19,7 +19,7 @@ namespace kn
 class Entity
 {
 protected:
-    RenderWindow &window;
+    RenderWindow &window = RenderWindow::getInstance();
     std::shared_ptr<Texture> texture;
 
     bool onGround = false;
@@ -92,10 +92,9 @@ public:
     /**
      * @brief Create a entity.
      *
-     * @param window The renderer context.
      * @param texture The texture of the entity.
      */
-    Entity(RenderWindow &window, std::shared_ptr<Texture> texture);
+    Entity(std::shared_ptr<Texture> texture);
     ~Entity() = default;
 
     /**

@@ -45,7 +45,7 @@ struct Object final : public Tile
      * @param name The name of the object.
      * @param type The type of the object.
      */
-    Object(std::shared_ptr<Texture> texture, Rect crop, Rect rect, std::string name, std::string type)
+    Object(std::shared_ptr<Texture> texture, Rect crop, Rect rect, const std::string &name, const std::string &type)
         : Tile(texture, crop, rect), name(name), type(type) {}
     ~Object() = default;
 

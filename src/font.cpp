@@ -1,12 +1,12 @@
 #include <iostream>
 
 #include "../include/Font.hpp"
+#include "../include/RenderWindow.hpp"
 
 namespace kn
 {
 
-Font::Font(RenderWindow &window, const std::string &fileDir, int ptSize)
-	: window(window)
+Font::Font(const std::string &fileDir, int ptSize)
 {
 	font = TTF_OpenFont(fileDir.c_str(), ptSize);
 	if (!font)
@@ -49,7 +49,7 @@ std::shared_ptr<Texture> Font::render(const std::string &text, bool antialias, S
 		exit(3);
 	}
 
-	SDL_Texture *sdlTexture = SDL_CreateTextureFromSurface(window.getRenderer(), surface);
+	SDL_Texture *sdlTexture = SDL_CreateTextureFromSurface(RenderWindow::getInstance().getRenderer(), surface);
 	if (sdlTexture == nullptr)
 	{
 		std::cerr << "Failed to create texture: " << SDL_GetError() << std::endl;

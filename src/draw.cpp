@@ -1,12 +1,14 @@
 #include "../include/Draw.hpp"
+#include "../include/RenderWindow.hpp"
 
 namespace kn
 {
 namespace draw
 {
 
-void rect(RenderWindow &window, Rect &rect, const SDL_Color color, int thickness)
+void rect(Rect &rect, const SDL_Color color, int thickness)
 {
+    RenderWindow &window = RenderWindow::getInstance();
     SDL_SetRenderDrawColor(window.getRenderer(), color.r, color.g, color.b, color.a);
 
     if (thickness == 0)

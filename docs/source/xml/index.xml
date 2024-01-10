@@ -22,21 +22,20 @@
     <member refid="classkn_1_1_entity_1ad25589b0534f80990123989cecaca4ec" kind="variable"><name>direction</name></member>
     <member refid="classkn_1_1_entity_1a6644aaa615968606093840ae8dceeb85" kind="variable"><name>velocity</name></member>
     <member refid="classkn_1_1_entity_1a03660630f087052ffe629c2a5ef81987" kind="function"><name>moveAndCollide</name></member>
-    <member refid="classkn_1_1_entity_1a88b52bb15ceec6edfb75fec15f54a507" kind="function"><name>Entity</name></member>
+    <member refid="classkn_1_1_entity_1a399022356d952d4ce651bc63c91d3f5d" kind="function"><name>Entity</name></member>
     <member refid="classkn_1_1_entity_1af9efefed7c88b675f000739072cdeb5a" kind="function"><name>~Entity</name></member>
     <member refid="classkn_1_1_entity_1a88fa93e9e9cad9336d80e10b36199acf" kind="function"><name>getTexture</name></member>
   </compound>
   <compound refid="classkn_1_1_font" kind="class"><name>kn::Font</name>
-    <member refid="classkn_1_1_font_1ac367391d305a0f78e6e79634e85adcfa" kind="variable"><name>window</name></member>
     <member refid="classkn_1_1_font_1a9cfe3d2d2f81f1f3cae6524240bb418e" kind="variable"><name>font</name></member>
-    <member refid="classkn_1_1_font_1a54b9e597cb11a64004317019f21ae7b1" kind="function"><name>Font</name></member>
+    <member refid="classkn_1_1_font_1a8fe856a038876c396e1a85045bcf1381" kind="function"><name>Font</name></member>
     <member refid="classkn_1_1_font_1a688854abdf5091614a6b372105480951" kind="function"><name>~Font</name></member>
     <member refid="classkn_1_1_font_1a68577f815a17a8bc8a7c4ed3a891ab29" kind="function"><name>render</name></member>
   </compound>
   <compound refid="structkn_1_1_object" kind="struct"><name>kn::Object</name>
     <member refid="structkn_1_1_object_1a5b92582712f27acced7d23d68758411a" kind="variable"><name>name</name></member>
     <member refid="structkn_1_1_object_1a8a96862d3a8f909b98080a407f77fdc7" kind="variable"><name>type</name></member>
-    <member refid="structkn_1_1_object_1a593099256e65b7eb4f930a462e2b0816" kind="function"><name>Object</name></member>
+    <member refid="structkn_1_1_object_1a94292b94493c89e2eda8ae6e57d2f753" kind="function"><name>Object</name></member>
     <member refid="structkn_1_1_object_1ad14e369470ca9a6773a6928a573c1dd4" kind="function"><name>~Object</name></member>
   </compound>
   <compound refid="structkn_1_1_rect" kind="struct"><name>kn::Rect</name>
@@ -115,9 +114,8 @@
     <member refid="classkn_1_1_texture_1a9aaf1984bf48c920410c57eddb2c7365" kind="function"><name>query</name></member>
   </compound>
   <compound refid="classkn_1_1_texture_cache" kind="class"><name>kn::TextureCache</name>
-    <member refid="classkn_1_1_texture_cache_1ac1b7e677c82f6fa4df855e1ad1f2ef5a" kind="variable"><name>window</name></member>
     <member refid="classkn_1_1_texture_cache_1a6434464b3dfb1b038815313ee4ef5f8f" kind="variable"><name>textures</name></member>
-    <member refid="classkn_1_1_texture_cache_1a64b72748e77a805b106f881cd76d9df3" kind="function"><name>TextureCache</name></member>
+    <member refid="classkn_1_1_texture_cache_1a30578a18426ef3626d2ebff18b775d0f" kind="function"><name>TextureCache</name></member>
     <member refid="classkn_1_1_texture_cache_1adf8c16a1cde822c3598404335f41e8b9" kind="function"><name>~TextureCache</name></member>
     <member refid="classkn_1_1_texture_cache_1a424624eee8b1e356b12df8f06998f35f" kind="function"><name>load</name></member>
     <member refid="classkn_1_1_texture_cache_1ac0506c33fe28a0f85085c20b68b4a713" kind="function"><name>create</name></member>
@@ -140,7 +138,7 @@
     <member refid="classkn_1_1_tile_map_1a51eefec828511d1c09dfcd618f7d1e06" kind="variable"><name>tileVec</name></member>
     <member refid="classkn_1_1_tile_map_1ac58d80f3eaddc20a11506b8fd50c6e7a" kind="variable"><name>objectVec</name></member>
     <member refid="classkn_1_1_tile_map_1abefad7330e18b15f8eee70c624ff6b7b" kind="variable"><name>tileSetMap</name></member>
-    <member refid="classkn_1_1_tile_map_1a0b1c516eb7ae5f70e3ab76771439cdba" kind="function"><name>TileMap</name></member>
+    <member refid="classkn_1_1_tile_map_1a9f764c6e0e70872a533cbce5767f8e8c" kind="function"><name>TileMap</name></member>
     <member refid="classkn_1_1_tile_map_1ae5fafab74bad33d0a854f932b6ce39dc" kind="function"><name>~TileMap</name></member>
     <member refid="classkn_1_1_tile_map_1a972a1369a84ab4dad41089e9d5818c02" kind="function"><name>drawTiles</name></member>
     <member refid="classkn_1_1_tile_map_1af5095c79b15f2026b86e12fbeb80b4ab" kind="function"><name>drawObjects</name></member>
@@ -172,7 +170,7 @@
     <member refid="namespacekn_1ac1be3061d1c6178d71ebcbc1961e651a" kind="variable"><name>GRAVITY</name></member>
   </compound>
   <compound refid="namespacekn_1_1draw" kind="namespace"><name>kn::draw</name>
-    <member refid="namespacekn_1_1draw_1ac6a59278ed8bc470797aaf2b6b955a3d" kind="function"><name>rect</name></member>
+    <member refid="namespacekn_1_1draw_1a8285fbd4645119d7eea609454a0857e0" kind="function"><name>rect</name></member>
   </compound>
   <compound refid="namespacekn_1_1input" kind="namespace"><name>kn::input</name>
     <member refid="namespacekn_1_1input_1ab94bdc7cf362294b49bad95aaefbc40e" kind="function"><name>getMousePos</name></member>

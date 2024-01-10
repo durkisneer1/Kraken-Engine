@@ -35,10 +35,10 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="structkn_1_1_object_1a593099256e65b7eb4f930a462e2b0816" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="structkn_1_1_object_1a94292b94493c89e2eda8ae6e57d2f753" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
         <definition>kn::Object::Object</definition>
-        <argsstring>(std::shared_ptr&lt; Texture &gt; texture, Rect crop, Rect rect, std::string name, std::string type)</argsstring>
+        <argsstring>(std::shared_ptr&lt; Texture &gt; texture, Rect crop, Rect rect, const std::string &amp;name, const std::string &amp;type)</argsstring>
         <name>Object</name>
         <qualifiedname>kn::Object::Object</qualifiedname>
         <param>
@@ -54,11 +54,11 @@
           <declname>rect</declname>
         </param>
         <param>
-          <type>std::string</type>
+          <type>const std::string &amp;</type>
           <declname>name</declname>
         </param>
         <param>
-          <type>std::string</type>
+          <type>const std::string &amp;</type>
           <declname>type</declname>
         </param>
         <briefdescription>
@@ -176,7 +176,7 @@
     <listofallmembers>
       <member refid="structkn_1_1_tile_1a65ccf5af9c9b8459015fcb3caa45e9dc" prot="public" virt="non-virtual"><scope>kn::Object</scope><name>crop</name></member>
       <member refid="structkn_1_1_object_1a5b92582712f27acced7d23d68758411a" prot="public" virt="non-virtual"><scope>kn::Object</scope><name>name</name></member>
-      <member refid="structkn_1_1_object_1a593099256e65b7eb4f930a462e2b0816" prot="public" virt="non-virtual"><scope>kn::Object</scope><name>Object</name></member>
+      <member refid="structkn_1_1_object_1a94292b94493c89e2eda8ae6e57d2f753" prot="public" virt="non-virtual"><scope>kn::Object</scope><name>Object</name></member>
       <member refid="structkn_1_1_tile_1abe91be0f6c7a3943b5927bf6f4995f66" prot="public" virt="non-virtual"><scope>kn::Object</scope><name>rect</name></member>
       <member refid="structkn_1_1_tile_1a8e7d9dbfe6a90692c70b5dbd35eb8f01" prot="public" virt="non-virtual"><scope>kn::Object</scope><name>texture</name></member>
       <member refid="structkn_1_1_tile_1a1ebf237bcfc10d856c978b82adf54467" prot="public" virt="non-virtual"><scope>kn::Object</scope><name>Tile</name></member>

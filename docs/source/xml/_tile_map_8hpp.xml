@@ -99,8 +99,6 @@
         </childnode>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
         <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
@@ -202,27 +200,27 @@
 <codeline lineno="20" refid="classkn_1_1_tile_map" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classkn_1_1_tile_map" kindref="compound">TileMap</ref><sp/>final</highlight></codeline>
 <codeline lineno="21"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="30" refid="classkn_1_1_tile_map_1a0b1c516eb7ae5f70e3ab76771439cdba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1_tile_map_1a0b1c516eb7ae5f70e3ab76771439cdba" kindref="member">TileMap</ref>(<ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref><sp/>&amp;<ref refid="classkn_1_1_tile_map_1a29a34f6749a6b31a8561e9c5112964db" kindref="member">window</ref>,<sp/><ref refid="classkn_1_1_texture_cache" kindref="compound">TextureCache</ref><sp/>&amp;textureCache,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;tmxPath);</highlight></codeline>
-<codeline lineno="31" refid="classkn_1_1_tile_map_1ae5fafab74bad33d0a854f932b6ce39dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1_tile_map_1ae5fafab74bad33d0a854f932b6ce39dc" kindref="member">~TileMap</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36" refid="classkn_1_1_tile_map_1a972a1369a84ab4dad41089e9d5818c02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_tile_map_1a972a1369a84ab4dad41089e9d5818c02" kindref="member">drawTiles</ref>();</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41" refid="classkn_1_1_tile_map_1af5095c79b15f2026b86e12fbeb80b4ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_tile_map_1af5095c79b15f2026b86e12fbeb80b4ab" kindref="member">drawObjects</ref>();</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46" refid="classkn_1_1_tile_map_1af4a5c9d1407b541677296612ed140df8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_tile_map_1af4a5c9d1407b541677296612ed140df8" kindref="member">drawAll</ref>();</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53" refid="classkn_1_1_tile_map_1a9c730cee7c34405ad313d0acbe06accf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;Object&gt;<sp/>&amp;<ref refid="classkn_1_1_tile_map_1a9c730cee7c34405ad313d0acbe06accf" kindref="member">getObjects</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="56" refid="classkn_1_1_tile_map_1a29a34f6749a6b31a8561e9c5112964db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref><sp/>&amp;<ref refid="classkn_1_1_tile_map_1a29a34f6749a6b31a8561e9c5112964db" kindref="member">window</ref>;</highlight></codeline>
-<codeline lineno="57" refid="classkn_1_1_tile_map_1af0b8d6ff9b53c3477ace43588791889c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>tmx::Map<sp/><ref refid="classkn_1_1_tile_map_1af0b8d6ff9b53c3477ace43588791889c" kindref="member">m_map</ref>;</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59" refid="classkn_1_1_tile_map_1a51eefec828511d1c09dfcd618f7d1e06" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Tile&gt;<sp/><ref refid="classkn_1_1_tile_map_1a51eefec828511d1c09dfcd618f7d1e06" kindref="member">tileVec</ref>;</highlight></codeline>
-<codeline lineno="60" refid="classkn_1_1_tile_map_1ac58d80f3eaddc20a11506b8fd50c6e7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Object&gt;<sp/><ref refid="classkn_1_1_tile_map_1ac58d80f3eaddc20a11506b8fd50c6e7a" kindref="member">objectVec</ref>;</highlight></codeline>
-<codeline lineno="61" refid="classkn_1_1_tile_map_1abefad7330e18b15f8eee70c624ff6b7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;int,<sp/>std::shared_ptr&lt;Texture&gt;&gt;<sp/><ref refid="classkn_1_1_tile_map_1abefad7330e18b15f8eee70c624ff6b7b" kindref="member">tileSetMap</ref>;</highlight></codeline>
-<codeline lineno="62"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29" refid="classkn_1_1_tile_map_1a9f764c6e0e70872a533cbce5767f8e8c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1_tile_map_1a9f764c6e0e70872a533cbce5767f8e8c" kindref="member">TileMap</ref>(<ref refid="classkn_1_1_texture_cache" kindref="compound">TextureCache</ref><sp/>&amp;textureCache,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;tmxPath);</highlight></codeline>
+<codeline lineno="30" refid="classkn_1_1_tile_map_1ae5fafab74bad33d0a854f932b6ce39dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1_tile_map_1ae5fafab74bad33d0a854f932b6ce39dc" kindref="member">~TileMap</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classkn_1_1_tile_map_1a972a1369a84ab4dad41089e9d5818c02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_tile_map_1a972a1369a84ab4dad41089e9d5818c02" kindref="member">drawTiles</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="classkn_1_1_tile_map_1af5095c79b15f2026b86e12fbeb80b4ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_tile_map_1af5095c79b15f2026b86e12fbeb80b4ab" kindref="member">drawObjects</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classkn_1_1_tile_map_1af4a5c9d1407b541677296612ed140df8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_tile_map_1af4a5c9d1407b541677296612ed140df8" kindref="member">drawAll</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="classkn_1_1_tile_map_1a9c730cee7c34405ad313d0acbe06accf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;Object&gt;<sp/>&amp;<ref refid="classkn_1_1_tile_map_1a9c730cee7c34405ad313d0acbe06accf" kindref="member">getObjects</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="55" refid="classkn_1_1_tile_map_1a29a34f6749a6b31a8561e9c5112964db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref><sp/>&amp;<ref refid="classkn_1_1_tile_map_1a29a34f6749a6b31a8561e9c5112964db" kindref="member">window</ref><sp/>=<sp/><ref refid="classkn_1_1_render_window_1adcad93cc1e1c336afff133667bdbcb2c" kindref="member">RenderWindow::getInstance</ref>();</highlight></codeline>
+<codeline lineno="56" refid="classkn_1_1_tile_map_1af0b8d6ff9b53c3477ace43588791889c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>tmx::Map<sp/><ref refid="classkn_1_1_tile_map_1af0b8d6ff9b53c3477ace43588791889c" kindref="member">m_map</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classkn_1_1_tile_map_1a51eefec828511d1c09dfcd618f7d1e06" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Tile&gt;<sp/><ref refid="classkn_1_1_tile_map_1a51eefec828511d1c09dfcd618f7d1e06" kindref="member">tileVec</ref>;</highlight></codeline>
+<codeline lineno="59" refid="classkn_1_1_tile_map_1ac58d80f3eaddc20a11506b8fd50c6e7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Object&gt;<sp/><ref refid="classkn_1_1_tile_map_1ac58d80f3eaddc20a11506b8fd50c6e7a" kindref="member">objectVec</ref>;</highlight></codeline>
+<codeline lineno="60" refid="classkn_1_1_tile_map_1abefad7330e18b15f8eee70c624ff6b7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;int,<sp/>std::shared_ptr&lt;Texture&gt;&gt;<sp/><ref refid="classkn_1_1_tile_map_1abefad7330e18b15f8eee70c624ff6b7b" kindref="member">tileSetMap</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp"/>
   </compounddef>

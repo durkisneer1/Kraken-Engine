@@ -10,13 +10,14 @@
         <argsstring></argsstring>
         <name>window</name>
         <qualifiedname>kn::TileMap::window</qualifiedname>
+        <initializer>= <ref refid="classkn_1_1_render_window_1adcad93cc1e1c336afff133667bdbcb2c" kindref="member">RenderWindow::getInstance</ref>()</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="56" column="18" bodyfile="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" bodystart="56" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="55" column="18" bodyfile="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classkn_1_1_tile_map_1af0b8d6ff9b53c3477ace43588791889c" prot="private" static="no" mutable="no">
         <type>tmx::Map</type>
@@ -30,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="57" column="14" bodyfile="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" bodystart="57" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="56" column="14" bodyfile="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" bodystart="56" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classkn_1_1_tile_map_1a51eefec828511d1c09dfcd618f7d1e06" prot="private" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="structkn_1_1_tile" kindref="compound">Tile</ref> &gt;</type>
@@ -44,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="59" column="17" bodyfile="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" bodystart="59" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="58" column="17" bodyfile="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" bodystart="58" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classkn_1_1_tile_map_1ac58d80f3eaddc20a11506b8fd50c6e7a" prot="private" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="structkn_1_1_object" kindref="compound">Object</ref> &gt;</type>
@@ -58,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="60" column="17" bodyfile="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" bodystart="60" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="59" column="17" bodyfile="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" bodystart="59" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classkn_1_1_tile_map_1abefad7330e18b15f8eee70c624ff6b7b" prot="private" static="no" mutable="no">
         <type>std::map&lt; int, std::shared_ptr&lt; <ref refid="classkn_1_1_texture" kindref="compound">Texture</ref> &gt; &gt;</type>
@@ -72,20 +73,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="61" column="14" bodyfile="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" bodystart="61" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="60" column="14" bodyfile="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" bodystart="60" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classkn_1_1_tile_map_1a0b1c516eb7ae5f70e3ab76771439cdba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classkn_1_1_tile_map_1a9f764c6e0e70872a533cbce5767f8e8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>kn::TileMap::TileMap</definition>
-        <argsstring>(RenderWindow &amp;window, TextureCache &amp;textureCache, const std::string &amp;tmxPath)</argsstring>
+        <argsstring>(TextureCache &amp;textureCache, const std::string &amp;tmxPath)</argsstring>
         <name>TileMap</name>
         <qualifiedname>kn::TileMap::TileMap</qualifiedname>
-        <param>
-          <type><ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref> &amp;</type>
-          <declname>window</declname>
-        </param>
         <param>
           <type><ref refid="classkn_1_1_texture_cache" kindref="compound">TextureCache</ref> &amp;</type>
           <declname>textureCache</declname>
@@ -99,14 +96,6 @@
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>window</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The window to render to. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
 <parameternamelist>
 <parametername>textureCache</parametername>
 </parameternamelist>
@@ -127,7 +116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="30" column="5"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="29" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_tile_map_1ae5fafab74bad33d0a854f932b6ce39dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -141,7 +130,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="31" column="5"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="30" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_tile_map_1a972a1369a84ab4dad41089e9d5818c02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -156,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="36" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="35" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_tile_map_1af5095c79b15f2026b86e12fbeb80b4ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -171,7 +160,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="41" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="40" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_tile_map_1af4a5c9d1407b541677296612ed140df8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -186,7 +175,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="46" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="45" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_tile_map_1a9c730cee7c34405ad313d0acbe06accf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const std::vector&lt; <ref refid="structkn_1_1_object" kindref="compound">Object</ref> &gt; &amp;</type>
@@ -204,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="53" column="23"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="52" column="23"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -225,7 +214,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="20" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" bodystart="21" bodyend="62"/>
+    <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" line="20" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/TileMap.hpp" bodystart="21" bodyend="61"/>
     <listofallmembers>
       <member refid="classkn_1_1_tile_map_1af4a5c9d1407b541677296612ed140df8" prot="public" virt="non-virtual"><scope>kn::TileMap</scope><name>drawAll</name></member>
       <member refid="classkn_1_1_tile_map_1af5095c79b15f2026b86e12fbeb80b4ab" prot="public" virt="non-virtual"><scope>kn::TileMap</scope><name>drawObjects</name></member>
@@ -233,7 +222,7 @@
       <member refid="classkn_1_1_tile_map_1a9c730cee7c34405ad313d0acbe06accf" prot="public" virt="non-virtual"><scope>kn::TileMap</scope><name>getObjects</name></member>
       <member refid="classkn_1_1_tile_map_1af0b8d6ff9b53c3477ace43588791889c" prot="private" virt="non-virtual"><scope>kn::TileMap</scope><name>m_map</name></member>
       <member refid="classkn_1_1_tile_map_1ac58d80f3eaddc20a11506b8fd50c6e7a" prot="private" virt="non-virtual"><scope>kn::TileMap</scope><name>objectVec</name></member>
-      <member refid="classkn_1_1_tile_map_1a0b1c516eb7ae5f70e3ab76771439cdba" prot="public" virt="non-virtual"><scope>kn::TileMap</scope><name>TileMap</name></member>
+      <member refid="classkn_1_1_tile_map_1a9f764c6e0e70872a533cbce5767f8e8c" prot="public" virt="non-virtual"><scope>kn::TileMap</scope><name>TileMap</name></member>
       <member refid="classkn_1_1_tile_map_1abefad7330e18b15f8eee70c624ff6b7b" prot="private" virt="non-virtual"><scope>kn::TileMap</scope><name>tileSetMap</name></member>
       <member refid="classkn_1_1_tile_map_1a51eefec828511d1c09dfcd618f7d1e06" prot="private" virt="non-virtual"><scope>kn::TileMap</scope><name>tileVec</name></member>
       <member refid="classkn_1_1_tile_map_1a29a34f6749a6b31a8561e9c5112964db" prot="private" virt="non-virtual"><scope>kn::TileMap</scope><name>window</name></member>

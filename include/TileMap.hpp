@@ -23,11 +23,10 @@ public:
     /**
      * @brief Constructs a tile map from a TMX file.
      *
-     * @param window The window to render to.
      * @param textureCache The texture cache to use.
      * @param tmxPath The path to the TMX file.
      */
-    TileMap(RenderWindow &window, TextureCache &textureCache, const std::string &tmxPath);
+    TileMap(TextureCache &textureCache, const std::string &tmxPath);
     ~TileMap() = default;
 
     /**
@@ -53,7 +52,7 @@ public:
     const std::vector<Object> &getObjects() const;
 
 private:
-    RenderWindow &window;
+    RenderWindow &window = RenderWindow::getInstance();
     tmx::Map m_map;
 
     std::vector<Tile> tileVec;

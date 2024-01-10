@@ -5,8 +5,8 @@
 namespace kn
 {
 
-Entity::Entity(RenderWindow &window, std::shared_ptr<Texture> texture)
-    : window(window), texture(texture), rect(texture->getRect())
+Entity::Entity(std::shared_ptr<Texture> texture)
+    : texture(texture), rect(texture->getRect())
 {
     crop.w = rect.w;
     crop.h = rect.h;

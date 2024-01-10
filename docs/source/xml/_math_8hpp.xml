@@ -86,15 +86,9 @@
       <node id="10">
         <label>D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp</label>
         <link refid="_render_window_8hpp"/>
-        <childnode refid="7" relation="include">
-        </childnode>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
         <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>

@@ -7,7 +7,6 @@
 #include <SDL_ttf.h>
 
 #include "Texture.hpp"
-#include "RenderWindow.hpp"
 
 namespace kn
 {
@@ -21,11 +20,10 @@ public:
 	/**
      * @brief Create a font.
 	 * 
-     * @param window The renderer context.
      * @param fileDir The directory of the font file.
      * @param ptSize The point size of the font.
      */
-	Font(RenderWindow &window, const std::string &fileDir, int ptSize);
+	Font(const std::string &fileDir, int ptSize);
 	~Font()
 	{
 		if (font)
@@ -45,7 +43,6 @@ public:
 	std::shared_ptr<Texture> render(const std::string &text, bool antialias, SDL_Color color, int wrapLength = 0);
 
 private:
-	RenderWindow &window;
 	TTF_Font *font;
 };
 

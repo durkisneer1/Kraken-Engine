@@ -13,11 +13,8 @@
     <includes refid="_math_8hpp" local="yes">Math.hpp</includes>
     <includes refid="_constants_8hpp" local="yes">Constants.hpp</includes>
     <includes refid="_globals_8hpp" local="yes">Globals.hpp</includes>
-    <includedby refid="_draw_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/Draw.hpp</includedby>
     <includedby refid="_entity_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/Entity.hpp</includedby>
-    <includedby refid="_font_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/Font.hpp</includedby>
     <includedby refid="_kraken_engine_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/KrakenEngine.hpp</includedby>
-    <includedby refid="_texture_cache_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/TextureCache.hpp</includedby>
     <includedby refid="_tile_map_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/TileMap.hpp</includedby>
     <incdepgraph>
       <node id="13">
@@ -106,23 +103,11 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>D:/Code/c++/Kraken-Engine/include/Draw.hpp</label>
-        <link refid="_draw_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
         <label>D:/Code/c++/Kraken-Engine/include/Entity.hpp</label>
         <link refid="_entity_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>D:/Code/c++/Kraken-Engine/include/Font.hpp</label>
-        <link refid="_font_8hpp"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -134,26 +119,12 @@
         <link refid="_render_window_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
       </node>
-      <node id="7">
-        <label>D:/Code/c++/Kraken-Engine/include/TextureCache.hpp</label>
-        <link refid="_texture_cache_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
+      <node id="4">
         <label>D:/Code/c++/Kraken-Engine/include/TileMap.hpp</label>
         <link refid="_tile_map_8hpp"/>
         <childnode refid="3" relation="include">

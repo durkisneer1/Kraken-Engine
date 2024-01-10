@@ -1,13 +1,14 @@
 #include <iostream>
 
 #include "../include/TextureCache.hpp"
+#include "../include/RenderWindow.hpp"
 
 namespace kn
 {
 
 std::shared_ptr<Texture> TextureCache::load(const std::string &name, const std::string &path)
 {
-    SDL_Texture *texture = IMG_LoadTexture(window.getRenderer(), path.c_str());
+    SDL_Texture *texture = IMG_LoadTexture(RenderWindow::getInstance().getRenderer(), path.c_str());
     if (!texture)
     {
         std::cerr << "Failed to create texture from: " << path << std::endl;
@@ -32,7 +33,7 @@ std::shared_ptr<Texture> TextureCache::create(const std::string &name, const mat
 
     SDL_FillRect(surface, nullptr, SDL_MapRGB(surface->format, color.r, color.g, color.b));
 
-    SDL_Texture *texture = SDL_CreateTextureFromSurface(window.getRenderer(), surface);
+    SDL_Texture *texture = SDL_CreateTextureFromSurface(RenderWindow::getInstance().getRenderer(), surface);
     if (!texture)
     {
         std::cerr << "Failed to create texture from surface: " << name << std::endl;

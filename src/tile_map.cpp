@@ -8,8 +8,7 @@
 namespace kn
 {
 
-TileMap::TileMap(RenderWindow &window, TextureCache &textureCache, const std::string &tmxPath)
-    : window(window)
+TileMap::TileMap(TextureCache &textureCache, const std::string &tmxPath)
 {
     if (!m_map.load(tmxPath))
     {
@@ -22,7 +21,7 @@ TileMap::TileMap(RenderWindow &window, TextureCache &textureCache, const std::st
     int tileWidth = m_map.getTileSize().x;
     int tileHeight = m_map.getTileSize().y;
 
-    auto &tileSets = m_map.getTilesets();
+    const auto &tileSets = m_map.getTilesets();
     for (const auto &set : tileSets)
     {
         auto tex = textureCache.load("tileset", set.getImagePath());
@@ -30,7 +29,7 @@ TileMap::TileMap(RenderWindow &window, TextureCache &textureCache, const std::st
         textureCache.unload("tileset");
     }
 
-    auto &layers = m_map.getLayers();
+    const auto &layers = m_map.getLayers();
     for (const auto &layer : layers)
     {
         if (layer->getType() == tmx::Layer::Type::Object)
@@ -43,12 +42,13 @@ TileMap::TileMap(RenderWindow &window, TextureCache &textureCache, const std::st
                 int currentGID = obj.getTileID();
 
                 int tileSetGID = -1;
-                for (const auto &tileSet : tileSetMap)
-                    if (currentGID >= tileSet.first)
-                    {
-                        tileSetGID = tileSet.first;
-                        break;
-                    }
+                auto it = std::find_if(
+                    tileSetMap.rbegin(), tileSetMap.rend(), [currentGID](const auto &tileSet)
+                    { return currentGID >= tileSet.first; });
+                if (it != tileSetMap.rend())
+                {
+                    tileSetGID = it->first;
+                }
                 if (tileSetGID == -1)
                     continue;
 
@@ -82,12 +82,13 @@ TileMap::TileMap(RenderWindow &window, TextureCache &textureCache, const std::st
                         continue;
 
                     int tileSetGID = -1;
-                    for (const auto &tileSet : tileSetMap)
-                        if (currentGID >= tileSet.first)
-                        {
-                            tileSetGID = tileSet.first;
-                            break;
-                        }
+                    auto it = std::find_if(
+                        tileSetMap.rbegin(), tileSetMap.rend(), [currentGID](const auto &tileSet)
+                        { return currentGID >= tileSet.first; });
+                    if (it != tileSetMap.rend())
+                    {
+                        tileSetGID = it->first;
+                    }
                     if (tileSetGID == -1)
                         continue;
 
