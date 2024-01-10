@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Sprite" href="sprite.html" /><link rel="prev" title="Rect" href="rect.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="TextureCache" href="texture_cache.html" /><link rel="prev" title="Rect" href="rect.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
         <title>RenderWindow - Kraken Engine</title>
@@ -159,12 +159,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="ref_main.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="draw.html">draw</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity.html">Entity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="input.html">input</a></li>
 <li class="toctree-l2"><a class="reference internal" href="math.html">math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rect.html">Rect</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">RenderWindow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sprite.html">Sprite</a></li>
 <li class="toctree-l2"><a class="reference internal" href="texture_cache.html">TextureCache</a></li>
 <li class="toctree-l2"><a class="reference internal" href="texture.html">Texture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tile_map.html">TileMap</a></li>
@@ -211,30 +211,11 @@
 <dt class="sig sig-object cpp" id="_CPPv4N2kn12RenderWindowE">
 <span id="_CPPv3N2kn12RenderWindowE"></span><span id="_CPPv2N2kn12RenderWindowE"></span><span id="kn::RenderWindow"></span><span class="target" id="classkn_1_1_render_window"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RenderWindow</span></span></span><a class="headerlink" href="#_CPPv4N2kn12RenderWindowE" title="Link to this definition">#</a><br /></dt>
 <dd><p>The renderer context. </p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This class must be a singleton. </p>
-</div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2kn12RenderWindow12RenderWindowERKNSt6stringEib">
-<span id="_CPPv3N2kn12RenderWindow12RenderWindowERKNSt6stringEib"></span><span id="_CPPv2N2kn12RenderWindow12RenderWindowERKNSt6stringEib"></span><span id="kn::RenderWindow::RenderWindow__ssCR.i.b"></span><span class="target" id="classkn_1_1_render_window_1a553f2003d5eb88aee940926a6f482f56"></span><span class="sig-name descname"><span class="n"><span class="pre">RenderWindow</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">title</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;Kraken</span> <span class="pre">Window&quot;</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">scale</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fullscreen</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn12RenderWindow12RenderWindowERKNSt6stringEib" title="Link to this definition">#</a><br /></dt>
-<dd><p>Create a window. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>title</strong> – The title of the window. </p></li>
-<li><p><strong>scale</strong> – The scale of the window. </p></li>
-<li><p><strong>fullscreen</strong> – Whether to make the window fullscreen. </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N2kn12RenderWindow3clsE9SDL_Color">
-<span id="_CPPv3N2kn12RenderWindow3clsE9SDL_Color"></span><span id="_CPPv2N2kn12RenderWindow3clsE9SDL_Color"></span><span id="kn::RenderWindow::cls__SDL_Color"></span><span class="target" id="classkn_1_1_render_window_1a72531bd5ff3c09b07185ac7fcbe57a85"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cls</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">SDL_Color</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">color</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">255</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn12RenderWindow3clsE9SDL_Color" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N2kn12RenderWindow3clsE9SDL_Color"></span><span id="_CPPv2N2kn12RenderWindow3clsE9SDL_Color"></span><span id="kn::RenderWindow::cls__SDL_Color"></span><span class="target" id="classkn_1_1_render_window_1adbc6173c883f03ff8bb6cdc98c051dcb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cls</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">SDL_Color</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">color</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">255</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn12RenderWindow3clsE9SDL_Color" title="Link to this definition">#</a><br /></dt>
 <dd><p>Clear the screen. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -245,7 +226,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N2kn12RenderWindow4flipEv">
-<span id="_CPPv3N2kn12RenderWindow4flipEv"></span><span id="_CPPv2N2kn12RenderWindow4flipEv"></span><span id="kn::RenderWindow::flip"></span><span class="target" id="classkn_1_1_render_window_1a7d04089325a8080a1f4b7c5cb9e4f12c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">flip</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn12RenderWindow4flipEv" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N2kn12RenderWindow4flipEv"></span><span id="_CPPv2N2kn12RenderWindow4flipEv"></span><span id="kn::RenderWindow::flip"></span><span class="target" id="classkn_1_1_render_window_1a7d04089325a8080a1f4b7c5cb9e4f12c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">flip</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn12RenderWindow4flipEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Flip the render frame buffer. </p>
 </dd></dl>
 
@@ -335,6 +316,76 @@
 </dl>
 </dd></dl>
 
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK2kn12RenderWindow13getFullscreenEv">
+<span id="_CPPv3NK2kn12RenderWindow13getFullscreenEv"></span><span id="_CPPv2NK2kn12RenderWindow13getFullscreenEv"></span><span id="kn::RenderWindow::getFullscreenC"></span><span class="target" id="classkn_1_1_render_window_1a08e59168fc273ef5c55e74c21c7b93b7"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFullscreen</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2kn12RenderWindow13getFullscreenEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get whether the window is fullscreen or not. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Whether the window is fullscreen or not </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn12RenderWindow8setTitleERKNSt6stringE">
+<span id="_CPPv3N2kn12RenderWindow8setTitleERKNSt6stringE"></span><span id="_CPPv2N2kn12RenderWindow8setTitleERKNSt6stringE"></span><span id="kn::RenderWindow::setTitle__ssCR"></span><span class="target" id="classkn_1_1_render_window_1afe261879b8ff7554723757fc320c99a2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setTitle</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newTitle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn12RenderWindow8setTitleERKNSt6stringE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Set the title of the window. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>newTitle</strong> – the new title </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn12RenderWindow13setFullscreenEb">
+<span id="_CPPv3N2kn12RenderWindow13setFullscreenEb"></span><span id="_CPPv2N2kn12RenderWindow13setFullscreenEb"></span><span id="kn::RenderWindow::setFullscreen__b"></span><span class="target" id="classkn_1_1_render_window_1a64f5d5c9dba806a63815b2521b396adb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFullscreen</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fullscreen</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn12RenderWindow13setFullscreenEb" title="Link to this definition">#</a><br /></dt>
+<dd><p>Set whether the window is fullscreen or not. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fullscreen</strong> – true if setting fullscreen, false otherwise </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn12RenderWindow11getInstanceEv">
+<span id="_CPPv3N2kn12RenderWindow11getInstanceEv"></span><span id="_CPPv2N2kn12RenderWindow11getInstanceEv"></span><span id="kn::RenderWindow::getInstance"></span><span class="target" id="classkn_1_1_render_window_1adcad93cc1e1c336afff133667bdbcb2c"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn12RenderWindowE" title="kn::RenderWindow"><span class="n"><span class="pre">RenderWindow</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getInstance</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn12RenderWindow11getInstanceEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get a reference to the instance of the singleton. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>reference to the instance </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn12RenderWindow8getScaleEv">
+<span id="_CPPv3N2kn12RenderWindow8getScaleEv"></span><span id="_CPPv2N2kn12RenderWindow8getScaleEv"></span><span id="kn::RenderWindow::getScale"></span><span class="target" id="classkn_1_1_render_window_1a04888f5d385499db342f75021fa6beb0"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getScale</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn12RenderWindow8getScaleEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the scale of the window. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the scale </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn12RenderWindow8setScaleEi">
+<span id="_CPPv3N2kn12RenderWindow8setScaleEi"></span><span id="_CPPv2N2kn12RenderWindow8setScaleEi"></span><span id="kn::RenderWindow::setScale__i"></span><span class="target" id="classkn_1_1_render_window_1a169192f7eb40b203031c7a26a711fa26"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setScale</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">newScale</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn12RenderWindow8setScaleEi" title="Link to this definition">#</a><br /></dt>
+<dd><p>Set the scale of the window. </p>
+<p>Only valid before instantiating <a class="reference internal" href="#classkn_1_1_render_window"><span class="std std-ref">RenderWindow</span></a> for the first time</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>newScale</strong> – the scale of the window </p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 </dd></dl>
 
@@ -345,12 +396,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="sprite.html">
+          <a class="next-page" href="texture_cache.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Sprite</div>
+                <div class="title">TextureCache</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -397,7 +448,6 @@
             <ul>
 <li><a class="reference internal" href="#">RenderWindow</a><ul>
 <li><a class="reference internal" href="#_CPPv4N2kn12RenderWindowE"><code class="docutils literal notranslate"><span class="pre">RenderWindow</span></code></a><ul>
-<li><a class="reference internal" href="#_CPPv4N2kn12RenderWindow12RenderWindowERKNSt6stringEib"><code class="docutils literal notranslate"><span class="pre">RenderWindow::RenderWindow()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn12RenderWindow3clsE9SDL_Color"><code class="docutils literal notranslate"><span class="pre">RenderWindow::cls()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn12RenderWindow4flipEv"><code class="docutils literal notranslate"><span class="pre">RenderWindow::flip()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn12RenderWindow4blitERKNSt10shared_ptrI7TextureEE4Rect4Rect"><code class="docutils literal notranslate"><span class="pre">RenderWindow::blit()</span></code></a></li>
@@ -406,6 +456,12 @@
 <li><a class="reference internal" href="#_CPPv4N2kn12RenderWindow6blitExERKNSt10shared_ptrI7TextureEERKN4math4Vec2Edbb"><code class="docutils literal notranslate"><span class="pre">RenderWindow::blitEx()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn12RenderWindow11getRendererEv"><code class="docutils literal notranslate"><span class="pre">RenderWindow::getRenderer()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn12RenderWindow9getEventsEv"><code class="docutils literal notranslate"><span class="pre">RenderWindow::getEvents()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK2kn12RenderWindow13getFullscreenEv"><code class="docutils literal notranslate"><span class="pre">RenderWindow::getFullscreen()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn12RenderWindow8setTitleERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">RenderWindow::setTitle()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn12RenderWindow13setFullscreenEb"><code class="docutils literal notranslate"><span class="pre">RenderWindow::setFullscreen()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn12RenderWindow11getInstanceEv"><code class="docutils literal notranslate"><span class="pre">RenderWindow::getInstance()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn12RenderWindow8getScaleEv"><code class="docutils literal notranslate"><span class="pre">RenderWindow::getScale()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn12RenderWindow8setScaleEi"><code class="docutils literal notranslate"><span class="pre">RenderWindow::setScale()</span></code></a></li>
 </ul>
 </li>
 </ul>

@@ -2,11 +2,11 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="namespacekn" kind="namespace" language="C++">
     <compoundname>kn</compoundname>
+    <innerclass refid="classkn_1_1_entity" prot="public">kn::Entity</innerclass>
     <innerclass refid="classkn_1_1_font" prot="public">kn::Font</innerclass>
     <innerclass refid="structkn_1_1_object" prot="public">kn::Object</innerclass>
     <innerclass refid="structkn_1_1_rect" prot="public">kn::Rect</innerclass>
     <innerclass refid="classkn_1_1_render_window" prot="public">kn::RenderWindow</innerclass>
-    <innerclass refid="classkn_1_1_sprite" prot="public">kn::Sprite</innerclass>
     <innerclass refid="classkn_1_1_texture" prot="public">kn::Texture</innerclass>
     <innerclass refid="classkn_1_1_texture_cache" prot="public">kn::TextureCache</innerclass>
     <innerclass refid="structkn_1_1_tile" prot="public">kn::Tile</innerclass>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Globals.hpp" line="10" column="25" declfile="D:/Code/c++/Kraken-Engine/include/Globals.hpp" declline="10" declcolumn="25"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Globals.hpp" line="13" column="25" declfile="D:/Code/c++/Kraken-Engine/include/Globals.hpp" declline="13" declcolumn="25"/>
       </memberdef>
       <memberdef kind="variable" id="namespacekn_1ac1be3061d1c6178d71ebcbc1961e651a" prot="public" static="no" extern="yes" mutable="no">
         <type>float</type>
@@ -41,19 +41,19 @@
         <name>GRAVITY</name>
         <qualifiedname>kn::GRAVITY</qualifiedname>
         <briefdescription>
-<para>The global gravity of the game. </para>
+<para>The global gravity. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Globals.hpp" line="13" column="14" declfile="D:/Code/c++/Kraken-Engine/include/Globals.hpp" declline="13" declcolumn="14"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Globals.hpp" line="18" column="14" declfile="D:/Code/c++/Kraken-Engine/include/Globals.hpp" declline="18" declcolumn="14"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Code/c++/Kraken-Engine/include/Draw.hpp" line="9" column="1"/>
+    <location file="D:/Code/c++/Kraken-Engine/include/Draw.hpp" line="8" column="1"/>
   </compounddef>
 </doxygen>

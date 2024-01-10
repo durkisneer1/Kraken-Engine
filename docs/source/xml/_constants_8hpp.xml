@@ -32,6 +32,14 @@
         </childnode>
       </node>
       <node id="5">
+        <label>D:/Code/c++/Kraken-Engine/include/Entity.hpp</label>
+        <link refid="_entity_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
         <label>D:/Code/c++/Kraken-Engine/include/Font.hpp</label>
         <link refid="_font_8hpp"/>
         <childnode refid="2" relation="include">
@@ -48,21 +56,13 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="2" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>D:/Code/c++/Kraken-Engine/include/Sprite.hpp</label>
-        <link refid="_sprite_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
       <node id="8">
@@ -70,10 +70,10 @@
         <link refid="_texture_cache_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="6">
         <label>D:/Code/c++/Kraken-Engine/include/TileMap.hpp</label>
         <link refid="_tile_map_8hpp"/>
         <childnode refid="2" relation="include">
@@ -1100,7 +1100,6 @@
 <codeline lineno="73" refid="_constants_8hpp_1aa9b7ba293562fe5dd748ba763eeb2072" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_constants_8hpp_1aa9b7ba293562fe5dd748ba763eeb2072" kindref="member">KN_BUTTON_LEFT</ref><sp/>=<sp/>SDL_BUTTON_LEFT;</highlight></codeline>
 <codeline lineno="74" refid="_constants_8hpp_1a898a21515bd89a2b1f0956158d6b5fee" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_constants_8hpp_1a898a21515bd89a2b1f0956158d6b5fee" kindref="member">KN_BUTTON_MIDDLE</ref><sp/>=<sp/>SDL_BUTTON_MIDDLE;</highlight></codeline>
 <codeline lineno="75" refid="_constants_8hpp_1a881f81ec2c5aa7d01b2123d280563ad7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_constants_8hpp_1a881f81ec2c5aa7d01b2123d280563ad7" kindref="member">KN_BUTTON_RIGHT</ref><sp/>=<sp/>SDL_BUTTON_RIGHT;</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp"/>
   </compounddef>

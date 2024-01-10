@@ -159,12 +159,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="ref_main.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="draw.html">draw</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entity.html">Entity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="input.html">input</a></li>
 <li class="toctree-l2"><a class="reference internal" href="math.html">math</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Rect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="render_window.html">RenderWindow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sprite.html">Sprite</a></li>
 <li class="toctree-l2"><a class="reference internal" href="texture_cache.html">TextureCache</a></li>
 <li class="toctree-l2"><a class="reference internal" href="texture.html">Texture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tile_map.html">TileMap</a></li>
@@ -210,20 +210,20 @@
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4N2kn4RectE">
 <span id="_CPPv3N2kn4RectE"></span><span id="_CPPv2N2kn4RectE"></span><span id="kn::Rect"></span><span class="target" id="structkn_1_1_rect"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Rect</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">SDL_FRect</span></span><a class="headerlink" href="#_CPPv4N2kn4RectE" title="Link to this definition">#</a><br /></dt>
-<dd><p>A class to represent a rectangle. </p>
+<dd><p>A 2D rectangle. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N2kn4Rect4RectEffff">
 <span id="_CPPv3N2kn4Rect4RectEffff"></span><span id="_CPPv2N2kn4Rect4RectEffff"></span><span id="kn::Rect::Rect__float.float.float.float"></span><span class="target" id="structkn_1_1_rect_1a29cf43d1e332203115a5db256416059a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Rect</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">w</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">h</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn4Rect4RectEffff" title="Link to this definition">#</a><br /></dt>
-<dd><p>Construct a new <a class="reference internal" href="#structkn_1_1_rect"><span class="std std-ref">Rect</span></a> object. </p>
+<dd><p>Construct a new rectangle. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> – </p></li>
-<li><p><strong>y</strong> – </p></li>
-<li><p><strong>w</strong> – </p></li>
-<li><p><strong>h</strong> – </p></li>
+<li><p><strong>x</strong> – The x position. </p></li>
+<li><p><strong>y</strong> – The y position. </p></li>
+<li><p><strong>w</strong> – The width. </p></li>
+<li><p><strong>h</strong> – The height. </p></li>
 </ul>
 </dd>
 </dl>
@@ -268,7 +268,7 @@
 <dd><p>Check if the rectangle collides with a point. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>pos</strong> – The point to check. </p>
+<dd class="field-odd"><p><strong>pos</strong> – The point to check.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Whether the rectangle collides with a point. </p>
@@ -282,7 +282,7 @@
 <dd><p>Check if the rectangle collides with another rectangle. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>rect</strong> – The rectangle to check. </p>
+<dd class="field-odd"><p><strong>rect</strong> – The rectangle to check.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Whether the rectangle collides with another rectangle. </p>

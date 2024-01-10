@@ -9,7 +9,7 @@
 #include "Math.hpp"
 #include "Rect.hpp"
 #include "RenderWindow.hpp"
-#include "Sprite.hpp"
+#include "Entity.hpp"
 #include "Texture.hpp"
 #include "TextureCache.hpp"
 #include "TileMap.hpp"

@@ -47,7 +47,7 @@
 <parametername>max</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The maximum value. </para>
+<para>The maximum value.</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="48" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" declline="48" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="67" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" declline="67" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1math_1a88e50fa7f06deaef4b3fb1f9c26e22a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref></type>
@@ -102,7 +102,7 @@
 <parametername>t</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The time. </para>
+<para>The time.</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -112,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="55" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" declline="55" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="78" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" declline="78" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1math_1aced32b7b8f0f6ed33afc45afe9c0221c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -162,7 +162,7 @@
 <parametername>max</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The maximum value. </para>
+<para>The maximum value.</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -172,7 +172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="63" column="7" declfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" declline="63" declcolumn="7"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="90" column="7" declfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" declline="90" declcolumn="7"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

@@ -59,7 +59,7 @@
 <parametername>thickness</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The thickness of the rectangle. </para>
+<para>The thickness of the rectangle.</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Draw.hpp" line="18" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Draw.hpp" declline="18" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Draw.hpp" line="23" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Draw.hpp" declline="23" declcolumn="6"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

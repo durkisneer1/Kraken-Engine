@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" line="40" column="17" bodyfile="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" bodystart="40" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" line="52" column="17" bodyfile="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" bodystart="52" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structkn_1_1_object_1a8a96862d3a8f909b98080a407f77fdc7" prot="public" static="no" mutable="no">
         <type>std::string</type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" line="41" column="17" bodyfile="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" bodystart="41" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" line="53" column="17" bodyfile="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" bodystart="53" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -110,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" line="36" column="5" bodyfile="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" bodystart="36" bodyend="37"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" line="48" column="5" bodyfile="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" bodystart="48" bodyend="49"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_object_1ad14e369470ca9a6773a6928a573c1dd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -124,14 +124,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" line="38" column="5"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" line="50" column="5"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
 <para>A tmx object tile. </para>
     </briefdescription>
     <detaileddescription>
-<para>This is used for objects and can be assigned to a <ref refid="classkn_1_1_sprite" kindref="compound">Sprite</ref> type. <simplesect kind="note"><para>This is not yet complete. </para>
+<para><simplesect kind="warning"><para>This struct type is not fully implemented yet. </para>
 </simplesect>
 </para>
     </detaileddescription>
@@ -172,7 +172,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" line="29" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" bodystart="29" bodyend="42"/>
+    <location file="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" line="37" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/TileTypes.hpp" bodystart="38" bodyend="54"/>
     <listofallmembers>
       <member refid="structkn_1_1_tile_1a65ccf5af9c9b8459015fcb3caa45e9dc" prot="public" virt="non-virtual"><scope>kn::Object</scope><name>crop</name></member>
       <member refid="structkn_1_1_object_1a5b92582712f27acced7d23d68758411a" prot="public" virt="non-virtual"><scope>kn::Object</scope><name>name</name></member>

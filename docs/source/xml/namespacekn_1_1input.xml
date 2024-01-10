@@ -3,30 +3,23 @@
   <compounddef id="namespacekn_1_1input" kind="namespace" language="C++">
     <compoundname>kn::input</compoundname>
     <sectiondef kind="func">
-      <memberdef kind="function" id="namespacekn_1_1input_1ad2963cf8c16bcc43919b2b8ef89c1374" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacekn_1_1input_1ab94bdc7cf362294b49bad95aaefbc40e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
         <definition>math::Vec2 kn::input::getMousePos</definition>
-        <argsstring>(int scale=1)</argsstring>
+        <argsstring>()</argsstring>
         <name>getMousePos</name>
         <qualifiedname>kn::input::getMousePos</qualifiedname>
-        <param>
-          <type>int</type>
-          <declname>scale</declname>
-          <defval>1</defval>
-        </param>
         <briefdescription>
 <para>Get the mouse position. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>The mouse position. </para>
 </simplesect>
-<simplesect kind="warning"><para>The scale parameter is temporary. </para>
-</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Input.hpp" line="16" column="12" declfile="D:/Code/c++/Kraken-Engine/include/Input.hpp" declline="16" declcolumn="12"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Input.hpp" line="19" column="12" declfile="D:/Code/c++/Kraken-Engine/include/Input.hpp" declline="19" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1input_1a56c5538ff782a7797cb2f4c17b96f998" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const int</type>
@@ -44,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Input.hpp" line="20" column="11" declfile="D:/Code/c++/Kraken-Engine/include/Input.hpp" declline="20" declcolumn="11"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Input.hpp" line="26" column="11" declfile="D:/Code/c++/Kraken-Engine/include/Input.hpp" declline="26" declcolumn="11"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1input_1a07334d96762236043c84d75f3504d480" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const Uint8 *</type>
@@ -62,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Input.hpp" line="24" column="13" declfile="D:/Code/c++/Kraken-Engine/include/Input.hpp" declline="24" declcolumn="13"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Input.hpp" line="33" column="13" declfile="D:/Code/c++/Kraken-Engine/include/Input.hpp" declline="33" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1input_1a8377d83a300ef4ffd6e0ea78839ed6ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
@@ -123,7 +116,7 @@
 <parametername>down</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The keys to move down. </para>
+<para>The keys to move down.</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -133,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Input.hpp" line="32" column="12" declfile="D:/Code/c++/Kraken-Engine/include/Input.hpp" declline="32" declcolumn="12"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Input.hpp" line="45" column="12" declfile="D:/Code/c++/Kraken-Engine/include/Input.hpp" declline="45" declcolumn="12"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

@@ -39,25 +39,27 @@
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SDL.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacekn" kindref="compound">kn</ref><sp/>{</highlight></codeline>
-<codeline lineno="7" refid="namespacekn_1_1time" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">time<sp/>{</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11" refid="classkn_1_1time_1_1_clock" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classkn_1_1time_1_1_clock" kindref="compound">Clock</ref><sp/>final<sp/>{</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="13" refid="classkn_1_1time_1_1_clock_1a01ac404d47e055669c1a69b79b4a7fd8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1time_1_1_clock_1a01ac404d47e055669c1a69b79b4a7fd8" kindref="member">Clock</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="14" refid="classkn_1_1time_1_1_clock_1a56cc398c51d9cb271b2d405999e2152b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1time_1_1_clock_1a56cc398c51d9cb271b2d405999e2152b" kindref="member">~Clock</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19" refid="classkn_1_1time_1_1_clock_1a6d4652b18060b534cad6dedf9f021c56" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1time_1_1_clock_1a6d4652b18060b534cad6dedf9f021c56" kindref="member">tick</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>frameRate<sp/>=<sp/>60);</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacekn" kindref="compound">kn</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7" refid="namespacekn_1_1time" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">time</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="classkn_1_1time_1_1_clock" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classkn_1_1time_1_1_clock" kindref="compound">Clock</ref><sp/>final</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18" refid="classkn_1_1time_1_1_clock_1a01ac404d47e055669c1a69b79b4a7fd8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1time_1_1_clock_1a01ac404d47e055669c1a69b79b4a7fd8" kindref="member">Clock</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19" refid="classkn_1_1time_1_1_clock_1a56cc398c51d9cb271b2d405999e2152b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1time_1_1_clock_1a56cc398c51d9cb271b2d405999e2152b" kindref="member">~Clock</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>frameTime,<sp/>targetFrameTime,<sp/>deltaTime;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>frequency<sp/>=<sp/>SDL_GetPerformanceFrequency();</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>now,<sp/>last<sp/>=<sp/>SDL_GetPerformanceCounter();</highlight></codeline>
-<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28" refid="classkn_1_1time_1_1_clock_1a6d4652b18060b534cad6dedf9f021c56" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1time_1_1_clock_1a6d4652b18060b534cad6dedf9f021c56" kindref="member">tick</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>frameRate<sp/>=<sp/>60);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31" refid="classkn_1_1time_1_1_clock_1ae17a2688be0a7f31c6ce9edca697085a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1time_1_1_clock_1a7f1f72c3b782c1b2bfc2c8342b9c673b" kindref="member">frameTime</ref>,<sp/><ref refid="classkn_1_1time_1_1_clock_1a5961b337680bcdeeeaddd95f8e916c2e" kindref="member">targetFrameTime</ref>,<sp/><ref refid="classkn_1_1time_1_1_clock_1ae17a2688be0a7f31c6ce9edca697085a" kindref="member">deltaTime</ref>;</highlight></codeline>
+<codeline lineno="32" refid="classkn_1_1time_1_1_clock_1ae61b9cac713eae497f93f6958086263a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1time_1_1_clock_1ae61b9cac713eae497f93f6958086263a" kindref="member">frequency</ref><sp/>=<sp/>SDL_GetPerformanceFrequency();</highlight></codeline>
+<codeline lineno="33" refid="classkn_1_1time_1_1_clock_1a336ee3c672af4dea1d9e3a1ddff8cea3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1time_1_1_clock_1a7c0b8024e62cde73189387621ef14e53" kindref="member">now</ref>,<sp/><ref refid="classkn_1_1time_1_1_clock_1a336ee3c672af4dea1d9e3a1ddff8cea3" kindref="member">last</ref><sp/>=<sp/>SDL_GetPerformanceCounter();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp"/>
   </compounddef>

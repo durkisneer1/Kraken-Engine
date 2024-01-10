@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="54" column="13" bodyfile="D:/Code/c++/Kraken-Engine/include/Texture.hpp" bodystart="54" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="88" column="13" bodyfile="D:/Code/c++/Kraken-Engine/include/Texture.hpp" bodystart="88" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classkn_1_1_texture_1adab188c37844140c770355bf866e78d6" prot="private" static="no" mutable="no">
         <type><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref></type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="55" column="6" bodyfile="D:/Code/c++/Kraken-Engine/include/Texture.hpp" bodystart="55" bodyend="55"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="89" column="6" bodyfile="D:/Code/c++/Kraken-Engine/include/Texture.hpp" bodystart="89" bodyend="89"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -55,11 +55,11 @@
 <parametername>texture</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The SDL texture. </para>
+<para>The SDL texture.</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="note"><para>This function is not meant to be used by the user. </para>
+<simplesect kind="note"><para>This function is not meant to be used by the user.</para>
 </simplesect>
 <simplesect kind="see"><para><ref refid="classkn_1_1_texture_cache_1a424624eee8b1e356b12df8f06998f35f" kindref="member">TextureCache::load()</ref> </para>
 </simplesect>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="20" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="28" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_texture_1ae4785568dda681fa59d113386d9a7d4f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="22" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/Texture.hpp" bodystart="22" bodyend="22"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="30" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/Texture.hpp" bodystart="30" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_texture_1af30316f09cd6b90c97bc90a6c14be8f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="26" column="12"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="41" column="12"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_texture_1aaba7a220422a6668b367cf389ac4ef8f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref></type>
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="30" column="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="48" column="6"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_texture_1ad5357fc2ee9cfd5493dfa3011c53ae90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>SDL_Texture *</type>
@@ -133,7 +133,7 @@
 <para>Get the SDL texture. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>The SDL texture. </para>
+<para><simplesect kind="return"><para>The SDL texture.</para>
 </simplesect>
 <simplesect kind="note"><para>This function is not meant to be used by the user. </para>
 </simplesect>
@@ -141,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="35" column="13"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="57" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_texture_1a4cca93b84d6c9ab81da1b6c0d49538b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -170,7 +170,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="39" column="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="64" column="6"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_texture_1adfd084306118f21108cafc82a5827622" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -199,7 +199,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="43" column="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="71" column="6"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_texture_1a6723044a4faaaa35526174fc4d36a3da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -228,7 +228,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="47" column="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="78" column="6"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_texture_1a558c7e7566f3e2d3c11346cc8179771a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -257,7 +257,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="51" column="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="85" column="6"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -273,7 +273,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="57" column="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="91" column="6"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -281,7 +281,25 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="12" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/Texture.hpp" bodystart="12" bodyend="58"/>
+    <collaborationgraph>
+      <node id="3">
+        <label>SDL_FRect</label>
+      </node>
+      <node id="2">
+        <label>kn::Rect</label>
+        <link refid="structkn_1_1_rect"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>kn::Texture</label>
+        <link refid="classkn_1_1_texture"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>rect</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="14" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/Texture.hpp" bodystart="15" bodyend="92"/>
     <listofallmembers>
       <member refid="classkn_1_1_texture_1a558c7e7566f3e2d3c11346cc8179771a" prot="public" virt="non-virtual"><scope>kn::Texture</scope><name>fitHeight</name></member>
       <member refid="classkn_1_1_texture_1a6723044a4faaaa35526174fc4d36a3da" prot="public" virt="non-virtual"><scope>kn::Texture</scope><name>fitWidth</name></member>

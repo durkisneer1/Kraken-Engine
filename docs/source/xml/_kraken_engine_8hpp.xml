@@ -10,7 +10,7 @@
     <includes refid="_math_8hpp" local="yes">Math.hpp</includes>
     <includes refid="_rect_8hpp" local="yes">Rect.hpp</includes>
     <includes refid="_render_window_8hpp" local="yes">RenderWindow.hpp</includes>
-    <includes refid="_sprite_8hpp" local="yes">Sprite.hpp</includes>
+    <includes refid="_entity_8hpp" local="yes">Entity.hpp</includes>
     <includes refid="_texture_8hpp" local="yes">Texture.hpp</includes>
     <includes refid="_texture_cache_8hpp" local="yes">TextureCache.hpp</includes>
     <includes refid="_tile_map_8hpp" local="yes">TileMap.hpp</includes>
@@ -31,6 +31,24 @@
         <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>Entity.hpp</label>
+        <link refid="_entity_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="16">
@@ -135,24 +153,6 @@
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
-        </childnode>
-      </node>
-      <node id="18">
-        <label>Sprite.hpp</label>
-        <link refid="_sprite_8hpp"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="12">
@@ -271,7 +271,7 @@
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_math_8hpp" kindref="compound">Math.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_rect_8hpp" kindref="compound">Rect.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_render_window_8hpp" kindref="compound">RenderWindow.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_sprite_8hpp" kindref="compound">Sprite.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_entity_8hpp" kindref="compound">Entity.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_texture_8hpp" kindref="compound">Texture.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_texture_cache_8hpp" kindref="compound">TextureCache.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_tile_map_8hpp" kindref="compound">TileMap.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
