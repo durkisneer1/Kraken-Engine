@@ -13,7 +13,7 @@ static std::string title = "Kraken";
 static bool fullscreen = false;
 
 
-static RenderWindow& RenderWindow::getInstance()
+RenderWindow& RenderWindow::getInstance()
 {
     static RenderWindow __instance;
     instanceCreated = true;
@@ -196,7 +196,7 @@ void RenderWindow::setFullscreen(bool fullscreenValue)
 	}
 }
 
-static bool RenderWindow::setScale(int newScale)
+bool RenderWindow::setScale(int newScale)
 {
     if (instanceCreated)
     {
