@@ -29,7 +29,7 @@ public:
      * 
      * @return reference to the instance
      */
-    RenderWindow& getInstance();
+    static RenderWindow& getInstance();
 
     /**
      * @brief Clear the screen.
