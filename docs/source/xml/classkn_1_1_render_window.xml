@@ -35,7 +35,7 @@
         <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="143" column="16" bodyfile="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" bodystart="143" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classkn_1_1_render_window_1a7d4c099a91f79a02d56d8ce0c6419010" prot="private" static="no" mutable="no">
-        <type><ref refid="_constants_8hpp_1a388284301502e072989be8df6a52af9b" kindref="member">KN_Event</ref></type>
+        <type>KN_Event</type>
         <definition>KN_Event kn::RenderWindow::m_event</definition>
         <argsstring></argsstring>
         <name>m_event</name>
@@ -462,7 +462,7 @@
         <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="90" column="18" bodyfile="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" bodystart="90" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_render_window_1ab6fe3057df99ba603aa118958a69918c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>const std::vector&lt; <ref refid="_constants_8hpp_1a388284301502e072989be8df6a52af9b" kindref="member">KN_Event</ref> &gt; &amp;</type>
+        <type>const std::vector&lt; KN_Event &gt; &amp;</type>
         <definition>const std::vector&lt; KN_Event &gt; &amp; kn::RenderWindow::getEvents</definition>
         <argsstring>()</argsstring>
         <name>getEvents</name>
