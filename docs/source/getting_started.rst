@@ -12,18 +12,22 @@ After following the :doc:`installation` guide, you are ready for your first Krak
 
     #include <KrakenEngine.hpp>
 
-    const kn::math::Vec2 kn::SCREEN_SIZE = { 800, 600 };
+    const kn::math::Vec2 kn::SCREEN_SIZE = {800, 600};
 
 
-    int main() {
-        kn::RenderWindow window;
+    int main()
+    {
+        kn::RenderWindow& window = kn::RenderWindow::getInstance();
+        window.setTitle("Hello World!");
         kn::time::Clock clock;
 
         bool done = false;
-        while (!done) {
-            double deltaTime = clock.tick(60);
+        while (!done)
+        {
+            clock.tick();
 
-            for (const auto& event : window.getEvents()) {
+            for (const auto &event : window.getEvents())
+            {
                 if (event.type == KN_QUIT) done = true;
             }
 
