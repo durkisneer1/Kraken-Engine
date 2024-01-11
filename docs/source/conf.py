@@ -1,7 +1,10 @@
 import subprocess
 subprocess.call('doxygen', shell=True)
 
-extensions = ['breathe']
+extensions = [
+    'breathe',
+    'sphinx.ext.autosectionlabel',
+]
 
 breathe_projects = {'KrakenEngine' : 'xml'}
 breathe_default_project = 'KrakenEngine'
@@ -19,5 +22,7 @@ html_theme = 'furo'
 html_title = 'Kraken Engine'
 
 html_theme_options = {
-    'sidebar_hide_name': False,  # Set to True once logo is in place
+    'light_logo': 'kraken_engine_logo.png',
+    'dark_logo': 'kraken_engine_logo.png',
+    'sidebar_hide_name': True,  # Set to True once logo is in place
 }

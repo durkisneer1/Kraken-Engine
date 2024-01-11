@@ -7,15 +7,8 @@
     <includes local="no">SDL.h</includes>
     <includes local="no">SDL_ttf.h</includes>
     <includes refid="_texture_8hpp" local="yes">Texture.hpp</includes>
-    <includes refid="_render_window_8hpp" local="yes">RenderWindow.hpp</includes>
     <includedby refid="_kraken_engine_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/KrakenEngine.hpp</includedby>
     <incdepgraph>
-      <node id="14">
-        <label>Constants.hpp</label>
-        <link refid="_constants_8hpp"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
       <node id="1">
         <label>D:/Code/c++/Kraken-Engine/include/Font.hpp</label>
         <link refid="_font_8hpp"/>
@@ -28,8 +21,6 @@
         <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="9">
@@ -52,32 +43,6 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="10">
-        <label>RenderWindow.hpp</label>
-        <link refid="_render_window_8hpp"/>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
       <node id="6">
         <label>Texture.hpp</label>
         <link refid="_texture_8hpp"/>
@@ -91,12 +56,6 @@
       <node id="4">
         <label>SDL.h</label>
       </node>
-      <node id="12">
-        <label>SDL_image.h</label>
-      </node>
-      <node id="13">
-        <label>SDL_mixer.h</label>
-      </node>
       <node id="5">
         <label>SDL_ttf.h</label>
       </node>
@@ -105,9 +64,6 @@
       </node>
       <node id="3">
         <label>string</label>
-      </node>
-      <node id="11">
-        <label>vector</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
@@ -138,24 +94,27 @@
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SDL_ttf.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_texture_8hpp" kindref="compound">Texture.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_render_window_8hpp" kindref="compound">RenderWindow.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacekn" kindref="compound">kn</ref><sp/>{</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16" refid="classkn_1_1_font" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classkn_1_1_font" kindref="compound">Font</ref><sp/>final<sp/>{</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="22" refid="classkn_1_1_font_1a54b9e597cb11a64004317019f21ae7b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1_font_1a54b9e597cb11a64004317019f21ae7b1" kindref="member">Font</ref>(<ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref>&amp;<sp/>window,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;fileDir,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ptSize);</highlight></codeline>
-<codeline lineno="23" refid="classkn_1_1_font_1a688854abdf5091614a6b372105480951" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1_font_1a688854abdf5091614a6b372105480951" kindref="member">~Font</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(font)<sp/>TTF_CloseFont(font);<sp/>}</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31" refid="classkn_1_1_font_1a68577f815a17a8bc8a7c4ed3a891ab29" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;Texture&gt;<sp/><ref refid="classkn_1_1_font_1a68577f815a17a8bc8a7c4ed3a891ab29" kindref="member">render</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;text,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>antialias,<sp/>SDL_Color<sp/>color,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wrapLength<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacekn" kindref="compound">kn</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="classkn_1_1_font" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classkn_1_1_font" kindref="compound">Font</ref><sp/>final</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26" refid="classkn_1_1_font_1a8fe856a038876c396e1a85045bcf1381" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1_font_1a8fe856a038876c396e1a85045bcf1381" kindref="member">Font</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;fileDir,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ptSize);</highlight></codeline>
+<codeline lineno="27" refid="classkn_1_1_font_1a688854abdf5091614a6b372105480951" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1_font_1a688854abdf5091614a6b372105480951" kindref="member">~Font</ref>()</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classkn_1_1_font_1a9cfe3d2d2f81f1f3cae6524240bb418e" kindref="member">font</ref>)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TTF_CloseFont(<ref refid="classkn_1_1_font_1a9cfe3d2d2f81f1f3cae6524240bb418e" kindref="member">font</ref>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref>&amp;<sp/>window;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>TTF_Font*<sp/>font;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43" refid="classkn_1_1_font_1a68577f815a17a8bc8a7c4ed3a891ab29" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;Texture&gt;<sp/><ref refid="classkn_1_1_font_1a68577f815a17a8bc8a7c4ed3a891ab29" kindref="member">render</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;text,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>antialias,<sp/>SDL_Color<sp/>color,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wrapLength<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46" refid="classkn_1_1_font_1a9cfe3d2d2f81f1f3cae6524240bb418e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>TTF_Font<sp/>*<ref refid="classkn_1_1_font_1a9cfe3d2d2f81f1f3cae6524240bb418e" kindref="member">font</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="D:/Code/c++/Kraken-Engine/include/Font.hpp"/>
   </compounddef>

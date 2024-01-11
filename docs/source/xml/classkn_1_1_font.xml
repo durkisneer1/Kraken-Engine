@@ -4,20 +4,6 @@
     <compoundname>kn::Font</compoundname>
     <includes refid="_font_8hpp" local="no">Font.hpp</includes>
     <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classkn_1_1_font_1ac367391d305a0f78e6e79634e85adcfa" prot="private" static="no" mutable="no">
-        <type><ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref> &amp;</type>
-        <definition>RenderWindow&amp; kn::Font::window</definition>
-        <argsstring></argsstring>
-        <name>window</name>
-        <qualifiedname>kn::Font::window</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Font.hpp" line="34" column="14" bodyfile="D:/Code/c++/Kraken-Engine/include/Font.hpp" bodystart="34" bodyend="-1"/>
-      </memberdef>
       <memberdef kind="variable" id="classkn_1_1_font_1a9cfe3d2d2f81f1f3cae6524240bb418e" prot="private" static="no" mutable="no">
         <type>TTF_Font *</type>
         <definition>TTF_Font* kn::Font::font</definition>
@@ -30,20 +16,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Font.hpp" line="35" column="10" bodyfile="D:/Code/c++/Kraken-Engine/include/Font.hpp" bodystart="35" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Font.hpp" line="46" column="10" bodyfile="D:/Code/c++/Kraken-Engine/include/Font.hpp" bodystart="46" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classkn_1_1_font_1a54b9e597cb11a64004317019f21ae7b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classkn_1_1_font_1a8fe856a038876c396e1a85045bcf1381" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>kn::Font::Font</definition>
-        <argsstring>(RenderWindow &amp;window, const std::string &amp;fileDir, int ptSize)</argsstring>
+        <argsstring>(const std::string &amp;fileDir, int ptSize)</argsstring>
         <name>Font</name>
         <qualifiedname>kn::Font::Font</qualifiedname>
-        <param>
-          <type><ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref> &amp;</type>
-          <declname>window</declname>
-        </param>
         <param>
           <type>const std::string &amp;</type>
           <declname>fileDir</declname>
@@ -57,14 +39,6 @@
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>window</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The renderer context. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
 <parameternamelist>
 <parametername>fileDir</parametername>
 </parameternamelist>
@@ -85,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Font.hpp" line="22" column="1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Font.hpp" line="26" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_font_1a688854abdf5091614a6b372105480951" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -99,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Font.hpp" line="23" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/Font.hpp" bodystart="23" bodyend="23"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Font.hpp" line="27" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/Font.hpp" bodystart="27" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_font_1a68577f815a17a8bc8a7c4ed3a891ab29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::shared_ptr&lt; <ref refid="classkn_1_1_texture" kindref="compound">Texture</ref> &gt;</type>
@@ -157,7 +131,7 @@
 <parametername>wrapLength</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The length to wrap the text. </para>
+<para>The length to wrap the text.</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -167,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Font.hpp" line="31" column="17"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Font.hpp" line="43" column="17"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -175,12 +149,11 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Code/c++/Kraken-Engine/include/Font.hpp" line="16" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/Font.hpp" bodystart="16" bodyend="36"/>
+    <location file="D:/Code/c++/Kraken-Engine/include/Font.hpp" line="17" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/Font.hpp" bodystart="18" bodyend="47"/>
     <listofallmembers>
       <member refid="classkn_1_1_font_1a9cfe3d2d2f81f1f3cae6524240bb418e" prot="private" virt="non-virtual"><scope>kn::Font</scope><name>font</name></member>
-      <member refid="classkn_1_1_font_1a54b9e597cb11a64004317019f21ae7b1" prot="public" virt="non-virtual"><scope>kn::Font</scope><name>Font</name></member>
+      <member refid="classkn_1_1_font_1a8fe856a038876c396e1a85045bcf1381" prot="public" virt="non-virtual"><scope>kn::Font</scope><name>Font</name></member>
       <member refid="classkn_1_1_font_1a68577f815a17a8bc8a7c4ed3a891ab29" prot="public" virt="non-virtual"><scope>kn::Font</scope><name>render</name></member>
-      <member refid="classkn_1_1_font_1ac367391d305a0f78e6e79634e85adcfa" prot="private" virt="non-virtual"><scope>kn::Font</scope><name>window</name></member>
       <member refid="classkn_1_1_font_1a688854abdf5091614a6b372105480951" prot="public" virt="non-virtual"><scope>kn::Font</scope><name>~Font</name></member>
     </listofallmembers>
   </compounddef>

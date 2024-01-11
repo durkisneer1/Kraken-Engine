@@ -26,15 +26,11 @@
         </childnode>
       </node>
       <node id="4">
-        <label>D:/Code/c++/Kraken-Engine/include/Draw.hpp</label>
-        <link refid="_draw_8hpp"/>
+        <label>D:/Code/c++/Kraken-Engine/include/Entity.hpp</label>
+        <link refid="_entity_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-      </node>
-      <node id="5">
-        <label>D:/Code/c++/Kraken-Engine/include/Font.hpp</label>
-        <link refid="_font_8hpp"/>
-        <childnode refid="2" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -46,980 +42,19 @@
         <link refid="_render_window_8hpp"/>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
       </node>
-      <node id="6">
-        <label>D:/Code/c++/Kraken-Engine/include/Sprite.hpp</label>
-        <link refid="_sprite_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
-        <label>D:/Code/c++/Kraken-Engine/include/TextureCache.hpp</label>
-        <link refid="_texture_cache_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
+      <node id="5">
         <label>D:/Code/c++/Kraken-Engine/include/TileMap.hpp</label>
         <link refid="_tile_map_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
-    <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="_constants_8hpp_1a6fccfe97e93ac02cbe2173f6a90870e4" prot="public" static="no">
-        <type>SDL_Scancode</type>
-        <definition>typedef SDL_Scancode KN_KEYS</definition>
-        <argsstring></argsstring>
-        <name>KN_KEYS</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="5" column="22" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="5" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="_constants_8hpp_1a388284301502e072989be8df6a52af9b" prot="public" static="no">
-        <type>SDL_Event</type>
-        <definition>typedef SDL_Event KN_Event</definition>
-        <argsstring></argsstring>
-        <name>KN_Event</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="6" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="6" bodyend="-1"/>
-      </memberdef>
-    </sectiondef>
-    <sectiondef kind="var">
-      <memberdef kind="variable" id="_constants_8hpp_1aabafa1abdd22543237a1bddbc41c8aed" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_w</definition>
-        <argsstring></argsstring>
-        <name>KNK_w</name>
-        <initializer>= SDL_SCANCODE_W</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="8" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="8" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a2de4919931276c8b89ad2a6434b396d2" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_a</definition>
-        <argsstring></argsstring>
-        <name>KNK_a</name>
-        <initializer>= SDL_SCANCODE_A</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="9" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="9" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a2dade73f66b9a46687d6a0dcc3f5a241" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_s</definition>
-        <argsstring></argsstring>
-        <name>KNK_s</name>
-        <initializer>= SDL_SCANCODE_S</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="10" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="10" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1ac7ed124278b9ed7aea9ed34594200437" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_d</definition>
-        <argsstring></argsstring>
-        <name>KNK_d</name>
-        <initializer>= SDL_SCANCODE_D</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="11" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="11" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1af0f66b43ba24cb4bfeb93e776f0daf5e" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_q</definition>
-        <argsstring></argsstring>
-        <name>KNK_q</name>
-        <initializer>= SDL_SCANCODE_Q</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="12" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="12" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a1f27fdb8576700efd2d3da455be7fc06" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_e</definition>
-        <argsstring></argsstring>
-        <name>KNK_e</name>
-        <initializer>= SDL_SCANCODE_E</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="13" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="13" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a7080b33f88220da9760dcfefccd28473" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_r</definition>
-        <argsstring></argsstring>
-        <name>KNK_r</name>
-        <initializer>= SDL_SCANCODE_R</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="14" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="14" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a791196b2b1f40cb5a3843f18661b9bda" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_f</definition>
-        <argsstring></argsstring>
-        <name>KNK_f</name>
-        <initializer>= SDL_SCANCODE_F</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="15" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="15" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a6ba219fd9947b8de2fb85f86079398d1" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_t</definition>
-        <argsstring></argsstring>
-        <name>KNK_t</name>
-        <initializer>= SDL_SCANCODE_T</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="16" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="16" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1ae979be5e200d0b2214184c596e985ce9" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_g</definition>
-        <argsstring></argsstring>
-        <name>KNK_g</name>
-        <initializer>= SDL_SCANCODE_G</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="17" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="17" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a8e6f71ddd2d9962ca1a0f1f05d914d69" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_y</definition>
-        <argsstring></argsstring>
-        <name>KNK_y</name>
-        <initializer>= SDL_SCANCODE_Y</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="18" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="18" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a14c8cb5cb02ac092a4afdc2eb765c0ad" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_h</definition>
-        <argsstring></argsstring>
-        <name>KNK_h</name>
-        <initializer>= SDL_SCANCODE_H</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="19" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="19" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a75233e826bf70b86857f0d420c68c2a8" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_u</definition>
-        <argsstring></argsstring>
-        <name>KNK_u</name>
-        <initializer>= SDL_SCANCODE_U</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="20" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="20" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1aa940a944b1a75dfd893f39b7ec5af904" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_j</definition>
-        <argsstring></argsstring>
-        <name>KNK_j</name>
-        <initializer>= SDL_SCANCODE_J</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="21" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="21" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1abc1fb36e9da37b98f233abb37827d081" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_i</definition>
-        <argsstring></argsstring>
-        <name>KNK_i</name>
-        <initializer>= SDL_SCANCODE_I</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="22" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="22" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a00251225f44022f190b3abeb76c58804" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_k</definition>
-        <argsstring></argsstring>
-        <name>KNK_k</name>
-        <initializer>= SDL_SCANCODE_K</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="23" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="23" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1ac2e73ddb0a3bc35ca1d8008098f645a1" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_o</definition>
-        <argsstring></argsstring>
-        <name>KNK_o</name>
-        <initializer>= SDL_SCANCODE_O</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="24" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="24" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a5b9cade3108ab7fe82996f1023253c75" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_l</definition>
-        <argsstring></argsstring>
-        <name>KNK_l</name>
-        <initializer>= SDL_SCANCODE_L</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="25" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="25" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a1615b0ac9700aa5171ee87b7eb97ebc9" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_p</definition>
-        <argsstring></argsstring>
-        <name>KNK_p</name>
-        <initializer>= SDL_SCANCODE_P</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="26" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="26" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a6abe28a3cacc914f5d6783eaaef38b94" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_z</definition>
-        <argsstring></argsstring>
-        <name>KNK_z</name>
-        <initializer>= SDL_SCANCODE_Z</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="27" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="27" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a977b717ab67f7aa8c4ec03e4d66581f3" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_x</definition>
-        <argsstring></argsstring>
-        <name>KNK_x</name>
-        <initializer>= SDL_SCANCODE_X</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="28" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="28" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a867117869b0fed18588b8aa7622c234b" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_c</definition>
-        <argsstring></argsstring>
-        <name>KNK_c</name>
-        <initializer>= SDL_SCANCODE_C</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="29" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="29" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a1b8a21aabff9e161d2ffac34d5da3abf" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_v</definition>
-        <argsstring></argsstring>
-        <name>KNK_v</name>
-        <initializer>= SDL_SCANCODE_V</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="30" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="30" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a3f5f4c374bf39190ed9f64e2259182f4" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_b</definition>
-        <argsstring></argsstring>
-        <name>KNK_b</name>
-        <initializer>= SDL_SCANCODE_B</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="31" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="31" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1aca66f4b74ee9845da3a447689a01977b" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_n</definition>
-        <argsstring></argsstring>
-        <name>KNK_n</name>
-        <initializer>= SDL_SCANCODE_N</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="32" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="32" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a37b850575f20e7d81657e6ed390e7674" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_m</definition>
-        <argsstring></argsstring>
-        <name>KNK_m</name>
-        <initializer>= SDL_SCANCODE_M</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="33" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="33" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a0630e71e8413c612301c0c6b79798b03" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_0</definition>
-        <argsstring></argsstring>
-        <name>KNK_0</name>
-        <initializer>= SDL_SCANCODE_0</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="34" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="34" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1aa6939fa021f4ebaff0adbca1a8c4db5a" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_1</definition>
-        <argsstring></argsstring>
-        <name>KNK_1</name>
-        <initializer>= SDL_SCANCODE_1</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="35" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="35" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a1feb7fa2ab4a09db04905de33c1281ff" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_2</definition>
-        <argsstring></argsstring>
-        <name>KNK_2</name>
-        <initializer>= SDL_SCANCODE_2</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="36" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="36" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a168111e952cbc78fdaf7cd5b4ab3f39b" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_3</definition>
-        <argsstring></argsstring>
-        <name>KNK_3</name>
-        <initializer>= SDL_SCANCODE_3</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="37" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="37" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a25062dc8989d9f97b2da71cdc791dd9f" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_4</definition>
-        <argsstring></argsstring>
-        <name>KNK_4</name>
-        <initializer>= SDL_SCANCODE_4</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="38" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="38" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a0c38d0c2bcb626a6037e01b46d1188df" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_5</definition>
-        <argsstring></argsstring>
-        <name>KNK_5</name>
-        <initializer>= SDL_SCANCODE_5</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="39" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="39" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1aa758f27cb1a4440d5b48fe66850853f4" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_6</definition>
-        <argsstring></argsstring>
-        <name>KNK_6</name>
-        <initializer>= SDL_SCANCODE_6</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="40" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="40" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1adf59a01e7016074489cf0721ebba75d6" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_7</definition>
-        <argsstring></argsstring>
-        <name>KNK_7</name>
-        <initializer>= SDL_SCANCODE_7</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="41" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="41" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1ad58574ee09f7f64a804545d5307df791" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_8</definition>
-        <argsstring></argsstring>
-        <name>KNK_8</name>
-        <initializer>= SDL_SCANCODE_8</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="42" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="42" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a1b08abf69dbebaf9dc10cdffa2810c63" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_9</definition>
-        <argsstring></argsstring>
-        <name>KNK_9</name>
-        <initializer>= SDL_SCANCODE_9</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="43" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="43" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a0d19455fcfb74a887e47eb16ed66bb79" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_left</definition>
-        <argsstring></argsstring>
-        <name>KNK_left</name>
-        <initializer>= SDL_SCANCODE_LEFT</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="44" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="44" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1abfd7a40328af31fa446b73d265bdc49a" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_right</definition>
-        <argsstring></argsstring>
-        <name>KNK_right</name>
-        <initializer>= SDL_SCANCODE_RIGHT</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="45" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="45" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1ac1f59d785ecb8abdfd36d9dfa1d53bd4" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_down</definition>
-        <argsstring></argsstring>
-        <name>KNK_down</name>
-        <initializer>= SDL_SCANCODE_DOWN</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="46" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="46" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a92ae32736ae9027ec5875bd31f9edcad" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_up</definition>
-        <argsstring></argsstring>
-        <name>KNK_up</name>
-        <initializer>= SDL_SCANCODE_UP</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="47" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="47" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a38b9785b4642b2ede3dda81ef14365eb" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_space</definition>
-        <argsstring></argsstring>
-        <name>KNK_space</name>
-        <initializer>= SDL_SCANCODE_SPACE</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="48" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="48" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a67e32a23049bf18c775239c9b9719381" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_return</definition>
-        <argsstring></argsstring>
-        <name>KNK_return</name>
-        <initializer>= SDL_SCANCODE_RETURN</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="49" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="49" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a84197bd9c88ced838856e79fa3a770a1" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_backspace</definition>
-        <argsstring></argsstring>
-        <name>KNK_backspace</name>
-        <initializer>= SDL_SCANCODE_BACKSPACE</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="50" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="50" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a8d526b9f00c134d1963bf83a36fe2965" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_tab</definition>
-        <argsstring></argsstring>
-        <name>KNK_tab</name>
-        <initializer>= SDL_SCANCODE_TAB</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="51" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="51" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a4e85c30ba07251e5f5863458741d73ed" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_lshift</definition>
-        <argsstring></argsstring>
-        <name>KNK_lshift</name>
-        <initializer>= SDL_SCANCODE_LSHIFT</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="52" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="52" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1ae7341b8dc631f041f99e62a04a19a2db" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_rshift</definition>
-        <argsstring></argsstring>
-        <name>KNK_rshift</name>
-        <initializer>= SDL_SCANCODE_RSHIFT</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="53" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="53" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1abdfa2aa9e4357ce95ee795c7f47608ec" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_lctrl</definition>
-        <argsstring></argsstring>
-        <name>KNK_lctrl</name>
-        <initializer>= SDL_SCANCODE_LCTRL</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="54" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="54" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a5a1aa304ea8c3f7a1f1fd4e63a8d8747" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_rctrl</definition>
-        <argsstring></argsstring>
-        <name>KNK_rctrl</name>
-        <initializer>= SDL_SCANCODE_RCTRL</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="55" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="55" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a7442830fdb280ba742aec444f63234d7" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_lalt</definition>
-        <argsstring></argsstring>
-        <name>KNK_lalt</name>
-        <initializer>= SDL_SCANCODE_LALT</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="56" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="56" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a186d0f7880c3e91d517621c8a57bd143" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_ralt</definition>
-        <argsstring></argsstring>
-        <name>KNK_ralt</name>
-        <initializer>= SDL_SCANCODE_RALT</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="57" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="57" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a8e6e206b6d2de6f57405567a6f64b21c" prot="public" static="no" mutable="no">
-        <type>const SDL_Scancode</type>
-        <definition>const SDL_Scancode KNK_esc</definition>
-        <argsstring></argsstring>
-        <name>KNK_esc</name>
-        <initializer>= SDL_SCANCODE_ESCAPE</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="58" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="58" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1af84a12de27f8d047d7361289d2f4b795" prot="public" static="no" mutable="no">
-        <type>const SDL_EventType</type>
-        <definition>const SDL_EventType KN_KEYDOWN</definition>
-        <argsstring></argsstring>
-        <name>KN_KEYDOWN</name>
-        <initializer>= SDL_KEYDOWN</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="60" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="60" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a550c0577732646a978371dbd7d6aa60e" prot="public" static="no" mutable="no">
-        <type>const SDL_EventType</type>
-        <definition>const SDL_EventType KN_KEYUP</definition>
-        <argsstring></argsstring>
-        <name>KN_KEYUP</name>
-        <initializer>= SDL_KEYUP</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="61" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="61" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a06edf5044a278238882a5c87b882bbba" prot="public" static="no" mutable="no">
-        <type>const SDL_EventType</type>
-        <definition>const SDL_EventType KN_QUIT</definition>
-        <argsstring></argsstring>
-        <name>KN_QUIT</name>
-        <initializer>= SDL_QUIT</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="62" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="62" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1ae671e6cc216652ec56066eeaaece7434" prot="public" static="no" mutable="no">
-        <type>const SDL_EventType</type>
-        <definition>const SDL_EventType KN_MOUSEBUTTONDOWN</definition>
-        <argsstring></argsstring>
-        <name>KN_MOUSEBUTTONDOWN</name>
-        <initializer>= SDL_MOUSEBUTTONDOWN</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="63" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="63" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a3fb73a5bdf93bd497af168976ef6c2ef" prot="public" static="no" mutable="no">
-        <type>const SDL_EventType</type>
-        <definition>const SDL_EventType KN_MOUSEBUTTONUP</definition>
-        <argsstring></argsstring>
-        <name>KN_MOUSEBUTTONUP</name>
-        <initializer>= SDL_MOUSEBUTTONUP</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="64" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="64" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a49ffcb5b94866c412cc486c87d2d91b3" prot="public" static="no" mutable="no">
-        <type>const SDL_EventType</type>
-        <definition>const SDL_EventType KN_MOUSEMOTION</definition>
-        <argsstring></argsstring>
-        <name>KN_MOUSEMOTION</name>
-        <initializer>= SDL_MOUSEMOTION</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="65" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="65" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1af3001008ed132768602f3fc2f0d407eb" prot="public" static="no" mutable="no">
-        <type>const SDL_EventType</type>
-        <definition>const SDL_EventType KN_MOUSEWHEEL</definition>
-        <argsstring></argsstring>
-        <name>KN_MOUSEWHEEL</name>
-        <initializer>= SDL_MOUSEWHEEL</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="66" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="66" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a0bf87996b8877764a3d65cb845abbf8c" prot="public" static="no" mutable="no">
-        <type>const SDL_EventType</type>
-        <definition>const SDL_EventType KN_TEXTINPUT</definition>
-        <argsstring></argsstring>
-        <name>KN_TEXTINPUT</name>
-        <initializer>= SDL_TEXTINPUT</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="67" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="67" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1afed215951d7df8f622e56486ab76eab3" prot="public" static="no" mutable="no">
-        <type>const SDL_KeyCode</type>
-        <definition>const SDL_KeyCode KNK_ESCAPE</definition>
-        <argsstring></argsstring>
-        <name>KNK_ESCAPE</name>
-        <initializer>= SDLK_ESCAPE</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="69" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="69" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a03d2ef60cce8e499dcdbcd3c82040495" prot="public" static="no" mutable="no">
-        <type>const SDL_KeyCode</type>
-        <definition>const SDL_KeyCode KNK_RETURN</definition>
-        <argsstring></argsstring>
-        <name>KNK_RETURN</name>
-        <initializer>= SDLK_RETURN</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="70" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="70" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a1b47fbccd464ed59aa64379dfc2732bb" prot="public" static="no" mutable="no">
-        <type>const SDL_KeyCode</type>
-        <definition>const SDL_KeyCode KNK_BACKSPACE</definition>
-        <argsstring></argsstring>
-        <name>KNK_BACKSPACE</name>
-        <initializer>= SDLK_BACKSPACE</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="71" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="71" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1aa9b7ba293562fe5dd748ba763eeb2072" prot="public" static="no" mutable="no">
-        <type>const int</type>
-        <definition>const int KN_BUTTON_LEFT</definition>
-        <argsstring></argsstring>
-        <name>KN_BUTTON_LEFT</name>
-        <initializer>= SDL_BUTTON_LEFT</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="73" column="11" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="73" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a898a21515bd89a2b1f0956158d6b5fee" prot="public" static="no" mutable="no">
-        <type>const int</type>
-        <definition>const int KN_BUTTON_MIDDLE</definition>
-        <argsstring></argsstring>
-        <name>KN_BUTTON_MIDDLE</name>
-        <initializer>= SDL_BUTTON_MIDDLE</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="74" column="11" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="74" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_constants_8hpp_1a881f81ec2c5aa7d01b2123d280563ad7" prot="public" static="no" mutable="no">
-        <type>const int</type>
-        <definition>const int KN_BUTTON_RIGHT</definition>
-        <argsstring></argsstring>
-        <name>KN_BUTTON_RIGHT</name>
-        <initializer>= SDL_BUTTON_RIGHT</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="75" column="11" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="75" bodyend="-1"/>
-      </memberdef>
-    </sectiondef>
+    <innernamespace refid="namespacekn">kn</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -1029,78 +64,226 @@
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SDL.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5" refid="_constants_8hpp_1a6fccfe97e93ac02cbe2173f6a90870e4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a6fccfe97e93ac02cbe2173f6a90870e4" kindref="member">KN_KEYS</ref>;</highlight></codeline>
-<codeline lineno="6" refid="_constants_8hpp_1a388284301502e072989be8df6a52af9b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>SDL_Event<sp/><ref refid="_constants_8hpp_1a388284301502e072989be8df6a52af9b" kindref="member">KN_Event</ref>;</highlight></codeline>
+<codeline lineno="5" refid="namespacekn" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacekn" kindref="compound">kn</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8" refid="_constants_8hpp_1aabafa1abdd22543237a1bddbc41c8aed" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1aabafa1abdd22543237a1bddbc41c8aed" kindref="member">KNK_w</ref><sp/>=<sp/>SDL_SCANCODE_W;</highlight></codeline>
-<codeline lineno="9" refid="_constants_8hpp_1a2de4919931276c8b89ad2a6434b396d2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a2de4919931276c8b89ad2a6434b396d2" kindref="member">KNK_a</ref><sp/>=<sp/>SDL_SCANCODE_A;</highlight></codeline>
-<codeline lineno="10" refid="_constants_8hpp_1a2dade73f66b9a46687d6a0dcc3f5a241" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a2dade73f66b9a46687d6a0dcc3f5a241" kindref="member">KNK_s</ref><sp/>=<sp/>SDL_SCANCODE_S;</highlight></codeline>
-<codeline lineno="11" refid="_constants_8hpp_1ac7ed124278b9ed7aea9ed34594200437" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1ac7ed124278b9ed7aea9ed34594200437" kindref="member">KNK_d</ref><sp/>=<sp/>SDL_SCANCODE_D;</highlight></codeline>
-<codeline lineno="12" refid="_constants_8hpp_1af0f66b43ba24cb4bfeb93e776f0daf5e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1af0f66b43ba24cb4bfeb93e776f0daf5e" kindref="member">KNK_q</ref><sp/>=<sp/>SDL_SCANCODE_Q;</highlight></codeline>
-<codeline lineno="13" refid="_constants_8hpp_1a1f27fdb8576700efd2d3da455be7fc06" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a1f27fdb8576700efd2d3da455be7fc06" kindref="member">KNK_e</ref><sp/>=<sp/>SDL_SCANCODE_E;</highlight></codeline>
-<codeline lineno="14" refid="_constants_8hpp_1a7080b33f88220da9760dcfefccd28473" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a7080b33f88220da9760dcfefccd28473" kindref="member">KNK_r</ref><sp/>=<sp/>SDL_SCANCODE_R;</highlight></codeline>
-<codeline lineno="15" refid="_constants_8hpp_1a791196b2b1f40cb5a3843f18661b9bda" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a791196b2b1f40cb5a3843f18661b9bda" kindref="member">KNK_f</ref><sp/>=<sp/>SDL_SCANCODE_F;</highlight></codeline>
-<codeline lineno="16" refid="_constants_8hpp_1a6ba219fd9947b8de2fb85f86079398d1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a6ba219fd9947b8de2fb85f86079398d1" kindref="member">KNK_t</ref><sp/>=<sp/>SDL_SCANCODE_T;</highlight></codeline>
-<codeline lineno="17" refid="_constants_8hpp_1ae979be5e200d0b2214184c596e985ce9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1ae979be5e200d0b2214184c596e985ce9" kindref="member">KNK_g</ref><sp/>=<sp/>SDL_SCANCODE_G;</highlight></codeline>
-<codeline lineno="18" refid="_constants_8hpp_1a8e6f71ddd2d9962ca1a0f1f05d914d69" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a8e6f71ddd2d9962ca1a0f1f05d914d69" kindref="member">KNK_y</ref><sp/>=<sp/>SDL_SCANCODE_Y;</highlight></codeline>
-<codeline lineno="19" refid="_constants_8hpp_1a14c8cb5cb02ac092a4afdc2eb765c0ad" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a14c8cb5cb02ac092a4afdc2eb765c0ad" kindref="member">KNK_h</ref><sp/>=<sp/>SDL_SCANCODE_H;</highlight></codeline>
-<codeline lineno="20" refid="_constants_8hpp_1a75233e826bf70b86857f0d420c68c2a8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a75233e826bf70b86857f0d420c68c2a8" kindref="member">KNK_u</ref><sp/>=<sp/>SDL_SCANCODE_U;</highlight></codeline>
-<codeline lineno="21" refid="_constants_8hpp_1aa940a944b1a75dfd893f39b7ec5af904" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1aa940a944b1a75dfd893f39b7ec5af904" kindref="member">KNK_j</ref><sp/>=<sp/>SDL_SCANCODE_J;</highlight></codeline>
-<codeline lineno="22" refid="_constants_8hpp_1abc1fb36e9da37b98f233abb37827d081" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1abc1fb36e9da37b98f233abb37827d081" kindref="member">KNK_i</ref><sp/>=<sp/>SDL_SCANCODE_I;</highlight></codeline>
-<codeline lineno="23" refid="_constants_8hpp_1a00251225f44022f190b3abeb76c58804" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a00251225f44022f190b3abeb76c58804" kindref="member">KNK_k</ref><sp/>=<sp/>SDL_SCANCODE_K;</highlight></codeline>
-<codeline lineno="24" refid="_constants_8hpp_1ac2e73ddb0a3bc35ca1d8008098f645a1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1ac2e73ddb0a3bc35ca1d8008098f645a1" kindref="member">KNK_o</ref><sp/>=<sp/>SDL_SCANCODE_O;</highlight></codeline>
-<codeline lineno="25" refid="_constants_8hpp_1a5b9cade3108ab7fe82996f1023253c75" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a5b9cade3108ab7fe82996f1023253c75" kindref="member">KNK_l</ref><sp/>=<sp/>SDL_SCANCODE_L;</highlight></codeline>
-<codeline lineno="26" refid="_constants_8hpp_1a1615b0ac9700aa5171ee87b7eb97ebc9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a1615b0ac9700aa5171ee87b7eb97ebc9" kindref="member">KNK_p</ref><sp/>=<sp/>SDL_SCANCODE_P;</highlight></codeline>
-<codeline lineno="27" refid="_constants_8hpp_1a6abe28a3cacc914f5d6783eaaef38b94" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a6abe28a3cacc914f5d6783eaaef38b94" kindref="member">KNK_z</ref><sp/>=<sp/>SDL_SCANCODE_Z;</highlight></codeline>
-<codeline lineno="28" refid="_constants_8hpp_1a977b717ab67f7aa8c4ec03e4d66581f3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a977b717ab67f7aa8c4ec03e4d66581f3" kindref="member">KNK_x</ref><sp/>=<sp/>SDL_SCANCODE_X;</highlight></codeline>
-<codeline lineno="29" refid="_constants_8hpp_1a867117869b0fed18588b8aa7622c234b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a867117869b0fed18588b8aa7622c234b" kindref="member">KNK_c</ref><sp/>=<sp/>SDL_SCANCODE_C;</highlight></codeline>
-<codeline lineno="30" refid="_constants_8hpp_1a1b8a21aabff9e161d2ffac34d5da3abf" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a1b8a21aabff9e161d2ffac34d5da3abf" kindref="member">KNK_v</ref><sp/>=<sp/>SDL_SCANCODE_V;</highlight></codeline>
-<codeline lineno="31" refid="_constants_8hpp_1a3f5f4c374bf39190ed9f64e2259182f4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a3f5f4c374bf39190ed9f64e2259182f4" kindref="member">KNK_b</ref><sp/>=<sp/>SDL_SCANCODE_B;</highlight></codeline>
-<codeline lineno="32" refid="_constants_8hpp_1aca66f4b74ee9845da3a447689a01977b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1aca66f4b74ee9845da3a447689a01977b" kindref="member">KNK_n</ref><sp/>=<sp/>SDL_SCANCODE_N;</highlight></codeline>
-<codeline lineno="33" refid="_constants_8hpp_1a37b850575f20e7d81657e6ed390e7674" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a37b850575f20e7d81657e6ed390e7674" kindref="member">KNK_m</ref><sp/>=<sp/>SDL_SCANCODE_M;</highlight></codeline>
-<codeline lineno="34" refid="_constants_8hpp_1a0630e71e8413c612301c0c6b79798b03" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a0630e71e8413c612301c0c6b79798b03" kindref="member">KNK_0</ref><sp/>=<sp/>SDL_SCANCODE_0;</highlight></codeline>
-<codeline lineno="35" refid="_constants_8hpp_1aa6939fa021f4ebaff0adbca1a8c4db5a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1aa6939fa021f4ebaff0adbca1a8c4db5a" kindref="member">KNK_1</ref><sp/>=<sp/>SDL_SCANCODE_1;</highlight></codeline>
-<codeline lineno="36" refid="_constants_8hpp_1a1feb7fa2ab4a09db04905de33c1281ff" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a1feb7fa2ab4a09db04905de33c1281ff" kindref="member">KNK_2</ref><sp/>=<sp/>SDL_SCANCODE_2;</highlight></codeline>
-<codeline lineno="37" refid="_constants_8hpp_1a168111e952cbc78fdaf7cd5b4ab3f39b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a168111e952cbc78fdaf7cd5b4ab3f39b" kindref="member">KNK_3</ref><sp/>=<sp/>SDL_SCANCODE_3;</highlight></codeline>
-<codeline lineno="38" refid="_constants_8hpp_1a25062dc8989d9f97b2da71cdc791dd9f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a25062dc8989d9f97b2da71cdc791dd9f" kindref="member">KNK_4</ref><sp/>=<sp/>SDL_SCANCODE_4;</highlight></codeline>
-<codeline lineno="39" refid="_constants_8hpp_1a0c38d0c2bcb626a6037e01b46d1188df" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a0c38d0c2bcb626a6037e01b46d1188df" kindref="member">KNK_5</ref><sp/>=<sp/>SDL_SCANCODE_5;</highlight></codeline>
-<codeline lineno="40" refid="_constants_8hpp_1aa758f27cb1a4440d5b48fe66850853f4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1aa758f27cb1a4440d5b48fe66850853f4" kindref="member">KNK_6</ref><sp/>=<sp/>SDL_SCANCODE_6;</highlight></codeline>
-<codeline lineno="41" refid="_constants_8hpp_1adf59a01e7016074489cf0721ebba75d6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1adf59a01e7016074489cf0721ebba75d6" kindref="member">KNK_7</ref><sp/>=<sp/>SDL_SCANCODE_7;</highlight></codeline>
-<codeline lineno="42" refid="_constants_8hpp_1ad58574ee09f7f64a804545d5307df791" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1ad58574ee09f7f64a804545d5307df791" kindref="member">KNK_8</ref><sp/>=<sp/>SDL_SCANCODE_8;</highlight></codeline>
-<codeline lineno="43" refid="_constants_8hpp_1a1b08abf69dbebaf9dc10cdffa2810c63" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a1b08abf69dbebaf9dc10cdffa2810c63" kindref="member">KNK_9</ref><sp/>=<sp/>SDL_SCANCODE_9;</highlight></codeline>
-<codeline lineno="44" refid="_constants_8hpp_1a0d19455fcfb74a887e47eb16ed66bb79" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a0d19455fcfb74a887e47eb16ed66bb79" kindref="member">KNK_left</ref><sp/>=<sp/>SDL_SCANCODE_LEFT;</highlight></codeline>
-<codeline lineno="45" refid="_constants_8hpp_1abfd7a40328af31fa446b73d265bdc49a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1abfd7a40328af31fa446b73d265bdc49a" kindref="member">KNK_right</ref><sp/>=<sp/>SDL_SCANCODE_RIGHT;</highlight></codeline>
-<codeline lineno="46" refid="_constants_8hpp_1ac1f59d785ecb8abdfd36d9dfa1d53bd4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1ac1f59d785ecb8abdfd36d9dfa1d53bd4" kindref="member">KNK_down</ref><sp/>=<sp/>SDL_SCANCODE_DOWN;</highlight></codeline>
-<codeline lineno="47" refid="_constants_8hpp_1a92ae32736ae9027ec5875bd31f9edcad" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a92ae32736ae9027ec5875bd31f9edcad" kindref="member">KNK_up</ref><sp/>=<sp/>SDL_SCANCODE_UP;</highlight></codeline>
-<codeline lineno="48" refid="_constants_8hpp_1a38b9785b4642b2ede3dda81ef14365eb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a38b9785b4642b2ede3dda81ef14365eb" kindref="member">KNK_space</ref><sp/>=<sp/>SDL_SCANCODE_SPACE;</highlight></codeline>
-<codeline lineno="49" refid="_constants_8hpp_1a67e32a23049bf18c775239c9b9719381" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a67e32a23049bf18c775239c9b9719381" kindref="member">KNK_return</ref><sp/>=<sp/>SDL_SCANCODE_RETURN;</highlight></codeline>
-<codeline lineno="50" refid="_constants_8hpp_1a84197bd9c88ced838856e79fa3a770a1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a84197bd9c88ced838856e79fa3a770a1" kindref="member">KNK_backspace</ref><sp/>=<sp/>SDL_SCANCODE_BACKSPACE;</highlight></codeline>
-<codeline lineno="51" refid="_constants_8hpp_1a8d526b9f00c134d1963bf83a36fe2965" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a8d526b9f00c134d1963bf83a36fe2965" kindref="member">KNK_tab</ref><sp/>=<sp/>SDL_SCANCODE_TAB;</highlight></codeline>
-<codeline lineno="52" refid="_constants_8hpp_1a4e85c30ba07251e5f5863458741d73ed" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a4e85c30ba07251e5f5863458741d73ed" kindref="member">KNK_lshift</ref><sp/>=<sp/>SDL_SCANCODE_LSHIFT;</highlight></codeline>
-<codeline lineno="53" refid="_constants_8hpp_1ae7341b8dc631f041f99e62a04a19a2db" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1ae7341b8dc631f041f99e62a04a19a2db" kindref="member">KNK_rshift</ref><sp/>=<sp/>SDL_SCANCODE_RSHIFT;</highlight></codeline>
-<codeline lineno="54" refid="_constants_8hpp_1abdfa2aa9e4357ce95ee795c7f47608ec" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1abdfa2aa9e4357ce95ee795c7f47608ec" kindref="member">KNK_lctrl</ref><sp/>=<sp/>SDL_SCANCODE_LCTRL;</highlight></codeline>
-<codeline lineno="55" refid="_constants_8hpp_1a5a1aa304ea8c3f7a1f1fd4e63a8d8747" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a5a1aa304ea8c3f7a1f1fd4e63a8d8747" kindref="member">KNK_rctrl</ref><sp/>=<sp/>SDL_SCANCODE_RCTRL;</highlight></codeline>
-<codeline lineno="56" refid="_constants_8hpp_1a7442830fdb280ba742aec444f63234d7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a7442830fdb280ba742aec444f63234d7" kindref="member">KNK_lalt</ref><sp/>=<sp/>SDL_SCANCODE_LALT;</highlight></codeline>
-<codeline lineno="57" refid="_constants_8hpp_1a186d0f7880c3e91d517621c8a57bd143" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a186d0f7880c3e91d517621c8a57bd143" kindref="member">KNK_ralt</ref><sp/>=<sp/>SDL_SCANCODE_RALT;</highlight></codeline>
-<codeline lineno="58" refid="_constants_8hpp_1a8e6e206b6d2de6f57405567a6f64b21c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="_constants_8hpp_1a8e6e206b6d2de6f57405567a6f64b21c" kindref="member">KNK_esc</ref><sp/>=<sp/>SDL_SCANCODE_ESCAPE;</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60" refid="_constants_8hpp_1af84a12de27f8d047d7361289d2f4b795" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="_constants_8hpp_1af84a12de27f8d047d7361289d2f4b795" kindref="member">KN_KEYDOWN</ref><sp/>=<sp/>SDL_KEYDOWN;</highlight></codeline>
-<codeline lineno="61" refid="_constants_8hpp_1a550c0577732646a978371dbd7d6aa60e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="_constants_8hpp_1a550c0577732646a978371dbd7d6aa60e" kindref="member">KN_KEYUP</ref><sp/>=<sp/>SDL_KEYUP;</highlight></codeline>
-<codeline lineno="62" refid="_constants_8hpp_1a06edf5044a278238882a5c87b882bbba" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="_constants_8hpp_1a06edf5044a278238882a5c87b882bbba" kindref="member">KN_QUIT</ref><sp/>=<sp/>SDL_QUIT;</highlight></codeline>
-<codeline lineno="63" refid="_constants_8hpp_1ae671e6cc216652ec56066eeaaece7434" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="_constants_8hpp_1ae671e6cc216652ec56066eeaaece7434" kindref="member">KN_MOUSEBUTTONDOWN</ref><sp/>=<sp/>SDL_MOUSEBUTTONDOWN;</highlight></codeline>
-<codeline lineno="64" refid="_constants_8hpp_1a3fb73a5bdf93bd497af168976ef6c2ef" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="_constants_8hpp_1a3fb73a5bdf93bd497af168976ef6c2ef" kindref="member">KN_MOUSEBUTTONUP</ref><sp/>=<sp/>SDL_MOUSEBUTTONUP;</highlight></codeline>
-<codeline lineno="65" refid="_constants_8hpp_1a49ffcb5b94866c412cc486c87d2d91b3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="_constants_8hpp_1a49ffcb5b94866c412cc486c87d2d91b3" kindref="member">KN_MOUSEMOTION</ref><sp/>=<sp/>SDL_MOUSEMOTION;</highlight></codeline>
-<codeline lineno="66" refid="_constants_8hpp_1af3001008ed132768602f3fc2f0d407eb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="_constants_8hpp_1af3001008ed132768602f3fc2f0d407eb" kindref="member">KN_MOUSEWHEEL</ref><sp/>=<sp/>SDL_MOUSEWHEEL;</highlight></codeline>
-<codeline lineno="67" refid="_constants_8hpp_1a0bf87996b8877764a3d65cb845abbf8c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="_constants_8hpp_1a0bf87996b8877764a3d65cb845abbf8c" kindref="member">KN_TEXTINPUT</ref><sp/>=<sp/>SDL_TEXTINPUT;</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69" refid="_constants_8hpp_1afed215951d7df8f622e56486ab76eab3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="_constants_8hpp_1afed215951d7df8f622e56486ab76eab3" kindref="member">KNK_ESCAPE</ref><sp/>=<sp/>SDLK_ESCAPE;</highlight></codeline>
-<codeline lineno="70" refid="_constants_8hpp_1a03d2ef60cce8e499dcdbcd3c82040495" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="_constants_8hpp_1a03d2ef60cce8e499dcdbcd3c82040495" kindref="member">KNK_RETURN</ref><sp/>=<sp/>SDLK_RETURN;</highlight></codeline>
-<codeline lineno="71" refid="_constants_8hpp_1a1b47fbccd464ed59aa64379dfc2732bb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="_constants_8hpp_1a1b47fbccd464ed59aa64379dfc2732bb" kindref="member">KNK_BACKSPACE</ref><sp/>=<sp/>SDLK_BACKSPACE;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73" refid="_constants_8hpp_1aa9b7ba293562fe5dd748ba763eeb2072" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_constants_8hpp_1aa9b7ba293562fe5dd748ba763eeb2072" kindref="member">KN_BUTTON_LEFT</ref><sp/>=<sp/>SDL_BUTTON_LEFT;</highlight></codeline>
-<codeline lineno="74" refid="_constants_8hpp_1a898a21515bd89a2b1f0956158d6b5fee" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_constants_8hpp_1a898a21515bd89a2b1f0956158d6b5fee" kindref="member">KN_BUTTON_MIDDLE</ref><sp/>=<sp/>SDL_BUTTON_MIDDLE;</highlight></codeline>
-<codeline lineno="75" refid="_constants_8hpp_1a881f81ec2c5aa7d01b2123d280563ad7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_constants_8hpp_1a881f81ec2c5aa7d01b2123d280563ad7" kindref="member">KN_BUTTON_RIGHT</ref><sp/>=<sp/>SDL_BUTTON_RIGHT;</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="namespacekn_1a438de58efec73267dee3696ce9bc8c7d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a438de58efec73267dee3696ce9bc8c7d" kindref="member">KEYS</ref>;</highlight></codeline>
+<codeline lineno="9" refid="namespacekn_1af947a748461c782cd90f4d4b7cdbea21" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>SDL_Event<sp/><ref refid="namespacekn_1af947a748461c782cd90f4d4b7cdbea21" kindref="member">Event</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="namespacekn_1ae722a8550cc1db8f08796eef82faace0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1ae722a8550cc1db8f08796eef82faace0" kindref="member">SC_0</ref><sp/>=<sp/>SDL_SCANCODE_0;</highlight></codeline>
+<codeline lineno="12" refid="namespacekn_1a0ce969d5512889b793e3a1f35056edb4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a0ce969d5512889b793e3a1f35056edb4" kindref="member">SC_1</ref><sp/>=<sp/>SDL_SCANCODE_1;</highlight></codeline>
+<codeline lineno="13" refid="namespacekn_1aa93fd3394f6d146651ff274805f970e3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1aa93fd3394f6d146651ff274805f970e3" kindref="member">SC_2</ref><sp/>=<sp/>SDL_SCANCODE_2;</highlight></codeline>
+<codeline lineno="14" refid="namespacekn_1acbf7396315821e4e43744b52b7614f4d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1acbf7396315821e4e43744b52b7614f4d" kindref="member">SC_3</ref><sp/>=<sp/>SDL_SCANCODE_3;</highlight></codeline>
+<codeline lineno="15" refid="namespacekn_1a2be7875bd4cc044f102883d8dfdac21b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a2be7875bd4cc044f102883d8dfdac21b" kindref="member">SC_4</ref><sp/>=<sp/>SDL_SCANCODE_4;</highlight></codeline>
+<codeline lineno="16" refid="namespacekn_1adb1e0b7504024eaf704ab4edb78a7781" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1adb1e0b7504024eaf704ab4edb78a7781" kindref="member">SC_5</ref><sp/>=<sp/>SDL_SCANCODE_5;</highlight></codeline>
+<codeline lineno="17" refid="namespacekn_1aeb22b3ce8eb862267f2f5a8b9ea38a5c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1aeb22b3ce8eb862267f2f5a8b9ea38a5c" kindref="member">SC_6</ref><sp/>=<sp/>SDL_SCANCODE_6;</highlight></codeline>
+<codeline lineno="18" refid="namespacekn_1a5b8a4b318e4bfcd66b70e15321eab4d0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a5b8a4b318e4bfcd66b70e15321eab4d0" kindref="member">SC_7</ref><sp/>=<sp/>SDL_SCANCODE_7;</highlight></codeline>
+<codeline lineno="19" refid="namespacekn_1a442b7a8a253e5b5ff058167d6356368b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a442b7a8a253e5b5ff058167d6356368b" kindref="member">SC_8</ref><sp/>=<sp/>SDL_SCANCODE_8;</highlight></codeline>
+<codeline lineno="20" refid="namespacekn_1ac68f74219e1f9ee5fe1b1c563f643762" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1ac68f74219e1f9ee5fe1b1c563f643762" kindref="member">SC_9</ref><sp/>=<sp/>SDL_SCANCODE_9;</highlight></codeline>
+<codeline lineno="21" refid="namespacekn_1ae8aa913820c2b2a3b8926949939cffd4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1ae8aa913820c2b2a3b8926949939cffd4" kindref="member">SC_A</ref><sp/>=<sp/>SDL_SCANCODE_A;</highlight></codeline>
+<codeline lineno="22" refid="namespacekn_1af1747a8c2dd792b6ff97cb2cc2c29180" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1af1747a8c2dd792b6ff97cb2cc2c29180" kindref="member">SC_B</ref><sp/>=<sp/>SDL_SCANCODE_B;</highlight></codeline>
+<codeline lineno="23" refid="namespacekn_1aeb6518940d680aee528e589d9ac1552c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1aeb6518940d680aee528e589d9ac1552c" kindref="member">SC_C</ref><sp/>=<sp/>SDL_SCANCODE_C;</highlight></codeline>
+<codeline lineno="24" refid="namespacekn_1a0f179392fb510fb81c7b14b03cccc606" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a0f179392fb510fb81c7b14b03cccc606" kindref="member">SC_D</ref><sp/>=<sp/>SDL_SCANCODE_D;</highlight></codeline>
+<codeline lineno="25" refid="namespacekn_1af0e9e54da5a274c26dad4692d3e63e58" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1af0e9e54da5a274c26dad4692d3e63e58" kindref="member">SC_E</ref><sp/>=<sp/>SDL_SCANCODE_E;</highlight></codeline>
+<codeline lineno="26" refid="namespacekn_1a8575e7395da3dadfccaddc138c91620e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a8575e7395da3dadfccaddc138c91620e" kindref="member">SC_F</ref><sp/>=<sp/>SDL_SCANCODE_F;</highlight></codeline>
+<codeline lineno="27" refid="namespacekn_1a52cf42c7a9db2ee10a3d487f3b7ce827" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a52cf42c7a9db2ee10a3d487f3b7ce827" kindref="member">SC_G</ref><sp/>=<sp/>SDL_SCANCODE_G;</highlight></codeline>
+<codeline lineno="28" refid="namespacekn_1a640c84339d11f41feaeb91dac563ac0d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a640c84339d11f41feaeb91dac563ac0d" kindref="member">SC_H</ref><sp/>=<sp/>SDL_SCANCODE_H;</highlight></codeline>
+<codeline lineno="29" refid="namespacekn_1af570b327b03b0440424848ae0c97713e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1af570b327b03b0440424848ae0c97713e" kindref="member">SC_I</ref><sp/>=<sp/>SDL_SCANCODE_I;</highlight></codeline>
+<codeline lineno="30" refid="namespacekn_1a92011e7e81c7b2b2d0c494799d1ff52d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a92011e7e81c7b2b2d0c494799d1ff52d" kindref="member">SC_J</ref><sp/>=<sp/>SDL_SCANCODE_J;</highlight></codeline>
+<codeline lineno="31" refid="namespacekn_1a76c0b55c40ea3f8ab3ea49f005baa57c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a76c0b55c40ea3f8ab3ea49f005baa57c" kindref="member">SC_K</ref><sp/>=<sp/>SDL_SCANCODE_K;</highlight></codeline>
+<codeline lineno="32" refid="namespacekn_1aa1339f3e671635226296d65e70a9dc94" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1aa1339f3e671635226296d65e70a9dc94" kindref="member">SC_L</ref><sp/>=<sp/>SDL_SCANCODE_L;</highlight></codeline>
+<codeline lineno="33" refid="namespacekn_1a865c2c472cd3610ac2bb3388877faec5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a865c2c472cd3610ac2bb3388877faec5" kindref="member">SC_M</ref><sp/>=<sp/>SDL_SCANCODE_M;</highlight></codeline>
+<codeline lineno="34" refid="namespacekn_1a4182c90a310e9a02d385ab07da4fd7f6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a4182c90a310e9a02d385ab07da4fd7f6" kindref="member">SC_N</ref><sp/>=<sp/>SDL_SCANCODE_N;</highlight></codeline>
+<codeline lineno="35" refid="namespacekn_1a8447d90d26be41521f811492e16e20ce" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a8447d90d26be41521f811492e16e20ce" kindref="member">SC_O</ref><sp/>=<sp/>SDL_SCANCODE_O;</highlight></codeline>
+<codeline lineno="36" refid="namespacekn_1a1cb3b7dd5a5be81145f6153c1c4edd31" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a1cb3b7dd5a5be81145f6153c1c4edd31" kindref="member">SC_P</ref><sp/>=<sp/>SDL_SCANCODE_P;</highlight></codeline>
+<codeline lineno="37" refid="namespacekn_1a481a2add70df7639fe0cb95dc771a08e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a481a2add70df7639fe0cb95dc771a08e" kindref="member">SC_Q</ref><sp/>=<sp/>SDL_SCANCODE_Q;</highlight></codeline>
+<codeline lineno="38" refid="namespacekn_1aab53a58fdd7e969fc23c880cc4504741" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1aab53a58fdd7e969fc23c880cc4504741" kindref="member">SC_R</ref><sp/>=<sp/>SDL_SCANCODE_R;</highlight></codeline>
+<codeline lineno="39" refid="namespacekn_1accfb0fbb0384893a80bae5f64ea3bee5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1accfb0fbb0384893a80bae5f64ea3bee5" kindref="member">SC_S</ref><sp/>=<sp/>SDL_SCANCODE_S;</highlight></codeline>
+<codeline lineno="40" refid="namespacekn_1a95f2bcf7f6aa127a18aac9733ac814b0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a95f2bcf7f6aa127a18aac9733ac814b0" kindref="member">SC_T</ref><sp/>=<sp/>SDL_SCANCODE_T;</highlight></codeline>
+<codeline lineno="41" refid="namespacekn_1a5602868762ff149c00e03303571bf24c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a5602868762ff149c00e03303571bf24c" kindref="member">SC_U</ref><sp/>=<sp/>SDL_SCANCODE_U;</highlight></codeline>
+<codeline lineno="42" refid="namespacekn_1a38045cc03cd18d1fb4cb74f0d8899cf9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a38045cc03cd18d1fb4cb74f0d8899cf9" kindref="member">SC_V</ref><sp/>=<sp/>SDL_SCANCODE_V;</highlight></codeline>
+<codeline lineno="43" refid="namespacekn_1af35d588d8f9de50aab4780118fa5e4b5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1af35d588d8f9de50aab4780118fa5e4b5" kindref="member">SC_W</ref><sp/>=<sp/>SDL_SCANCODE_W;</highlight></codeline>
+<codeline lineno="44" refid="namespacekn_1a248a63dd72e953ff6a9eca29c7ccd197" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a248a63dd72e953ff6a9eca29c7ccd197" kindref="member">SC_X</ref><sp/>=<sp/>SDL_SCANCODE_X;</highlight></codeline>
+<codeline lineno="45" refid="namespacekn_1a9988a87a737b6fe7e102aa90d41f9a6a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a9988a87a737b6fe7e102aa90d41f9a6a" kindref="member">SC_Y</ref><sp/>=<sp/>SDL_SCANCODE_Y;</highlight></codeline>
+<codeline lineno="46" refid="namespacekn_1a07e439454b905220c0193fb00209e9f0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a07e439454b905220c0193fb00209e9f0" kindref="member">SC_Z</ref><sp/>=<sp/>SDL_SCANCODE_Z;</highlight></codeline>
+<codeline lineno="47" refid="namespacekn_1acdd2392712c6ae0b9e029033838df479" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1acdd2392712c6ae0b9e029033838df479" kindref="member">SC_DOWN</ref><sp/>=<sp/>SDL_SCANCODE_DOWN;</highlight></codeline>
+<codeline lineno="48" refid="namespacekn_1a24e243a4ab167ac1c1b36ea806c8060a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a24e243a4ab167ac1c1b36ea806c8060a" kindref="member">SC_LEFT</ref><sp/>=<sp/>SDL_SCANCODE_LEFT;</highlight></codeline>
+<codeline lineno="49" refid="namespacekn_1af3763988cb14dcfd652a071b2c7cc3e9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1af3763988cb14dcfd652a071b2c7cc3e9" kindref="member">SC_RIGHT</ref><sp/>=<sp/>SDL_SCANCODE_RIGHT;</highlight></codeline>
+<codeline lineno="50" refid="namespacekn_1a08577d7b1925871c140768575034565f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a08577d7b1925871c140768575034565f" kindref="member">SC_UP</ref><sp/>=<sp/>SDL_SCANCODE_UP;</highlight></codeline>
+<codeline lineno="51" refid="namespacekn_1a9c18a5454f7c0b7efbe43f5626cd8a14" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a9c18a5454f7c0b7efbe43f5626cd8a14" kindref="member">SC_LALT</ref><sp/>=<sp/>SDL_SCANCODE_LALT;</highlight></codeline>
+<codeline lineno="52" refid="namespacekn_1acc3e0ab909f0cbe07928f8b07b3b8388" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1acc3e0ab909f0cbe07928f8b07b3b8388" kindref="member">SC_LCTRL</ref><sp/>=<sp/>SDL_SCANCODE_LCTRL;</highlight></codeline>
+<codeline lineno="53" refid="namespacekn_1ae6772e06413030f906f4a846cc61bf03" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1ae6772e06413030f906f4a846cc61bf03" kindref="member">SC_LSHIFT</ref><sp/>=<sp/>SDL_SCANCODE_LSHIFT;</highlight></codeline>
+<codeline lineno="54" refid="namespacekn_1ae2771b905e3de67e9e59e65a2ac8bb2f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1ae2771b905e3de67e9e59e65a2ac8bb2f" kindref="member">SC_RALT</ref><sp/>=<sp/>SDL_SCANCODE_RALT;</highlight></codeline>
+<codeline lineno="55" refid="namespacekn_1a40fb39c81393e1aa3f74d980113abe95" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1a40fb39c81393e1aa3f74d980113abe95" kindref="member">SC_RCTRL</ref><sp/>=<sp/>SDL_SCANCODE_RCTRL;</highlight></codeline>
+<codeline lineno="56" refid="namespacekn_1afcc0f261bd447e433aa60a78abb026c8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1afcc0f261bd447e433aa60a78abb026c8" kindref="member">SC_RETURN</ref><sp/>=<sp/>SDL_SCANCODE_RETURN;</highlight></codeline>
+<codeline lineno="57" refid="namespacekn_1ad025d54f4264447523806709ecbbf71e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1ad025d54f4264447523806709ecbbf71e" kindref="member">SC_RSHIFT</ref><sp/>=<sp/>SDL_SCANCODE_RSHIFT;</highlight></codeline>
+<codeline lineno="58" refid="namespacekn_1ae78e3b0d4aa184f55ff9b05cdac1e035" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1ae78e3b0d4aa184f55ff9b05cdac1e035" kindref="member">SC_SPACE</ref><sp/>=<sp/>SDL_SCANCODE_SPACE;</highlight></codeline>
+<codeline lineno="59" refid="namespacekn_1acb5a0173df2d328e60f2eda858cb2680" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Scancode<sp/><ref refid="namespacekn_1acb5a0173df2d328e60f2eda858cb2680" kindref="member">SC_TAB</ref><sp/>=<sp/>SDL_SCANCODE_TAB;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="namespacekn_1a46a3850c8d62c63cd2e91f00a0ec0d1a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a46a3850c8d62c63cd2e91f00a0ec0d1a" kindref="member">QUIT</ref><sp/>=<sp/>SDL_QUIT;</highlight></codeline>
+<codeline lineno="62" refid="namespacekn_1a762f40854ff13c1dfe90851415dbe4ac" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a762f40854ff13c1dfe90851415dbe4ac" kindref="member">DISPLAYEVENT</ref><sp/>=<sp/>SDL_DISPLAYEVENT;</highlight></codeline>
+<codeline lineno="63" refid="namespacekn_1a165134d59b5b9f3f8f328d83068b3694" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a165134d59b5b9f3f8f328d83068b3694" kindref="member">WINDOWEVENT</ref><sp/>=<sp/>SDL_WINDOWEVENT;</highlight></codeline>
+<codeline lineno="64" refid="namespacekn_1ad94b1bb2cc36f6398f43a7a6e094bb1b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1ad94b1bb2cc36f6398f43a7a6e094bb1b" kindref="member">SYSWMEVENT</ref><sp/>=<sp/>SDL_SYSWMEVENT;</highlight></codeline>
+<codeline lineno="65" refid="namespacekn_1a3117becf308cc8698bdccc63955a3451" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a3117becf308cc8698bdccc63955a3451" kindref="member">KEYDOWN</ref><sp/>=<sp/>SDL_KEYDOWN;</highlight></codeline>
+<codeline lineno="66" refid="namespacekn_1a0237fe55a9ac74efb11ce6535d7125c2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a0237fe55a9ac74efb11ce6535d7125c2" kindref="member">KEYUP</ref><sp/>=<sp/>SDL_KEYUP;</highlight></codeline>
+<codeline lineno="67" refid="namespacekn_1a50c42b7cf023011ee8732830269d1fab" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a50c42b7cf023011ee8732830269d1fab" kindref="member">TEXTEDITING</ref><sp/>=<sp/>SDL_TEXTEDITING;</highlight></codeline>
+<codeline lineno="68" refid="namespacekn_1a482f79ff5e39ff7141d891d44295c613" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a482f79ff5e39ff7141d891d44295c613" kindref="member">TEXTINPUT</ref><sp/>=<sp/>SDL_TEXTINPUT;</highlight></codeline>
+<codeline lineno="69" refid="namespacekn_1ad0c87c5aa1d37e3daacbd284a187a45c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1ad0c87c5aa1d37e3daacbd284a187a45c" kindref="member">KEYMAPCHANGED</ref><sp/>=<sp/>SDL_KEYMAPCHANGED;</highlight></codeline>
+<codeline lineno="70" refid="namespacekn_1a2e0fe8cd250a88fcd80aba940d385c74" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a2e0fe8cd250a88fcd80aba940d385c74" kindref="member">MOUSEMOTION</ref><sp/>=<sp/>SDL_MOUSEMOTION;</highlight></codeline>
+<codeline lineno="71" refid="namespacekn_1a632bd152174b1aaffb2e1f852138f22b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a632bd152174b1aaffb2e1f852138f22b" kindref="member">MOUSEBUTTONDOWN</ref><sp/>=<sp/>SDL_MOUSEBUTTONDOWN;</highlight></codeline>
+<codeline lineno="72" refid="namespacekn_1ac332a4ae3543f5eea265656fc91dc3e6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1ac332a4ae3543f5eea265656fc91dc3e6" kindref="member">MOUSEBUTTONUP</ref><sp/>=<sp/>SDL_MOUSEBUTTONUP;</highlight></codeline>
+<codeline lineno="73" refid="namespacekn_1a8d10627b80de189c3a1bc6fae94e42ce" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a8d10627b80de189c3a1bc6fae94e42ce" kindref="member">MOUSEWHEEL</ref><sp/>=<sp/>SDL_MOUSEWHEEL;</highlight></codeline>
+<codeline lineno="74" refid="namespacekn_1a70d04ca2529adff65aecbcfab5a7342c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a70d04ca2529adff65aecbcfab5a7342c" kindref="member">JOYAXISMOTION</ref><sp/>=<sp/>SDL_JOYAXISMOTION;</highlight></codeline>
+<codeline lineno="75" refid="namespacekn_1a566c0a431c20a5058949f3750d843dbe" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a566c0a431c20a5058949f3750d843dbe" kindref="member">JOYBALLMOTION</ref><sp/>=<sp/>SDL_JOYBALLMOTION;</highlight></codeline>
+<codeline lineno="76" refid="namespacekn_1ac85f6e5eb96aa034267195eb3f9b9abc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1ac85f6e5eb96aa034267195eb3f9b9abc" kindref="member">JOYHATMOTION</ref><sp/>=<sp/>SDL_JOYHATMOTION;</highlight></codeline>
+<codeline lineno="77" refid="namespacekn_1a719f8f0d1486b1648706161f7b59c9a8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a719f8f0d1486b1648706161f7b59c9a8" kindref="member">JOYBUTTONDOWN</ref><sp/>=<sp/>SDL_JOYBUTTONDOWN;</highlight></codeline>
+<codeline lineno="78" refid="namespacekn_1a15d0012274bc02593232e5080ccbb467" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a15d0012274bc02593232e5080ccbb467" kindref="member">JOYBUTTONUP</ref><sp/>=<sp/>SDL_JOYBUTTONUP;</highlight></codeline>
+<codeline lineno="79" refid="namespacekn_1ad9c2e5b18417d45fd875ecb09facbb82" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1ad9c2e5b18417d45fd875ecb09facbb82" kindref="member">JOYDEVICEADDED</ref><sp/>=<sp/>SDL_JOYDEVICEADDED;</highlight></codeline>
+<codeline lineno="80" refid="namespacekn_1a1108144afad916f55f69cf369d36549b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a1108144afad916f55f69cf369d36549b" kindref="member">JOYDEVICEREMOVED</ref><sp/>=<sp/>SDL_JOYDEVICEREMOVED;</highlight></codeline>
+<codeline lineno="81" refid="namespacekn_1a7fae7eac7e8e25eec79c431d9227bde2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a7fae7eac7e8e25eec79c431d9227bde2" kindref="member">CONTROLLERAXISMOTION</ref><sp/>=<sp/>SDL_CONTROLLERAXISMOTION;</highlight></codeline>
+<codeline lineno="82" refid="namespacekn_1abc211b7dc2540b9c2abf3f7148f68391" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1abc211b7dc2540b9c2abf3f7148f68391" kindref="member">CONTROLLERBUTTONDOWN</ref><sp/>=<sp/>SDL_CONTROLLERBUTTONDOWN;</highlight></codeline>
+<codeline lineno="83" refid="namespacekn_1a3231a5e25a5dafe128a165dec188da7d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a3231a5e25a5dafe128a165dec188da7d" kindref="member">CONTROLLERBUTTONUP</ref><sp/>=<sp/>SDL_CONTROLLERBUTTONUP;</highlight></codeline>
+<codeline lineno="84" refid="namespacekn_1a0d6b72606e8e579481b253aa63ec284f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a0d6b72606e8e579481b253aa63ec284f" kindref="member">CONTROLLERDEVICEADDED</ref><sp/>=<sp/>SDL_CONTROLLERDEVICEADDED;</highlight></codeline>
+<codeline lineno="85" refid="namespacekn_1a3d9e6b29b7bb1132517f844097b9b4f8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a3d9e6b29b7bb1132517f844097b9b4f8" kindref="member">CONTROLLERDEVICEREMOVED</ref><sp/>=<sp/>SDL_CONTROLLERDEVICEREMOVED;</highlight></codeline>
+<codeline lineno="86" refid="namespacekn_1af5864ec7f140511d184e5f267ba685c5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1af5864ec7f140511d184e5f267ba685c5" kindref="member">CONTROLLERDEVICEREMAPPED</ref><sp/>=<sp/>SDL_CONTROLLERDEVICEREMAPPED;</highlight></codeline>
+<codeline lineno="87" refid="namespacekn_1a88c1d6978b6ec4a976966bd1c34a1d75" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a88c1d6978b6ec4a976966bd1c34a1d75" kindref="member">CLIPBOARDUPDATE</ref><sp/>=<sp/>SDL_CLIPBOARDUPDATE;</highlight></codeline>
+<codeline lineno="88" refid="namespacekn_1a421d9701f2036267b98da8edf5619beb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a421d9701f2036267b98da8edf5619beb" kindref="member">DROPFILE</ref><sp/>=<sp/>SDL_DROPFILE;</highlight></codeline>
+<codeline lineno="89" refid="namespacekn_1a4f2a8372fa47ecaa937f50c7c31feaa8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a4f2a8372fa47ecaa937f50c7c31feaa8" kindref="member">DROPTEXT</ref><sp/>=<sp/>SDL_DROPTEXT;</highlight></codeline>
+<codeline lineno="90" refid="namespacekn_1ad0228118a5c4ed3d6c06e7b53bcd7aa9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1ad0228118a5c4ed3d6c06e7b53bcd7aa9" kindref="member">DROPBEGIN</ref><sp/>=<sp/>SDL_DROPBEGIN;</highlight></codeline>
+<codeline lineno="91" refid="namespacekn_1ad40d2b2c0d194b21617fc2e8b4c59f35" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1ad40d2b2c0d194b21617fc2e8b4c59f35" kindref="member">DROPCOMPLETE</ref><sp/>=<sp/>SDL_DROPCOMPLETE;</highlight></codeline>
+<codeline lineno="92" refid="namespacekn_1a8804af741eeee12c9bc451d0a1620ec8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a8804af741eeee12c9bc451d0a1620ec8" kindref="member">AUDIODEVICEADDED</ref><sp/>=<sp/>SDL_AUDIODEVICEADDED;</highlight></codeline>
+<codeline lineno="93" refid="namespacekn_1a729740253f45ab3b61ceee072187631e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1a729740253f45ab3b61ceee072187631e" kindref="member">AUDIODEVICEREMOVED</ref><sp/>=<sp/>SDL_AUDIODEVICEREMOVED;</highlight></codeline>
+<codeline lineno="94" refid="namespacekn_1aaeda1a567f7be977506d49af77a7b163" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_EventType<sp/><ref refid="namespacekn_1aaeda1a567f7be977506d49af77a7b163" kindref="member">USEREVENT</ref><sp/>=<sp/>SDL_USEREVENT;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="namespacekn_1ae1c1cc73fd42dfe34a13fe1532e20107" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ae1c1cc73fd42dfe34a13fe1532e20107" kindref="member">K_0</ref><sp/>=<sp/>SDLK_0;</highlight></codeline>
+<codeline lineno="97" refid="namespacekn_1af6a31cae2be59f91d6bc34f0216af71c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1af6a31cae2be59f91d6bc34f0216af71c" kindref="member">K_1</ref><sp/>=<sp/>SDLK_1;</highlight></codeline>
+<codeline lineno="98" refid="namespacekn_1ace0cee19092e52fbcb2e2d402c6b3ae5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ace0cee19092e52fbcb2e2d402c6b3ae5" kindref="member">K_2</ref><sp/>=<sp/>SDLK_2;</highlight></codeline>
+<codeline lineno="99" refid="namespacekn_1aab57498fdf609c8fef7abc3a78c68999" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1aab57498fdf609c8fef7abc3a78c68999" kindref="member">K_3</ref><sp/>=<sp/>SDLK_3;</highlight></codeline>
+<codeline lineno="100" refid="namespacekn_1aa9df377d6f1c160bb2e8ae02ed677c78" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1aa9df377d6f1c160bb2e8ae02ed677c78" kindref="member">K_4</ref><sp/>=<sp/>SDLK_4;</highlight></codeline>
+<codeline lineno="101" refid="namespacekn_1ae0bda08acccd013326229fa9f9778c28" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ae0bda08acccd013326229fa9f9778c28" kindref="member">K_5</ref><sp/>=<sp/>SDLK_5;</highlight></codeline>
+<codeline lineno="102" refid="namespacekn_1ad6579bccffe36625743e5516d05b4c47" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ad6579bccffe36625743e5516d05b4c47" kindref="member">K_6</ref><sp/>=<sp/>SDLK_6;</highlight></codeline>
+<codeline lineno="103" refid="namespacekn_1a1bcb61be1044dc3e69ab8c08100e86e2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a1bcb61be1044dc3e69ab8c08100e86e2" kindref="member">K_7</ref><sp/>=<sp/>SDLK_7;</highlight></codeline>
+<codeline lineno="104" refid="namespacekn_1a13b9ea30128b5f4b24fdd6019345853a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a13b9ea30128b5f4b24fdd6019345853a" kindref="member">K_8</ref><sp/>=<sp/>SDLK_8;</highlight></codeline>
+<codeline lineno="105" refid="namespacekn_1abe5f55744f58d2583cfb2348c7406239" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1abe5f55744f58d2583cfb2348c7406239" kindref="member">K_9</ref><sp/>=<sp/>SDLK_9;</highlight></codeline>
+<codeline lineno="106" refid="namespacekn_1a1e26cd916be5ac6a2d5d368da4b0889a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a1e26cd916be5ac6a2d5d368da4b0889a" kindref="member">K_a</ref><sp/>=<sp/>SDLK_a;</highlight></codeline>
+<codeline lineno="107" refid="namespacekn_1a468ebe2b89bd337a726af1650fa64b5b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a468ebe2b89bd337a726af1650fa64b5b" kindref="member">K_b</ref><sp/>=<sp/>SDLK_b;</highlight></codeline>
+<codeline lineno="108" refid="namespacekn_1a3a802c17054c4e07f35ac2cad7a5734c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a3a802c17054c4e07f35ac2cad7a5734c" kindref="member">K_c</ref><sp/>=<sp/>SDLK_c;</highlight></codeline>
+<codeline lineno="109" refid="namespacekn_1a5c81d1e60a91df7b5f641b52fd4498e4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a5c81d1e60a91df7b5f641b52fd4498e4" kindref="member">K_d</ref><sp/>=<sp/>SDLK_d;</highlight></codeline>
+<codeline lineno="110" refid="namespacekn_1a682b9dfe9aed388e4d146ac7cc52bee5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a682b9dfe9aed388e4d146ac7cc52bee5" kindref="member">K_e</ref><sp/>=<sp/>SDLK_e;</highlight></codeline>
+<codeline lineno="111" refid="namespacekn_1ab2bea86ba89f6dc2f68c1bd915370bdd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ab2bea86ba89f6dc2f68c1bd915370bdd" kindref="member">K_f</ref><sp/>=<sp/>SDLK_f;</highlight></codeline>
+<codeline lineno="112" refid="namespacekn_1ae597809e40eee0296b508b1b8fe25952" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ae597809e40eee0296b508b1b8fe25952" kindref="member">K_g</ref><sp/>=<sp/>SDLK_g;</highlight></codeline>
+<codeline lineno="113" refid="namespacekn_1ae1ae1bf46937f7be7c355910999acdd8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ae1ae1bf46937f7be7c355910999acdd8" kindref="member">K_h</ref><sp/>=<sp/>SDLK_h;</highlight></codeline>
+<codeline lineno="114" refid="namespacekn_1abbd34234c6195060e0a6e73b8490b06f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1abbd34234c6195060e0a6e73b8490b06f" kindref="member">K_i</ref><sp/>=<sp/>SDLK_i;</highlight></codeline>
+<codeline lineno="115" refid="namespacekn_1a7722c0961e8fc0333279816205b25f7f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a7722c0961e8fc0333279816205b25f7f" kindref="member">K_j</ref><sp/>=<sp/>SDLK_j;</highlight></codeline>
+<codeline lineno="116" refid="namespacekn_1a0cba30c58176bd9e0c4d3d2e4e394c17" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a0cba30c58176bd9e0c4d3d2e4e394c17" kindref="member">K_k</ref><sp/>=<sp/>SDLK_k;</highlight></codeline>
+<codeline lineno="117" refid="namespacekn_1a080e71da9b618dc65af16dd06532ea6d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a080e71da9b618dc65af16dd06532ea6d" kindref="member">K_l</ref><sp/>=<sp/>SDLK_l;</highlight></codeline>
+<codeline lineno="118" refid="namespacekn_1a5d10882768134c0477b425fbe1e6851e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a5d10882768134c0477b425fbe1e6851e" kindref="member">K_m</ref><sp/>=<sp/>SDLK_m;</highlight></codeline>
+<codeline lineno="119" refid="namespacekn_1a376f655b1704eb630212701d5c20a3a8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a376f655b1704eb630212701d5c20a3a8" kindref="member">K_n</ref><sp/>=<sp/>SDLK_n;</highlight></codeline>
+<codeline lineno="120" refid="namespacekn_1a160681ef39fd88fd5425d63b3ba57a1d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a160681ef39fd88fd5425d63b3ba57a1d" kindref="member">K_o</ref><sp/>=<sp/>SDLK_o;</highlight></codeline>
+<codeline lineno="121" refid="namespacekn_1acfe36ab789ed1e70d3d2924ad3582a9b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1acfe36ab789ed1e70d3d2924ad3582a9b" kindref="member">K_p</ref><sp/>=<sp/>SDLK_p;</highlight></codeline>
+<codeline lineno="122" refid="namespacekn_1a5c438bc5730c2d27713908824808bf42" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a5c438bc5730c2d27713908824808bf42" kindref="member">K_q</ref><sp/>=<sp/>SDLK_q;</highlight></codeline>
+<codeline lineno="123" refid="namespacekn_1a75a361cca6cb0d55d0281299f368f11d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a75a361cca6cb0d55d0281299f368f11d" kindref="member">K_r</ref><sp/>=<sp/>SDLK_r;</highlight></codeline>
+<codeline lineno="124" refid="namespacekn_1aa9dbb9e42dfd6c1d329ee146c84ac5ce" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1aa9dbb9e42dfd6c1d329ee146c84ac5ce" kindref="member">K_s</ref><sp/>=<sp/>SDLK_s;</highlight></codeline>
+<codeline lineno="125" refid="namespacekn_1aeb3b2bbfb0c0b730c5b6499aa3a6317c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1aeb3b2bbfb0c0b730c5b6499aa3a6317c" kindref="member">K_t</ref><sp/>=<sp/>SDLK_t;</highlight></codeline>
+<codeline lineno="126" refid="namespacekn_1ae1d73172702d306f9c70b5549b17e3c9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ae1d73172702d306f9c70b5549b17e3c9" kindref="member">K_u</ref><sp/>=<sp/>SDLK_u;</highlight></codeline>
+<codeline lineno="127" refid="namespacekn_1abd2300d874aec07398d0db533a36db10" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1abd2300d874aec07398d0db533a36db10" kindref="member">K_v</ref><sp/>=<sp/>SDLK_v;</highlight></codeline>
+<codeline lineno="128" refid="namespacekn_1a00135f1d147a14310f936e1e5b1bfe3e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a00135f1d147a14310f936e1e5b1bfe3e" kindref="member">K_w</ref><sp/>=<sp/>SDLK_w;</highlight></codeline>
+<codeline lineno="129" refid="namespacekn_1abf7401ae09c2d09af844f7752fe287c0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1abf7401ae09c2d09af844f7752fe287c0" kindref="member">K_x</ref><sp/>=<sp/>SDLK_x;</highlight></codeline>
+<codeline lineno="130" refid="namespacekn_1ab83cb508dd1b60a265ea0be8d802a38a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ab83cb508dd1b60a265ea0be8d802a38a" kindref="member">K_y</ref><sp/>=<sp/>SDLK_y;</highlight></codeline>
+<codeline lineno="131" refid="namespacekn_1a0f5fa7bdb6e44520b9a0a950f386e452" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a0f5fa7bdb6e44520b9a0a950f386e452" kindref="member">K_z</ref><sp/>=<sp/>SDLK_z;</highlight></codeline>
+<codeline lineno="132" refid="namespacekn_1a2f4ba922c75290dc4ee3b9f16cc169ab" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a2f4ba922c75290dc4ee3b9f16cc169ab" kindref="member">K_DOWN</ref><sp/>=<sp/>SDLK_DOWN;</highlight></codeline>
+<codeline lineno="133" refid="namespacekn_1a089e2e32d01b876ca7a7d7e508571641" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a089e2e32d01b876ca7a7d7e508571641" kindref="member">K_LEFT</ref><sp/>=<sp/>SDLK_LEFT;</highlight></codeline>
+<codeline lineno="134" refid="namespacekn_1ae089463af3f3b197da8d11996f1864bc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ae089463af3f3b197da8d11996f1864bc" kindref="member">K_RIGHT</ref><sp/>=<sp/>SDLK_RIGHT;</highlight></codeline>
+<codeline lineno="135" refid="namespacekn_1aadd31a6e7310d2e46ef117f32fdcd7b8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1aadd31a6e7310d2e46ef117f32fdcd7b8" kindref="member">K_UP</ref><sp/>=<sp/>SDLK_UP;</highlight></codeline>
+<codeline lineno="136" refid="namespacekn_1ace7c3c8f3ff52572785a166a096ef448" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ace7c3c8f3ff52572785a166a096ef448" kindref="member">K_APPLICATION</ref><sp/>=<sp/>SDLK_APPLICATION;</highlight></codeline>
+<codeline lineno="137" refid="namespacekn_1ac7510f98033db12aa7db8c3ee35137b4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ac7510f98033db12aa7db8c3ee35137b4" kindref="member">K_AUDIOMUTE</ref><sp/>=<sp/>SDLK_AUDIOMUTE;</highlight></codeline>
+<codeline lineno="138" refid="namespacekn_1ac2f64c0378cab74363caa894b4508fbe" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ac2f64c0378cab74363caa894b4508fbe" kindref="member">K_AUDIONEXT</ref><sp/>=<sp/>SDLK_AUDIONEXT;</highlight></codeline>
+<codeline lineno="139" refid="namespacekn_1ad500f2966aa353e8e03e93906a32e013" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ad500f2966aa353e8e03e93906a32e013" kindref="member">K_AUDIOPLAY</ref><sp/>=<sp/>SDLK_AUDIOPLAY;</highlight></codeline>
+<codeline lineno="140" refid="namespacekn_1a8e9414d2b68c0b21256a9cf532134d88" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a8e9414d2b68c0b21256a9cf532134d88" kindref="member">K_AUDIOPREV</ref><sp/>=<sp/>SDLK_AUDIOPREV;</highlight></codeline>
+<codeline lineno="141" refid="namespacekn_1a9ea280d5b26821b96e2d70a5b0e30de3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a9ea280d5b26821b96e2d70a5b0e30de3" kindref="member">K_AUDIOSTOP</ref><sp/>=<sp/>SDLK_AUDIOSTOP;</highlight></codeline>
+<codeline lineno="142" refid="namespacekn_1a4472ba720210f4e841ac0f95db3f3405" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a4472ba720210f4e841ac0f95db3f3405" kindref="member">K_BACKSLASH</ref><sp/>=<sp/>SDLK_BACKSLASH;</highlight></codeline>
+<codeline lineno="143" refid="namespacekn_1a1c04bde69d764893955ae254785b5024" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a1c04bde69d764893955ae254785b5024" kindref="member">K_BACKSPACE</ref><sp/>=<sp/>SDLK_BACKSPACE;</highlight></codeline>
+<codeline lineno="144" refid="namespacekn_1a549efd36be3624f6fdfb7f49605c7654" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a549efd36be3624f6fdfb7f49605c7654" kindref="member">K_CAPSLOCK</ref><sp/>=<sp/>SDLK_CAPSLOCK;</highlight></codeline>
+<codeline lineno="145" refid="namespacekn_1a96f94d7c75a75e089d998ec82eef349b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a96f94d7c75a75e089d998ec82eef349b" kindref="member">K_COMMA</ref><sp/>=<sp/>SDLK_COMMA;</highlight></codeline>
+<codeline lineno="146" refid="namespacekn_1a13ad9ee76e48913cd96ed2a0a9a1bb99" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a13ad9ee76e48913cd96ed2a0a9a1bb99" kindref="member">K_DELETE</ref><sp/>=<sp/>SDLK_DELETE;</highlight></codeline>
+<codeline lineno="147" refid="namespacekn_1a7e3a0bdb758a23c9869b032ce2373c2e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a7e3a0bdb758a23c9869b032ce2373c2e" kindref="member">K_DISPLAYSWITCH</ref><sp/>=<sp/>SDLK_DISPLAYSWITCH;</highlight></codeline>
+<codeline lineno="148" refid="namespacekn_1a138afea7029ee7d7619cf2eeb7ba77d6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a138afea7029ee7d7619cf2eeb7ba77d6" kindref="member">K_END</ref><sp/>=<sp/>SDLK_END;</highlight></codeline>
+<codeline lineno="149" refid="namespacekn_1a5153cbb05e38b61fce532c49761f608d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a5153cbb05e38b61fce532c49761f608d" kindref="member">K_EQUALS</ref><sp/>=<sp/>SDLK_EQUALS;</highlight></codeline>
+<codeline lineno="150" refid="namespacekn_1a8041867c43a77739fbad9c6f514f6ffe" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a8041867c43a77739fbad9c6f514f6ffe" kindref="member">K_ESCAPE</ref><sp/>=<sp/>SDLK_ESCAPE;</highlight></codeline>
+<codeline lineno="151" refid="namespacekn_1a1fa1dee48a3814bbf946dd2ab5ef18d5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a1fa1dee48a3814bbf946dd2ab5ef18d5" kindref="member">K_F1</ref><sp/>=<sp/>SDLK_F1;</highlight></codeline>
+<codeline lineno="152" refid="namespacekn_1a6320f9b6b757e7ae7e5f3cd4ea587c1a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a6320f9b6b757e7ae7e5f3cd4ea587c1a" kindref="member">K_F2</ref><sp/>=<sp/>SDLK_F2;</highlight></codeline>
+<codeline lineno="153" refid="namespacekn_1a7313bf564fa95d1dd8019126aee677af" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a7313bf564fa95d1dd8019126aee677af" kindref="member">K_F3</ref><sp/>=<sp/>SDLK_F3;</highlight></codeline>
+<codeline lineno="154" refid="namespacekn_1a09a15ba12dc91391c604ad7baab3b067" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a09a15ba12dc91391c604ad7baab3b067" kindref="member">K_F4</ref><sp/>=<sp/>SDLK_F4;</highlight></codeline>
+<codeline lineno="155" refid="namespacekn_1ae9ab3892b7b62f244da41d10ccb07101" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ae9ab3892b7b62f244da41d10ccb07101" kindref="member">K_F5</ref><sp/>=<sp/>SDLK_F5;</highlight></codeline>
+<codeline lineno="156" refid="namespacekn_1a5636fedf1ab09dac7db162db1da5b031" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a5636fedf1ab09dac7db162db1da5b031" kindref="member">K_F6</ref><sp/>=<sp/>SDLK_F6;</highlight></codeline>
+<codeline lineno="157" refid="namespacekn_1a6d7a9fa608b70fd78e8ecf4b58c9b40d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a6d7a9fa608b70fd78e8ecf4b58c9b40d" kindref="member">K_F7</ref><sp/>=<sp/>SDLK_F7;</highlight></codeline>
+<codeline lineno="158" refid="namespacekn_1a80cf7f79e9c8b010a789e23a4ce4b645" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a80cf7f79e9c8b010a789e23a4ce4b645" kindref="member">K_F8</ref><sp/>=<sp/>SDLK_F8;</highlight></codeline>
+<codeline lineno="159" refid="namespacekn_1a8dee3ddd6d25e2195ae87e9101b63fca" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a8dee3ddd6d25e2195ae87e9101b63fca" kindref="member">K_F9</ref><sp/>=<sp/>SDLK_F9;</highlight></codeline>
+<codeline lineno="160" refid="namespacekn_1a816379b6f60e0b2f6aa64e15373d9ece" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a816379b6f60e0b2f6aa64e15373d9ece" kindref="member">K_F10</ref><sp/>=<sp/>SDLK_F10;</highlight></codeline>
+<codeline lineno="161" refid="namespacekn_1ac0ce972f998a113965eff844b7a0d880" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ac0ce972f998a113965eff844b7a0d880" kindref="member">K_F11</ref><sp/>=<sp/>SDLK_F11;</highlight></codeline>
+<codeline lineno="162" refid="namespacekn_1af1c87cd7bcf97f7e2faa9cac067e2393" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1af1c87cd7bcf97f7e2faa9cac067e2393" kindref="member">K_F12</ref><sp/>=<sp/>SDLK_F12;</highlight></codeline>
+<codeline lineno="163" refid="namespacekn_1aaabe844c532aba332ec10308a885dc46" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1aaabe844c532aba332ec10308a885dc46" kindref="member">K_BACKQUOTE</ref><sp/>=<sp/>SDLK_BACKQUOTE;</highlight></codeline>
+<codeline lineno="164" refid="namespacekn_1a06f5c1794ebc60c8bdf074ebf2224e8c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a06f5c1794ebc60c8bdf074ebf2224e8c" kindref="member">K_HOME</ref><sp/>=<sp/>SDLK_HOME;</highlight></codeline>
+<codeline lineno="165" refid="namespacekn_1ae828cbc3cde886036bef0bcf664869e6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ae828cbc3cde886036bef0bcf664869e6" kindref="member">K_INSERT</ref><sp/>=<sp/>SDLK_INSERT;</highlight></codeline>
+<codeline lineno="166" refid="namespacekn_1abd91315c0d3965af04c23a4384c1681c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1abd91315c0d3965af04c23a4384c1681c" kindref="member">K_KP_0</ref><sp/>=<sp/>SDLK_KP_0;</highlight></codeline>
+<codeline lineno="167" refid="namespacekn_1aa389154299c4b611e2d171e747a50ad1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1aa389154299c4b611e2d171e747a50ad1" kindref="member">K_KP_1</ref><sp/>=<sp/>SDLK_KP_1;</highlight></codeline>
+<codeline lineno="168" refid="namespacekn_1a654bd4fb2009355802c8c4bfd230811e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a654bd4fb2009355802c8c4bfd230811e" kindref="member">K_KP_2</ref><sp/>=<sp/>SDLK_KP_2;</highlight></codeline>
+<codeline lineno="169" refid="namespacekn_1ae3eecb99bc03ffcd08cd8c34ae7c80e2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ae3eecb99bc03ffcd08cd8c34ae7c80e2" kindref="member">K_KP_3</ref><sp/>=<sp/>SDLK_KP_3;</highlight></codeline>
+<codeline lineno="170" refid="namespacekn_1a851b9e6d7e490e0d17061c12186248e6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a851b9e6d7e490e0d17061c12186248e6" kindref="member">K_KP_4</ref><sp/>=<sp/>SDLK_KP_4;</highlight></codeline>
+<codeline lineno="171" refid="namespacekn_1a2945e1f6bd511e01ece3d0ccb632a282" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a2945e1f6bd511e01ece3d0ccb632a282" kindref="member">K_KP_5</ref><sp/>=<sp/>SDLK_KP_5;</highlight></codeline>
+<codeline lineno="172" refid="namespacekn_1a456f2a7f65c53e3c235746c459c7cfd0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a456f2a7f65c53e3c235746c459c7cfd0" kindref="member">K_KP_6</ref><sp/>=<sp/>SDLK_KP_6;</highlight></codeline>
+<codeline lineno="173" refid="namespacekn_1a78eef061a9262f113926b6e0475b98cb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a78eef061a9262f113926b6e0475b98cb" kindref="member">K_KP_7</ref><sp/>=<sp/>SDLK_KP_7;</highlight></codeline>
+<codeline lineno="174" refid="namespacekn_1a3d8db1c2cfb47d82988dd378f86c17c4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a3d8db1c2cfb47d82988dd378f86c17c4" kindref="member">K_KP_8</ref><sp/>=<sp/>SDLK_KP_8;</highlight></codeline>
+<codeline lineno="175" refid="namespacekn_1a59a18302d4d65aea716db0838ab026bc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a59a18302d4d65aea716db0838ab026bc" kindref="member">K_KP_9</ref><sp/>=<sp/>SDLK_KP_9;</highlight></codeline>
+<codeline lineno="176" refid="namespacekn_1ada44ab67344bfbca731518e60abeac17" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ada44ab67344bfbca731518e60abeac17" kindref="member">K_KP_DIVIDE</ref><sp/>=<sp/>SDLK_KP_DIVIDE;</highlight></codeline>
+<codeline lineno="177" refid="namespacekn_1a5680b0bd892bb9896a4a644496fac97c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a5680b0bd892bb9896a4a644496fac97c" kindref="member">K_KP_ENTER</ref><sp/>=<sp/>SDLK_KP_ENTER;</highlight></codeline>
+<codeline lineno="178" refid="namespacekn_1a846ec42d97292cb1651d23dd6f3f4791" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a846ec42d97292cb1651d23dd6f3f4791" kindref="member">K_KP_MINUS</ref><sp/>=<sp/>SDLK_KP_MINUS;</highlight></codeline>
+<codeline lineno="179" refid="namespacekn_1afb05e5d4592209cdda8ab56240e40645" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1afb05e5d4592209cdda8ab56240e40645" kindref="member">K_KP_MULTIPLY</ref><sp/>=<sp/>SDLK_KP_MULTIPLY;</highlight></codeline>
+<codeline lineno="180" refid="namespacekn_1ad85ffde101a98448160d811f4b2907d6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ad85ffde101a98448160d811f4b2907d6" kindref="member">K_KP_PERIOD</ref><sp/>=<sp/>SDLK_KP_PERIOD;</highlight></codeline>
+<codeline lineno="181" refid="namespacekn_1ac5b0da68c3edb6b4ec3ef6a8313b1ee5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ac5b0da68c3edb6b4ec3ef6a8313b1ee5" kindref="member">K_KP_PLUS</ref><sp/>=<sp/>SDLK_KP_PLUS;</highlight></codeline>
+<codeline lineno="182" refid="namespacekn_1a281bb53cd88c9de0d336ebf778a609e5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a281bb53cd88c9de0d336ebf778a609e5" kindref="member">K_LALT</ref><sp/>=<sp/>SDLK_LALT;</highlight></codeline>
+<codeline lineno="183" refid="namespacekn_1a53998ae032c3c2990aea6501442bb0ea" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a53998ae032c3c2990aea6501442bb0ea" kindref="member">K_LCTRL</ref><sp/>=<sp/>SDLK_LCTRL;</highlight></codeline>
+<codeline lineno="184" refid="namespacekn_1a421ef6ac0ae67f816d6c7ea07d1b1191" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a421ef6ac0ae67f816d6c7ea07d1b1191" kindref="member">K_LEFTBRACKET</ref><sp/>=<sp/>SDLK_LEFTBRACKET;</highlight></codeline>
+<codeline lineno="185" refid="namespacekn_1a843ab6a663c42f5d1e8a3b0223fd051a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a843ab6a663c42f5d1e8a3b0223fd051a" kindref="member">K_LSHIFT</ref><sp/>=<sp/>SDLK_LSHIFT;</highlight></codeline>
+<codeline lineno="186" refid="namespacekn_1ac33b2dc770bc2650747fc91166892107" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ac33b2dc770bc2650747fc91166892107" kindref="member">K_MINUS</ref><sp/>=<sp/>SDLK_MINUS;</highlight></codeline>
+<codeline lineno="187" refid="namespacekn_1a477742bef2621129c4d9588f2a5ee818" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a477742bef2621129c4d9588f2a5ee818" kindref="member">K_NUMLOCKCLEAR</ref><sp/>=<sp/>SDLK_NUMLOCKCLEAR;</highlight></codeline>
+<codeline lineno="188" refid="namespacekn_1aa1b821e6641bd01075b94f5acc0e52e5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1aa1b821e6641bd01075b94f5acc0e52e5" kindref="member">K_PAGEDOWN</ref><sp/>=<sp/>SDLK_PAGEDOWN;</highlight></codeline>
+<codeline lineno="189" refid="namespacekn_1a789c738d7e6ad9ec632f5a05b1c75abb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a789c738d7e6ad9ec632f5a05b1c75abb" kindref="member">K_PAGEUP</ref><sp/>=<sp/>SDLK_PAGEUP;</highlight></codeline>
+<codeline lineno="190" refid="namespacekn_1a56b71879057a96bb6bfe194dd1646d6d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a56b71879057a96bb6bfe194dd1646d6d" kindref="member">K_PERIOD</ref><sp/>=<sp/>SDLK_PERIOD;</highlight></codeline>
+<codeline lineno="191" refid="namespacekn_1a70cf1fafe41bc6bb96ab240a9e320a52" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a70cf1fafe41bc6bb96ab240a9e320a52" kindref="member">K_PRINTSCREEN</ref><sp/>=<sp/>SDLK_PRINTSCREEN;</highlight></codeline>
+<codeline lineno="192" refid="namespacekn_1ad6e6ad8a9f1f6ca20f7f8c4050cd74b7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ad6e6ad8a9f1f6ca20f7f8c4050cd74b7" kindref="member">K_RALT</ref><sp/>=<sp/>SDLK_RALT;</highlight></codeline>
+<codeline lineno="193" refid="namespacekn_1a990d634087fee82bc9e341c7f4411eca" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a990d634087fee82bc9e341c7f4411eca" kindref="member">K_RCTRL</ref><sp/>=<sp/>SDLK_RCTRL;</highlight></codeline>
+<codeline lineno="194" refid="namespacekn_1a759d7afb6493b671cfceff4d9c33e8f5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a759d7afb6493b671cfceff4d9c33e8f5" kindref="member">K_RETURN</ref><sp/>=<sp/>SDLK_RETURN;</highlight></codeline>
+<codeline lineno="195" refid="namespacekn_1ae577c75ffc12fc0d1ba1d528086882b1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ae577c75ffc12fc0d1ba1d528086882b1" kindref="member">K_RIGHTBRACKET</ref><sp/>=<sp/>SDLK_RIGHTBRACKET;</highlight></codeline>
+<codeline lineno="196" refid="namespacekn_1a93ef7a1e9b925c00a1b86bd63f73b898" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a93ef7a1e9b925c00a1b86bd63f73b898" kindref="member">K_RSHIFT</ref><sp/>=<sp/>SDLK_RSHIFT;</highlight></codeline>
+<codeline lineno="197" refid="namespacekn_1a04b6598e8cc97f828171898449152bad" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a04b6598e8cc97f828171898449152bad" kindref="member">K_SEMICOLON</ref><sp/>=<sp/>SDLK_SEMICOLON;</highlight></codeline>
+<codeline lineno="198" refid="namespacekn_1a2636431a8ea8e70a4df3c95d81697965" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a2636431a8ea8e70a4df3c95d81697965" kindref="member">K_SLASH</ref><sp/>=<sp/>SDLK_SLASH;</highlight></codeline>
+<codeline lineno="199" refid="namespacekn_1ac3f3cb287e65ae3c147f4a86b31f12d0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ac3f3cb287e65ae3c147f4a86b31f12d0" kindref="member">K_SPACE</ref><sp/>=<sp/>SDLK_SPACE;</highlight></codeline>
+<codeline lineno="200" refid="namespacekn_1a9625c873d3ada8b383a2beb4adf60850" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a9625c873d3ada8b383a2beb4adf60850" kindref="member">K_TAB</ref><sp/>=<sp/>SDLK_TAB;</highlight></codeline>
+<codeline lineno="201" refid="namespacekn_1a1ff1d2ffa5e872644638f210e57efbce" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a1ff1d2ffa5e872644638f210e57efbce" kindref="member">K_AMPERSAND</ref><sp/>=<sp/>SDLK_AMPERSAND;</highlight></codeline>
+<codeline lineno="202" refid="namespacekn_1a4f8a8ff7784581ea5efebf26ef9d6921" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a4f8a8ff7784581ea5efebf26ef9d6921" kindref="member">K_ASTERISK</ref><sp/>=<sp/>SDLK_ASTERISK;</highlight></codeline>
+<codeline lineno="203" refid="namespacekn_1af99427d451f509881327e2c51a4a8e09" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1af99427d451f509881327e2c51a4a8e09" kindref="member">K_AT</ref><sp/>=<sp/>SDLK_AT;</highlight></codeline>
+<codeline lineno="204" refid="namespacekn_1a40c65c290e7beb99b0fcc3b9f07c3511" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a40c65c290e7beb99b0fcc3b9f07c3511" kindref="member">K_CARET</ref><sp/>=<sp/>SDLK_CARET;</highlight></codeline>
+<codeline lineno="205" refid="namespacekn_1a7b1dc55a17757edbe5aecf8e067f2747" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a7b1dc55a17757edbe5aecf8e067f2747" kindref="member">K_COLON</ref><sp/>=<sp/>SDLK_COLON;</highlight></codeline>
+<codeline lineno="206" refid="namespacekn_1a8526c5834fd0cb17c96cc6d0edfc5776" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a8526c5834fd0cb17c96cc6d0edfc5776" kindref="member">K_DOLLAR</ref><sp/>=<sp/>SDLK_DOLLAR;</highlight></codeline>
+<codeline lineno="207" refid="namespacekn_1a20422cadfc610a82e2cc9491c510b2ee" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a20422cadfc610a82e2cc9491c510b2ee" kindref="member">K_EXCLAIM</ref><sp/>=<sp/>SDLK_EXCLAIM;</highlight></codeline>
+<codeline lineno="208" refid="namespacekn_1a1d48de87ba9bc9340c91de0b9d0e79e0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a1d48de87ba9bc9340c91de0b9d0e79e0" kindref="member">K_GREATER</ref><sp/>=<sp/>SDLK_GREATER;</highlight></codeline>
+<codeline lineno="209" refid="namespacekn_1ac9b57de9cd263e5ecba63d6980bee2e4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1ac9b57de9cd263e5ecba63d6980bee2e4" kindref="member">K_HASH</ref><sp/>=<sp/>SDLK_HASH;</highlight></codeline>
+<codeline lineno="210" refid="namespacekn_1a2db413bee253746c2ebfddbd98ff5685" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a2db413bee253746c2ebfddbd98ff5685" kindref="member">K_LEFTPAREN</ref><sp/>=<sp/>SDLK_LEFTPAREN;</highlight></codeline>
+<codeline lineno="211" refid="namespacekn_1a1e75dd60e0721b1250f2152ab30751b7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a1e75dd60e0721b1250f2152ab30751b7" kindref="member">K_LESS</ref><sp/>=<sp/>SDLK_LESS;</highlight></codeline>
+<codeline lineno="212" refid="namespacekn_1a14dea6c5cc97d71fd285c602bab1fbc4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a14dea6c5cc97d71fd285c602bab1fbc4" kindref="member">K_PERCENT</ref><sp/>=<sp/>SDLK_PERCENT;</highlight></codeline>
+<codeline lineno="213" refid="namespacekn_1aca6050e3fd82f99727d846a9f57bebb4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1aca6050e3fd82f99727d846a9f57bebb4" kindref="member">K_PLUS</ref><sp/>=<sp/>SDLK_PLUS;</highlight></codeline>
+<codeline lineno="214" refid="namespacekn_1af435f45eb608aef007c27d29654d4a2a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1af435f45eb608aef007c27d29654d4a2a" kindref="member">K_QUESTION</ref><sp/>=<sp/>SDLK_QUESTION;</highlight></codeline>
+<codeline lineno="215" refid="namespacekn_1abf1d04a7c67d2fbd399837ab1108eb55" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1abf1d04a7c67d2fbd399837ab1108eb55" kindref="member">K_QUOTEDBL</ref><sp/>=<sp/>SDLK_QUOTEDBL;</highlight></codeline>
+<codeline lineno="216" refid="namespacekn_1a01c028ef7ec54d3867ee3eb2f69dde4e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a01c028ef7ec54d3867ee3eb2f69dde4e" kindref="member">K_RIGHTPAREN</ref><sp/>=<sp/>SDLK_RIGHTPAREN;</highlight></codeline>
+<codeline lineno="217" refid="namespacekn_1a14f929fcf08ea3be9ad78837e87c13ac" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_KeyCode<sp/><ref refid="namespacekn_1a14f929fcf08ea3be9ad78837e87c13ac" kindref="member">K_UNDERSCORE</ref><sp/>=<sp/>SDLK_UNDERSCORE;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220" refid="namespacekn_1a3ba3ca2591192bc770ee935bb547e845" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1a3ba3ca2591192bc770ee935bb547e845" kindref="member">_BUTTON_LEFT</ref><sp/>=<sp/>SDL_BUTTON_LEFT;</highlight></codeline>
+<codeline lineno="221" refid="namespacekn_1af99c07523184e6220aea674591246102" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1af99c07523184e6220aea674591246102" kindref="member">_BUTTON_MIDDLE</ref><sp/>=<sp/>SDL_BUTTON_MIDDLE;</highlight></codeline>
+<codeline lineno="222" refid="namespacekn_1a681305d5fd1c55718b4a454bb36c8e0a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1a681305d5fd1c55718b4a454bb36c8e0a" kindref="member">_BUTTON_RIGHT</ref><sp/>=<sp/>SDL_BUTTON_RIGHT;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp"/>
   </compounddef>

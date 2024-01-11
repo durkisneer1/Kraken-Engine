@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="input" href="input.html" /><link rel="prev" title="draw" href="draw.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Rect" href="rect.html" /><link rel="prev" title="Entity" href="entity.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
         <title>Font - Kraken Engine</title>
@@ -145,8 +145,11 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/kraken_engine_logo.png" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/kraken_engine_logo.png" alt="Dark Logo"/>
+  </div>
   
-  <span class="sidebar-brand-text">Kraken Engine</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -156,18 +159,20 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="ref_main.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="draw.html">draw</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="entity.html">Entity</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Font</a></li>
-<li class="toctree-l2"><a class="reference internal" href="input.html">input</a></li>
-<li class="toctree-l2"><a class="reference internal" href="math.html">math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rect.html">Rect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="render_window.html">RenderWindow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sprite.html">Sprite</a></li>
 <li class="toctree-l2"><a class="reference internal" href="texture_cache.html">TextureCache</a></li>
 <li class="toctree-l2"><a class="reference internal" href="texture.html">Texture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tile_map.html">TileMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constants.html">constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="draw.html">draw</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="math.html">math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="time.html">time</a></li>
 </ul>
 </li>
@@ -214,13 +219,12 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2kn4Font4FontER12RenderWindowRKNSt6stringEi">
-<span id="_CPPv3N2kn4Font4FontER12RenderWindowRKNSt6stringEi"></span><span id="_CPPv2N2kn4Font4FontER12RenderWindowRKNSt6stringEi"></span><span id="kn::Font::Font__RenderWindowR.ssCR.i"></span><span class="target" id="classkn_1_1_font_1a54b9e597cb11a64004317019f21ae7b1"></span><span class="sig-name descname"><span class="n"><span class="pre">Font</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="render_window.html#_CPPv4N2kn12RenderWindowE" title="kn::RenderWindow"><span class="n"><span class="pre">RenderWindow</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">window</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fileDir</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ptSize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn4Font4FontER12RenderWindowRKNSt6stringEi" title="Link to this definition">#</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N2kn4Font4FontERKNSt6stringEi">
+<span id="_CPPv3N2kn4Font4FontERKNSt6stringEi"></span><span id="_CPPv2N2kn4Font4FontERKNSt6stringEi"></span><span id="kn::Font::Font__ssCR.i"></span><span class="target" id="classkn_1_1_font_1a8fe856a038876c396e1a85045bcf1381"></span><span class="sig-name descname"><span class="n"><span class="pre">Font</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fileDir</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ptSize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn4Font4FontERKNSt6stringEi" title="Link to this definition">#</a><br /></dt>
 <dd><p>Create a font. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>window</strong> – The renderer context. </p></li>
 <li><p><strong>fileDir</strong> – The directory of the font file. </p></li>
 <li><p><strong>ptSize</strong> – The point size of the font. </p></li>
 </ul>
@@ -238,7 +242,7 @@
 <li><p><strong>text</strong> – The text to render. </p></li>
 <li><p><strong>antialias</strong> – Whether to antialias the text. </p></li>
 <li><p><strong>color</strong> – The color of the text. </p></li>
-<li><p><strong>wrapLength</strong> – The length to wrap the text. </p></li>
+<li><p><strong>wrapLength</strong> – The length to wrap the text.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -257,23 +261,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="input.html">
+          <a class="next-page" href="rect.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">input</div>
+                <div class="title">Rect</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="draw.html">
+          <a class="prev-page" href="entity.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">draw</div>
+                <div class="title">Entity</div>
                 
               </div>
             </a>
@@ -309,7 +313,7 @@
             <ul>
 <li><a class="reference internal" href="#">Font</a><ul>
 <li><a class="reference internal" href="#_CPPv4N2kn4FontE"><code class="docutils literal notranslate"><span class="pre">Font</span></code></a><ul>
-<li><a class="reference internal" href="#_CPPv4N2kn4Font4FontER12RenderWindowRKNSt6stringEi"><code class="docutils literal notranslate"><span class="pre">Font::Font()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn4Font4FontERKNSt6stringEi"><code class="docutils literal notranslate"><span class="pre">Font::Font()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn4Font6renderERKNSt6stringEb9SDL_Colori"><code class="docutils literal notranslate"><span class="pre">Font::render()</span></code></a></li>
 </ul>
 </li>

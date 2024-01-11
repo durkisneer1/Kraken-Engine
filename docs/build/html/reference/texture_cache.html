@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Texture" href="texture.html" /><link rel="prev" title="Sprite" href="sprite.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Texture" href="texture.html" /><link rel="prev" title="RenderWindow" href="render_window.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
         <title>TextureCache - Kraken Engine</title>
@@ -145,8 +145,11 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/kraken_engine_logo.png" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/kraken_engine_logo.png" alt="Dark Logo"/>
+  </div>
   
-  <span class="sidebar-brand-text">Kraken Engine</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -156,18 +159,20 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="ref_main.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="draw.html">draw</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="entity.html">Entity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
-<li class="toctree-l2"><a class="reference internal" href="input.html">input</a></li>
-<li class="toctree-l2"><a class="reference internal" href="math.html">math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rect.html">Rect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="render_window.html">RenderWindow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sprite.html">Sprite</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">TextureCache</a></li>
 <li class="toctree-l2"><a class="reference internal" href="texture.html">Texture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tile_map.html">TileMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constants.html">constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="draw.html">draw</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="math.html">math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="time.html">time</a></li>
 </ul>
 </li>
@@ -213,19 +218,14 @@
 <dd><p>A class to cache textures. </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This class must be a singleton. </p>
+<p>This class is planned to become a singleton. </p>
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2kn12TextureCache12TextureCacheER12RenderWindow">
-<span id="_CPPv3N2kn12TextureCache12TextureCacheER12RenderWindow"></span><span id="_CPPv2N2kn12TextureCache12TextureCacheER12RenderWindow"></span><span id="kn::TextureCache::TextureCache__RenderWindowR"></span><span class="target" id="classkn_1_1_texture_cache_1a64b72748e77a805b106f881cd76d9df3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TextureCache</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="render_window.html#_CPPv4N2kn12RenderWindowE" title="kn::RenderWindow"><span class="n"><span class="pre">RenderWindow</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">window</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn12TextureCache12TextureCacheER12RenderWindow" title="Link to this definition">#</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N2kn12TextureCache12TextureCacheEv">
+<span id="_CPPv3N2kn12TextureCache12TextureCacheEv"></span><span id="_CPPv2N2kn12TextureCache12TextureCacheEv"></span><span id="kn::TextureCache::TextureCache"></span><span class="target" id="classkn_1_1_texture_cache_1a30578a18426ef3626d2ebff18b775d0f"></span><span class="sig-name descname"><span class="n"><span class="pre">TextureCache</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N2kn12TextureCache12TextureCacheEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Instantiate the texture cache. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>window</strong> – The renderer context. </p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="cpp function">
@@ -236,7 +236,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> – The name of the texture. </p></li>
-<li><p><strong>path</strong> – The path to the texture file. </p></li>
+<li><p><strong>path</strong> – The path to the texture file.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -254,7 +254,7 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> – The name of the texture. </p></li>
 <li><p><strong>size</strong> – The size of the texture. </p></li>
-<li><p><strong>color</strong> – The color of the texture. </p></li>
+<li><p><strong>color</strong> – The color of the texture.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -269,13 +269,13 @@
 <dd><p>Move an existing texture. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This function is recommended for loading fonts. </p>
+<p>This function is recommended for loading fonts.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> – The name of the texture. </p></li>
-<li><p><strong>texture</strong> – The texture to move. </p></li>
+<li><p><strong>texture</strong> – The texture to move.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -310,6 +310,10 @@
 <dt class="sig sig-object cpp" id="_CPPv4N2kn12TextureCache9unloadAllEv">
 <span id="_CPPv3N2kn12TextureCache9unloadAllEv"></span><span id="_CPPv2N2kn12TextureCache9unloadAllEv"></span><span id="kn::TextureCache::unloadAll"></span><span class="target" id="classkn_1_1_texture_cache_1a0992ea0a972b7056c57d480c594acf4b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">unloadAll</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn12TextureCache9unloadAllEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Unload all textures from cache. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method is called in the destructor. </p>
+</div>
 </dd></dl>
 
 <dl class="cpp function">
@@ -318,7 +322,7 @@
 <dd><p>Get a texture pointer from cache. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>name</strong> – The name of the texture. </p>
+<dd class="field-odd"><p><strong>name</strong> – The name of the texture.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The texture pointer. </p>
@@ -345,14 +349,14 @@
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="sprite.html">
+          <a class="prev-page" href="render_window.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Sprite</div>
+                <div class="title">RenderWindow</div>
                 
               </div>
             </a>
@@ -388,7 +392,7 @@
             <ul>
 <li><a class="reference internal" href="#">TextureCache</a><ul>
 <li><a class="reference internal" href="#_CPPv4N2kn12TextureCacheE"><code class="docutils literal notranslate"><span class="pre">TextureCache</span></code></a><ul>
-<li><a class="reference internal" href="#_CPPv4N2kn12TextureCache12TextureCacheER12RenderWindow"><code class="docutils literal notranslate"><span class="pre">TextureCache::TextureCache()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn12TextureCache12TextureCacheEv"><code class="docutils literal notranslate"><span class="pre">TextureCache::TextureCache()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn12TextureCache4loadERKNSt6stringERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">TextureCache::load()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn12TextureCache6createERKNSt6stringERKN4math4Vec2E9SDL_Color"><code class="docutils literal notranslate"><span class="pre">TextureCache::create()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn12TextureCache4moveERKNSt6stringENSt10shared_ptrI7TextureEE"><code class="docutils literal notranslate"><span class="pre">TextureCache::move()</span></code></a></li>

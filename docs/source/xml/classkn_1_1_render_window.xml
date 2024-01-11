@@ -4,12 +4,12 @@
     <compoundname>kn::RenderWindow</compoundname>
     <includes refid="_render_window_8hpp" local="no">RenderWindow.hpp</includes>
     <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classkn_1_1_render_window_1a77eb3f5e860e4e50f979ee8ab62e2281" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classkn_1_1_render_window_1a1117133557ac0add84448fc4963ee627" prot="private" static="no" mutable="no">
         <type>SDL_Renderer *</type>
-        <definition>SDL_Renderer* kn::RenderWindow::renderer</definition>
+        <definition>SDL_Renderer* kn::RenderWindow::m_renderer</definition>
         <argsstring></argsstring>
-        <name>renderer</name>
-        <qualifiedname>kn::RenderWindow::renderer</qualifiedname>
+        <name>m_renderer</name>
+        <qualifiedname>kn::RenderWindow::m_renderer</qualifiedname>
         <initializer>= nullptr</initializer>
         <briefdescription>
         </briefdescription>
@@ -17,14 +17,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="75" column="14" bodyfile="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" bodystart="75" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="142" column="18" bodyfile="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" bodystart="142" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classkn_1_1_render_window_1a59d594e2a9aefd834bdb706f68c1de80" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classkn_1_1_render_window_1af174d2f6a0fef009255e7b27ad347cd5" prot="private" static="no" mutable="no">
         <type>SDL_Window *</type>
-        <definition>SDL_Window* kn::RenderWindow::window</definition>
+        <definition>SDL_Window* kn::RenderWindow::m_window</definition>
         <argsstring></argsstring>
-        <name>window</name>
-        <qualifiedname>kn::RenderWindow::window</qualifiedname>
+        <name>m_window</name>
+        <qualifiedname>kn::RenderWindow::m_window</qualifiedname>
         <initializer>= nullptr</initializer>
         <briefdescription>
         </briefdescription>
@@ -32,85 +32,95 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="76" column="12" bodyfile="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" bodystart="76" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="143" column="16" bodyfile="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" bodystart="143" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classkn_1_1_render_window_1ae4dbc584867242f37a8ebb9466310e0d" prot="private" static="no" mutable="no">
-        <type><ref refid="_constants_8hpp_1a388284301502e072989be8df6a52af9b" kindref="member">KN_Event</ref></type>
-        <definition>KN_Event kn::RenderWindow::event</definition>
+      <memberdef kind="variable" id="classkn_1_1_render_window_1a7d4c099a91f79a02d56d8ce0c6419010" prot="private" static="no" mutable="no">
+        <type>KN_Event</type>
+        <definition>KN_Event kn::RenderWindow::m_event</definition>
         <argsstring></argsstring>
-        <name>event</name>
-        <qualifiedname>kn::RenderWindow::event</qualifiedname>
+        <name>m_event</name>
+        <qualifiedname>kn::RenderWindow::m_event</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="78" column="10" bodyfile="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" bodystart="78" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="145" column="14" bodyfile="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" bodystart="145" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classkn_1_1_render_window_1ab3fe2bd2a21de52f799cd24d28807bf4" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classkn_1_1_render_window_1a19158c9bbfc7629788e81b9b4aa69b64" prot="private" static="no" mutable="no">
         <type>std::vector&lt; SDL_Event &gt;</type>
-        <definition>std::vector&lt;SDL_Event&gt; kn::RenderWindow::events</definition>
+        <definition>std::vector&lt;SDL_Event&gt; kn::RenderWindow::m_events</definition>
         <argsstring></argsstring>
-        <name>events</name>
-        <qualifiedname>kn::RenderWindow::events</qualifiedname>
+        <name>m_events</name>
+        <qualifiedname>kn::RenderWindow::m_events</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="79" column="13" bodyfile="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" bodystart="79" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="146" column="17" bodyfile="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" bodystart="146" bodyend="-1"/>
       </memberdef>
     </sectiondef>
-    <sectiondef kind="public-func">
-      <memberdef kind="function" id="classkn_1_1_render_window_1a553f2003d5eb88aee940926a6f482f56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>kn::RenderWindow::RenderWindow</definition>
-        <argsstring>(const std::string &amp;title=&quot;Kraken Window&quot;, int scale=1, bool fullscreen=false)</argsstring>
-        <name>RenderWindow</name>
-        <qualifiedname>kn::RenderWindow::RenderWindow</qualifiedname>
-        <param>
-          <type>const std::string &amp;</type>
-          <declname>title</declname>
-          <defval>&quot;Kraken Window&quot;</defval>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>scale</declname>
-          <defval>1</defval>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>fullscreen</declname>
-          <defval>false</defval>
-        </param>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classkn_1_1_render_window_1adcad93cc1e1c336afff133667bdbcb2c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref> &amp;</type>
+        <definition>static RenderWindow &amp; kn::RenderWindow::getInstance</definition>
+        <argsstring>()</argsstring>
+        <name>getInstance</name>
+        <qualifiedname>kn::RenderWindow::getInstance</qualifiedname>
         <briefdescription>
-<para>Create a window. </para>
+<para>Get a reference to the instance of the singleton. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>reference to the instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="31" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1_render_window_1a04888f5d385499db342f75021fa6beb0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int kn::RenderWindow::getScale</definition>
+        <argsstring>()</argsstring>
+        <name>getScale</name>
+        <qualifiedname>kn::RenderWindow::getScale</qualifiedname>
+        <briefdescription>
+<para>Get the scale of the window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the scale </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="111" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1_render_window_1a169192f7eb40b203031c7a26a711fa26" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void kn::RenderWindow::setScale</definition>
+        <argsstring>(int newScale)</argsstring>
+        <name>setScale</name>
+        <qualifiedname>kn::RenderWindow::setScale</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>newScale</declname>
+        </param>
+        <briefdescription>
+<para>Set the scale of the window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Only valid before instantiating <ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref> for the first time</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>title</parametername>
+<parametername>newScale</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The title of the window. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>scale</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The scale of the window. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>fullscreen</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Whether to make the window fullscreen. </para>
+<para>the scale of the window </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -118,32 +128,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="28" column="1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="133" column="17"/>
       </memberdef>
-      <memberdef kind="function" id="classkn_1_1_render_window_1a0e5af334903645c870c713f53b754823" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>kn::RenderWindow::~RenderWindow</definition>
-        <argsstring>()</argsstring>
-        <name>~RenderWindow</name>
-        <qualifiedname>kn::RenderWindow::~RenderWindow</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="29" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="classkn_1_1_render_window_1a72531bd5ff3c09b07185ac7fcbe57a85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classkn_1_1_render_window_1adbc6173c883f03ff8bb6cdc98c051dcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void kn::RenderWindow::cls</definition>
-        <argsstring>(SDL_Color color={ 0, 0, 0, 255 })</argsstring>
+        <argsstring>(SDL_Color color={0, 0, 0, 255})</argsstring>
         <name>cls</name>
         <qualifiedname>kn::RenderWindow::cls</qualifiedname>
         <param>
           <type>SDL_Color</type>
           <declname>color</declname>
-          <defval>{ 0, 0, 0, 255 }</defval>
+          <defval>{0, 0, 0, 255}</defval>
         </param>
         <briefdescription>
 <para>Clear the screen. </para>
@@ -162,9 +160,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="33" column="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="38" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="classkn_1_1_render_window_1a7d04089325a8080a1f4b7c5cb9e4f12c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classkn_1_1_render_window_1a7d04089325a8080a1f4b7c5cb9e4f12c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void kn::RenderWindow::flip</definition>
         <argsstring>()</argsstring>
@@ -177,7 +175,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="36" column="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="43" column="10" bodyfile="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" bodystart="43" bodyend="43"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_render_window_1a42bc368f61f894d86f3061a7b69960db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -230,7 +228,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="42" column="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="52" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_render_window_1af9cca175a5bb42c51d379d44d9a9bf1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -271,7 +269,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="47" column="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="60" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_render_window_1aa41e48a864ad17ead2c071963ca584fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -363,7 +361,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="56" column="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="72" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_render_window_1a748a1d4865fb6042eeb71ce35213fca5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -443,7 +441,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="64" column="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="83" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_render_window_1a8fade150c1e4b23c46a44e8df4367969" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>SDL_Renderer *</type>
@@ -461,10 +459,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="68" column="14" bodyfile="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" bodystart="68" bodyend="68"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="90" column="18" bodyfile="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" bodystart="90" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_render_window_1ab6fe3057df99ba603aa118958a69918c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>const std::vector&lt; <ref refid="_constants_8hpp_1a388284301502e072989be8df6a52af9b" kindref="member">KN_Event</ref> &gt; &amp;</type>
+        <type>const std::vector&lt; KN_Event &gt; &amp;</type>
         <definition>const std::vector&lt; KN_Event &gt; &amp; kn::RenderWindow::getEvents</definition>
         <argsstring>()</argsstring>
         <name>getEvents</name>
@@ -479,33 +477,180 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="72" column="19"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="97" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1_render_window_1a08e59168fc273ef5c55e74c21c7b93b7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool kn::RenderWindow::getFullscreen</definition>
+        <argsstring>() const</argsstring>
+        <name>getFullscreen</name>
+        <qualifiedname>kn::RenderWindow::getFullscreen</qualifiedname>
+        <briefdescription>
+<para>Get whether the window is fullscreen or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Whether the window is fullscreen or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="104" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1_render_window_1afe261879b8ff7554723757fc320c99a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::RenderWindow::setTitle</definition>
+        <argsstring>(const std::string &amp;newTitle)</argsstring>
+        <name>setTitle</name>
+        <qualifiedname>kn::RenderWindow::setTitle</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>newTitle</declname>
+        </param>
+        <briefdescription>
+<para>Set the title of the window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newTitle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new title </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="118" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1_render_window_1a64f5d5c9dba806a63815b2521b396adb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::RenderWindow::setFullscreen</definition>
+        <argsstring>(bool fullscreen)</argsstring>
+        <name>setFullscreen</name>
+        <qualifiedname>kn::RenderWindow::setFullscreen</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>fullscreen</declname>
+        </param>
+        <briefdescription>
+<para>Set whether the window is fullscreen or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fullscreen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if setting fullscreen, false otherwise </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="125" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classkn_1_1_render_window_1a120f2cd929f30fea7a367025658395dc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>kn::RenderWindow::RenderWindow</definition>
+        <argsstring>()</argsstring>
+        <name>RenderWindow</name>
+        <qualifiedname>kn::RenderWindow::RenderWindow</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="136" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1_render_window_1a5ed9d63ab84ffa51793e1e788c867233" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>kn::RenderWindow::RenderWindow</definition>
+        <argsstring>(const RenderWindow &amp;other)=delete</argsstring>
+        <name>RenderWindow</name>
+        <qualifiedname>kn::RenderWindow::RenderWindow</qualifiedname>
+        <param>
+          <type>const <ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="137" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1_render_window_1a0e5af334903645c870c713f53b754823" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>kn::RenderWindow::~RenderWindow</definition>
+        <argsstring>()</argsstring>
+        <name>~RenderWindow</name>
+        <qualifiedname>kn::RenderWindow::~RenderWindow</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="138" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1_render_window_1a6438f39a2be6013f5c22eaf8df5dda48" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref> &amp;</type>
+        <definition>RenderWindow &amp; kn::RenderWindow::operator=</definition>
+        <argsstring>(const RenderWindow &amp;rhs)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>kn::RenderWindow::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="140" column="18"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
 <para>The renderer context. </para>
     </briefdescription>
     <detaileddescription>
-<para><simplesect kind="warning"><para>This class must be a singleton. </para>
-</simplesect>
-</para>
     </detaileddescription>
-    <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="22" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" bodystart="22" bodyend="80"/>
+    <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="23" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" bodystart="24" bodyend="147"/>
     <listofallmembers>
       <member refid="classkn_1_1_render_window_1a42bc368f61f894d86f3061a7b69960db" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>blit</name></member>
       <member refid="classkn_1_1_render_window_1af9cca175a5bb42c51d379d44d9a9bf1b" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>blit</name></member>
       <member refid="classkn_1_1_render_window_1aa41e48a864ad17ead2c071963ca584fa" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>blitEx</name></member>
       <member refid="classkn_1_1_render_window_1a748a1d4865fb6042eeb71ce35213fca5" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>blitEx</name></member>
-      <member refid="classkn_1_1_render_window_1a72531bd5ff3c09b07185ac7fcbe57a85" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>cls</name></member>
-      <member refid="classkn_1_1_render_window_1ae4dbc584867242f37a8ebb9466310e0d" prot="private" virt="non-virtual"><scope>kn::RenderWindow</scope><name>event</name></member>
-      <member refid="classkn_1_1_render_window_1ab3fe2bd2a21de52f799cd24d28807bf4" prot="private" virt="non-virtual"><scope>kn::RenderWindow</scope><name>events</name></member>
+      <member refid="classkn_1_1_render_window_1adbc6173c883f03ff8bb6cdc98c051dcb" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>cls</name></member>
       <member refid="classkn_1_1_render_window_1a7d04089325a8080a1f4b7c5cb9e4f12c" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>flip</name></member>
       <member refid="classkn_1_1_render_window_1ab6fe3057df99ba603aa118958a69918c" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>getEvents</name></member>
+      <member refid="classkn_1_1_render_window_1a08e59168fc273ef5c55e74c21c7b93b7" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>getFullscreen</name></member>
+      <member refid="classkn_1_1_render_window_1adcad93cc1e1c336afff133667bdbcb2c" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>getInstance</name></member>
       <member refid="classkn_1_1_render_window_1a8fade150c1e4b23c46a44e8df4367969" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>getRenderer</name></member>
-      <member refid="classkn_1_1_render_window_1a77eb3f5e860e4e50f979ee8ab62e2281" prot="private" virt="non-virtual"><scope>kn::RenderWindow</scope><name>renderer</name></member>
-      <member refid="classkn_1_1_render_window_1a553f2003d5eb88aee940926a6f482f56" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>RenderWindow</name></member>
-      <member refid="classkn_1_1_render_window_1a59d594e2a9aefd834bdb706f68c1de80" prot="private" virt="non-virtual"><scope>kn::RenderWindow</scope><name>window</name></member>
-      <member refid="classkn_1_1_render_window_1a0e5af334903645c870c713f53b754823" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>~RenderWindow</name></member>
+      <member refid="classkn_1_1_render_window_1a04888f5d385499db342f75021fa6beb0" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>getScale</name></member>
+      <member refid="classkn_1_1_render_window_1a7d4c099a91f79a02d56d8ce0c6419010" prot="private" virt="non-virtual"><scope>kn::RenderWindow</scope><name>m_event</name></member>
+      <member refid="classkn_1_1_render_window_1a19158c9bbfc7629788e81b9b4aa69b64" prot="private" virt="non-virtual"><scope>kn::RenderWindow</scope><name>m_events</name></member>
+      <member refid="classkn_1_1_render_window_1a1117133557ac0add84448fc4963ee627" prot="private" virt="non-virtual"><scope>kn::RenderWindow</scope><name>m_renderer</name></member>
+      <member refid="classkn_1_1_render_window_1af174d2f6a0fef009255e7b27ad347cd5" prot="private" virt="non-virtual"><scope>kn::RenderWindow</scope><name>m_window</name></member>
+      <member refid="classkn_1_1_render_window_1a6438f39a2be6013f5c22eaf8df5dda48" prot="private" virt="non-virtual"><scope>kn::RenderWindow</scope><name>operator=</name></member>
+      <member refid="classkn_1_1_render_window_1a120f2cd929f30fea7a367025658395dc" prot="private" virt="non-virtual"><scope>kn::RenderWindow</scope><name>RenderWindow</name></member>
+      <member refid="classkn_1_1_render_window_1a5ed9d63ab84ffa51793e1e788c867233" prot="private" virt="non-virtual"><scope>kn::RenderWindow</scope><name>RenderWindow</name></member>
+      <member refid="classkn_1_1_render_window_1a64f5d5c9dba806a63815b2521b396adb" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>setFullscreen</name></member>
+      <member refid="classkn_1_1_render_window_1a169192f7eb40b203031c7a26a711fa26" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>setScale</name></member>
+      <member refid="classkn_1_1_render_window_1afe261879b8ff7554723757fc320c99a2" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>setTitle</name></member>
+      <member refid="classkn_1_1_render_window_1a0e5af334903645c870c713f53b754823" prot="private" virt="non-virtual"><scope>kn::RenderWindow</scope><name>~RenderWindow</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -4,20 +4,6 @@
     <compoundname>kn::TextureCache</compoundname>
     <includes refid="_texture_cache_8hpp" local="no">TextureCache.hpp</includes>
     <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classkn_1_1_texture_cache_1ac1b7e677c82f6fa4df855e1ad1f2ef5a" prot="private" static="no" mutable="no">
-        <type><ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref> &amp;</type>
-        <definition>RenderWindow&amp; kn::TextureCache::window</definition>
-        <argsstring></argsstring>
-        <name>window</name>
-        <qualifiedname>kn::TextureCache::window</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="62" column="18" bodyfile="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" bodystart="62" bodyend="-1"/>
-      </memberdef>
       <memberdef kind="variable" id="classkn_1_1_texture_cache_1a6434464b3dfb1b038815313ee4ef5f8f" prot="private" static="no" mutable="no">
         <type>std::map&lt; std::string, std::shared_ptr&lt; <ref refid="classkn_1_1_texture" kindref="compound">Texture</ref> &gt; &gt;</type>
         <definition>std::map&lt;std::string, std::shared_ptr&lt;Texture&gt; &gt; kn::TextureCache::textures</definition>
@@ -30,38 +16,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="63" column="14" bodyfile="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" bodystart="63" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="90" column="14" bodyfile="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" bodystart="90" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classkn_1_1_texture_cache_1a64b72748e77a805b106f881cd76d9df3" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classkn_1_1_texture_cache_1a30578a18426ef3626d2ebff18b775d0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>kn::TextureCache::TextureCache</definition>
-        <argsstring>(RenderWindow &amp;window)</argsstring>
+        <argsstring>()=default</argsstring>
         <name>TextureCache</name>
         <qualifiedname>kn::TextureCache::TextureCache</qualifiedname>
-        <param>
-          <type><ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref> &amp;</type>
-          <declname>window</declname>
-        </param>
         <briefdescription>
 <para>Instantiate the texture cache. </para>
         </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>window</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The renderer context. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="19" column="14" bodyfile="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" bodystart="19" bodyend="19"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="23" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_texture_cache_1adf8c16a1cde822c3598404335f41e8b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -75,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="20" column="5" bodyfile="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" bodystart="20" bodyend="20"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="24" column="5" bodyfile="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" bodystart="24" bodyend="24"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_texture_cache_1a424624eee8b1e356b12df8f06998f35f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::shared_ptr&lt; <ref refid="classkn_1_1_texture" kindref="compound">Texture</ref> &gt;</type>
@@ -108,7 +80,7 @@
 <parametername>path</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The path to the texture file. </para>
+<para>The path to the texture file.</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -118,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="27" column="21"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="34" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_texture_cache_1ac0506c33fe28a0f85085c20b68b4a713" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::shared_ptr&lt; <ref refid="classkn_1_1_texture" kindref="compound">Texture</ref> &gt;</type>
@@ -163,7 +135,7 @@
 <parametername>color</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The color of the texture. </para>
+<para>The color of the texture.</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -173,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="35" column="21"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="45" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_texture_cache_1ac2cc4f423bac33ad8c2865301be31c04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::shared_ptr&lt; <ref refid="classkn_1_1_texture" kindref="compound">Texture</ref> &gt;</type>
@@ -206,11 +178,11 @@
 <parametername>texture</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The texture to move. </para>
+<para>The texture to move.</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="note"><para>This function is recommended for loading fonts. </para>
+<simplesect kind="note"><para>This function is recommended for loading fonts.</para>
 </simplesect>
 <simplesect kind="return"><para>The texture pointer. </para>
 </simplesect>
@@ -218,7 +190,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="43" column="21"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="57" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_texture_cache_1ac5a50795a0cde01f052166e477d5099e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const std::map&lt; std::string, std::shared_ptr&lt; <ref refid="classkn_1_1_texture" kindref="compound">Texture</ref> &gt; &gt; &amp;</type>
@@ -236,7 +208,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="47" column="20"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="64" column="20"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_texture_cache_1ac4c9efdc51bc5407a1422c970d5907d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -265,7 +237,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="51" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="71" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_texture_cache_1a0992ea0a972b7056c57d480c594acf4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -277,10 +249,13 @@
 <para>Unload all textures from cache. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="note"><para>This method is called in the destructor. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="54" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="78" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_texture_cache_1a2603a9b25402eda33f7e0b3a30b94bfd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::shared_ptr&lt; <ref refid="classkn_1_1_texture" kindref="compound">Texture</ref> &gt;</type>
@@ -301,7 +276,7 @@
 <parametername>name</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The name of the texture. </para>
+<para>The name of the texture.</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -311,29 +286,28 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="59" column="21"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="87" column="21"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
 <para>A class to cache textures. </para>
     </briefdescription>
     <detaileddescription>
-<para><simplesect kind="warning"><para>This class must be a singleton. </para>
+<para><simplesect kind="warning"><para>This class is planned to become a singleton. </para>
 </simplesect>
 </para>
     </detaileddescription>
-    <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="15" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" bodystart="15" bodyend="64"/>
+    <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="17" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" bodystart="18" bodyend="91"/>
     <listofallmembers>
       <member refid="classkn_1_1_texture_cache_1ac0506c33fe28a0f85085c20b68b4a713" prot="public" virt="non-virtual"><scope>kn::TextureCache</scope><name>create</name></member>
       <member refid="classkn_1_1_texture_cache_1ac5a50795a0cde01f052166e477d5099e" prot="public" virt="non-virtual"><scope>kn::TextureCache</scope><name>getCache</name></member>
       <member refid="classkn_1_1_texture_cache_1a2603a9b25402eda33f7e0b3a30b94bfd" prot="public" virt="non-virtual"><scope>kn::TextureCache</scope><name>getTexture</name></member>
       <member refid="classkn_1_1_texture_cache_1a424624eee8b1e356b12df8f06998f35f" prot="public" virt="non-virtual"><scope>kn::TextureCache</scope><name>load</name></member>
       <member refid="classkn_1_1_texture_cache_1ac2cc4f423bac33ad8c2865301be31c04" prot="public" virt="non-virtual"><scope>kn::TextureCache</scope><name>move</name></member>
-      <member refid="classkn_1_1_texture_cache_1a64b72748e77a805b106f881cd76d9df3" prot="public" virt="non-virtual"><scope>kn::TextureCache</scope><name>TextureCache</name></member>
+      <member refid="classkn_1_1_texture_cache_1a30578a18426ef3626d2ebff18b775d0f" prot="public" virt="non-virtual"><scope>kn::TextureCache</scope><name>TextureCache</name></member>
       <member refid="classkn_1_1_texture_cache_1a6434464b3dfb1b038815313ee4ef5f8f" prot="private" virt="non-virtual"><scope>kn::TextureCache</scope><name>textures</name></member>
       <member refid="classkn_1_1_texture_cache_1ac4c9efdc51bc5407a1422c970d5907d4" prot="public" virt="non-virtual"><scope>kn::TextureCache</scope><name>unload</name></member>
       <member refid="classkn_1_1_texture_cache_1a0992ea0a972b7056c57d480c594acf4b" prot="public" virt="non-virtual"><scope>kn::TextureCache</scope><name>unloadAll</name></member>
-      <member refid="classkn_1_1_texture_cache_1ac1b7e677c82f6fa4df855e1ad1f2ef5a" prot="private" virt="non-virtual"><scope>kn::TextureCache</scope><name>window</name></member>
       <member refid="classkn_1_1_texture_cache_1adf8c16a1cde822c3598404335f41e8b9" prot="public" virt="non-virtual"><scope>kn::TextureCache</scope><name>~TextureCache</name></member>
     </listofallmembers>
   </compounddef>

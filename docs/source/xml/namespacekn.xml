@@ -2,11 +2,11 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="namespacekn" kind="namespace" language="C++">
     <compoundname>kn</compoundname>
+    <innerclass refid="classkn_1_1_entity" prot="public">kn::Entity</innerclass>
     <innerclass refid="classkn_1_1_font" prot="public">kn::Font</innerclass>
     <innerclass refid="structkn_1_1_object" prot="public">kn::Object</innerclass>
     <innerclass refid="structkn_1_1_rect" prot="public">kn::Rect</innerclass>
     <innerclass refid="classkn_1_1_render_window" prot="public">kn::RenderWindow</innerclass>
-    <innerclass refid="classkn_1_1_sprite" prot="public">kn::Sprite</innerclass>
     <innerclass refid="classkn_1_1_texture" prot="public">kn::Texture</innerclass>
     <innerclass refid="classkn_1_1_texture_cache" prot="public">kn::TextureCache</innerclass>
     <innerclass refid="structkn_1_1_tile" prot="public">kn::Tile</innerclass>
@@ -15,7 +15,3157 @@
     <innernamespace refid="namespacekn_1_1input">kn::input</innernamespace>
     <innernamespace refid="namespacekn_1_1math">kn::math</innernamespace>
     <innernamespace refid="namespacekn_1_1time">kn::time</innernamespace>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacekn_1a438de58efec73267dee3696ce9bc8c7d" prot="public" static="no">
+        <type>SDL_Scancode</type>
+        <definition>typedef SDL_Scancode kn::KEYS</definition>
+        <argsstring></argsstring>
+        <name>KEYS</name>
+        <qualifiedname>kn::KEYS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="8" column="22" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacekn_1af947a748461c782cd90f4d4b7cdbea21" prot="public" static="no">
+        <type>SDL_Event</type>
+        <definition>typedef SDL_Event kn::Event</definition>
+        <argsstring></argsstring>
+        <name>Event</name>
+        <qualifiedname>kn::Event</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="9" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
     <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacekn_1ae722a8550cc1db8f08796eef82faace0" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_0</definition>
+        <argsstring></argsstring>
+        <name>SC_0</name>
+        <qualifiedname>kn::SC_0</qualifiedname>
+        <initializer>= SDL_SCANCODE_0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="11" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a0ce969d5512889b793e3a1f35056edb4" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_1</definition>
+        <argsstring></argsstring>
+        <name>SC_1</name>
+        <qualifiedname>kn::SC_1</qualifiedname>
+        <initializer>= SDL_SCANCODE_1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="12" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1aa93fd3394f6d146651ff274805f970e3" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_2</definition>
+        <argsstring></argsstring>
+        <name>SC_2</name>
+        <qualifiedname>kn::SC_2</qualifiedname>
+        <initializer>= SDL_SCANCODE_2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="13" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1acbf7396315821e4e43744b52b7614f4d" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_3</definition>
+        <argsstring></argsstring>
+        <name>SC_3</name>
+        <qualifiedname>kn::SC_3</qualifiedname>
+        <initializer>= SDL_SCANCODE_3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="14" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a2be7875bd4cc044f102883d8dfdac21b" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_4</definition>
+        <argsstring></argsstring>
+        <name>SC_4</name>
+        <qualifiedname>kn::SC_4</qualifiedname>
+        <initializer>= SDL_SCANCODE_4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="15" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1adb1e0b7504024eaf704ab4edb78a7781" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_5</definition>
+        <argsstring></argsstring>
+        <name>SC_5</name>
+        <qualifiedname>kn::SC_5</qualifiedname>
+        <initializer>= SDL_SCANCODE_5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="16" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1aeb22b3ce8eb862267f2f5a8b9ea38a5c" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_6</definition>
+        <argsstring></argsstring>
+        <name>SC_6</name>
+        <qualifiedname>kn::SC_6</qualifiedname>
+        <initializer>= SDL_SCANCODE_6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="17" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a5b8a4b318e4bfcd66b70e15321eab4d0" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_7</definition>
+        <argsstring></argsstring>
+        <name>SC_7</name>
+        <qualifiedname>kn::SC_7</qualifiedname>
+        <initializer>= SDL_SCANCODE_7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="18" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a442b7a8a253e5b5ff058167d6356368b" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_8</definition>
+        <argsstring></argsstring>
+        <name>SC_8</name>
+        <qualifiedname>kn::SC_8</qualifiedname>
+        <initializer>= SDL_SCANCODE_8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="19" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ac68f74219e1f9ee5fe1b1c563f643762" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_9</definition>
+        <argsstring></argsstring>
+        <name>SC_9</name>
+        <qualifiedname>kn::SC_9</qualifiedname>
+        <initializer>= SDL_SCANCODE_9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="20" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ae8aa913820c2b2a3b8926949939cffd4" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_A</definition>
+        <argsstring></argsstring>
+        <name>SC_A</name>
+        <qualifiedname>kn::SC_A</qualifiedname>
+        <initializer>= SDL_SCANCODE_A</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="21" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1af1747a8c2dd792b6ff97cb2cc2c29180" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_B</definition>
+        <argsstring></argsstring>
+        <name>SC_B</name>
+        <qualifiedname>kn::SC_B</qualifiedname>
+        <initializer>= SDL_SCANCODE_B</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="22" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1aeb6518940d680aee528e589d9ac1552c" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_C</definition>
+        <argsstring></argsstring>
+        <name>SC_C</name>
+        <qualifiedname>kn::SC_C</qualifiedname>
+        <initializer>= SDL_SCANCODE_C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="23" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a0f179392fb510fb81c7b14b03cccc606" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_D</definition>
+        <argsstring></argsstring>
+        <name>SC_D</name>
+        <qualifiedname>kn::SC_D</qualifiedname>
+        <initializer>= SDL_SCANCODE_D</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="24" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1af0e9e54da5a274c26dad4692d3e63e58" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_E</definition>
+        <argsstring></argsstring>
+        <name>SC_E</name>
+        <qualifiedname>kn::SC_E</qualifiedname>
+        <initializer>= SDL_SCANCODE_E</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="25" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a8575e7395da3dadfccaddc138c91620e" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_F</definition>
+        <argsstring></argsstring>
+        <name>SC_F</name>
+        <qualifiedname>kn::SC_F</qualifiedname>
+        <initializer>= SDL_SCANCODE_F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="26" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a52cf42c7a9db2ee10a3d487f3b7ce827" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_G</definition>
+        <argsstring></argsstring>
+        <name>SC_G</name>
+        <qualifiedname>kn::SC_G</qualifiedname>
+        <initializer>= SDL_SCANCODE_G</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="27" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a640c84339d11f41feaeb91dac563ac0d" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_H</definition>
+        <argsstring></argsstring>
+        <name>SC_H</name>
+        <qualifiedname>kn::SC_H</qualifiedname>
+        <initializer>= SDL_SCANCODE_H</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="28" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1af570b327b03b0440424848ae0c97713e" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_I</definition>
+        <argsstring></argsstring>
+        <name>SC_I</name>
+        <qualifiedname>kn::SC_I</qualifiedname>
+        <initializer>= SDL_SCANCODE_I</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="29" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a92011e7e81c7b2b2d0c494799d1ff52d" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_J</definition>
+        <argsstring></argsstring>
+        <name>SC_J</name>
+        <qualifiedname>kn::SC_J</qualifiedname>
+        <initializer>= SDL_SCANCODE_J</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="30" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a76c0b55c40ea3f8ab3ea49f005baa57c" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_K</definition>
+        <argsstring></argsstring>
+        <name>SC_K</name>
+        <qualifiedname>kn::SC_K</qualifiedname>
+        <initializer>= SDL_SCANCODE_K</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="31" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1aa1339f3e671635226296d65e70a9dc94" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_L</definition>
+        <argsstring></argsstring>
+        <name>SC_L</name>
+        <qualifiedname>kn::SC_L</qualifiedname>
+        <initializer>= SDL_SCANCODE_L</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="32" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a865c2c472cd3610ac2bb3388877faec5" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_M</definition>
+        <argsstring></argsstring>
+        <name>SC_M</name>
+        <qualifiedname>kn::SC_M</qualifiedname>
+        <initializer>= SDL_SCANCODE_M</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="33" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a4182c90a310e9a02d385ab07da4fd7f6" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_N</definition>
+        <argsstring></argsstring>
+        <name>SC_N</name>
+        <qualifiedname>kn::SC_N</qualifiedname>
+        <initializer>= SDL_SCANCODE_N</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="34" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a8447d90d26be41521f811492e16e20ce" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_O</definition>
+        <argsstring></argsstring>
+        <name>SC_O</name>
+        <qualifiedname>kn::SC_O</qualifiedname>
+        <initializer>= SDL_SCANCODE_O</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="35" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a1cb3b7dd5a5be81145f6153c1c4edd31" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_P</definition>
+        <argsstring></argsstring>
+        <name>SC_P</name>
+        <qualifiedname>kn::SC_P</qualifiedname>
+        <initializer>= SDL_SCANCODE_P</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="36" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a481a2add70df7639fe0cb95dc771a08e" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_Q</definition>
+        <argsstring></argsstring>
+        <name>SC_Q</name>
+        <qualifiedname>kn::SC_Q</qualifiedname>
+        <initializer>= SDL_SCANCODE_Q</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="37" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1aab53a58fdd7e969fc23c880cc4504741" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_R</definition>
+        <argsstring></argsstring>
+        <name>SC_R</name>
+        <qualifiedname>kn::SC_R</qualifiedname>
+        <initializer>= SDL_SCANCODE_R</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="38" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1accfb0fbb0384893a80bae5f64ea3bee5" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_S</definition>
+        <argsstring></argsstring>
+        <name>SC_S</name>
+        <qualifiedname>kn::SC_S</qualifiedname>
+        <initializer>= SDL_SCANCODE_S</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="39" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a95f2bcf7f6aa127a18aac9733ac814b0" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_T</definition>
+        <argsstring></argsstring>
+        <name>SC_T</name>
+        <qualifiedname>kn::SC_T</qualifiedname>
+        <initializer>= SDL_SCANCODE_T</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="40" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a5602868762ff149c00e03303571bf24c" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_U</definition>
+        <argsstring></argsstring>
+        <name>SC_U</name>
+        <qualifiedname>kn::SC_U</qualifiedname>
+        <initializer>= SDL_SCANCODE_U</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="41" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a38045cc03cd18d1fb4cb74f0d8899cf9" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_V</definition>
+        <argsstring></argsstring>
+        <name>SC_V</name>
+        <qualifiedname>kn::SC_V</qualifiedname>
+        <initializer>= SDL_SCANCODE_V</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="42" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1af35d588d8f9de50aab4780118fa5e4b5" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_W</definition>
+        <argsstring></argsstring>
+        <name>SC_W</name>
+        <qualifiedname>kn::SC_W</qualifiedname>
+        <initializer>= SDL_SCANCODE_W</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="43" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a248a63dd72e953ff6a9eca29c7ccd197" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_X</definition>
+        <argsstring></argsstring>
+        <name>SC_X</name>
+        <qualifiedname>kn::SC_X</qualifiedname>
+        <initializer>= SDL_SCANCODE_X</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="44" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a9988a87a737b6fe7e102aa90d41f9a6a" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_Y</definition>
+        <argsstring></argsstring>
+        <name>SC_Y</name>
+        <qualifiedname>kn::SC_Y</qualifiedname>
+        <initializer>= SDL_SCANCODE_Y</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="45" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a07e439454b905220c0193fb00209e9f0" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_Z</definition>
+        <argsstring></argsstring>
+        <name>SC_Z</name>
+        <qualifiedname>kn::SC_Z</qualifiedname>
+        <initializer>= SDL_SCANCODE_Z</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="46" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1acdd2392712c6ae0b9e029033838df479" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_DOWN</definition>
+        <argsstring></argsstring>
+        <name>SC_DOWN</name>
+        <qualifiedname>kn::SC_DOWN</qualifiedname>
+        <initializer>= SDL_SCANCODE_DOWN</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="47" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a24e243a4ab167ac1c1b36ea806c8060a" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_LEFT</definition>
+        <argsstring></argsstring>
+        <name>SC_LEFT</name>
+        <qualifiedname>kn::SC_LEFT</qualifiedname>
+        <initializer>= SDL_SCANCODE_LEFT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="48" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1af3763988cb14dcfd652a071b2c7cc3e9" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_RIGHT</definition>
+        <argsstring></argsstring>
+        <name>SC_RIGHT</name>
+        <qualifiedname>kn::SC_RIGHT</qualifiedname>
+        <initializer>= SDL_SCANCODE_RIGHT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="49" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a08577d7b1925871c140768575034565f" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_UP</definition>
+        <argsstring></argsstring>
+        <name>SC_UP</name>
+        <qualifiedname>kn::SC_UP</qualifiedname>
+        <initializer>= SDL_SCANCODE_UP</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="50" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a9c18a5454f7c0b7efbe43f5626cd8a14" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_LALT</definition>
+        <argsstring></argsstring>
+        <name>SC_LALT</name>
+        <qualifiedname>kn::SC_LALT</qualifiedname>
+        <initializer>= SDL_SCANCODE_LALT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="51" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1acc3e0ab909f0cbe07928f8b07b3b8388" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_LCTRL</definition>
+        <argsstring></argsstring>
+        <name>SC_LCTRL</name>
+        <qualifiedname>kn::SC_LCTRL</qualifiedname>
+        <initializer>= SDL_SCANCODE_LCTRL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="52" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ae6772e06413030f906f4a846cc61bf03" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_LSHIFT</definition>
+        <argsstring></argsstring>
+        <name>SC_LSHIFT</name>
+        <qualifiedname>kn::SC_LSHIFT</qualifiedname>
+        <initializer>= SDL_SCANCODE_LSHIFT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="53" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ae2771b905e3de67e9e59e65a2ac8bb2f" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_RALT</definition>
+        <argsstring></argsstring>
+        <name>SC_RALT</name>
+        <qualifiedname>kn::SC_RALT</qualifiedname>
+        <initializer>= SDL_SCANCODE_RALT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="54" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a40fb39c81393e1aa3f74d980113abe95" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_RCTRL</definition>
+        <argsstring></argsstring>
+        <name>SC_RCTRL</name>
+        <qualifiedname>kn::SC_RCTRL</qualifiedname>
+        <initializer>= SDL_SCANCODE_RCTRL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="55" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1afcc0f261bd447e433aa60a78abb026c8" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_RETURN</definition>
+        <argsstring></argsstring>
+        <name>SC_RETURN</name>
+        <qualifiedname>kn::SC_RETURN</qualifiedname>
+        <initializer>= SDL_SCANCODE_RETURN</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="56" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ad025d54f4264447523806709ecbbf71e" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_RSHIFT</definition>
+        <argsstring></argsstring>
+        <name>SC_RSHIFT</name>
+        <qualifiedname>kn::SC_RSHIFT</qualifiedname>
+        <initializer>= SDL_SCANCODE_RSHIFT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="57" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ae78e3b0d4aa184f55ff9b05cdac1e035" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_SPACE</definition>
+        <argsstring></argsstring>
+        <name>SC_SPACE</name>
+        <qualifiedname>kn::SC_SPACE</qualifiedname>
+        <initializer>= SDL_SCANCODE_SPACE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="58" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1acb5a0173df2d328e60f2eda858cb2680" prot="public" static="no" mutable="no">
+        <type>const SDL_Scancode</type>
+        <definition>const SDL_Scancode kn::SC_TAB</definition>
+        <argsstring></argsstring>
+        <name>SC_TAB</name>
+        <qualifiedname>kn::SC_TAB</qualifiedname>
+        <initializer>= SDL_SCANCODE_TAB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="59" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a46a3850c8d62c63cd2e91f00a0ec0d1a" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::QUIT</definition>
+        <argsstring></argsstring>
+        <name>QUIT</name>
+        <qualifiedname>kn::QUIT</qualifiedname>
+        <initializer>= SDL_QUIT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="61" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a762f40854ff13c1dfe90851415dbe4ac" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::DISPLAYEVENT</definition>
+        <argsstring></argsstring>
+        <name>DISPLAYEVENT</name>
+        <qualifiedname>kn::DISPLAYEVENT</qualifiedname>
+        <initializer>= SDL_DISPLAYEVENT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="62" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a165134d59b5b9f3f8f328d83068b3694" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::WINDOWEVENT</definition>
+        <argsstring></argsstring>
+        <name>WINDOWEVENT</name>
+        <qualifiedname>kn::WINDOWEVENT</qualifiedname>
+        <initializer>= SDL_WINDOWEVENT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="63" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ad94b1bb2cc36f6398f43a7a6e094bb1b" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::SYSWMEVENT</definition>
+        <argsstring></argsstring>
+        <name>SYSWMEVENT</name>
+        <qualifiedname>kn::SYSWMEVENT</qualifiedname>
+        <initializer>= SDL_SYSWMEVENT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="64" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a3117becf308cc8698bdccc63955a3451" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::KEYDOWN</definition>
+        <argsstring></argsstring>
+        <name>KEYDOWN</name>
+        <qualifiedname>kn::KEYDOWN</qualifiedname>
+        <initializer>= SDL_KEYDOWN</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="65" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a0237fe55a9ac74efb11ce6535d7125c2" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::KEYUP</definition>
+        <argsstring></argsstring>
+        <name>KEYUP</name>
+        <qualifiedname>kn::KEYUP</qualifiedname>
+        <initializer>= SDL_KEYUP</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="66" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a50c42b7cf023011ee8732830269d1fab" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::TEXTEDITING</definition>
+        <argsstring></argsstring>
+        <name>TEXTEDITING</name>
+        <qualifiedname>kn::TEXTEDITING</qualifiedname>
+        <initializer>= SDL_TEXTEDITING</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="67" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a482f79ff5e39ff7141d891d44295c613" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::TEXTINPUT</definition>
+        <argsstring></argsstring>
+        <name>TEXTINPUT</name>
+        <qualifiedname>kn::TEXTINPUT</qualifiedname>
+        <initializer>= SDL_TEXTINPUT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="68" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ad0c87c5aa1d37e3daacbd284a187a45c" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::KEYMAPCHANGED</definition>
+        <argsstring></argsstring>
+        <name>KEYMAPCHANGED</name>
+        <qualifiedname>kn::KEYMAPCHANGED</qualifiedname>
+        <initializer>= SDL_KEYMAPCHANGED</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="69" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a2e0fe8cd250a88fcd80aba940d385c74" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::MOUSEMOTION</definition>
+        <argsstring></argsstring>
+        <name>MOUSEMOTION</name>
+        <qualifiedname>kn::MOUSEMOTION</qualifiedname>
+        <initializer>= SDL_MOUSEMOTION</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="70" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a632bd152174b1aaffb2e1f852138f22b" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::MOUSEBUTTONDOWN</definition>
+        <argsstring></argsstring>
+        <name>MOUSEBUTTONDOWN</name>
+        <qualifiedname>kn::MOUSEBUTTONDOWN</qualifiedname>
+        <initializer>= SDL_MOUSEBUTTONDOWN</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="71" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ac332a4ae3543f5eea265656fc91dc3e6" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::MOUSEBUTTONUP</definition>
+        <argsstring></argsstring>
+        <name>MOUSEBUTTONUP</name>
+        <qualifiedname>kn::MOUSEBUTTONUP</qualifiedname>
+        <initializer>= SDL_MOUSEBUTTONUP</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="72" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a8d10627b80de189c3a1bc6fae94e42ce" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::MOUSEWHEEL</definition>
+        <argsstring></argsstring>
+        <name>MOUSEWHEEL</name>
+        <qualifiedname>kn::MOUSEWHEEL</qualifiedname>
+        <initializer>= SDL_MOUSEWHEEL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="73" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a70d04ca2529adff65aecbcfab5a7342c" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::JOYAXISMOTION</definition>
+        <argsstring></argsstring>
+        <name>JOYAXISMOTION</name>
+        <qualifiedname>kn::JOYAXISMOTION</qualifiedname>
+        <initializer>= SDL_JOYAXISMOTION</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="74" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a566c0a431c20a5058949f3750d843dbe" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::JOYBALLMOTION</definition>
+        <argsstring></argsstring>
+        <name>JOYBALLMOTION</name>
+        <qualifiedname>kn::JOYBALLMOTION</qualifiedname>
+        <initializer>= SDL_JOYBALLMOTION</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="75" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ac85f6e5eb96aa034267195eb3f9b9abc" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::JOYHATMOTION</definition>
+        <argsstring></argsstring>
+        <name>JOYHATMOTION</name>
+        <qualifiedname>kn::JOYHATMOTION</qualifiedname>
+        <initializer>= SDL_JOYHATMOTION</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="76" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a719f8f0d1486b1648706161f7b59c9a8" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::JOYBUTTONDOWN</definition>
+        <argsstring></argsstring>
+        <name>JOYBUTTONDOWN</name>
+        <qualifiedname>kn::JOYBUTTONDOWN</qualifiedname>
+        <initializer>= SDL_JOYBUTTONDOWN</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="77" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a15d0012274bc02593232e5080ccbb467" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::JOYBUTTONUP</definition>
+        <argsstring></argsstring>
+        <name>JOYBUTTONUP</name>
+        <qualifiedname>kn::JOYBUTTONUP</qualifiedname>
+        <initializer>= SDL_JOYBUTTONUP</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="78" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ad9c2e5b18417d45fd875ecb09facbb82" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::JOYDEVICEADDED</definition>
+        <argsstring></argsstring>
+        <name>JOYDEVICEADDED</name>
+        <qualifiedname>kn::JOYDEVICEADDED</qualifiedname>
+        <initializer>= SDL_JOYDEVICEADDED</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="79" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a1108144afad916f55f69cf369d36549b" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::JOYDEVICEREMOVED</definition>
+        <argsstring></argsstring>
+        <name>JOYDEVICEREMOVED</name>
+        <qualifiedname>kn::JOYDEVICEREMOVED</qualifiedname>
+        <initializer>= SDL_JOYDEVICEREMOVED</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="80" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a7fae7eac7e8e25eec79c431d9227bde2" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::CONTROLLERAXISMOTION</definition>
+        <argsstring></argsstring>
+        <name>CONTROLLERAXISMOTION</name>
+        <qualifiedname>kn::CONTROLLERAXISMOTION</qualifiedname>
+        <initializer>= SDL_CONTROLLERAXISMOTION</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="81" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1abc211b7dc2540b9c2abf3f7148f68391" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::CONTROLLERBUTTONDOWN</definition>
+        <argsstring></argsstring>
+        <name>CONTROLLERBUTTONDOWN</name>
+        <qualifiedname>kn::CONTROLLERBUTTONDOWN</qualifiedname>
+        <initializer>= SDL_CONTROLLERBUTTONDOWN</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="82" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a3231a5e25a5dafe128a165dec188da7d" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::CONTROLLERBUTTONUP</definition>
+        <argsstring></argsstring>
+        <name>CONTROLLERBUTTONUP</name>
+        <qualifiedname>kn::CONTROLLERBUTTONUP</qualifiedname>
+        <initializer>= SDL_CONTROLLERBUTTONUP</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="83" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a0d6b72606e8e579481b253aa63ec284f" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::CONTROLLERDEVICEADDED</definition>
+        <argsstring></argsstring>
+        <name>CONTROLLERDEVICEADDED</name>
+        <qualifiedname>kn::CONTROLLERDEVICEADDED</qualifiedname>
+        <initializer>= SDL_CONTROLLERDEVICEADDED</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="84" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a3d9e6b29b7bb1132517f844097b9b4f8" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::CONTROLLERDEVICEREMOVED</definition>
+        <argsstring></argsstring>
+        <name>CONTROLLERDEVICEREMOVED</name>
+        <qualifiedname>kn::CONTROLLERDEVICEREMOVED</qualifiedname>
+        <initializer>= SDL_CONTROLLERDEVICEREMOVED</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="85" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1af5864ec7f140511d184e5f267ba685c5" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::CONTROLLERDEVICEREMAPPED</definition>
+        <argsstring></argsstring>
+        <name>CONTROLLERDEVICEREMAPPED</name>
+        <qualifiedname>kn::CONTROLLERDEVICEREMAPPED</qualifiedname>
+        <initializer>= SDL_CONTROLLERDEVICEREMAPPED</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="86" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a88c1d6978b6ec4a976966bd1c34a1d75" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::CLIPBOARDUPDATE</definition>
+        <argsstring></argsstring>
+        <name>CLIPBOARDUPDATE</name>
+        <qualifiedname>kn::CLIPBOARDUPDATE</qualifiedname>
+        <initializer>= SDL_CLIPBOARDUPDATE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="87" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a421d9701f2036267b98da8edf5619beb" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::DROPFILE</definition>
+        <argsstring></argsstring>
+        <name>DROPFILE</name>
+        <qualifiedname>kn::DROPFILE</qualifiedname>
+        <initializer>= SDL_DROPFILE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="88" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a4f2a8372fa47ecaa937f50c7c31feaa8" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::DROPTEXT</definition>
+        <argsstring></argsstring>
+        <name>DROPTEXT</name>
+        <qualifiedname>kn::DROPTEXT</qualifiedname>
+        <initializer>= SDL_DROPTEXT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="89" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ad0228118a5c4ed3d6c06e7b53bcd7aa9" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::DROPBEGIN</definition>
+        <argsstring></argsstring>
+        <name>DROPBEGIN</name>
+        <qualifiedname>kn::DROPBEGIN</qualifiedname>
+        <initializer>= SDL_DROPBEGIN</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="90" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ad40d2b2c0d194b21617fc2e8b4c59f35" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::DROPCOMPLETE</definition>
+        <argsstring></argsstring>
+        <name>DROPCOMPLETE</name>
+        <qualifiedname>kn::DROPCOMPLETE</qualifiedname>
+        <initializer>= SDL_DROPCOMPLETE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="91" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a8804af741eeee12c9bc451d0a1620ec8" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::AUDIODEVICEADDED</definition>
+        <argsstring></argsstring>
+        <name>AUDIODEVICEADDED</name>
+        <qualifiedname>kn::AUDIODEVICEADDED</qualifiedname>
+        <initializer>= SDL_AUDIODEVICEADDED</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="92" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a729740253f45ab3b61ceee072187631e" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::AUDIODEVICEREMOVED</definition>
+        <argsstring></argsstring>
+        <name>AUDIODEVICEREMOVED</name>
+        <qualifiedname>kn::AUDIODEVICEREMOVED</qualifiedname>
+        <initializer>= SDL_AUDIODEVICEREMOVED</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="93" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1aaeda1a567f7be977506d49af77a7b163" prot="public" static="no" mutable="no">
+        <type>const SDL_EventType</type>
+        <definition>const SDL_EventType kn::USEREVENT</definition>
+        <argsstring></argsstring>
+        <name>USEREVENT</name>
+        <qualifiedname>kn::USEREVENT</qualifiedname>
+        <initializer>= SDL_USEREVENT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="94" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ae1c1cc73fd42dfe34a13fe1532e20107" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_0</definition>
+        <argsstring></argsstring>
+        <name>K_0</name>
+        <qualifiedname>kn::K_0</qualifiedname>
+        <initializer>= SDLK_0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="96" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1af6a31cae2be59f91d6bc34f0216af71c" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_1</definition>
+        <argsstring></argsstring>
+        <name>K_1</name>
+        <qualifiedname>kn::K_1</qualifiedname>
+        <initializer>= SDLK_1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="97" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ace0cee19092e52fbcb2e2d402c6b3ae5" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_2</definition>
+        <argsstring></argsstring>
+        <name>K_2</name>
+        <qualifiedname>kn::K_2</qualifiedname>
+        <initializer>= SDLK_2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="98" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1aab57498fdf609c8fef7abc3a78c68999" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_3</definition>
+        <argsstring></argsstring>
+        <name>K_3</name>
+        <qualifiedname>kn::K_3</qualifiedname>
+        <initializer>= SDLK_3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="99" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1aa9df377d6f1c160bb2e8ae02ed677c78" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_4</definition>
+        <argsstring></argsstring>
+        <name>K_4</name>
+        <qualifiedname>kn::K_4</qualifiedname>
+        <initializer>= SDLK_4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="100" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ae0bda08acccd013326229fa9f9778c28" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_5</definition>
+        <argsstring></argsstring>
+        <name>K_5</name>
+        <qualifiedname>kn::K_5</qualifiedname>
+        <initializer>= SDLK_5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="101" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ad6579bccffe36625743e5516d05b4c47" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_6</definition>
+        <argsstring></argsstring>
+        <name>K_6</name>
+        <qualifiedname>kn::K_6</qualifiedname>
+        <initializer>= SDLK_6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="102" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a1bcb61be1044dc3e69ab8c08100e86e2" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_7</definition>
+        <argsstring></argsstring>
+        <name>K_7</name>
+        <qualifiedname>kn::K_7</qualifiedname>
+        <initializer>= SDLK_7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="103" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a13b9ea30128b5f4b24fdd6019345853a" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_8</definition>
+        <argsstring></argsstring>
+        <name>K_8</name>
+        <qualifiedname>kn::K_8</qualifiedname>
+        <initializer>= SDLK_8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="104" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1abe5f55744f58d2583cfb2348c7406239" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_9</definition>
+        <argsstring></argsstring>
+        <name>K_9</name>
+        <qualifiedname>kn::K_9</qualifiedname>
+        <initializer>= SDLK_9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="105" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a1e26cd916be5ac6a2d5d368da4b0889a" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_a</definition>
+        <argsstring></argsstring>
+        <name>K_a</name>
+        <qualifiedname>kn::K_a</qualifiedname>
+        <initializer>= SDLK_a</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="106" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a468ebe2b89bd337a726af1650fa64b5b" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_b</definition>
+        <argsstring></argsstring>
+        <name>K_b</name>
+        <qualifiedname>kn::K_b</qualifiedname>
+        <initializer>= SDLK_b</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="107" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a3a802c17054c4e07f35ac2cad7a5734c" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_c</definition>
+        <argsstring></argsstring>
+        <name>K_c</name>
+        <qualifiedname>kn::K_c</qualifiedname>
+        <initializer>= SDLK_c</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="108" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a5c81d1e60a91df7b5f641b52fd4498e4" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_d</definition>
+        <argsstring></argsstring>
+        <name>K_d</name>
+        <qualifiedname>kn::K_d</qualifiedname>
+        <initializer>= SDLK_d</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="109" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a682b9dfe9aed388e4d146ac7cc52bee5" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_e</definition>
+        <argsstring></argsstring>
+        <name>K_e</name>
+        <qualifiedname>kn::K_e</qualifiedname>
+        <initializer>= SDLK_e</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="110" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ab2bea86ba89f6dc2f68c1bd915370bdd" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_f</definition>
+        <argsstring></argsstring>
+        <name>K_f</name>
+        <qualifiedname>kn::K_f</qualifiedname>
+        <initializer>= SDLK_f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="111" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ae597809e40eee0296b508b1b8fe25952" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_g</definition>
+        <argsstring></argsstring>
+        <name>K_g</name>
+        <qualifiedname>kn::K_g</qualifiedname>
+        <initializer>= SDLK_g</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="112" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ae1ae1bf46937f7be7c355910999acdd8" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_h</definition>
+        <argsstring></argsstring>
+        <name>K_h</name>
+        <qualifiedname>kn::K_h</qualifiedname>
+        <initializer>= SDLK_h</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="113" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1abbd34234c6195060e0a6e73b8490b06f" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_i</definition>
+        <argsstring></argsstring>
+        <name>K_i</name>
+        <qualifiedname>kn::K_i</qualifiedname>
+        <initializer>= SDLK_i</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="114" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a7722c0961e8fc0333279816205b25f7f" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_j</definition>
+        <argsstring></argsstring>
+        <name>K_j</name>
+        <qualifiedname>kn::K_j</qualifiedname>
+        <initializer>= SDLK_j</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="115" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a0cba30c58176bd9e0c4d3d2e4e394c17" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_k</definition>
+        <argsstring></argsstring>
+        <name>K_k</name>
+        <qualifiedname>kn::K_k</qualifiedname>
+        <initializer>= SDLK_k</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="116" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a080e71da9b618dc65af16dd06532ea6d" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_l</definition>
+        <argsstring></argsstring>
+        <name>K_l</name>
+        <qualifiedname>kn::K_l</qualifiedname>
+        <initializer>= SDLK_l</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="117" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a5d10882768134c0477b425fbe1e6851e" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_m</definition>
+        <argsstring></argsstring>
+        <name>K_m</name>
+        <qualifiedname>kn::K_m</qualifiedname>
+        <initializer>= SDLK_m</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="118" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a376f655b1704eb630212701d5c20a3a8" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_n</definition>
+        <argsstring></argsstring>
+        <name>K_n</name>
+        <qualifiedname>kn::K_n</qualifiedname>
+        <initializer>= SDLK_n</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="119" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a160681ef39fd88fd5425d63b3ba57a1d" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_o</definition>
+        <argsstring></argsstring>
+        <name>K_o</name>
+        <qualifiedname>kn::K_o</qualifiedname>
+        <initializer>= SDLK_o</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="120" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1acfe36ab789ed1e70d3d2924ad3582a9b" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_p</definition>
+        <argsstring></argsstring>
+        <name>K_p</name>
+        <qualifiedname>kn::K_p</qualifiedname>
+        <initializer>= SDLK_p</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="121" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a5c438bc5730c2d27713908824808bf42" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_q</definition>
+        <argsstring></argsstring>
+        <name>K_q</name>
+        <qualifiedname>kn::K_q</qualifiedname>
+        <initializer>= SDLK_q</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="122" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a75a361cca6cb0d55d0281299f368f11d" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_r</definition>
+        <argsstring></argsstring>
+        <name>K_r</name>
+        <qualifiedname>kn::K_r</qualifiedname>
+        <initializer>= SDLK_r</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="123" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1aa9dbb9e42dfd6c1d329ee146c84ac5ce" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_s</definition>
+        <argsstring></argsstring>
+        <name>K_s</name>
+        <qualifiedname>kn::K_s</qualifiedname>
+        <initializer>= SDLK_s</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="124" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1aeb3b2bbfb0c0b730c5b6499aa3a6317c" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_t</definition>
+        <argsstring></argsstring>
+        <name>K_t</name>
+        <qualifiedname>kn::K_t</qualifiedname>
+        <initializer>= SDLK_t</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="125" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ae1d73172702d306f9c70b5549b17e3c9" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_u</definition>
+        <argsstring></argsstring>
+        <name>K_u</name>
+        <qualifiedname>kn::K_u</qualifiedname>
+        <initializer>= SDLK_u</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="126" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1abd2300d874aec07398d0db533a36db10" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_v</definition>
+        <argsstring></argsstring>
+        <name>K_v</name>
+        <qualifiedname>kn::K_v</qualifiedname>
+        <initializer>= SDLK_v</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="127" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a00135f1d147a14310f936e1e5b1bfe3e" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_w</definition>
+        <argsstring></argsstring>
+        <name>K_w</name>
+        <qualifiedname>kn::K_w</qualifiedname>
+        <initializer>= SDLK_w</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="128" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1abf7401ae09c2d09af844f7752fe287c0" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_x</definition>
+        <argsstring></argsstring>
+        <name>K_x</name>
+        <qualifiedname>kn::K_x</qualifiedname>
+        <initializer>= SDLK_x</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="129" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ab83cb508dd1b60a265ea0be8d802a38a" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_y</definition>
+        <argsstring></argsstring>
+        <name>K_y</name>
+        <qualifiedname>kn::K_y</qualifiedname>
+        <initializer>= SDLK_y</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="130" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a0f5fa7bdb6e44520b9a0a950f386e452" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_z</definition>
+        <argsstring></argsstring>
+        <name>K_z</name>
+        <qualifiedname>kn::K_z</qualifiedname>
+        <initializer>= SDLK_z</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="131" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a2f4ba922c75290dc4ee3b9f16cc169ab" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_DOWN</definition>
+        <argsstring></argsstring>
+        <name>K_DOWN</name>
+        <qualifiedname>kn::K_DOWN</qualifiedname>
+        <initializer>= SDLK_DOWN</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="132" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a089e2e32d01b876ca7a7d7e508571641" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_LEFT</definition>
+        <argsstring></argsstring>
+        <name>K_LEFT</name>
+        <qualifiedname>kn::K_LEFT</qualifiedname>
+        <initializer>= SDLK_LEFT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="133" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ae089463af3f3b197da8d11996f1864bc" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_RIGHT</definition>
+        <argsstring></argsstring>
+        <name>K_RIGHT</name>
+        <qualifiedname>kn::K_RIGHT</qualifiedname>
+        <initializer>= SDLK_RIGHT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="134" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1aadd31a6e7310d2e46ef117f32fdcd7b8" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_UP</definition>
+        <argsstring></argsstring>
+        <name>K_UP</name>
+        <qualifiedname>kn::K_UP</qualifiedname>
+        <initializer>= SDLK_UP</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="135" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ace7c3c8f3ff52572785a166a096ef448" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_APPLICATION</definition>
+        <argsstring></argsstring>
+        <name>K_APPLICATION</name>
+        <qualifiedname>kn::K_APPLICATION</qualifiedname>
+        <initializer>= SDLK_APPLICATION</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="136" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ac7510f98033db12aa7db8c3ee35137b4" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_AUDIOMUTE</definition>
+        <argsstring></argsstring>
+        <name>K_AUDIOMUTE</name>
+        <qualifiedname>kn::K_AUDIOMUTE</qualifiedname>
+        <initializer>= SDLK_AUDIOMUTE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="137" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ac2f64c0378cab74363caa894b4508fbe" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_AUDIONEXT</definition>
+        <argsstring></argsstring>
+        <name>K_AUDIONEXT</name>
+        <qualifiedname>kn::K_AUDIONEXT</qualifiedname>
+        <initializer>= SDLK_AUDIONEXT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="138" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ad500f2966aa353e8e03e93906a32e013" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_AUDIOPLAY</definition>
+        <argsstring></argsstring>
+        <name>K_AUDIOPLAY</name>
+        <qualifiedname>kn::K_AUDIOPLAY</qualifiedname>
+        <initializer>= SDLK_AUDIOPLAY</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="139" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a8e9414d2b68c0b21256a9cf532134d88" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_AUDIOPREV</definition>
+        <argsstring></argsstring>
+        <name>K_AUDIOPREV</name>
+        <qualifiedname>kn::K_AUDIOPREV</qualifiedname>
+        <initializer>= SDLK_AUDIOPREV</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="140" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a9ea280d5b26821b96e2d70a5b0e30de3" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_AUDIOSTOP</definition>
+        <argsstring></argsstring>
+        <name>K_AUDIOSTOP</name>
+        <qualifiedname>kn::K_AUDIOSTOP</qualifiedname>
+        <initializer>= SDLK_AUDIOSTOP</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="141" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a4472ba720210f4e841ac0f95db3f3405" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_BACKSLASH</definition>
+        <argsstring></argsstring>
+        <name>K_BACKSLASH</name>
+        <qualifiedname>kn::K_BACKSLASH</qualifiedname>
+        <initializer>= SDLK_BACKSLASH</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="142" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a1c04bde69d764893955ae254785b5024" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_BACKSPACE</definition>
+        <argsstring></argsstring>
+        <name>K_BACKSPACE</name>
+        <qualifiedname>kn::K_BACKSPACE</qualifiedname>
+        <initializer>= SDLK_BACKSPACE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="143" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a549efd36be3624f6fdfb7f49605c7654" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_CAPSLOCK</definition>
+        <argsstring></argsstring>
+        <name>K_CAPSLOCK</name>
+        <qualifiedname>kn::K_CAPSLOCK</qualifiedname>
+        <initializer>= SDLK_CAPSLOCK</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="144" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a96f94d7c75a75e089d998ec82eef349b" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_COMMA</definition>
+        <argsstring></argsstring>
+        <name>K_COMMA</name>
+        <qualifiedname>kn::K_COMMA</qualifiedname>
+        <initializer>= SDLK_COMMA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="145" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a13ad9ee76e48913cd96ed2a0a9a1bb99" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_DELETE</definition>
+        <argsstring></argsstring>
+        <name>K_DELETE</name>
+        <qualifiedname>kn::K_DELETE</qualifiedname>
+        <initializer>= SDLK_DELETE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="146" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a7e3a0bdb758a23c9869b032ce2373c2e" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_DISPLAYSWITCH</definition>
+        <argsstring></argsstring>
+        <name>K_DISPLAYSWITCH</name>
+        <qualifiedname>kn::K_DISPLAYSWITCH</qualifiedname>
+        <initializer>= SDLK_DISPLAYSWITCH</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="147" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a138afea7029ee7d7619cf2eeb7ba77d6" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_END</definition>
+        <argsstring></argsstring>
+        <name>K_END</name>
+        <qualifiedname>kn::K_END</qualifiedname>
+        <initializer>= SDLK_END</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="148" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a5153cbb05e38b61fce532c49761f608d" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_EQUALS</definition>
+        <argsstring></argsstring>
+        <name>K_EQUALS</name>
+        <qualifiedname>kn::K_EQUALS</qualifiedname>
+        <initializer>= SDLK_EQUALS</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="149" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a8041867c43a77739fbad9c6f514f6ffe" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_ESCAPE</definition>
+        <argsstring></argsstring>
+        <name>K_ESCAPE</name>
+        <qualifiedname>kn::K_ESCAPE</qualifiedname>
+        <initializer>= SDLK_ESCAPE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="150" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a1fa1dee48a3814bbf946dd2ab5ef18d5" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_F1</definition>
+        <argsstring></argsstring>
+        <name>K_F1</name>
+        <qualifiedname>kn::K_F1</qualifiedname>
+        <initializer>= SDLK_F1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="151" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a6320f9b6b757e7ae7e5f3cd4ea587c1a" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_F2</definition>
+        <argsstring></argsstring>
+        <name>K_F2</name>
+        <qualifiedname>kn::K_F2</qualifiedname>
+        <initializer>= SDLK_F2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="152" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a7313bf564fa95d1dd8019126aee677af" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_F3</definition>
+        <argsstring></argsstring>
+        <name>K_F3</name>
+        <qualifiedname>kn::K_F3</qualifiedname>
+        <initializer>= SDLK_F3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="153" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a09a15ba12dc91391c604ad7baab3b067" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_F4</definition>
+        <argsstring></argsstring>
+        <name>K_F4</name>
+        <qualifiedname>kn::K_F4</qualifiedname>
+        <initializer>= SDLK_F4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="154" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ae9ab3892b7b62f244da41d10ccb07101" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_F5</definition>
+        <argsstring></argsstring>
+        <name>K_F5</name>
+        <qualifiedname>kn::K_F5</qualifiedname>
+        <initializer>= SDLK_F5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="155" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a5636fedf1ab09dac7db162db1da5b031" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_F6</definition>
+        <argsstring></argsstring>
+        <name>K_F6</name>
+        <qualifiedname>kn::K_F6</qualifiedname>
+        <initializer>= SDLK_F6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="156" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a6d7a9fa608b70fd78e8ecf4b58c9b40d" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_F7</definition>
+        <argsstring></argsstring>
+        <name>K_F7</name>
+        <qualifiedname>kn::K_F7</qualifiedname>
+        <initializer>= SDLK_F7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="157" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a80cf7f79e9c8b010a789e23a4ce4b645" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_F8</definition>
+        <argsstring></argsstring>
+        <name>K_F8</name>
+        <qualifiedname>kn::K_F8</qualifiedname>
+        <initializer>= SDLK_F8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="158" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a8dee3ddd6d25e2195ae87e9101b63fca" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_F9</definition>
+        <argsstring></argsstring>
+        <name>K_F9</name>
+        <qualifiedname>kn::K_F9</qualifiedname>
+        <initializer>= SDLK_F9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="159" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a816379b6f60e0b2f6aa64e15373d9ece" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_F10</definition>
+        <argsstring></argsstring>
+        <name>K_F10</name>
+        <qualifiedname>kn::K_F10</qualifiedname>
+        <initializer>= SDLK_F10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="160" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ac0ce972f998a113965eff844b7a0d880" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_F11</definition>
+        <argsstring></argsstring>
+        <name>K_F11</name>
+        <qualifiedname>kn::K_F11</qualifiedname>
+        <initializer>= SDLK_F11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="161" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1af1c87cd7bcf97f7e2faa9cac067e2393" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_F12</definition>
+        <argsstring></argsstring>
+        <name>K_F12</name>
+        <qualifiedname>kn::K_F12</qualifiedname>
+        <initializer>= SDLK_F12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="162" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1aaabe844c532aba332ec10308a885dc46" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_BACKQUOTE</definition>
+        <argsstring></argsstring>
+        <name>K_BACKQUOTE</name>
+        <qualifiedname>kn::K_BACKQUOTE</qualifiedname>
+        <initializer>= SDLK_BACKQUOTE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="163" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a06f5c1794ebc60c8bdf074ebf2224e8c" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_HOME</definition>
+        <argsstring></argsstring>
+        <name>K_HOME</name>
+        <qualifiedname>kn::K_HOME</qualifiedname>
+        <initializer>= SDLK_HOME</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="164" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ae828cbc3cde886036bef0bcf664869e6" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_INSERT</definition>
+        <argsstring></argsstring>
+        <name>K_INSERT</name>
+        <qualifiedname>kn::K_INSERT</qualifiedname>
+        <initializer>= SDLK_INSERT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="165" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1abd91315c0d3965af04c23a4384c1681c" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_KP_0</definition>
+        <argsstring></argsstring>
+        <name>K_KP_0</name>
+        <qualifiedname>kn::K_KP_0</qualifiedname>
+        <initializer>= SDLK_KP_0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="166" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1aa389154299c4b611e2d171e747a50ad1" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_KP_1</definition>
+        <argsstring></argsstring>
+        <name>K_KP_1</name>
+        <qualifiedname>kn::K_KP_1</qualifiedname>
+        <initializer>= SDLK_KP_1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="167" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a654bd4fb2009355802c8c4bfd230811e" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_KP_2</definition>
+        <argsstring></argsstring>
+        <name>K_KP_2</name>
+        <qualifiedname>kn::K_KP_2</qualifiedname>
+        <initializer>= SDLK_KP_2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="168" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ae3eecb99bc03ffcd08cd8c34ae7c80e2" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_KP_3</definition>
+        <argsstring></argsstring>
+        <name>K_KP_3</name>
+        <qualifiedname>kn::K_KP_3</qualifiedname>
+        <initializer>= SDLK_KP_3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="169" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a851b9e6d7e490e0d17061c12186248e6" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_KP_4</definition>
+        <argsstring></argsstring>
+        <name>K_KP_4</name>
+        <qualifiedname>kn::K_KP_4</qualifiedname>
+        <initializer>= SDLK_KP_4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="170" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a2945e1f6bd511e01ece3d0ccb632a282" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_KP_5</definition>
+        <argsstring></argsstring>
+        <name>K_KP_5</name>
+        <qualifiedname>kn::K_KP_5</qualifiedname>
+        <initializer>= SDLK_KP_5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="171" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a456f2a7f65c53e3c235746c459c7cfd0" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_KP_6</definition>
+        <argsstring></argsstring>
+        <name>K_KP_6</name>
+        <qualifiedname>kn::K_KP_6</qualifiedname>
+        <initializer>= SDLK_KP_6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="172" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a78eef061a9262f113926b6e0475b98cb" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_KP_7</definition>
+        <argsstring></argsstring>
+        <name>K_KP_7</name>
+        <qualifiedname>kn::K_KP_7</qualifiedname>
+        <initializer>= SDLK_KP_7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="173" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a3d8db1c2cfb47d82988dd378f86c17c4" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_KP_8</definition>
+        <argsstring></argsstring>
+        <name>K_KP_8</name>
+        <qualifiedname>kn::K_KP_8</qualifiedname>
+        <initializer>= SDLK_KP_8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="174" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a59a18302d4d65aea716db0838ab026bc" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_KP_9</definition>
+        <argsstring></argsstring>
+        <name>K_KP_9</name>
+        <qualifiedname>kn::K_KP_9</qualifiedname>
+        <initializer>= SDLK_KP_9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="175" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ada44ab67344bfbca731518e60abeac17" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_KP_DIVIDE</definition>
+        <argsstring></argsstring>
+        <name>K_KP_DIVIDE</name>
+        <qualifiedname>kn::K_KP_DIVIDE</qualifiedname>
+        <initializer>= SDLK_KP_DIVIDE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="176" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a5680b0bd892bb9896a4a644496fac97c" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_KP_ENTER</definition>
+        <argsstring></argsstring>
+        <name>K_KP_ENTER</name>
+        <qualifiedname>kn::K_KP_ENTER</qualifiedname>
+        <initializer>= SDLK_KP_ENTER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="177" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a846ec42d97292cb1651d23dd6f3f4791" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_KP_MINUS</definition>
+        <argsstring></argsstring>
+        <name>K_KP_MINUS</name>
+        <qualifiedname>kn::K_KP_MINUS</qualifiedname>
+        <initializer>= SDLK_KP_MINUS</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="178" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1afb05e5d4592209cdda8ab56240e40645" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_KP_MULTIPLY</definition>
+        <argsstring></argsstring>
+        <name>K_KP_MULTIPLY</name>
+        <qualifiedname>kn::K_KP_MULTIPLY</qualifiedname>
+        <initializer>= SDLK_KP_MULTIPLY</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="179" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ad85ffde101a98448160d811f4b2907d6" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_KP_PERIOD</definition>
+        <argsstring></argsstring>
+        <name>K_KP_PERIOD</name>
+        <qualifiedname>kn::K_KP_PERIOD</qualifiedname>
+        <initializer>= SDLK_KP_PERIOD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="180" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ac5b0da68c3edb6b4ec3ef6a8313b1ee5" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_KP_PLUS</definition>
+        <argsstring></argsstring>
+        <name>K_KP_PLUS</name>
+        <qualifiedname>kn::K_KP_PLUS</qualifiedname>
+        <initializer>= SDLK_KP_PLUS</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="181" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a281bb53cd88c9de0d336ebf778a609e5" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_LALT</definition>
+        <argsstring></argsstring>
+        <name>K_LALT</name>
+        <qualifiedname>kn::K_LALT</qualifiedname>
+        <initializer>= SDLK_LALT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="182" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a53998ae032c3c2990aea6501442bb0ea" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_LCTRL</definition>
+        <argsstring></argsstring>
+        <name>K_LCTRL</name>
+        <qualifiedname>kn::K_LCTRL</qualifiedname>
+        <initializer>= SDLK_LCTRL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="183" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a421ef6ac0ae67f816d6c7ea07d1b1191" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_LEFTBRACKET</definition>
+        <argsstring></argsstring>
+        <name>K_LEFTBRACKET</name>
+        <qualifiedname>kn::K_LEFTBRACKET</qualifiedname>
+        <initializer>= SDLK_LEFTBRACKET</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="184" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a843ab6a663c42f5d1e8a3b0223fd051a" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_LSHIFT</definition>
+        <argsstring></argsstring>
+        <name>K_LSHIFT</name>
+        <qualifiedname>kn::K_LSHIFT</qualifiedname>
+        <initializer>= SDLK_LSHIFT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="185" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ac33b2dc770bc2650747fc91166892107" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_MINUS</definition>
+        <argsstring></argsstring>
+        <name>K_MINUS</name>
+        <qualifiedname>kn::K_MINUS</qualifiedname>
+        <initializer>= SDLK_MINUS</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="186" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a477742bef2621129c4d9588f2a5ee818" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_NUMLOCKCLEAR</definition>
+        <argsstring></argsstring>
+        <name>K_NUMLOCKCLEAR</name>
+        <qualifiedname>kn::K_NUMLOCKCLEAR</qualifiedname>
+        <initializer>= SDLK_NUMLOCKCLEAR</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="187" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1aa1b821e6641bd01075b94f5acc0e52e5" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_PAGEDOWN</definition>
+        <argsstring></argsstring>
+        <name>K_PAGEDOWN</name>
+        <qualifiedname>kn::K_PAGEDOWN</qualifiedname>
+        <initializer>= SDLK_PAGEDOWN</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="188" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a789c738d7e6ad9ec632f5a05b1c75abb" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_PAGEUP</definition>
+        <argsstring></argsstring>
+        <name>K_PAGEUP</name>
+        <qualifiedname>kn::K_PAGEUP</qualifiedname>
+        <initializer>= SDLK_PAGEUP</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="189" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a56b71879057a96bb6bfe194dd1646d6d" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_PERIOD</definition>
+        <argsstring></argsstring>
+        <name>K_PERIOD</name>
+        <qualifiedname>kn::K_PERIOD</qualifiedname>
+        <initializer>= SDLK_PERIOD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="190" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a70cf1fafe41bc6bb96ab240a9e320a52" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_PRINTSCREEN</definition>
+        <argsstring></argsstring>
+        <name>K_PRINTSCREEN</name>
+        <qualifiedname>kn::K_PRINTSCREEN</qualifiedname>
+        <initializer>= SDLK_PRINTSCREEN</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="191" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ad6e6ad8a9f1f6ca20f7f8c4050cd74b7" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_RALT</definition>
+        <argsstring></argsstring>
+        <name>K_RALT</name>
+        <qualifiedname>kn::K_RALT</qualifiedname>
+        <initializer>= SDLK_RALT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="192" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a990d634087fee82bc9e341c7f4411eca" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_RCTRL</definition>
+        <argsstring></argsstring>
+        <name>K_RCTRL</name>
+        <qualifiedname>kn::K_RCTRL</qualifiedname>
+        <initializer>= SDLK_RCTRL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="193" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a759d7afb6493b671cfceff4d9c33e8f5" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_RETURN</definition>
+        <argsstring></argsstring>
+        <name>K_RETURN</name>
+        <qualifiedname>kn::K_RETURN</qualifiedname>
+        <initializer>= SDLK_RETURN</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="194" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ae577c75ffc12fc0d1ba1d528086882b1" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_RIGHTBRACKET</definition>
+        <argsstring></argsstring>
+        <name>K_RIGHTBRACKET</name>
+        <qualifiedname>kn::K_RIGHTBRACKET</qualifiedname>
+        <initializer>= SDLK_RIGHTBRACKET</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="195" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a93ef7a1e9b925c00a1b86bd63f73b898" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_RSHIFT</definition>
+        <argsstring></argsstring>
+        <name>K_RSHIFT</name>
+        <qualifiedname>kn::K_RSHIFT</qualifiedname>
+        <initializer>= SDLK_RSHIFT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="196" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a04b6598e8cc97f828171898449152bad" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_SEMICOLON</definition>
+        <argsstring></argsstring>
+        <name>K_SEMICOLON</name>
+        <qualifiedname>kn::K_SEMICOLON</qualifiedname>
+        <initializer>= SDLK_SEMICOLON</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="197" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a2636431a8ea8e70a4df3c95d81697965" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_SLASH</definition>
+        <argsstring></argsstring>
+        <name>K_SLASH</name>
+        <qualifiedname>kn::K_SLASH</qualifiedname>
+        <initializer>= SDLK_SLASH</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="198" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ac3f3cb287e65ae3c147f4a86b31f12d0" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_SPACE</definition>
+        <argsstring></argsstring>
+        <name>K_SPACE</name>
+        <qualifiedname>kn::K_SPACE</qualifiedname>
+        <initializer>= SDLK_SPACE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="199" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a9625c873d3ada8b383a2beb4adf60850" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_TAB</definition>
+        <argsstring></argsstring>
+        <name>K_TAB</name>
+        <qualifiedname>kn::K_TAB</qualifiedname>
+        <initializer>= SDLK_TAB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="200" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a1ff1d2ffa5e872644638f210e57efbce" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_AMPERSAND</definition>
+        <argsstring></argsstring>
+        <name>K_AMPERSAND</name>
+        <qualifiedname>kn::K_AMPERSAND</qualifiedname>
+        <initializer>= SDLK_AMPERSAND</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="201" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a4f8a8ff7784581ea5efebf26ef9d6921" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_ASTERISK</definition>
+        <argsstring></argsstring>
+        <name>K_ASTERISK</name>
+        <qualifiedname>kn::K_ASTERISK</qualifiedname>
+        <initializer>= SDLK_ASTERISK</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="202" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1af99427d451f509881327e2c51a4a8e09" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_AT</definition>
+        <argsstring></argsstring>
+        <name>K_AT</name>
+        <qualifiedname>kn::K_AT</qualifiedname>
+        <initializer>= SDLK_AT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="203" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a40c65c290e7beb99b0fcc3b9f07c3511" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_CARET</definition>
+        <argsstring></argsstring>
+        <name>K_CARET</name>
+        <qualifiedname>kn::K_CARET</qualifiedname>
+        <initializer>= SDLK_CARET</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="204" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a7b1dc55a17757edbe5aecf8e067f2747" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_COLON</definition>
+        <argsstring></argsstring>
+        <name>K_COLON</name>
+        <qualifiedname>kn::K_COLON</qualifiedname>
+        <initializer>= SDLK_COLON</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="205" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a8526c5834fd0cb17c96cc6d0edfc5776" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_DOLLAR</definition>
+        <argsstring></argsstring>
+        <name>K_DOLLAR</name>
+        <qualifiedname>kn::K_DOLLAR</qualifiedname>
+        <initializer>= SDLK_DOLLAR</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="206" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a20422cadfc610a82e2cc9491c510b2ee" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_EXCLAIM</definition>
+        <argsstring></argsstring>
+        <name>K_EXCLAIM</name>
+        <qualifiedname>kn::K_EXCLAIM</qualifiedname>
+        <initializer>= SDLK_EXCLAIM</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="207" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a1d48de87ba9bc9340c91de0b9d0e79e0" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_GREATER</definition>
+        <argsstring></argsstring>
+        <name>K_GREATER</name>
+        <qualifiedname>kn::K_GREATER</qualifiedname>
+        <initializer>= SDLK_GREATER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="208" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1ac9b57de9cd263e5ecba63d6980bee2e4" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_HASH</definition>
+        <argsstring></argsstring>
+        <name>K_HASH</name>
+        <qualifiedname>kn::K_HASH</qualifiedname>
+        <initializer>= SDLK_HASH</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="209" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a2db413bee253746c2ebfddbd98ff5685" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_LEFTPAREN</definition>
+        <argsstring></argsstring>
+        <name>K_LEFTPAREN</name>
+        <qualifiedname>kn::K_LEFTPAREN</qualifiedname>
+        <initializer>= SDLK_LEFTPAREN</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="210" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a1e75dd60e0721b1250f2152ab30751b7" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_LESS</definition>
+        <argsstring></argsstring>
+        <name>K_LESS</name>
+        <qualifiedname>kn::K_LESS</qualifiedname>
+        <initializer>= SDLK_LESS</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="211" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a14dea6c5cc97d71fd285c602bab1fbc4" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_PERCENT</definition>
+        <argsstring></argsstring>
+        <name>K_PERCENT</name>
+        <qualifiedname>kn::K_PERCENT</qualifiedname>
+        <initializer>= SDLK_PERCENT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="212" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1aca6050e3fd82f99727d846a9f57bebb4" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_PLUS</definition>
+        <argsstring></argsstring>
+        <name>K_PLUS</name>
+        <qualifiedname>kn::K_PLUS</qualifiedname>
+        <initializer>= SDLK_PLUS</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="213" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1af435f45eb608aef007c27d29654d4a2a" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_QUESTION</definition>
+        <argsstring></argsstring>
+        <name>K_QUESTION</name>
+        <qualifiedname>kn::K_QUESTION</qualifiedname>
+        <initializer>= SDLK_QUESTION</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="214" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1abf1d04a7c67d2fbd399837ab1108eb55" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_QUOTEDBL</definition>
+        <argsstring></argsstring>
+        <name>K_QUOTEDBL</name>
+        <qualifiedname>kn::K_QUOTEDBL</qualifiedname>
+        <initializer>= SDLK_QUOTEDBL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="215" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a01c028ef7ec54d3867ee3eb2f69dde4e" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_RIGHTPAREN</definition>
+        <argsstring></argsstring>
+        <name>K_RIGHTPAREN</name>
+        <qualifiedname>kn::K_RIGHTPAREN</qualifiedname>
+        <initializer>= SDLK_RIGHTPAREN</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="216" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a14f929fcf08ea3be9ad78837e87c13ac" prot="public" static="no" mutable="no">
+        <type>const SDL_KeyCode</type>
+        <definition>const SDL_KeyCode kn::K_UNDERSCORE</definition>
+        <argsstring></argsstring>
+        <name>K_UNDERSCORE</name>
+        <qualifiedname>kn::K_UNDERSCORE</qualifiedname>
+        <initializer>= SDLK_UNDERSCORE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="217" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a3ba3ca2591192bc770ee935bb547e845" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int kn::_BUTTON_LEFT</definition>
+        <argsstring></argsstring>
+        <name>_BUTTON_LEFT</name>
+        <qualifiedname>kn::_BUTTON_LEFT</qualifiedname>
+        <initializer>= SDL_BUTTON_LEFT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="220" column="11" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1af99c07523184e6220aea674591246102" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int kn::_BUTTON_MIDDLE</definition>
+        <argsstring></argsstring>
+        <name>_BUTTON_MIDDLE</name>
+        <qualifiedname>kn::_BUTTON_MIDDLE</qualifiedname>
+        <initializer>= SDL_BUTTON_MIDDLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="221" column="11" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacekn_1a681305d5fd1c55718b4a454bb36c8e0a" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int kn::_BUTTON_RIGHT</definition>
+        <argsstring></argsstring>
+        <name>_BUTTON_RIGHT</name>
+        <qualifiedname>kn::_BUTTON_RIGHT</qualifiedname>
+        <initializer>= SDL_BUTTON_RIGHT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="222" column="11" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="222" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="namespacekn_1a4f6693c08dee924dd9d7cf1106f56815" prot="public" static="no" extern="yes" mutable="no">
         <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
         <definition>const math::Vec2 kn::SCREEN_SIZE</definition>
@@ -32,7 +3182,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Globals.hpp" line="10" column="25" declfile="D:/Code/c++/Kraken-Engine/include/Globals.hpp" declline="10" declcolumn="25"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Globals.hpp" line="13" column="25" declfile="D:/Code/c++/Kraken-Engine/include/Globals.hpp" declline="13" declcolumn="25"/>
       </memberdef>
       <memberdef kind="variable" id="namespacekn_1ac1be3061d1c6178d71ebcbc1961e651a" prot="public" static="no" extern="yes" mutable="no">
         <type>float</type>
@@ -41,19 +3191,19 @@
         <name>GRAVITY</name>
         <qualifiedname>kn::GRAVITY</qualifiedname>
         <briefdescription>
-<para>The global gravity of the game. </para>
+<para>The global gravity. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Globals.hpp" line="13" column="14" declfile="D:/Code/c++/Kraken-Engine/include/Globals.hpp" declline="13" declcolumn="14"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Globals.hpp" line="18" column="14" declfile="D:/Code/c++/Kraken-Engine/include/Globals.hpp" declline="18" declcolumn="14"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Code/c++/Kraken-Engine/include/Draw.hpp" line="9" column="1"/>
+    <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="5" column="1"/>
   </compounddef>
 </doxygen>

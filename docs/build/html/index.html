@@ -145,8 +145,11 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="#">
   
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="_static/kraken_engine_logo.png" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="_static/kraken_engine_logo.png" alt="Dark Logo"/>
+  </div>
   
-  <span class="sidebar-brand-text">Kraken Engine</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -156,18 +159,20 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="reference/ref_main.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="reference/draw.html">draw</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="reference/index.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="reference/entity.html">Entity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/font.html">Font</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/input.html">input</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/math.html">math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/rect.html">Rect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/render_window.html">RenderWindow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/sprite.html">Sprite</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/texture_cache.html">TextureCache</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/texture.html">Texture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/tile_map.html">TileMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/constants.html">constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/draw.html">draw</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/input.html">input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/math.html">math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/time.html">time</a></li>
 </ul>
 </li>
@@ -205,37 +210,37 @@
           </label>
         </div>
         <article role="main">
-          <section id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h1>
-<p><strong>Kraken Engine</strong> extends <em>SDL2</em> with easy-to-use features like
-texture caching and collision logic. Future plans include
-implementing handy mathematical functions such as pathfinding,
-raycasting, and built-in physics.</p>
-<section id="table-of-contents">
-<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Link to this heading">#</a></h2>
+          <section id="kraken-engine-docs">
+<h1>Kraken Engine Docs<a class="headerlink" href="#kraken-engine-docs" title="Link to this heading">#</a></h1>
+<p>The <strong>Kraken Engine</strong> is a powerful extension to <em>SDL2</em>, designed to streamline your
+game development process. It provides a suite of easy-to-use features such as texture
+caching and collision logic, allowing you to focus on creating immersive experiences
+for your players.</p>
+<img alt="Kraken Engine Banner" src="_images/kraken-engine-banner.png" />
+<section id="about">
+<h2>About<a class="headerlink" href="#about" title="Link to this heading">#</a></h2>
+<p>This documentation is a comprehensive guide to the Kraken Engine, covering everything
+from installation to advanced features. It’s intended for both beginners and
+experienced developers.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="getting_started.html#hello-world">Hello World</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="reference/ref_main.html">API Reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="reference/draw.html">draw</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/font.html">Font</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/input.html">input</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/math.html">math</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/rect.html">Rect</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/render_window.html">RenderWindow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/sprite.html">Sprite</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/texture_cache.html">TextureCache</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/texture.html">Texture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/tile_map.html">TileMap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/time.html">time</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/index.html">API Reference</a></li>
 </ul>
 </div>
+</section>
+<section id="future-of-kraken-engine">
+<h2>Future of Kraken Engine<a class="headerlink" href="#future-of-kraken-engine" title="Link to this heading">#</a></h2>
+<p>Future plans for the Kraken Engine include the implementation of essential mathematical
+functions like pathfinding, raycasting, and a built-in physics engine, further enhancing
+its capabilities and versatility.</p>
+</section>
+<section id="community">
+<h2>Community<a class="headerlink" href="#community" title="Link to this heading">#</a></h2>
+<p>Join our <a class="reference external" href="https://discord.gg/GyyddE7AD5">discord</a> to get help, share your projects, and contribute to the Kraken Engine!</p>
+<p>We look forward to seeing the incredible games you create with the Kraken Engine.</p>
 </section>
 </section>
 
@@ -284,8 +289,10 @@ raycasting, and built-in physics.</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Introduction</a><ul>
-<li><a class="reference internal" href="#table-of-contents">Table of Contents</a></li>
+<li><a class="reference internal" href="#">Kraken Engine Docs</a><ul>
+<li><a class="reference internal" href="#about">About</a></li>
+<li><a class="reference internal" href="#future-of-kraken-engine">Future of Kraken Engine</a></li>
+<li><a class="reference internal" href="#community">Community</a></li>
 </ul>
 </li>
 </ul>

@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Rect" href="rect.html" /><link rel="prev" title="input" href="input.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="time" href="time.html" /><link rel="prev" title="input" href="input.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
         <title>math - Kraken Engine</title>
@@ -145,8 +145,11 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/kraken_engine_logo.png" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/kraken_engine_logo.png" alt="Dark Logo"/>
+  </div>
   
-  <span class="sidebar-brand-text">Kraken Engine</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -156,18 +159,20 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="ref_main.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="draw.html">draw</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="entity.html">Entity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
-<li class="toctree-l2"><a class="reference internal" href="input.html">input</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rect.html">Rect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="render_window.html">RenderWindow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sprite.html">Sprite</a></li>
 <li class="toctree-l2"><a class="reference internal" href="texture_cache.html">TextureCache</a></li>
 <li class="toctree-l2"><a class="reference internal" href="texture.html">Texture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tile_map.html">TileMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constants.html">constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="draw.html">draw</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">input</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="time.html">time</a></li>
 </ul>
 </li>
@@ -210,7 +215,7 @@
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4N2kn4math4Vec2E">
 <span id="_CPPv3N2kn4math4Vec2E"></span><span id="_CPPv2N2kn4math4Vec2E"></span><span id="kn::math::Vec2"></span><span class="target" id="structkn_1_1math_1_1_vec2"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Vec2</span></span></span><a class="headerlink" href="#_CPPv4N2kn4math4Vec2E" title="Link to this definition">#</a><br /></dt>
-<dd><p>A struct to represent a 2D vector. </p>
+<dd><p>A 2D vector. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
@@ -236,7 +241,7 @@
 <dd><p>Get the distance to another vector. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> – The other vector. </p>
+<dd class="field-odd"><p><strong>other</strong> – The other vector.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The distance to another vector. </p>
@@ -250,10 +255,10 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N2kn4math4Vec24ZEROEv">
 <span id="_CPPv3N2kn4math4Vec24ZEROEv"></span><span id="_CPPv2N2kn4math4Vec24ZEROEv"></span><span id="kn::math::Vec2::ZERO"></span><span class="target" id="structkn_1_1math_1_1_vec2_1a1d175a651f18b89df7ed11efdd80da8b"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ZERO</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn4math4Vec24ZEROEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Get a zero vector. </p>
+<dd><p>Get a vector with all components set to 0. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A zero vector. </p>
+<dd class="field-odd"><p>The zero vector. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -263,14 +268,14 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N2kn4math8clampVecE4Vec2RK4Vec2RK4Vec2">
-<span id="_CPPv3N2kn4math8clampVecE4Vec2RK4Vec2RK4Vec2"></span><span id="_CPPv2N2kn4math8clampVecE4Vec2RK4Vec2RK4Vec2"></span><span id="kn::math::clampVec__Vec2.Vec2CR.Vec2CR"></span><span class="target" id="namespacekn_1_1math_1a8707b7484af546b0e9f57d8d78059a51"></span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">kn</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">math</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">clampVec</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">vec</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">min</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">max</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn4math8clampVecE4Vec2RK4Vec2RK4Vec2" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N2kn4math8clampVecE4Vec2RK4Vec2RK4Vec2"></span><span id="_CPPv2N2kn4math8clampVecE4Vec2RK4Vec2RK4Vec2"></span><span id="kn::math::clampVec__Vec2.Vec2CR.Vec2CR"></span><span class="target" id="namespacekn_1_1math_1a8707b7484af546b0e9f57d8d78059a51"></span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="constants.html#_CPPv42kn" title="kn"><span class="n"><span class="pre">kn</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">math</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">clampVec</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">vec</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">min</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">max</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn4math8clampVecE4Vec2RK4Vec2RK4Vec2" title="Link to this definition">#</a><br /></dt>
 <dd><p>Clamp a vector. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>vec</strong> – The vector to clamp. </p></li>
 <li><p><strong>min</strong> – The minimum value. </p></li>
-<li><p><strong>max</strong> – The maximum value. </p></li>
+<li><p><strong>max</strong> – The maximum value.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -281,14 +286,14 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N2kn4math7lerpVecERK4Vec2RK4Vec2f">
-<span id="_CPPv3N2kn4math7lerpVecERK4Vec2RK4Vec2f"></span><span id="_CPPv2N2kn4math7lerpVecERK4Vec2RK4Vec2f"></span><span id="kn::math::lerpVec__Vec2CR.Vec2CR.float"></span><span class="target" id="namespacekn_1_1math_1a88e50fa7f06deaef4b3fb1f9c26e22a0"></span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">kn</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">math</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">lerpVec</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">a</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">b</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn4math7lerpVecERK4Vec2RK4Vec2f" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N2kn4math7lerpVecERK4Vec2RK4Vec2f"></span><span id="_CPPv2N2kn4math7lerpVecERK4Vec2RK4Vec2f"></span><span id="kn::math::lerpVec__Vec2CR.Vec2CR.float"></span><span class="target" id="namespacekn_1_1math_1a88e50fa7f06deaef4b3fb1f9c26e22a0"></span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="constants.html#_CPPv42kn" title="kn"><span class="n"><span class="pre">kn</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">math</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">lerpVec</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">a</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">b</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn4math7lerpVecERK4Vec2RK4Vec2f" title="Link to this definition">#</a><br /></dt>
 <dd><p>Linearly interpolate a vector. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>a</strong> – The first vector. </p></li>
 <li><p><strong>b</strong> – The second vector. </p></li>
-<li><p><strong>t</strong> – The time. </p></li>
+<li><p><strong>t</strong> – The time.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -299,14 +304,14 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I0EN2kn4math5clampE5digit5digit5digit5digit">
-<span id="_CPPv3I0EN2kn4math5clampE5digit5digit5digit"></span><span id="_CPPv2I0EN2kn4math5clampE5digit5digit5digit"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">digit</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacekn_1_1math_1aced32b7b8f0f6ed33afc45afe9c0221c"></span><a class="reference internal" href="#_CPPv4I0EN2kn4math5clampE5digit5digit5digit5digit" title="kn::math::clamp::digit"><span class="n"><span class="pre">digit</span></span></a><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">kn</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">math</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">clamp</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN2kn4math5clampE5digit5digit5digit5digit" title="kn::math::clamp::digit"><span class="n"><span class="pre">digit</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span>, <a class="reference internal" href="#_CPPv4I0EN2kn4math5clampE5digit5digit5digit5digit" title="kn::math::clamp::digit"><span class="n"><span class="pre">digit</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">min</span></span>, <a class="reference internal" href="#_CPPv4I0EN2kn4math5clampE5digit5digit5digit5digit" title="kn::math::clamp::digit"><span class="n"><span class="pre">digit</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">max</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN2kn4math5clampE5digit5digit5digit5digit" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3I0EN2kn4math5clampE5digit5digit5digit"></span><span id="_CPPv2I0EN2kn4math5clampE5digit5digit5digit"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">digit</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacekn_1_1math_1aced32b7b8f0f6ed33afc45afe9c0221c"></span><a class="reference internal" href="#_CPPv4I0EN2kn4math5clampE5digit5digit5digit5digit" title="kn::math::clamp::digit"><span class="n"><span class="pre">digit</span></span></a><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="constants.html#_CPPv42kn" title="kn"><span class="n"><span class="pre">kn</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">math</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">clamp</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN2kn4math5clampE5digit5digit5digit5digit" title="kn::math::clamp::digit"><span class="n"><span class="pre">digit</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span>, <a class="reference internal" href="#_CPPv4I0EN2kn4math5clampE5digit5digit5digit5digit" title="kn::math::clamp::digit"><span class="n"><span class="pre">digit</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">min</span></span>, <a class="reference internal" href="#_CPPv4I0EN2kn4math5clampE5digit5digit5digit5digit" title="kn::math::clamp::digit"><span class="n"><span class="pre">digit</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">max</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN2kn4math5clampE5digit5digit5digit5digit" title="Link to this definition">#</a><br /></dt>
 <dd><p>Clamp a value. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>val</strong> – The value to clamp. </p></li>
 <li><p><strong>min</strong> – The minimum value. </p></li>
-<li><p><strong>max</strong> – The maximum value. </p></li>
+<li><p><strong>max</strong> – The maximum value.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -322,12 +327,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="rect.html">
+          <a class="next-page" href="time.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Rect</div>
+                <div class="title">time</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>

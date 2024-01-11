@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="math" href="math.html" /><link rel="prev" title="Font" href="font.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="math" href="math.html" /><link rel="prev" title="draw" href="draw.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
         <title>input - Kraken Engine</title>
@@ -145,8 +145,11 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/kraken_engine_logo.png" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/kraken_engine_logo.png" alt="Dark Logo"/>
+  </div>
   
-  <span class="sidebar-brand-text">Kraken Engine</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -156,18 +159,20 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="ref_main.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="draw.html">draw</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="entity.html">Entity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">input</a></li>
-<li class="toctree-l2"><a class="reference internal" href="math.html">math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rect.html">Rect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="render_window.html">RenderWindow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sprite.html">Sprite</a></li>
 <li class="toctree-l2"><a class="reference internal" href="texture_cache.html">TextureCache</a></li>
 <li class="toctree-l2"><a class="reference internal" href="texture.html">Texture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tile_map.html">TileMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constants.html">constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="draw.html">draw</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="math.html">math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="time.html">time</a></li>
 </ul>
 </li>
@@ -208,13 +213,9 @@
           <section id="input">
 <h1>input<a class="headerlink" href="#input" title="Link to this heading">#</a></h1>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2kn5input11getMousePosEi">
-<span id="_CPPv3N2kn5input11getMousePosEi"></span><span id="_CPPv2N2kn5input11getMousePosEi"></span><span id="kn::input::getMousePos__i"></span><span class="target" id="namespacekn_1_1input_1ad2963cf8c16bcc43919b2b8ef89c1374"></span><span class="n"><span class="pre">math</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="math.html#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">kn</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getMousePos</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">scale</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5input11getMousePosEi" title="Link to this definition">#</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N2kn5input11getMousePosEv">
+<span id="_CPPv3N2kn5input11getMousePosEv"></span><span id="_CPPv2N2kn5input11getMousePosEv"></span><span id="kn::input::getMousePos"></span><span class="target" id="namespacekn_1_1input_1ab94bdc7cf362294b49bad95aaefbc40e"></span><span class="n"><span class="pre">math</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="math.html#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="constants.html#_CPPv42kn" title="kn"><span class="n"><span class="pre">kn</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getMousePos</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5input11getMousePosEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Get the mouse position. </p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The scale parameter is temporary. </p>
-</div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The mouse position. </p>
@@ -224,7 +225,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N2kn5input21getMouseButtonPressedEv">
-<span id="_CPPv3N2kn5input21getMouseButtonPressedEv"></span><span id="_CPPv2N2kn5input21getMouseButtonPressedEv"></span><span id="kn::input::getMouseButtonPressed"></span><span class="target" id="namespacekn_1_1input_1a56c5538ff782a7797cb2f4c17b96f998"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">kn</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getMouseButtonPressed</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5input21getMouseButtonPressedEv" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N2kn5input21getMouseButtonPressedEv"></span><span id="_CPPv2N2kn5input21getMouseButtonPressedEv"></span><span id="kn::input::getMouseButtonPressed"></span><span class="target" id="namespacekn_1_1input_1a56c5538ff782a7797cb2f4c17b96f998"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="constants.html#_CPPv42kn" title="kn"><span class="n"><span class="pre">kn</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getMouseButtonPressed</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5input21getMouseButtonPressedEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Get the mouse button pressed. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -235,7 +236,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N2kn5input14getKeysPressedEv">
-<span id="_CPPv3N2kn5input14getKeysPressedEv"></span><span id="_CPPv2N2kn5input14getKeysPressedEv"></span><span id="kn::input::getKeysPressed"></span><span class="target" id="namespacekn_1_1input_1a07334d96762236043c84d75f3504d480"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Uint8</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-prename descclassname"><span class="n"><span class="pre">kn</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getKeysPressed</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5input14getKeysPressedEv" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N2kn5input14getKeysPressedEv"></span><span id="_CPPv2N2kn5input14getKeysPressedEv"></span><span id="kn::input::getKeysPressed"></span><span class="target" id="namespacekn_1_1input_1a07334d96762236043c84d75f3504d480"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Uint8</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-prename descclassname"><a class="reference internal" href="constants.html#_CPPv42kn" title="kn"><span class="n"><span class="pre">kn</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getKeysPressed</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5input14getKeysPressedEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Get the keys pressed. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -246,7 +247,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N2kn5input9getVectorERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEE">
-<span id="_CPPv3N2kn5input9getVectorERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEE"></span><span id="_CPPv2N2kn5input9getVectorERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEE"></span><span id="kn::input::getVector__std::vector:SDL_Scancode:CR.std::vector:SDL_Scancode:CR.std::vector:SDL_Scancode:CR.std::vector:SDL_Scancode:CR"></span><span class="target" id="namespacekn_1_1input_1a8377d83a300ef4ffd6e0ea78839ed6ea"></span><span class="n"><span class="pre">math</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="math.html#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">kn</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getVector</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">SDL_Scancode</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">left</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">SDL_Scancode</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">right</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">SDL_Scancode</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">up</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">SDL_Scancode</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">down</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5input9getVectorERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEE" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N2kn5input9getVectorERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEE"></span><span id="_CPPv2N2kn5input9getVectorERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEE"></span><span id="kn::input::getVector__std::vector:SDL_Scancode:CR.std::vector:SDL_Scancode:CR.std::vector:SDL_Scancode:CR.std::vector:SDL_Scancode:CR"></span><span class="target" id="namespacekn_1_1input_1a8377d83a300ef4ffd6e0ea78839ed6ea"></span><span class="n"><span class="pre">math</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="math.html#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="constants.html#_CPPv42kn" title="kn"><span class="n"><span class="pre">kn</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getVector</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">SDL_Scancode</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">left</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">SDL_Scancode</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">right</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">SDL_Scancode</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">up</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">SDL_Scancode</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">down</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5input9getVectorERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEE" title="Link to this definition">#</a><br /></dt>
 <dd><p>Get the vector of the keys pressed. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -254,7 +255,7 @@
 <li><p><strong>left</strong> – The keys to move left. </p></li>
 <li><p><strong>right</strong> – The keys to move right. </p></li>
 <li><p><strong>up</strong> – The keys to move up. </p></li>
-<li><p><strong>down</strong> – The keys to move down. </p></li>
+<li><p><strong>down</strong> – The keys to move down.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -279,14 +280,14 @@
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="font.html">
+          <a class="prev-page" href="draw.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Font</div>
+                <div class="title">draw</div>
                 
               </div>
             </a>
@@ -321,7 +322,7 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">input</a><ul>
-<li><a class="reference internal" href="#_CPPv4N2kn5input11getMousePosEi"><code class="docutils literal notranslate"><span class="pre">getMousePos()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn5input11getMousePosEv"><code class="docutils literal notranslate"><span class="pre">getMousePos()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn5input21getMouseButtonPressedEv"><code class="docutils literal notranslate"><span class="pre">getMouseButtonPressed()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn5input14getKeysPressedEv"><code class="docutils literal notranslate"><span class="pre">getKeysPressed()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn5input9getVectorERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEE"><code class="docutils literal notranslate"><span class="pre">getVector()</span></code></a></li>

@@ -3,16 +3,9 @@
   <compounddef id="_draw_8hpp" kind="file" language="C++">
     <compoundname>Draw.hpp</compoundname>
     <includes local="no">SDL.h</includes>
-    <includes refid="_render_window_8hpp" local="yes">RenderWindow.hpp</includes>
     <includes refid="_rect_8hpp" local="yes">Rect.hpp</includes>
     <includedby refid="_kraken_engine_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/KrakenEngine.hpp</includedby>
     <incdepgraph>
-      <node id="14">
-        <label>Constants.hpp</label>
-        <link refid="_constants_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="1">
         <label>D:/Code/c++/Kraken-Engine/include/Draw.hpp</label>
         <link refid="_draw_8hpp"/>
@@ -20,85 +13,29 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
       </node>
-      <node id="13">
+      <node id="5">
         <label>Globals.hpp</label>
         <link refid="_globals_8hpp"/>
-        <childnode refid="11" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="11">
+      <node id="4">
         <label>Math.hpp</label>
         <link refid="_math_8hpp"/>
       </node>
-      <node id="12">
+      <node id="3">
         <label>Rect.hpp</label>
         <link refid="_rect_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>RenderWindow.hpp</label>
-        <link refid="_render_window_8hpp"/>
         <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-      </node>
-      <node id="10">
-        <label>Texture.hpp</label>
-        <link refid="_texture_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
       </node>
       <node id="2">
         <label>SDL.h</label>
-      </node>
-      <node id="7">
-        <label>SDL_image.h</label>
-      </node>
-      <node id="9">
-        <label>SDL_mixer.h</label>
-      </node>
-      <node id="8">
-        <label>SDL_ttf.h</label>
-      </node>
-      <node id="5">
-        <label>memory</label>
-      </node>
-      <node id="6">
-        <label>string</label>
-      </node>
-      <node id="4">
-        <label>vector</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
@@ -124,17 +61,17 @@
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SDL.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_render_window_8hpp" kindref="compound">RenderWindow.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_rect_8hpp" kindref="compound">Rect.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9" refid="namespacekn" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacekn" kindref="compound">kn</ref><sp/>{</highlight></codeline>
-<codeline lineno="10" refid="namespacekn_1_1draw" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">draw<sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_rect_8hpp" kindref="compound">Rect.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacekn" kindref="compound">kn</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9" refid="namespacekn_1_1draw" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">draw</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18" refid="namespacekn_1_1draw_1ac6a59278ed8bc470797aaf2b6b955a3d" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1_1draw_1ac6a59278ed8bc470797aaf2b6b955a3d" kindref="member">rect</ref>(<ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref>&amp;<sp/>window,<sp/><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref>&amp;<sp/><ref refid="namespacekn_1_1draw_1ac6a59278ed8bc470797aaf2b6b955a3d" kindref="member">rect</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Color<sp/>color,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>thickness<sp/>=<sp/>0);</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21" refid="namespacekn_1_1draw_1a8285fbd4645119d7eea609454a0857e0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1_1draw_1a8285fbd4645119d7eea609454a0857e0" kindref="member">rect</ref>(<ref refid="structkn_1_1_rect" kindref="compound">Rect</ref><sp/>&amp;<ref refid="namespacekn_1_1draw_1a8285fbd4645119d7eea609454a0857e0" kindref="member">rect</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SDL_Color<sp/>color,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>thickness<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="D:/Code/c++/Kraken-Engine/include/Draw.hpp"/>
   </compounddef>
