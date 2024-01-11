@@ -44,9 +44,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: configure
-        run: mkdir bld && cd bld && cmake .. -G "Unix Makefiles"
-      - name: build
-        run: make -j8
+      - name: configure and build
+        run: mkdir bld && cd bld && cmake .. -G "Unix Makefiles" && make Kraken_Test -j8
       - name: run tests
-        run: cd ../bin && ./Kraken_Test
+        run: cd ../bld && ./Kraken_Test
