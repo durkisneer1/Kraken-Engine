@@ -1,173 +1,158 @@
 cmake_minimum_required(VERSION 3.10)
-project(Kraken LANGUAGES CXX)
+set(LIBRARY "Kraken")
+set(TESTING "Kraken_Test")
+project(${TESTING} LANGUAGES CXX)
+project(${LIBRARY} LANGUAGES CXX)
+
+file(GLOB SOURCES "src/*.cpp")
+file(GLOB TESTS "test/*.cpp")
+add_library(Kraken ${SOURCES})
+add_executable(Kraken_Test EXCLUDE_FROM_ALL ${SOURCES} ${TESTS})
 
 set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -m64")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../bin)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 include_directories(include)
 include(FetchContent)
+include(GoogleTest)
+
+enable_testing()
 
 # ================ <deps> ==============
 
-set(FREETYPE_GIT_VERSION VER-2-13-2)
 set(SDL_GIT_VERSION release-2.28.5)
 set(SDL_TTF_GIT_VERSION release-2.20.2)
 set(SDL_IMAGE_GIT_VERSION release-2.8.2)
 set(SDL_MIXER_GIT_VERSION release-2.6.3)
 set(TMX_LITE_VERSION v1.4.4)
 
-set(SDL2MIXER_VENDORED TRUE)
+###############
+#    SDL2     #
+###############
 
-if (NOT freetype_FOUND) # If there's none, fetch and build
-  include(FetchContent)
-  FetchContent_Declare(
-    freetype
-    GIT_REPOSITORY https://github.com/freetype/freetype.git
-    GIT_TAG ${FREETYPE_GIT_VERSION}
-  )
-  FetchContent_GetProperties(freetype)
-  if (NOT freetype_POPULATED)
-    set(FETCHCONTENT_QUIET NO)
-    FetchContent_Populate(freetype)
-    message("freetype_LIBRARY: " ${freetype_LIBRARY}) # fail but define in cmake
-    message("freetype_INCLUDE_DIR: " ${freetype_INCLUDE_DIR}) #pass
-    message("freetype_SOURCE_DIR: " ${freetype_SOURCE_DIR}) # pass
-    message("freetype_BINARY_DIR: " ${freetype_BINARY_DIR}) # pass
-
-    # build freetype
-    list(APPEND CPP_INCLUDE_DIRS ${freetype_SOURCE_DIR}/include)
-    list(APPEND CPP_INCLUDE_DIRS ${freetype_BINARY_DIR}/include)
-    list(APPEND CPP_HEADER_FILES ${freetype_SOURCE_DIR}/include/ft2build.h)
-    
-    list(APPEND FREETYPE_INCLUDE_DIRS ${freetype_SOURCE_DIR}/include)
-    list(APPEND FREETYPE_INCLUDE_DIRS ${freetype_BINARY_DIR}/include)
-
-    set(FREETYPE_LIBRARY ${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
-
-    add_subdirectory(${freetype_SOURCE_DIR} ${freetype_BINARY_DIR}) #add to build in sub dir
-    add_library(Freetype::Freetype ALIAS freetype)
-
-  endif()
-endif()
-
-message("sdl_FOUND:" ${SDL_FOUND})
-if (NOT sdl_FOUND) # If there's none, fetch and build sdl
-  include(FetchContent)
-  FetchContent_Declare(
-    sdl
+set(SDL2_DISABLE_INSTALL OFF CACHE BOOL "Disable installation of SDL2") # i forget why this is necessary but im assuming it wont work without
+set(SDL_STATIC OFF CACHE BOOL "Build a static library")
+set(SDL_SHARED ON CACHE BOOL "Build a shared library")
+set(SDL_TEST OFF CACHE BOOL "Build the test programs")
+set(SDL_STATIC_PIC OFF CACHE BOOL "Build static libraries with PIC (Position Independent Code)")
+FetchContent_Declare(
+    SDL2
     GIT_REPOSITORY https://github.com/libsdl-org/SDL.git
-    GIT_TAG ${SDL_GIT_VERSION}
-  )
-  FetchContent_GetProperties(sdl)
-  if (NOT SDL2_POPULATED)
-    set(FETCHCONTENT_QUIET NO)
-    FetchContent_Populate(sdl)
-    # build SDL2
-    list(APPEND CPP_INCLUDE_DIRS ${sdl_SOURCE_DIR}/include)
+    GIT_TAG        ${SDL_GIT_VERSION}
+    GIT_PROGRESS TRUE
+)
+# set(SDL_SHARED OFF CACHE BOOL "Build a shared library")
+FetchContent_MakeAvailable(SDL2)
+target_include_directories(Kraken PRIVATE ${SDL2_SOURCE_DIR}/include)
+target_include_directories(Kraken_Test PRIVATE ${SDL2_SOURCE_DIR}/include)
 
-    link_directories(${PROJECT_BINARY_DIR}/Debug)
-    add_subdirectory(${sdl_SOURCE_DIR} ${sdl_BINARY_DIR})
-    
-    #needed for sub modules
-    list(APPEND SDL2_INCLUDE_DIR ${sdl_SOURCE_DIR}/include)
+###############
+#  SDL2_ttf   #
+###############
 
-    list(APPEND SDL2_LIBRARIES ${PROJECT_SOURCE_DIR}/build/Debug/SDL2maind.lib)
-    list(APPEND SDL2_LIBRARIES ${PROJECT_SOURCE_DIR}/build/Debug/SDL2-staticd.lib)
-    list(APPEND SDL2_LIBRARIES ${PROJECT_SOURCE_DIR}/build/Debug/SDL2d.lib)
+set(BUILD_SHARED_LIBS ON CACHE BOOL "Build the library as a shared library")
+# set(SDL2TTF_BUILD_SHARED_LIBS OFF CACHE BOOL "Build the library as a shared library")
+set(SDL2TTF_SAMPLES OFF CACHE BOOL "Build the SDL2_ttf sample program(s)")
+# let it know it needs to get its vendored deps
+set(SDL2TTF_VENDORED ON CACHE BOOL "Use the vendored version of FreeType and HarfBuzz")
+FetchContent_Declare(
+    SDL2_ttf
+    GIT_REPOSITORY https://github.com/libsdl-org/SDL_ttf
+    GIT_TAG        ${SDL_TTF_GIT_VERSION}
+    GIT_PROGRESS TRUE
+)
+FetchContent_MakeAvailable(SDL2_ttf)
+target_include_directories(Kraken PRIVATE ${SDL2_ttf_SOURCE_DIR}) # include is in the root of the repo
+target_include_directories(Kraken_Test PRIVATE ${SDL2_ttf_SOURCE_DIR}) # include is in the root of the repo
 
-    list(APPEND CPP_LIBS "SDL2main")
-    list(APPEND CPP_LIBS "SDL2-static")
-    add_library(SDL2::SDL2 ALIAS SDL2)
-    add_library(SDL2::SDL2-static ALIAS SDL2-static)
+###############
+#  SDL_image  #
+###############
 
-  endif()
-endif()
-
-set(SDL2TTF_INSTALL OFF CACHE STRING "" FORCE)
-
-if (NOT sdl_ttf_FOUND) # If there's none, fetch and build sdl
-  include(FetchContent)
-  FetchContent_Declare(
-    sdl_ttf
-    GIT_REPOSITORY https://github.com/libsdl-org/SDL_ttf.git
-    GIT_TAG ${SDL_TTF_GIT_VERSION}
-  )
-  FetchContent_GetProperties(sdl_ttf)
-  if (NOT sdl_ttf_POPULATED) # Have we downloaded raylib yet?
-    set(FETCHCONTENT_QUIET NO)
-    FetchContent_Populate(sdl_ttf)
-    add_subdirectory(${sdl_ttf_SOURCE_DIR} ${sdl_ttf_BINARY_DIR})
-  endif()
-endif()
-
-if (NOT sdl_image_FOUND) # If there's none, fetch and build sdl
-  include(FetchContent)
-  FetchContent_Declare(
-    sdl_image
+FetchContent_Declare(
+    SDL2_image
     GIT_REPOSITORY https://github.com/libsdl-org/SDL_image.git
-    GIT_TAG ${SDL_IMAGE_GIT_VERSION}
-  )
-  FetchContent_GetProperties(sdl_image)
-  if (NOT sdl_image_POPULATED) # Have we downloaded raylib yet?
-    set(FETCHCONTENT_QUIET NO)
-    FetchContent_Populate(sdl_image)
+    GIT_TAG        ${SDL_IMAGE_GIT_VERSION}
+    GIT_PROGRESS TRUE
+)
+FetchContent_MakeAvailable(SDL2_image)
+target_include_directories(Kraken PRIVATE ${SDL2_image_SOURCE_DIR}/include)
+target_include_directories(Kraken_Test PRIVATE ${SDL2_image_SOURCE_DIR}/include)
 
-    set(SUPPORT_JPG OFF CACHE BOOL "" FORCE)
-    set(SUPPORT_PNG ON CACHE BOOL "" FORCE)
-    set(BUILD_SHOWIMAGE OFF CACHE BOOL "" FORCE)
-    set(BUILD_SHARED_LIBS OFF CACHE BOOL "" FORCE)
+###############
+#  SDL_mixer  #
+###############
 
-    # build sdl2 image
-    add_subdirectory(${sdl_image_SOURCE_DIR} ${sdl_image_BINARY_DIR})
-  endif()
-endif()
+# disable annoying codecs we dont need that require dependencies i dont have
+set(SDL2MIXER_OPUS OFF CACHE BOOL "Enable Opus support")
+set(SDL2MIXER_FLAC OFF CACHE BOOL "Enable FLAC support")
+set(SDL2MIXER_MOD OFF CACHE BOOL "Enable Mod support")
+set(SDL2MIXER_MIDI OFF CACHE BOOL "Enable MIDI support")
 
-if (NOT sdl_mixer_FOUND) # If there's none, fetch and build sdl
-  include(FetchContent)
-  FetchContent_Declare(
-    sdl_mixer
+# mp3 enabled
+set(SDL2MIXER_MP3 ON CACHE BOOL "Enable MP3 support")
+
+# wav enabled
+set(SDL2MIXER_WAV ON CACHE BOOL "Enable WAV support")
+
+FetchContent_Declare(
+    SDL2_mixer
     GIT_REPOSITORY https://github.com/libsdl-org/SDL_mixer.git
-    GIT_TAG ${SDL_MIXER_GIT_VERSION}
-  )
-  FetchContent_GetProperties(sdl_mixer)
+    GIT_TAG        ${SDL_MIXER_GIT_VERSION}
+    GIT_PROGRESS TRUE
+)
+FetchContent_MakeAvailable(SDL2_mixer)
+target_include_directories(Kraken PRIVATE ${SDL2_mixer_SOURCE_DIR}/include)
+target_include_directories(Kraken_Test PRIVATE ${SDL2_mixer_SOURCE_DIR}/include)
 
-  if (NOT sdl_mixer_POPULATED) # Have we downloaded raylib yet?
-    set(FETCHCONTENT_QUIET NO)
-    FetchContent_Populate(sdl_mixer)
+#############
+#  tmxlite  #
+#############
 
-    set(SUPPORT_OGG ON CACHE BOOL "" FORCE)
-
-    # build SDL2 MIXER
-    list(APPEND CPP_INCLUDE_DIRS ${sdl_mixer_SOURCE_DIR}/include)
-    add_subdirectory(${sdl_mixer_SOURCE_DIR} ${sdl_mixer_BINARY_DIR})
-    list(APPEND CPP_LIBS "SDL2_mixer")
-  endif()
-endif()
-
+set(TMXLITE_STATIC_LIB OFF CACHE BOOL "Build tmxlite as static")
 FetchContent_Declare(
   tmxlite
   GIT_REPOSITORY https://github.com/fallahn/tmxlite.git
   GIT_TAG ${TMX_LITE_VERSION}
+  GIT_PROGRESS TRUE
 )
-
 FetchContent_MakeAvailable(tmxlite)
-message(STATUS "tmxlite_SOURCE_DIR " ${tmxlite_SOURCE_DIR})
+
 list(APPEND CPP_INCLUDE_DIRS ${tmxlite_SOURCE_DIR}/tmxlite/include)
 add_subdirectory(${tmxlite_SOURCE_DIR}/tmxlite ${tmxlite_BINARY_DIR})
 list(APPEND CPP_LIBS "tmxlite")
 
+target_include_directories(Kraken PRIVATE ${tmxlite_SOURCE_DIR}/tmxlite/include)
+target_include_directories(Kraken_Test PRIVATE ${tmxlite_SOURCE_DIR}/tmxlite/include)
+
+###########
+#  gtest  #
+###########
+
+FetchContent_Declare(googletest
+    GIT_REPOSITORY https://github.com/google/googletest.git
+    GIT_TAG f8d7d77c06936315286eb55f8de22cd23c188571
+    GIT_PROGRESS TRUE
+)
+# For Windows: Prevent overriding the parent project's compiler/linker settings
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(googletest)
+
 # ================ </deps> ==============
 
-file(GLOB SOURCES "src/*.cpp")
-add_library(${PROJECT_NAME} ${SOURCES})
 
-FetchContent_MakeAvailable(SDL SDL_image SDL_ttf SDL_mixer)
+# FetchContent_MakeAvailable(SDL SDL_image SDL_ttf SDL_mixer)
 
-target_link_libraries(${PROJECT_NAME} PRIVATE SDL2 SDL2_image SDL2_ttf SDL2_mixer)
+target_link_libraries(Kraken PRIVATE SDL2 SDL2_image SDL2_ttf SDL2_mixer)
+target_link_libraries(Kraken_Test PRIVATE SDL2 SDL2_image SDL2_ttf SDL2_mixer tmxlite gtest_main)
 
-target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_BINARY_DIR}/../include)
-target_include_directories(${PROJECT_NAME} PRIVATE ${tmxlite_SOURCE_DIR}/tmxlite/include)
-install(TARGETS ${PROJECT_NAME})
+target_include_directories(Kraken PRIVATE ${CMAKE_SOURCE_DIR}/include)
+target_include_directories(Kraken_Test PRIVATE ${CMAKE_SOURCE_DIR}/include)
+
+install(TARGETS Kraken)
+
+gtest_discover_tests(Kraken_Test)
