@@ -16,10 +16,7 @@ class RenderWindowTest : public ::testing::Test
     RenderWindowTest()
     {
         // Have to set this before first test
-        if (!RenderWindow::setScale(2))
-        {
-            std::cout << "setScale failed in RenderWindowTest constructor\n";
-        }
+        RenderWindow::setScale(2);
     }
 
     virtual ~RenderWindowTest() {}

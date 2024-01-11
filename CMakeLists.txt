@@ -12,7 +12,7 @@ add_executable(Kraken_Test EXCLUDE_FROM_ALL ${SOURCES} ${TESTS})
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -m64")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
@@ -148,11 +148,12 @@ FetchContent_MakeAvailable(googletest)
 # FetchContent_MakeAvailable(SDL SDL_image SDL_ttf SDL_mixer)
 
 target_link_libraries(Kraken PRIVATE SDL2 SDL2_image SDL2_ttf SDL2_mixer)
-target_link_libraries(Kraken_Test PRIVATE SDL2 SDL2_image SDL2_ttf SDL2_mixer tmxlite gtest_main)
+target_link_libraries(Kraken_Test PRIVATE SDL2 SDL2_image SDL2_ttf SDL2_mixer tmxlite)
 
 target_include_directories(Kraken PRIVATE ${CMAKE_SOURCE_DIR}/include)
 target_include_directories(Kraken_Test PRIVATE ${CMAKE_SOURCE_DIR}/include)
+target_include_directories(Kraken_Test PRIVATE ${tmxlite_SOURCE_DIR}/../googletest-src/googletest/include)
+message(STATUS "googletest/include " {${tmxlite_SOURCE_DIR}/../googletest-src/googletest/include})
+gtest_discover_tests(Kraken_Test)
 
 install(TARGETS Kraken)
-
-gtest_discover_tests(Kraken_Test)

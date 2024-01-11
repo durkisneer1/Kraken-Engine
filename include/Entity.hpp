@@ -18,6 +18,28 @@ namespace kn
  */
 class Entity
 {
+public:
+    /**
+     * @brief Create a entity.
+     *
+     * @param texture The texture of the entity.
+     */
+    Entity(std::shared_ptr<Texture> texture);
+    ~Entity() = default;
+
+    /**
+     * @brief Get the entity's texture pointer.
+     *
+     * @return The entity's texture pointer.
+     */
+    std::shared_ptr<Texture> getTexture() const;
+
+    Rect crop = {0, 0, 0, 0};
+    Rect rect;
+    math::Vec2 position;
+    math::Vec2 direction;
+    math::Vec2 velocity;
+
 protected:
     RenderWindow &window = RenderWindow::getInstance();
     std::shared_ptr<Texture> texture;
@@ -87,28 +109,6 @@ protected:
             }
         }
     }
-
-public:
-    /**
-     * @brief Create a entity.
-     *
-     * @param texture The texture of the entity.
-     */
-    Entity(std::shared_ptr<Texture> texture);
-    ~Entity() = default;
-
-    /**
-     * @brief Get the entity's texture pointer.
-     *
-     * @return The entity's texture pointer.
-     */
-    std::shared_ptr<Texture> getTexture() const;
-
-    Rect crop = {0, 0, 0, 0};
-    Rect rect;
-    math::Vec2 position;
-    math::Vec2 direction;
-    math::Vec2 velocity;
 };
 
 }
