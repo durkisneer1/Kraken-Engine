@@ -1,18 +1,18 @@
 #pragma once
 
-#include <vector>
 #include <memory>
 #include <string>
+#include <vector>
 
 #include <SDL.h>
 #include <SDL_image.h>
-#include <SDL_ttf.h>
 #include <SDL_mixer.h>
+#include <SDL_ttf.h>
 
-#include "Texture.hpp"
-#include "Math.hpp"
 #include "Constants.hpp"
 #include "Globals.hpp"
+#include "Math.hpp"
+#include "Texture.hpp"
 
 namespace kn
 {
@@ -22,13 +22,13 @@ namespace kn
  */
 class RenderWindow final
 {
-public:
+  public:
     /**
      * @brief Get a reference to the instance of the singleton
      *
      * @return reference to the instance
      */
-    static RenderWindow &getInstance();
+    static RenderWindow& getInstance();
 
     /**
      * @brief Clear the screen.
@@ -49,7 +49,7 @@ public:
      * @param crop The rectangle to draw from.
      * @param rect The rectangle to draw to.
      */
-    void blit(const std::shared_ptr<Texture> &texture, Rect crop, Rect rect);
+    void blit(const std::shared_ptr<Texture>& texture, Rect crop, Rect rect);
 
     /**
      *  @brief Draw a texture to a position.
@@ -57,7 +57,7 @@ public:
      *  @param texture The texture to draw.
      *  @param position The position to draw at.
      */
-    void blit(const std::shared_ptr<Texture> &texture, const math::Vec2 &position);
+    void blit(const std::shared_ptr<Texture>& texture, const math::Vec2& position);
 
     /**
      *  @brief Draw a texture using rects.
@@ -69,7 +69,8 @@ public:
      *  @param flipX Whether to flip the texture on the x-axis.
      *  @param flipY Whether to flip the texture on the y-axis.
      */
-    void blitEx(const std::shared_ptr<Texture> &texture, Rect crop, Rect rect, double angle = 0.0, bool flipX = false, bool flipY = false);
+    void blitEx(const std::shared_ptr<Texture>& texture, Rect crop, Rect rect, double angle = 0.0,
+                bool flipX = false, bool flipY = false);
 
     /**
      *  @brief Draw a texture to a position.
@@ -80,21 +81,22 @@ public:
      *  @param flipX Whether to flip the texture on the x-axis.
      *  @param flipY Whether to flip the texture on the y-axis.
      */
-    void blitEx(const std::shared_ptr<Texture> &texture, const math::Vec2 &position, double angle = 0.0, bool flipX = false, bool flipY = false);
+    void blitEx(const std::shared_ptr<Texture>& texture, const math::Vec2& position,
+                double angle = 0.0, bool flipX = false, bool flipY = false);
 
     /**
      *  @brief Get the window renderer.
      *
      *  @return The window renderer.
      */
-    SDL_Renderer *getRenderer() { return m_renderer; }
+    SDL_Renderer* getRenderer() { return m_renderer; }
 
     /**
      *  @brief Get user events.
      *
      *  @return The user events.
      */
-    const std::vector<kn::Event> &getEvents();
+    const std::vector<kn::Event>& getEvents();
 
     /**
      * @brief Get whether the window is fullscreen or not
@@ -115,7 +117,7 @@ public:
      *
      * @param newTitle the new title
      */
-    void setTitle(const std::string &newTitle);
+    void setTitle(const std::string& newTitle);
 
     /**
      * @brief Set whether the window is fullscreen or not
@@ -132,18 +134,18 @@ public:
      */
     static void setScale(int newScale);
 
-private:
+  private:
     RenderWindow();
-    RenderWindow(const RenderWindow &other) = delete;
+    RenderWindow(const RenderWindow& other) = delete;
     ~RenderWindow();
 
-    RenderWindow &operator=(const RenderWindow &rhs) = delete;
+    RenderWindow& operator=(const RenderWindow& rhs) = delete;
 
-    SDL_Renderer *m_renderer = nullptr;
-    SDL_Window *m_window = nullptr;
+    SDL_Renderer* m_renderer = nullptr;
+    SDL_Window* m_window = nullptr;
 
     kn::Event m_event;
     std::vector<SDL_Event> m_events;
 };
 
-}
+} // namespace kn

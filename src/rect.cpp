@@ -3,177 +3,120 @@
 namespace kn
 {
 
-math::Vec2 Rect::getPos()
+math::Vec2 Rect::getPos() { return {x, y}; }
+
+math::Vec2 Rect::getSize() { return {w, h}; }
+
+void Rect::setSize(const math::Vec2& size)
 {
-	return {x, y};
+    w = size.x;
+    h = size.y;
 }
 
-math::Vec2 Rect::getSize()
+bool Rect::collidePoint(const math::Vec2& pos)
 {
-	return {w, h};
+    return (pos.x >= x && pos.x <= x + w && pos.y >= y && pos.y <= y + h);
 }
 
-void Rect::setSize(const math::Vec2 &size)
+bool Rect::collideRect(const Rect& rect)
 {
-	w = size.x;
-	h = size.y;
+    return (x < rect.x + rect.w && x + w > rect.x && y < rect.y + rect.h && y + h > rect.y);
 }
 
-bool Rect::collidePoint(const math::Vec2 &pos)
+void Rect::clamp(const math::Vec2& min, const math::Vec2& max)
 {
-	return (pos.x >= x && pos.x <= x + w && pos.y >= y && pos.y <= y + h);
+    if ((max.x - min.x < this->w) || (max.y - min.y < this->h))
+        return;
+    setTopLeft(clampVec(getTopLeft(), min, max));
+    setBottomRight(clampVec(getBottomRight(), min, max));
 }
 
-bool Rect::collideRect(const Rect &rect)
+void Rect::setCenter(const math::Vec2& pos)
 {
-	return (x < rect.x + rect.w && x + w > rect.x && y < rect.y + rect.h && y + h > rect.y);
+    x = pos.x - w / 2;
+    y = pos.y - h / 2;
 }
 
-void Rect::clamp(const math::Vec2 &min, const math::Vec2 &max)
+void Rect::setLeft(float x) { this->x = x; }
+
+void Rect::setRight(float x) { this->x = x - w; }
+
+void Rect::setTop(float y) { this->y = y; }
+
+void Rect::setBottom(float y) { this->y = y - h; }
+
+void Rect::setTopLeft(const math::Vec2& pos)
 {
-	if ((max.x - min.x < this->w) || (max.y - min.y < this->h))
-		return;
-	setTopLeft(clampVec(getTopLeft(), min, max));
-	setBottomRight(clampVec(getBottomRight(), min, max));
+    x = pos.x;
+    y = pos.y;
 }
 
-void Rect::setCenter(const math::Vec2 &pos)
+void Rect::setTopMid(const math::Vec2& pos)
 {
-	x = pos.x - w / 2;
-	y = pos.y - h / 2;
+    x = pos.x - w / 2;
+    y = pos.y;
 }
 
-void Rect::setLeft(float x)
+void Rect::setTopRight(const math::Vec2& pos)
 {
-	this->x = x;
+    x = pos.x - w;
+    y = pos.y;
 }
 
-void Rect::setRight(float x)
+void Rect::setBottomLeft(const math::Vec2& pos)
 {
-	this->x = x - w;
+    x = pos.x;
+    y = pos.y - h;
 }
 
-void Rect::setTop(float y)
+void Rect::setBottomMid(const math::Vec2& pos)
 {
-	this->y = y;
+    x = pos.x - w / 2;
+    y = pos.y - h;
 }
 
-void Rect::setBottom(float y)
+void Rect::setBottomRight(const math::Vec2& pos)
 {
-	this->y = y - h;
+    x = pos.x - w;
+    y = pos.y - h;
 }
 
-void Rect::setTopLeft(const math::Vec2 &pos)
+void Rect::setLeftMid(const math::Vec2& pos)
 {
-	x = pos.x;
-	y = pos.y;
+    x = pos.x;
+    y = pos.y - h / 2;
 }
 
-void Rect::setTopMid(const math::Vec2 &pos)
+void Rect::setRightMid(const math::Vec2& pos)
 {
-	x = pos.x - w / 2;
-	y = pos.y;
+    x = pos.x - w;
+    y = pos.y - h / 2;
 }
 
-void Rect::setTopRight(const math::Vec2 &pos)
-{
-	x = pos.x - w;
-	y = pos.y;
-}
+math::Vec2 Rect::getCenter() { return {x + w / 2, y + h / 2}; }
 
-void Rect::setBottomLeft(const math::Vec2 &pos)
-{
-	x = pos.x;
-	y = pos.y - h;
-}
+float Rect::getLeft() { return x; }
 
-void Rect::setBottomMid(const math::Vec2 &pos)
-{
-	x = pos.x - w / 2;
-	y = pos.y - h;
-}
+float Rect::getRight() { return x + w; }
 
-void Rect::setBottomRight(const math::Vec2 &pos)
-{
-	x = pos.x - w;
-	y = pos.y - h;
-}
+float Rect::getTop() { return y; }
 
-void Rect::setLeftMid(const math::Vec2 &pos)
-{
-	x = pos.x;
-	y = pos.y - h / 2;
-}
+float Rect::getBottom() { return y + h; }
 
-void Rect::setRightMid(const math::Vec2 &pos)
-{
-	x = pos.x - w;
-	y = pos.y - h / 2;
-}
+math::Vec2 Rect::getTopLeft() { return {x, y}; }
 
-math::Vec2 Rect::getCenter()
-{
-	return {x + w / 2, y + h / 2};
-}
+math::Vec2 Rect::getTopMid() { return {x + w / 2, y}; }
 
-float Rect::getLeft()
-{
-	return x;
-}
+math::Vec2 Rect::getTopRight() { return {x + w, y}; }
 
-float Rect::getRight()
-{
-	return x + w;
-}
+math::Vec2 Rect::getBottomLeft() { return {x, y + h}; }
 
-float Rect::getTop()
-{
-	return y;
-}
+math::Vec2 Rect::getBottomMid() { return {x + w / 2, y + h}; }
 
-float Rect::getBottom()
-{
-	return y + h;
-}
+math::Vec2 Rect::getBottomRight() { return {x + w, y + h}; }
 
-math::Vec2 Rect::getTopLeft()
-{
-	return {x, y};
-}
+math::Vec2 Rect::getLeftMid() { return {x, y + h / 2}; }
 
-math::Vec2 Rect::getTopMid()
-{
-	return {x + w / 2, y};
-}
+math::Vec2 Rect::getRightMid() { return {x + w, y + h / 2}; }
 
-math::Vec2 Rect::getTopRight()
-{
-	return {x + w, y};
-}
-
-math::Vec2 Rect::getBottomLeft()
-{
-	return {x, y + h};
-}
-
-math::Vec2 Rect::getBottomMid()
-{
-	return {x + w / 2, y + h};
-}
-
-math::Vec2 Rect::getBottomRight()
-{
-	return {x + w, y + h};
-}
-
-math::Vec2 Rect::getLeftMid()
-{
-	return {x, y + h / 2};
-}
-
-math::Vec2 Rect::getRightMid()
-{
-	return {x + w, y + h / 2};
-}
-
-}
+} // namespace kn

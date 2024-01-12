@@ -40,4 +40,4 @@ TEST_F(RenderWindowTest, SingletonPointersEqual)
 
     EXPECT_EQ(window1, window2);
 }
-}
+} // namespace

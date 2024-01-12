@@ -21,7 +21,9 @@ struct Tile
      * @param rect The rectangle to draw to.
      */
     Tile(std::shared_ptr<Texture> texture, Rect crop, Rect rect)
-        : texture(texture), crop(crop), rect(rect) {}
+        : texture(texture), crop(crop), rect(rect)
+    {
+    }
     ~Tile() = default;
 
     std::shared_ptr<Texture> texture;
@@ -36,21 +38,24 @@ struct Tile
  */
 struct Object final : public Tile
 {
-    /** 
+    /**
      * @brief Create an object tile.
-     * 
+     *
      * @param texture A texture pointer.
      * @param crop The rectangle to crop from.
      * @param rect The rectangle to draw to.
      * @param name The name of the object.
      * @param type The type of the object.
      */
-    Object(std::shared_ptr<Texture> texture, Rect crop, Rect rect, const std::string &name, const std::string &type)
-        : Tile(texture, crop, rect), name(name), type(type) {}
+    Object(std::shared_ptr<Texture> texture, Rect crop, Rect rect, const std::string& name,
+           const std::string& type)
+        : Tile(texture, crop, rect), name(name), type(type)
+    {
+    }
     ~Object() = default;
 
     std::string name;
     std::string type;
 };
 
-}
+} // namespace kn

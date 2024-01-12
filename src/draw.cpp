@@ -6,9 +6,9 @@ namespace kn
 namespace draw
 {
 
-void rect(Rect &rect, const SDL_Color color, int thickness)
+void rect(Rect& rect, const SDL_Color color, int thickness)
 {
-    RenderWindow &window = RenderWindow::getInstance();
+    RenderWindow& window = RenderWindow::getInstance();
     SDL_SetRenderDrawColor(window.getRenderer(), color.r, color.g, color.b, color.a);
 
     if (thickness == 0)
@@ -29,5 +29,5 @@ void rect(Rect &rect, const SDL_Color color, int thickness)
     }
 }
 
-}
-}
+} // namespace draw
+} // namespace kn

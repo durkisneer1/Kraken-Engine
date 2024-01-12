@@ -1,15 +1,15 @@
 #pragma once
 
 #include <memory>
-#include <vector>
 #include <string>
+#include <vector>
 
 #include "tmxlite/Map.hpp"
 
-#include "RenderWindow.hpp"
-#include "TileTypes.hpp"
-#include "TextureCache.hpp"
 #include "Entity.hpp"
+#include "RenderWindow.hpp"
+#include "TextureCache.hpp"
+#include "TileTypes.hpp"
 
 namespace kn
 {
@@ -19,14 +19,14 @@ namespace kn
  */
 class TileMap final
 {
-public:
+  public:
     /**
      * @brief Constructs a tile map from a TMX file.
      *
      * @param textureCache The texture cache to use.
      * @param tmxPath The path to the TMX file.
      */
-    TileMap(TextureCache &textureCache, const std::string &tmxPath);
+    TileMap(TextureCache& textureCache, const std::string& tmxPath);
     ~TileMap() = default;
 
     /**
@@ -49,10 +49,10 @@ public:
      *
      * @return The tile map objects vector.
      */
-    const std::vector<Object> &getObjects() const;
+    const std::vector<Object>& getObjects() const;
 
-private:
-    RenderWindow &window = RenderWindow::getInstance();
+  private:
+    RenderWindow& window = RenderWindow::getInstance();
     tmx::Map m_map;
 
     std::vector<Tile> tileVec;
@@ -60,4 +60,4 @@ private:
     std::map<int, std::shared_ptr<Texture>> tileSetMap;
 };
 
-}
+} // namespace kn
