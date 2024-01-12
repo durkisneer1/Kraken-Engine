@@ -94,7 +94,7 @@ public:
      *
      *  @return The user events.
      */
-    const std::vector<KN_Event> &getEvents();
+    const std::vector<kn::Event> &getEvents();
 
     /**
      * @brief Get whether the window is fullscreen or not
@@ -142,7 +142,7 @@ private:
     SDL_Renderer *m_renderer = nullptr;
     SDL_Window *m_window = nullptr;
 
-    KN_Event m_event;
+    kn::Event m_event;
     std::vector<SDL_Event> m_events;
 };
 
