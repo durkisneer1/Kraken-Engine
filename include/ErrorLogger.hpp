@@ -52,11 +52,18 @@ class ErrorLogger
         auto currentTime = std::chrono::system_clock::now();
         std::time_t now = std::chrono::system_clock::to_time_t(currentTime);
 
-        m_file.open(m_filename, std::ios::app);
-
         std::string output;
         output = output + strtok(ctime(&now), "\n") + logString + "\n";
-        if (!m_canWriteToFile || !m_file)
+
+        if (!m_canWriteToFile)
+        {
+            std::cout << output;
+            return;
+        }
+
+        m_file.open(m_filename, std::ios::app);
+
+        if (!m_file)
         {
             std::cout << output;
             m_canWriteToFile = false;
@@ -73,7 +80,7 @@ class ErrorLogger
      * @param filename optional param to set the logfile name, defaults to
      * "output.log"
      */
-    ErrorLogger(std::string filename = "output.log")
+    explicit ErrorLogger(const std::string& filename = "output.log")
         : m_filename(filename), m_file(), m_canWriteToFile(false)
     {
         m_file.open(m_filename, std::ios::out);
@@ -116,8 +123,8 @@ class ErrorLogger
 
 } // namespace Utils
 
-#define COMMON_ENDING(message)                                                                     \
-    std::string("\t\t") + std::string(message) + ": " + __FILE__ + "[" +                           \
+#define COMMON_ENDING(message)                                                 \
+    std::string("\t\t") + std::string(message) + ": " + __FILE__ + "[" +       \
         std::to_string(__LINE__) + "]"
 
 #if LOG_LEVEL <= 1
@@ -127,10 +134,10 @@ class ErrorLogger
  *
  * @param message must be able to convert to std::string
  */
-#define TRACE(message)                                                                             \
-    {                                                                                              \
-        std::string output = "[TRACE]" + COMMON_ENDING(message);                                   \
-        kn::ErrorLogger::getInstance().log(output);                                             \
+#define TRACE(message)                                                         \
+    {                                                                          \
+        std::string output = "[TRACE]" + COMMON_ENDING(message);               \
+        kn::ErrorLogger::getInstance().log(output);                            \
     }
 #else
 #define TRACE(message) ;
@@ -142,10 +149,10 @@ class ErrorLogger
  *
  * @param message must be able to convert to std::string
  */
-#define DEBUG(message)                                                                             \
-    {                                                                                              \
-        std::string output = "[DEBUG]" + COMMON_ENDING(message);                                   \
-        kn::ErrorLogger::getInstance().log(output);                                             \
+#define DEBUG(message)                                                         \
+    {                                                                          \
+        std::string output = "[DEBUG]" + COMMON_ENDING(message);               \
+        kn::ErrorLogger::getInstance().log(output);                            \
     }
 #else
 #define DEBUG(message) ;
@@ -158,10 +165,10 @@ class ErrorLogger
  *
  * @param message must be able to convert to std::string
  */
-#define WARN(message)                                                                              \
-    {                                                                                              \
-        std::string output = "[WARN]" + COMMON_ENDING(message);                                    \
-        kn::ErrorLogger::getInstance().log(output);                                             \
+#define WARN(message)                                                          \
+    {                                                                          \
+        std::string output = "[WARN]" + COMMON_ENDING(message);                \
+        kn::ErrorLogger::getInstance().log(output);                            \
     }
 #else
 #define WARN(message) ;
@@ -174,10 +181,10 @@ class ErrorLogger
  *
  * @param message must be able to convert to std::string
  */
-#define ERROR(message)                                                                             \
-    {                                                                                              \
-        std::string output = "[ERROR]" + COMMON_ENDING(message);                                   \
-        kn::ErrorLogger::getInstance().log(output);                                             \
+#define ERROR(message)                                                         \
+    {                                                                          \
+        std::string output = "[ERROR]" + COMMON_ENDING(message);               \
+        kn::ErrorLogger::getInstance().log(output);                            \
     }
 #else
 #define ERROR(message) ;
@@ -188,10 +195,10 @@ class ErrorLogger
  *
  * @param message must be able to convert to std::string
  */
-#define FATAL(message)                                                                             \
-    {                                                                                              \
-        std::string output = "[FATAL]" + COMMON_ENDING(message);                                   \
-        kn::ErrorLogger::getInstance().log(output);                                             \
+#define FATAL(message)                                                         \
+    {                                                                          \
+        std::string output = "[FATAL]" + COMMON_ENDING(message);               \
+        kn::ErrorLogger::getInstance().log(output);                            \
     }
 
 #ifdef FILE_ONLY
