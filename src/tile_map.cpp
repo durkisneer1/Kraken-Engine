@@ -3,7 +3,8 @@
 
 #include "tmxlite/TileLayer.hpp"
 
-#include "../include/TileMap.hpp"
+#include "ErrorLogger.hpp"
+#include "TileMap.hpp"
 
 namespace kn
 {
@@ -12,7 +13,7 @@ TileMap::TileMap(TextureCache &textureCache, const std::string &tmxPath)
 {
     if (!m_map.load(tmxPath))
     {
-        std::cerr << "Failed to load and parse tile map: " << tmxPath << std::endl;
+        WARN("Failed to load and parse tile map: " + tmxPath);
         return;
     }
 

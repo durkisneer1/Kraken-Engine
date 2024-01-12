@@ -4,10 +4,21 @@ set(TESTING "Kraken_Test")
 project(${TESTING} LANGUAGES CXX)
 project(${LIBRARY} LANGUAGES CXX)
 
+# default log level to WARN (3) if not explicitly set with cmake ... -DLOG_LEVEL=number
+if(NOT DEFINED LOG_LEVEL)
+    message(STATUS "Setting Log Level to 3")
+    set(LOG_LEVEL 3)
+else(NOT DEFINED LOG_LEVEL)
+    message(STATUS "Log Level set to " ${LOG_LEVEL})
+endif(NOT DEFINED LOG_LEVEL)
+
 file(GLOB SOURCES "src/*.cpp")
 file(GLOB TESTS "test/*.cpp")
-add_library(Kraken ${SOURCES})
-add_executable(Kraken_Test EXCLUDE_FROM_ALL ${SOURCES} ${TESTS})
+add_library(${LIBRARY} ${SOURCES})
+add_executable(${TESTING} EXCLUDE_FROM_ALL ${SOURCES} ${TESTS})
+
+target_compile_definitions( ${LIBRARY} PUBLIC LOG_LEVEL=${LOG_LEVEL} )
+target_compile_definitions( ${TESTING} PUBLIC LOG_LEVEL=${LOG_LEVEL} )
 
 set_target_properties( ${LIBRARY} PROPERTIES RUNTIME_OUTPUT_DIRECTORY 
    ${CMAKE_SOURCE_DIR}/bin )
@@ -55,8 +66,8 @@ FetchContent_Declare(
 )
 # set(SDL_SHARED OFF CACHE BOOL "Build a shared library")
 FetchContent_MakeAvailable(SDL2)
-target_include_directories(Kraken PRIVATE ${SDL2_SOURCE_DIR}/include)
-target_include_directories(Kraken_Test PRIVATE ${SDL2_SOURCE_DIR}/include)
+target_include_directories(${LIBRARY} PRIVATE ${SDL2_SOURCE_DIR}/include)
+target_include_directories(${TESTING} PRIVATE ${SDL2_SOURCE_DIR}/include)
 
 ###############
 #  SDL2_ttf   #
@@ -74,8 +85,8 @@ FetchContent_Declare(
     GIT_PROGRESS TRUE
 )
 FetchContent_MakeAvailable(SDL2_ttf)
-target_include_directories(Kraken PRIVATE ${SDL2_ttf_SOURCE_DIR}) # include is in the root of the repo
-target_include_directories(Kraken_Test PRIVATE ${SDL2_ttf_SOURCE_DIR}) # include is in the root of the repo
+target_include_directories(${LIBRARY} PRIVATE ${SDL2_ttf_SOURCE_DIR}) # include is in the root of the repo
+target_include_directories(${TESTING} PRIVATE ${SDL2_ttf_SOURCE_DIR}) # include is in the root of the repo
 
 ###############
 #  SDL_image  #
@@ -88,8 +99,8 @@ FetchContent_Declare(
     GIT_PROGRESS TRUE
 )
 FetchContent_MakeAvailable(SDL2_image)
-target_include_directories(Kraken PRIVATE ${SDL2_image_SOURCE_DIR}/include)
-target_include_directories(Kraken_Test PRIVATE ${SDL2_image_SOURCE_DIR}/include)
+target_include_directories(${LIBRARY} PRIVATE ${SDL2_image_SOURCE_DIR}/include)
+target_include_directories(${TESTING} PRIVATE ${SDL2_image_SOURCE_DIR}/include)
 
 ###############
 #  SDL_mixer  #
@@ -114,8 +125,8 @@ FetchContent_Declare(
     GIT_PROGRESS TRUE
 )
 FetchContent_MakeAvailable(SDL2_mixer)
-target_include_directories(Kraken PRIVATE ${SDL2_mixer_SOURCE_DIR}/include)
-target_include_directories(Kraken_Test PRIVATE ${SDL2_mixer_SOURCE_DIR}/include)
+target_include_directories(${LIBRARY} PRIVATE ${SDL2_mixer_SOURCE_DIR}/include)
+target_include_directories(${TESTING} PRIVATE ${SDL2_mixer_SOURCE_DIR}/include)
 
 #############
 #  tmxlite  #
@@ -134,8 +145,8 @@ list(APPEND CPP_INCLUDE_DIRS ${tmxlite_SOURCE_DIR}/tmxlite/include)
 add_subdirectory(${tmxlite_SOURCE_DIR}/tmxlite ${tmxlite_BINARY_DIR})
 list(APPEND CPP_LIBS "tmxlite")
 
-target_include_directories(Kraken PRIVATE ${tmxlite_SOURCE_DIR}/tmxlite/include)
-target_include_directories(Kraken_Test PRIVATE ${tmxlite_SOURCE_DIR}/tmxlite/include)
+target_include_directories(${LIBRARY} PRIVATE ${tmxlite_SOURCE_DIR}/tmxlite/include)
+target_include_directories(${TESTING} PRIVATE ${tmxlite_SOURCE_DIR}/tmxlite/include)
 
 ###########
 #  gtest  #
@@ -188,12 +199,12 @@ if (WIN32)
   )
 endif()
 
-target_link_libraries(Kraken PRIVATE SDL2 SDL2_image SDL2_ttf SDL2_mixer tmxlite)
-target_link_libraries(Kraken_Test PRIVATE SDL2 SDL2_image SDL2_ttf SDL2_mixer tmxlite gtest)
+target_link_libraries(${LIBRARY} PRIVATE SDL2 SDL2_image SDL2_ttf SDL2_mixer tmxlite)
+target_link_libraries(${TESTING} PRIVATE SDL2 SDL2_image SDL2_ttf SDL2_mixer tmxlite gtest)
 
-target_include_directories(Kraken PRIVATE ${CMAKE_SOURCE_DIR}/include)
-target_include_directories(Kraken_Test PRIVATE ${CMAKE_SOURCE_DIR}/include)
-target_include_directories(Kraken_Test PRIVATE ${tmxlite_SOURCE_DIR}/../googletest-src/googletest/include)
-gtest_discover_tests(Kraken_Test)
+target_include_directories(${LIBRARY} PRIVATE ${CMAKE_SOURCE_DIR}/include)
+target_include_directories(${TESTING} PRIVATE ${CMAKE_SOURCE_DIR}/include)
+target_include_directories(${TESTING} PRIVATE ${tmxlite_SOURCE_DIR}/../googletest-src/googletest/include)
+gtest_discover_tests(${TESTING})
 
-install(TARGETS Kraken)
+install(TARGETS ${LIBRARY})

@@ -1,12 +1,12 @@
 #include <iostream>
 
-#include "../include/Entity.hpp"
+#include "Entity.hpp"
 
 namespace kn
 {
 
 Entity::Entity(std::shared_ptr<Texture> texture)
-    : texture(texture), rect(texture->getRect())
+    : rect(texture->getRect()), texture(texture)
 {
     crop.w = rect.w;
     crop.h = rect.h;

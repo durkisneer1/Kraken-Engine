@@ -1,7 +1,7 @@
 #include <algorithm>
 
-#include "../include/Input.hpp"
-#include "../include/RenderWindow.hpp"
+#include "Input.hpp"
+#include "RenderWindow.hpp"
 
 namespace kn
 {

@@ -1,5 +1,5 @@
-#include "../include/Time.hpp"
-#include "../include/Math.hpp"
+#include "Time.hpp"
+#include "Math.hpp"
 
 namespace kn
 {
