@@ -1,5 +1,5 @@
-#include "../include/Draw.hpp"
-#include "../include/RenderWindow.hpp"
+#include "Draw.hpp"
+#include "RenderWindow.hpp"
 
 namespace kn
 {

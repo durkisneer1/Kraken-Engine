@@ -1,7 +1,8 @@
 #include <iostream>
 
-#include "../include/TextureCache.hpp"
-#include "../include/RenderWindow.hpp"
+#include "ErrorLogger.hpp"
+#include "TextureCache.hpp"
+#include "RenderWindow.hpp"
 
 namespace kn
 {
@@ -11,7 +12,7 @@ std::shared_ptr<Texture> TextureCache::load(const std::string &name, const std::
     SDL_Texture *texture = IMG_LoadTexture(RenderWindow::getInstance().getRenderer(), path.c_str());
     if (!texture)
     {
-        std::cerr << "Failed to create texture from: " << path << std::endl;
+        WARN("Failed to create texture from: " + path);
         return nullptr;
     }
     else
@@ -27,7 +28,7 @@ std::shared_ptr<Texture> TextureCache::create(const std::string &name, const mat
     SDL_Surface *surface = SDL_CreateRGBSurface(0, size.x, size.y, 32, 0, 0, 0, 0);
     if (!surface)
     {
-        std::cerr << "Failed to create surface: " << name << std::endl;
+        WARN("Failed to create surface: " + name);
         return nullptr;
     }
 
@@ -36,7 +37,7 @@ std::shared_ptr<Texture> TextureCache::create(const std::string &name, const mat
     SDL_Texture *texture = SDL_CreateTextureFromSurface(RenderWindow::getInstance().getRenderer(), surface);
     if (!texture)
     {
-        std::cerr << "Failed to create texture from surface: " << name << std::endl;
+        WARN("Failed to create texture from surface: " + name);
         return nullptr;
     }
 

@@ -2,7 +2,8 @@
 
 #include "SDL.h"
 
-#include "../include/RenderWindow.hpp"
+#include "ErrorLogger.hpp"
+#include "RenderWindow.hpp"
 
 namespace kn
 {
@@ -24,28 +25,29 @@ RenderWindow::RenderWindow()
 {
     if (SDL_Init(SDL_INIT_VIDEO))
     {
-        std::cerr << "SDL_Init Error: " << SDL_GetError() << std::endl;
+        FATAL("SDL_Init Error: " + std::string(SDL_GetError()));
         exit(3);
     }
     if (!IMG_Init(IMG_INIT_PNG))
     {
-        std::cerr << "IMG_Init Error: " << IMG_GetError() << std::endl;
+        FATAL("IMG_Init Error: " + std::string(IMG_GetError()));
         SDL_Quit();
         exit(3);
     }
     if (TTF_Init() < 0)
     {
-        std::cerr << "TTF_Init Error: " << TTF_GetError() << std::endl;
+        FATAL("TTF_Init Error: " + std::string(TTF_GetError()));
         IMG_Quit();
         SDL_Quit();
         exit(3);
     }
     if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0)
     {
-        std::cerr << "Mix_OpenAudio Error: " << Mix_GetError() << std::endl;
+        FATAL("Mix_OpenAudio Error: " + std::string(Mix_GetError()));
         TTF_Quit();
         IMG_Quit();
         SDL_Quit();
+        exit(3);
     }
 
     this->m_window = SDL_CreateWindow(
@@ -56,7 +58,7 @@ RenderWindow::RenderWindow()
 
     if (!m_window)
     {
-        std::cerr << "SDL_CreateWindow Error: " << SDL_GetError() << std::endl;
+        FATAL("SDL_CreateWindow Error: " + std::string(SDL_GetError()));
         SDL_Quit();
         exit(3);
     }
@@ -66,7 +68,7 @@ RenderWindow::RenderWindow()
 
     if (!m_renderer)
     {
-        std::cerr << "SDL_CreateRenderer Error: " << SDL_GetError() << std::endl;
+        FATAL("SDL_CreateRenderer Error: " + std::string(SDL_GetError()));
         SDL_DestroyWindow(m_window);
         SDL_Quit();
         exit(3);
@@ -213,7 +215,7 @@ void RenderWindow::setScale(int newScale)
 {
     if (instanceCreated)
     {
-        std::cerr << "Cannot set scale after creating the window\n";
+        WARN("Cannot set scale after creating the window");
     }
 
     scale = std::min(std::max(newScale, 1), 32);

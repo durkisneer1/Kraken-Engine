@@ -1,4 +1,4 @@
-#include "../include/Rect.hpp"
+#include "Rect.hpp"
 
 namespace kn
 {

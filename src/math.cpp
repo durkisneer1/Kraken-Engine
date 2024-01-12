@@ -1,7 +1,7 @@
 #include <cmath>
 #include <algorithm>
 
-#include "../include/Math.hpp"
+#include "Math.hpp"
 
 namespace kn
 {
