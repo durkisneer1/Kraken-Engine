@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.16)
 set(LIBRARY "Kraken")
 set(TESTING "Kraken_Test")
 project(${TESTING} LANGUAGES CXX)
@@ -9,18 +9,26 @@ file(GLOB TESTS "test/*.cpp")
 add_library(Kraken ${SOURCES})
 add_executable(Kraken_Test EXCLUDE_FROM_ALL ${SOURCES} ${TESTS})
 
+set_target_properties( ${LIBRARY} PROPERTIES RUNTIME_OUTPUT_DIRECTORY 
+   ${CMAKE_SOURCE_DIR}/bin )
+set_target_properties( ${LIBRARY} PROPERTIES LIBRARY_OUTPUT_DIRECTORY
+   ${CMAKE_SOURCE_DIR}/bin )
+
+set_target_properties( ${TESTING} PROPERTIES RUNTIME_OUTPUT_DIRECTORY 
+   ${CMAKE_SOURCE_DIR}/bin )
+set_target_properties( ${TESTING} PROPERTIES LIBRARY_OUTPUT_DIRECTORY
+   ${CMAKE_SOURCE_DIR}/bin )
+
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -m64")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../bin)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 include_directories(include)
 include(FetchContent)
 include(GoogleTest)
-
-enable_testing()
 
 # ================ <deps> ==============
 
@@ -140,20 +148,52 @@ FetchContent_Declare(googletest
 )
 # For Windows: Prevent overriding the parent project's compiler/linker settings
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+
 FetchContent_MakeAvailable(googletest)
 
 # ================ </deps> ==============
 
+enable_testing()
 
-# FetchContent_MakeAvailable(SDL SDL_image SDL_ttf SDL_mixer)
+if (WIN32)
+  add_custom_command(
+    TARGET ${TESTING}
+    COMMENT "Copy gtest dlls"
+    PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/bld/bin/libgtest.dll ${CMAKE_SOURCE_DIR}/bin/
+    VERBATIM
+  )
+endif()
+if (WIN32)
+  add_custom_command(
+    TARGET ${TESTING}
+    COMMENT "Copy gtest dlls"
+    PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/bld/bin/libgmock.dll ${CMAKE_SOURCE_DIR}/bin/
+    VERBATIM
+  )
+endif()
+if (WIN32)
+  add_custom_command(
+    TARGET ${TESTING}
+    COMMENT "Copy gtest dlls"
+    PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/bld/bin/libgtest_main.dll ${CMAKE_SOURCE_DIR}/bin/
+    VERBATIM
+  )
+endif()
+if (WIN32)
+  add_custom_command(
+    TARGET ${TESTING}
+    COMMENT "Copy gtest dlls"
+    PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/bld/bin/libgmock_main.dll ${CMAKE_SOURCE_DIR}/bin/
+    VERBATIM
+  )
+endif()
 
-target_link_libraries(Kraken PRIVATE SDL2 SDL2_image SDL2_ttf SDL2_mixer)
-target_link_libraries(Kraken_Test PRIVATE SDL2 SDL2_image SDL2_ttf SDL2_mixer tmxlite)
+target_link_libraries(Kraken PRIVATE SDL2 SDL2_image SDL2_ttf SDL2_mixer tmxlite)
+target_link_libraries(Kraken_Test PRIVATE SDL2 SDL2_image SDL2_ttf SDL2_mixer tmxlite gtest)
 
 target_include_directories(Kraken PRIVATE ${CMAKE_SOURCE_DIR}/include)
 target_include_directories(Kraken_Test PRIVATE ${CMAKE_SOURCE_DIR}/include)
 target_include_directories(Kraken_Test PRIVATE ${tmxlite_SOURCE_DIR}/../googletest-src/googletest/include)
-message(STATUS "googletest/include " {${tmxlite_SOURCE_DIR}/../googletest-src/googletest/include})
 gtest_discover_tests(Kraken_Test)
 
 install(TARGETS Kraken)

@@ -48,7 +48,5 @@ jobs:
         run: mkdir bld && cd bld && cmake .. -G "Unix Makefiles"
       - name: build
         run: cd bld && make -j8 && make Kraken_Test -j8
-      - name: copy files
-        run: cp bin/* ../bin/ && cp Kraken_Test ../bin
       - name: run tests
         run: cd ../bin && ./Kraken_Test

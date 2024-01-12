@@ -4,6 +4,7 @@
 
 #include "RenderWindow.hpp"
 
+#define KN_SCREEN_SIZE_DEFINED
 const kn::math::Vec2 kn::SCREEN_SIZE = {100, 100};
 
 namespace
