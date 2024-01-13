@@ -38,7 +38,7 @@ if (NOT MSVC)
 }
 else(NOT MSVC)
 {
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} Wall /std:c++latest")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /Wall /std:c++latest")
 }
 endif(NOT MSVC)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
