@@ -171,6 +171,7 @@
 <li class="toctree-l2"><a class="reference internal" href="reference/draw.html">draw</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/input.html">input</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/math.html">math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/mixer.html">mixer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/time.html">time</a></li>
 </ul>
 </li>
@@ -230,6 +231,8 @@
 </li>
         <li><a href="reference/constants.html#_CPPv4N2kn15CLIPBOARDUPDATEE">kn::CLIPBOARDUPDATE (C++ member)</a>
 </li>
+        <li><a href="reference/constants.html#_CPPv4N2kn5ColorE">kn::Color (C++ type)</a>
+</li>
         <li><a href="reference/constants.html#_CPPv4N2kn20CONTROLLERAXISMOTIONE">kn::CONTROLLERAXISMOTION (C++ member)</a>
 </li>
         <li><a href="reference/constants.html#_CPPv4N2kn20CONTROLLERBUTTONDOWNE">kn::CONTROLLERBUTTONDOWN (C++ member)</a>
@@ -244,7 +247,7 @@
 </li>
         <li><a href="reference/constants.html#_CPPv4N2kn12DISPLAYEVENTE">kn::DISPLAYEVENT (C++ member)</a>
 </li>
-        <li><a href="reference/draw.html#_CPPv4N2kn4draw4rectER4RectK9SDL_Colori">kn::draw::rect (C++ function)</a>
+        <li><a href="reference/draw.html#_CPPv4N2kn4draw4rectER4RectK5Colori">kn::draw::rect (C++ function)</a>
 </li>
         <li><a href="reference/constants.html#_CPPv4N2kn9DROPBEGINE">kn::DROPBEGIN (C++ member)</a>
 </li>
@@ -268,7 +271,7 @@
 </li>
         <li><a href="reference/font.html#_CPPv4N2kn4Font4FontERKNSt6stringEi">kn::Font::Font (C++ function)</a>
 </li>
-        <li><a href="reference/font.html#_CPPv4N2kn4Font6renderERKNSt6stringEb9SDL_Colori">kn::Font::render (C++ function)</a>
+        <li><a href="reference/font.html#_CPPv4N2kn4Font6renderERKNSt6stringEb5Colori">kn::Font::render (C++ function)</a>
 </li>
         <li><a href="reference/input.html#_CPPv4N2kn5input14getKeysPressedEv">kn::input::getKeysPressed (C++ function)</a>
 </li>
@@ -276,7 +279,7 @@
 </li>
         <li><a href="reference/input.html#_CPPv4N2kn5input11getMousePosEv">kn::input::getMousePos (C++ function)</a>
 </li>
-        <li><a href="reference/input.html#_CPPv4N2kn5input9getVectorERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEERKNSt6vectorI12SDL_ScancodeEE">kn::input::getVector (C++ function)</a>
+        <li><a href="reference/input.html#_CPPv4N2kn5input9getVectorERKNSt6vectorI4KEYSEERKNSt6vectorI4KEYSEERKNSt6vectorI4KEYSEERKNSt6vectorI4KEYSEE">kn::input::getVector (C++ function)</a>
 </li>
         <li><a href="reference/constants.html#_CPPv4N2kn13JOYAXISMOTIONE">kn::JOYAXISMOTION (C++ member)</a>
 </li>
@@ -546,8 +549,6 @@
 </li>
         <li><a href="reference/constants.html#_CPPv4N2kn5KEYUPE">kn::KEYUP (C++ member)</a>
 </li>
-        <li><a href="reference/math.html#_CPPv4I0EN2kn4math5clampE5digit5digit5digit5digit">kn::math::clamp (C++ function)</a>
-</li>
         <li><a href="reference/math.html#_CPPv4N2kn4math8clampVecE4Vec2RK4Vec2RK4Vec2">kn::math::clampVec (C++ function)</a>
 </li>
         <li><a href="reference/math.html#_CPPv4N2kn4math7lerpVecERK4Vec2RK4Vec2f">kn::math::lerpVec (C++ function)</a>
@@ -561,6 +562,16 @@
         <li><a href="reference/math.html#_CPPv4N2kn4math4Vec29normalizeEv">kn::math::Vec2::normalize (C++ function)</a>
 </li>
         <li><a href="reference/math.html#_CPPv4N2kn4math4Vec24ZEROEv">kn::math::Vec2::ZERO (C++ function)</a>
+</li>
+        <li><a href="reference/mixer.html#_CPPv4N2kn5mixer5SoundE">kn::mixer::Sound (C++ class)</a>
+</li>
+        <li><a href="reference/mixer.html#_CPPv4N2kn5mixer5Sound4playEiii">kn::mixer::Sound::play (C++ function)</a>
+</li>
+        <li><a href="reference/mixer.html#_CPPv4N2kn5mixer5Sound9setVolumeEf">kn::mixer::Sound::setVolume (C++ function)</a>
+</li>
+        <li><a href="reference/mixer.html#_CPPv4N2kn5mixer5Sound5SoundERKNSt6stringE">kn::mixer::Sound::Sound (C++ function)</a>
+</li>
+        <li><a href="reference/mixer.html#_CPPv4N2kn5mixer5Sound6unloadEv">kn::mixer::Sound::unload (C++ function)</a>
 </li>
         <li><a href="reference/constants.html#_CPPv4N2kn15MOUSEBUTTONDOWNE">kn::MOUSEBUTTONDOWN (C++ member)</a>
 </li>
@@ -790,7 +801,7 @@
 </li>
         <li><a href="reference/texture_cache.html#_CPPv4N2kn12TextureCacheE">kn::TextureCache (C++ class)</a>
 </li>
-        <li><a href="reference/texture_cache.html#_CPPv4N2kn12TextureCache6createERKNSt6stringERKN4math4Vec2E9SDL_Color">kn::TextureCache::create (C++ function)</a>
+        <li><a href="reference/texture_cache.html#_CPPv4N2kn12TextureCache6createERKNSt6stringERKN4math4Vec2E5Color">kn::TextureCache::create (C++ function)</a>
 </li>
         <li><a href="reference/texture_cache.html#_CPPv4NK2kn12TextureCache8getCacheEv">kn::TextureCache::getCache (C++ function)</a>
 </li>
@@ -808,13 +819,7 @@
 </li>
         <li><a href="reference/tile_map.html#_CPPv4N2kn7TileMapE">kn::TileMap (C++ class)</a>
 </li>
-        <li><a href="reference/tile_map.html#_CPPv4N2kn7TileMap7drawAllEv">kn::TileMap::drawAll (C++ function)</a>
-</li>
-        <li><a href="reference/tile_map.html#_CPPv4N2kn7TileMap11drawObjectsEv">kn::TileMap::drawObjects (C++ function)</a>
-</li>
-        <li><a href="reference/tile_map.html#_CPPv4N2kn7TileMap9drawTilesEv">kn::TileMap::drawTiles (C++ function)</a>
-</li>
-        <li><a href="reference/tile_map.html#_CPPv4NK2kn7TileMap10getObjectsEv">kn::TileMap::getObjects (C++ function)</a>
+        <li><a href="reference/tile_map.html#_CPPv4N2kn7TileMap4drawEv">kn::TileMap::draw (C++ function)</a>
 </li>
         <li><a href="reference/tile_map.html#_CPPv4N2kn7TileMap7TileMapER12TextureCacheRKNSt6stringE">kn::TileMap::TileMap (C++ function)</a>
 </li>

@@ -10,8 +10,6 @@
 #include <SDL_ttf.h>
 
 #include "Constants.hpp"
-#include "Globals.hpp"
-#include "Math.hpp"
 #include "Texture.hpp"
 
 namespace kn

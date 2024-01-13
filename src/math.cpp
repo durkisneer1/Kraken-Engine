@@ -51,21 +51,13 @@ bool Vec2::operator!=(const Vec2& other) const { return !(*this == other); }
 
 Vec2 clampVec(Vec2 vec, const Vec2& min, const Vec2& max)
 {
-    vec.x = clamp(vec.x, min.x, max.x);
-    vec.y = clamp(vec.y, min.y, max.y);
+    vec.x = std::clamp(vec.x, min.x, max.x);
+    vec.y = std::clamp(vec.y, min.y, max.y);
 
     return vec;
 }
 
 Vec2 lerpVec(const Vec2& a, const Vec2& b, float t) { return a + (b - a) * t; }
-
-template <class digit> digit clamp(digit val, digit min, digit max)
-{
-    if (min > max)
-        return val;
-
-    return std::min(max, std::max(min, val));
-}
 
 } // namespace math
 } // namespace kn

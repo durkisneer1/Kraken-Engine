@@ -5,17 +5,18 @@
     <innerfile refid="_constants_8hpp">Constants.hpp</innerfile>
     <innerfile refid="_draw_8hpp">Draw.hpp</innerfile>
     <innerfile refid="_entity_8hpp">Entity.hpp</innerfile>
+    <innerfile refid="_error_logger_8hpp">ErrorLogger.hpp</innerfile>
     <innerfile refid="_font_8hpp">Font.hpp</innerfile>
     <innerfile refid="_globals_8hpp">Globals.hpp</innerfile>
     <innerfile refid="_input_8hpp">Input.hpp</innerfile>
     <innerfile refid="_kraken_engine_8hpp">KrakenEngine.hpp</innerfile>
     <innerfile refid="_math_8hpp">Math.hpp</innerfile>
+    <innerfile refid="_mixer_8hpp">Mixer.hpp</innerfile>
     <innerfile refid="_rect_8hpp">Rect.hpp</innerfile>
     <innerfile refid="_render_window_8hpp">RenderWindow.hpp</innerfile>
     <innerfile refid="_texture_8hpp">Texture.hpp</innerfile>
     <innerfile refid="_texture_cache_8hpp">TextureCache.hpp</innerfile>
     <innerfile refid="_tile_map_8hpp">TileMap.hpp</innerfile>
-    <innerfile refid="_tile_types_8hpp">TileTypes.hpp</innerfile>
     <innerfile refid="_time_8hpp">Time.hpp</innerfile>
     <briefdescription>
     </briefdescription>

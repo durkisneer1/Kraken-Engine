@@ -8,5 +8,4 @@ math
 .. doxygenfunction:: kn::math::clampVec
 
 .. doxygenfunction:: kn::math::lerpVec
-
-.. doxygenfunction:: kn::math::clamp
+    

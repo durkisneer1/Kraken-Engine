@@ -61,7 +61,7 @@ PROJECT_BRIEF          = "The next best SDL2 wrapper engine."
 # pixels and the maximum width should not exceed 200 pixels. Doxygen will copy
 # the logo to the output directory.
 
-PROJECT_LOGO           = "C:/Users/Derrick Martinez/Pictures/zerzym_a_grayscale_silhouette_of_a_kraken_cartoon_icon_079f25c9-633c-4d20-93c3-68e2960dd7d1.png"
+PROJECT_LOGO           = D:/Code/c++/Kraken-Engine/docs/source/_static/kraken_engine_icon.png
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) path
 # into which the generated documentation will be written. If a relative path is

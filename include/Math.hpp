@@ -77,16 +77,5 @@ Vec2 clampVec(Vec2 vec, const Vec2& min, const Vec2& max);
  */
 Vec2 lerpVec(const Vec2& a, const Vec2& b, float t);
 
-/**
- * @brief Clamp a value.
- *
- * @param val The value to clamp.
- * @param min The minimum value.
- * @param max The maximum value.
- *
- * @return The clamped value.
- */
-template <class digit> digit clamp(digit val, digit min, digit max);
-
 } // namespace math
 } // namespace kn

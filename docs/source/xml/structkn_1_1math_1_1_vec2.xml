@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="13" column="7" bodyfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" bodystart="13" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="13" column="11" bodyfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" bodystart="13" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structkn_1_1math_1_1_vec2_1a88c56cf69b89eac88f960b2b707fd9bc" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="14" column="7" bodyfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" bodystart="14" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="14" column="11" bodyfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" bodystart="14" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="16" column="1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="16" column="5"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1math_1_1_vec2_1ae0e44d611efc084f001b036294da84f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="17" column="1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="17" column="5"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1math_1_1_vec2_1a0db67ff4376145abda270f094247de15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -92,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="18" column="1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="18" column="5"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1math_1_1_vec2_1abbcec81aa0fe7f8a59cf99f483e3e121" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="19" column="1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="19" column="5"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1math_1_1_vec2_1adad010f6748b0710ebf882605382dbbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -136,7 +136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="20" column="1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="20" column="5"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1math_1_1_vec2_1a2ff26209f794ac15a972d2543c4836a7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -154,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="33" column="7"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="33" column="11"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1math_1_1_vec2_1a0b419df55caf4a47b7fc7bb6ed6897bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="38" column="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="38" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1math_1_1_vec2_1a5c355bb58ec1633bf40f3a7d8f809f8a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -200,7 +200,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="47" column="7"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="47" column="11"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1math_1_1_vec2_1ab7fffe8ffa01c3efb1a899f4097f0433" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref></type>
@@ -218,7 +218,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="49" column="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="49" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1math_1_1_vec2_1a62f28b5a432d77a1e8a94b7f5cfdbb35" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref></type>
@@ -236,7 +236,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="50" column="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="50" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1math_1_1_vec2_1a42f6f4a2ebd824928d7994fcb1f621f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref></type>
@@ -254,7 +254,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="51" column="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="51" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1math_1_1_vec2_1a7d0a14b1cfc5c43a8033ea7550fedb3c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref></type>
@@ -272,7 +272,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="52" column="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="52" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1math_1_1_vec2_1a39333b3b1e6c7a53eb9c7591b3161238" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref></type>
@@ -290,7 +290,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="53" column="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="53" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1math_1_1_vec2_1a9ed5cf168206994dbfcea1fd10a8742a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -308,7 +308,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="54" column="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="54" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1math_1_1_vec2_1a42133229f86b9300809233b6d0a1b7cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -326,7 +326,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="55" column="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="55" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -346,7 +346,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="27" column="13"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="27" column="17"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

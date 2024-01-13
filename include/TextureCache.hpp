@@ -44,7 +44,7 @@ class TextureCache final
      * @return The texture pointer.
      */
     [[maybe_unused]] std::shared_ptr<Texture> create(const std::string& name,
-                                                     const math::Vec2& size, SDL_Color color);
+                                                     const math::Vec2& size, Color color);
 
     /**
      * @brief Move an existing texture.

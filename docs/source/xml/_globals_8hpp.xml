@@ -5,7 +5,6 @@
     <includes refid="_math_8hpp" local="yes">Math.hpp</includes>
     <includedby refid="_kraken_engine_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/KrakenEngine.hpp</includedby>
     <includedby refid="_rect_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/Rect.hpp</includedby>
-    <includedby refid="_render_window_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp</includedby>
     <incdepgraph>
       <node id="1">
         <label>D:/Code/c++/Kraken-Engine/include/Globals.hpp</label>
@@ -45,8 +44,6 @@
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -88,8 +85,6 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
       </node>
       <node id="10">
         <label>D:/Code/c++/Kraken-Engine/include/TextureCache.hpp</label>
@@ -103,14 +98,6 @@
         <label>D:/Code/c++/Kraken-Engine/include/TileMap.hpp</label>
         <link refid="_tile_map_8hpp"/>
         <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="11">
-        <label>D:/Code/c++/Kraken-Engine/include/TileTypes.hpp</label>
-        <link refid="_tile_types_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -131,7 +118,7 @@
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1ac1be3061d1c6178d71ebcbc1961e651a" kindref="member">GRAVITY</ref>;</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>kn</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="D:/Code/c++/Kraken-Engine/include/Globals.hpp"/>
   </compounddef>

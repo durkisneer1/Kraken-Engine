@@ -12,31 +12,37 @@
     <member refid="classkn_1_1time_1_1_clock_1a6d4652b18060b534cad6dedf9f021c56" kind="function"><name>tick</name></member>
   </compound>
   <compound refid="classkn_1_1_entity" kind="class"><name>kn::Entity</name>
-    <member refid="classkn_1_1_entity_1ad1725984ba77ae67c1db524c83e6da0a" kind="variable"><name>window</name></member>
-    <member refid="classkn_1_1_entity_1af6109be4fbfc369f7c1f1f38f38b84a1" kind="variable"><name>texture</name></member>
-    <member refid="classkn_1_1_entity_1ad0c09ff24133b85f7120efc85827f08f" kind="variable"><name>onGround</name></member>
-    <member refid="classkn_1_1_entity_1a976ef6a43e451094c526013c5c6d87d2" kind="variable"><name>onCeiling</name></member>
     <member refid="classkn_1_1_entity_1a6f690f1e6e8a1d1887a017bee54aac46" kind="variable"><name>crop</name></member>
     <member refid="classkn_1_1_entity_1aca3c6b0924ad57ca9aa7816021b6e120" kind="variable"><name>rect</name></member>
     <member refid="classkn_1_1_entity_1a9c6a28eba8f8340c16b49c1b8ec64462" kind="variable"><name>position</name></member>
     <member refid="classkn_1_1_entity_1ad25589b0534f80990123989cecaca4ec" kind="variable"><name>direction</name></member>
     <member refid="classkn_1_1_entity_1a6644aaa615968606093840ae8dceeb85" kind="variable"><name>velocity</name></member>
-    <member refid="classkn_1_1_entity_1a03660630f087052ffe629c2a5ef81987" kind="function"><name>moveAndCollide</name></member>
+    <member refid="classkn_1_1_entity_1ad1725984ba77ae67c1db524c83e6da0a" kind="variable"><name>window</name></member>
+    <member refid="classkn_1_1_entity_1af6109be4fbfc369f7c1f1f38f38b84a1" kind="variable"><name>texture</name></member>
+    <member refid="classkn_1_1_entity_1ad0c09ff24133b85f7120efc85827f08f" kind="variable"><name>onGround</name></member>
+    <member refid="classkn_1_1_entity_1a976ef6a43e451094c526013c5c6d87d2" kind="variable"><name>onCeiling</name></member>
     <member refid="classkn_1_1_entity_1a399022356d952d4ce651bc63c91d3f5d" kind="function"><name>Entity</name></member>
     <member refid="classkn_1_1_entity_1af9efefed7c88b675f000739072cdeb5a" kind="function"><name>~Entity</name></member>
     <member refid="classkn_1_1_entity_1a88fa93e9e9cad9336d80e10b36199acf" kind="function"><name>getTexture</name></member>
+    <member refid="classkn_1_1_entity_1a03660630f087052ffe629c2a5ef81987" kind="function"><name>moveAndCollide</name></member>
+  </compound>
+  <compound refid="classkn_1_1_error_logger" kind="class"><name>kn::ErrorLogger</name>
+    <member refid="classkn_1_1_error_logger_1a5f7d66d8b27a0a655455c64ae0711d2e" kind="variable"><name>m_filename</name></member>
+    <member refid="classkn_1_1_error_logger_1abc8515d943e8becf326ae0115a62b336" kind="variable"><name>m_file</name></member>
+    <member refid="classkn_1_1_error_logger_1a121348660efa43533db76a03851ebaca" kind="variable"><name>m_canWriteToFile</name></member>
+    <member refid="classkn_1_1_error_logger_1aff06aabf89ce766264775c58e2ef5c06" kind="function"><name>getInstance</name></member>
+    <member refid="classkn_1_1_error_logger_1a9fc940f085f9c26dc77b0895b6e7328d" kind="function"><name>setConsoleOnly</name></member>
+    <member refid="classkn_1_1_error_logger_1a358deef20ddadbfe2d2f7bae7fc63126" kind="function"><name>log</name></member>
+    <member refid="classkn_1_1_error_logger_1a6a8ac7be4777c9615999be4a2f1a1460" kind="function"><name>ErrorLogger</name></member>
+    <member refid="classkn_1_1_error_logger_1ac071973dd70429a14feff5d35aa65b95" kind="function"><name>~ErrorLogger</name></member>
+    <member refid="classkn_1_1_error_logger_1a752a413466b17bf29b3e27a815b851b8" kind="function"><name>ErrorLogger</name></member>
+    <member refid="classkn_1_1_error_logger_1a641baf058f5586a129aec4d28d6a9ca5" kind="function"><name>operator=</name></member>
   </compound>
   <compound refid="classkn_1_1_font" kind="class"><name>kn::Font</name>
     <member refid="classkn_1_1_font_1a9cfe3d2d2f81f1f3cae6524240bb418e" kind="variable"><name>font</name></member>
     <member refid="classkn_1_1_font_1a8fe856a038876c396e1a85045bcf1381" kind="function"><name>Font</name></member>
     <member refid="classkn_1_1_font_1a688854abdf5091614a6b372105480951" kind="function"><name>~Font</name></member>
-    <member refid="classkn_1_1_font_1a68577f815a17a8bc8a7c4ed3a891ab29" kind="function"><name>render</name></member>
-  </compound>
-  <compound refid="structkn_1_1_object" kind="struct"><name>kn::Object</name>
-    <member refid="structkn_1_1_object_1a5b92582712f27acced7d23d68758411a" kind="variable"><name>name</name></member>
-    <member refid="structkn_1_1_object_1a8a96862d3a8f909b98080a407f77fdc7" kind="variable"><name>type</name></member>
-    <member refid="structkn_1_1_object_1a94292b94493c89e2eda8ae6e57d2f753" kind="function"><name>Object</name></member>
-    <member refid="structkn_1_1_object_1ad14e369470ca9a6773a6928a573c1dd4" kind="function"><name>~Object</name></member>
+    <member refid="classkn_1_1_font_1a9f3901d64d9bf44e3918910fc81aa6d8" kind="function"><name>render</name></member>
   </compound>
   <compound refid="structkn_1_1_rect" kind="struct"><name>kn::Rect</name>
     <member refid="structkn_1_1_rect_1a4ddd5a18ffab2852926285955f92a8ef" kind="function"><name>Rect</name></member>
@@ -78,7 +84,7 @@
   <compound refid="classkn_1_1_render_window" kind="class"><name>kn::RenderWindow</name>
     <member refid="classkn_1_1_render_window_1a1117133557ac0add84448fc4963ee627" kind="variable"><name>m_renderer</name></member>
     <member refid="classkn_1_1_render_window_1af174d2f6a0fef009255e7b27ad347cd5" kind="variable"><name>m_window</name></member>
-    <member refid="classkn_1_1_render_window_1a7d4c099a91f79a02d56d8ce0c6419010" kind="variable"><name>m_event</name></member>
+    <member refid="classkn_1_1_render_window_1a82e4a97c56f45ce454e629c9b86e0316" kind="variable"><name>m_event</name></member>
     <member refid="classkn_1_1_render_window_1a19158c9bbfc7629788e81b9b4aa69b64" kind="variable"><name>m_events</name></member>
     <member refid="classkn_1_1_render_window_1adcad93cc1e1c336afff133667bdbcb2c" kind="function"><name>getInstance</name></member>
     <member refid="classkn_1_1_render_window_1a04888f5d385499db342f75021fa6beb0" kind="function"><name>getScale</name></member>
@@ -90,7 +96,7 @@
     <member refid="classkn_1_1_render_window_1aa41e48a864ad17ead2c071963ca584fa" kind="function"><name>blitEx</name></member>
     <member refid="classkn_1_1_render_window_1a748a1d4865fb6042eeb71ce35213fca5" kind="function"><name>blitEx</name></member>
     <member refid="classkn_1_1_render_window_1a8fade150c1e4b23c46a44e8df4367969" kind="function"><name>getRenderer</name></member>
-    <member refid="classkn_1_1_render_window_1ab6fe3057df99ba603aa118958a69918c" kind="function"><name>getEvents</name></member>
+    <member refid="classkn_1_1_render_window_1ae5fdc1a4d34449a89e3fe3c10ea39c10" kind="function"><name>getEvents</name></member>
     <member refid="classkn_1_1_render_window_1a08e59168fc273ef5c55e74c21c7b93b7" kind="function"><name>getFullscreen</name></member>
     <member refid="classkn_1_1_render_window_1afe261879b8ff7554723757fc320c99a2" kind="function"><name>setTitle</name></member>
     <member refid="classkn_1_1_render_window_1a64f5d5c9dba806a63815b2521b396adb" kind="function"><name>setFullscreen</name></member>
@@ -98,6 +104,15 @@
     <member refid="classkn_1_1_render_window_1a5ed9d63ab84ffa51793e1e788c867233" kind="function"><name>RenderWindow</name></member>
     <member refid="classkn_1_1_render_window_1a0e5af334903645c870c713f53b754823" kind="function"><name>~RenderWindow</name></member>
     <member refid="classkn_1_1_render_window_1a6438f39a2be6013f5c22eaf8df5dda48" kind="function"><name>operator=</name></member>
+  </compound>
+  <compound refid="classkn_1_1mixer_1_1_sound" kind="class"><name>kn::mixer::Sound</name>
+    <member refid="classkn_1_1mixer_1_1_sound_1af2948e0b28a842c0e5063fe695bd1409" kind="variable"><name>sound</name></member>
+    <member refid="classkn_1_1mixer_1_1_sound_1ad96d5f60a54485a1775347b56e9a14a5" kind="variable"><name>volume</name></member>
+    <member refid="classkn_1_1mixer_1_1_sound_1a42299fa9b02c6757c1e94488c4ea98c0" kind="function"><name>Sound</name></member>
+    <member refid="classkn_1_1mixer_1_1_sound_1a51a908b3be94bddd9600a745f2c46235" kind="function"><name>~Sound</name></member>
+    <member refid="classkn_1_1mixer_1_1_sound_1ada99d21fb9d538cd6d731573cc0d6ea7" kind="function"><name>play</name></member>
+    <member refid="classkn_1_1mixer_1_1_sound_1adf521556b924f9adabdfc56f94c7563c" kind="function"><name>setVolume</name></member>
+    <member refid="classkn_1_1mixer_1_1_sound_1a0b68437956ff10fbdebc20304df56e6f" kind="function"><name>unload</name></member>
   </compound>
   <compound refid="classkn_1_1_texture" kind="class"><name>kn::Texture</name>
     <member refid="classkn_1_1_texture_1a49fc0aa588ce35fbc29bff876e6b4479" kind="variable"><name>texture</name></member>
@@ -118,7 +133,7 @@
     <member refid="classkn_1_1_texture_cache_1a30578a18426ef3626d2ebff18b775d0f" kind="function"><name>TextureCache</name></member>
     <member refid="classkn_1_1_texture_cache_1adf8c16a1cde822c3598404335f41e8b9" kind="function"><name>~TextureCache</name></member>
     <member refid="classkn_1_1_texture_cache_1a424624eee8b1e356b12df8f06998f35f" kind="function"><name>load</name></member>
-    <member refid="classkn_1_1_texture_cache_1ac0506c33fe28a0f85085c20b68b4a713" kind="function"><name>create</name></member>
+    <member refid="classkn_1_1_texture_cache_1a65f40584e35acce97c5919fe1e53501a" kind="function"><name>create</name></member>
     <member refid="classkn_1_1_texture_cache_1ac2cc4f423bac33ad8c2865301be31c04" kind="function"><name>move</name></member>
     <member refid="classkn_1_1_texture_cache_1ac5a50795a0cde01f052166e477d5099e" kind="function"><name>getCache</name></member>
     <member refid="classkn_1_1_texture_cache_1ac4c9efdc51bc5407a1422c970d5907d4" kind="function"><name>unload</name></member>
@@ -129,21 +144,15 @@
     <member refid="structkn_1_1_tile_1a8e7d9dbfe6a90692c70b5dbd35eb8f01" kind="variable"><name>texture</name></member>
     <member refid="structkn_1_1_tile_1a65ccf5af9c9b8459015fcb3caa45e9dc" kind="variable"><name>crop</name></member>
     <member refid="structkn_1_1_tile_1abe91be0f6c7a3943b5927bf6f4995f66" kind="variable"><name>rect</name></member>
-    <member refid="structkn_1_1_tile_1a1ebf237bcfc10d856c978b82adf54467" kind="function"><name>Tile</name></member>
-    <member refid="structkn_1_1_tile_1a075c94c72cf25b396a31f4841fac4a69" kind="function"><name>~Tile</name></member>
   </compound>
   <compound refid="classkn_1_1_tile_map" kind="class"><name>kn::TileMap</name>
     <member refid="classkn_1_1_tile_map_1a29a34f6749a6b31a8561e9c5112964db" kind="variable"><name>window</name></member>
-    <member refid="classkn_1_1_tile_map_1af0b8d6ff9b53c3477ace43588791889c" kind="variable"><name>m_map</name></member>
+    <member refid="classkn_1_1_tile_map_1a51ba9bb263de217615956a04f1197ef2" kind="variable"><name>map</name></member>
     <member refid="classkn_1_1_tile_map_1a51eefec828511d1c09dfcd618f7d1e06" kind="variable"><name>tileVec</name></member>
-    <member refid="classkn_1_1_tile_map_1ac58d80f3eaddc20a11506b8fd50c6e7a" kind="variable"><name>objectVec</name></member>
     <member refid="classkn_1_1_tile_map_1abefad7330e18b15f8eee70c624ff6b7b" kind="variable"><name>tileSetMap</name></member>
     <member refid="classkn_1_1_tile_map_1a9f764c6e0e70872a533cbce5767f8e8c" kind="function"><name>TileMap</name></member>
     <member refid="classkn_1_1_tile_map_1ae5fafab74bad33d0a854f932b6ce39dc" kind="function"><name>~TileMap</name></member>
-    <member refid="classkn_1_1_tile_map_1a972a1369a84ab4dad41089e9d5818c02" kind="function"><name>drawTiles</name></member>
-    <member refid="classkn_1_1_tile_map_1af5095c79b15f2026b86e12fbeb80b4ab" kind="function"><name>drawObjects</name></member>
-    <member refid="classkn_1_1_tile_map_1af4a5c9d1407b541677296612ed140df8" kind="function"><name>drawAll</name></member>
-    <member refid="classkn_1_1_tile_map_1a9c730cee7c34405ad313d0acbe06accf" kind="function"><name>getObjects</name></member>
+    <member refid="classkn_1_1_tile_map_1a7e73d751180a3c49c8ba0361bf94380f" kind="function"><name>draw</name></member>
   </compound>
   <compound refid="structkn_1_1math_1_1_vec2" kind="struct"><name>kn::math::Vec2</name>
     <member refid="structkn_1_1math_1_1_vec2_1ae19685ae4e0b8df8eb3c79af58133f86" kind="variable"><name>x</name></member>
@@ -168,6 +177,7 @@
   <compound refid="namespacekn" kind="namespace"><name>kn</name>
     <member refid="namespacekn_1a438de58efec73267dee3696ce9bc8c7d" kind="typedef"><name>KEYS</name></member>
     <member refid="namespacekn_1af947a748461c782cd90f4d4b7cdbea21" kind="typedef"><name>Event</name></member>
+    <member refid="namespacekn_1a91eb5db82680dedc10733f04def8dd2f" kind="typedef"><name>Color</name></member>
     <member refid="namespacekn_1ae722a8550cc1db8f08796eef82faace0" kind="variable"><name>SC_0</name></member>
     <member refid="namespacekn_1a0ce969d5512889b793e3a1f35056edb4" kind="variable"><name>SC_1</name></member>
     <member refid="namespacekn_1aa93fd3394f6d146651ff274805f970e3" kind="variable"><name>SC_2</name></member>
@@ -380,18 +390,19 @@
     <member refid="namespacekn_1ac1be3061d1c6178d71ebcbc1961e651a" kind="variable"><name>GRAVITY</name></member>
   </compound>
   <compound refid="namespacekn_1_1draw" kind="namespace"><name>kn::draw</name>
-    <member refid="namespacekn_1_1draw_1a8285fbd4645119d7eea609454a0857e0" kind="function"><name>rect</name></member>
+    <member refid="namespacekn_1_1draw_1a2e5b2a7665a470cf5b9aa110639e004b" kind="function"><name>rect</name></member>
   </compound>
   <compound refid="namespacekn_1_1input" kind="namespace"><name>kn::input</name>
     <member refid="namespacekn_1_1input_1ab94bdc7cf362294b49bad95aaefbc40e" kind="function"><name>getMousePos</name></member>
     <member refid="namespacekn_1_1input_1a56c5538ff782a7797cb2f4c17b96f998" kind="function"><name>getMouseButtonPressed</name></member>
     <member refid="namespacekn_1_1input_1a07334d96762236043c84d75f3504d480" kind="function"><name>getKeysPressed</name></member>
-    <member refid="namespacekn_1_1input_1a8377d83a300ef4ffd6e0ea78839ed6ea" kind="function"><name>getVector</name></member>
+    <member refid="namespacekn_1_1input_1a318cd009ccea529aabb2aca1e60c0af7" kind="function"><name>getVector</name></member>
   </compound>
   <compound refid="namespacekn_1_1math" kind="namespace"><name>kn::math</name>
     <member refid="namespacekn_1_1math_1a8707b7484af546b0e9f57d8d78059a51" kind="function"><name>clampVec</name></member>
     <member refid="namespacekn_1_1math_1a88e50fa7f06deaef4b3fb1f9c26e22a0" kind="function"><name>lerpVec</name></member>
-    <member refid="namespacekn_1_1math_1aced32b7b8f0f6ed33afc45afe9c0221c" kind="function"><name>clamp</name></member>
+  </compound>
+  <compound refid="namespacekn_1_1mixer" kind="namespace"><name>kn::mixer</name>
   </compound>
   <compound refid="namespacekn_1_1time" kind="namespace"><name>kn::time</name>
   </compound>
@@ -400,6 +411,14 @@
   <compound refid="_draw_8hpp" kind="file"><name>Draw.hpp</name>
   </compound>
   <compound refid="_entity_8hpp" kind="file"><name>Entity.hpp</name>
+  </compound>
+  <compound refid="_error_logger_8hpp" kind="file"><name>ErrorLogger.hpp</name>
+    <member refid="_error_logger_8hpp_1a581c80fac2f98f600eb47b621aea9fa0" kind="define"><name>COMMON_ENDING</name></member>
+    <member refid="_error_logger_8hpp_1a670dccd8f2591bf2f2f4732030c3a458" kind="define"><name>TRACE</name></member>
+    <member refid="_error_logger_8hpp_1ab94a24f0a37b3963eb64f201cebf60a9" kind="define"><name>DEBUG</name></member>
+    <member refid="_error_logger_8hpp_1a02450a0cb9e4af683314a1560943350a" kind="define"><name>WARN</name></member>
+    <member refid="_error_logger_8hpp_1ae225ab718bd4f5e2221129f026d3d8f1" kind="define"><name>ERROR</name></member>
+    <member refid="_error_logger_8hpp_1a14ec8c552061330276dfd86f506095a3" kind="define"><name>FATAL</name></member>
   </compound>
   <compound refid="_font_8hpp" kind="file"><name>Font.hpp</name>
   </compound>
@@ -412,6 +431,8 @@
   </compound>
   <compound refid="_math_8hpp" kind="file"><name>Math.hpp</name>
   </compound>
+  <compound refid="_mixer_8hpp" kind="file"><name>Mixer.hpp</name>
+  </compound>
   <compound refid="_rect_8hpp" kind="file"><name>Rect.hpp</name>
   </compound>
   <compound refid="_render_window_8hpp" kind="file"><name>RenderWindow.hpp</name>
@@ -421,8 +442,6 @@
   <compound refid="_texture_cache_8hpp" kind="file"><name>TextureCache.hpp</name>
   </compound>
   <compound refid="_tile_map_8hpp" kind="file"><name>TileMap.hpp</name>
-  </compound>
-  <compound refid="_tile_types_8hpp" kind="file"><name>TileTypes.hpp</name>
   </compound>
   <compound refid="_time_8hpp" kind="file"><name>Time.hpp</name>
   </compound>

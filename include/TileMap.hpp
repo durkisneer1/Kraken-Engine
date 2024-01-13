@@ -9,13 +9,24 @@
 #include "Entity.hpp"
 #include "RenderWindow.hpp"
 #include "TextureCache.hpp"
-#include "TileTypes.hpp"
 
 namespace kn
 {
 
 /**
+ * @brief A tmx layer tile.
+ */
+struct Tile
+{
+    std::shared_ptr<Texture> texture;
+    Rect crop;
+    Rect rect;
+};
+
+/**
  * @brief A class that represents a Tiled map.
+ * 
+ * @warning This class is currently only compatible with orthogonal maps and tile layers (no objects).
  */
 class TileMap final
 {
@@ -30,33 +41,15 @@ class TileMap final
     ~TileMap() = default;
 
     /**
-     * @brief Draw the tile map.
+     * @brief Draw the tile map layers.
      */
-    void drawTiles();
-
-    /**
-     * @brief Draw the objects in the tile map.
-     */
-    void drawObjects();
-
-    /**
-     * @brief Draw the tile map and objects.
-     */
-    void drawAll();
-
-    /**
-     * @brief Get the tile map objects vector.
-     *
-     * @return The tile map objects vector.
-     */
-    const std::vector<Object>& getObjects() const;
+    void draw();
 
   private:
     RenderWindow& window = RenderWindow::getInstance();
-    tmx::Map m_map;
+    tmx::Map map;
 
     std::vector<Tile> tileVec;
-    std::vector<Object> objectVec;
     std::map<int, std::shared_ptr<Texture>> tileSetMap;
 };
 

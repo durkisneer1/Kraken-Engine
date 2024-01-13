@@ -5,6 +5,7 @@
 #include <SDL.h>
 
 #include "Math.hpp"
+#include "Constants.hpp"
 
 namespace kn
 {
@@ -42,10 +43,10 @@ const Uint8* getKeysPressed();
  *
  * @return The vector of the keys pressed.
  */
-math::Vec2 getVector(const std::vector<SDL_Scancode>& left = {},
-                     const std::vector<SDL_Scancode>& right = {},
-                     const std::vector<SDL_Scancode>& up = {},
-                     const std::vector<SDL_Scancode>& down = {});
+math::Vec2 getVector(const std::vector<KEYS>& left = {},
+                     const std::vector<KEYS>& right = {},
+                     const std::vector<KEYS>& up = {},
+                     const std::vector<KEYS>& down = {});
 
 } // namespace input
 } // namespace kn

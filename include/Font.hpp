@@ -3,10 +3,10 @@
 #include <memory>
 #include <string>
 
-#include <SDL.h>
 #include <SDL_ttf.h>
 
 #include "Texture.hpp"
+#include "Constants.hpp"
 
 namespace kn
 {
@@ -40,7 +40,7 @@ class Font final
      *
      * @return The rendered text.
      */
-    std::shared_ptr<Texture> render(const std::string& text, bool antialias, SDL_Color color,
+    std::shared_ptr<Texture> render(const std::string& text, bool antialias, Color color,
                                     int wrapLength = 0);
 
   private:

@@ -34,9 +34,9 @@
         </inbodydescription>
         <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="143" column="16" bodyfile="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" bodystart="143" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classkn_1_1_render_window_1a7d4c099a91f79a02d56d8ce0c6419010" prot="private" static="no" mutable="no">
-        <type>KN_Event</type>
-        <definition>KN_Event kn::RenderWindow::m_event</definition>
+      <memberdef kind="variable" id="classkn_1_1_render_window_1a82e4a97c56f45ce454e629c9b86e0316" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacekn_1af947a748461c782cd90f4d4b7cdbea21" kindref="member">kn::Event</ref></type>
+        <definition>kn::Event kn::RenderWindow::m_event</definition>
         <argsstring></argsstring>
         <name>m_event</name>
         <qualifiedname>kn::RenderWindow::m_event</qualifiedname>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="145" column="14" bodyfile="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" bodystart="145" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="145" column="15" bodyfile="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" bodystart="145" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classkn_1_1_render_window_1a19158c9bbfc7629788e81b9b4aa69b64" prot="private" static="no" mutable="no">
         <type>std::vector&lt; SDL_Event &gt;</type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="31" column="25"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="29" column="25"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_render_window_1a04888f5d385499db342f75021fa6beb0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -160,7 +160,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="38" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="36" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_render_window_1a7d04089325a8080a1f4b7c5cb9e4f12c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -175,7 +175,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="43" column="10" bodyfile="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" bodystart="43" bodyend="43"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="41" column="10" bodyfile="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" bodystart="41" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_render_window_1a42bc368f61f894d86f3061a7b69960db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -228,7 +228,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="52" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="50" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_render_window_1af9cca175a5bb42c51d379d44d9a9bf1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -269,7 +269,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="60" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="58" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_render_window_1aa41e48a864ad17ead2c071963ca584fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -361,7 +361,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="72" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="70" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_render_window_1a748a1d4865fb6042eeb71ce35213fca5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -441,7 +441,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="83" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="82" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_render_window_1a8fade150c1e4b23c46a44e8df4367969" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>SDL_Renderer *</type>
@@ -461,9 +461,9 @@
         </inbodydescription>
         <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="90" column="18" bodyfile="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" bodystart="90" bodyend="90"/>
       </memberdef>
-      <memberdef kind="function" id="classkn_1_1_render_window_1ab6fe3057df99ba603aa118958a69918c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>const std::vector&lt; KN_Event &gt; &amp;</type>
-        <definition>const std::vector&lt; KN_Event &gt; &amp; kn::RenderWindow::getEvents</definition>
+      <memberdef kind="function" id="classkn_1_1_render_window_1ae5fdc1a4d34449a89e3fe3c10ea39c10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::vector&lt; <ref refid="namespacekn_1af947a748461c782cd90f4d4b7cdbea21" kindref="member">kn::Event</ref> &gt; &amp;</type>
+        <definition>const std::vector&lt; kn::Event &gt; &amp; kn::RenderWindow::getEvents</definition>
         <argsstring>()</argsstring>
         <name>getEvents</name>
         <qualifiedname>kn::RenderWindow::getEvents</qualifiedname>
@@ -627,7 +627,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="23" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" bodystart="24" bodyend="147"/>
+    <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" line="21" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp" bodystart="22" bodyend="147"/>
     <listofallmembers>
       <member refid="classkn_1_1_render_window_1a42bc368f61f894d86f3061a7b69960db" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>blit</name></member>
       <member refid="classkn_1_1_render_window_1af9cca175a5bb42c51d379d44d9a9bf1b" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>blit</name></member>
@@ -635,12 +635,12 @@
       <member refid="classkn_1_1_render_window_1a748a1d4865fb6042eeb71ce35213fca5" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>blitEx</name></member>
       <member refid="classkn_1_1_render_window_1adbc6173c883f03ff8bb6cdc98c051dcb" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>cls</name></member>
       <member refid="classkn_1_1_render_window_1a7d04089325a8080a1f4b7c5cb9e4f12c" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>flip</name></member>
-      <member refid="classkn_1_1_render_window_1ab6fe3057df99ba603aa118958a69918c" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>getEvents</name></member>
+      <member refid="classkn_1_1_render_window_1ae5fdc1a4d34449a89e3fe3c10ea39c10" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>getEvents</name></member>
       <member refid="classkn_1_1_render_window_1a08e59168fc273ef5c55e74c21c7b93b7" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>getFullscreen</name></member>
       <member refid="classkn_1_1_render_window_1adcad93cc1e1c336afff133667bdbcb2c" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>getInstance</name></member>
       <member refid="classkn_1_1_render_window_1a8fade150c1e4b23c46a44e8df4367969" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>getRenderer</name></member>
       <member refid="classkn_1_1_render_window_1a04888f5d385499db342f75021fa6beb0" prot="public" virt="non-virtual"><scope>kn::RenderWindow</scope><name>getScale</name></member>
-      <member refid="classkn_1_1_render_window_1a7d4c099a91f79a02d56d8ce0c6419010" prot="private" virt="non-virtual"><scope>kn::RenderWindow</scope><name>m_event</name></member>
+      <member refid="classkn_1_1_render_window_1a82e4a97c56f45ce454e629c9b86e0316" prot="private" virt="non-virtual"><scope>kn::RenderWindow</scope><name>m_event</name></member>
       <member refid="classkn_1_1_render_window_1a19158c9bbfc7629788e81b9b4aa69b64" prot="private" virt="non-virtual"><scope>kn::RenderWindow</scope><name>m_events</name></member>
       <member refid="classkn_1_1_render_window_1a1117133557ac0add84448fc4963ee627" prot="private" virt="non-virtual"><scope>kn::RenderWindow</scope><name>m_renderer</name></member>
       <member refid="classkn_1_1_render_window_1af174d2f6a0fef009255e7b27ad347cd5" prot="private" virt="non-virtual"><scope>kn::RenderWindow</scope><name>m_window</name></member>

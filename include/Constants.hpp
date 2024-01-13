@@ -7,6 +7,7 @@ namespace kn
 
 typedef SDL_Scancode KEYS;
 typedef SDL_Event Event;
+typedef SDL_Color Color;
 
 const SDL_Scancode SC_0 = SDL_SCANCODE_0;
 const SDL_Scancode SC_1 = SDL_SCANCODE_1;

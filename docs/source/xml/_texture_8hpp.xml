@@ -10,7 +10,6 @@
     <includedby refid="_kraken_engine_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/KrakenEngine.hpp</includedby>
     <includedby refid="_render_window_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp</includedby>
     <includedby refid="_texture_cache_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/TextureCache.hpp</includedby>
-    <includedby refid="_tile_types_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/TileTypes.hpp</includedby>
     <incdepgraph>
       <node id="5">
         <label>Globals.hpp</label>
@@ -27,9 +26,9 @@
         <link refid="_rect_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
         <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -88,8 +87,6 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
       </node>
       <node id="7">
         <label>D:/Code/c++/Kraken-Engine/include/TextureCache.hpp</label>
@@ -103,14 +100,6 @@
         <label>D:/Code/c++/Kraken-Engine/include/TileMap.hpp</label>
         <link refid="_tile_map_8hpp"/>
         <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
-        <label>D:/Code/c++/Kraken-Engine/include/TileTypes.hpp</label>
-        <link refid="_tile_types_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -133,8 +122,8 @@
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="14" refid="classkn_1_1_texture" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classkn_1_1_texture" kindref="compound">Texture</ref><sp/>final</highlight></codeline>
 <codeline lineno="15"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="28" refid="classkn_1_1_texture_1a896943e8179dd5befdb949834b04bd64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_texture_1a896943e8179dd5befdb949834b04bd64" kindref="member">Texture</ref>(SDL_Texture<sp/>*<ref refid="classkn_1_1_texture_1a49fc0aa588ce35fbc29bff876e6b4479" kindref="member">texture</ref>);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28" refid="classkn_1_1_texture_1a896943e8179dd5befdb949834b04bd64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_texture_1a896943e8179dd5befdb949834b04bd64" kindref="member">Texture</ref>(SDL_Texture*<sp/><ref refid="classkn_1_1_texture_1a49fc0aa588ce35fbc29bff876e6b4479" kindref="member">texture</ref>);</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
 <codeline lineno="30" refid="classkn_1_1_texture_1ae4785568dda681fa59d113386d9a7d4f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1_texture_1ae4785568dda681fa59d113386d9a7d4f" kindref="member">~Texture</ref>()</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -146,9 +135,9 @@
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
 <codeline lineno="48" refid="classkn_1_1_texture_1aaba7a220422a6668b367cf389ac4ef8f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref><sp/><ref refid="classkn_1_1_texture_1aaba7a220422a6668b367cf389ac4ef8f" kindref="member">getRect</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57" refid="classkn_1_1_texture_1ad5357fc2ee9cfd5493dfa3011c53ae90" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Texture<sp/>*<ref refid="classkn_1_1_texture_1ad5357fc2ee9cfd5493dfa3011c53ae90" kindref="member">getSDLTexture</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57" refid="classkn_1_1_texture_1ad5357fc2ee9cfd5493dfa3011c53ae90" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Texture*<sp/><ref refid="classkn_1_1_texture_1ad5357fc2ee9cfd5493dfa3011c53ae90" kindref="member">getSDLTexture</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64" refid="classkn_1_1_texture_1a4cca93b84d6c9ab81da1b6c0d49538b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_texture_1a4cca93b84d6c9ab81da1b6c0d49538b9" kindref="member">setSize</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref><sp/>&amp;size);</highlight></codeline>
+<codeline lineno="64" refid="classkn_1_1_texture_1a4cca93b84d6c9ab81da1b6c0d49538b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_texture_1a4cca93b84d6c9ab81da1b6c0d49538b9" kindref="member">setSize</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref>&amp;<sp/>size);</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
 <codeline lineno="71" refid="classkn_1_1_texture_1adfd084306118f21108cafc82a5827622" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_texture_1adfd084306118f21108cafc82a5827622" kindref="member">scaleBy</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>factor);</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight></codeline>
@@ -156,14 +145,14 @@
 <codeline lineno="79"><highlight class="normal"></highlight></codeline>
 <codeline lineno="85" refid="classkn_1_1_texture_1a558c7e7566f3e2d3c11346cc8179771a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_texture_1a558c7e7566f3e2d3c11346cc8179771a" kindref="member">fitHeight</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="88" refid="classkn_1_1_texture_1a49fc0aa588ce35fbc29bff876e6b4479" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Texture<sp/>*<ref refid="classkn_1_1_texture_1a49fc0aa588ce35fbc29bff876e6b4479" kindref="member">texture</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="88" refid="classkn_1_1_texture_1a49fc0aa588ce35fbc29bff876e6b4479" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Texture*<sp/><ref refid="classkn_1_1_texture_1a49fc0aa588ce35fbc29bff876e6b4479" kindref="member">texture</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="89" refid="classkn_1_1_texture_1adab188c37844140c770355bf866e78d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref><sp/><ref refid="classkn_1_1_texture_1adab188c37844140c770355bf866e78d6" kindref="member">rect</ref><sp/>=<sp/>{};</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"></highlight></codeline>
 <codeline lineno="91" refid="classkn_1_1_texture_1a9aaf1984bf48c920410c57eddb2c7365" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_texture_1a9aaf1984bf48c920410c57eddb2c7365" kindref="member">query</ref>();</highlight></codeline>
 <codeline lineno="92"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>kn</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp"/>
   </compounddef>

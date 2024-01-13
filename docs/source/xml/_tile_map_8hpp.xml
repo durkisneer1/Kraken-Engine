@@ -3,13 +3,12 @@
   <compounddef id="_tile_map_8hpp" kind="file" language="C++">
     <compoundname>TileMap.hpp</compoundname>
     <includes local="no">memory</includes>
-    <includes local="no">vector</includes>
     <includes local="no">string</includes>
+    <includes local="no">vector</includes>
     <includes local="yes">tmxlite/Map.hpp</includes>
-    <includes refid="_render_window_8hpp" local="yes">RenderWindow.hpp</includes>
-    <includes refid="_tile_types_8hpp" local="yes">TileTypes.hpp</includes>
-    <includes refid="_texture_cache_8hpp" local="yes">TextureCache.hpp</includes>
     <includes refid="_entity_8hpp" local="yes">Entity.hpp</includes>
+    <includes refid="_render_window_8hpp" local="yes">RenderWindow.hpp</includes>
+    <includes refid="_texture_cache_8hpp" local="yes">TextureCache.hpp</includes>
     <includedby refid="_kraken_engine_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/KrakenEngine.hpp</includedby>
     <incdepgraph>
       <node id="15">
@@ -18,49 +17,9 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="19">
+      <node id="6">
         <label>Entity.hpp</label>
         <link refid="_entity_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="14">
-        <label>Globals.hpp</label>
-        <link refid="_globals_8hpp"/>
-        <childnode refid="12" relation="include">
-        </childnode>
-      </node>
-      <node id="12">
-        <label>Math.hpp</label>
-        <link refid="_math_8hpp"/>
-      </node>
-      <node id="13">
-        <label>Rect.hpp</label>
-        <link refid="_rect_8hpp"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>RenderWindow.hpp</label>
-        <link refid="_render_window_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -71,25 +30,61 @@
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
         <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+      </node>
+      <node id="10">
+        <label>Globals.hpp</label>
+        <link refid="_globals_8hpp"/>
+        <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+      </node>
+      <node id="8">
+        <label>Math.hpp</label>
+        <link refid="_math_8hpp"/>
+      </node>
+      <node id="9">
+        <label>Rect.hpp</label>
+        <link refid="_rect_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="11">
-        <label>Texture.hpp</label>
-        <link refid="_texture_8hpp"/>
+        <label>RenderWindow.hpp</label>
+        <link refid="_render_window_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Texture.hpp</label>
+        <link refid="_texture_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="17">
@@ -99,9 +94,9 @@
         </childnode>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -117,33 +112,21 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="19" relation="include">
-        </childnode>
-      </node>
-      <node id="16">
-        <label>TileTypes.hpp</label>
-        <link refid="_tile_types_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
         </childnode>
       </node>
       <node id="7">
         <label>SDL.h</label>
       </node>
-      <node id="8">
+      <node id="12">
         <label>SDL_image.h</label>
       </node>
-      <node id="10">
+      <node id="13">
         <label>SDL_mixer.h</label>
       </node>
-      <node id="9">
+      <node id="14">
         <label>SDL_ttf.h</label>
       </node>
       <node id="18">
@@ -152,13 +135,13 @@
       <node id="2">
         <label>memory</label>
       </node>
-      <node id="4">
+      <node id="3">
         <label>string</label>
       </node>
       <node id="5">
         <label>tmxlite/Map.hpp</label>
       </node>
-      <node id="3">
+      <node id="4">
         <label>vector</label>
       </node>
     </incdepgraph>
@@ -174,6 +157,7 @@
         </childnode>
       </node>
     </invincdepgraph>
+    <innerclass refid="structkn_1_1_tile" prot="public">kn::Tile</innerclass>
     <innerclass refid="classkn_1_1_tile_map" prot="public">kn::TileMap</innerclass>
     <innernamespace refid="namespacekn">kn</innernamespace>
     <briefdescription>
@@ -184,43 +168,42 @@
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;tmxlite/Map.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_render_window_8hpp" kindref="compound">RenderWindow.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_tile_types_8hpp" kindref="compound">TileTypes.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_entity_8hpp" kindref="compound">Entity.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_render_window_8hpp" kindref="compound">RenderWindow.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_texture_cache_8hpp" kindref="compound">TextureCache.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_entity_8hpp" kindref="compound">Entity.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacekn" kindref="compound">kn</ref></highlight></codeline>
-<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20" refid="classkn_1_1_tile_map" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classkn_1_1_tile_map" kindref="compound">TileMap</ref><sp/>final</highlight></codeline>
-<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="29" refid="classkn_1_1_tile_map_1a9f764c6e0e70872a533cbce5767f8e8c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1_tile_map_1a9f764c6e0e70872a533cbce5767f8e8c" kindref="member">TileMap</ref>(<ref refid="classkn_1_1_texture_cache" kindref="compound">TextureCache</ref><sp/>&amp;textureCache,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;tmxPath);</highlight></codeline>
-<codeline lineno="30" refid="classkn_1_1_tile_map_1ae5fafab74bad33d0a854f932b6ce39dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1_tile_map_1ae5fafab74bad33d0a854f932b6ce39dc" kindref="member">~TileMap</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35" refid="classkn_1_1_tile_map_1a972a1369a84ab4dad41089e9d5818c02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_tile_map_1a972a1369a84ab4dad41089e9d5818c02" kindref="member">drawTiles</ref>();</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40" refid="classkn_1_1_tile_map_1af5095c79b15f2026b86e12fbeb80b4ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_tile_map_1af5095c79b15f2026b86e12fbeb80b4ab" kindref="member">drawObjects</ref>();</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45" refid="classkn_1_1_tile_map_1af4a5c9d1407b541677296612ed140df8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_tile_map_1af4a5c9d1407b541677296612ed140df8" kindref="member">drawAll</ref>();</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52" refid="classkn_1_1_tile_map_1a9c730cee7c34405ad313d0acbe06accf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;Object&gt;<sp/>&amp;<ref refid="classkn_1_1_tile_map_1a9c730cee7c34405ad313d0acbe06accf" kindref="member">getObjects</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="55" refid="classkn_1_1_tile_map_1a29a34f6749a6b31a8561e9c5112964db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref><sp/>&amp;<ref refid="classkn_1_1_tile_map_1a29a34f6749a6b31a8561e9c5112964db" kindref="member">window</ref><sp/>=<sp/><ref refid="classkn_1_1_render_window_1adcad93cc1e1c336afff133667bdbcb2c" kindref="member">RenderWindow::getInstance</ref>();</highlight></codeline>
-<codeline lineno="56" refid="classkn_1_1_tile_map_1af0b8d6ff9b53c3477ace43588791889c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>tmx::Map<sp/><ref refid="classkn_1_1_tile_map_1af0b8d6ff9b53c3477ace43588791889c" kindref="member">m_map</ref>;</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58" refid="classkn_1_1_tile_map_1a51eefec828511d1c09dfcd618f7d1e06" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Tile&gt;<sp/><ref refid="classkn_1_1_tile_map_1a51eefec828511d1c09dfcd618f7d1e06" kindref="member">tileVec</ref>;</highlight></codeline>
-<codeline lineno="59" refid="classkn_1_1_tile_map_1ac58d80f3eaddc20a11506b8fd50c6e7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Object&gt;<sp/><ref refid="classkn_1_1_tile_map_1ac58d80f3eaddc20a11506b8fd50c6e7a" kindref="member">objectVec</ref>;</highlight></codeline>
-<codeline lineno="60" refid="classkn_1_1_tile_map_1abefad7330e18b15f8eee70c624ff6b7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;int,<sp/>std::shared_ptr&lt;Texture&gt;&gt;<sp/><ref refid="classkn_1_1_tile_map_1abefad7330e18b15f8eee70c624ff6b7b" kindref="member">tileSetMap</ref>;</highlight></codeline>
-<codeline lineno="61"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacekn" kindref="compound">kn</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="structkn_1_1_tile" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structkn_1_1_tile" kindref="compound">Tile</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21" refid="structkn_1_1_tile_1a8e7d9dbfe6a90692c70b5dbd35eb8f01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;Texture&gt;<sp/><ref refid="structkn_1_1_tile_1a8e7d9dbfe6a90692c70b5dbd35eb8f01" kindref="member">texture</ref>;</highlight></codeline>
+<codeline lineno="22" refid="structkn_1_1_tile_1a65ccf5af9c9b8459015fcb3caa45e9dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref><sp/><ref refid="structkn_1_1_tile_1a65ccf5af9c9b8459015fcb3caa45e9dc" kindref="member">crop</ref>;</highlight></codeline>
+<codeline lineno="23" refid="structkn_1_1_tile_1abe91be0f6c7a3943b5927bf6f4995f66" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref><sp/><ref refid="structkn_1_1_tile_1abe91be0f6c7a3943b5927bf6f4995f66" kindref="member">rect</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classkn_1_1_tile_map" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classkn_1_1_tile_map" kindref="compound">TileMap</ref><sp/>final</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40" refid="classkn_1_1_tile_map_1a9f764c6e0e70872a533cbce5767f8e8c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1_tile_map_1a9f764c6e0e70872a533cbce5767f8e8c" kindref="member">TileMap</ref>(<ref refid="classkn_1_1_texture_cache" kindref="compound">TextureCache</ref>&amp;<sp/><ref refid="classkn_1_1_tile_map_1a51ba9bb263de217615956a04f1197ef2" kindref="member">textureCache</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="classkn_1_1_tile_map_1a51ba9bb263de217615956a04f1197ef2" kindref="member">tmxPath</ref>);</highlight></codeline>
+<codeline lineno="41" refid="classkn_1_1_tile_map_1ae5fafab74bad33d0a854f932b6ce39dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1_tile_map_1ae5fafab74bad33d0a854f932b6ce39dc" kindref="member">~TileMap</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classkn_1_1_tile_map_1a7e73d751180a3c49c8ba0361bf94380f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_tile_map_1a7e73d751180a3c49c8ba0361bf94380f" kindref="member">draw</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="49" refid="classkn_1_1_tile_map_1a29a34f6749a6b31a8561e9c5112964db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref>&amp;<sp/><ref refid="classkn_1_1_tile_map_1a29a34f6749a6b31a8561e9c5112964db" kindref="member">window</ref><sp/>=<sp/><ref refid="classkn_1_1_render_window_1adcad93cc1e1c336afff133667bdbcb2c" kindref="member">RenderWindow::getInstance</ref>();</highlight></codeline>
+<codeline lineno="50" refid="classkn_1_1_tile_map_1a51ba9bb263de217615956a04f1197ef2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>tmx::Map<sp/><ref refid="classkn_1_1_tile_map_1a51ba9bb263de217615956a04f1197ef2" kindref="member">map</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="classkn_1_1_tile_map_1a51eefec828511d1c09dfcd618f7d1e06" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Tile&gt;<sp/><ref refid="classkn_1_1_tile_map_1a51eefec828511d1c09dfcd618f7d1e06" kindref="member">tileVec</ref>;</highlight></codeline>
+<codeline lineno="53" refid="classkn_1_1_tile_map_1abefad7330e18b15f8eee70c624ff6b7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;int,<sp/>std::shared_ptr&lt;Texture&gt;&gt;<sp/><ref refid="classkn_1_1_tile_map_1abefad7330e18b15f8eee70c624ff6b7b" kindref="member">tileSetMap</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>kn</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="D:/Code/c++/Kraken-Engine/include/TileMap.hpp"/>
   </compounddef>

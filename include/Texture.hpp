@@ -9,7 +9,7 @@ namespace kn
 {
 
 /**
- * @brief A texture container.
+ * @brief A texture object.
  */
 class Texture final
 {

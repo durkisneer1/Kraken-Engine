@@ -16,4 +16,5 @@ API Reference
     draw.rst
     input.rst
     math.rst
+    mixer.rst
     time.rst

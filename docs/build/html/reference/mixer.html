@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Tutorials" href="../tutorials/index.html" /><link rel="prev" title="Installation" href="../installation.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="time" href="time.html" /><link rel="prev" title="math" href="math.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
-        <title>Getting Started - Kraken Engine</title>
+        <title>mixer - Kraken Engine</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
@@ -159,22 +159,22 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../reference/index.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../reference/entity.html">Entity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/font.html">Font</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/rect.html">Rect</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/render_window.html">RenderWindow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/texture_cache.html">TextureCache</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/texture.html">Texture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/tile_map.html">TileMap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/constants.html">constants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/draw.html">draw</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/input.html">input</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/math.html">math</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/mixer.html">mixer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/time.html">time</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="entity.html">Entity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rect.html">Rect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="render_window.html">RenderWindow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texture_cache.html">TextureCache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texture.html">Texture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tile_map.html">TileMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constants.html">constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="draw.html">draw</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="math.html">math</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">mixer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time.html">time</a></li>
 </ul>
 </li>
 </ul>
@@ -211,45 +211,64 @@
           </label>
         </div>
         <article role="main">
-          <section id="getting-started">
-<h1>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h1>
-<section id="hello-world">
-<h2>Hello World<a class="headerlink" href="#hello-world" title="Link to this heading">#</a></h2>
-<p>After following the <a class="reference internal" href="../installation.html"><span class="doc">Installation</span></a> guide, you are ready for your first Kraken Engine program.</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;KrakenEngine.hpp&gt;</span>
-<span class="linenos"> 2</span>
-<span class="linenos"> 3</span><span class="k">const</span><span class="w"> </span><span class="n">kn</span><span class="o">::</span><span class="n">math</span><span class="o">::</span><span class="n">Vec2</span><span class="w"> </span><span class="n">kn</span><span class="o">::</span><span class="n">SCREEN_SIZE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">800</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">};</span>
-<span class="linenos"> 4</span>
-<span class="linenos"> 5</span>
-<span class="linenos"> 6</span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="linenos"> 7</span><span class="p">{</span>
-<span class="linenos"> 8</span><span class="w">    </span><span class="n">kn</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">&amp;</span><span class="w"> </span><span class="n">window</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kn</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">::</span><span class="n">getInstance</span><span class="p">();</span>
-<span class="linenos"> 9</span><span class="w">    </span><span class="n">window</span><span class="p">.</span><span class="n">setTitle</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">);</span>
-<span class="linenos">10</span><span class="w">    </span><span class="n">kn</span><span class="o">::</span><span class="n">time</span><span class="o">::</span><span class="n">Clock</span><span class="w"> </span><span class="n">clock</span><span class="p">;</span>
-<span class="linenos">11</span>
-<span class="linenos">12</span><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">done</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
-<span class="linenos">13</span><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">done</span><span class="p">)</span>
-<span class="linenos">14</span><span class="w">    </span><span class="p">{</span>
-<span class="linenos">15</span><span class="w">        </span><span class="n">clock</span><span class="p">.</span><span class="n">tick</span><span class="p">();</span>
-<span class="linenos">16</span>
-<span class="linenos">17</span><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">event</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">window</span><span class="p">.</span><span class="n">getEvents</span><span class="p">())</span>
-<span class="linenos">18</span><span class="w">        </span><span class="p">{</span>
-<span class="linenos">19</span><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">KN_QUIT</span><span class="p">)</span><span class="w"> </span><span class="n">done</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="linenos">20</span><span class="w">        </span><span class="p">}</span>
-<span class="linenos">21</span>
-<span class="linenos">22</span><span class="w">        </span><span class="n">window</span><span class="p">.</span><span class="n">cls</span><span class="p">();</span>
-<span class="linenos">23</span><span class="w">        </span><span class="n">window</span><span class="p">.</span><span class="n">flip</span><span class="p">();</span>
-<span class="linenos">24</span><span class="w">    </span><span class="p">}</span>
-<span class="linenos">25</span>
-<span class="linenos">26</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EXIT_SUCCESS</span><span class="p">;</span>
-<span class="linenos">27</span><span class="p">}</span>
-</pre></div>
+          <section id="mixer">
+<h1>mixer<a class="headerlink" href="#mixer" title="Link to this heading">#</a></h1>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn5mixer5SoundE">
+<span id="_CPPv3N2kn5mixer5SoundE"></span><span id="_CPPv2N2kn5mixer5SoundE"></span><span id="kn::mixer::Sound"></span><span class="target" id="classkn_1_1mixer_1_1_sound"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sound</span></span></span><a class="headerlink" href="#_CPPv4N2kn5mixer5SoundE" title="Link to this definition">#</a><br /></dt>
+<dd><p>A sound object. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn5mixer5Sound5SoundERKNSt6stringE">
+<span id="_CPPv3N2kn5mixer5Sound5SoundERKNSt6stringE"></span><span id="_CPPv2N2kn5mixer5Sound5SoundERKNSt6stringE"></span><span id="kn::mixer::Sound::Sound__ssCR"></span><span class="target" id="classkn_1_1mixer_1_1_sound_1a42299fa9b02c6757c1e94488c4ea98c0"></span><span class="sig-name descname"><span class="n"><span class="pre">Sound</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fileDir</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5mixer5Sound5SoundERKNSt6stringE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Create a sound. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fileDir</strong> – The directory of the sound file. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn5mixer5Sound4playEiii">
+<span id="_CPPv3N2kn5mixer5Sound4playEiii"></span><span id="_CPPv2N2kn5mixer5Sound4playEiii"></span><span id="kn::mixer::Sound::play__i.i.i"></span><span class="target" id="classkn_1_1mixer_1_1_sound_1ada99d21fb9d538cd6d731573cc0d6ea7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">play</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">loops</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">maxMs</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fadeMs</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5mixer5Sound4playEiii" title="Link to this definition">#</a><br /></dt>
+<dd><p>Play the sound. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Fade in is currently not working. </p>
 </div>
-<p>This code opens a window and closes it when the user presses the window’s X button.
-It also clears the screen every frame and flips the buffers.
-The <code class="docutils literal notranslate"><span class="pre">clock.tick()</span></code> function returns the time elapsed since the last call to <code class="docutils literal notranslate"><span class="pre">clock.tick()</span></code> in seconds.
-The <code class="docutils literal notranslate"><span class="pre">60</span></code> parameter is the capped frame rate.</p>
-</section>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>loops</strong> – The number of times to loop the sound. </p></li>
+<li><p><strong>maxMs</strong> – The number of milliseconds to play the sound. </p></li>
+<li><p><strong>fadeMs</strong> – The number of milliseconds to fade in.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn5mixer5Sound9setVolumeEf">
+<span id="_CPPv3N2kn5mixer5Sound9setVolumeEf"></span><span id="_CPPv2N2kn5mixer5Sound9setVolumeEf"></span><span id="kn::mixer::Sound::setVolume__float"></span><span class="target" id="classkn_1_1mixer_1_1_sound_1adf521556b924f9adabdfc56f94c7563c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setVolume</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">volume</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5mixer5Sound9setVolumeEf" title="Link to this definition">#</a><br /></dt>
+<dd><p>Set the volume of the sound. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>volume</strong> – The volume to set. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn5mixer5Sound6unloadEv">
+<span id="_CPPv3N2kn5mixer5Sound6unloadEv"></span><span id="_CPPv2N2kn5mixer5Sound6unloadEv"></span><span id="kn::mixer::Sound::unload"></span><span class="target" id="classkn_1_1mixer_1_1_sound_1a0b68437956ff10fbdebc20304df56e6f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">unload</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5mixer5Sound6unloadEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Free the sound from memory. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
 </section>
 
         </article>
@@ -257,23 +276,23 @@ The <code class="docutils literal notranslate"><span class="pre">60</span></code
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../tutorials/index.html">
+          <a class="next-page" href="time.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Tutorials</div>
+                <div class="title">time</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../installation.html">
+          <a class="prev-page" href="math.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Installation</div>
+                <div class="title">math</div>
                 
               </div>
             </a>
@@ -307,8 +326,14 @@ The <code class="docutils literal notranslate"><span class="pre">60</span></code
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Getting Started</a><ul>
-<li><a class="reference internal" href="#hello-world">Hello World</a></li>
+<li><a class="reference internal" href="#">mixer</a><ul>
+<li><a class="reference internal" href="#_CPPv4N2kn5mixer5SoundE"><code class="docutils literal notranslate"><span class="pre">Sound</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N2kn5mixer5Sound5SoundERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">Sound::Sound()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn5mixer5Sound4playEiii"><code class="docutils literal notranslate"><span class="pre">Sound::play()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn5mixer5Sound9setVolumeEf"><code class="docutils literal notranslate"><span class="pre">Sound::setVolume()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn5mixer5Sound6unloadEv"><code class="docutils literal notranslate"><span class="pre">Sound::unload()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

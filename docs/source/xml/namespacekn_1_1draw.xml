@@ -3,10 +3,10 @@
   <compounddef id="namespacekn_1_1draw" kind="namespace" language="C++">
     <compoundname>kn::draw</compoundname>
     <sectiondef kind="func">
-      <memberdef kind="function" id="namespacekn_1_1draw_1a8285fbd4645119d7eea609454a0857e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacekn_1_1draw_1a2e5b2a7665a470cf5b9aa110639e004b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void kn::draw::rect</definition>
-        <argsstring>(Rect &amp;rect, const SDL_Color color, int thickness=0)</argsstring>
+        <argsstring>(Rect &amp;rect, const Color color, int thickness=0)</argsstring>
         <name>rect</name>
         <qualifiedname>kn::draw::rect</qualifiedname>
         <param>
@@ -14,7 +14,7 @@
           <declname>rect</declname>
         </param>
         <param>
-          <type>const SDL_Color</type>
+          <type>const <ref refid="namespacekn_1a91eb5db82680dedc10733f04def8dd2f" kindref="member">Color</ref></type>
           <declname>color</declname>
         </param>
         <param>
@@ -57,13 +57,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Draw.hpp" line="21" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Draw.hpp" declline="21" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Draw.hpp" line="20" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Draw.hpp" declline="20" declcolumn="6"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Code/c++/Kraken-Engine/include/Draw.hpp" line="9" column="1"/>
+    <location file="D:/Code/c++/Kraken-Engine/include/Draw.hpp" line="8" column="1"/>
   </compounddef>
 </doxygen>

@@ -24,7 +24,7 @@ class Entity
      *
      * @param texture The texture of the entity.
      */
-    Entity(std::shared_ptr<Texture> texture);
+    explicit Entity(std::shared_ptr<Texture> texture);
     ~Entity() = default;
 
     /**

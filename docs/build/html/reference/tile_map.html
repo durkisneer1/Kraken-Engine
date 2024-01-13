@@ -173,6 +173,7 @@
 <li class="toctree-l2"><a class="reference internal" href="draw.html">draw</a></li>
 <li class="toctree-l2"><a class="reference internal" href="input.html">input</a></li>
 <li class="toctree-l2"><a class="reference internal" href="math.html">math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mixer.html">mixer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="time.html">time</a></li>
 </ul>
 </li>
@@ -216,6 +217,10 @@
 <dt class="sig sig-object cpp" id="_CPPv4N2kn7TileMapE">
 <span id="_CPPv3N2kn7TileMapE"></span><span id="_CPPv2N2kn7TileMapE"></span><span id="kn::TileMap"></span><span class="target" id="classkn_1_1_tile_map"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TileMap</span></span></span><a class="headerlink" href="#_CPPv4N2kn7TileMapE" title="Link to this definition">#</a><br /></dt>
 <dd><p>A class that represents a Tiled map. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This class is currently only compatible with orthogonal maps and tile layers (no objects). </p>
+</div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
@@ -233,32 +238,9 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2kn7TileMap9drawTilesEv">
-<span id="_CPPv3N2kn7TileMap9drawTilesEv"></span><span id="_CPPv2N2kn7TileMap9drawTilesEv"></span><span id="kn::TileMap::drawTiles"></span><span class="target" id="classkn_1_1_tile_map_1a972a1369a84ab4dad41089e9d5818c02"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">drawTiles</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn7TileMap9drawTilesEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Draw the tile map. </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2kn7TileMap11drawObjectsEv">
-<span id="_CPPv3N2kn7TileMap11drawObjectsEv"></span><span id="_CPPv2N2kn7TileMap11drawObjectsEv"></span><span id="kn::TileMap::drawObjects"></span><span class="target" id="classkn_1_1_tile_map_1af5095c79b15f2026b86e12fbeb80b4ab"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">drawObjects</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn7TileMap11drawObjectsEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Draw the objects in the tile map. </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2kn7TileMap7drawAllEv">
-<span id="_CPPv3N2kn7TileMap7drawAllEv"></span><span id="_CPPv2N2kn7TileMap7drawAllEv"></span><span id="kn::TileMap::drawAll"></span><span class="target" id="classkn_1_1_tile_map_1af4a5c9d1407b541677296612ed140df8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">drawAll</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn7TileMap7drawAllEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Draw the tile map and objects. </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK2kn7TileMap10getObjectsEv">
-<span id="_CPPv3NK2kn7TileMap10getObjectsEv"></span><span id="_CPPv2NK2kn7TileMap10getObjectsEv"></span><span id="kn::TileMap::getObjectsC"></span><span class="target" id="classkn_1_1_tile_map_1a9c730cee7c34405ad313d0acbe06accf"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Object</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getObjects</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2kn7TileMap10getObjectsEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Get the tile map objects vector. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The tile map objects vector. </p>
-</dd>
-</dl>
+<dt class="sig sig-object cpp" id="_CPPv4N2kn7TileMap4drawEv">
+<span id="_CPPv3N2kn7TileMap4drawEv"></span><span id="_CPPv2N2kn7TileMap4drawEv"></span><span id="kn::TileMap::draw"></span><span class="target" id="classkn_1_1_tile_map_1a7e73d751180a3c49c8ba0361bf94380f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">draw</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn7TileMap4drawEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Draw the tile map layers. </p>
 </dd></dl>
 
 </div>
@@ -324,10 +306,7 @@
 <li><a class="reference internal" href="#">TileMap</a><ul>
 <li><a class="reference internal" href="#_CPPv4N2kn7TileMapE"><code class="docutils literal notranslate"><span class="pre">TileMap</span></code></a><ul>
 <li><a class="reference internal" href="#_CPPv4N2kn7TileMap7TileMapER12TextureCacheRKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">TileMap::TileMap()</span></code></a></li>
-<li><a class="reference internal" href="#_CPPv4N2kn7TileMap9drawTilesEv"><code class="docutils literal notranslate"><span class="pre">TileMap::drawTiles()</span></code></a></li>
-<li><a class="reference internal" href="#_CPPv4N2kn7TileMap11drawObjectsEv"><code class="docutils literal notranslate"><span class="pre">TileMap::drawObjects()</span></code></a></li>
-<li><a class="reference internal" href="#_CPPv4N2kn7TileMap7drawAllEv"><code class="docutils literal notranslate"><span class="pre">TileMap::drawAll()</span></code></a></li>
-<li><a class="reference internal" href="#_CPPv4NK2kn7TileMap10getObjectsEv"><code class="docutils literal notranslate"><span class="pre">TileMap::getObjects()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn7TileMap4drawEv"><code class="docutils literal notranslate"><span class="pre">TileMap::draw()</span></code></a></li>
 </ul>
 </li>
 </ul>

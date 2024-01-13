@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include "ErrorLogger.hpp"
 #include "RenderWindow.hpp"
 #include "TextureCache.hpp"
@@ -24,7 +22,7 @@ std::shared_ptr<Texture> TextureCache::load(const std::string& name, const std::
 }
 
 std::shared_ptr<Texture> TextureCache::create(const std::string& name, const math::Vec2& size,
-                                              SDL_Color color)
+                                              Color color)
 {
     SDL_Surface* surface = SDL_CreateRGBSurface(0, size.x, size.y, 32, 0, 0, 0, 0);
     if (!surface)
@@ -65,9 +63,7 @@ std::shared_ptr<Texture> TextureCache::getTexture(const std::string& name) const
 {
     auto it = textures.find(name);
     if (it != textures.end())
-    {
         return it->second;
-    }
 
     return nullptr;
 }

@@ -1,5 +1,4 @@
-#ifndef ERRORLOGGER_H
-#define ERRORLOGGER_H
+#pragma once
 
 #include <chrono>
 #include <ctime>
@@ -201,5 +200,3 @@ class ErrorLogger
 #ifdef FILE_ONLY
 kn::ErrorLogger::setConsoleOnly();
 #endif
-
-#endif // ERRORLOGGER_H
