@@ -8,20 +8,20 @@ namespace time
 
 double Clock::tick(int frameRate)
 {
-	if (frameRate < 1)
-		frameRate = 1;
+    if (frameRate < 1)
+        frameRate = 1;
 
-	targetFrameTime = 1000.0 / frameRate;
-	frameTime = ((SDL_GetPerformanceCounter() / frequency) - (last / frequency)) * 1000.0;
-	if (frameTime < targetFrameTime)
-		SDL_Delay((uint32_t)(targetFrameTime - frameTime));
+    targetFrameTime = 1000.0 / frameRate;
+    frameTime = ((SDL_GetPerformanceCounter() / frequency) - (last / frequency)) * 1000.0;
+    if (frameTime < targetFrameTime)
+        SDL_Delay((uint32_t)(targetFrameTime - frameTime));
 
-	now = SDL_GetPerformanceCounter();
-	deltaTime = (now / frequency) - (last / frequency);
-	last = now;
+    now = SDL_GetPerformanceCounter();
+    deltaTime = (now / frequency) - (last / frequency);
+    last = now;
 
-	return deltaTime;
+    return deltaTime;
 }
 
-}
-}
+} // namespace time
+} // namespace kn

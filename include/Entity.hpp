@@ -5,10 +5,10 @@
 
 #include <SDL.h>
 
-#include "Rect.hpp"
-#include "Texture.hpp"
 #include "Math.hpp"
+#include "Rect.hpp"
 #include "RenderWindow.hpp"
+#include "Texture.hpp"
 
 namespace kn
 {
@@ -18,7 +18,7 @@ namespace kn
  */
 class Entity
 {
-public:
+  public:
     /**
      * @brief Create a entity.
      *
@@ -40,8 +40,8 @@ public:
     math::Vec2 direction;
     math::Vec2 velocity;
 
-protected:
-    RenderWindow &window = RenderWindow::getInstance();
+  protected:
+    RenderWindow& window = RenderWindow::getInstance();
     std::shared_ptr<Texture> texture;
 
     bool onGround = false;
@@ -54,7 +54,7 @@ protected:
      * @param others The other entities to check for collisions with.
      */
     template <typename T>
-    void moveAndCollide(double deltaTime, const std::vector<std::shared_ptr<T>> &others)
+    void moveAndCollide(double deltaTime, const std::vector<std::shared_ptr<T>>& others)
     {
         onGround = false;
         onCeiling = false;
@@ -62,7 +62,7 @@ protected:
         position += (velocity * deltaTime);
         rect.x = position.x - rect.w / 2.0f;
 
-        for (const auto &entity : others)
+        for (const auto& entity : others)
         {
             if (entity.get() != this)
             {
@@ -86,7 +86,7 @@ protected:
         position.y += (velocity.y * deltaTime);
         rect.y = position.y - rect.h / 2.0f;
 
-        for (const auto &entity : others)
+        for (const auto& entity : others)
         {
             if (entity.get() != this)
             {
@@ -111,4 +111,4 @@ protected:
     }
 };
 
-}
+} // namespace kn

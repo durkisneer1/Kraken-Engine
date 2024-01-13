@@ -1,5 +1,5 @@
-#include <iostream>
 #include <algorithm>
+#include <iostream>
 
 #include "tmxlite/TileLayer.hpp"
 
@@ -9,7 +9,7 @@
 namespace kn
 {
 
-TileMap::TileMap(TextureCache &textureCache, const std::string &tmxPath)
+TileMap::TileMap(TextureCache& textureCache, const std::string& tmxPath)
 {
     if (!m_map.load(tmxPath))
     {
@@ -22,30 +22,30 @@ TileMap::TileMap(TextureCache &textureCache, const std::string &tmxPath)
     int tileWidth = m_map.getTileSize().x;
     int tileHeight = m_map.getTileSize().y;
 
-    const auto &tileSets = m_map.getTilesets();
-    for (const auto &set : tileSets)
+    const auto& tileSets = m_map.getTilesets();
+    for (const auto& set : tileSets)
     {
         auto tex = textureCache.load("tileset", set.getImagePath());
         tileSetMap[set.getFirstGID()] = tex; // Binding map texture to its GID key.
         textureCache.unload("tileset");
     }
 
-    const auto &layers = m_map.getLayers();
-    for (const auto &layer : layers)
+    const auto& layers = m_map.getLayers();
+    for (const auto& layer : layers)
     {
         if (layer->getType() == tmx::Layer::Type::Object)
         {
-            const auto &objectLayer = layer->getLayerAs<tmx::ObjectGroup>();
-            const auto &layerObjects = objectLayer.getObjects();
+            const auto& objectLayer = layer->getLayerAs<tmx::ObjectGroup>();
+            const auto& layerObjects = objectLayer.getObjects();
 
-            for (const auto &obj : layerObjects)
+            for (const auto& obj : layerObjects)
             {
                 int currentGID = obj.getTileID();
 
                 int tileSetGID = -1;
-                auto it = std::find_if(
-                    tileSetMap.rbegin(), tileSetMap.rend(), [currentGID](const auto &tileSet)
-                    { return currentGID >= tileSet.first; });
+                auto it = std::find_if(tileSetMap.rbegin(), tileSetMap.rend(),
+                                       [currentGID](const auto& tileSet)
+                                       { return currentGID >= tileSet.first; });
                 if (it != tileSetMap.rend())
                 {
                     tileSetGID = it->first;
@@ -60,19 +60,19 @@ TileMap::TileMap(TextureCache &textureCache, const std::string &tmxPath)
                 int regionY = (currentGID / (tileSetWidth / tileWidth)) * tileHeight;
 
                 objectVec.emplace_back(
-                    Object{
-                        tileSetMap[tileSetGID],
-                        {regionX, regionY, tileWidth, tileHeight},
-                        {obj.getPosition().x, obj.getPosition().y - obj.getAABB().height, (float)tileWidth, (float)tileHeight},
-                        obj.getName(),
-                        obj.getType()});
+                    Object{tileSetMap[tileSetGID],
+                           {regionX, regionY, tileWidth, tileHeight},
+                           {obj.getPosition().x, obj.getPosition().y - obj.getAABB().height,
+                            (float)tileWidth, (float)tileHeight},
+                           obj.getName(),
+                           obj.getType()});
             }
         }
 
         if (layer->getType() == tmx::Layer::Type::Tile)
         {
-            const auto &tileLayer = layer->getLayerAs<tmx::TileLayer>();
-            const auto &layerTiles = tileLayer.getTiles();
+            const auto& tileLayer = layer->getLayerAs<tmx::TileLayer>();
+            const auto& layerTiles = tileLayer.getTiles();
 
             for (int y = 0; y < mapHeight; ++y)
             {
@@ -83,9 +83,9 @@ TileMap::TileMap(TextureCache &textureCache, const std::string &tmxPath)
                         continue;
 
                     int tileSetGID = -1;
-                    auto it = std::find_if(
-                        tileSetMap.rbegin(), tileSetMap.rend(), [currentGID](const auto &tileSet)
-                        { return currentGID >= tileSet.first; });
+                    auto it = std::find_if(tileSetMap.rbegin(), tileSetMap.rend(),
+                                           [currentGID](const auto& tileSet)
+                                           { return currentGID >= tileSet.first; });
                     if (it != tileSetMap.rend())
                     {
                         tileSetGID = it->first;
@@ -102,11 +102,9 @@ TileMap::TileMap(TextureCache &textureCache, const std::string &tmxPath)
                     int xPos = (x * tileWidth);
                     int yPos = (y * tileHeight);
 
-                    tileVec.emplace_back(
-                        Tile{
-                            tileSetMap[tileSetGID],
-                            {regionX, regionY, tileWidth, tileHeight},
-                            {xPos, yPos, tileWidth, tileHeight}});
+                    tileVec.emplace_back(Tile{tileSetMap[tileSetGID],
+                                              {regionX, regionY, tileWidth, tileHeight},
+                                              {xPos, yPos, tileWidth, tileHeight}});
                 }
             }
         }
@@ -115,7 +113,7 @@ TileMap::TileMap(TextureCache &textureCache, const std::string &tmxPath)
 
 void TileMap::drawTiles()
 {
-    for (const auto &tile : tileVec)
+    for (const auto& tile : tileVec)
     {
         window.blit(tile.texture, tile.crop, tile.rect);
     }
@@ -123,7 +121,7 @@ void TileMap::drawTiles()
 
 void TileMap::drawObjects()
 {
-    for (const auto &object : objectVec)
+    for (const auto& object : objectVec)
     {
         window.blit(object.texture, object.crop, object.rect);
     }
@@ -135,9 +133,6 @@ void TileMap::drawAll()
     drawObjects();
 }
 
-const std::vector<Object> &TileMap::getObjects() const
-{
-    return objectVec;
-}
+const std::vector<Object>& TileMap::getObjects() const { return objectVec; }
 
-}
+} // namespace kn
