@@ -34,7 +34,7 @@ class Sound final
      * @param loops The number of times to loop the sound.
      * @param maxMs The number of milliseconds to play the sound.
      * @param fadeMs The number of milliseconds to fade in.
-     * 
+     *
      * @warning Fade in is currently not working.
      */
     void play(int loops = 0, int maxMs = -1, int fadeMs = 0);

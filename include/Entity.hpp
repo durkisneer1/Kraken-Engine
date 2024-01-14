@@ -34,7 +34,7 @@ class Entity
      */
     std::shared_ptr<Texture> getTexture() const;
 
-    Rect crop = {0, 0, 0, 0};
+    Rect crop;
     Rect rect;
     math::Vec2 position;
     math::Vec2 direction;

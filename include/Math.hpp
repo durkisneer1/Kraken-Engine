@@ -1,23 +1,40 @@
 #pragma once
 
+#include "ErrorLogger.hpp"
+#include "MathOverflow.hpp"
+
 namespace kn
 {
+
+using Overflow::closeToZero;
+using Overflow::isProductValid;
+using Overflow::isSumValid;
+
 namespace math
 {
 
 /**
  * @brief A 2D vector.
  */
-struct Vec2
+class Vec2
 {
-    float x = 0.0f;
-    float y = 0.0f;
+  public:
+    double x;
+    double y;
 
-    Vec2() = default;
-    Vec2(float x, float y);
-    Vec2(int x, int y);
-    Vec2(float x, int y);
-    Vec2(int x, float y);
+    Vec2();
+
+    template <typename _first, typename _second>
+    Vec2(_first x, _second y)
+        : x(static_cast<double>(y)), y(static_cast<double>(y)), tolerance(0.0001)
+    {
+    }
+
+    template <typename _first, typename _second>
+    Vec2(_first x, _second y, double tolerance)
+        : x(static_cast<double>(y)), y(static_cast<double>(y)), tolerance(tolerance)
+    {
+    }
 
     /**
      * @brief Get a vector with all components set to 0.
@@ -28,31 +45,69 @@ struct Vec2
 
     /**
      * @brief Get the length of the vector.
-     * @return The length of the vector.
+     * @return The length of the vector if no overflow happens, otherwise -1.0
      */
-    float getLength() const;
+    double getLength() const;
 
     /**
-     * @brief Normalize the vector.
+     * @brief Normalize the vector in-place. Fails if an overflow occurs or the vector is the zero
+     * vector
      */
-    void normalize();
+    bool normalize();
 
     /**
      * @brief Get the distance to another vector.
      *
      * @param other The other vector.
      *
-     * @return The distance to another vector.
+     * @return The distance to another vector if no overflow happens, otherwise -1.0
      */
-    float distanceTo(const Vec2& other) const;
+    double distanceTo(const Vec2& other) const;
 
-    Vec2 operator*(float scalar) const;
-    Vec2 operator/(float scalar) const;
+    template <typename T> Vec2 operator/(T scalar) const { return Vec2(x / scalar, y / scalar); }
+
+    /**
+     * @brief Adds two vectors
+     *
+     * @param other the other vector
+     * @return a vector sum of the other two, or the zero vector on overflow
+     */
     Vec2 operator+(const Vec2& other) const;
+
+    /**
+     * @brief Subtracts two vectors
+     *
+     * @param other the subtracted vector
+     * @return a vector difference of the other two, or the zero vector on overflow
+     */
     Vec2 operator-(const Vec2& other) const;
-    Vec2 operator+=(const Vec2& other);
+
+    /**
+     * @brief in-place addition of another vector to this
+     *
+     * @param other the other vector
+     * @return reference to *this
+     */
+    Vec2& operator+=(const Vec2& other);
+
+    /**
+     * @brief Checks if two vectors are the same
+     *
+     * @param other the vector to compare to
+     * @return true if the vectors are close to the same, false otherwise
+     */
     bool operator==(const Vec2& other) const;
+
+    /**
+     * @brief Checks if two vectors are different
+     *
+     * @param other the vector to compare to
+     * @return true if the vectors are not close to the same, false otherwise
+     */
     bool operator!=(const Vec2& other) const;
+
+  protected:
+    double tolerance; //!< the accuracy with which comparisons are made
 };
 
 /**
@@ -75,7 +130,39 @@ Vec2 clampVec(Vec2 vec, const Vec2& min, const Vec2& max);
  *
  * @return The interpolated vector.
  */
-Vec2 lerpVec(const Vec2& a, const Vec2& b, float t);
+Vec2 lerpVec(const Vec2& a, const Vec2& b, double t);
+
+/**
+ * @brief Multiplies a vector by a constant
+ *
+ * @tparam T type of the constant
+ * @param lhs the constant
+ * @param rhs the vector
+ * @return A vector scaled by the constant
+ */
+template <typename T> Vec2 operator*(const T& lhs, const Vec2& rhs)
+{
+    if (!isProductValid(lhs, rhs.x) || !isProductValid(lhs, rhs.y))
+    {
+        WARN("Multiplication would result in overflow");
+        return Vec2::ZERO();
+    }
+
+    const double x = lhs * rhs.x;
+    const double y = lhs * rhs.y;
+
+    return Vec2(x, y);
+}
+
+/**
+ * @brief Multiplies a vector by a constant
+ *
+ * @tparam T type of the constant
+ * @param lhs the vector
+ * @param rhs the constant
+ * @return A vector scaled by the constant
+ */
+template <typename T> Vec2 operator*(const Vec2& lhs, const T& rhs) { return rhs * lhs; }
 
 } // namespace math
 } // namespace kn

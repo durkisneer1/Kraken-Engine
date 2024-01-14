@@ -1,5 +1,5 @@
-#include "ErrorLogger.hpp"
 #include "Font.hpp"
+#include "ErrorLogger.hpp"
 #include "RenderWindow.hpp"
 
 namespace kn
@@ -25,11 +25,10 @@ std::shared_ptr<Texture> Font::render(const std::string& text, bool antialias, S
             surface = TTF_RenderUTF8_Blended_Wrapped(font, text.c_str(), color, wrapLength);
         else
             surface = TTF_RenderUTF8_Blended(font, text.c_str(), color);
+    else if (wrapLength > 0)
+        surface = TTF_RenderText_Solid_Wrapped(font, text.c_str(), color, wrapLength);
     else
-        if (wrapLength > 0)
-            surface = TTF_RenderText_Solid_Wrapped(font, text.c_str(), color, wrapLength);
-        else
-            surface = TTF_RenderText_Solid(font, text.c_str(), color);
+        surface = TTF_RenderText_Solid(font, text.c_str(), color);
 
     if (surface == nullptr)
     {

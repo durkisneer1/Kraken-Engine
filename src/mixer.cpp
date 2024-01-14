@@ -1,8 +1,8 @@
-#include <filesystem>
 #include <algorithm>
+#include <filesystem>
 
-#include "Mixer.hpp"
 #include "ErrorLogger.hpp"
+#include "Mixer.hpp"
 
 namespace kn
 {
@@ -10,15 +10,18 @@ namespace mixer
 {
 
 Sound::Sound(const std::string& fileDir)
-{   
+{
     std::filesystem::path filePath(fileDir);
     std::string extension = filePath.extension().string();
 
-    if (extension == ".ogg" || extension == ".mp3" || extension == ".wav") {
+    if (extension == ".ogg" || extension == ".mp3" || extension == ".wav")
+    {
         sound = Mix_LoadWAV(fileDir.c_str());
         if (!sound)
             FATAL("Failed to load sound: " + fileDir);
-    } else {
+    }
+    else
+    {
         FATAL("Unsupported file format: " + fileDir);
     }
 
@@ -26,7 +29,7 @@ Sound::Sound(const std::string& fileDir)
 }
 
 void Sound::play(int loops, int maxMs, int fadeMs)
-{   
+{
     int channelNum = -1;
 
     if (fadeMs > 0)
@@ -41,7 +44,6 @@ void Sound::play(int loops, int maxMs, int fadeMs)
     }
 
     Mix_Volume(channelNum, volume);
-    
 }
 
 void Sound::setVolume(float newVolume)
