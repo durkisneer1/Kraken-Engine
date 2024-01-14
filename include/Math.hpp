@@ -107,7 +107,7 @@ class Vec2
     bool operator!=(const Vec2& other) const;
 
   protected:
-    const double tolerance; //!< the accuracy with which comparisons are made
+    double tolerance; //!< the accuracy with which comparisons are made
 };
 
 /**
