@@ -5,6 +5,9 @@
 namespace kn
 {
 
+typedef float float32_t;
+typedef double float64_t;
+
 typedef SDL_Scancode KEYS;
 typedef SDL_Event Event;
 typedef SDL_Color Color;

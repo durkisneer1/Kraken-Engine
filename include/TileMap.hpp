@@ -25,8 +25,9 @@ struct Tile
 
 /**
  * @brief A class that represents a Tiled map.
- * 
- * @warning This class is currently only compatible with orthogonal maps and tile layers (no objects).
+ *
+ * @warning This class is currently only compatible with orthogonal maps and tile layers (no
+ * objects).
  */
 class TileMap final
 {

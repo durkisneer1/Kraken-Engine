@@ -5,8 +5,8 @@
 
 #include <SDL_ttf.h>
 
-#include "Texture.hpp"
 #include "Constants.hpp"
+#include "Texture.hpp"
 
 namespace kn
 {

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Rect.hpp"
 #include "Constants.hpp"
+#include "Rect.hpp"
 
 namespace kn
 {

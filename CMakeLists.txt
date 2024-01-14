@@ -20,12 +20,12 @@ add_executable(${TESTING} EXCLUDE_FROM_ALL ${SOURCES} ${TESTS})
 target_compile_definitions( ${LIBRARY} PUBLIC LOG_LEVEL=${LOG_LEVEL} )
 target_compile_definitions( ${TESTING} PUBLIC LOG_LEVEL=${LOG_LEVEL} )
 
-set_target_properties( ${LIBRARY} PROPERTIES RUNTIME_OUTPUT_DIRECTORY 
+set_target_properties( ${LIBRARY} PROPERTIES RUNTIME_OUTPUT_DIRECTORY
    ${CMAKE_SOURCE_DIR}/bin )
 set_target_properties( ${LIBRARY} PROPERTIES LIBRARY_OUTPUT_DIRECTORY
    ${CMAKE_SOURCE_DIR}/bin )
 
-set_target_properties( ${TESTING} PROPERTIES RUNTIME_OUTPUT_DIRECTORY 
+set_target_properties( ${TESTING} PROPERTIES RUNTIME_OUTPUT_DIRECTORY
    ${CMAKE_SOURCE_DIR}/bin )
 set_target_properties( ${TESTING} PROPERTIES LIBRARY_OUTPUT_DIRECTORY
    ${CMAKE_SOURCE_DIR}/bin )
@@ -204,7 +204,7 @@ if (WIN32)
 endif()
 
 target_link_libraries(${LIBRARY} PRIVATE SDL2 SDL2_image SDL2_ttf SDL2_mixer tmxlite)
-target_link_libraries(${TESTING} PRIVATE SDL2 SDL2_image SDL2_ttf SDL2_mixer tmxlite gtest)
+target_link_libraries(${TESTING} PRIVATE SDL2 SDL2_image SDL2_ttf SDL2_mixer tmxlite gtest gtest_main)
 
 target_include_directories(${LIBRARY} PRIVATE ${CMAKE_SOURCE_DIR}/include)
 target_include_directories(${TESTING} PRIVATE ${CMAKE_SOURCE_DIR}/include)
