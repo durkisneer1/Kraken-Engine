@@ -119,7 +119,8 @@ void RenderWindow::blit(const std::shared_ptr<Texture>& texture, Rect crop, Rect
 
 void RenderWindow::blit(const std::shared_ptr<Texture>& texture, const math::Vec2& position)
 {
-    SDL_FRect rect = {position.x, position.y, texture->getSize().x, texture->getSize().y};
+    SDL_FRect rect = {(float)position.x, (float)position.y, (float)texture->getSize().x,
+                      (float)texture->getSize().y};
 
     SDL_RenderCopyF(m_renderer, texture->getSDLTexture(), nullptr, &rect);
 }
