@@ -12,7 +12,7 @@ After following the :doc:`../installation` guide, you are ready for your first K
 
     #include <KrakenEngine.hpp>
 
-    const kn::math::Vec2 kn::SCREEN_SIZE = {800, 600};
+    const kn::math::Vec2 kn::SCREEN_SIZE = { 800, 600 };
 
 
     int main() {
@@ -24,7 +24,7 @@ After following the :doc:`../installation` guide, you are ready for your first K
             clock.tick();
 
             for (const auto &event : window.getEvents())
-                if (event.type == KN_QUIT) done = true;
+                if (event.type == kn::QUIT) done = true;
 
             window.cls();
             window.flip();
