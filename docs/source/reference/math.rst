@@ -2,7 +2,7 @@
 math
 ====
 
-.. doxygenstruct:: kn::math::Vec2
+.. doxygenclass:: kn::math::Vec2
     :members:
 
 .. doxygenfunction:: kn::math::clampVec

@@ -88,7 +88,7 @@
         <location file="D:/Code/c++/Kraken-Engine/include/Texture.hpp" line="30" column="5" bodyfile="D:/Code/c++/Kraken-Engine/include/Texture.hpp" bodystart="30" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_texture_1af30316f09cd6b90c97bc90a6c14be8f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
         <definition>math::Vec2 kn::Texture::getSize</definition>
         <argsstring>() const</argsstring>
         <name>getSize</name>
@@ -150,7 +150,7 @@
         <name>setSize</name>
         <qualifiedname>kn::Texture::setSize</qualifiedname>
         <param>
-          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
           <declname>size</declname>
         </param>
         <briefdescription>

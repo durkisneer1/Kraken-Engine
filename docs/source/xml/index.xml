@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
   <compound refid="classkn_1_1time_1_1_clock" kind="class"><name>kn::time::Clock</name>
-    <member refid="classkn_1_1time_1_1_clock_1a7f1f72c3b782c1b2bfc2c8342b9c673b" kind="variable"><name>frameTime</name></member>
-    <member refid="classkn_1_1time_1_1_clock_1a5961b337680bcdeeeaddd95f8e916c2e" kind="variable"><name>targetFrameTime</name></member>
-    <member refid="classkn_1_1time_1_1_clock_1ae17a2688be0a7f31c6ce9edca697085a" kind="variable"><name>deltaTime</name></member>
-    <member refid="classkn_1_1time_1_1_clock_1ae61b9cac713eae497f93f6958086263a" kind="variable"><name>frequency</name></member>
-    <member refid="classkn_1_1time_1_1_clock_1a7c0b8024e62cde73189387621ef14e53" kind="variable"><name>now</name></member>
-    <member refid="classkn_1_1time_1_1_clock_1a336ee3c672af4dea1d9e3a1ddff8cea3" kind="variable"><name>last</name></member>
-    <member refid="classkn_1_1time_1_1_clock_1a01ac404d47e055669c1a69b79b4a7fd8" kind="function"><name>Clock</name></member>
+    <member refid="classkn_1_1time_1_1_clock_1a8ea3cd11cbc15bbcf1ea37a810676839" kind="variable"><name>m_frameTime</name></member>
+    <member refid="classkn_1_1time_1_1_clock_1a49a9a9a3f47340c08216c32ae66cb85a" kind="variable"><name>m_targetFrameTime</name></member>
+    <member refid="classkn_1_1time_1_1_clock_1a55ab147e4812c3a8667e9d7a12185348" kind="variable"><name>m_deltaTime</name></member>
+    <member refid="classkn_1_1time_1_1_clock_1a055e2c60f4b2c9de902d048d1b3b8335" kind="variable"><name>m_frequency</name></member>
+    <member refid="classkn_1_1time_1_1_clock_1a755af5e4a40933fb411d161f210b9d9a" kind="variable"><name>m_now</name></member>
+    <member refid="classkn_1_1time_1_1_clock_1a9db5b2acc7ec28e6ff2aa2042de96a25" kind="variable"><name>m_last</name></member>
+    <member refid="classkn_1_1time_1_1_clock_1aa29d38b9090f4f03856011c8e5945ab4" kind="function"><name>Clock</name></member>
     <member refid="classkn_1_1time_1_1_clock_1a56cc398c51d9cb271b2d405999e2152b" kind="function"><name>~Clock</name></member>
     <member refid="classkn_1_1time_1_1_clock_1a6d4652b18060b534cad6dedf9f021c56" kind="function"><name>tick</name></member>
   </compound>
@@ -85,11 +85,11 @@
     <member refid="classkn_1_1_render_window_1a1117133557ac0add84448fc4963ee627" kind="variable"><name>m_renderer</name></member>
     <member refid="classkn_1_1_render_window_1af174d2f6a0fef009255e7b27ad347cd5" kind="variable"><name>m_window</name></member>
     <member refid="classkn_1_1_render_window_1a82e4a97c56f45ce454e629c9b86e0316" kind="variable"><name>m_event</name></member>
-    <member refid="classkn_1_1_render_window_1a19158c9bbfc7629788e81b9b4aa69b64" kind="variable"><name>m_events</name></member>
+    <member refid="classkn_1_1_render_window_1aee142437a787ef4603ada11a8d133955" kind="variable"><name>m_events</name></member>
     <member refid="classkn_1_1_render_window_1adcad93cc1e1c336afff133667bdbcb2c" kind="function"><name>getInstance</name></member>
     <member refid="classkn_1_1_render_window_1a04888f5d385499db342f75021fa6beb0" kind="function"><name>getScale</name></member>
     <member refid="classkn_1_1_render_window_1a169192f7eb40b203031c7a26a711fa26" kind="function"><name>setScale</name></member>
-    <member refid="classkn_1_1_render_window_1adbc6173c883f03ff8bb6cdc98c051dcb" kind="function"><name>cls</name></member>
+    <member refid="classkn_1_1_render_window_1a2d393c7f6c88ea587d8f18efebaa38f8" kind="function"><name>cls</name></member>
     <member refid="classkn_1_1_render_window_1a7d04089325a8080a1f4b7c5cb9e4f12c" kind="function"><name>flip</name></member>
     <member refid="classkn_1_1_render_window_1a42bc368f61f894d86f3061a7b69960db" kind="function"><name>blit</name></member>
     <member refid="classkn_1_1_render_window_1af9cca175a5bb42c51d379d44d9a9bf1b" kind="function"><name>blit</name></member>
@@ -103,11 +103,12 @@
     <member refid="classkn_1_1_render_window_1a120f2cd929f30fea7a367025658395dc" kind="function"><name>RenderWindow</name></member>
     <member refid="classkn_1_1_render_window_1a5ed9d63ab84ffa51793e1e788c867233" kind="function"><name>RenderWindow</name></member>
     <member refid="classkn_1_1_render_window_1a0e5af334903645c870c713f53b754823" kind="function"><name>~RenderWindow</name></member>
+    <member refid="classkn_1_1_render_window_1a19face1412d87c5333ebc107b5e30b9a" kind="function"><name>clean</name></member>
     <member refid="classkn_1_1_render_window_1a6438f39a2be6013f5c22eaf8df5dda48" kind="function"><name>operator=</name></member>
   </compound>
   <compound refid="classkn_1_1mixer_1_1_sound" kind="class"><name>kn::mixer::Sound</name>
     <member refid="classkn_1_1mixer_1_1_sound_1af2948e0b28a842c0e5063fe695bd1409" kind="variable"><name>sound</name></member>
-    <member refid="classkn_1_1mixer_1_1_sound_1ad96d5f60a54485a1775347b56e9a14a5" kind="variable"><name>volume</name></member>
+    <member refid="classkn_1_1mixer_1_1_sound_1aa7bb03b50bf77871c2f8cdea50b16762" kind="variable"><name>volume</name></member>
     <member refid="classkn_1_1mixer_1_1_sound_1a42299fa9b02c6757c1e94488c4ea98c0" kind="function"><name>Sound</name></member>
     <member refid="classkn_1_1mixer_1_1_sound_1a51a908b3be94bddd9600a745f2c46235" kind="function"><name>~Sound</name></member>
     <member refid="classkn_1_1mixer_1_1_sound_1ada99d21fb9d538cd6d731573cc0d6ea7" kind="function"><name>play</name></member>
@@ -154,27 +155,27 @@
     <member refid="classkn_1_1_tile_map_1ae5fafab74bad33d0a854f932b6ce39dc" kind="function"><name>~TileMap</name></member>
     <member refid="classkn_1_1_tile_map_1a7e73d751180a3c49c8ba0361bf94380f" kind="function"><name>draw</name></member>
   </compound>
-  <compound refid="structkn_1_1math_1_1_vec2" kind="struct"><name>kn::math::Vec2</name>
-    <member refid="structkn_1_1math_1_1_vec2_1ae19685ae4e0b8df8eb3c79af58133f86" kind="variable"><name>x</name></member>
-    <member refid="structkn_1_1math_1_1_vec2_1a88c56cf69b89eac88f960b2b707fd9bc" kind="variable"><name>y</name></member>
-    <member refid="structkn_1_1math_1_1_vec2_1a005043f0542f6a672eb310d2a6b54236" kind="function"><name>Vec2</name></member>
-    <member refid="structkn_1_1math_1_1_vec2_1ae0e44d611efc084f001b036294da84f0" kind="function"><name>Vec2</name></member>
-    <member refid="structkn_1_1math_1_1_vec2_1a0db67ff4376145abda270f094247de15" kind="function"><name>Vec2</name></member>
-    <member refid="structkn_1_1math_1_1_vec2_1abbcec81aa0fe7f8a59cf99f483e3e121" kind="function"><name>Vec2</name></member>
-    <member refid="structkn_1_1math_1_1_vec2_1adad010f6748b0710ebf882605382dbbc" kind="function"><name>Vec2</name></member>
-    <member refid="structkn_1_1math_1_1_vec2_1a2ff26209f794ac15a972d2543c4836a7" kind="function"><name>getLength</name></member>
-    <member refid="structkn_1_1math_1_1_vec2_1a0b419df55caf4a47b7fc7bb6ed6897bf" kind="function"><name>normalize</name></member>
-    <member refid="structkn_1_1math_1_1_vec2_1a5c355bb58ec1633bf40f3a7d8f809f8a" kind="function"><name>distanceTo</name></member>
-    <member refid="structkn_1_1math_1_1_vec2_1ab7fffe8ffa01c3efb1a899f4097f0433" kind="function"><name>operator*</name></member>
-    <member refid="structkn_1_1math_1_1_vec2_1a62f28b5a432d77a1e8a94b7f5cfdbb35" kind="function"><name>operator/</name></member>
-    <member refid="structkn_1_1math_1_1_vec2_1a42f6f4a2ebd824928d7994fcb1f621f9" kind="function"><name>operator+</name></member>
-    <member refid="structkn_1_1math_1_1_vec2_1a7d0a14b1cfc5c43a8033ea7550fedb3c" kind="function"><name>operator-</name></member>
-    <member refid="structkn_1_1math_1_1_vec2_1a39333b3b1e6c7a53eb9c7591b3161238" kind="function"><name>operator+=</name></member>
-    <member refid="structkn_1_1math_1_1_vec2_1a9ed5cf168206994dbfcea1fd10a8742a" kind="function"><name>operator==</name></member>
-    <member refid="structkn_1_1math_1_1_vec2_1a42133229f86b9300809233b6d0a1b7cb" kind="function"><name>operator!=</name></member>
-    <member refid="structkn_1_1math_1_1_vec2_1a1d175a651f18b89df7ed11efdd80da8b" kind="function"><name>ZERO</name></member>
+  <compound refid="classkn_1_1math_1_1_vec2" kind="class"><name>kn::math::Vec2</name>
+    <member refid="classkn_1_1math_1_1_vec2_1a7493826a5a0dd5e5d638e17e085c1679" kind="variable"><name>x</name></member>
+    <member refid="classkn_1_1math_1_1_vec2_1a9718fb34619baaf3ea2f0380f8d5c0bb" kind="variable"><name>y</name></member>
+    <member refid="classkn_1_1math_1_1_vec2_1ab2f1e52373bf2e36316c83238283cd58" kind="variable"><name>tolerance</name></member>
+    <member refid="classkn_1_1math_1_1_vec2_1abfe5bc6f8c10ec813049171c36e66494" kind="function"><name>Vec2</name></member>
+    <member refid="classkn_1_1math_1_1_vec2_1a20490112a17f2f0d2179a2436c9dbbe9" kind="function"><name>Vec2</name></member>
+    <member refid="classkn_1_1math_1_1_vec2_1a9c9136c69c30d1368c0cba91e775b02e" kind="function"><name>Vec2</name></member>
+    <member refid="classkn_1_1math_1_1_vec2_1a644f984e82d4ddbeb0db469f113bd541" kind="function"><name>getLength</name></member>
+    <member refid="classkn_1_1math_1_1_vec2_1a7acb15f25450153774c82b79bd8ff324" kind="function"><name>normalize</name></member>
+    <member refid="classkn_1_1math_1_1_vec2_1aa6c9238dcb0883b37251d55f8d500d79" kind="function"><name>distanceTo</name></member>
+    <member refid="classkn_1_1math_1_1_vec2_1ab5d356f325a8adfdd26275e233e0b866" kind="function"><name>operator/</name></member>
+    <member refid="classkn_1_1math_1_1_vec2_1a42f6f4a2ebd824928d7994fcb1f621f9" kind="function"><name>operator+</name></member>
+    <member refid="classkn_1_1math_1_1_vec2_1a7d0a14b1cfc5c43a8033ea7550fedb3c" kind="function"><name>operator-</name></member>
+    <member refid="classkn_1_1math_1_1_vec2_1a1ada667c1c94009f1936d9418b4c3193" kind="function"><name>operator+=</name></member>
+    <member refid="classkn_1_1math_1_1_vec2_1a9ed5cf168206994dbfcea1fd10a8742a" kind="function"><name>operator==</name></member>
+    <member refid="classkn_1_1math_1_1_vec2_1a42133229f86b9300809233b6d0a1b7cb" kind="function"><name>operator!=</name></member>
+    <member refid="classkn_1_1math_1_1_vec2_1a1d175a651f18b89df7ed11efdd80da8b" kind="function"><name>ZERO</name></member>
   </compound>
   <compound refid="namespacekn" kind="namespace"><name>kn</name>
+    <member refid="namespacekn_1aa4afeb9761786f8b7b45f49db7bc0b1a" kind="typedef"><name>float32_t</name></member>
+    <member refid="namespacekn_1a78388bdab82eefeb22b5ec58e12eb0d9" kind="typedef"><name>float64_t</name></member>
     <member refid="namespacekn_1a438de58efec73267dee3696ce9bc8c7d" kind="typedef"><name>KEYS</name></member>
     <member refid="namespacekn_1af947a748461c782cd90f4d4b7cdbea21" kind="typedef"><name>Event</name></member>
     <member refid="namespacekn_1a91eb5db82680dedc10733f04def8dd2f" kind="typedef"><name>Color</name></member>
@@ -383,9 +384,9 @@
     <member refid="namespacekn_1abf1d04a7c67d2fbd399837ab1108eb55" kind="variable"><name>K_QUOTEDBL</name></member>
     <member refid="namespacekn_1a01c028ef7ec54d3867ee3eb2f69dde4e" kind="variable"><name>K_RIGHTPAREN</name></member>
     <member refid="namespacekn_1a14f929fcf08ea3be9ad78837e87c13ac" kind="variable"><name>K_UNDERSCORE</name></member>
-    <member refid="namespacekn_1a3ba3ca2591192bc770ee935bb547e845" kind="variable"><name>_BUTTON_LEFT</name></member>
-    <member refid="namespacekn_1af99c07523184e6220aea674591246102" kind="variable"><name>_BUTTON_MIDDLE</name></member>
-    <member refid="namespacekn_1a681305d5fd1c55718b4a454bb36c8e0a" kind="variable"><name>_BUTTON_RIGHT</name></member>
+    <member refid="namespacekn_1a7182e281d3b7380136b5a2352132ab39" kind="variable"><name>BUTTON_LEFT</name></member>
+    <member refid="namespacekn_1a9684df6ce94178e94bb803ab01c519a6" kind="variable"><name>BUTTON_MIDDLE</name></member>
+    <member refid="namespacekn_1a5eb92ba749f1c40228bd8c385030aa55" kind="variable"><name>BUTTON_RIGHT</name></member>
     <member refid="namespacekn_1a4f6693c08dee924dd9d7cf1106f56815" kind="variable"><name>SCREEN_SIZE</name></member>
     <member refid="namespacekn_1ac1be3061d1c6178d71ebcbc1961e651a" kind="variable"><name>GRAVITY</name></member>
   </compound>
@@ -400,9 +401,27 @@
   </compound>
   <compound refid="namespacekn_1_1math" kind="namespace"><name>kn::math</name>
     <member refid="namespacekn_1_1math_1a8707b7484af546b0e9f57d8d78059a51" kind="function"><name>clampVec</name></member>
-    <member refid="namespacekn_1_1math_1a88e50fa7f06deaef4b3fb1f9c26e22a0" kind="function"><name>lerpVec</name></member>
+    <member refid="namespacekn_1_1math_1a9a6ecf740568eb799b85a2f10d764de5" kind="function"><name>lerpVec</name></member>
+    <member refid="namespacekn_1_1math_1a98048b6b75328ae4acbff11d314bfeae" kind="function"><name>operator*</name></member>
+    <member refid="namespacekn_1_1math_1aa46e046256f2e9707eac97345b3e251b" kind="function"><name>operator*</name></member>
   </compound>
   <compound refid="namespacekn_1_1mixer" kind="namespace"><name>kn::mixer</name>
+  </compound>
+  <compound refid="namespacekn_1_1overflow" kind="namespace"><name>kn::overflow</name>
+    <member refid="namespacekn_1_1overflow_1a25ab9731e8502f23db1ab8742ccb35d1" kind="function"><name>isSumValid</name></member>
+    <member refid="namespacekn_1_1overflow_1a1e2b14657503be12a66a856450d86dbf" kind="function"><name>isSumValid</name></member>
+    <member refid="namespacekn_1_1overflow_1a4bf336d52bc2e64c29ef02b6de188019" kind="function"><name>isSumValid</name></member>
+    <member refid="namespacekn_1_1overflow_1a6be2d4d95ceafe583e17eb9f4012ffcf" kind="function"><name>isSumValid</name></member>
+    <member refid="namespacekn_1_1overflow_1ada0ca3132f003596ccef488fd069aa6a" kind="function"><name>isSumValid</name></member>
+    <member refid="namespacekn_1_1overflow_1a2f8cec4c7b67aa9ed81f0bc1bfc70958" kind="function"><name>isSumValid</name></member>
+    <member refid="namespacekn_1_1overflow_1aedd4a8f8c97bd656ef79b194c0d9ab95" kind="function"><name>isProductValid</name></member>
+    <member refid="namespacekn_1_1overflow_1ac796f84b0d52b38f495e7ba776e195d4" kind="function"><name>isProductValid</name></member>
+    <member refid="namespacekn_1_1overflow_1afefec0547816919c2437e88d37fd8490" kind="function"><name>isProductValid</name></member>
+    <member refid="namespacekn_1_1overflow_1a9b3581d891889d52669940436cc12c04" kind="function"><name>isProductValid</name></member>
+    <member refid="namespacekn_1_1overflow_1a66e6261965e16ff6a11370fe068aba0e" kind="function"><name>isProductValid</name></member>
+    <member refid="namespacekn_1_1overflow_1a24a49539a10f1d745cf7936fda3243ce" kind="function"><name>isProductValid</name></member>
+    <member refid="namespacekn_1_1overflow_1a03ba5307ac62ee0ca8eb795b6a4fb401" kind="function"><name>closeToZero</name></member>
+    <member refid="namespacekn_1_1overflow_1ab2861cc5b433dc24b0d9d0b2139f3af8" kind="function"><name>closeToZero</name></member>
   </compound>
   <compound refid="namespacekn_1_1time" kind="namespace"><name>kn::time</name>
   </compound>
@@ -432,6 +451,8 @@
   <compound refid="_math_8hpp" kind="file"><name>Math.hpp</name>
   </compound>
   <compound refid="_mixer_8hpp" kind="file"><name>Mixer.hpp</name>
+  </compound>
+  <compound refid="_overflow_8hpp" kind="file"><name>Overflow.hpp</name>
   </compound>
   <compound refid="_rect_8hpp" kind="file"><name>Rect.hpp</name>
   </compound>

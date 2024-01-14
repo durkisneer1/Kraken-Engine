@@ -1,0 +1,421 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classkn_1_1math_1_1_vec2" kind="class" language="C++" prot="public">
+    <compoundname>kn::math::Vec2</compoundname>
+    <includes refid="_math_8hpp" local="no">Math.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classkn_1_1math_1_1_vec2_1a7493826a5a0dd5e5d638e17e085c1679" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double kn::math::Vec2::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>kn::math::Vec2::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="22" column="12" bodyfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classkn_1_1math_1_1_vec2_1a9718fb34619baaf3ea2f0380f8d5c0bb" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double kn::math::Vec2::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>kn::math::Vec2::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="23" column="12" bodyfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classkn_1_1math_1_1_vec2_1ab2f1e52373bf2e36316c83238283cd58" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double kn::math::Vec2::tolerance</definition>
+        <argsstring></argsstring>
+        <name>tolerance</name>
+        <qualifiedname>kn::math::Vec2::tolerance</qualifiedname>
+        <briefdescription>
+<para>the accuracy with which comparisons are made </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="110" column="12" bodyfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classkn_1_1math_1_1_vec2_1abfe5bc6f8c10ec813049171c36e66494" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>kn::math::Vec2::Vec2</definition>
+        <argsstring>()</argsstring>
+        <name>Vec2</name>
+        <qualifiedname>kn::math::Vec2::Vec2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="25" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1math_1_1_vec2_1a20490112a17f2f0d2179a2436c9dbbe9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _first</type>
+          </param>
+          <param>
+            <type>typename _second</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>kn::math::Vec2::Vec2</definition>
+        <argsstring>(_first x, _second y)</argsstring>
+        <name>Vec2</name>
+        <qualifiedname>kn::math::Vec2::Vec2</qualifiedname>
+        <param>
+          <type>_first</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>_second</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="28" column="5" bodyfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" bodystart="28" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1math_1_1_vec2_1a9c9136c69c30d1368c0cba91e775b02e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename _first</type>
+          </param>
+          <param>
+            <type>typename _second</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>kn::math::Vec2::Vec2</definition>
+        <argsstring>(_first x, _second y, double tolerance)</argsstring>
+        <name>Vec2</name>
+        <qualifiedname>kn::math::Vec2::Vec2</qualifiedname>
+        <param>
+          <type>_first</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>_second</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>tolerance</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="34" column="5" bodyfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1math_1_1_vec2_1a644f984e82d4ddbeb0db469f113bd541" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double kn::math::Vec2::getLength</definition>
+        <argsstring>() const</argsstring>
+        <name>getLength</name>
+        <qualifiedname>kn::math::Vec2::getLength</qualifiedname>
+        <briefdescription>
+<para>Get the length of the vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The length of the vector if no overflow happens, otherwise -1.0 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="50" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1math_1_1_vec2_1a7acb15f25450153774c82b79bd8ff324" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool kn::math::Vec2::normalize</definition>
+        <argsstring>()</argsstring>
+        <name>normalize</name>
+        <qualifiedname>kn::math::Vec2::normalize</qualifiedname>
+        <briefdescription>
+<para>Normalize the vector in-place. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Fails if an overflow occurs or the vector is the zero vector </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="56" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1math_1_1_vec2_1aa6c9238dcb0883b37251d55f8d500d79" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double kn::math::Vec2::distanceTo</definition>
+        <argsstring>(const Vec2 &amp;other) const</argsstring>
+        <name>distanceTo</name>
+        <qualifiedname>kn::math::Vec2::distanceTo</qualifiedname>
+        <param>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Get the distance to another vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other vector.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The distance to another vector if no overflow happens, otherwise -1.0 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="65" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1math_1_1_vec2_1ab5d356f325a8adfdd26275e233e0b866" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref></type>
+        <definition>Vec2 kn::math::Vec2::operator/</definition>
+        <argsstring>(T scalar) const</argsstring>
+        <name>operator/</name>
+        <qualifiedname>kn::math::Vec2::operator/</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>scalar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="67" column="22" bodyfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1math_1_1_vec2_1a42f6f4a2ebd824928d7994fcb1f621f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref></type>
+        <definition>Vec2 kn::math::Vec2::operator+</definition>
+        <argsstring>(const Vec2 &amp;other) const</argsstring>
+        <name>operator+</name>
+        <qualifiedname>kn::math::Vec2::operator+</qualifiedname>
+        <param>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Adds two vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the other vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a vector sum of the other two, or the zero vector on overflow </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="75" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1math_1_1_vec2_1a7d0a14b1cfc5c43a8033ea7550fedb3c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref></type>
+        <definition>Vec2 kn::math::Vec2::operator-</definition>
+        <argsstring>(const Vec2 &amp;other) const</argsstring>
+        <name>operator-</name>
+        <qualifiedname>kn::math::Vec2::operator-</qualifiedname>
+        <param>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Subtracts two vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the subtracted vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a vector difference of the other two, or the zero vector on overflow </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="83" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1math_1_1_vec2_1a1ada667c1c94009f1936d9418b4c3193" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref> &amp;</type>
+        <definition>Vec2 &amp; kn::math::Vec2::operator+=</definition>
+        <argsstring>(const Vec2 &amp;other)</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>kn::math::Vec2::operator+=</qualifiedname>
+        <param>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>in-place addition of another vector to this </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the other vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>reference to *this </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="91" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1math_1_1_vec2_1a9ed5cf168206994dbfcea1fd10a8742a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool kn::math::Vec2::operator==</definition>
+        <argsstring>(const Vec2 &amp;other) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>kn::math::Vec2::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Checks if two vectors are the same. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the vector to compare to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the vectors are close to the same, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="99" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classkn_1_1math_1_1_vec2_1a42133229f86b9300809233b6d0a1b7cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool kn::math::Vec2::operator!=</definition>
+        <argsstring>(const Vec2 &amp;other) const</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>kn::math::Vec2::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Checks if two vectors are different. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the vector to compare to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the vectors are not close to the same, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="107" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classkn_1_1math_1_1_vec2_1a1d175a651f18b89df7ed11efdd80da8b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref></type>
+        <definition>static Vec2 kn::math::Vec2::ZERO</definition>
+        <argsstring>()</argsstring>
+        <name>ZERO</name>
+        <qualifiedname>kn::math::Vec2::ZERO</qualifiedname>
+        <briefdescription>
+<para>Get a vector with all components set to 0. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The zero vector. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="44" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A 2D vector. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="19" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" bodystart="20" bodyend="111"/>
+    <listofallmembers>
+      <member refid="classkn_1_1math_1_1_vec2_1aa6c9238dcb0883b37251d55f8d500d79" prot="public" virt="non-virtual"><scope>kn::math::Vec2</scope><name>distanceTo</name></member>
+      <member refid="classkn_1_1math_1_1_vec2_1a644f984e82d4ddbeb0db469f113bd541" prot="public" virt="non-virtual"><scope>kn::math::Vec2</scope><name>getLength</name></member>
+      <member refid="classkn_1_1math_1_1_vec2_1a7acb15f25450153774c82b79bd8ff324" prot="public" virt="non-virtual"><scope>kn::math::Vec2</scope><name>normalize</name></member>
+      <member refid="classkn_1_1math_1_1_vec2_1a42133229f86b9300809233b6d0a1b7cb" prot="public" virt="non-virtual"><scope>kn::math::Vec2</scope><name>operator!=</name></member>
+      <member refid="classkn_1_1math_1_1_vec2_1a42f6f4a2ebd824928d7994fcb1f621f9" prot="public" virt="non-virtual"><scope>kn::math::Vec2</scope><name>operator+</name></member>
+      <member refid="classkn_1_1math_1_1_vec2_1a1ada667c1c94009f1936d9418b4c3193" prot="public" virt="non-virtual"><scope>kn::math::Vec2</scope><name>operator+=</name></member>
+      <member refid="classkn_1_1math_1_1_vec2_1a7d0a14b1cfc5c43a8033ea7550fedb3c" prot="public" virt="non-virtual"><scope>kn::math::Vec2</scope><name>operator-</name></member>
+      <member refid="classkn_1_1math_1_1_vec2_1ab5d356f325a8adfdd26275e233e0b866" prot="public" virt="non-virtual"><scope>kn::math::Vec2</scope><name>operator/</name></member>
+      <member refid="classkn_1_1math_1_1_vec2_1a9ed5cf168206994dbfcea1fd10a8742a" prot="public" virt="non-virtual"><scope>kn::math::Vec2</scope><name>operator==</name></member>
+      <member refid="classkn_1_1math_1_1_vec2_1ab2f1e52373bf2e36316c83238283cd58" prot="protected" virt="non-virtual"><scope>kn::math::Vec2</scope><name>tolerance</name></member>
+      <member refid="classkn_1_1math_1_1_vec2_1abfe5bc6f8c10ec813049171c36e66494" prot="public" virt="non-virtual"><scope>kn::math::Vec2</scope><name>Vec2</name></member>
+      <member refid="classkn_1_1math_1_1_vec2_1a20490112a17f2f0d2179a2436c9dbbe9" prot="public" virt="non-virtual"><scope>kn::math::Vec2</scope><name>Vec2</name></member>
+      <member refid="classkn_1_1math_1_1_vec2_1a9c9136c69c30d1368c0cba91e775b02e" prot="public" virt="non-virtual"><scope>kn::math::Vec2</scope><name>Vec2</name></member>
+      <member refid="classkn_1_1math_1_1_vec2_1a7493826a5a0dd5e5d638e17e085c1679" prot="public" virt="non-virtual"><scope>kn::math::Vec2</scope><name>x</name></member>
+      <member refid="classkn_1_1math_1_1_vec2_1a9718fb34619baaf3ea2f0380f8d5c0bb" prot="public" virt="non-virtual"><scope>kn::math::Vec2</scope><name>y</name></member>
+      <member refid="classkn_1_1math_1_1_vec2_1a1d175a651f18b89df7ed11efdd80da8b" prot="public" virt="non-virtual"><scope>kn::math::Vec2</scope><name>ZERO</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

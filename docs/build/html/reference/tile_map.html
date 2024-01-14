@@ -163,6 +163,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="entity.html">Entity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error_logger.html">ErrorLogger</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rect.html">Rect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="render_window.html">RenderWindow</a></li>
@@ -174,6 +175,7 @@
 <li class="toctree-l2"><a class="reference internal" href="input.html">input</a></li>
 <li class="toctree-l2"><a class="reference internal" href="math.html">math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mixer.html">mixer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overflow.html">overflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="time.html">time</a></li>
 </ul>
 </li>
@@ -246,6 +248,30 @@
 </div>
 </dd></dl>
 
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn4TileE">
+<span id="_CPPv3N2kn4TileE"></span><span id="_CPPv2N2kn4TileE"></span><span id="kn::Tile"></span><span class="target" id="structkn_1_1_tile"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Tile</span></span></span><a class="headerlink" href="#_CPPv4N2kn4TileE" title="Link to this definition">#</a><br /></dt>
+<dd><p>A tmx layer tile. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn4Tile7textureE">
+<span id="_CPPv3N2kn4Tile7textureE"></span><span id="_CPPv2N2kn4Tile7textureE"></span><span id="kn::Tile::texture__std::shared_ptr:Texture:"></span><span class="target" id="structkn_1_1_tile_1a8e7d9dbfe6a90692c70b5dbd35eb8f01"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="texture.html#_CPPv4N2kn7TextureE" title="kn::Texture"><span class="n"><span class="pre">Texture</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">texture</span></span></span><a class="headerlink" href="#_CPPv4N2kn4Tile7textureE" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn4Tile4cropE">
+<span id="_CPPv3N2kn4Tile4cropE"></span><span id="_CPPv2N2kn4Tile4cropE"></span><span id="kn::Tile::crop__Rect"></span><span class="target" id="structkn_1_1_tile_1a65ccf5af9c9b8459015fcb3caa45e9dc"></span><a class="reference internal" href="rect.html#_CPPv4N2kn4RectE" title="kn::Rect"><span class="n"><span class="pre">Rect</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">crop</span></span></span><a class="headerlink" href="#_CPPv4N2kn4Tile4cropE" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn4Tile4rectE">
+<span id="_CPPv3N2kn4Tile4rectE"></span><span id="_CPPv2N2kn4Tile4rectE"></span><span id="kn::Tile::rect__Rect"></span><span class="target" id="structkn_1_1_tile_1abe91be0f6c7a3943b5927bf6f4995f66"></span><a class="reference internal" href="rect.html#_CPPv4N2kn4RectE" title="kn::Rect"><span class="n"><span class="pre">Rect</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rect</span></span></span><a class="headerlink" href="#_CPPv4N2kn4Tile4rectE" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
 </section>
 
         </article>
@@ -307,6 +333,12 @@
 <li><a class="reference internal" href="#_CPPv4N2kn7TileMapE"><code class="docutils literal notranslate"><span class="pre">TileMap</span></code></a><ul>
 <li><a class="reference internal" href="#_CPPv4N2kn7TileMap7TileMapER12TextureCacheRKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">TileMap::TileMap()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn7TileMap4drawEv"><code class="docutils literal notranslate"><span class="pre">TileMap::draw()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4N2kn4TileE"><code class="docutils literal notranslate"><span class="pre">Tile</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N2kn4Tile7textureE"><code class="docutils literal notranslate"><span class="pre">Tile::texture</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn4Tile4cropE"><code class="docutils literal notranslate"><span class="pre">Tile::crop</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn4Tile4rectE"><code class="docutils literal notranslate"><span class="pre">Tile::rect</span></code></a></li>
 </ul>
 </li>
 </ul>

@@ -10,14 +10,13 @@
         <argsstring></argsstring>
         <name>crop</name>
         <qualifiedname>kn::Entity::crop</qualifiedname>
-        <initializer>= {0, 0, 0, 0}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Entity.hpp" line="37" column="10" bodyfile="D:/Code/c++/Kraken-Engine/include/Entity.hpp" bodystart="37" bodyend="37"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Entity.hpp" line="37" column="10" bodyfile="D:/Code/c++/Kraken-Engine/include/Entity.hpp" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classkn_1_1_entity_1aca3c6b0924ad57ca9aa7816021b6e120" prot="public" static="no" mutable="no">
         <type><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref></type>
@@ -34,7 +33,7 @@
         <location file="D:/Code/c++/Kraken-Engine/include/Entity.hpp" line="38" column="10" bodyfile="D:/Code/c++/Kraken-Engine/include/Entity.hpp" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classkn_1_1_entity_1a9c6a28eba8f8340c16b49c1b8ec64462" prot="public" static="no" mutable="no">
-        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
         <definition>math::Vec2 kn::Entity::position</definition>
         <argsstring></argsstring>
         <name>position</name>
@@ -48,7 +47,7 @@
         <location file="D:/Code/c++/Kraken-Engine/include/Entity.hpp" line="39" column="16" bodyfile="D:/Code/c++/Kraken-Engine/include/Entity.hpp" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classkn_1_1_entity_1ad25589b0534f80990123989cecaca4ec" prot="public" static="no" mutable="no">
-        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
         <definition>math::Vec2 kn::Entity::direction</definition>
         <argsstring></argsstring>
         <name>direction</name>
@@ -62,7 +61,7 @@
         <location file="D:/Code/c++/Kraken-Engine/include/Entity.hpp" line="40" column="16" bodyfile="D:/Code/c++/Kraken-Engine/include/Entity.hpp" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classkn_1_1_entity_1a6644aaa615968606093840ae8dceeb85" prot="public" static="no" mutable="no">
-        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
         <definition>math::Vec2 kn::Entity::velocity</definition>
         <argsstring></argsstring>
         <name>velocity</name>
@@ -285,7 +284,7 @@
       </node>
       <node id="4">
         <label>kn::math::Vec2</label>
-        <link refid="structkn_1_1math_1_1_vec2"/>
+        <link refid="classkn_1_1math_1_1_vec2"/>
       </node>
     </collaborationgraph>
     <location file="D:/Code/c++/Kraken-Engine/include/Entity.hpp" line="19" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/Entity.hpp" bodystart="20" bodyend="112"/>

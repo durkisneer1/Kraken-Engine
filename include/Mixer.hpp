@@ -21,7 +21,7 @@ class Sound final
      *
      * @param fileDir The directory of the sound file.
      */
-    Sound(const std::string& fileDir);
+    explicit Sound(const std::string& fileDir);
     ~Sound()
     {
         if (sound)
@@ -35,7 +35,7 @@ class Sound final
      * @param maxMs The number of milliseconds to play the sound.
      * @param fadeMs The number of milliseconds to fade in.
      *
-     * @warning Fade in is currently not working.
+     * @warning ``fadeMS`` is currently not working.
      */
     void play(int loops = 0, int maxMs = -1, int fadeMs = 0);
 
@@ -52,8 +52,8 @@ class Sound final
     void unload();
 
   private:
-    Mix_Chunk* sound;
-    int volume;
+    Mix_Chunk* sound = nullptr;
+    float volume = MIX_MAX_VOLUME;
 };
 
 } // namespace mixer

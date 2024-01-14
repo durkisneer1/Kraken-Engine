@@ -4,7 +4,7 @@
     <compoundname>kn::input</compoundname>
     <sectiondef kind="func">
       <memberdef kind="function" id="namespacekn_1_1input_1ab94bdc7cf362294b49bad95aaefbc40e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
         <definition>math::Vec2 kn::input::getMousePos</definition>
         <argsstring>()</argsstring>
         <name>getMousePos</name>
@@ -58,7 +58,7 @@
         <location file="D:/Code/c++/Kraken-Engine/include/Input.hpp" line="34" column="13" declfile="D:/Code/c++/Kraken-Engine/include/Input.hpp" declline="34" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1input_1a318cd009ccea529aabb2aca1e60c0af7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
         <definition>math::Vec2 kn::input::getVector</definition>
         <argsstring>(const std::vector&lt; KEYS &gt; &amp;left={}, const std::vector&lt; KEYS &gt; &amp;right={}, const std::vector&lt; KEYS &gt; &amp;up={}, const std::vector&lt; KEYS &gt; &amp;down={})</argsstring>
         <name>getVector</name>

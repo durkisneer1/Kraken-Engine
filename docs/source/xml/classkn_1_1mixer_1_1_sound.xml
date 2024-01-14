@@ -10,6 +10,7 @@
         <argsstring></argsstring>
         <name>sound</name>
         <qualifiedname>kn::mixer::Sound::sound</qualifiedname>
+        <initializer>= nullptr</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -18,23 +19,24 @@
         </inbodydescription>
         <location file="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" line="55" column="15" bodyfile="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" bodystart="55" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classkn_1_1mixer_1_1_sound_1ad96d5f60a54485a1775347b56e9a14a5" prot="private" static="no" mutable="no">
-        <type>int</type>
-        <definition>int kn::mixer::Sound::volume</definition>
+      <memberdef kind="variable" id="classkn_1_1mixer_1_1_sound_1aa7bb03b50bf77871c2f8cdea50b16762" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float kn::mixer::Sound::volume</definition>
         <argsstring></argsstring>
         <name>volume</name>
         <qualifiedname>kn::mixer::Sound::volume</qualifiedname>
+        <initializer>= MIX_MAX_VOLUME</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" line="56" column="9" bodyfile="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" bodystart="56" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" line="56" column="11" bodyfile="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" bodystart="56" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classkn_1_1mixer_1_1_sound_1a42299fa9b02c6757c1e94488c4ea98c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classkn_1_1mixer_1_1_sound_1a42299fa9b02c6757c1e94488c4ea98c0" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
         <type></type>
         <definition>kn::mixer::Sound::Sound</definition>
         <argsstring>(const std::string &amp;fileDir)</argsstring>
@@ -61,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" line="24" column="5"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" line="24" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1mixer_1_1_sound_1a51a908b3be94bddd9600a745f2c46235" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -127,7 +129,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="warning"><para>Fade in is currently not working. </para>
+<simplesect kind="warning"><para><computeroutput>fadeMS</computeroutput> is currently not working. </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -192,7 +194,7 @@
       <member refid="classkn_1_1mixer_1_1_sound_1af2948e0b28a842c0e5063fe695bd1409" prot="private" virt="non-virtual"><scope>kn::mixer::Sound</scope><name>sound</name></member>
       <member refid="classkn_1_1mixer_1_1_sound_1a42299fa9b02c6757c1e94488c4ea98c0" prot="public" virt="non-virtual"><scope>kn::mixer::Sound</scope><name>Sound</name></member>
       <member refid="classkn_1_1mixer_1_1_sound_1a0b68437956ff10fbdebc20304df56e6f" prot="public" virt="non-virtual"><scope>kn::mixer::Sound</scope><name>unload</name></member>
-      <member refid="classkn_1_1mixer_1_1_sound_1ad96d5f60a54485a1775347b56e9a14a5" prot="private" virt="non-virtual"><scope>kn::mixer::Sound</scope><name>volume</name></member>
+      <member refid="classkn_1_1mixer_1_1_sound_1aa7bb03b50bf77871c2f8cdea50b16762" prot="private" virt="non-virtual"><scope>kn::mixer::Sound</scope><name>volume</name></member>
       <member refid="classkn_1_1mixer_1_1_sound_1a51a908b3be94bddd9600a745f2c46235" prot="public" virt="non-virtual"><scope>kn::mixer::Sound</scope><name>~Sound</name></member>
     </listofallmembers>
   </compounddef>

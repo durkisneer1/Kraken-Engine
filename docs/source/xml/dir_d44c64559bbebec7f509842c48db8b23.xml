@@ -12,6 +12,7 @@
     <innerfile refid="_kraken_engine_8hpp">KrakenEngine.hpp</innerfile>
     <innerfile refid="_math_8hpp">Math.hpp</innerfile>
     <innerfile refid="_mixer_8hpp">Mixer.hpp</innerfile>
+    <innerfile refid="_overflow_8hpp">Overflow.hpp</innerfile>
     <innerfile refid="_rect_8hpp">Rect.hpp</innerfile>
     <innerfile refid="_render_window_8hpp">RenderWindow.hpp</innerfile>
     <innerfile refid="_texture_8hpp">Texture.hpp</innerfile>

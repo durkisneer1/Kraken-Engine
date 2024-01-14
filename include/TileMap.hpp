@@ -50,8 +50,8 @@ class TileMap final
     RenderWindow& window = RenderWindow::getInstance();
     tmx::Map map;
 
-    std::vector<Tile> tileVec;
-    std::map<int, std::shared_ptr<Texture>> tileSetMap;
+    std::vector<Tile> tileVec = {};
+    std::map<int, std::shared_ptr<Texture>> tileSetMap = {};
 };
 
 } // namespace kn

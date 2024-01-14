@@ -2,24 +2,24 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="namespacekn_1_1math" kind="namespace" language="C++">
     <compoundname>kn::math</compoundname>
-    <innerclass refid="structkn_1_1math_1_1_vec2" prot="public">kn::math::Vec2</innerclass>
+    <innerclass refid="classkn_1_1math_1_1_vec2" prot="public">kn::math::Vec2</innerclass>
     <sectiondef kind="func">
       <memberdef kind="function" id="namespacekn_1_1math_1a8707b7484af546b0e9f57d8d78059a51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref></type>
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref></type>
         <definition>Vec2 kn::math::clampVec</definition>
         <argsstring>(Vec2 vec, const Vec2 &amp;min, const Vec2 &amp;max)</argsstring>
         <name>clampVec</name>
         <qualifiedname>kn::math::clampVec</qualifiedname>
         <param>
-          <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref></type>
+          <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref></type>
           <declname>vec</declname>
         </param>
         <param>
-          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref> &amp;</type>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref> &amp;</type>
           <declname>min</declname>
         </param>
         <param>
-          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref> &amp;</type>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref> &amp;</type>
           <declname>max</declname>
         </param>
         <briefdescription>
@@ -57,24 +57,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="67" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" declline="67" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="122" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" declline="122" declcolumn="6"/>
       </memberdef>
-      <memberdef kind="function" id="namespacekn_1_1math_1a88e50fa7f06deaef4b3fb1f9c26e22a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref></type>
+      <memberdef kind="function" id="namespacekn_1_1math_1a9a6ecf740568eb799b85a2f10d764de5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref></type>
         <definition>Vec2 kn::math::lerpVec</definition>
-        <argsstring>(const Vec2 &amp;a, const Vec2 &amp;b, float t)</argsstring>
+        <argsstring>(const Vec2 &amp;a, const Vec2 &amp;b, double t)</argsstring>
         <name>lerpVec</name>
         <qualifiedname>kn::math::lerpVec</qualifiedname>
         <param>
-          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref> &amp;</type>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref> &amp;</type>
           <declname>a</declname>
         </param>
         <param>
-          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref> &amp;</type>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref> &amp;</type>
           <declname>b</declname>
         </param>
         <param>
-          <type>float</type>
+          <type>double</type>
           <declname>t</declname>
         </param>
         <briefdescription>
@@ -112,13 +112,127 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="78" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" declline="78" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="133" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" declline="133" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacekn_1_1math_1a98048b6b75328ae4acbff11d314bfeae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref></type>
+        <definition>Vec2 kn::math::operator*</definition>
+        <argsstring>(const T &amp;lhs, const Vec2 &amp;rhs)</argsstring>
+        <name>operator*</name>
+        <qualifiedname>kn::math::operator*</qualifiedname>
+        <param>
+          <type>const T &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Multiplies a vector by a constant. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type of the constant </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the constant </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector scaled by the constant </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="143" column="18" bodyfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" bodystart="143" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacekn_1_1math_1aa46e046256f2e9707eac97345b3e251b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref></type>
+        <definition>Vec2 kn::math::operator*</definition>
+        <argsstring>(const Vec2 &amp;lhs, const T &amp;rhs)</argsstring>
+        <name>operator*</name>
+        <qualifiedname>kn::math::operator*</qualifiedname>
+        <param>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Multiplies a vector by a constant. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type of the constant </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the constant </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector scaled by the constant </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="165" column="18" bodyfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" bodystart="165" bodyend="165"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="5" column="1"/>
+    <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="13" column="1"/>
   </compounddef>
 </doxygen>

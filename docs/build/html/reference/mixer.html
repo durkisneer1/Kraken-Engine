@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="time" href="time.html" /><link rel="prev" title="math" href="math.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="overflow" href="overflow.html" /><link rel="prev" title="math" href="math.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
         <title>mixer - Kraken Engine</title>
@@ -163,6 +163,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="entity.html">Entity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error_logger.html">ErrorLogger</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rect.html">Rect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="render_window.html">RenderWindow</a></li>
@@ -174,6 +175,7 @@
 <li class="toctree-l2"><a class="reference internal" href="input.html">input</a></li>
 <li class="toctree-l2"><a class="reference internal" href="math.html">math</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">mixer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overflow.html">overflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="time.html">time</a></li>
 </ul>
 </li>
@@ -221,7 +223,7 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N2kn5mixer5Sound5SoundERKNSt6stringE">
-<span id="_CPPv3N2kn5mixer5Sound5SoundERKNSt6stringE"></span><span id="_CPPv2N2kn5mixer5Sound5SoundERKNSt6stringE"></span><span id="kn::mixer::Sound::Sound__ssCR"></span><span class="target" id="classkn_1_1mixer_1_1_sound_1a42299fa9b02c6757c1e94488c4ea98c0"></span><span class="sig-name descname"><span class="n"><span class="pre">Sound</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fileDir</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5mixer5Sound5SoundERKNSt6stringE" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N2kn5mixer5Sound5SoundERKNSt6stringE"></span><span id="_CPPv2N2kn5mixer5Sound5SoundERKNSt6stringE"></span><span id="kn::mixer::Sound::Sound__ssCR"></span><span class="target" id="classkn_1_1mixer_1_1_sound_1a42299fa9b02c6757c1e94488c4ea98c0"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sound</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fileDir</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5mixer5Sound5SoundERKNSt6stringE" title="Link to this definition">#</a><br /></dt>
 <dd><p>Create a sound. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -236,7 +238,7 @@
 <dd><p>Play the sound. </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Fade in is currently not working. </p>
+<p><code class="docutils literal notranslate"><span class="pre">fadeMS</span></code> is currently not working. </p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -276,12 +278,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="time.html">
+          <a class="next-page" href="overflow.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">time</div>
+                <div class="title">overflow</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>

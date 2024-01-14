@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_overflow_8hpp" kind="file" language="C++">
+    <compoundname>Overflow.hpp</compoundname>
+    <includes local="no">cmath</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">stdint.h</includes>
+    <includes refid="_constants_8hpp" local="yes">Constants.hpp</includes>
+    <includedby refid="_kraken_engine_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/KrakenEngine.hpp</includedby>
+    <includedby refid="_math_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/Math.hpp</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>Constants.hpp</label>
+        <link refid="_constants_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/Code/c++/Kraken-Engine/include/Overflow.hpp</label>
+        <link refid="_overflow_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>SDL.h</label>
+      </node>
+      <node id="2">
+        <label>cmath</label>
+      </node>
+      <node id="3">
+        <label>limits</label>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="8">
+        <label>D:/Code/c++/Kraken-Engine/include/Draw.hpp</label>
+        <link refid="_draw_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>D:/Code/c++/Kraken-Engine/include/Entity.hpp</label>
+        <link refid="_entity_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>D:/Code/c++/Kraken-Engine/include/Font.hpp</label>
+        <link refid="_font_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>D:/Code/c++/Kraken-Engine/include/Globals.hpp</label>
+        <link refid="_globals_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>D:/Code/c++/Kraken-Engine/include/Input.hpp</label>
+        <link refid="_input_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>D:/Code/c++/Kraken-Engine/include/KrakenEngine.hpp</label>
+        <link refid="_kraken_engine_8hpp"/>
+      </node>
+      <node id="3">
+        <label>D:/Code/c++/Kraken-Engine/include/Math.hpp</label>
+        <link refid="_math_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/Code/c++/Kraken-Engine/include/Overflow.hpp</label>
+        <link refid="_overflow_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>D:/Code/c++/Kraken-Engine/include/Rect.hpp</label>
+        <link refid="_rect_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp</label>
+        <link refid="_render_window_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>D:/Code/c++/Kraken-Engine/include/Texture.hpp</label>
+        <link refid="_texture_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>D:/Code/c++/Kraken-Engine/include/TextureCache.hpp</label>
+        <link refid="_texture_cache_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>D:/Code/c++/Kraken-Engine/include/TileMap.hpp</label>
+        <link refid="_tile_map_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacekn">kn</innernamespace>
+    <innernamespace refid="namespacekn_1_1overflow">kn::overflow</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MATH_OVERFLOW_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MATH_OVERFLOW_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_constants_8hpp" kindref="compound">Constants.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacekn" kindref="compound">kn</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="namespacekn_1_1overflow" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">overflow</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="namespacekn_1_1overflow_1a25ab9731e8502f23db1ab8742ccb35d1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1_1overflow_1a25ab9731e8502f23db1ab8742ccb35d1" kindref="member">isSumValid</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1a78388bdab82eefeb22b5ec58e12eb0d9" kindref="member">float64_t</ref>&amp;<sp/>first,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1a78388bdab82eefeb22b5ec58e12eb0d9" kindref="member">float64_t</ref>&amp;<sp/>second);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="namespacekn_1_1overflow_1a1e2b14657503be12a66a856450d86dbf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1_1overflow_1a25ab9731e8502f23db1ab8742ccb35d1" kindref="member">isSumValid</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1aa4afeb9761786f8b7b45f49db7bc0b1a" kindref="member">float32_t</ref>&amp;<sp/>first,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1aa4afeb9761786f8b7b45f49db7bc0b1a" kindref="member">float32_t</ref>&amp;<sp/>second);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="namespacekn_1_1overflow_1a4bf336d52bc2e64c29ef02b6de188019" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1_1overflow_1a25ab9731e8502f23db1ab8742ccb35d1" kindref="member">isSumValid</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t&amp;<sp/>first,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t&amp;<sp/>second);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="namespacekn_1_1overflow_1a6be2d4d95ceafe583e17eb9f4012ffcf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1_1overflow_1a25ab9731e8502f23db1ab8742ccb35d1" kindref="member">isSumValid</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint64_t&amp;<sp/>first,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint64_t&amp;<sp/>second);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="namespacekn_1_1overflow_1ada0ca3132f003596ccef488fd069aa6a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1_1overflow_1a25ab9731e8502f23db1ab8742ccb35d1" kindref="member">isSumValid</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32_t&amp;<sp/>first,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32_t&amp;<sp/>second);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="namespacekn_1_1overflow_1a2f8cec4c7b67aa9ed81f0bc1bfc70958" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1_1overflow_1a25ab9731e8502f23db1ab8742ccb35d1" kindref="member">isSumValid</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int64_t&amp;<sp/>first,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int64_t&amp;<sp/>second);</highlight></codeline>
+<codeline lineno="36"></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="namespacekn_1_1overflow_1aedd4a8f8c97bd656ef79b194c0d9ab95" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1_1overflow_1aedd4a8f8c97bd656ef79b194c0d9ab95" kindref="member">isProductValid</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1a78388bdab82eefeb22b5ec58e12eb0d9" kindref="member">float64_t</ref>&amp;<sp/>first,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1a78388bdab82eefeb22b5ec58e12eb0d9" kindref="member">float64_t</ref>&amp;<sp/>second);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="namespacekn_1_1overflow_1ac796f84b0d52b38f495e7ba776e195d4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1_1overflow_1aedd4a8f8c97bd656ef79b194c0d9ab95" kindref="member">isProductValid</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1aa4afeb9761786f8b7b45f49db7bc0b1a" kindref="member">float32_t</ref>&amp;<sp/>first,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1aa4afeb9761786f8b7b45f49db7bc0b1a" kindref="member">float32_t</ref>&amp;<sp/>second);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="namespacekn_1_1overflow_1afefec0547816919c2437e88d37fd8490" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1_1overflow_1aedd4a8f8c97bd656ef79b194c0d9ab95" kindref="member">isProductValid</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t&amp;<sp/>first,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t&amp;<sp/>second);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="namespacekn_1_1overflow_1a9b3581d891889d52669940436cc12c04" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1_1overflow_1aedd4a8f8c97bd656ef79b194c0d9ab95" kindref="member">isProductValid</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint64_t&amp;<sp/>first,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint64_t&amp;<sp/>second);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="namespacekn_1_1overflow_1a66e6261965e16ff6a11370fe068aba0e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1_1overflow_1aedd4a8f8c97bd656ef79b194c0d9ab95" kindref="member">isProductValid</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32_t&amp;<sp/>first,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32_t&amp;<sp/>second);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="namespacekn_1_1overflow_1a24a49539a10f1d745cf7936fda3243ce" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1_1overflow_1aedd4a8f8c97bd656ef79b194c0d9ab95" kindref="member">isProductValid</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int64_t&amp;<sp/>first,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int64_t&amp;<sp/>second);</highlight></codeline>
+<codeline lineno="57"></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="namespacekn_1_1overflow_1a03ba5307ac62ee0ca8eb795b6a4fb401" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1_1overflow_1a03ba5307ac62ee0ca8eb795b6a4fb401" kindref="member">closeToZero</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1a78388bdab82eefeb22b5ec58e12eb0d9" kindref="member">float64_t</ref>&amp;<sp/>value,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1a78388bdab82eefeb22b5ec58e12eb0d9" kindref="member">float64_t</ref><sp/>tolerance<sp/>=<sp/>0.0001);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="namespacekn_1_1overflow_1ab2861cc5b433dc24b0d9d0b2139f3af8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1_1overflow_1a03ba5307ac62ee0ca8eb795b6a4fb401" kindref="member">closeToZero</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1aa4afeb9761786f8b7b45f49db7bc0b1a" kindref="member">float32_t</ref>&amp;<sp/>value,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1aa4afeb9761786f8b7b45f49db7bc0b1a" kindref="member">float32_t</ref><sp/>tolerance<sp/>=<sp/>0.0001f);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>overflow</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>kn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>MATH_OVERFLOW_HPP</highlight></codeline>
+    </programlisting>
+    <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp"/>
+  </compounddef>
+</doxygen>

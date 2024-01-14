@@ -9,13 +9,10 @@ Font::Font(const std::string& fileDir, int ptSize)
 {
     font = TTF_OpenFont(fileDir.c_str(), ptSize);
     if (!font)
-    {
         FATAL("Failed to load font: " + std::string(TTF_GetError()));
-        exit(3);
-    }
 }
 
-std::shared_ptr<Texture> Font::render(const std::string& text, bool antialias, SDL_Color color,
+std::shared_ptr<Texture> Font::render(const std::string& text, bool antialias, Color color,
                                       int wrapLength)
 {
     SDL_Surface* surface;
@@ -30,19 +27,13 @@ std::shared_ptr<Texture> Font::render(const std::string& text, bool antialias, S
     else
         surface = TTF_RenderText_Solid(font, text.c_str(), color);
 
-    if (surface == nullptr)
-    {
+    if (!surface)
         FATAL("Failed to render text: " + std::string(TTF_GetError()));
-        exit(3);
-    }
 
     SDL_Texture* sdlTexture =
         SDL_CreateTextureFromSurface(RenderWindow::getInstance().getRenderer(), surface);
-    if (sdlTexture == nullptr)
-    {
+    if (!sdlTexture)
         FATAL("Failed to create texture: " + std::string(SDL_GetError()));
-        exit(3);
-    }
 
     std::shared_ptr<Texture> texture = std::make_shared<Texture>(sdlTexture);
     SDL_FreeSurface(surface);

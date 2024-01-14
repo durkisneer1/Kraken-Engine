@@ -33,18 +33,18 @@ Before starting, ensure you have a C++ compiler, `cmake <https://cmake.org/downl
     The ``CMakeLists.txt`` file is still under development as it is currently a difficult process to include and link dependencies.
     As of now, you must include these directories:
 
-    * ``Kraken-Engine/build/_deps/sdl-src/include``
-    * ``Kraken-Engine/build/_deps/sdl_ttf-src``
-    * ``Kraken-Engine/build/_deps/sdl_mixer-src/include``
-    * ``Kraken-Engine/build/_deps/sdl_image-src/include``
-    * ``Kraken-Engine/build/_deps/tmxlite-src/tmxlite/include``
-    * ``Kraken-Engine/include``
+    * ``/Kraken-Engine/include``
+    * ``/Kraken-Engine/build/_deps/sdl2-src/include``
+    * ``/Kraken-Engine/build/_deps/sdl2_ttf-src``
+    * ``/Kraken-Engine/build/_deps/sdl2_mixer-src/include``
+    * ``/Kraken-Engine/build/_deps/sdl2_image-src/include``
+    * ``/Kraken-Engine/build/_deps/tmxlite-src/tmxlite/include``
 
     And for linking, you must use these directories:
 
-    * ``Kraken-Engine/build``
-    * ``Kraken-Engine/bin``
-    * ``Kraken-Engine/build/_deps/sdl_image-build``
-    * ``Kraken-Engine/build/_deps/sdl_mixer-build``
-    * ``Kraken-Engine/build/_deps/sdl_ttf-build``
-    * ``Kraken-Engine/build/_deps/freetype-build``
+    * ``/Kraken-Engine/build``
+    * ``/Kraken-Engine/build/_deps/sdl2_build``
+    * ``/Kraken-Engine/build/_deps/sdl2_image-build``
+    * ``/Kraken-Engine/build/_deps/sdl2_mixer-build``
+    * ``/Kraken-Engine/build/_deps/sdl2_ttf-build``
+    * ``/Kraken-Engine/build/_deps/tmxlite-build``

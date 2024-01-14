@@ -10,13 +10,14 @@
         <argsstring></argsstring>
         <name>textures</name>
         <qualifiedname>kn::TextureCache::textures</qualifiedname>
+        <initializer>= {}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="93" column="14" bodyfile="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" bodystart="93" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" line="93" column="14" bodyfile="D:/Code/c++/Kraken-Engine/include/TextureCache.hpp" bodystart="93" bodyend="93"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -103,7 +104,7 @@
           <declname>name</declname>
         </param>
         <param>
-          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
           <declname>size</declname>
         </param>
         <param>

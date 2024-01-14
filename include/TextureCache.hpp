@@ -90,7 +90,7 @@ class TextureCache final
     std::shared_ptr<Texture> getTexture(const std::string& name) const;
 
   private:
-    std::map<std::string, std::shared_ptr<Texture>> textures;
+    std::map<std::string, std::shared_ptr<Texture>> textures = {};
 };
 
 } // namespace kn

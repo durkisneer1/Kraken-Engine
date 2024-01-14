@@ -10,7 +10,7 @@
 namespace kn
 {
 
-namespace Overflow
+namespace overflow
 {
 
 //@{
@@ -68,7 +68,7 @@ bool closeToZero(const float64_t& value, const float64_t tolerance = 0.0001);
 bool closeToZero(const float32_t& value, const float32_t tolerance = 0.0001f);
 //@}
 
-} // namespace Overflow
+} // namespace overflow
 
 } // namespace kn
 

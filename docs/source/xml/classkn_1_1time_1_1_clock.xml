@@ -4,12 +4,13 @@
     <compoundname>kn::time::Clock</compoundname>
     <includes refid="_time_8hpp" local="no">Time.hpp</includes>
     <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classkn_1_1time_1_1_clock_1a7f1f72c3b782c1b2bfc2c8342b9c673b" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classkn_1_1time_1_1_clock_1a8ea3cd11cbc15bbcf1ea37a810676839" prot="private" static="no" mutable="no">
         <type>double</type>
-        <definition>double kn::time::Clock::frameTime</definition>
+        <definition>double kn::time::Clock::m_frameTime</definition>
         <argsstring></argsstring>
-        <name>frameTime</name>
-        <qualifiedname>kn::time::Clock::frameTime</qualifiedname>
+        <name>m_frameTime</name>
+        <qualifiedname>kn::time::Clock::m_frameTime</qualifiedname>
+        <initializer>= 0.0</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -18,41 +19,13 @@
         </inbodydescription>
         <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="31" column="12" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="31" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classkn_1_1time_1_1_clock_1a5961b337680bcdeeeaddd95f8e916c2e" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classkn_1_1time_1_1_clock_1a49a9a9a3f47340c08216c32ae66cb85a" prot="private" static="no" mutable="no">
         <type>double</type>
-        <definition>double kn::time::Clock::targetFrameTime</definition>
+        <definition>double kn::time::Clock::m_targetFrameTime</definition>
         <argsstring></argsstring>
-        <name>targetFrameTime</name>
-        <qualifiedname>kn::time::Clock::targetFrameTime</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="31" column="22" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="31" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classkn_1_1time_1_1_clock_1ae17a2688be0a7f31c6ce9edca697085a" prot="private" static="no" mutable="no">
-        <type>double</type>
-        <definition>double kn::time::Clock::deltaTime</definition>
-        <argsstring></argsstring>
-        <name>deltaTime</name>
-        <qualifiedname>kn::time::Clock::deltaTime</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="31" column="38" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="31" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classkn_1_1time_1_1_clock_1ae61b9cac713eae497f93f6958086263a" prot="private" static="no" mutable="no">
-        <type>double</type>
-        <definition>double kn::time::Clock::frequency</definition>
-        <argsstring></argsstring>
-        <name>frequency</name>
-        <qualifiedname>kn::time::Clock::frequency</qualifiedname>
-        <initializer>= SDL_GetPerformanceFrequency()</initializer>
+        <name>m_targetFrameTime</name>
+        <qualifiedname>kn::time::Clock::m_targetFrameTime</qualifiedname>
+        <initializer>= 0.0</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -61,12 +34,13 @@
         </inbodydescription>
         <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="32" column="12" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="32" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classkn_1_1time_1_1_clock_1a7c0b8024e62cde73189387621ef14e53" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classkn_1_1time_1_1_clock_1a55ab147e4812c3a8667e9d7a12185348" prot="private" static="no" mutable="no">
         <type>double</type>
-        <definition>double kn::time::Clock::now</definition>
+        <definition>double kn::time::Clock::m_deltaTime</definition>
         <argsstring></argsstring>
-        <name>now</name>
-        <qualifiedname>kn::time::Clock::now</qualifiedname>
+        <name>m_deltaTime</name>
+        <qualifiedname>kn::time::Clock::m_deltaTime</qualifiedname>
+        <initializer>= 0.0</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -75,12 +49,27 @@
         </inbodydescription>
         <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="33" column="12" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="33" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classkn_1_1time_1_1_clock_1a336ee3c672af4dea1d9e3a1ddff8cea3" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classkn_1_1time_1_1_clock_1a055e2c60f4b2c9de902d048d1b3b8335" prot="private" static="no" mutable="no">
         <type>double</type>
-        <definition>double kn::time::Clock::last</definition>
+        <definition>double kn::time::Clock::m_frequency</definition>
         <argsstring></argsstring>
-        <name>last</name>
-        <qualifiedname>kn::time::Clock::last</qualifiedname>
+        <name>m_frequency</name>
+        <qualifiedname>kn::time::Clock::m_frequency</qualifiedname>
+        <initializer>= SDL_GetPerformanceFrequency()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="34" column="12" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classkn_1_1time_1_1_clock_1a755af5e4a40933fb411d161f210b9d9a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double kn::time::Clock::m_now</definition>
+        <argsstring></argsstring>
+        <name>m_now</name>
+        <qualifiedname>kn::time::Clock::m_now</qualifiedname>
         <initializer>= SDL_GetPerformanceCounter()</initializer>
         <briefdescription>
         </briefdescription>
@@ -88,14 +77,29 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="33" column="16" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="33" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="35" column="12" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classkn_1_1time_1_1_clock_1a9db5b2acc7ec28e6ff2aa2042de96a25" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double kn::time::Clock::m_last</definition>
+        <argsstring></argsstring>
+        <name>m_last</name>
+        <qualifiedname>kn::time::Clock::m_last</qualifiedname>
+        <initializer>= SDL_GetPerformanceCounter()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="36" column="12" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="36" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classkn_1_1time_1_1_clock_1a01ac404d47e055669c1a69b79b4a7fd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classkn_1_1time_1_1_clock_1aa29d38b9090f4f03856011c8e5945ab4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>kn::time::Clock::Clock</definition>
-        <argsstring>()=default</argsstring>
+        <argsstring>()</argsstring>
         <name>Clock</name>
         <qualifiedname>kn::time::Clock::Clock</qualifiedname>
         <briefdescription>
@@ -161,15 +165,15 @@
 </simplesect>
 </para>
     </detaileddescription>
-    <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="15" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="16" bodyend="34"/>
+    <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="15" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="16" bodyend="37"/>
     <listofallmembers>
-      <member refid="classkn_1_1time_1_1_clock_1a01ac404d47e055669c1a69b79b4a7fd8" prot="public" virt="non-virtual"><scope>kn::time::Clock</scope><name>Clock</name></member>
-      <member refid="classkn_1_1time_1_1_clock_1ae17a2688be0a7f31c6ce9edca697085a" prot="private" virt="non-virtual"><scope>kn::time::Clock</scope><name>deltaTime</name></member>
-      <member refid="classkn_1_1time_1_1_clock_1a7f1f72c3b782c1b2bfc2c8342b9c673b" prot="private" virt="non-virtual"><scope>kn::time::Clock</scope><name>frameTime</name></member>
-      <member refid="classkn_1_1time_1_1_clock_1ae61b9cac713eae497f93f6958086263a" prot="private" virt="non-virtual"><scope>kn::time::Clock</scope><name>frequency</name></member>
-      <member refid="classkn_1_1time_1_1_clock_1a336ee3c672af4dea1d9e3a1ddff8cea3" prot="private" virt="non-virtual"><scope>kn::time::Clock</scope><name>last</name></member>
-      <member refid="classkn_1_1time_1_1_clock_1a7c0b8024e62cde73189387621ef14e53" prot="private" virt="non-virtual"><scope>kn::time::Clock</scope><name>now</name></member>
-      <member refid="classkn_1_1time_1_1_clock_1a5961b337680bcdeeeaddd95f8e916c2e" prot="private" virt="non-virtual"><scope>kn::time::Clock</scope><name>targetFrameTime</name></member>
+      <member refid="classkn_1_1time_1_1_clock_1aa29d38b9090f4f03856011c8e5945ab4" prot="public" virt="non-virtual"><scope>kn::time::Clock</scope><name>Clock</name></member>
+      <member refid="classkn_1_1time_1_1_clock_1a55ab147e4812c3a8667e9d7a12185348" prot="private" virt="non-virtual"><scope>kn::time::Clock</scope><name>m_deltaTime</name></member>
+      <member refid="classkn_1_1time_1_1_clock_1a8ea3cd11cbc15bbcf1ea37a810676839" prot="private" virt="non-virtual"><scope>kn::time::Clock</scope><name>m_frameTime</name></member>
+      <member refid="classkn_1_1time_1_1_clock_1a055e2c60f4b2c9de902d048d1b3b8335" prot="private" virt="non-virtual"><scope>kn::time::Clock</scope><name>m_frequency</name></member>
+      <member refid="classkn_1_1time_1_1_clock_1a9db5b2acc7ec28e6ff2aa2042de96a25" prot="private" virt="non-virtual"><scope>kn::time::Clock</scope><name>m_last</name></member>
+      <member refid="classkn_1_1time_1_1_clock_1a755af5e4a40933fb411d161f210b9d9a" prot="private" virt="non-virtual"><scope>kn::time::Clock</scope><name>m_now</name></member>
+      <member refid="classkn_1_1time_1_1_clock_1a49a9a9a3f47340c08216c32ae66cb85a" prot="private" virt="non-virtual"><scope>kn::time::Clock</scope><name>m_targetFrameTime</name></member>
       <member refid="classkn_1_1time_1_1_clock_1a6d4652b18060b534cad6dedf9f021c56" prot="public" virt="non-virtual"><scope>kn::time::Clock</scope><name>tick</name></member>
       <member refid="classkn_1_1time_1_1_clock_1a56cc398c51d9cb271b2d405999e2152b" prot="public" virt="non-virtual"><scope>kn::time::Clock</scope><name>~Clock</name></member>
     </listofallmembers>

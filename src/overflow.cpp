@@ -1,9 +1,9 @@
-#include "MathOverflow.hpp"
+#include "Overflow.hpp"
 
 namespace kn
 {
 
-namespace Overflow
+namespace overflow
 {
 
 bool isSumValid(const float64_t& first, const float64_t& second)
@@ -52,24 +52,23 @@ bool isSumValid(const float32_t& first, const float32_t& second)
             return false;
         }
     }
+
     return true;
 }
 
 bool isSumValid(const uint32_t& first, const uint32_t& second)
 {
     if (first > std::numeric_limits<uint32_t>::max() - second)
-    {
         return false;
-    }
+
     return true;
 }
 
 bool isSumValid(const uint64_t& first, const uint64_t& second)
 {
     if (first > std::numeric_limits<uint64_t>::max() - second)
-    {
         return false;
-    }
+
     return true;
 }
 
@@ -91,6 +90,7 @@ bool isSumValid(const int32_t& first, const int32_t& second)
             return false;
         }
     }
+
     return true;
 }
 
@@ -112,27 +112,22 @@ bool isSumValid(const int64_t& first, const int64_t& second)
             return false;
         }
     }
+
     return true;
 }
 
 bool isProductValid(const float64_t& first, const float64_t& second)
 {
     if (!std::isfinite(first) || !std::isfinite(second))
-    {
         // one of them is NaN or inf
         return false;
-    }
 
     float64_t absFirst = std::fabs(first);
     float64_t absSecond = std::fabs(second);
 
     if (absFirst > 1.0 && absSecond > 1.0)
-    {
         if (absFirst > std::numeric_limits<float64_t>::max() / absSecond)
-        {
             return false;
-        }
-    }
 
     return true;
 }
@@ -140,21 +135,15 @@ bool isProductValid(const float64_t& first, const float64_t& second)
 bool isProductValid(const float32_t& first, const float32_t& second)
 {
     if (!std::isfinite(first) || !std::isfinite(second))
-    {
         // one of them is NaN or inf
         return false;
-    }
 
     float32_t absFirst = std::fabs(first);
     float32_t absSecond = std::fabs(second);
 
     if (absFirst > 1.0 && absSecond > 1.0)
-    {
         if (absFirst > std::numeric_limits<float32_t>::max() / absSecond)
-        {
             return false;
-        }
-    }
 
     return true;
 }
@@ -162,12 +151,8 @@ bool isProductValid(const float32_t& first, const float32_t& second)
 bool isProductValid(const uint32_t& first, const uint32_t& second)
 {
     if (first > 0U && second > 0U)
-    {
         if (first > std::numeric_limits<uint32_t>::max() / second)
-        {
             return false;
-        }
-    }
 
     return true;
 }
@@ -175,12 +160,8 @@ bool isProductValid(const uint32_t& first, const uint32_t& second)
 bool isProductValid(const uint64_t& first, const uint64_t& second)
 {
     if (first > 0U && second > 0U)
-    {
         if (first > std::numeric_limits<uint64_t>::max() / second)
-        {
             return false;
-        }
-    }
 
     return true;
 }
@@ -229,16 +210,14 @@ bool isProductValid(const int64_t& first, const int64_t& second)
             }
             else if (first > 0)
             {
-                // must divide by positive
-                if (second < std::numeric_limits<int64_t>::min() / first)
+                if (second < -std::numeric_limits<int64_t>::max() / first)
                 {
                     return false;
                 }
             }
             else
             {
-                // must divide by positive
-                if (first < std::numeric_limits<int64_t>::min() / second)
+                if (first < -std::numeric_limits<int64_t>::max() / second)
                 {
                     return false;
                 }
@@ -252,9 +231,7 @@ bool isProductValid(const int64_t& first, const int64_t& second)
 bool closeToZero(const float64_t& value, const float64_t tolerance)
 {
     if (std::fabs(value) < tolerance)
-    {
         return true;
-    }
 
     return false;
 }
@@ -262,12 +239,10 @@ bool closeToZero(const float64_t& value, const float64_t tolerance)
 bool closeToZero(const float32_t& value, const float32_t tolerance)
 {
     if (std::fabs(value) < tolerance)
-    {
         return true;
-    }
 
     return false;
 }
 
-} // namespace Overflow
+} // namespace overflow
 } // namespace kn

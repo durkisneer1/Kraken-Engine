@@ -19,31 +19,27 @@ RenderWindow& RenderWindow::getInstance()
 
 RenderWindow::RenderWindow()
 {
-    if (SDL_Init(SDL_INIT_VIDEO))
+    if (SDL_Init(SDL_INIT_VIDEO) < 0)
     {
         FATAL("SDL_Init Error: " + std::string(SDL_GetError()));
-        exit(3);
     }
     if (!IMG_Init(IMG_INIT_PNG))
     {
         FATAL("IMG_Init Error: " + std::string(IMG_GetError()));
         SDL_Quit();
-        exit(3);
     }
-    if (TTF_Init() < 0)
+    if (TTF_Init() == -1)
     {
         FATAL("TTF_Init Error: " + std::string(TTF_GetError()));
         IMG_Quit();
         SDL_Quit();
-        exit(3);
     }
-    if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0)
+    if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) == -1)
     {
         FATAL("Mix_OpenAudio Error: " + std::string(Mix_GetError()));
         TTF_Quit();
         IMG_Quit();
         SDL_Quit();
-        exit(3);
     }
 
     this->m_window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
@@ -53,8 +49,7 @@ RenderWindow::RenderWindow()
     if (!m_window)
     {
         FATAL("SDL_CreateWindow Error: " + std::string(SDL_GetError()));
-        SDL_Quit();
-        exit(3);
+        clean();
     }
 
     m_renderer = SDL_CreateRenderer(m_window, -1, SDL_RENDERER_ACCELERATED);
@@ -63,8 +58,7 @@ RenderWindow::RenderWindow()
     {
         FATAL("SDL_CreateRenderer Error: " + std::string(SDL_GetError()));
         SDL_DestroyWindow(m_window);
-        SDL_Quit();
-        exit(3);
+        clean();
     }
 
     if (scale > 1)
@@ -74,7 +68,9 @@ RenderWindow::RenderWindow()
     }
 }
 
-RenderWindow::~RenderWindow()
+RenderWindow::~RenderWindow() { clean(); }
+
+void RenderWindow::clean() const
 {
     SDL_DestroyRenderer(m_renderer);
     SDL_DestroyWindow(m_window);
@@ -84,17 +80,16 @@ RenderWindow::~RenderWindow()
     SDL_Quit();
 }
 
-const std::vector<SDL_Event>& RenderWindow::getEvents()
+const std::vector<Event>& RenderWindow::getEvents()
 {
     m_events.clear();
     while (SDL_PollEvent(&m_event))
-    {
         m_events.push_back(m_event);
-    }
+
     return m_events;
 }
 
-void RenderWindow::cls(SDL_Color color)
+void RenderWindow::cls(Color color)
 {
     SDL_SetRenderDrawColor(m_renderer, color.r, color.g, color.b, color.a);
     SDL_RenderClear(m_renderer);
@@ -119,8 +114,8 @@ void RenderWindow::blit(const std::shared_ptr<Texture>& texture, Rect crop, Rect
 
 void RenderWindow::blit(const std::shared_ptr<Texture>& texture, const math::Vec2& position)
 {
-    SDL_FRect rect = {(float)position.x, (float)position.y, (float)texture->getSize().x,
-                      (float)texture->getSize().y};
+    Rect rect = {(float)position.x, (float)position.y, (float)texture->getSize().x,
+                 (float)texture->getSize().y};
 
     SDL_RenderCopyF(m_renderer, texture->getSDLTexture(), nullptr, &rect);
 }
@@ -130,13 +125,9 @@ void RenderWindow::blitEx(const std::shared_ptr<Texture>& texture, Rect crop, Re
 {
     SDL_RendererFlip flip = SDL_FLIP_NONE;
     if (flipX)
-    {
         flip = (SDL_RendererFlip)(flip | SDL_FLIP_HORIZONTAL);
-    }
     if (flipY)
-    {
         flip = (SDL_RendererFlip)(flip | SDL_FLIP_VERTICAL);
-    }
 
     if (crop.getSize() == math::Vec2::ZERO())
     {
@@ -159,16 +150,12 @@ void RenderWindow::blitEx(const std::shared_ptr<Texture>& texture, const math::V
 {
     SDL_RendererFlip flip = SDL_FLIP_NONE;
     if (flipX)
-    {
         flip = (SDL_RendererFlip)(flip | SDL_FLIP_HORIZONTAL);
-    }
     if (flipY)
-    {
         flip = (SDL_RendererFlip)(flip | SDL_FLIP_VERTICAL);
-    }
 
-    SDL_FRect rect = {(float)position.x, (float)position.y, (float)texture->getSize().x,
-                      (float)texture->getSize().y};
+    Rect rect = {(float)position.x, (float)position.y, (float)texture->getSize().x,
+                 (float)texture->getSize().y};
 
     SDL_RenderCopyExF(m_renderer, texture->getSDLTexture(), nullptr, &rect, angle, nullptr, flip);
 }
@@ -184,28 +171,22 @@ void RenderWindow::setTitle(const std::string& newTitle)
 {
     title = newTitle;
 
-    if (m_window != nullptr)
-    {
+    if (m_window)
         SDL_SetWindowTitle(m_window, newTitle.c_str());
-    }
 }
 
 void RenderWindow::setFullscreen(bool fullscreenValue)
 {
     fullscreen = fullscreenValue;
 
-    if (m_window != nullptr)
-    {
+    if (m_window)
         SDL_SetWindowFullscreen(m_window, fullscreen);
-    }
 }
 
 void RenderWindow::setScale(int newScale)
 {
     if (instanceCreated)
-    {
         WARN("Cannot set scale after creating the window");
-    }
 
     scale = std::min(std::max(newScale, 1), 32);
 }

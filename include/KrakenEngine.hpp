@@ -9,6 +9,7 @@
 #include "Input.hpp"
 #include "Math.hpp"
 #include "Mixer.hpp"
+#include "Overflow.hpp"
 #include "Rect.hpp"
 #include "RenderWindow.hpp"
 #include "Texture.hpp"

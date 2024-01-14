@@ -3,13 +3,13 @@
 
 #include "ErrorLogger.hpp"
 #include "Math.hpp"
-#include "MathOverflow.hpp"
 
 namespace kn
 {
 
-using Overflow::isProductValid;
-using Overflow::isSumValid;
+using overflow::closeToZero;
+using overflow::isProductValid;
+using overflow::isSumValid;
 
 namespace math
 {
@@ -96,9 +96,7 @@ bool Vec2::operator==(const Vec2& other) const
     }
 
     if (!closeToZero(x - other.x, tolerance) || !closeToZero(y - other.y, tolerance))
-    {
         return false;
-    }
 
     return true;
 }

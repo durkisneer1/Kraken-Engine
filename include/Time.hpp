@@ -28,12 +28,12 @@ class Clock final
     double tick(int frameRate = 60);
 
   private:
-    double m_frameTime;
-    double m_targetFrameTime;
-    double m_deltaTime;
-    double m_frequency;
-    double m_now;
-    double m_last;
+    double m_frameTime = 0.0;
+    double m_targetFrameTime = 0.0;
+    double m_deltaTime = 0.0;
+    double m_frequency = SDL_GetPerformanceFrequency();
+    double m_now = SDL_GetPerformanceCounter();
+    double m_last = SDL_GetPerformanceCounter();
 };
 
 } // namespace time

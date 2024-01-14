@@ -17,7 +17,6 @@ TileMap::TileMap(TextureCache& textureCache, const std::string& tmxPath)
     }
 
     int mapWidth = map.getTileCount().x;
-    int mapHeight = map.getTileCount().y;
     int tileWidth = map.getTileSize().x;
     int tileHeight = map.getTileSize().y;
 
@@ -37,36 +36,35 @@ TileMap::TileMap(TextureCache& textureCache, const std::string& tmxPath)
             const auto& tileLayer = layer->getLayerAs<tmx::TileLayer>();
             const auto& layerTiles = tileLayer.getTiles();
 
-            for (int y = 0; y < mapHeight; ++y)
+            for (uint64_t i = 0; i < layerTiles.size(); ++i)
             {
-                for (int x = 0; x < mapWidth; ++x)
-                {
-                    int currentGID = layerTiles[y * mapWidth + x].ID;
-                    if (currentGID == 0)
-                        continue;
+                int currentGID = layerTiles[i].ID;
+                if (currentGID == 0)
+                    continue;
 
-                    int tileSetGID = -1;
-                    auto it = std::find_if(tileSetMap.rbegin(), tileSetMap.rend(),
-                                           [currentGID](const auto& tileSet)
-                                           { return currentGID >= tileSet.first; });
-                    if (it != tileSetMap.rend())
-                        tileSetGID = it->first;
-                    if (tileSetGID == -1)
-                        continue;
+                int tileSetGID = -1;
+                auto it = std::find_if(tileSetMap.rbegin(), tileSetMap.rend(),
+                                       [currentGID](const auto& tileSet)
+                                       { return currentGID >= tileSet.first; });
 
-                    currentGID -= tileSetGID;
-                    int tileSetWidth = tileSetMap[tileSetGID]->getSize().x;
+                if (it != tileSetMap.rend())
+                    tileSetGID = it->first;
+                if (tileSetGID == -1)
+                    continue;
 
-                    int regionX = (currentGID % (tileSetWidth / tileWidth)) * tileWidth;
-                    int regionY = (currentGID / (tileSetWidth / tileWidth)) * tileHeight;
+                currentGID -= tileSetGID;
+                auto tile = tileSetMap[tileSetGID];
+                int tileSetWidth = tile->getSize().x;
 
-                    int xPos = (x * tileWidth);
-                    int yPos = (y * tileHeight);
+                int regionX = (currentGID % (tileSetWidth / tileWidth)) * tileWidth;
+                int regionY = (currentGID / (tileSetWidth / tileWidth)) * tileHeight;
 
-                    tileVec.emplace_back(Tile{tileSetMap[tileSetGID],
-                                              {regionX, regionY, tileWidth, tileHeight},
-                                              {xPos, yPos, tileWidth, tileHeight}});
-                }
+                int xPos = (i % mapWidth) * tileWidth;
+                int yPos = (i / mapWidth) * tileHeight;
+
+                tileVec.emplace_back(Tile{tile,
+                                          {regionX, regionY, tileWidth, tileHeight},
+                                          {xPos, yPos, tileWidth, tileHeight}});
             }
         }
     }

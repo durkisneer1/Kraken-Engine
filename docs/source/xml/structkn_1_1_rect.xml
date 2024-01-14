@@ -115,7 +115,7 @@
         <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="27" column="5" bodyfile="D:/Code/c++/Kraken-Engine/include/Rect.hpp" bodystart="27" bodyend="27"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a86586255f5b88ff80d6dbd41486f50a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
         <definition>math::Vec2 kn::Rect::getPos</definition>
         <argsstring>()</argsstring>
         <name>getPos</name>
@@ -133,7 +133,7 @@
         <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="34" column="16"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a1ed727673cfc87e018928b1c11ba2461" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
         <definition>math::Vec2 kn::Rect::getSize</definition>
         <argsstring>()</argsstring>
         <name>getSize</name>
@@ -157,7 +157,7 @@
         <name>setSize</name>
         <qualifiedname>kn::Rect::setSize</qualifiedname>
         <param>
-          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
           <declname>size</declname>
         </param>
         <briefdescription>
@@ -186,7 +186,7 @@
         <name>collidePoint</name>
         <qualifiedname>kn::Rect::collidePoint</qualifiedname>
         <param>
-          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
           <declname>pos</declname>
         </param>
         <briefdescription>
@@ -248,12 +248,12 @@
         <name>clamp</name>
         <qualifiedname>kn::Rect::clamp</qualifiedname>
         <param>
-          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
           <declname>min</declname>
           <defval>{}</defval>
         </param>
         <param>
-          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
           <declname>max</declname>
           <defval><ref refid="namespacekn_1a4f6693c08dee924dd9d7cf1106f56815" kindref="member">SCREEN_SIZE</ref></defval>
         </param>
@@ -291,7 +291,7 @@
         <name>setCenter</name>
         <qualifiedname>kn::Rect::setCenter</qualifiedname>
         <param>
-          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
           <declname>pos</declname>
         </param>
         <briefdescription>
@@ -381,7 +381,7 @@
         <name>setTopLeft</name>
         <qualifiedname>kn::Rect::setTopLeft</qualifiedname>
         <param>
-          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
           <declname>pos</declname>
         </param>
         <briefdescription>
@@ -399,7 +399,7 @@
         <name>setTopMid</name>
         <qualifiedname>kn::Rect::setTopMid</qualifiedname>
         <param>
-          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
           <declname>pos</declname>
         </param>
         <briefdescription>
@@ -417,7 +417,7 @@
         <name>setTopRight</name>
         <qualifiedname>kn::Rect::setTopRight</qualifiedname>
         <param>
-          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
           <declname>pos</declname>
         </param>
         <briefdescription>
@@ -435,7 +435,7 @@
         <name>setBottomLeft</name>
         <qualifiedname>kn::Rect::setBottomLeft</qualifiedname>
         <param>
-          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
           <declname>pos</declname>
         </param>
         <briefdescription>
@@ -453,7 +453,7 @@
         <name>setBottomMid</name>
         <qualifiedname>kn::Rect::setBottomMid</qualifiedname>
         <param>
-          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
           <declname>pos</declname>
         </param>
         <briefdescription>
@@ -471,7 +471,7 @@
         <name>setBottomRight</name>
         <qualifiedname>kn::Rect::setBottomRight</qualifiedname>
         <param>
-          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
           <declname>pos</declname>
         </param>
         <briefdescription>
@@ -489,7 +489,7 @@
         <name>setLeftMid</name>
         <qualifiedname>kn::Rect::setLeftMid</qualifiedname>
         <param>
-          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
           <declname>pos</declname>
         </param>
         <briefdescription>
@@ -507,7 +507,7 @@
         <name>setRightMid</name>
         <qualifiedname>kn::Rect::setRightMid</qualifiedname>
         <param>
-          <type>const <ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
           <declname>pos</declname>
         </param>
         <briefdescription>
@@ -519,7 +519,7 @@
         <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="88" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a3a10eeee9f62b32e6adbf03ce62a7d9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
         <definition>math::Vec2 kn::Rect::getCenter</definition>
         <argsstring>()</argsstring>
         <name>getCenter</name>
@@ -589,7 +589,7 @@
         <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="94" column="11"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a6987c049da3037ce5df590dc16b82ae1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
         <definition>math::Vec2 kn::Rect::getTopLeft</definition>
         <argsstring>()</argsstring>
         <name>getTopLeft</name>
@@ -603,7 +603,7 @@
         <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="95" column="16"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a8c75e4fd74cd9cd64dfe34506019cf7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
         <definition>math::Vec2 kn::Rect::getTopMid</definition>
         <argsstring>()</argsstring>
         <name>getTopMid</name>
@@ -617,7 +617,7 @@
         <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="96" column="16"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1ab4350c360c565452993af9df311261bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
         <definition>math::Vec2 kn::Rect::getTopRight</definition>
         <argsstring>()</argsstring>
         <name>getTopRight</name>
@@ -631,7 +631,7 @@
         <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="97" column="16"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1af3b29fa1f019a63145478dd6b6d95ba8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
         <definition>math::Vec2 kn::Rect::getBottomLeft</definition>
         <argsstring>()</argsstring>
         <name>getBottomLeft</name>
@@ -645,7 +645,7 @@
         <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="98" column="16"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a2e62ffc626eaef5c1b70395df0a66338" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
         <definition>math::Vec2 kn::Rect::getBottomMid</definition>
         <argsstring>()</argsstring>
         <name>getBottomMid</name>
@@ -659,7 +659,7 @@
         <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="99" column="16"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a7b8e4da3c1667ec7acd73436186499f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
         <definition>math::Vec2 kn::Rect::getBottomRight</definition>
         <argsstring>()</argsstring>
         <name>getBottomRight</name>
@@ -673,7 +673,7 @@
         <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="100" column="16"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1ab6d716e2afb594ead210b9c7999a0763" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
         <definition>math::Vec2 kn::Rect::getLeftMid</definition>
         <argsstring>()</argsstring>
         <name>getLeftMid</name>
@@ -687,7 +687,7 @@
         <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="101" column="16"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1ae2394b363e51897403808dc774976dd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
+        <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
         <definition>math::Vec2 kn::Rect::getRightMid</definition>
         <argsstring>()</argsstring>
         <name>getRightMid</name>

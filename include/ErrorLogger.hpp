@@ -70,45 +70,25 @@ class ErrorLogger
     }
 
   private:
-    /**
-     * @brief Private constructor for the singleton design
-     *
-     * @param filename optional param to set the logfile name, defaults to
-     * "output.log"
-     */
     explicit ErrorLogger(const std::string& filename = "output.log")
         : m_filename(filename), m_file(), m_canWriteToFile(false)
     {
         m_file.open(m_filename, std::ios::out);
         if (!m_file)
-        {
             std::cout << "Failed to open " << m_filename << "\n";
-        }
 
         m_canWriteToFile = true;
         m_file.close();
     }
 
-    /**
-     * @brief Private destructor for singleton pattern. Ensures that internal
-     * files are closed
-     */
     ~ErrorLogger()
     {
         if (m_file.is_open())
-        {
             m_file.close();
-        }
     }
 
-    /**
-     * @brief Deleted copy constructor, should not copy singleton
-     */
     ErrorLogger(const ErrorLogger& other) = delete;
 
-    /**
-     * @brief Deleted assignment operator, should not try to assign singleton
-     */
     void operator=(const ErrorLogger& rhs) = delete;
 
     std::string m_filename; //!< logfile name

@@ -163,6 +163,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">Tutorials</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="reference/index.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="reference/entity.html">Entity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/error_logger.html">ErrorLogger</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/rect.html">Rect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/render_window.html">RenderWindow</a></li>
@@ -174,6 +175,7 @@
 <li class="toctree-l2"><a class="reference internal" href="reference/input.html">input</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/math.html">math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/mixer.html">mixer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/overflow.html">overflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/time.html">time</a></li>
 </ul>
 </li>
@@ -247,21 +249,21 @@ This means that there aren’t any pre-built binaries for Kraken Engine yet, so 
 <p>The <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> file is still under development as it is currently a difficult process to include and link dependencies.
 As of now, you must include these directories:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/build/_deps/sdl-src/include</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/build/_deps/sdl_ttf-src</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/build/_deps/sdl_mixer-src/include</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/build/_deps/sdl_image-src/include</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/build/_deps/tmxlite-src/tmxlite/include</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/include</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/include</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/build/_deps/sdl2-src/include</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/build/_deps/sdl2_ttf-src</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/build/_deps/sdl2_mixer-src/include</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/build/_deps/sdl2_image-src/include</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/build/_deps/tmxlite-src/tmxlite/include</span></code></p></li>
 </ul>
 <p>And for linking, you must use these directories:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/build</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/bin</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/build/_deps/sdl_image-build</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/build/_deps/sdl_mixer-build</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/build/_deps/sdl_ttf-build</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kraken-Engine/build/_deps/freetype-build</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/build</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/build/_deps/sdl2_build</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/build/_deps/sdl2_image-build</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/build/_deps/sdl2_mixer-build</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/build/_deps/sdl2_ttf-build</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/build/_deps/tmxlite-build</span></code></p></li>
 </ul>
 </div>
 </section>

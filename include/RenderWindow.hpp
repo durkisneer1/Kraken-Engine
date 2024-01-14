@@ -33,7 +33,7 @@ class RenderWindow final
      *
      * @param color The color to clear the screen.
      */
-    void cls(SDL_Color color = {0, 0, 0, 255});
+    void cls(Color color = {0, 0, 0, 255});
 
     /**
      * @brief Flip the render frame buffer.
@@ -137,13 +137,15 @@ class RenderWindow final
     RenderWindow(const RenderWindow& other) = delete;
     ~RenderWindow();
 
+    void clean() const;
+
     RenderWindow& operator=(const RenderWindow& rhs) = delete;
 
     SDL_Renderer* m_renderer = nullptr;
     SDL_Window* m_window = nullptr;
 
     kn::Event m_event;
-    std::vector<SDL_Event> m_events;
+    std::vector<Event> m_events = {};
 };
 
 } // namespace kn

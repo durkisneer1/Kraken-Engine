@@ -21,7 +21,21 @@
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="13">
+      <node id="12">
+        <label>ErrorLogger.hpp</label>
+        <link refid="_error_logger_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
         <label>Globals.hpp</label>
         <link refid="_globals_8hpp"/>
         <childnode refid="11" relation="include">
@@ -30,13 +44,29 @@
       <node id="11">
         <label>Math.hpp</label>
         <link refid="_math_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
       </node>
-      <node id="12">
+      <node id="18">
+        <label>Overflow.hpp</label>
+        <link refid="_overflow_8hpp"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
         <label>Rect.hpp</label>
         <link refid="_rect_8hpp"/>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="23" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -70,7 +100,7 @@
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -85,11 +115,35 @@
       <node id="8">
         <label>SDL_ttf.h</label>
       </node>
+      <node id="13">
+        <label>chrono</label>
+      </node>
+      <node id="19">
+        <label>cmath</label>
+      </node>
+      <node id="14">
+        <label>ctime</label>
+      </node>
+      <node id="15">
+        <label>fstream</label>
+      </node>
+      <node id="16">
+        <label>iostream</label>
+      </node>
+      <node id="20">
+        <label>limits</label>
+      </node>
       <node id="2">
         <label>memory</label>
       </node>
+      <node id="21">
+        <label>stdint.h</label>
+      </node>
       <node id="3">
         <label>string</label>
+      </node>
+      <node id="17">
+        <label>string.h</label>
       </node>
       <node id="4">
         <label>vector</label>
@@ -154,18 +208,18 @@
 <codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="29" refid="classkn_1_1_render_window_1adcad93cc1e1c336afff133667bdbcb2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref>&amp;<sp/><ref refid="classkn_1_1_render_window_1adcad93cc1e1c336afff133667bdbcb2c" kindref="member">getInstance</ref>();</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36" refid="classkn_1_1_render_window_1adbc6173c883f03ff8bb6cdc98c051dcb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_render_window_1adbc6173c883f03ff8bb6cdc98c051dcb" kindref="member">cls</ref>(SDL_Color<sp/>color<sp/>=<sp/>{0,<sp/>0,<sp/>0,<sp/>255});</highlight></codeline>
+<codeline lineno="36" refid="classkn_1_1_render_window_1a2d393c7f6c88ea587d8f18efebaa38f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_render_window_1a2d393c7f6c88ea587d8f18efebaa38f8" kindref="member">cls</ref>(<ref refid="namespacekn_1a91eb5db82680dedc10733f04def8dd2f" kindref="member">Color</ref><sp/>color<sp/>=<sp/>{0,<sp/>0,<sp/>0,<sp/>255});</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="41" refid="classkn_1_1_render_window_1a7d04089325a8080a1f4b7c5cb9e4f12c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_render_window_1a7d04089325a8080a1f4b7c5cb9e4f12c" kindref="member">flip</ref>()<sp/>{<sp/>SDL_RenderPresent(<ref refid="classkn_1_1_render_window_1a1117133557ac0add84448fc4963ee627" kindref="member">m_renderer</ref>);<sp/>}</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
 <codeline lineno="50" refid="classkn_1_1_render_window_1a42bc368f61f894d86f3061a7b69960db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_render_window_1a42bc368f61f894d86f3061a7b69960db" kindref="member">blit</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;Texture&gt;&amp;<sp/>texture,<sp/><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref><sp/>crop,<sp/><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref><sp/>rect);</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58" refid="classkn_1_1_render_window_1af9cca175a5bb42c51d379d44d9a9bf1b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_render_window_1af9cca175a5bb42c51d379d44d9a9bf1b" kindref="member">blit</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;Texture&gt;&amp;<sp/>texture,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref>&amp;<sp/>position);</highlight></codeline>
+<codeline lineno="58" refid="classkn_1_1_render_window_1af9cca175a5bb42c51d379d44d9a9bf1b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_render_window_1af9cca175a5bb42c51d379d44d9a9bf1b" kindref="member">blit</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;Texture&gt;&amp;<sp/>texture,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref>&amp;<sp/>position);</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
 <codeline lineno="70" refid="classkn_1_1_render_window_1aa41e48a864ad17ead2c071963ca584fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_render_window_1aa41e48a864ad17ead2c071963ca584fa" kindref="member">blitEx</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;Texture&gt;&amp;<sp/>texture,<sp/><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref><sp/>crop,<sp/><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref><sp/>rect,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>angle<sp/>=<sp/>0.0,</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>flipX<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>flipY<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82" refid="classkn_1_1_render_window_1a748a1d4865fb6042eeb71ce35213fca5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_render_window_1a748a1d4865fb6042eeb71ce35213fca5" kindref="member">blitEx</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;Texture&gt;&amp;<sp/>texture,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref>&amp;<sp/>position,</highlight></codeline>
+<codeline lineno="82" refid="classkn_1_1_render_window_1a748a1d4865fb6042eeb71ce35213fca5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_render_window_1a748a1d4865fb6042eeb71ce35213fca5" kindref="member">blitEx</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;Texture&gt;&amp;<sp/>texture,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref>&amp;<sp/>position,</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>angle<sp/>=<sp/>0.0,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>flipX<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>flipY<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="84"><highlight class="normal"></highlight></codeline>
 <codeline lineno="90" refid="classkn_1_1_render_window_1a8fade150c1e4b23c46a44e8df4367969" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Renderer*<sp/><ref refid="classkn_1_1_render_window_1a8fade150c1e4b23c46a44e8df4367969" kindref="member">getRenderer</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_render_window_1a1117133557ac0add84448fc4963ee627" kindref="member">m_renderer</ref>;<sp/>}</highlight></codeline>
@@ -187,16 +241,18 @@
 <codeline lineno="137" refid="classkn_1_1_render_window_1a5ed9d63ab84ffa51793e1e788c867233" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1_render_window_1a5ed9d63ab84ffa51793e1e788c867233" kindref="member">RenderWindow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref>&amp;<sp/>other)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="138" refid="classkn_1_1_render_window_1a0e5af334903645c870c713f53b754823" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1_render_window_1a0e5af334903645c870c713f53b754823" kindref="member">~RenderWindow</ref>();</highlight></codeline>
 <codeline lineno="139"><highlight class="normal"></highlight></codeline>
-<codeline lineno="140" refid="classkn_1_1_render_window_1a6438f39a2be6013f5c22eaf8df5dda48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref>&amp;<sp/><ref refid="classkn_1_1_render_window_1a6438f39a2be6013f5c22eaf8df5dda48" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref>&amp;<sp/>rhs)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="140" refid="classkn_1_1_render_window_1a19face1412d87c5333ebc107b5e30b9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_render_window_1a19face1412d87c5333ebc107b5e30b9a" kindref="member">clean</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="141"><highlight class="normal"></highlight></codeline>
-<codeline lineno="142" refid="classkn_1_1_render_window_1a1117133557ac0add84448fc4963ee627" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Renderer*<sp/><ref refid="classkn_1_1_render_window_1a1117133557ac0add84448fc4963ee627" kindref="member">m_renderer</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="143" refid="classkn_1_1_render_window_1af174d2f6a0fef009255e7b27ad347cd5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Window*<sp/><ref refid="classkn_1_1_render_window_1af174d2f6a0fef009255e7b27ad347cd5" kindref="member">m_window</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"></highlight></codeline>
-<codeline lineno="145" refid="classkn_1_1_render_window_1a82e4a97c56f45ce454e629c9b86e0316" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacekn_1af947a748461c782cd90f4d4b7cdbea21" kindref="member">kn::Event</ref><sp/><ref refid="classkn_1_1_render_window_1a82e4a97c56f45ce454e629c9b86e0316" kindref="member">m_event</ref>;</highlight></codeline>
-<codeline lineno="146" refid="classkn_1_1_render_window_1a19158c9bbfc7629788e81b9b4aa69b64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;SDL_Event&gt;<sp/><ref refid="classkn_1_1_render_window_1a19158c9bbfc7629788e81b9b4aa69b64" kindref="member">m_events</ref>;</highlight></codeline>
-<codeline lineno="147"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"></highlight></codeline>
-<codeline lineno="149"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>kn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="classkn_1_1_render_window_1a6438f39a2be6013f5c22eaf8df5dda48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref>&amp;<sp/><ref refid="classkn_1_1_render_window_1a6438f39a2be6013f5c22eaf8df5dda48" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_render_window" kindref="compound">RenderWindow</ref>&amp;<sp/>rhs)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="classkn_1_1_render_window_1a1117133557ac0add84448fc4963ee627" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Renderer*<sp/><ref refid="classkn_1_1_render_window_1a1117133557ac0add84448fc4963ee627" kindref="member">m_renderer</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="145" refid="classkn_1_1_render_window_1af174d2f6a0fef009255e7b27ad347cd5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Window*<sp/><ref refid="classkn_1_1_render_window_1af174d2f6a0fef009255e7b27ad347cd5" kindref="member">m_window</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="classkn_1_1_render_window_1a82e4a97c56f45ce454e629c9b86e0316" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacekn_1af947a748461c782cd90f4d4b7cdbea21" kindref="member">kn::Event</ref><sp/><ref refid="classkn_1_1_render_window_1a82e4a97c56f45ce454e629c9b86e0316" kindref="member">m_event</ref>;</highlight></codeline>
+<codeline lineno="148" refid="classkn_1_1_render_window_1aee142437a787ef4603ada11a8d133955" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Event&gt;<sp/><ref refid="classkn_1_1_render_window_1aee142437a787ef4603ada11a8d133955" kindref="member">m_events</ref><sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>kn</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp"/>
   </compounddef>

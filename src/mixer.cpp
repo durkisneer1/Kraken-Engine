@@ -24,8 +24,6 @@ Sound::Sound(const std::string& fileDir)
     {
         FATAL("Unsupported file format: " + fileDir);
     }
-
-    setVolume(0.8f);
 }
 
 void Sound::play(int loops, int maxMs, int fadeMs)
@@ -43,7 +41,7 @@ void Sound::play(int loops, int maxMs, int fadeMs)
         return;
     }
 
-    Mix_Volume(channelNum, volume);
+    Mix_Volume(channelNum, (int)volume);
 }
 
 void Sound::setVolume(float newVolume)

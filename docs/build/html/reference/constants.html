@@ -163,6 +163,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="entity.html">Entity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error_logger.html">ErrorLogger</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rect.html">Rect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="render_window.html">RenderWindow</a></li>
@@ -174,6 +175,7 @@
 <li class="toctree-l2"><a class="reference internal" href="input.html">input</a></li>
 <li class="toctree-l2"><a class="reference internal" href="math.html">math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mixer.html">mixer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overflow.html">overflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="time.html">time</a></li>
 </ul>
 </li>
@@ -213,13 +215,22 @@
         <article role="main">
           <section id="constants">
 <h1>constants<a class="headerlink" href="#constants" title="Link to this heading">#</a></h1>
-<p>Lowercase letters are meant to be used with <code class="docutils literal notranslate"><span class="pre">kn::input::getKeysPressed</span></code> in the <a class="reference internal" href="input.html#input"><span class="std std-ref">input</span></a> namespace.</p>
 <dl class="cpp type">
 <dt class="sig sig-object cpp" id="_CPPv42kn">
 <span id="_CPPv32kn"></span><span id="_CPPv22kn"></span><span id="kn"></span><span class="target" id="namespacekn"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kn</span></span></span><a class="headerlink" href="#_CPPv42kn" title="Link to this definition">#</a><br /></dt>
 <dd><p>LOG_LEVELS TRACE &gt;= 1 DEBUG &gt;= 2 WARN &gt;= 3 ERROR &gt;= 4 FATAL <em>always</em></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn9float32_tE">
+<span id="_CPPv3N2kn9float32_tE"></span><span id="_CPPv2N2kn9float32_tE"></span><span id="kn::float32_t"></span><span class="target" id="namespacekn_1aa4afeb9761786f8b7b45f49db7bc0b1a"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">float32_t</span></span></span><a class="headerlink" href="#_CPPv4N2kn9float32_tE" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn9float64_tE">
+<span id="_CPPv3N2kn9float64_tE"></span><span id="_CPPv2N2kn9float64_tE"></span><span id="kn::float64_t"></span><span class="target" id="namespacekn_1a78388bdab82eefeb22b5ec58e12eb0d9"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">float64_t</span></span></span><a class="headerlink" href="#_CPPv4N2kn9float64_tE" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
 <dl class="cpp type">
 <dt class="sig sig-object cpp" id="_CPPv4N2kn4KEYSE">
 <span id="_CPPv3N2kn4KEYSE"></span><span id="_CPPv2N2kn4KEYSE"></span><span id="kn::KEYS"></span><span class="target" id="namespacekn_1a438de58efec73267dee3696ce9bc8c7d"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="n"><span class="pre">SDL_Scancode</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">KEYS</span></span></span><a class="headerlink" href="#_CPPv4N2kn4KEYSE" title="Link to this definition">#</a><br /></dt>
@@ -1264,18 +1275,18 @@
 <dd></dd></dl>
 
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2kn12_BUTTON_LEFTE">
-<span id="_CPPv3N2kn12_BUTTON_LEFTE"></span><span id="_CPPv2N2kn12_BUTTON_LEFTE"></span><span id="kn::_BUTTON_LEFT__iC"></span><span class="target" id="namespacekn_1a3ba3ca2591192bc770ee935bb547e845"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_BUTTON_LEFT</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">SDL_BUTTON_LEFT</span></span><a class="headerlink" href="#_CPPv4N2kn12_BUTTON_LEFTE" title="Link to this definition">#</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N2kn11BUTTON_LEFTE">
+<span id="_CPPv3N2kn11BUTTON_LEFTE"></span><span id="_CPPv2N2kn11BUTTON_LEFTE"></span><span id="kn::BUTTON_LEFT__iC"></span><span class="target" id="namespacekn_1a7182e281d3b7380136b5a2352132ab39"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BUTTON_LEFT</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">SDL_BUTTON_LEFT</span></span><a class="headerlink" href="#_CPPv4N2kn11BUTTON_LEFTE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2kn14_BUTTON_MIDDLEE">
-<span id="_CPPv3N2kn14_BUTTON_MIDDLEE"></span><span id="_CPPv2N2kn14_BUTTON_MIDDLEE"></span><span id="kn::_BUTTON_MIDDLE__iC"></span><span class="target" id="namespacekn_1af99c07523184e6220aea674591246102"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_BUTTON_MIDDLE</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">SDL_BUTTON_MIDDLE</span></span><a class="headerlink" href="#_CPPv4N2kn14_BUTTON_MIDDLEE" title="Link to this definition">#</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N2kn13BUTTON_MIDDLEE">
+<span id="_CPPv3N2kn13BUTTON_MIDDLEE"></span><span id="_CPPv2N2kn13BUTTON_MIDDLEE"></span><span id="kn::BUTTON_MIDDLE__iC"></span><span class="target" id="namespacekn_1a9684df6ce94178e94bb803ab01c519a6"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BUTTON_MIDDLE</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">SDL_BUTTON_MIDDLE</span></span><a class="headerlink" href="#_CPPv4N2kn13BUTTON_MIDDLEE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2kn13_BUTTON_RIGHTE">
-<span id="_CPPv3N2kn13_BUTTON_RIGHTE"></span><span id="_CPPv2N2kn13_BUTTON_RIGHTE"></span><span id="kn::_BUTTON_RIGHT__iC"></span><span class="target" id="namespacekn_1a681305d5fd1c55718b4a454bb36c8e0a"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_BUTTON_RIGHT</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">SDL_BUTTON_RIGHT</span></span><a class="headerlink" href="#_CPPv4N2kn13_BUTTON_RIGHTE" title="Link to this definition">#</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N2kn12BUTTON_RIGHTE">
+<span id="_CPPv3N2kn12BUTTON_RIGHTE"></span><span id="_CPPv2N2kn12BUTTON_RIGHTE"></span><span id="kn::BUTTON_RIGHT__iC"></span><span class="target" id="namespacekn_1a5eb92ba749f1c40228bd8c385030aa55"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BUTTON_RIGHT</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">SDL_BUTTON_RIGHT</span></span><a class="headerlink" href="#_CPPv4N2kn12BUTTON_RIGHTE" title="Link to this definition">#</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -1340,6 +1351,8 @@
             <ul>
 <li><a class="reference internal" href="#">constants</a><ul>
 <li><a class="reference internal" href="#_CPPv42kn"><code class="docutils literal notranslate"><span class="pre">kn</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N2kn9float32_tE"><code class="docutils literal notranslate"><span class="pre">kn::float32_t</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn9float64_tE"><code class="docutils literal notranslate"><span class="pre">kn::float64_t</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn4KEYSE"><code class="docutils literal notranslate"><span class="pre">kn::KEYS</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn5EventE"><code class="docutils literal notranslate"><span class="pre">kn::Event</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn5ColorE"><code class="docutils literal notranslate"><span class="pre">kn::Color</span></code></a></li>
@@ -1548,9 +1561,9 @@
 <li><a class="reference internal" href="#_CPPv4N2kn10K_QUOTEDBLE"><code class="docutils literal notranslate"><span class="pre">kn::K_QUOTEDBL</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn12K_RIGHTPARENE"><code class="docutils literal notranslate"><span class="pre">kn::K_RIGHTPAREN</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn12K_UNDERSCOREE"><code class="docutils literal notranslate"><span class="pre">kn::K_UNDERSCORE</span></code></a></li>
-<li><a class="reference internal" href="#_CPPv4N2kn12_BUTTON_LEFTE"><code class="docutils literal notranslate"><span class="pre">kn::_BUTTON_LEFT</span></code></a></li>
-<li><a class="reference internal" href="#_CPPv4N2kn14_BUTTON_MIDDLEE"><code class="docutils literal notranslate"><span class="pre">kn::_BUTTON_MIDDLE</span></code></a></li>
-<li><a class="reference internal" href="#_CPPv4N2kn13_BUTTON_RIGHTE"><code class="docutils literal notranslate"><span class="pre">kn::_BUTTON_RIGHT</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn11BUTTON_LEFTE"><code class="docutils literal notranslate"><span class="pre">kn::BUTTON_LEFT</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn13BUTTON_MIDDLEE"><code class="docutils literal notranslate"><span class="pre">kn::BUTTON_MIDDLE</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn12BUTTON_RIGHTE"><code class="docutils literal notranslate"><span class="pre">kn::BUTTON_RIGHT</span></code></a></li>
 </ul>
 </li>
 </ul>

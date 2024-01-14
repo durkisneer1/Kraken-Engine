@@ -163,6 +163,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="entity.html">Entity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error_logger.html">ErrorLogger</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rect.html">Rect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="render_window.html">RenderWindow</a></li>
@@ -174,6 +175,7 @@
 <li class="toctree-l2"><a class="reference internal" href="input.html">input</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mixer.html">mixer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overflow.html">overflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="time.html">time</a></li>
 </ul>
 </li>
@@ -213,39 +215,110 @@
         <article role="main">
           <section id="math">
 <h1>math<a class="headerlink" href="#math" title="Link to this heading">#</a></h1>
-<dl class="cpp struct">
+<dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N2kn4math4Vec2E">
-<span id="_CPPv3N2kn4math4Vec2E"></span><span id="_CPPv2N2kn4math4Vec2E"></span><span id="kn::math::Vec2"></span><span class="target" id="structkn_1_1math_1_1_vec2"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Vec2</span></span></span><a class="headerlink" href="#_CPPv4N2kn4math4Vec2E" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N2kn4math4Vec2E"></span><span id="_CPPv2N2kn4math4Vec2E"></span><span id="kn::math::Vec2"></span><span class="target" id="classkn_1_1math_1_1_vec2"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Vec2</span></span></span><a class="headerlink" href="#_CPPv4N2kn4math4Vec2E" title="Link to this definition">#</a><br /></dt>
 <dd><p>A 2D vector. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK2kn4math4Vec29getLengthEv">
-<span id="_CPPv3NK2kn4math4Vec29getLengthEv"></span><span id="_CPPv2NK2kn4math4Vec29getLengthEv"></span><span id="kn::math::Vec2::getLengthC"></span><span class="target" id="structkn_1_1math_1_1_vec2_1a2ff26209f794ac15a972d2543c4836a7"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getLength</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2kn4math4Vec29getLengthEv" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3NK2kn4math4Vec29getLengthEv"></span><span id="_CPPv2NK2kn4math4Vec29getLengthEv"></span><span id="kn::math::Vec2::getLengthC"></span><span class="target" id="classkn_1_1math_1_1_vec2_1a644f984e82d4ddbeb0db469f113bd541"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getLength</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2kn4math4Vec29getLengthEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Get the length of the vector. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The length of the vector. </p>
+<dd class="field-odd"><p>The length of the vector if no overflow happens, otherwise -1.0 </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N2kn4math4Vec29normalizeEv">
-<span id="_CPPv3N2kn4math4Vec29normalizeEv"></span><span id="_CPPv2N2kn4math4Vec29normalizeEv"></span><span id="kn::math::Vec2::normalize"></span><span class="target" id="structkn_1_1math_1_1_vec2_1a0b419df55caf4a47b7fc7bb6ed6897bf"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">normalize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn4math4Vec29normalizeEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Normalize the vector. </p>
+<span id="_CPPv3N2kn4math4Vec29normalizeEv"></span><span id="_CPPv2N2kn4math4Vec29normalizeEv"></span><span id="kn::math::Vec2::normalize"></span><span class="target" id="classkn_1_1math_1_1_vec2_1a7acb15f25450153774c82b79bd8ff324"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">normalize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn4math4Vec29normalizeEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Normalize the vector in-place. </p>
+<p>Fails if an overflow occurs or the vector is the zero vector </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK2kn4math4Vec210distanceToERK4Vec2">
-<span id="_CPPv3NK2kn4math4Vec210distanceToERK4Vec2"></span><span id="_CPPv2NK2kn4math4Vec210distanceToERK4Vec2"></span><span id="kn::math::Vec2::distanceTo__Vec2CRC"></span><span class="target" id="structkn_1_1math_1_1_vec2_1a5c355bb58ec1633bf40f3a7d8f809f8a"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">distanceTo</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2kn4math4Vec210distanceToERK4Vec2" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3NK2kn4math4Vec210distanceToERK4Vec2"></span><span id="_CPPv2NK2kn4math4Vec210distanceToERK4Vec2"></span><span id="kn::math::Vec2::distanceTo__Vec2CRC"></span><span class="target" id="classkn_1_1math_1_1_vec2_1aa6c9238dcb0883b37251d55f8d500d79"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">distanceTo</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2kn4math4Vec210distanceToERK4Vec2" title="Link to this definition">#</a><br /></dt>
 <dd><p>Get the distance to another vector. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>other</strong> – The other vector.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The distance to another vector. </p>
+<dd class="field-even"><p>The distance to another vector if no overflow happens, otherwise -1.0 </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK2kn4math4Vec2plERK4Vec2">
+<span id="_CPPv3NK2kn4math4Vec2plERK4Vec2"></span><span id="_CPPv2NK2kn4math4Vec2plERK4Vec2"></span><span id="kn::math::Vec2::add-operator__Vec2CRC"></span><span class="target" id="classkn_1_1math_1_1_vec2_1a42f6f4a2ebd824928d7994fcb1f621f9"></span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">+</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2kn4math4Vec2plERK4Vec2" title="Link to this definition">#</a><br /></dt>
+<dd><p>Adds two vectors. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – the other vector </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a vector sum of the other two, or the zero vector on overflow </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK2kn4math4Vec2miERK4Vec2">
+<span id="_CPPv3NK2kn4math4Vec2miERK4Vec2"></span><span id="_CPPv2NK2kn4math4Vec2miERK4Vec2"></span><span id="kn::math::Vec2::sub-operator__Vec2CRC"></span><span class="target" id="classkn_1_1math_1_1_vec2_1a7d0a14b1cfc5c43a8033ea7550fedb3c"></span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">-</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2kn4math4Vec2miERK4Vec2" title="Link to this definition">#</a><br /></dt>
+<dd><p>Subtracts two vectors. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – the subtracted vector </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a vector difference of the other two, or the zero vector on overflow </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn4math4Vec2pLERK4Vec2">
+<span id="_CPPv3N2kn4math4Vec2pLERK4Vec2"></span><span id="_CPPv2N2kn4math4Vec2pLERK4Vec2"></span><span id="kn::math::Vec2::add-assign-operator__Vec2CR"></span><span class="target" id="classkn_1_1math_1_1_vec2_1a1ada667c1c94009f1936d9418b4c3193"></span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">+=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn4math4Vec2pLERK4Vec2" title="Link to this definition">#</a><br /></dt>
+<dd><p>in-place addition of another vector to this </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – the other vector </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>reference to *this </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK2kn4math4Vec2eqERK4Vec2">
+<span id="_CPPv3NK2kn4math4Vec2eqERK4Vec2"></span><span id="_CPPv2NK2kn4math4Vec2eqERK4Vec2"></span><span id="kn::math::Vec2::eq-operator__Vec2CRC"></span><span class="target" id="classkn_1_1math_1_1_vec2_1a9ed5cf168206994dbfcea1fd10a8742a"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">==</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2kn4math4Vec2eqERK4Vec2" title="Link to this definition">#</a><br /></dt>
+<dd><p>Checks if two vectors are the same. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – the vector to compare to </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>true if the vectors are close to the same, false otherwise </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK2kn4math4Vec2neERK4Vec2">
+<span id="_CPPv3NK2kn4math4Vec2neERK4Vec2"></span><span id="_CPPv2NK2kn4math4Vec2neERK4Vec2"></span><span id="kn::math::Vec2::neq-operator__Vec2CRC"></span><span class="target" id="classkn_1_1math_1_1_vec2_1a42133229f86b9300809233b6d0a1b7cb"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">!=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2kn4math4Vec2neERK4Vec2" title="Link to this definition">#</a><br /></dt>
+<dd><p>Checks if two vectors are different. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – the vector to compare to </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>true if the vectors are not close to the same, false otherwise </p>
 </dd>
 </dl>
 </dd></dl>
@@ -255,7 +328,7 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N2kn4math4Vec24ZEROEv">
-<span id="_CPPv3N2kn4math4Vec24ZEROEv"></span><span id="_CPPv2N2kn4math4Vec24ZEROEv"></span><span id="kn::math::Vec2::ZERO"></span><span class="target" id="structkn_1_1math_1_1_vec2_1a1d175a651f18b89df7ed11efdd80da8b"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ZERO</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn4math4Vec24ZEROEv" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N2kn4math4Vec24ZEROEv"></span><span id="_CPPv2N2kn4math4Vec24ZEROEv"></span><span id="kn::math::Vec2::ZERO"></span><span class="target" id="classkn_1_1math_1_1_vec2_1a1d175a651f18b89df7ed11efdd80da8b"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ZERO</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn4math4Vec24ZEROEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Get a vector with all components set to 0. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -286,8 +359,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2kn4math7lerpVecERK4Vec2RK4Vec2f">
-<span id="_CPPv3N2kn4math7lerpVecERK4Vec2RK4Vec2f"></span><span id="_CPPv2N2kn4math7lerpVecERK4Vec2RK4Vec2f"></span><span id="kn::math::lerpVec__Vec2CR.Vec2CR.float"></span><span class="target" id="namespacekn_1_1math_1a88e50fa7f06deaef4b3fb1f9c26e22a0"></span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="constants.html#_CPPv42kn" title="kn"><span class="n"><span class="pre">kn</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">math</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">lerpVec</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">a</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">b</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn4math7lerpVecERK4Vec2RK4Vec2f" title="Link to this definition">#</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N2kn4math7lerpVecERK4Vec2RK4Vec2d">
+<span id="_CPPv3N2kn4math7lerpVecERK4Vec2RK4Vec2d"></span><span id="_CPPv2N2kn4math7lerpVecERK4Vec2RK4Vec2d"></span><span id="kn::math::lerpVec__Vec2CR.Vec2CR.double"></span><span class="target" id="namespacekn_1_1math_1a9a6ecf740568eb799b85a2f10d764de5"></span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="constants.html#_CPPv42kn" title="kn"><span class="n"><span class="pre">kn</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">math</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">lerpVec</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">a</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">b</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn4math7lerpVecERK4Vec2RK4Vec2d" title="Link to this definition">#</a><br /></dt>
 <dd><p>Linearly interpolate a vector. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -365,11 +438,16 @@
 <li><a class="reference internal" href="#_CPPv4NK2kn4math4Vec29getLengthEv"><code class="docutils literal notranslate"><span class="pre">Vec2::getLength()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn4math4Vec29normalizeEv"><code class="docutils literal notranslate"><span class="pre">Vec2::normalize()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4NK2kn4math4Vec210distanceToERK4Vec2"><code class="docutils literal notranslate"><span class="pre">Vec2::distanceTo()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK2kn4math4Vec2plERK4Vec2"><code class="docutils literal notranslate"><span class="pre">Vec2::operator+()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK2kn4math4Vec2miERK4Vec2"><code class="docutils literal notranslate"><span class="pre">Vec2::operator-()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn4math4Vec2pLERK4Vec2"><code class="docutils literal notranslate"><span class="pre">Vec2::operator+=()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK2kn4math4Vec2eqERK4Vec2"><code class="docutils literal notranslate"><span class="pre">Vec2::operator==()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK2kn4math4Vec2neERK4Vec2"><code class="docutils literal notranslate"><span class="pre">Vec2::operator!=()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn4math4Vec24ZEROEv"><code class="docutils literal notranslate"><span class="pre">Vec2::ZERO()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#_CPPv4N2kn4math8clampVecE4Vec2RK4Vec2RK4Vec2"><code class="docutils literal notranslate"><span class="pre">clampVec()</span></code></a></li>
-<li><a class="reference internal" href="#_CPPv4N2kn4math7lerpVecERK4Vec2RK4Vec2f"><code class="docutils literal notranslate"><span class="pre">lerpVec()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn4math7lerpVecERK4Vec2RK4Vec2d"><code class="docutils literal notranslate"><span class="pre">lerpVec()</span></code></a></li>
 </ul>
 </li>
 </ul>

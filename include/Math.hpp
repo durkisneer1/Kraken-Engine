@@ -1,14 +1,14 @@
 #pragma once
 
 #include "ErrorLogger.hpp"
-#include "MathOverflow.hpp"
+#include "Overflow.hpp"
 
 namespace kn
 {
 
-using Overflow::closeToZero;
-using Overflow::isProductValid;
-using Overflow::isSumValid;
+using overflow::closeToZero;
+using overflow::isProductValid;
+using overflow::isSumValid;
 
 namespace math
 {

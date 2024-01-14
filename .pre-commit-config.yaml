@@ -3,3 +3,4 @@ repos:
   rev: v16.0.5
   hooks:
   - id: clang-format
+    files: \.(c|cc|cpp|h|hpp|cxx|hh|hpp|tpp)$

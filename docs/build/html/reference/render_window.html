@@ -163,6 +163,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="entity.html">Entity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error_logger.html">ErrorLogger</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rect.html">Rect</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">RenderWindow</a></li>
@@ -174,6 +175,7 @@
 <li class="toctree-l2"><a class="reference internal" href="input.html">input</a></li>
 <li class="toctree-l2"><a class="reference internal" href="math.html">math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mixer.html">mixer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overflow.html">overflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="time.html">time</a></li>
 </ul>
 </li>
@@ -220,8 +222,8 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2kn12RenderWindow3clsE9SDL_Color">
-<span id="_CPPv3N2kn12RenderWindow3clsE9SDL_Color"></span><span id="_CPPv2N2kn12RenderWindow3clsE9SDL_Color"></span><span id="kn::RenderWindow::cls__SDL_Color"></span><span class="target" id="classkn_1_1_render_window_1adbc6173c883f03ff8bb6cdc98c051dcb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cls</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">SDL_Color</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">color</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">255</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn12RenderWindow3clsE9SDL_Color" title="Link to this definition">#</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N2kn12RenderWindow3clsE5Color">
+<span id="_CPPv3N2kn12RenderWindow3clsE5Color"></span><span id="_CPPv2N2kn12RenderWindow3clsE5Color"></span><span id="kn::RenderWindow::cls__Color"></span><span class="target" id="classkn_1_1_render_window_1a2d393c7f6c88ea587d8f18efebaa38f8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cls</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="constants.html#_CPPv4N2kn5ColorE" title="kn::Color"><span class="n"><span class="pre">Color</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">color</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">255</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn12RenderWindow3clsE5Color" title="Link to this definition">#</a><br /></dt>
 <dd><p>Clear the screen. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -454,7 +456,7 @@
             <ul>
 <li><a class="reference internal" href="#">RenderWindow</a><ul>
 <li><a class="reference internal" href="#_CPPv4N2kn12RenderWindowE"><code class="docutils literal notranslate"><span class="pre">RenderWindow</span></code></a><ul>
-<li><a class="reference internal" href="#_CPPv4N2kn12RenderWindow3clsE9SDL_Color"><code class="docutils literal notranslate"><span class="pre">RenderWindow::cls()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn12RenderWindow3clsE5Color"><code class="docutils literal notranslate"><span class="pre">RenderWindow::cls()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn12RenderWindow4flipEv"><code class="docutils literal notranslate"><span class="pre">RenderWindow::flip()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn12RenderWindow4blitERKNSt10shared_ptrI7TextureEE4Rect4Rect"><code class="docutils literal notranslate"><span class="pre">RenderWindow::blit()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn12RenderWindow4blitERKNSt10shared_ptrI7TextureEERKN4math4Vec2E"><code class="docutils literal notranslate"><span class="pre">RenderWindow::blit()</span></code></a></li>

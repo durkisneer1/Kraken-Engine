@@ -161,6 +161,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">Tutorials</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="reference/index.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="reference/entity.html">Entity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/error_logger.html">ErrorLogger</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/rect.html">Rect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/render_window.html">RenderWindow</a></li>
@@ -172,6 +173,7 @@
 <li class="toctree-l2"><a class="reference internal" href="reference/input.html">input</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/math.html">math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/mixer.html">mixer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/overflow.html">overflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/time.html">time</a></li>
 </ul>
 </li>
@@ -219,15 +221,15 @@
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="reference/constants.html#_CPPv42kn">kn (C++ type)</a>
 </li>
-        <li><a href="reference/constants.html#_CPPv4N2kn12_BUTTON_LEFTE">kn::_BUTTON_LEFT (C++ member)</a>
-</li>
-        <li><a href="reference/constants.html#_CPPv4N2kn14_BUTTON_MIDDLEE">kn::_BUTTON_MIDDLE (C++ member)</a>
-</li>
-        <li><a href="reference/constants.html#_CPPv4N2kn13_BUTTON_RIGHTE">kn::_BUTTON_RIGHT (C++ member)</a>
-</li>
         <li><a href="reference/constants.html#_CPPv4N2kn16AUDIODEVICEADDEDE">kn::AUDIODEVICEADDED (C++ member)</a>
 </li>
         <li><a href="reference/constants.html#_CPPv4N2kn18AUDIODEVICEREMOVEDE">kn::AUDIODEVICEREMOVED (C++ member)</a>
+</li>
+        <li><a href="reference/constants.html#_CPPv4N2kn11BUTTON_LEFTE">kn::BUTTON_LEFT (C++ member)</a>
+</li>
+        <li><a href="reference/constants.html#_CPPv4N2kn13BUTTON_MIDDLEE">kn::BUTTON_MIDDLE (C++ member)</a>
+</li>
+        <li><a href="reference/constants.html#_CPPv4N2kn12BUTTON_RIGHTE">kn::BUTTON_RIGHT (C++ member)</a>
 </li>
         <li><a href="reference/constants.html#_CPPv4N2kn15CLIPBOARDUPDATEE">kn::CLIPBOARDUPDATE (C++ member)</a>
 </li>
@@ -265,7 +267,17 @@
 </li>
         <li><a href="reference/entity.html#_CPPv4I0EN2kn6Entity14moveAndCollideEvdRKNSt6vectorINSt10shared_ptrI1TEEEE">kn::Entity::moveAndCollide (C++ function)</a>
 </li>
+        <li><a href="reference/error_logger.html#_CPPv4N2kn11ErrorLoggerE">kn::ErrorLogger (C++ class)</a>
+</li>
+        <li><a href="reference/error_logger.html#_CPPv4N2kn11ErrorLogger11getInstanceEv">kn::ErrorLogger::getInstance (C++ function)</a>
+</li>
+        <li><a href="reference/error_logger.html#_CPPv4N2kn11ErrorLogger3logERKNSt6stringE">kn::ErrorLogger::log (C++ function)</a>
+</li>
         <li><a href="reference/constants.html#_CPPv4N2kn5EventE">kn::Event (C++ type)</a>
+</li>
+        <li><a href="reference/constants.html#_CPPv4N2kn9float32_tE">kn::float32_t (C++ type)</a>
+</li>
+        <li><a href="reference/constants.html#_CPPv4N2kn9float64_tE">kn::float64_t (C++ type)</a>
 </li>
         <li><a href="reference/font.html#_CPPv4N2kn4FontE">kn::Font (C++ class)</a>
 </li>
@@ -523,8 +535,6 @@
 </li>
         <li><a href="reference/constants.html#_CPPv4N2kn5K_TABE">kn::K_TAB (C++ member)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="reference/constants.html#_CPPv4N2kn3K_uE">kn::K_u (C++ member)</a>
 </li>
         <li><a href="reference/constants.html#_CPPv4N2kn12K_UNDERSCOREE">kn::K_UNDERSCORE (C++ member)</a>
@@ -533,6 +543,8 @@
 </li>
         <li><a href="reference/constants.html#_CPPv4N2kn3K_vE">kn::K_v (C++ member)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="reference/constants.html#_CPPv4N2kn3K_wE">kn::K_w (C++ member)</a>
 </li>
         <li><a href="reference/constants.html#_CPPv4N2kn3K_xE">kn::K_x (C++ member)</a>
@@ -551,15 +563,25 @@
 </li>
         <li><a href="reference/math.html#_CPPv4N2kn4math8clampVecE4Vec2RK4Vec2RK4Vec2">kn::math::clampVec (C++ function)</a>
 </li>
-        <li><a href="reference/math.html#_CPPv4N2kn4math7lerpVecERK4Vec2RK4Vec2f">kn::math::lerpVec (C++ function)</a>
+        <li><a href="reference/math.html#_CPPv4N2kn4math7lerpVecERK4Vec2RK4Vec2d">kn::math::lerpVec (C++ function)</a>
 </li>
-        <li><a href="reference/math.html#_CPPv4N2kn4math4Vec2E">kn::math::Vec2 (C++ struct)</a>
+        <li><a href="reference/math.html#_CPPv4N2kn4math4Vec2E">kn::math::Vec2 (C++ class)</a>
 </li>
         <li><a href="reference/math.html#_CPPv4NK2kn4math4Vec210distanceToERK4Vec2">kn::math::Vec2::distanceTo (C++ function)</a>
 </li>
         <li><a href="reference/math.html#_CPPv4NK2kn4math4Vec29getLengthEv">kn::math::Vec2::getLength (C++ function)</a>
 </li>
         <li><a href="reference/math.html#_CPPv4N2kn4math4Vec29normalizeEv">kn::math::Vec2::normalize (C++ function)</a>
+</li>
+        <li><a href="reference/math.html#_CPPv4NK2kn4math4Vec2neERK4Vec2">kn::math::Vec2::operator!= (C++ function)</a>
+</li>
+        <li><a href="reference/math.html#_CPPv4NK2kn4math4Vec2plERK4Vec2">kn::math::Vec2::operator+ (C++ function)</a>
+</li>
+        <li><a href="reference/math.html#_CPPv4N2kn4math4Vec2pLERK4Vec2">kn::math::Vec2::operator+= (C++ function)</a>
+</li>
+        <li><a href="reference/math.html#_CPPv4NK2kn4math4Vec2miERK4Vec2">kn::math::Vec2::operator- (C++ function)</a>
+</li>
+        <li><a href="reference/math.html#_CPPv4NK2kn4math4Vec2eqERK4Vec2">kn::math::Vec2::operator== (C++ function)</a>
 </li>
         <li><a href="reference/math.html#_CPPv4N2kn4math4Vec24ZEROEv">kn::math::Vec2::ZERO (C++ function)</a>
 </li>
@@ -580,6 +602,14 @@
         <li><a href="reference/constants.html#_CPPv4N2kn11MOUSEMOTIONE">kn::MOUSEMOTION (C++ member)</a>
 </li>
         <li><a href="reference/constants.html#_CPPv4N2kn10MOUSEWHEELE">kn::MOUSEWHEEL (C++ member)</a>
+</li>
+        <li><a href="reference/overflow.html#_CPPv4N2kn8overflowE">kn::overflow (C++ type)</a>
+</li>
+        <li><a href="reference/overflow.html#_CPPv4N2kn8overflow11closeToZeroERK9float32_tK9float32_t">kn::overflow::closeToZero (C++ function)</a>, <a href="reference/overflow.html#_CPPv4N2kn8overflow11closeToZeroERK9float64_tK9float64_t">[1]</a>
+</li>
+        <li><a href="reference/overflow.html#_CPPv4N2kn8overflow14isProductValidERK7int32_tRK7int32_t">kn::overflow::isProductValid (C++ function)</a>, <a href="reference/overflow.html#_CPPv4N2kn8overflow14isProductValidERK7int64_tRK7int64_t">[1]</a>, <a href="reference/overflow.html#_CPPv4N2kn8overflow14isProductValidERK8uint32_tRK8uint32_t">[2]</a>, <a href="reference/overflow.html#_CPPv4N2kn8overflow14isProductValidERK8uint64_tRK8uint64_t">[3]</a>, <a href="reference/overflow.html#_CPPv4N2kn8overflow14isProductValidERK9float32_tRK9float32_t">[4]</a>, <a href="reference/overflow.html#_CPPv4N2kn8overflow14isProductValidERK9float64_tRK9float64_t">[5]</a>
+</li>
+        <li><a href="reference/overflow.html#_CPPv4N2kn8overflow10isSumValidERK7int32_tRK7int32_t">kn::overflow::isSumValid (C++ function)</a>, <a href="reference/overflow.html#_CPPv4N2kn8overflow10isSumValidERK7int64_tRK7int64_t">[1]</a>, <a href="reference/overflow.html#_CPPv4N2kn8overflow10isSumValidERK8uint32_tRK8uint32_t">[2]</a>, <a href="reference/overflow.html#_CPPv4N2kn8overflow10isSumValidERK8uint64_tRK8uint64_t">[3]</a>, <a href="reference/overflow.html#_CPPv4N2kn8overflow10isSumValidERK9float32_tRK9float32_t">[4]</a>, <a href="reference/overflow.html#_CPPv4N2kn8overflow10isSumValidERK9float64_tRK9float64_t">[5]</a>
 </li>
         <li><a href="reference/constants.html#_CPPv4N2kn4QUITE">kn::QUIT (C++ member)</a>
 </li>
@@ -657,7 +687,7 @@
 </li>
         <li><a href="reference/render_window.html#_CPPv4N2kn12RenderWindow6blitExERKNSt10shared_ptrI7TextureEE4Rect4Rectdbb">kn::RenderWindow::blitEx (C++ function)</a>, <a href="reference/render_window.html#_CPPv4N2kn12RenderWindow6blitExERKNSt10shared_ptrI7TextureEERKN4math4Vec2Edbb">[1]</a>
 </li>
-        <li><a href="reference/render_window.html#_CPPv4N2kn12RenderWindow3clsE9SDL_Color">kn::RenderWindow::cls (C++ function)</a>
+        <li><a href="reference/render_window.html#_CPPv4N2kn12RenderWindow3clsE5Color">kn::RenderWindow::cls (C++ function)</a>
 </li>
         <li><a href="reference/render_window.html#_CPPv4N2kn12RenderWindow4flipEv">kn::RenderWindow::flip (C++ function)</a>
 </li>
@@ -816,6 +846,14 @@
         <li><a href="reference/texture_cache.html#_CPPv4N2kn12TextureCache6unloadERKNSt6stringE">kn::TextureCache::unload (C++ function)</a>
 </li>
         <li><a href="reference/texture_cache.html#_CPPv4N2kn12TextureCache9unloadAllEv">kn::TextureCache::unloadAll (C++ function)</a>
+</li>
+        <li><a href="reference/tile_map.html#_CPPv4N2kn4TileE">kn::Tile (C++ struct)</a>
+</li>
+        <li><a href="reference/tile_map.html#_CPPv4N2kn4Tile4cropE">kn::Tile::crop (C++ member)</a>
+</li>
+        <li><a href="reference/tile_map.html#_CPPv4N2kn4Tile4rectE">kn::Tile::rect (C++ member)</a>
+</li>
+        <li><a href="reference/tile_map.html#_CPPv4N2kn4Tile7textureE">kn::Tile::texture (C++ member)</a>
 </li>
         <li><a href="reference/tile_map.html#_CPPv4N2kn7TileMapE">kn::TileMap (C++ class)</a>
 </li>

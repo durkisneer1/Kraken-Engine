@@ -11,7 +11,27 @@
     <includedby refid="_render_window_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp</includedby>
     <includedby refid="_texture_cache_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/TextureCache.hpp</includedby>
     <incdepgraph>
-      <node id="5">
+      <node id="14">
+        <label>Constants.hpp</label>
+        <link refid="_constants_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ErrorLogger.hpp</label>
+        <link refid="_error_logger_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
         <label>Globals.hpp</label>
         <link refid="_globals_8hpp"/>
         <childnode refid="3" relation="include">
@@ -20,13 +40,29 @@
       <node id="3">
         <label>Math.hpp</label>
         <link refid="_math_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
-      <node id="4">
+      <node id="10">
+        <label>Overflow.hpp</label>
+        <link refid="_overflow_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
         <label>Rect.hpp</label>
         <link refid="_rect_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
@@ -38,11 +74,35 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>SDL.h</label>
+      </node>
+      <node id="5">
+        <label>chrono</label>
+      </node>
+      <node id="11">
+        <label>cmath</label>
+      </node>
+      <node id="6">
+        <label>ctime</label>
+      </node>
+      <node id="7">
+        <label>fstream</label>
+      </node>
+      <node id="8">
+        <label>iostream</label>
+      </node>
+      <node id="12">
+        <label>limits</label>
+      </node>
+      <node id="13">
+        <label>stdint.h</label>
+      </node>
+      <node id="9">
+        <label>string.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
@@ -131,13 +191,13 @@
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_DestroyTexture(<ref refid="classkn_1_1_texture_1a49fc0aa588ce35fbc29bff876e6b4479" kindref="member">texture</ref>);</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41" refid="classkn_1_1_texture_1af30316f09cd6b90c97bc90a6c14be8f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref><sp/><ref refid="classkn_1_1_texture_1af30316f09cd6b90c97bc90a6c14be8f9" kindref="member">getSize</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41" refid="classkn_1_1_texture_1af30316f09cd6b90c97bc90a6c14be8f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref><sp/><ref refid="classkn_1_1_texture_1af30316f09cd6b90c97bc90a6c14be8f9" kindref="member">getSize</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
 <codeline lineno="48" refid="classkn_1_1_texture_1aaba7a220422a6668b367cf389ac4ef8f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structkn_1_1_rect" kindref="compound">Rect</ref><sp/><ref refid="classkn_1_1_texture_1aaba7a220422a6668b367cf389ac4ef8f" kindref="member">getRect</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
 <codeline lineno="57" refid="classkn_1_1_texture_1ad5357fc2ee9cfd5493dfa3011c53ae90" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Texture*<sp/><ref refid="classkn_1_1_texture_1ad5357fc2ee9cfd5493dfa3011c53ae90" kindref="member">getSDLTexture</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64" refid="classkn_1_1_texture_1a4cca93b84d6c9ab81da1b6c0d49538b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_texture_1a4cca93b84d6c9ab81da1b6c0d49538b9" kindref="member">setSize</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref>&amp;<sp/>size);</highlight></codeline>
+<codeline lineno="64" refid="classkn_1_1_texture_1a4cca93b84d6c9ab81da1b6c0d49538b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_texture_1a4cca93b84d6c9ab81da1b6c0d49538b9" kindref="member">setSize</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref>&amp;<sp/>size);</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
 <codeline lineno="71" refid="classkn_1_1_texture_1adfd084306118f21108cafc82a5827622" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1_texture_1adfd084306118f21108cafc82a5827622" kindref="member">scaleBy</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>factor);</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight></codeline>

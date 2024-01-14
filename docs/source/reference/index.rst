@@ -6,6 +6,7 @@ API Reference
     :maxdepth: 1
 
     entity.rst
+    error_logger.rst
     font.rst
     rect.rst
     render_window.rst
@@ -17,4 +18,6 @@ API Reference
     input.rst
     math.rst
     mixer.rst
+    overflow.rst
     time.rst
+    

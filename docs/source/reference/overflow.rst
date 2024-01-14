@@ -1,0 +1,5 @@
+========
+overflow
+========
+
+.. doxygennamespace:: kn::overflow

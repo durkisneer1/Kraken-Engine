@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="114" column="17" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="114" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="94" column="17" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="94" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classkn_1_1_error_logger_1abc8515d943e8becf326ae0115a62b336" prot="private" static="no" mutable="no">
         <type>std::fstream</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="115" column="18" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="115" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="95" column="18" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="95" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classkn_1_1_error_logger_1a121348660efa43533db76a03851ebaca" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="116" column="10" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="116" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="96" column="10" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="96" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -129,23 +129,12 @@
           <defval>&quot;output.log&quot;</defval>
         </param>
         <briefdescription>
-<para>Private constructor for the singleton design. </para>
         </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>filename</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>optional param to set the logfile name, defaults to &quot;output.log&quot; </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="79" column="14" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="79" bodyend="90"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="73" column="14" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="73" bodyend="82"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_error_logger_1ac071973dd70429a14feff5d35aa65b95" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -154,14 +143,12 @@
         <name>~ErrorLogger</name>
         <qualifiedname>kn::ErrorLogger::~ErrorLogger</qualifiedname>
         <briefdescription>
-<para>Private destructor for singleton pattern. </para>
         </briefdescription>
         <detaileddescription>
-<para>Ensures that internal files are closed </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="96" column="5" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="96" bodyend="102"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="84" column="5" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="84" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_error_logger_1a752a413466b17bf29b3e27a815b851b8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -174,13 +161,12 @@
           <declname>other</declname>
         </param>
         <briefdescription>
-<para>Deleted copy constructor, should not copy singleton. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="107" column="5"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="90" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_error_logger_1a641baf058f5586a129aec4d28d6a9ca5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -193,13 +179,12 @@
           <declname>rhs</declname>
         </param>
         <briefdescription>
-<para>Deleted assignment operator, should not try to assign singleton. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="112" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="92" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -207,7 +192,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="23" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="24" bodyend="118"/>
+    <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="23" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="24" bodyend="98"/>
     <listofallmembers>
       <member refid="classkn_1_1_error_logger_1a6a8ac7be4777c9615999be4a2f1a1460" prot="private" virt="non-virtual"><scope>kn::ErrorLogger</scope><name>ErrorLogger</name></member>
       <member refid="classkn_1_1_error_logger_1a752a413466b17bf29b3e27a815b851b8" prot="private" virt="non-virtual"><scope>kn::ErrorLogger</scope><name>ErrorLogger</name></member>
