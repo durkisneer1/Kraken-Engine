@@ -167,7 +167,8 @@ void RenderWindow::blitEx(const std::shared_ptr<Texture>& texture, const math::V
         flip = (SDL_RendererFlip)(flip | SDL_FLIP_VERTICAL);
     }
 
-    SDL_FRect rect = {position.x, position.y, texture->getSize().x, texture->getSize().y};
+    SDL_FRect rect = {(float)position.x, (float)position.y, (float)texture->getSize().x,
+                      (float)texture->getSize().y};
 
     SDL_RenderCopyExF(m_renderer, texture->getSDLTexture(), nullptr, &rect, angle, nullptr, flip);
 }
