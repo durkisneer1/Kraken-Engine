@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classkn_1_1mixer_1_1_music" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>kn::mixer::Music</compoundname>
+    <includes refid="_mixer_8hpp" local="no">Mixer.hpp</includes>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" line="60" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" bodystart="61" bodyend="62"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

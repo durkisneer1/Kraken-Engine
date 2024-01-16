@@ -79,10 +79,10 @@
         </inbodydescription>
         <location file="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" line="25" column="5" bodyfile="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" bodystart="25" bodyend="29"/>
       </memberdef>
-      <memberdef kind="function" id="classkn_1_1mixer_1_1_sound_1ada99d21fb9d538cd6d731573cc0d6ea7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classkn_1_1mixer_1_1_sound_1ad1f046d11c579e4fd0754d339c646ae0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void kn::mixer::Sound::play</definition>
-        <argsstring>(int loops=0, int maxMs=-1, int fadeMs=0)</argsstring>
+        <argsstring>(int loops=0, int playTime=-1, int fadeMs=0)</argsstring>
         <name>play</name>
         <qualifiedname>kn::mixer::Sound::play</qualifiedname>
         <param>
@@ -92,7 +92,7 @@
         </param>
         <param>
           <type>int</type>
-          <declname>maxMs</declname>
+          <declname>playTime</declname>
           <defval>-1</defval>
         </param>
         <param>
@@ -114,10 +114,10 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>maxMs</parametername>
+<parametername>playTime</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The number of milliseconds to play the sound. </para>
+<para>The number of milliseconds to play the sound for. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -189,7 +189,7 @@
     </detaileddescription>
     <location file="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" line="16" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" bodystart="17" bodyend="57"/>
     <listofallmembers>
-      <member refid="classkn_1_1mixer_1_1_sound_1ada99d21fb9d538cd6d731573cc0d6ea7" prot="public" virt="non-virtual"><scope>kn::mixer::Sound</scope><name>play</name></member>
+      <member refid="classkn_1_1mixer_1_1_sound_1ad1f046d11c579e4fd0754d339c646ae0" prot="public" virt="non-virtual"><scope>kn::mixer::Sound</scope><name>play</name></member>
       <member refid="classkn_1_1mixer_1_1_sound_1adf521556b924f9adabdfc56f94c7563c" prot="public" virt="non-virtual"><scope>kn::mixer::Sound</scope><name>setVolume</name></member>
       <member refid="classkn_1_1mixer_1_1_sound_1af2948e0b28a842c0e5063fe695bd1409" prot="private" virt="non-virtual"><scope>kn::mixer::Sound</scope><name>sound</name></member>
       <member refid="classkn_1_1mixer_1_1_sound_1a42299fa9b02c6757c1e94488c4ea98c0" prot="public" virt="non-virtual"><scope>kn::mixer::Sound</scope><name>Sound</name></member>

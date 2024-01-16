@@ -26,14 +26,14 @@ Sound::Sound(const std::string& fileDir)
     }
 }
 
-void Sound::play(int loops, int maxMs, int fadeMs)
+void Sound::play(int loops, int playTime, int fadeMs)
 {
     int channelNum = -1;
 
     if (fadeMs > 0)
-        channelNum = Mix_FadeInChannelTimed(-1, sound, loops, maxMs, fadeMs);
+        channelNum = Mix_FadeInChannelTimed(-1, sound, loops, fadeMs, playTime);
     else
-        channelNum = Mix_PlayChannelTimed(-1, sound, loops, maxMs);
+        channelNum = Mix_PlayChannelTimed(-1, sound, loops, playTime);
 
     if (channelNum == -1)
     {

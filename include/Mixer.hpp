@@ -32,12 +32,12 @@ class Sound final
      * @brief Play the sound.
      *
      * @param loops The number of times to loop the sound.
-     * @param maxMs The number of milliseconds to play the sound.
+     * @param playTime The number of milliseconds to play the sound for.
      * @param fadeMs The number of milliseconds to fade in.
      *
      * @warning ``fadeMS`` is currently not working.
      */
-    void play(int loops = 0, int maxMs = -1, int fadeMs = 0);
+    void play(int loops = 0, int playTime = -1, int fadeMs = 0);
 
     /**
      * @brief Set the volume of the sound.
@@ -54,6 +54,10 @@ class Sound final
   private:
     Mix_Chunk* sound = nullptr;
     float volume = MIX_MAX_VOLUME;
+};
+
+class Music final
+{
 };
 
 } // namespace mixer

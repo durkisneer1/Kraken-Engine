@@ -44,6 +44,8 @@
     <member refid="classkn_1_1_font_1a688854abdf5091614a6b372105480951" kind="function"><name>~Font</name></member>
     <member refid="classkn_1_1_font_1a9f3901d64d9bf44e3918910fc81aa6d8" kind="function"><name>render</name></member>
   </compound>
+  <compound refid="classkn_1_1mixer_1_1_music" kind="class"><name>kn::mixer::Music</name>
+  </compound>
   <compound refid="structkn_1_1_rect" kind="struct"><name>kn::Rect</name>
     <member refid="structkn_1_1_rect_1a4ddd5a18ffab2852926285955f92a8ef" kind="function"><name>Rect</name></member>
     <member refid="structkn_1_1_rect_1a29cf43d1e332203115a5db256416059a" kind="function"><name>Rect</name></member>
@@ -111,7 +113,7 @@
     <member refid="classkn_1_1mixer_1_1_sound_1aa7bb03b50bf77871c2f8cdea50b16762" kind="variable"><name>volume</name></member>
     <member refid="classkn_1_1mixer_1_1_sound_1a42299fa9b02c6757c1e94488c4ea98c0" kind="function"><name>Sound</name></member>
     <member refid="classkn_1_1mixer_1_1_sound_1a51a908b3be94bddd9600a745f2c46235" kind="function"><name>~Sound</name></member>
-    <member refid="classkn_1_1mixer_1_1_sound_1ada99d21fb9d538cd6d731573cc0d6ea7" kind="function"><name>play</name></member>
+    <member refid="classkn_1_1mixer_1_1_sound_1ad1f046d11c579e4fd0754d339c646ae0" kind="function"><name>play</name></member>
     <member refid="classkn_1_1mixer_1_1_sound_1adf521556b924f9adabdfc56f94c7563c" kind="function"><name>setVolume</name></member>
     <member refid="classkn_1_1mixer_1_1_sound_1a0b68437956ff10fbdebc20304df56e6f" kind="function"><name>unload</name></member>
   </compound>
@@ -400,7 +402,7 @@
     <member refid="namespacekn_1_1input_1a318cd009ccea529aabb2aca1e60c0af7" kind="function"><name>getVector</name></member>
   </compound>
   <compound refid="namespacekn_1_1math" kind="namespace"><name>kn::math</name>
-    <member refid="namespacekn_1_1math_1a8707b7484af546b0e9f57d8d78059a51" kind="function"><name>clampVec</name></member>
+    <member refid="namespacekn_1_1math_1a27b3a85fd27fbee0328fae0b780697fa" kind="function"><name>clampVec</name></member>
     <member refid="namespacekn_1_1math_1a9a6ecf740568eb799b85a2f10d764de5" kind="function"><name>lerpVec</name></member>
     <member refid="namespacekn_1_1math_1a98048b6b75328ae4acbff11d314bfeae" kind="function"><name>operator*</name></member>
     <member refid="namespacekn_1_1math_1aa46e046256f2e9707eac97345b3e251b" kind="function"><name>operator*</name></member>

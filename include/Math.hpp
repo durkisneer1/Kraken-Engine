@@ -26,13 +26,13 @@ class Vec2
 
     template <typename _first, typename _second>
     Vec2(_first x, _second y)
-        : x(static_cast<double>(y)), y(static_cast<double>(y)), tolerance(0.0001)
+        : x(static_cast<double>(x)), y(static_cast<double>(y)), tolerance(0.0001)
     {
     }
 
     template <typename _first, typename _second>
     Vec2(_first x, _second y, double tolerance)
-        : x(static_cast<double>(y)), y(static_cast<double>(y)), tolerance(tolerance)
+        : x(static_cast<double>(x)), y(static_cast<double>(y)), tolerance(tolerance)
     {
     }
 

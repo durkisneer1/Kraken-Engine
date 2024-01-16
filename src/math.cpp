@@ -7,9 +7,7 @@
 namespace kn
 {
 
-using overflow::closeToZero;
-using overflow::isProductValid;
-using overflow::isSumValid;
+using namespace overflow;
 
 namespace math
 {
