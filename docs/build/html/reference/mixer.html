@@ -267,6 +267,89 @@
 </div>
 </dd></dl>
 
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn5mixer5MusicE">
+<span id="_CPPv3N2kn5mixer5MusicE"></span><span id="_CPPv2N2kn5mixer5MusicE"></span><span id="kn::mixer::Music"></span><span class="target" id="classkn_1_1mixer_1_1_music"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Music</span></span></span><a class="headerlink" href="#_CPPv4N2kn5mixer5MusicE" title="Link to this definition">#</a><br /></dt>
+<dd><p>A music object. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This class is planned to become a singleton. </p>
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn5mixer5Music5MusicERKNSt6stringE">
+<span id="_CPPv3N2kn5mixer5Music5MusicERKNSt6stringE"></span><span id="_CPPv2N2kn5mixer5Music5MusicERKNSt6stringE"></span><span id="kn::mixer::Music::Music__ssCR"></span><span class="target" id="classkn_1_1mixer_1_1_music_1af07d8d44951f157175807fe86b131766"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Music</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fileDir</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5mixer5Music5MusicERKNSt6stringE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Create a music object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fileDir</strong> – The directory of the music file. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn5mixer5Music9setVolumeEf">
+<span id="_CPPv3N2kn5mixer5Music9setVolumeEf"></span><span id="_CPPv2N2kn5mixer5Music9setVolumeEf"></span><span id="kn::mixer::Music::setVolume__float"></span><span class="target" id="classkn_1_1mixer_1_1_music_1a6146e8cb9ec9c43b8d637095e54f19da"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setVolume</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">volume</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5mixer5Music9setVolumeEf" title="Link to this definition">#</a><br /></dt>
+<dd><p>Set the volume of the music. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>volume</strong> – The volume to set. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn5mixer5Music4playEii">
+<span id="_CPPv3N2kn5mixer5Music4playEii"></span><span id="_CPPv2N2kn5mixer5Music4playEii"></span><span id="kn::mixer::Music::play__i.i"></span><span class="target" id="classkn_1_1mixer_1_1_music_1a54e2d4df71aeb5ac1949101c2bb0898f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">play</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">loops</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fadeMs</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5mixer5Music4playEii" title="Link to this definition">#</a><br /></dt>
+<dd><p>Play the music. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>loops</strong> – The number of times to loop the music. </p></li>
+<li><p><strong>fadeMs</strong> – The number of milliseconds to fade in. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn5mixer5Music5pauseEi">
+<span id="_CPPv3N2kn5mixer5Music5pauseEi"></span><span id="_CPPv2N2kn5mixer5Music5pauseEi"></span><span id="kn::mixer::Music::pause__i"></span><span class="target" id="classkn_1_1mixer_1_1_music_1ae90529c94f49a5fce637320697d9db7d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pause</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fadeMs</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5mixer5Music5pauseEi" title="Link to this definition">#</a><br /></dt>
+<dd><p>Pause the music. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fadeMs</strong> – The number of milliseconds to fade out. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn5mixer5Music6resumeEv">
+<span id="_CPPv3N2kn5mixer5Music6resumeEv"></span><span id="_CPPv2N2kn5mixer5Music6resumeEv"></span><span id="kn::mixer::Music::resume"></span><span class="target" id="classkn_1_1mixer_1_1_music_1aa7c66b8ce2b49da12e80110e36d22d6e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">resume</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5mixer5Music6resumeEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Resume the music. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn5mixer5Music4loadERKNSt6stringE">
+<span id="_CPPv3N2kn5mixer5Music4loadERKNSt6stringE"></span><span id="_CPPv2N2kn5mixer5Music4loadERKNSt6stringE"></span><span id="kn::mixer::Music::load__ssCR"></span><span class="target" id="classkn_1_1mixer_1_1_music_1ac3c832074c0e1bbc2da9d81489c1694d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">load</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fileDir</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5mixer5Music4loadERKNSt6stringE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Load a music file. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fileDir</strong> – The directory of the music file. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn5mixer5Music6unloadEv">
+<span id="_CPPv3N2kn5mixer5Music6unloadEv"></span><span id="_CPPv2N2kn5mixer5Music6unloadEv"></span><span id="kn::mixer::Music::unload"></span><span class="target" id="classkn_1_1mixer_1_1_music_1a33a6a2e9609fd78b4690487f49617188"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">unload</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5mixer5Music6unloadEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Free the music from memory. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
 </section>
 
         </article>
@@ -330,6 +413,16 @@
 <li><a class="reference internal" href="#_CPPv4N2kn5mixer5Sound4playEiii"><code class="docutils literal notranslate"><span class="pre">Sound::play()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn5mixer5Sound9setVolumeEf"><code class="docutils literal notranslate"><span class="pre">Sound::setVolume()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn5mixer5Sound6unloadEv"><code class="docutils literal notranslate"><span class="pre">Sound::unload()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4N2kn5mixer5MusicE"><code class="docutils literal notranslate"><span class="pre">Music</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N2kn5mixer5Music5MusicERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">Music::Music()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn5mixer5Music9setVolumeEf"><code class="docutils literal notranslate"><span class="pre">Music::setVolume()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn5mixer5Music4playEii"><code class="docutils literal notranslate"><span class="pre">Music::play()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn5mixer5Music5pauseEi"><code class="docutils literal notranslate"><span class="pre">Music::pause()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn5mixer5Music6resumeEv"><code class="docutils literal notranslate"><span class="pre">Music::resume()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn5mixer5Music4loadERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">Music::load()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn5mixer5Music6unloadEv"><code class="docutils literal notranslate"><span class="pre">Music::unload()</span></code></a></li>
 </ul>
 </li>
 </ul>
