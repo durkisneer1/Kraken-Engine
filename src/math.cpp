@@ -40,7 +40,7 @@ double Vec2::getLength() const
 
 bool Vec2::normalize()
 {
-    const float c = getLength();
+    const double c = getLength();
     if (c <= 0.0)
     {
         WARN("Cannot normalize vector either because it is the zero vector, or it would overflow");
@@ -88,7 +88,6 @@ Vec2& Vec2::operator+=(const Vec2& other)
 
 bool Vec2::operator==(const Vec2& other) const
 {
-    // return (x == other.x && y == other.y);
     if (!isSumValid(x, -other.x) || !isSumValid(y, -other.y))
     {
         TRACE("Vector comparison would result in overflow, they can't be the same");
@@ -103,12 +102,14 @@ bool Vec2::operator==(const Vec2& other) const
 
 bool Vec2::operator!=(const Vec2& other) const { return !(*this == other); }
 
-Vec2 clampVec(Vec2 vec, const Vec2& min, const Vec2& max)
+Vec2 clampVec(const Vec2& vec, const Vec2& min, const Vec2& max)
 {
-    vec.x = std::clamp(vec.x, min.x, max.x);
-    vec.y = std::clamp(vec.y, min.y, max.y);
+    Vec2 retVec;
 
-    return vec;
+    retVec.x = std::clamp(vec.x, min.x, max.x);
+    retVec.y = std::clamp(vec.y, min.y, max.y);
+
+    return retVec;
 }
 
 Vec2 lerpVec(const Vec2& a, const Vec2& b, double t)

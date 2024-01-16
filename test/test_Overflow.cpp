@@ -3,14 +3,14 @@
 #include "gtest/gtest.h"
 
 #include "Constants.hpp"
-#include "MathOverflow.hpp"
+#include "Overflow.hpp"
 
 namespace
 {
 using kn::float32_t;
 using kn::float64_t;
-using kn::Overflow::isProductValid;
-using kn::Overflow::isSumValid;
+using kn::overflow::isProductValid;
+using kn::overflow::isSumValid;
 
 class DoubleOverflowTest : public ::testing::Test
 {

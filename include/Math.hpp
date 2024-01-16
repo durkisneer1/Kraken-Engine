@@ -119,7 +119,7 @@ class Vec2
  *
  * @return The clamped vector.
  */
-Vec2 clampVec(Vec2 vec, const Vec2& min, const Vec2& max);
+Vec2 clampVec(const Vec2& vec, const Vec2& min, const Vec2& max);
 
 /**
  * @brief Linearly interpolate a vector.
@@ -142,7 +142,8 @@ Vec2 lerpVec(const Vec2& a, const Vec2& b, double t);
  */
 template <typename T> Vec2 operator*(const T& lhs, const Vec2& rhs)
 {
-    if (!isProductValid(lhs, rhs.x) || !isProductValid(lhs, rhs.y))
+    if (!isProductValid(static_cast<double>(lhs), rhs.x) ||
+        !isProductValid(static_cast<double>(lhs), rhs.y))
     {
         WARN("Multiplication would result in overflow");
         return Vec2::ZERO();
