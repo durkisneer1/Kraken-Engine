@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" line="55" column="15" bodyfile="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" bodystart="55" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" line="53" column="15" bodyfile="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classkn_1_1mixer_1_1_sound_1aa7bb03b50bf77871c2f8cdea50b16762" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" line="56" column="11" bodyfile="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" bodystart="56" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" line="54" column="11" bodyfile="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" bodystart="54" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -125,17 +125,15 @@
 <parametername>fadeMs</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The number of milliseconds to fade in.</para>
+<para>The number of milliseconds to fade in. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="warning"><para><computeroutput>fadeMS</computeroutput> is currently not working. </para>
-</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" line="40" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" line="38" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1mixer_1_1_sound_1adf521556b924f9adabdfc56f94c7563c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -164,7 +162,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" line="47" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" line="45" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1mixer_1_1_sound_1a0b68437956ff10fbdebc20304df56e6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -179,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" line="52" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" line="50" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -187,7 +185,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" line="16" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" bodystart="17" bodyend="57"/>
+    <location file="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" line="16" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/Mixer.hpp" bodystart="17" bodyend="55"/>
     <listofallmembers>
       <member refid="classkn_1_1mixer_1_1_sound_1ad1f046d11c579e4fd0754d339c646ae0" prot="public" virt="non-virtual"><scope>kn::mixer::Sound</scope><name>play</name></member>
       <member refid="classkn_1_1mixer_1_1_sound_1adf521556b924f9adabdfc56f94c7563c" prot="public" virt="non-virtual"><scope>kn::mixer::Sound</scope><name>setVolume</name></member>
