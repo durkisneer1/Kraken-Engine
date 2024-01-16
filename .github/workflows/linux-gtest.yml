@@ -1,0 +1,75 @@
+name: Run GTest Linux
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  linux-gtest:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      # Set fail-fast to false to ensure that feedback is delivered for all matrix combinations. Consider changing this to true when your workflow is stable.
+      fail-fast: false
+
+      # Set up a matrix to run the following 2 configurations:
+      # 1. <Linux, Release, latest GCC compiler toolchain on the default runner image, default generator>
+      # 2. <Linux, Release, latest Clang compiler toolchain on the default runner image, default generator>
+      #
+      # To add more build types (Release, Debug, RelWithDebInfo, etc.) customize the build_type list.
+      matrix:
+        os: [ubuntu-latest]
+        # build_type: [Release]
+        c_compiler: [gcc, clang]
+        include:
+          - os: ubuntu-latest
+            c_compiler: gcc
+            cpp_compiler: g++
+          - os: ubuntu-latest
+            c_compiler: clang
+            cpp_compiler: clang++
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set reusable strings
+      # Turn repeated input strings (such as the build output directory) into step outputs. These step outputs can be used throughout the workflow file.
+      id: strings
+      shell: bash
+      run: |
+        echo "build-output-dir=${{ github.workspace }}/build" >> "$GITHUB_OUTPUT"
+    - name: Configure CMake
+      run: mkdir bld && mkdir bin && cd bld && cmake .. -DLOG_LEVEL=1 -DCMAKE_CXX_COMPILER=${{ matrix.cpp_compiler }} -DCMAKE_C_COMPILER=${{ matrix.c_compiler }}
+
+    - name: Build
+      # Build your program with the given configuration. Note that --config is needed because the default Windows generator is a multi-config generator (Visual Studio generator).
+      run: cd bld && make -j8 && make Kraken_Test -j8
+
+    - name: Run Tests
+      run: cd bin && ./Kraken_Test
+
+    - name: Zip bin
+      if: always()
+      run: zip bin.zip bin/*
+
+    - name: Zip bld
+      if: always()
+      run: zip -r bld.zip bld -x bld/_deps/\* bld/CMakeFiles/\*
+
+    - name: Upload Artifact bin
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: bin-${{ matrix.c_compiler }}
+        path: bin.zip
+        retention-days: 5
+
+    - name: Upload Artifact bld
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: bld-${{ matrix.c_compiler }}
+        path: bld.zip
+        retention-days: 5
