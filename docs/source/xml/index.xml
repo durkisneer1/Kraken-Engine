@@ -44,17 +44,6 @@
     <member refid="classkn_1_1_font_1a688854abdf5091614a6b372105480951" kind="function"><name>~Font</name></member>
     <member refid="classkn_1_1_font_1a9f3901d64d9bf44e3918910fc81aa6d8" kind="function"><name>render</name></member>
   </compound>
-  <compound refid="classkn_1_1mixer_1_1_music" kind="class"><name>kn::mixer::Music</name>
-    <member refid="classkn_1_1mixer_1_1_music_1aec22561036bb8ffbf82a254de73aad30" kind="variable"><name>m_music</name></member>
-    <member refid="classkn_1_1mixer_1_1_music_1af07d8d44951f157175807fe86b131766" kind="function"><name>Music</name></member>
-    <member refid="classkn_1_1mixer_1_1_music_1a3f0c7beb606d4987154c3cf0bd6f01fd" kind="function"><name>~Music</name></member>
-    <member refid="classkn_1_1mixer_1_1_music_1a6146e8cb9ec9c43b8d637095e54f19da" kind="function"><name>setVolume</name></member>
-    <member refid="classkn_1_1mixer_1_1_music_1a54e2d4df71aeb5ac1949101c2bb0898f" kind="function"><name>play</name></member>
-    <member refid="classkn_1_1mixer_1_1_music_1ae90529c94f49a5fce637320697d9db7d" kind="function"><name>pause</name></member>
-    <member refid="classkn_1_1mixer_1_1_music_1aa7c66b8ce2b49da12e80110e36d22d6e" kind="function"><name>resume</name></member>
-    <member refid="classkn_1_1mixer_1_1_music_1ac3c832074c0e1bbc2da9d81489c1694d" kind="function"><name>load</name></member>
-    <member refid="classkn_1_1mixer_1_1_music_1a33a6a2e9609fd78b4690487f49617188" kind="function"><name>unload</name></member>
-  </compound>
   <compound refid="structkn_1_1_rect" kind="struct"><name>kn::Rect</name>
     <member refid="structkn_1_1_rect_1a4ddd5a18ffab2852926285955f92a8ef" kind="function"><name>Rect</name></member>
     <member refid="structkn_1_1_rect_1a29cf43d1e332203115a5db256416059a" kind="function"><name>Rect</name></member>
@@ -97,7 +86,7 @@
     <member refid="classkn_1_1_render_window_1af174d2f6a0fef009255e7b27ad347cd5" kind="variable"><name>m_window</name></member>
     <member refid="classkn_1_1_render_window_1a82e4a97c56f45ce454e629c9b86e0316" kind="variable"><name>m_event</name></member>
     <member refid="classkn_1_1_render_window_1aee142437a787ef4603ada11a8d133955" kind="variable"><name>m_events</name></member>
-    <member refid="classkn_1_1_render_window_1adcad93cc1e1c336afff133667bdbcb2c" kind="function"><name>getInstance</name></member>
+    <member refid="classkn_1_1_render_window_1ac068cc34280588429a2fc249f5f4504b" kind="function"><name>get</name></member>
     <member refid="classkn_1_1_render_window_1a04888f5d385499db342f75021fa6beb0" kind="function"><name>getScale</name></member>
     <member refid="classkn_1_1_render_window_1a169192f7eb40b203031c7a26a711fa26" kind="function"><name>setScale</name></member>
     <member refid="classkn_1_1_render_window_1a2d393c7f6c88ea587d8f18efebaa38f8" kind="function"><name>cls</name></member>
@@ -115,16 +104,18 @@
     <member refid="classkn_1_1_render_window_1a5ed9d63ab84ffa51793e1e788c867233" kind="function"><name>RenderWindow</name></member>
     <member refid="classkn_1_1_render_window_1a0e5af334903645c870c713f53b754823" kind="function"><name>~RenderWindow</name></member>
     <member refid="classkn_1_1_render_window_1a19face1412d87c5333ebc107b5e30b9a" kind="function"><name>clean</name></member>
-    <member refid="classkn_1_1_render_window_1a6438f39a2be6013f5c22eaf8df5dda48" kind="function"><name>operator=</name></member>
+    <member refid="classkn_1_1_render_window_1ae882a3aa7a8d6d9c49a5efcb31f9abe1" kind="function"><name>operator=</name></member>
+    <member refid="classkn_1_1_render_window_1ad08627fb51b669ed3c43a806db63be51" kind="function"><name>operator=</name></member>
   </compound>
-  <compound refid="classkn_1_1mixer_1_1_sound" kind="class"><name>kn::mixer::Sound</name>
-    <member refid="classkn_1_1mixer_1_1_sound_1a1ad6c5de3573a2d3dbed44ea32bfc7bb" kind="variable"><name>m_sound</name></member>
-    <member refid="classkn_1_1mixer_1_1_sound_1ac0c06e84757d7d10d9ffff6bc7ebc557" kind="variable"><name>m_volume</name></member>
-    <member refid="classkn_1_1mixer_1_1_sound_1a42299fa9b02c6757c1e94488c4ea98c0" kind="function"><name>Sound</name></member>
-    <member refid="classkn_1_1mixer_1_1_sound_1a51a908b3be94bddd9600a745f2c46235" kind="function"><name>~Sound</name></member>
-    <member refid="classkn_1_1mixer_1_1_sound_1ad1f046d11c579e4fd0754d339c646ae0" kind="function"><name>play</name></member>
-    <member refid="classkn_1_1mixer_1_1_sound_1adf521556b924f9adabdfc56f94c7563c" kind="function"><name>setVolume</name></member>
-    <member refid="classkn_1_1mixer_1_1_sound_1a0b68437956ff10fbdebc20304df56e6f" kind="function"><name>unload</name></member>
+  <compound refid="classkn_1_1_sound" kind="class"><name>kn::Sound</name>
+    <member refid="classkn_1_1_sound_1a03b8ed7a6b66bfd861b77735c9df97b8" kind="variable"><name>m_sound</name></member>
+    <member refid="classkn_1_1_sound_1a0f5dbf56994e6914eceb150887612937" kind="variable"><name>m_volume</name></member>
+    <member refid="classkn_1_1_sound_1ab58e87bcd4fb6be02e98675621fb8a4b" kind="function"><name>Sound</name></member>
+    <member refid="classkn_1_1_sound_1ab3d96a83099bbac05632882f07eb4c7d" kind="function"><name>~Sound</name></member>
+    <member refid="classkn_1_1_sound_1a475db8853693191340bb86e2bb001c54" kind="function"><name>play</name></member>
+    <member refid="classkn_1_1_sound_1ac537563488214a87b177c3b3df6462a1" kind="function"><name>setVolume</name></member>
+    <member refid="classkn_1_1_sound_1af141a58501d0aa4585ff07b9bd4bf72b" kind="function"><name>getVolume</name></member>
+    <member refid="classkn_1_1_sound_1a58cc163db5ac4d593bd76b44489cbf2c" kind="function"><name>unload</name></member>
   </compound>
   <compound refid="classkn_1_1_texture" kind="class"><name>kn::Texture</name>
     <member refid="classkn_1_1_texture_1a49fc0aa588ce35fbc29bff876e6b4479" kind="variable"><name>texture</name></member>
@@ -416,7 +407,17 @@
     <member refid="namespacekn_1_1math_1a98048b6b75328ae4acbff11d314bfeae" kind="function"><name>operator*</name></member>
     <member refid="namespacekn_1_1math_1aa46e046256f2e9707eac97345b3e251b" kind="function"><name>operator*</name></member>
   </compound>
-  <compound refid="namespacekn_1_1mixer" kind="namespace"><name>kn::mixer</name>
+  <compound refid="namespacekn_1_1music" kind="namespace"><name>kn::music</name>
+    <member refid="namespacekn_1_1music_1a623bdf1bd061c9ceff8a39fa3e51096e" kind="function"><name>load</name></member>
+    <member refid="namespacekn_1_1music_1ac728fb8b0f8c9f420a018d1969f9bde6" kind="function"><name>unload</name></member>
+    <member refid="namespacekn_1_1music_1a957f2bba3def16755e1caa990d5392c3" kind="function"><name>play</name></member>
+    <member refid="namespacekn_1_1music_1a43e6135e6eebc297bdb7cf28f974b8e6" kind="function"><name>rewind</name></member>
+    <member refid="namespacekn_1_1music_1ac92cbbe33548a515e58e56929c661703" kind="function"><name>stop</name></member>
+    <member refid="namespacekn_1_1music_1aed484af73dd5c90280dd69643dec70a3" kind="function"><name>pause</name></member>
+    <member refid="namespacekn_1_1music_1a561871bac8b78be821e886fdca43ce60" kind="function"><name>resume</name></member>
+    <member refid="namespacekn_1_1music_1a833289b5e4937594d6edc4d670d93b3b" kind="function"><name>fadeOut</name></member>
+    <member refid="namespacekn_1_1music_1ae4665e9e009a31690cb2a8dac5abd2ea" kind="function"><name>setVolume</name></member>
+    <member refid="namespacekn_1_1music_1a294ce07ee2327d528d4a5e1f93f167b0" kind="function"><name>getVolume</name></member>
   </compound>
   <compound refid="namespacekn_1_1overflow" kind="namespace"><name>kn::overflow</name>
     <member refid="namespacekn_1_1overflow_1a25ab9731e8502f23db1ab8742ccb35d1" kind="function"><name>isSumValid</name></member>
@@ -461,13 +462,15 @@
   </compound>
   <compound refid="_math_8hpp" kind="file"><name>Math.hpp</name>
   </compound>
-  <compound refid="_mixer_8hpp" kind="file"><name>Mixer.hpp</name>
+  <compound refid="_music_8hpp" kind="file"><name>Music.hpp</name>
   </compound>
   <compound refid="_overflow_8hpp" kind="file"><name>Overflow.hpp</name>
   </compound>
   <compound refid="_rect_8hpp" kind="file"><name>Rect.hpp</name>
   </compound>
   <compound refid="_render_window_8hpp" kind="file"><name>RenderWindow.hpp</name>
+  </compound>
+  <compound refid="_sound_8hpp" kind="file"><name>Sound.hpp</name>
   </compound>
   <compound refid="_texture_8hpp" kind="file"><name>Texture.hpp</name>
   </compound>

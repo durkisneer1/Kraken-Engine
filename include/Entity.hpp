@@ -41,7 +41,7 @@ class Entity
     math::Vec2 velocity;
 
   protected:
-    RenderWindow& window = RenderWindow::getInstance();
+    RenderWindow& window = RenderWindow::get();
     std::shared_ptr<Texture> texture;
 
     bool onGround = false;

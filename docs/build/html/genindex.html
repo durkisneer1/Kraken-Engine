@@ -165,6 +165,7 @@
 <li class="toctree-l2"><a class="reference internal" href="reference/font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/rect.html">Rect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/render_window.html">RenderWindow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/sound.html">Sound</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/texture_cache.html">TextureCache</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/texture.html">Texture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/tile_map.html">TileMap</a></li>
@@ -172,7 +173,7 @@
 <li class="toctree-l2"><a class="reference internal" href="reference/draw.html">draw</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/input.html">input</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/math.html">math</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/mixer.html">mixer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/music.html">music</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/overflow.html">overflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/time.html">time</a></li>
 </ul>
@@ -551,10 +552,10 @@
 </li>
         <li><a href="reference/constants.html#_CPPv4N2kn3K_zE">kn::K_z (C++ member)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="reference/constants.html#_CPPv4N2kn7KEYDOWNE">kn::KEYDOWN (C++ member)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="reference/constants.html#_CPPv4N2kn13KEYMAPCHANGEDE">kn::KEYMAPCHANGED (C++ member)</a>
 </li>
         <li><a href="reference/constants.html#_CPPv4N2kn4KEYSE">kn::KEYS (C++ type)</a>
@@ -585,32 +586,6 @@
 </li>
         <li><a href="reference/math.html#_CPPv4N2kn4math4Vec24ZEROEv">kn::math::Vec2::ZERO (C++ function)</a>
 </li>
-        <li><a href="reference/mixer.html#_CPPv4N2kn5mixer5MusicE">kn::mixer::Music (C++ class)</a>
-</li>
-        <li><a href="reference/mixer.html#_CPPv4N2kn5mixer5Music4loadERKNSt6stringE">kn::mixer::Music::load (C++ function)</a>
-</li>
-        <li><a href="reference/mixer.html#_CPPv4N2kn5mixer5Music5MusicERKNSt6stringE">kn::mixer::Music::Music (C++ function)</a>
-</li>
-        <li><a href="reference/mixer.html#_CPPv4N2kn5mixer5Music5pauseEi">kn::mixer::Music::pause (C++ function)</a>
-</li>
-        <li><a href="reference/mixer.html#_CPPv4N2kn5mixer5Music4playEii">kn::mixer::Music::play (C++ function)</a>
-</li>
-        <li><a href="reference/mixer.html#_CPPv4N2kn5mixer5Music6resumeEv">kn::mixer::Music::resume (C++ function)</a>
-</li>
-        <li><a href="reference/mixer.html#_CPPv4N2kn5mixer5Music9setVolumeEf">kn::mixer::Music::setVolume (C++ function)</a>
-</li>
-        <li><a href="reference/mixer.html#_CPPv4N2kn5mixer5Music6unloadEv">kn::mixer::Music::unload (C++ function)</a>
-</li>
-        <li><a href="reference/mixer.html#_CPPv4N2kn5mixer5SoundE">kn::mixer::Sound (C++ class)</a>
-</li>
-        <li><a href="reference/mixer.html#_CPPv4N2kn5mixer5Sound4playEiii">kn::mixer::Sound::play (C++ function)</a>
-</li>
-        <li><a href="reference/mixer.html#_CPPv4N2kn5mixer5Sound9setVolumeEf">kn::mixer::Sound::setVolume (C++ function)</a>
-</li>
-        <li><a href="reference/mixer.html#_CPPv4N2kn5mixer5Sound5SoundERKNSt6stringE">kn::mixer::Sound::Sound (C++ function)</a>
-</li>
-        <li><a href="reference/mixer.html#_CPPv4N2kn5mixer5Sound6unloadEv">kn::mixer::Sound::unload (C++ function)</a>
-</li>
         <li><a href="reference/constants.html#_CPPv4N2kn15MOUSEBUTTONDOWNE">kn::MOUSEBUTTONDOWN (C++ member)</a>
 </li>
         <li><a href="reference/constants.html#_CPPv4N2kn13MOUSEBUTTONUPE">kn::MOUSEBUTTONUP (C++ member)</a>
@@ -618,6 +593,26 @@
         <li><a href="reference/constants.html#_CPPv4N2kn11MOUSEMOTIONE">kn::MOUSEMOTION (C++ member)</a>
 </li>
         <li><a href="reference/constants.html#_CPPv4N2kn10MOUSEWHEELE">kn::MOUSEWHEEL (C++ member)</a>
+</li>
+        <li><a href="reference/music.html#_CPPv4N2kn5music7fadeOutEi">kn::music::fadeOut (C++ function)</a>
+</li>
+        <li><a href="reference/music.html#_CPPv4N2kn5music9getVolumeEv">kn::music::getVolume (C++ function)</a>
+</li>
+        <li><a href="reference/music.html#_CPPv4N2kn5music4loadERKNSt6stringE">kn::music::load (C++ function)</a>
+</li>
+        <li><a href="reference/music.html#_CPPv4N2kn5music5pauseEv">kn::music::pause (C++ function)</a>
+</li>
+        <li><a href="reference/music.html#_CPPv4N2kn5music4playEii">kn::music::play (C++ function)</a>
+</li>
+        <li><a href="reference/music.html#_CPPv4N2kn5music6resumeEv">kn::music::resume (C++ function)</a>
+</li>
+        <li><a href="reference/music.html#_CPPv4N2kn5music6rewindEv">kn::music::rewind (C++ function)</a>
+</li>
+        <li><a href="reference/music.html#_CPPv4N2kn5music9setVolumeEf">kn::music::setVolume (C++ function)</a>
+</li>
+        <li><a href="reference/music.html#_CPPv4N2kn5music4stopEv">kn::music::stop (C++ function)</a>
+</li>
+        <li><a href="reference/music.html#_CPPv4N2kn5music6unloadEv">kn::music::unload (C++ function)</a>
 </li>
         <li><a href="reference/overflow.html#_CPPv4N2kn8overflowE">kn::overflow (C++ type)</a>
 </li>
@@ -707,11 +702,11 @@
 </li>
         <li><a href="reference/render_window.html#_CPPv4N2kn12RenderWindow4flipEv">kn::RenderWindow::flip (C++ function)</a>
 </li>
+        <li><a href="reference/render_window.html#_CPPv4N2kn12RenderWindow3getEv">kn::RenderWindow::get (C++ function)</a>
+</li>
         <li><a href="reference/render_window.html#_CPPv4N2kn12RenderWindow9getEventsEv">kn::RenderWindow::getEvents (C++ function)</a>
 </li>
         <li><a href="reference/render_window.html#_CPPv4NK2kn12RenderWindow13getFullscreenEv">kn::RenderWindow::getFullscreen (C++ function)</a>
-</li>
-        <li><a href="reference/render_window.html#_CPPv4N2kn12RenderWindow11getInstanceEv">kn::RenderWindow::getInstance (C++ function)</a>
 </li>
         <li><a href="reference/render_window.html#_CPPv4N2kn12RenderWindow11getRendererEv">kn::RenderWindow::getRenderer (C++ function)</a>
 </li>
@@ -820,6 +815,18 @@
         <li><a href="reference/constants.html#_CPPv4N2kn4SC_YE">kn::SC_Y (C++ member)</a>
 </li>
         <li><a href="reference/constants.html#_CPPv4N2kn4SC_ZE">kn::SC_Z (C++ member)</a>
+</li>
+        <li><a href="reference/sound.html#_CPPv4N2kn5SoundE">kn::Sound (C++ class)</a>
+</li>
+        <li><a href="reference/sound.html#_CPPv4NK2kn5Sound9getVolumeEv">kn::Sound::getVolume (C++ function)</a>
+</li>
+        <li><a href="reference/sound.html#_CPPv4N2kn5Sound4playEiii">kn::Sound::play (C++ function)</a>
+</li>
+        <li><a href="reference/sound.html#_CPPv4N2kn5Sound9setVolumeEf">kn::Sound::setVolume (C++ function)</a>
+</li>
+        <li><a href="reference/sound.html#_CPPv4N2kn5Sound5SoundERKNSt6stringE">kn::Sound::Sound (C++ function)</a>
+</li>
+        <li><a href="reference/sound.html#_CPPv4N2kn5Sound6unloadEv">kn::Sound::unload (C++ function)</a>
 </li>
         <li><a href="reference/constants.html#_CPPv4N2kn10SYSWMEVENTE">kn::SYSWMEVENT (C++ member)</a>
 </li>

@@ -26,7 +26,7 @@ class RenderWindow final
      *
      * @return reference to the instance
      */
-    static RenderWindow& getInstance();
+    static RenderWindow& get();
 
     /**
      * @brief Clear the screen.
@@ -139,7 +139,8 @@ class RenderWindow final
 
     void clean() const;
 
-    RenderWindow& operator=(const RenderWindow& rhs) = delete;
+    RenderWindow& operator=(const RenderWindow&) = delete;
+    RenderWindow& operator=(RenderWindow&&) = delete;
 
     SDL_Renderer* m_renderer = nullptr;
     SDL_Window* m_window = nullptr;

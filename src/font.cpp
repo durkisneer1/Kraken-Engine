@@ -31,7 +31,7 @@ std::shared_ptr<Texture> Font::render(const std::string& text, bool antialias, C
         FATAL("Failed to render text: " + std::string(TTF_GetError()));
 
     SDL_Texture* sdlTexture =
-        SDL_CreateTextureFromSurface(RenderWindow::getInstance().getRenderer(), surface);
+        SDL_CreateTextureFromSurface(RenderWindow::get().getRenderer(), surface);
     if (!sdlTexture)
         FATAL("Failed to create texture: " + std::string(SDL_GetError()));
 

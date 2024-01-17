@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="TileMap" href="tile_map.html" /><link rel="prev" title="TextureCache" href="texture_cache.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="TextureCache" href="texture_cache.html" /><link rel="prev" title="RenderWindow" href="render_window.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
-        <title>Texture - Kraken Engine</title>
+        <title>Sound - Kraken Engine</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
@@ -167,9 +167,9 @@
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rect.html">Rect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="render_window.html">RenderWindow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sound.html">Sound</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Sound</a></li>
 <li class="toctree-l2"><a class="reference internal" href="texture_cache.html">TextureCache</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Texture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texture.html">Texture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tile_map.html">TileMap</a></li>
 <li class="toctree-l2"><a class="reference internal" href="constants.html">constants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="draw.html">draw</a></li>
@@ -214,121 +214,66 @@
           </label>
         </div>
         <article role="main">
-          <section id="texture">
-<h1>Texture<a class="headerlink" href="#texture" title="Link to this heading">#</a></h1>
+          <section id="sound">
+<h1>Sound<a class="headerlink" href="#sound" title="Link to this heading">#</a></h1>
 <dl class="cpp class">
-<dt class="sig sig-object cpp" id="_CPPv4N2kn7TextureE">
-<span id="_CPPv3N2kn7TextureE"></span><span id="_CPPv2N2kn7TextureE"></span><span id="kn::Texture"></span><span class="target" id="classkn_1_1_texture"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Texture</span></span></span><a class="headerlink" href="#_CPPv4N2kn7TextureE" title="Link to this definition">#</a><br /></dt>
-<dd><p>A texture object. </p>
+<dt class="sig sig-object cpp" id="_CPPv4N2kn5SoundE">
+<span id="_CPPv3N2kn5SoundE"></span><span id="_CPPv2N2kn5SoundE"></span><span id="kn::Sound"></span><span class="target" id="classkn_1_1_sound"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sound</span></span></span><a class="headerlink" href="#_CPPv4N2kn5SoundE" title="Link to this definition">#</a><br /></dt>
+<dd><p>A sound object. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2kn7Texture7TextureEP11SDL_Texture">
-<span id="_CPPv3N2kn7Texture7TextureEP11SDL_Texture"></span><span id="_CPPv2N2kn7Texture7TextureEP11SDL_Texture"></span><span id="kn::Texture::Texture__SDL_TextureP"></span><span class="target" id="classkn_1_1_texture_1a896943e8179dd5befdb949834b04bd64"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Texture</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">SDL_Texture</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">texture</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn7Texture7TextureEP11SDL_Texture" title="Link to this definition">#</a><br /></dt>
-<dd><p>Create a texture. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><a class="reference internal" href="texture_cache.html#classkn_1_1_texture_cache_1a424624eee8b1e356b12df8f06998f35f"><span class="std std-ref">TextureCache::load()</span></a></p>
-</div>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><a class="reference internal" href="texture_cache.html#classkn_1_1_texture_cache_1a65f40584e35acce97c5919fe1e53501a"><span class="std std-ref">TextureCache::create()</span></a></p>
-</div>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><a class="reference internal" href="texture_cache.html#classkn_1_1_texture_cache_1ac2cc4f423bac33ad8c2865301be31c04"><span class="std std-ref">TextureCache::move()</span></a></p>
-</div>
-</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This function is not meant to be used by the user.</p>
-</div>
+<dt class="sig sig-object cpp" id="_CPPv4N2kn5Sound5SoundERKNSt6stringE">
+<span id="_CPPv3N2kn5Sound5SoundERKNSt6stringE"></span><span id="_CPPv2N2kn5Sound5SoundERKNSt6stringE"></span><span id="kn::Sound::Sound__ssCR"></span><span class="target" id="classkn_1_1_sound_1ab58e87bcd4fb6be02e98675621fb8a4b"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Sound</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fileDir</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5Sound5SoundERKNSt6stringE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Create a sound. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>texture</strong> – The SDL texture.</p>
+<dd class="field-odd"><p><strong>fileDir</strong> – The directory of the sound file. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK2kn7Texture7getSizeEv">
-<span id="_CPPv3NK2kn7Texture7getSizeEv"></span><span id="_CPPv2NK2kn7Texture7getSizeEv"></span><span id="kn::Texture::getSizeC"></span><span class="target" id="classkn_1_1_texture_1af30316f09cd6b90c97bc90a6c14be8f9"></span><span class="n"><span class="pre">math</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="math.html#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2kn7Texture7getSizeEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Get the size of the texture. </p>
+<dt class="sig sig-object cpp" id="_CPPv4N2kn5Sound4playEiii">
+<span id="_CPPv3N2kn5Sound4playEiii"></span><span id="_CPPv2N2kn5Sound4playEiii"></span><span id="kn::Sound::play__i.i.i"></span><span class="target" id="classkn_1_1_sound_1a475db8853693191340bb86e2bb001c54"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">play</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">loops</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">playTime</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fadeMs</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5Sound4playEiii" title="Link to this definition">#</a><br /></dt>
+<dd><p>Play the sound. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>loops</strong> – The number of times to loop the sound. </p></li>
+<li><p><strong>playTime</strong> – The number of milliseconds to play the sound for. </p></li>
+<li><p><strong>fadeMs</strong> – The number of milliseconds to fade in. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn5Sound9setVolumeEf">
+<span id="_CPPv3N2kn5Sound9setVolumeEf"></span><span id="_CPPv2N2kn5Sound9setVolumeEf"></span><span id="kn::Sound::setVolume__float"></span><span class="target" id="classkn_1_1_sound_1ac537563488214a87b177c3b3df6462a1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setVolume</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">volume</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5Sound9setVolumeEf" title="Link to this definition">#</a><br /></dt>
+<dd><p>Set the volume of the sound. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>volume</strong> – The volume to set. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK2kn5Sound9getVolumeEv">
+<span id="_CPPv3NK2kn5Sound9getVolumeEv"></span><span id="_CPPv2NK2kn5Sound9getVolumeEv"></span><span id="kn::Sound::getVolumeC"></span><span class="target" id="classkn_1_1_sound_1af141a58501d0aa4585ff07b9bd4bf72b"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getVolume</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2kn5Sound9getVolumeEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the volume of the sound. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The size of the texture. </p>
+<dd class="field-odd"><p>The volume of the sound. Between 0.0f and 1.0f. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK2kn7Texture7getRectEv">
-<span id="_CPPv3NK2kn7Texture7getRectEv"></span><span id="_CPPv2NK2kn7Texture7getRectEv"></span><span id="kn::Texture::getRectC"></span><span class="target" id="classkn_1_1_texture_1aaba7a220422a6668b367cf389ac4ef8f"></span><a class="reference internal" href="rect.html#_CPPv4N2kn4RectE" title="kn::Rect"><span class="n"><span class="pre">Rect</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRect</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2kn7Texture7getRectEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Get the rect of the texture. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The rect of the texture. </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK2kn7Texture13getSDLTextureEv">
-<span id="_CPPv3NK2kn7Texture13getSDLTextureEv"></span><span id="_CPPv2NK2kn7Texture13getSDLTextureEv"></span><span id="kn::Texture::getSDLTextureC"></span><span class="target" id="classkn_1_1_texture_1ad5357fc2ee9cfd5493dfa3011c53ae90"></span><span class="n"><span class="pre">SDL_Texture</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getSDLTexture</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2kn7Texture13getSDLTextureEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Get the SDL texture. </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This function is not meant to be used by the user. </p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The SDL texture.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2kn7Texture7setSizeERKN4math4Vec2E">
-<span id="_CPPv3N2kn7Texture7setSizeERKN4math4Vec2E"></span><span id="_CPPv2N2kn7Texture7setSizeERKN4math4Vec2E"></span><span id="kn::Texture::setSize__math::Vec2CR"></span><span class="target" id="classkn_1_1_texture_1a4cca93b84d6c9ab81da1b6c0d49538b9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSize</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">math</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="math.html#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn7Texture7setSizeERKN4math4Vec2E" title="Link to this definition">#</a><br /></dt>
-<dd><p>Set the size of the texture rect. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>size</strong> – The size of the texture rect. </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2kn7Texture7scaleByEf">
-<span id="_CPPv3N2kn7Texture7scaleByEf"></span><span id="_CPPv2N2kn7Texture7scaleByEf"></span><span id="kn::Texture::scaleBy__float"></span><span class="target" id="classkn_1_1_texture_1adfd084306118f21108cafc82a5827622"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">scaleBy</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">factor</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn7Texture7scaleByEf" title="Link to this definition">#</a><br /></dt>
-<dd><p>Scale the texture rect by a factor. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>factor</strong> – The factor to scale by. </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2kn7Texture8fitWidthEf">
-<span id="_CPPv3N2kn7Texture8fitWidthEf"></span><span id="_CPPv2N2kn7Texture8fitWidthEf"></span><span id="kn::Texture::fitWidth__float"></span><span class="target" id="classkn_1_1_texture_1a6723044a4faaaa35526174fc4d36a3da"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fitWidth</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">width</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn7Texture8fitWidthEf" title="Link to this definition">#</a><br /></dt>
-<dd><p>Fit the texture rect to a width while maintaining the aspect ratio. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>width</strong> – The width to fit to. </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2kn7Texture9fitHeightEf">
-<span id="_CPPv3N2kn7Texture9fitHeightEf"></span><span id="_CPPv2N2kn7Texture9fitHeightEf"></span><span id="kn::Texture::fitHeight__float"></span><span class="target" id="classkn_1_1_texture_1a558c7e7566f3e2d3c11346cc8179771a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fitHeight</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">height</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn7Texture9fitHeightEf" title="Link to this definition">#</a><br /></dt>
-<dd><p>Fit the texture rect to a height while maintaining the aspect ratio. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>height</strong> – The height to fit to. </p>
-</dd>
-</dl>
+<dt class="sig sig-object cpp" id="_CPPv4N2kn5Sound6unloadEv">
+<span id="_CPPv3N2kn5Sound6unloadEv"></span><span id="_CPPv2N2kn5Sound6unloadEv"></span><span id="kn::Sound::unload"></span><span class="target" id="classkn_1_1_sound_1a58cc163db5ac4d593bd76b44489cbf2c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">unload</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn5Sound6unloadEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Free the sound from memory. </p>
 </dd></dl>
 
 </div>
@@ -341,23 +286,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="tile_map.html">
+          <a class="next-page" href="texture_cache.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">TileMap</div>
+                <div class="title">TextureCache</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="texture_cache.html">
+          <a class="prev-page" href="render_window.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">TextureCache</div>
+                <div class="title">RenderWindow</div>
                 
               </div>
             </a>
@@ -391,16 +336,13 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Texture</a><ul>
-<li><a class="reference internal" href="#_CPPv4N2kn7TextureE"><code class="docutils literal notranslate"><span class="pre">Texture</span></code></a><ul>
-<li><a class="reference internal" href="#_CPPv4N2kn7Texture7TextureEP11SDL_Texture"><code class="docutils literal notranslate"><span class="pre">Texture::Texture()</span></code></a></li>
-<li><a class="reference internal" href="#_CPPv4NK2kn7Texture7getSizeEv"><code class="docutils literal notranslate"><span class="pre">Texture::getSize()</span></code></a></li>
-<li><a class="reference internal" href="#_CPPv4NK2kn7Texture7getRectEv"><code class="docutils literal notranslate"><span class="pre">Texture::getRect()</span></code></a></li>
-<li><a class="reference internal" href="#_CPPv4NK2kn7Texture13getSDLTextureEv"><code class="docutils literal notranslate"><span class="pre">Texture::getSDLTexture()</span></code></a></li>
-<li><a class="reference internal" href="#_CPPv4N2kn7Texture7setSizeERKN4math4Vec2E"><code class="docutils literal notranslate"><span class="pre">Texture::setSize()</span></code></a></li>
-<li><a class="reference internal" href="#_CPPv4N2kn7Texture7scaleByEf"><code class="docutils literal notranslate"><span class="pre">Texture::scaleBy()</span></code></a></li>
-<li><a class="reference internal" href="#_CPPv4N2kn7Texture8fitWidthEf"><code class="docutils literal notranslate"><span class="pre">Texture::fitWidth()</span></code></a></li>
-<li><a class="reference internal" href="#_CPPv4N2kn7Texture9fitHeightEf"><code class="docutils literal notranslate"><span class="pre">Texture::fitHeight()</span></code></a></li>
+<li><a class="reference internal" href="#">Sound</a><ul>
+<li><a class="reference internal" href="#_CPPv4N2kn5SoundE"><code class="docutils literal notranslate"><span class="pre">Sound</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N2kn5Sound5SoundERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">Sound::Sound()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn5Sound4playEiii"><code class="docutils literal notranslate"><span class="pre">Sound::play()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn5Sound9setVolumeEf"><code class="docutils literal notranslate"><span class="pre">Sound::setVolume()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK2kn5Sound9getVolumeEv"><code class="docutils literal notranslate"><span class="pre">Sound::getVolume()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn5Sound6unloadEv"><code class="docutils literal notranslate"><span class="pre">Sound::unload()</span></code></a></li>
 </ul>
 </li>
 </ul>

@@ -7,6 +7,7 @@
     <innerclass refid="classkn_1_1_font" prot="public">kn::Font</innerclass>
     <innerclass refid="structkn_1_1_rect" prot="public">kn::Rect</innerclass>
     <innerclass refid="classkn_1_1_render_window" prot="public">kn::RenderWindow</innerclass>
+    <innerclass refid="classkn_1_1_sound" prot="public">kn::Sound</innerclass>
     <innerclass refid="classkn_1_1_texture" prot="public">kn::Texture</innerclass>
     <innerclass refid="classkn_1_1_texture_cache" prot="public">kn::TextureCache</innerclass>
     <innerclass refid="structkn_1_1_tile" prot="public">kn::Tile</innerclass>
@@ -14,7 +15,7 @@
     <innernamespace refid="namespacekn_1_1draw">kn::draw</innernamespace>
     <innernamespace refid="namespacekn_1_1input">kn::input</innernamespace>
     <innernamespace refid="namespacekn_1_1math">kn::math</innernamespace>
-    <innernamespace refid="namespacekn_1_1mixer">kn::mixer</innernamespace>
+    <innernamespace refid="namespacekn_1_1music">kn::music</innernamespace>
     <innernamespace refid="namespacekn_1_1overflow">kn::overflow</innernamespace>
     <innernamespace refid="namespacekn_1_1time">kn::time</innernamespace>
     <sectiondef kind="typedef">

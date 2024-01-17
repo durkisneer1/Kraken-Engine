@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="TextureCache" href="texture_cache.html" /><link rel="prev" title="Rect" href="rect.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Sound" href="sound.html" /><link rel="prev" title="Rect" href="rect.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
         <title>RenderWindow - Kraken Engine</title>
@@ -167,6 +167,7 @@
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rect.html">Rect</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">RenderWindow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sound.html">Sound</a></li>
 <li class="toctree-l2"><a class="reference internal" href="texture_cache.html">TextureCache</a></li>
 <li class="toctree-l2"><a class="reference internal" href="texture.html">Texture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tile_map.html">TileMap</a></li>
@@ -174,7 +175,7 @@
 <li class="toctree-l2"><a class="reference internal" href="draw.html">draw</a></li>
 <li class="toctree-l2"><a class="reference internal" href="input.html">input</a></li>
 <li class="toctree-l2"><a class="reference internal" href="math.html">math</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mixer.html">mixer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="music.html">music</a></li>
 <li class="toctree-l2"><a class="reference internal" href="overflow.html">overflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="time.html">time</a></li>
 </ul>
@@ -361,8 +362,8 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2kn12RenderWindow11getInstanceEv">
-<span id="_CPPv3N2kn12RenderWindow11getInstanceEv"></span><span id="_CPPv2N2kn12RenderWindow11getInstanceEv"></span><span id="kn::RenderWindow::getInstance"></span><span class="target" id="classkn_1_1_render_window_1adcad93cc1e1c336afff133667bdbcb2c"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn12RenderWindowE" title="kn::RenderWindow"><span class="n"><span class="pre">RenderWindow</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getInstance</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn12RenderWindow11getInstanceEv" title="Link to this definition">#</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N2kn12RenderWindow3getEv">
+<span id="_CPPv3N2kn12RenderWindow3getEv"></span><span id="_CPPv2N2kn12RenderWindow3getEv"></span><span id="kn::RenderWindow::get"></span><span class="target" id="classkn_1_1_render_window_1ac068cc34280588429a2fc249f5f4504b"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2kn12RenderWindowE" title="kn::RenderWindow"><span class="n"><span class="pre">RenderWindow</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn12RenderWindow3getEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Get a reference to the instance of the singleton. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -404,12 +405,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="texture_cache.html">
+          <a class="next-page" href="sound.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">TextureCache</div>
+                <div class="title">Sound</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -467,7 +468,7 @@
 <li><a class="reference internal" href="#_CPPv4NK2kn12RenderWindow13getFullscreenEv"><code class="docutils literal notranslate"><span class="pre">RenderWindow::getFullscreen()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn12RenderWindow8setTitleERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">RenderWindow::setTitle()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn12RenderWindow13setFullscreenEb"><code class="docutils literal notranslate"><span class="pre">RenderWindow::setFullscreen()</span></code></a></li>
-<li><a class="reference internal" href="#_CPPv4N2kn12RenderWindow11getInstanceEv"><code class="docutils literal notranslate"><span class="pre">RenderWindow::getInstance()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn12RenderWindow3getEv"><code class="docutils literal notranslate"><span class="pre">RenderWindow::get()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn12RenderWindow8getScaleEv"><code class="docutils literal notranslate"><span class="pre">RenderWindow::getScale()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn12RenderWindow8setScaleEi"><code class="docutils literal notranslate"><span class="pre">RenderWindow::setScale()</span></code></a></li>
 </ul>

@@ -10,7 +10,7 @@
         <argsstring></argsstring>
         <name>window</name>
         <qualifiedname>kn::TileMap::window</qualifiedname>
-        <initializer>= <ref refid="classkn_1_1_render_window_1adcad93cc1e1c336afff133667bdbcb2c" kindref="member">RenderWindow::getInstance</ref>()</initializer>
+        <initializer>= <ref refid="classkn_1_1_render_window_1ac068cc34280588429a2fc249f5f4504b" kindref="member">RenderWindow::get</ref>()</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

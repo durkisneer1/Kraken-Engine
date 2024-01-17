@@ -10,6 +10,7 @@ API Reference
     font.rst
     rect.rst
     render_window.rst
+    sound.rst
     texture_cache.rst
     texture.rst
     tile_map.rst
@@ -17,7 +18,7 @@ API Reference
     draw.rst
     input.rst
     math.rst
-    mixer.rst
+    music.rst
     overflow.rst
     time.rst
     

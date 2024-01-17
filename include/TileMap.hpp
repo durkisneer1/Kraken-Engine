@@ -47,7 +47,7 @@ class TileMap final
     void draw();
 
   private:
-    RenderWindow& window = RenderWindow::getInstance();
+    RenderWindow& window = RenderWindow::get();
     tmx::Map map;
 
     std::vector<Tile> tileVec = {};

@@ -10,7 +10,7 @@ namespace draw
 
 void rect(Rect& rect, const Color color, int thickness)
 {
-    RenderWindow& window = RenderWindow::getInstance();
+    RenderWindow& window = RenderWindow::get();
     SDL_SetRenderDrawColor(window.getRenderer(), color.r, color.g, color.b, color.a);
 
     if (thickness == 0)

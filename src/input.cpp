@@ -12,7 +12,7 @@ math::Vec2 getMousePos()
 {
     int x, y;
     SDL_GetMouseState(&x, &y);
-    int scale = kn::RenderWindow::getInstance().getScale();
+    int scale = kn::RenderWindow::get().getScale();
     return {x / scale, y / scale};
 }
 

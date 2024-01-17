@@ -9,7 +9,7 @@ static bool instanceCreated = false;
 static std::string title = "Kraken";
 static bool fullscreen = false;
 
-RenderWindow& RenderWindow::getInstance()
+RenderWindow& RenderWindow::get()
 {
     static RenderWindow __instance;
     instanceCreated = true;
