@@ -31,8 +31,8 @@ class RenderWindowTest : public ::testing::Test
 
 TEST_F(RenderWindowTest, SingletonPointersEqual)
 {
-    const RenderWindow* window1 = &RenderWindow::getInstance();
-    const RenderWindow* window2 = &RenderWindow::getInstance();
+    const RenderWindow* window1 = &RenderWindow::get();
+    const RenderWindow* window2 = &RenderWindow::get();
 
     EXPECT_EQ(window1, window2);
 }
