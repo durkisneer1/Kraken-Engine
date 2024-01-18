@@ -61,11 +61,11 @@
 </parameterlist>
 <simplesect kind="note"><para>This function is not meant to be used by the user.</para>
 </simplesect>
-<simplesect kind="see"><para><ref refid="classkn_1_1_texture_cache_1a424624eee8b1e356b12df8f06998f35f" kindref="member">TextureCache::load()</ref> </para>
+<simplesect kind="see"><para><ref refid="namespacekn_1_1cache_1ad35949df16071ee0f3650f52f9d47966" kindref="member">kn::cache::load()</ref> </para>
 </simplesect>
-<simplesect kind="see"><para><ref refid="classkn_1_1_texture_cache_1a65f40584e35acce97c5919fe1e53501a" kindref="member">TextureCache::create()</ref> </para>
+<simplesect kind="see"><para><ref refid="namespacekn_1_1cache_1aa4a8e8e020b8b39a75a5f69a135fc98c" kindref="member">kn::cache::create()</ref> </para>
 </simplesect>
-<simplesect kind="see"><para><ref refid="classkn_1_1_texture_cache_1ac2cc4f423bac33ad8c2865301be31c04" kindref="member">TextureCache::move()</ref> </para>
+<simplesect kind="see"><para><ref refid="namespacekn_1_1cache_1a7bc391c4e72c439d51434cd5e3ba5ed2" kindref="member">kn::cache::move()</ref> </para>
 </simplesect>
 </para>
         </detaileddescription>

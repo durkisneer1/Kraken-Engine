@@ -1,11 +1,15 @@
+#include "Cache.hpp"
 #include "ErrorLogger.hpp"
 #include "RenderWindow.hpp"
-#include "TextureCache.hpp"
 
 namespace kn
 {
+namespace cache
+{
 
-std::shared_ptr<Texture> TextureCache::load(const std::string& name, const std::string& path)
+static std::map<std::string, std::shared_ptr<Texture>> textures;
+
+std::shared_ptr<Texture> load(const std::string& name, const std::string& path)
 {
     SDL_Texture* texture = IMG_LoadTexture(RenderWindow::get().getRenderer(), path.c_str());
     if (!texture)
@@ -21,8 +25,7 @@ std::shared_ptr<Texture> TextureCache::load(const std::string& name, const std::
     return textures[name];
 }
 
-std::shared_ptr<Texture> TextureCache::create(const std::string& name, const math::Vec2& size,
-                                              Color color)
+std::shared_ptr<Texture> create(const std::string& name, const math::Vec2& size, Color color)
 {
     SDL_Surface* surface = SDL_CreateRGBSurface(0, size.x, size.y, 32, 0, 0, 0, 0);
     if (!surface)
@@ -46,19 +49,18 @@ std::shared_ptr<Texture> TextureCache::create(const std::string& name, const mat
     return textures[name];
 }
 
-std::shared_ptr<Texture> TextureCache::move(const std::string& name,
-                                            std::shared_ptr<Texture> texture)
+std::shared_ptr<Texture> move(const std::string& name, std::shared_ptr<Texture> texture)
 {
     textures[name] = texture;
 
     return textures[name];
 }
 
-void TextureCache::unload(const std::string& name) { textures.erase(name); }
+void unload(const std::string& name) { textures.erase(name); }
 
-void TextureCache::unloadAll() { textures.clear(); }
+void unloadAll() { textures.clear(); }
 
-std::shared_ptr<Texture> TextureCache::getTexture(const std::string& name) const
+std::shared_ptr<Texture> getTexture(const std::string& name)
 {
     auto it = textures.find(name);
     if (it != textures.end())
@@ -67,9 +69,9 @@ std::shared_ptr<Texture> TextureCache::getTexture(const std::string& name) const
     return nullptr;
 }
 
-const std::map<std::string, std::shared_ptr<Texture>>& TextureCache::getCache() const
-{
-    return textures;
-}
+const std::map<std::string, std::shared_ptr<Texture>>& getCache() { return textures; }
 
+std::shared_ptr<Texture> getTexture(const std::string& name);
+
+} // namespace cache
 } // namespace kn

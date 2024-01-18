@@ -21,9 +21,9 @@ class Texture final
      *
      * @note This function is not meant to be used by the user.
      *
-     * @see TextureCache::load()
-     * @see TextureCache::create()
-     * @see TextureCache::move()
+     * @see kn::cache::load()
+     * @see kn::cache::create()
+     * @see kn::cache::move()
      */
     explicit Texture(SDL_Texture* texture);
 

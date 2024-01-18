@@ -16,7 +16,7 @@ After following the :doc:`../installation` guide, you are ready for your first K
 
 
     int main() {
-        kn::RenderWindow& window = kn::RenderWindow::getInstance();
+        kn::RenderWindow& window = kn::RenderWindow::get();
         kn::time::Clock clock;
 
         bool done = false;

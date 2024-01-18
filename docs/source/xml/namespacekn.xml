@@ -9,9 +9,9 @@
     <innerclass refid="classkn_1_1_render_window" prot="public">kn::RenderWindow</innerclass>
     <innerclass refid="classkn_1_1_sound" prot="public">kn::Sound</innerclass>
     <innerclass refid="classkn_1_1_texture" prot="public">kn::Texture</innerclass>
-    <innerclass refid="classkn_1_1_texture_cache" prot="public">kn::TextureCache</innerclass>
     <innerclass refid="structkn_1_1_tile" prot="public">kn::Tile</innerclass>
     <innerclass refid="classkn_1_1_tile_map" prot="public">kn::TileMap</innerclass>
+    <innernamespace refid="namespacekn_1_1cache">kn::cache</innernamespace>
     <innernamespace refid="namespacekn_1_1draw">kn::draw</innernamespace>
     <innernamespace refid="namespacekn_1_1input">kn::input</innernamespace>
     <innernamespace refid="namespacekn_1_1math">kn::math</innernamespace>
@@ -3221,6 +3221,7 @@
 <para>The global size of the screen. </para>
         </briefdescription>
         <detaileddescription>
+<para>Declare this before the window is instantiated.</para>
 <para><simplesect kind="warning"><para>This is independent of the window size. </para>
 </simplesect>
 </para>
@@ -3250,6 +3251,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="5" column="1"/>
+    <location file="D:/Code/c++/Kraken-Engine/include/Cache.hpp" line="9" column="1"/>
   </compounddef>
 </doxygen>

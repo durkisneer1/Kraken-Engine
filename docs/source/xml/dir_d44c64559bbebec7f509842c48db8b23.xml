@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
     <compoundname>D:/Code/c++/Kraken-Engine/include</compoundname>
+    <innerfile refid="_cache_8hpp">Cache.hpp</innerfile>
     <innerfile refid="_constants_8hpp">Constants.hpp</innerfile>
     <innerfile refid="_draw_8hpp">Draw.hpp</innerfile>
     <innerfile refid="_entity_8hpp">Entity.hpp</innerfile>
@@ -17,7 +18,6 @@
     <innerfile refid="_render_window_8hpp">RenderWindow.hpp</innerfile>
     <innerfile refid="_sound_8hpp">Sound.hpp</innerfile>
     <innerfile refid="_texture_8hpp">Texture.hpp</innerfile>
-    <innerfile refid="_texture_cache_8hpp">TextureCache.hpp</innerfile>
     <innerfile refid="_tile_map_8hpp">TileMap.hpp</innerfile>
     <innerfile refid="_time_8hpp">Time.hpp</innerfile>
     <briefdescription>

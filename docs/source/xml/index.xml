@@ -131,18 +131,6 @@
     <member refid="classkn_1_1_texture_1a558c7e7566f3e2d3c11346cc8179771a" kind="function"><name>fitHeight</name></member>
     <member refid="classkn_1_1_texture_1a9aaf1984bf48c920410c57eddb2c7365" kind="function"><name>query</name></member>
   </compound>
-  <compound refid="classkn_1_1_texture_cache" kind="class"><name>kn::TextureCache</name>
-    <member refid="classkn_1_1_texture_cache_1a6434464b3dfb1b038815313ee4ef5f8f" kind="variable"><name>textures</name></member>
-    <member refid="classkn_1_1_texture_cache_1a30578a18426ef3626d2ebff18b775d0f" kind="function"><name>TextureCache</name></member>
-    <member refid="classkn_1_1_texture_cache_1adf8c16a1cde822c3598404335f41e8b9" kind="function"><name>~TextureCache</name></member>
-    <member refid="classkn_1_1_texture_cache_1a424624eee8b1e356b12df8f06998f35f" kind="function"><name>load</name></member>
-    <member refid="classkn_1_1_texture_cache_1a65f40584e35acce97c5919fe1e53501a" kind="function"><name>create</name></member>
-    <member refid="classkn_1_1_texture_cache_1ac2cc4f423bac33ad8c2865301be31c04" kind="function"><name>move</name></member>
-    <member refid="classkn_1_1_texture_cache_1ac5a50795a0cde01f052166e477d5099e" kind="function"><name>getCache</name></member>
-    <member refid="classkn_1_1_texture_cache_1ac4c9efdc51bc5407a1422c970d5907d4" kind="function"><name>unload</name></member>
-    <member refid="classkn_1_1_texture_cache_1a0992ea0a972b7056c57d480c594acf4b" kind="function"><name>unloadAll</name></member>
-    <member refid="classkn_1_1_texture_cache_1a2603a9b25402eda33f7e0b3a30b94bfd" kind="function"><name>getTexture</name></member>
-  </compound>
   <compound refid="structkn_1_1_tile" kind="struct"><name>kn::Tile</name>
     <member refid="structkn_1_1_tile_1a8e7d9dbfe6a90692c70b5dbd35eb8f01" kind="variable"><name>texture</name></member>
     <member refid="structkn_1_1_tile_1a65ccf5af9c9b8459015fcb3caa45e9dc" kind="variable"><name>crop</name></member>
@@ -153,7 +141,7 @@
     <member refid="classkn_1_1_tile_map_1a51ba9bb263de217615956a04f1197ef2" kind="variable"><name>map</name></member>
     <member refid="classkn_1_1_tile_map_1a51eefec828511d1c09dfcd618f7d1e06" kind="variable"><name>tileVec</name></member>
     <member refid="classkn_1_1_tile_map_1abefad7330e18b15f8eee70c624ff6b7b" kind="variable"><name>tileSetMap</name></member>
-    <member refid="classkn_1_1_tile_map_1a9f764c6e0e70872a533cbce5767f8e8c" kind="function"><name>TileMap</name></member>
+    <member refid="classkn_1_1_tile_map_1a4a699a96d23212e5c341fe9a93d947a2" kind="function"><name>TileMap</name></member>
     <member refid="classkn_1_1_tile_map_1ae5fafab74bad33d0a854f932b6ce39dc" kind="function"><name>~TileMap</name></member>
     <member refid="classkn_1_1_tile_map_1a7e73d751180a3c49c8ba0361bf94380f" kind="function"><name>draw</name></member>
   </compound>
@@ -392,6 +380,15 @@
     <member refid="namespacekn_1a4f6693c08dee924dd9d7cf1106f56815" kind="variable"><name>SCREEN_SIZE</name></member>
     <member refid="namespacekn_1ac1be3061d1c6178d71ebcbc1961e651a" kind="variable"><name>GRAVITY</name></member>
   </compound>
+  <compound refid="namespacekn_1_1cache" kind="namespace"><name>kn::cache</name>
+    <member refid="namespacekn_1_1cache_1ad35949df16071ee0f3650f52f9d47966" kind="function"><name>load</name></member>
+    <member refid="namespacekn_1_1cache_1aa4a8e8e020b8b39a75a5f69a135fc98c" kind="function"><name>create</name></member>
+    <member refid="namespacekn_1_1cache_1a7bc391c4e72c439d51434cd5e3ba5ed2" kind="function"><name>move</name></member>
+    <member refid="namespacekn_1_1cache_1a906845f508ca5876cd7a9f393f25df6a" kind="function"><name>getCache</name></member>
+    <member refid="namespacekn_1_1cache_1ae9a61b38ef34af5f86b8e8487bf7348f" kind="function"><name>unload</name></member>
+    <member refid="namespacekn_1_1cache_1aeb78be4c80745a9fd629cdb34933279b" kind="function"><name>unloadAll</name></member>
+    <member refid="namespacekn_1_1cache_1a5624ddf3139abbf832c7699e98e48bd3" kind="function"><name>getTexture</name></member>
+  </compound>
   <compound refid="namespacekn_1_1draw" kind="namespace"><name>kn::draw</name>
     <member refid="namespacekn_1_1draw_1a2e5b2a7665a470cf5b9aa110639e004b" kind="function"><name>rect</name></member>
   </compound>
@@ -437,6 +434,8 @@
   </compound>
   <compound refid="namespacekn_1_1time" kind="namespace"><name>kn::time</name>
   </compound>
+  <compound refid="_cache_8hpp" kind="file"><name>Cache.hpp</name>
+  </compound>
   <compound refid="_constants_8hpp" kind="file"><name>Constants.hpp</name>
   </compound>
   <compound refid="_draw_8hpp" kind="file"><name>Draw.hpp</name>
@@ -473,8 +472,6 @@
   <compound refid="_sound_8hpp" kind="file"><name>Sound.hpp</name>
   </compound>
   <compound refid="_texture_8hpp" kind="file"><name>Texture.hpp</name>
-  </compound>
-  <compound refid="_texture_cache_8hpp" kind="file"><name>TextureCache.hpp</name>
   </compound>
   <compound refid="_tile_map_8hpp" kind="file"><name>TileMap.hpp</name>
   </compound>

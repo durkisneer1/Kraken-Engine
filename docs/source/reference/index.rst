@@ -11,14 +11,13 @@ API Reference
     rect.rst
     render_window.rst
     sound.rst
-    texture_cache.rst
     texture.rst
     tile_map.rst
-    constants.rst
+    cache.rst
     draw.rst
+    globals.rst
     input.rst
     math.rst
     music.rst
     overflow.rst
     time.rst
-    

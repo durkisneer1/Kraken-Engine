@@ -19,6 +19,8 @@ namespace kn
 {
 /**
  * @brief Singleton class for logging errors to file (or if file handling fails, console)
+ *
+ * @warning This class will go from being a singleton to a static namespace in the future
  */
 class ErrorLogger
 {

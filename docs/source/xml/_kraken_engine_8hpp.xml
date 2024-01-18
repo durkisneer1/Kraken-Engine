@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="_kraken_engine_8hpp" kind="file" language="C++">
     <compoundname>KrakenEngine.hpp</compoundname>
+    <includes refid="_cache_8hpp" local="yes">Cache.hpp</includes>
     <includes refid="_constants_8hpp" local="yes">Constants.hpp</includes>
     <includes refid="_draw_8hpp" local="yes">Draw.hpp</includes>
     <includes refid="_entity_8hpp" local="yes">Entity.hpp</includes>
@@ -9,92 +10,103 @@
     <includes refid="_globals_8hpp" local="yes">Globals.hpp</includes>
     <includes refid="_input_8hpp" local="yes">Input.hpp</includes>
     <includes refid="_math_8hpp" local="yes">Math.hpp</includes>
-    <includes refid="_sound_8hpp" local="yes">Sound.hpp</includes>
     <includes refid="_music_8hpp" local="yes">Music.hpp</includes>
     <includes refid="_overflow_8hpp" local="yes">Overflow.hpp</includes>
     <includes refid="_rect_8hpp" local="yes">Rect.hpp</includes>
     <includes refid="_render_window_8hpp" local="yes">RenderWindow.hpp</includes>
+    <includes refid="_sound_8hpp" local="yes">Sound.hpp</includes>
     <includes refid="_texture_8hpp" local="yes">Texture.hpp</includes>
-    <includes refid="_texture_cache_8hpp" local="yes">TextureCache.hpp</includes>
     <includes refid="_tile_map_8hpp" local="yes">TileMap.hpp</includes>
     <includes refid="_time_8hpp" local="yes">Time.hpp</includes>
     <incdepgraph>
       <node id="2">
+        <label>Cache.hpp</label>
+        <link refid="_cache_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
         <label>Constants.hpp</label>
         <link refid="_constants_8hpp"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
-      <node id="4">
+      <node id="21">
         <label>Draw.hpp</label>
         <link refid="_draw_8hpp"/>
-        <childnode refid="2" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="18">
-        <label>Entity.hpp</label>
-        <link refid="_entity_8hpp"/>
         <childnode refid="19" relation="include">
         </childnode>
-        <childnode refid="20" relation="include">
+      </node>
+      <node id="22">
+        <label>Entity.hpp</label>
+        <link refid="_entity_8hpp"/>
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="23" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="21" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
-        <childnode refid="26" relation="include">
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="6">
         <label>ErrorLogger.hpp</label>
         <link refid="_error_logger_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
         <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
       </node>
-      <node id="27">
+      <node id="29">
         <label>Font.hpp</label>
         <link refid="_font_8hpp"/>
-        <childnode refid="19" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="25" relation="include">
         </childnode>
-        <childnode refid="2" relation="include">
+        <childnode refid="28" relation="include">
         </childnode>
-        <childnode refid="26" relation="include">
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
-      <node id="6">
+      <node id="20">
         <label>Globals.hpp</label>
         <link refid="_globals_8hpp"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="28">
+      <node id="30">
         <label>Input.hpp</label>
         <link refid="_input_8hpp"/>
-        <childnode refid="20" relation="include">
+        <childnode refid="23" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="2" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -102,202 +114,190 @@
         <link refid="_kraken_engine_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="27" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="28" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="29" relation="include">
-        </childnode>
-        <childnode refid="30" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="21" relation="include">
         </childnode>
-        <childnode refid="26" relation="include">
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="33" relation="include">
         </childnode>
         <childnode refid="35" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="5">
         <label>Math.hpp</label>
         <link refid="_math_8hpp"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>Music.hpp</label>
+        <link refid="_music_8hpp"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Overflow.hpp</label>
+        <link refid="_overflow_8hpp"/>
+        <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
-      </node>
-      <node id="30">
-        <label>Music.hpp</label>
-        <link refid="_music_8hpp"/>
-        <childnode refid="24" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
-      </node>
-      <node id="14">
-        <label>Overflow.hpp</label>
-        <link refid="_overflow_8hpp"/>
         <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="2" relation="include">
-        </childnode>
       </node>
-      <node id="5">
+      <node id="19">
         <label>Rect.hpp</label>
         <link refid="_rect_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="21">
-        <label>RenderWindow.hpp</label>
-        <link refid="_render_window_8hpp"/>
-        <childnode refid="19" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
         <childnode refid="20" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="23" relation="include">
-        </childnode>
-        <childnode refid="24" relation="include">
-        </childnode>
-        <childnode refid="25" relation="include">
-        </childnode>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="26" relation="include">
-        </childnode>
-      </node>
-      <node id="29">
-        <label>Sound.hpp</label>
-        <link refid="_sound_8hpp"/>
-        <childnode refid="22" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="24" relation="include">
-        </childnode>
-      </node>
-      <node id="26">
-        <label>Texture.hpp</label>
-        <link refid="_texture_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="31">
-        <label>TextureCache.hpp</label>
-        <link refid="_texture_cache_8hpp"/>
-        <childnode refid="32" relation="include">
+      <node id="24">
+        <label>RenderWindow.hpp</label>
+        <link refid="_render_window_8hpp"/>
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
         </childnode>
         <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>Sound.hpp</label>
+        <link refid="_sound_8hpp"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>Texture.hpp</label>
+        <link refid="_texture_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
         </childnode>
       </node>
       <node id="33">
         <label>TileMap.hpp</label>
         <link refid="_tile_map_8hpp"/>
-        <childnode refid="19" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="22" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
-        <childnode refid="20" relation="include">
+        <childnode refid="23" relation="include">
         </childnode>
         <childnode refid="34" relation="include">
         </childnode>
-        <childnode refid="18" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
-        <childnode refid="21" relation="include">
+        <childnode refid="24" relation="include">
         </childnode>
-        <childnode refid="31" relation="include">
+        <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="35">
         <label>Time.hpp</label>
         <link refid="_time_8hpp"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
-      <node id="3">
+      <node id="17">
         <label>SDL.h</label>
       </node>
-      <node id="23">
+      <node id="26">
         <label>SDL_image.h</label>
       </node>
-      <node id="24">
+      <node id="27">
         <label>SDL_mixer.h</label>
       </node>
-      <node id="25">
+      <node id="28">
         <label>SDL_ttf.h</label>
       </node>
-      <node id="9">
+      <node id="7">
         <label>chrono</label>
       </node>
-      <node id="15">
+      <node id="13">
         <label>cmath</label>
       </node>
-      <node id="10">
+      <node id="8">
         <label>ctime</label>
       </node>
-      <node id="11">
+      <node id="9">
         <label>fstream</label>
       </node>
-      <node id="12">
+      <node id="10">
         <label>iostream</label>
       </node>
-      <node id="16">
+      <node id="14">
         <label>limits</label>
       </node>
-      <node id="32">
+      <node id="3">
         <label>map</label>
       </node>
-      <node id="19">
+      <node id="4">
         <label>memory</label>
       </node>
-      <node id="17">
+      <node id="15">
         <label>stdint.h</label>
       </node>
-      <node id="22">
+      <node id="25">
         <label>string</label>
       </node>
-      <node id="13">
+      <node id="11">
         <label>string.h</label>
       </node>
       <node id="34">
         <label>tmxlite/Map.hpp</label>
       </node>
-      <node id="20">
+      <node id="23">
         <label>vector</label>
       </node>
     </incdepgraph>
@@ -321,20 +321,20 @@
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2" refid="_kraken_engine_8hpp_1a51f528deaaeb973f417b46a2ec36f850" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SDL_MAIN_HANDLED</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_constants_8hpp" kindref="compound">Constants.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_draw_8hpp" kindref="compound">Draw.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_entity_8hpp" kindref="compound">Entity.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_font_8hpp" kindref="compound">Font.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_globals_8hpp" kindref="compound">Globals.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_input_8hpp" kindref="compound">Input.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_math_8hpp" kindref="compound">Math.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_sound_8hpp" kindref="compound">Sound.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_cache_8hpp" kindref="compound">Cache.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_constants_8hpp" kindref="compound">Constants.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_draw_8hpp" kindref="compound">Draw.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_entity_8hpp" kindref="compound">Entity.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_font_8hpp" kindref="compound">Font.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_globals_8hpp" kindref="compound">Globals.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_input_8hpp" kindref="compound">Input.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_math_8hpp" kindref="compound">Math.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_music_8hpp" kindref="compound">Music.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_overflow_8hpp" kindref="compound">Overflow.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_rect_8hpp" kindref="compound">Rect.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_render_window_8hpp" kindref="compound">RenderWindow.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_texture_8hpp" kindref="compound">Texture.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_texture_cache_8hpp" kindref="compound">TextureCache.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_sound_8hpp" kindref="compound">Sound.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_texture_8hpp" kindref="compound">Texture.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_tile_map_8hpp" kindref="compound">TileMap.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_time_8hpp" kindref="compound">Time.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>

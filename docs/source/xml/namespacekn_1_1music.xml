@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Music.hpp" line="16" column="10" declfile="D:/Code/c++/Kraken-Engine/include/Music.hpp" declline="16" declcolumn="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Music.hpp" line="15" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Music.hpp" declline="15" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1music_1ac728fb8b0f8c9f420a018d1969f9bde6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Music.hpp" line="21" column="10" declfile="D:/Code/c++/Kraken-Engine/include/Music.hpp" declline="21" declcolumn="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Music.hpp" line="20" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Music.hpp" declline="20" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1music_1a957f2bba3def16755e1caa990d5392c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -88,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Music.hpp" line="29" column="10" declfile="D:/Code/c++/Kraken-Engine/include/Music.hpp" declline="29" declcolumn="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Music.hpp" line="28" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Music.hpp" declline="28" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1music_1a43e6135e6eebc297bdb7cf28f974b8e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Music.hpp" line="34" column="10" declfile="D:/Code/c++/Kraken-Engine/include/Music.hpp" declline="34" declcolumn="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Music.hpp" line="33" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Music.hpp" declline="33" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1music_1ac92cbbe33548a515e58e56929c661703" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -118,7 +118,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Music.hpp" line="39" column="10" declfile="D:/Code/c++/Kraken-Engine/include/Music.hpp" declline="39" declcolumn="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Music.hpp" line="38" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Music.hpp" declline="38" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1music_1aed484af73dd5c90280dd69643dec70a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -133,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Music.hpp" line="44" column="10" declfile="D:/Code/c++/Kraken-Engine/include/Music.hpp" declline="44" declcolumn="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Music.hpp" line="43" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Music.hpp" declline="43" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1music_1a561871bac8b78be821e886fdca43ce60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -148,7 +148,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Music.hpp" line="49" column="10" declfile="D:/Code/c++/Kraken-Engine/include/Music.hpp" declline="49" declcolumn="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Music.hpp" line="48" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Music.hpp" declline="48" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1music_1a833289b5e4937594d6edc4d670d93b3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -177,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Music.hpp" line="56" column="10" declfile="D:/Code/c++/Kraken-Engine/include/Music.hpp" declline="56" declcolumn="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Music.hpp" line="55" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Music.hpp" declline="55" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1music_1ae4665e9e009a31690cb2a8dac5abd2ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -206,7 +206,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Music.hpp" line="63" column="10" declfile="D:/Code/c++/Kraken-Engine/include/Music.hpp" declline="63" declcolumn="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Music.hpp" line="62" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Music.hpp" declline="62" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1music_1a294ce07ee2327d528d4a5e1f93f167b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -224,13 +224,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Music.hpp" line="70" column="11" declfile="D:/Code/c++/Kraken-Engine/include/Music.hpp" declline="70" declcolumn="11"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Music.hpp" line="69" column="7" declfile="D:/Code/c++/Kraken-Engine/include/Music.hpp" declline="69" declcolumn="7"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Code/c++/Kraken-Engine/include/Music.hpp" line="9" column="1"/>
+    <location file="D:/Code/c++/Kraken-Engine/include/Music.hpp" line="8" column="1"/>
   </compounddef>
 </doxygen>

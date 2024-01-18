@@ -1,5 +1,0 @@
-=========
-constants
-=========
-
-.. doxygenfile:: Constants.hpp

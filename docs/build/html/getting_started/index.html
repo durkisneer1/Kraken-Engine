@@ -168,11 +168,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../reference/rect.html">Rect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/render_window.html">RenderWindow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/sound.html">Sound</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/texture_cache.html">TextureCache</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/texture.html">Texture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/tile_map.html">TileMap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/constants.html">constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/cache.html">cache</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/draw.html">draw</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/globals.html">globals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/input.html">input</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/math.html">math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/music.html">music</a></li>
@@ -225,7 +225,7 @@
 <span class="linenos"> 4</span>
 <span class="linenos"> 5</span>
 <span class="linenos"> 6</span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos"> 7</span><span class="w">    </span><span class="n">kn</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">&amp;</span><span class="w"> </span><span class="n">window</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kn</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">::</span><span class="n">getInstance</span><span class="p">();</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="n">kn</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">&amp;</span><span class="w"> </span><span class="n">window</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kn</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">::</span><span class="n">get</span><span class="p">();</span>
 <span class="linenos"> 8</span><span class="w">    </span><span class="n">kn</span><span class="o">::</span><span class="n">time</span><span class="o">::</span><span class="n">Clock</span><span class="w"> </span><span class="n">clock</span><span class="p">;</span>
 <span class="linenos"> 9</span>
 <span class="linenos">10</span><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">done</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>

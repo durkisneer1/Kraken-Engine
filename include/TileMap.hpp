@@ -6,9 +6,9 @@
 
 #include "tmxlite/Map.hpp"
 
+#include "Cache.hpp"
 #include "Entity.hpp"
 #include "RenderWindow.hpp"
-#include "TextureCache.hpp"
 
 namespace kn
 {
@@ -35,10 +35,9 @@ class TileMap final
     /**
      * @brief Constructs a tile map from a TMX file.
      *
-     * @param textureCache The texture cache to use.
      * @param tmxPath The path to the TMX file.
      */
-    TileMap(TextureCache& textureCache, const std::string& tmxPath);
+    TileMap(const std::string& tmxPath);
     ~TileMap() = default;
 
     /**

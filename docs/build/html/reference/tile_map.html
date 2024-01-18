@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="constants" href="constants.html" /><link rel="prev" title="Texture" href="texture.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="cache" href="cache.html" /><link rel="prev" title="Texture" href="texture.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
         <title>TileMap - Kraken Engine</title>
@@ -168,11 +168,11 @@
 <li class="toctree-l2"><a class="reference internal" href="rect.html">Rect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="render_window.html">RenderWindow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sound.html">Sound</a></li>
-<li class="toctree-l2"><a class="reference internal" href="texture_cache.html">TextureCache</a></li>
 <li class="toctree-l2"><a class="reference internal" href="texture.html">Texture</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">TileMap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="constants.html">constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cache.html">cache</a></li>
 <li class="toctree-l2"><a class="reference internal" href="draw.html">draw</a></li>
+<li class="toctree-l2"><a class="reference internal" href="globals.html">globals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="input.html">input</a></li>
 <li class="toctree-l2"><a class="reference internal" href="math.html">math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="music.html">music</a></li>
@@ -227,15 +227,12 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2kn7TileMap7TileMapER12TextureCacheRKNSt6stringE">
-<span id="_CPPv3N2kn7TileMap7TileMapER12TextureCacheRKNSt6stringE"></span><span id="_CPPv2N2kn7TileMap7TileMapER12TextureCacheRKNSt6stringE"></span><span id="kn::TileMap::TileMap__TextureCacheR.ssCR"></span><span class="target" id="classkn_1_1_tile_map_1a9f764c6e0e70872a533cbce5767f8e8c"></span><span class="sig-name descname"><span class="n"><span class="pre">TileMap</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="texture_cache.html#_CPPv4N2kn12TextureCacheE" title="kn::TextureCache"><span class="n"><span class="pre">TextureCache</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">textureCache</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">tmxPath</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn7TileMap7TileMapER12TextureCacheRKNSt6stringE" title="Link to this definition">#</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N2kn7TileMap7TileMapERKNSt6stringE">
+<span id="_CPPv3N2kn7TileMap7TileMapERKNSt6stringE"></span><span id="_CPPv2N2kn7TileMap7TileMapERKNSt6stringE"></span><span id="kn::TileMap::TileMap__ssCR"></span><span class="target" id="classkn_1_1_tile_map_1a4a699a96d23212e5c341fe9a93d947a2"></span><span class="sig-name descname"><span class="n"><span class="pre">TileMap</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">tmxPath</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn7TileMap7TileMapERKNSt6stringE" title="Link to this definition">#</a><br /></dt>
 <dd><p>Constructs a tile map from a TMX file. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>textureCache</strong> – The texture cache to use. </p></li>
-<li><p><strong>tmxPath</strong> – The path to the TMX file. </p></li>
-</ul>
+<dd class="field-odd"><p><strong>tmxPath</strong> – The path to the TMX file. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -280,12 +277,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="constants.html">
+          <a class="next-page" href="cache.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">constants</div>
+                <div class="title">cache</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -332,7 +329,7 @@
             <ul>
 <li><a class="reference internal" href="#">TileMap</a><ul>
 <li><a class="reference internal" href="#_CPPv4N2kn7TileMapE"><code class="docutils literal notranslate"><span class="pre">TileMap</span></code></a><ul>
-<li><a class="reference internal" href="#_CPPv4N2kn7TileMap7TileMapER12TextureCacheRKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">TileMap::TileMap()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn7TileMap7TileMapERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">TileMap::TileMap()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn7TileMap4drawEv"><code class="docutils literal notranslate"><span class="pre">TileMap::draw()</span></code></a></li>
 </ul>
 </li>

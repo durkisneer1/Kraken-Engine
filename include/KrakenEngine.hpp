@@ -1,6 +1,7 @@
 #pragma once
 #define SDL_MAIN_HANDLED
 
+#include "Cache.hpp"
 #include "Constants.hpp"
 #include "Draw.hpp"
 #include "Entity.hpp"
@@ -14,6 +15,5 @@
 #include "RenderWindow.hpp"
 #include "Sound.hpp"
 #include "Texture.hpp"
-#include "TextureCache.hpp"
 #include "TileMap.hpp"
 #include "Time.hpp"

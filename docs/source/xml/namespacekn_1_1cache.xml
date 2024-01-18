@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacekn_1_1cache" kind="namespace" language="C++">
+    <compoundname>kn::cache</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacekn_1_1cache_1ad35949df16071ee0f3650f52f9d47966" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classkn_1_1_texture" kindref="compound">Texture</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Texture &gt; kn::cache::load</definition>
+        <argsstring>(const std::string &amp;name, const std::string &amp;path)</argsstring>
+        <name>load</name>
+        <qualifiedname>kn::cache::load</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Load a texture file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the texture. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the texture file.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The texture pointer. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Cache.hpp" line="22" column="18" declfile="D:/Code/c++/Kraken-Engine/include/Cache.hpp" declline="22" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacekn_1_1cache_1aa4a8e8e020b8b39a75a5f69a135fc98c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classkn_1_1_texture" kindref="compound">Texture</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Texture &gt; kn::cache::create</definition>
+        <argsstring>(const std::string &amp;name, const math::Vec2 &amp;size, Color color)</argsstring>
+        <name>create</name>
+        <qualifiedname>kn::cache::create</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacekn_1a91eb5db82680dedc10733f04def8dd2f" kindref="member">Color</ref></type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+<para>Create a solid texture. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the texture. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the texture. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color of the texture.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The texture pointer. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Cache.hpp" line="34" column="18" declfile="D:/Code/c++/Kraken-Engine/include/Cache.hpp" declline="34" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacekn_1_1cache_1a7bc391c4e72c439d51434cd5e3ba5ed2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classkn_1_1_texture" kindref="compound">Texture</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Texture &gt; kn::cache::move</definition>
+        <argsstring>(const std::string &amp;name, std::shared_ptr&lt; Texture &gt; texture)</argsstring>
+        <name>move</name>
+        <qualifiedname>kn::cache::move</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classkn_1_1_texture" kindref="compound">Texture</ref> &gt;</type>
+          <declname>texture</declname>
+        </param>
+        <briefdescription>
+<para>Move an existing texture. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the texture. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>texture</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The texture to move.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function is recommended for loading fonts.</para>
+</simplesect>
+<simplesect kind="return"><para>The texture pointer. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Cache.hpp" line="47" column="18" declfile="D:/Code/c++/Kraken-Engine/include/Cache.hpp" declline="47" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacekn_1_1cache_1a906845f508ca5876cd7a9f393f25df6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::map&lt; std::string, std::shared_ptr&lt; <ref refid="classkn_1_1_texture" kindref="compound">Texture</ref> &gt; &gt; &amp;</type>
+        <definition>const std::map&lt; std::string, std::shared_ptr&lt; Texture &gt; &gt; &amp; kn::cache::getCache</definition>
+        <argsstring>()</argsstring>
+        <name>getCache</name>
+        <qualifiedname>kn::cache::getCache</qualifiedname>
+        <briefdescription>
+<para>Get the const reference to the texture cache. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The texture cache. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Cache.hpp" line="55" column="16" declfile="D:/Code/c++/Kraken-Engine/include/Cache.hpp" declline="55" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacekn_1_1cache_1ae9a61b38ef34af5f86b8e8487bf7348f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::cache::unload</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>unload</name>
+        <qualifiedname>kn::cache::unload</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Unload a texture from cache. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the texture. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Cache.hpp" line="62" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Cache.hpp" declline="62" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacekn_1_1cache_1aeb78be4c80745a9fd629cdb34933279b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kn::cache::unloadAll</definition>
+        <argsstring>()</argsstring>
+        <name>unloadAll</name>
+        <qualifiedname>kn::cache::unloadAll</qualifiedname>
+        <briefdescription>
+<para>Unload all textures from cache. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This method is called in the destructor. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Cache.hpp" line="69" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Cache.hpp" declline="69" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacekn_1_1cache_1a5624ddf3139abbf832c7699e98e48bd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classkn_1_1_texture" kindref="compound">Texture</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Texture &gt; kn::cache::getTexture</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>getTexture</name>
+        <qualifiedname>kn::cache::getTexture</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Get a texture pointer from cache. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the texture.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The texture pointer. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Cache.hpp" line="78" column="17" declfile="D:/Code/c++/Kraken-Engine/include/Cache.hpp" declline="78" declcolumn="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Code/c++/Kraken-Engine/include/Cache.hpp" line="11" column="1"/>
+  </compounddef>
+</doxygen>

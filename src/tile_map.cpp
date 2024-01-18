@@ -8,7 +8,7 @@
 namespace kn
 {
 
-TileMap::TileMap(TextureCache& textureCache, const std::string& tmxPath)
+TileMap::TileMap(const std::string& tmxPath)
 {
     if (!map.load(tmxPath))
     {
@@ -17,24 +17,20 @@ TileMap::TileMap(TextureCache& textureCache, const std::string& tmxPath)
     }
 
     int mapWidth = map.getTileCount().x;
-    int tileWidth = map.getTileSize().x;
-    int tileHeight = map.getTileSize().y;
+    const auto& tileSize = map.getTileSize();
 
-    const auto& tileSets = map.getTilesets();
-    for (const auto& set : tileSets)
+    for (const auto& set : map.getTilesets())
     {
-        auto tex = textureCache.load("tileset", set.getImagePath());
+        auto tex = cache::load("tileset", set.getImagePath());
         tileSetMap[set.getFirstGID()] = tex; // Binding map texture to its GID key.
-        textureCache.unload("tileset");
+        cache::unload("tileset");
     }
 
-    const auto& layers = map.getLayers();
-    for (const auto& layer : layers)
+    for (const auto& layer : map.getLayers())
     {
         if (layer->getType() == tmx::Layer::Type::Tile)
         {
-            const auto& tileLayer = layer->getLayerAs<tmx::TileLayer>();
-            const auto& layerTiles = tileLayer.getTiles();
+            const auto& layerTiles = layer->getLayerAs<tmx::TileLayer>().getTiles();
 
             for (uint64_t i = 0; i < layerTiles.size(); ++i)
             {
@@ -56,15 +52,15 @@ TileMap::TileMap(TextureCache& textureCache, const std::string& tmxPath)
                 auto tile = tileSetMap[tileSetGID];
                 int tileSetWidth = tile->getSize().x;
 
-                int regionX = (currentGID % (tileSetWidth / tileWidth)) * tileWidth;
-                int regionY = (currentGID / (tileSetWidth / tileWidth)) * tileHeight;
+                int regionX = (currentGID % (tileSetWidth / (int)tileSize.x)) * (int)tileSize.x;
+                int regionY = (currentGID / (tileSetWidth / (int)tileSize.x)) * (int)tileSize.y;
 
-                int xPos = (i % mapWidth) * tileWidth;
-                int yPos = (i / mapWidth) * tileHeight;
+                int xPos = (i % mapWidth) * (int)tileSize.x;
+                int yPos = (i / mapWidth) * (int)tileSize.y;
 
                 tileVec.emplace_back(Tile{tile,
-                                          {regionX, regionY, tileWidth, tileHeight},
-                                          {xPos, yPos, tileWidth, tileHeight}});
+                                          {regionX, regionY, (int)tileSize.x, (int)tileSize.y},
+                                          {xPos, yPos, (int)tileSize.x, (int)tileSize.y}});
             }
         }
     }

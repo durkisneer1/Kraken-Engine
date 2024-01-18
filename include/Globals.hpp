@@ -6,7 +6,7 @@ namespace kn
 {
 
 /**
- * @brief The global size of the screen.
+ * @brief The global size of the screen. Declare this before the window is instantiated.
  *
  * @warning This is independent of the window size.
  */
