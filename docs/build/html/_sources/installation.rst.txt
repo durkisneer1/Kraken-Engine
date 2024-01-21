@@ -13,7 +13,7 @@ Kraken Engine as of now has only been tested and confirmed to work on the follow
 
 Before starting, ensure you have a C++ compiler, `cmake <https://cmake.org/download/>`_, and `git <https://www.git-scm.com/downloads>`_ installed.
 
-1. Clone repository.
+1. Clone the `repository <https://github.com/durkisneer1/Kraken-Engine>`_.
 2. Open install directory in cmd.
 3. Enter these commands into your terminal:
 
