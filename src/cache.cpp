@@ -1,6 +1,6 @@
 #include "Cache.hpp"
 #include "ErrorLogger.hpp"
-#include "RenderWindow.hpp"
+#include "Window.hpp"
 
 namespace kn
 {
@@ -11,7 +11,7 @@ static std::map<std::string, std::shared_ptr<Texture>> textures;
 
 std::shared_ptr<Texture> load(const std::string& name, const std::string& path)
 {
-    SDL_Texture* texture = IMG_LoadTexture(RenderWindow::get().getRenderer(), path.c_str());
+    SDL_Texture* texture = IMG_LoadTexture(window::getRenderer(), path.c_str());
     if (!texture)
     {
         WARN("Failed to create texture from: " + path);
@@ -36,7 +36,7 @@ std::shared_ptr<Texture> create(const std::string& name, const math::Vec2& size,
 
     SDL_FillRect(surface, nullptr, SDL_MapRGB(surface->format, color.r, color.g, color.b));
 
-    SDL_Texture* texture = SDL_CreateTextureFromSurface(RenderWindow::get().getRenderer(), surface);
+    SDL_Texture* texture = SDL_CreateTextureFromSurface(window::getRenderer(), surface);
     if (!texture)
     {
         WARN("Failed to create texture from surface: " + name);

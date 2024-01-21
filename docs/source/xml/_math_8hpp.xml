@@ -6,7 +6,6 @@
     <includes refid="_overflow_8hpp" local="yes">Overflow.hpp</includes>
     <includedby refid="_cache_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/Cache.hpp</includedby>
     <includedby refid="_entity_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/Entity.hpp</includedby>
-    <includedby refid="_globals_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/Globals.hpp</includedby>
     <includedby refid="_input_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/Input.hpp</includedby>
     <includedby refid="_kraken_engine_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/KrakenEngine.hpp</includedby>
     <includedby refid="_rect_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/Rect.hpp</includedby>
@@ -110,14 +109,6 @@
         </childnode>
       </node>
       <node id="6">
-        <label>D:/Code/c++/Kraken-Engine/include/Globals.hpp</label>
-        <link refid="_globals_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="12">
         <label>D:/Code/c++/Kraken-Engine/include/Input.hpp</label>
         <link refid="_input_8hpp"/>
         <childnode refid="3" relation="include">
@@ -135,8 +126,6 @@
         <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
@@ -157,16 +146,6 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="11">
-        <label>D:/Code/c++/Kraken-Engine/include/RenderWindow.hpp</label>
-        <link refid="_render_window_8hpp"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
       <node id="9">
         <label>D:/Code/c++/Kraken-Engine/include/Texture.hpp</label>
         <link refid="_texture_8hpp"/>
@@ -184,6 +163,12 @@
       <node id="4">
         <label>D:/Code/c++/Kraken-Engine/include/TileMap.hpp</label>
         <link refid="_tile_map_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>D:/Code/c++/Kraken-Engine/include/Window.hpp</label>
+        <link refid="_window_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>

@@ -2,7 +2,6 @@
 
 #include <SDL.h>
 
-#include "Globals.hpp"
 #include "Math.hpp"
 
 namespace kn
@@ -71,7 +70,7 @@ struct Rect : public SDL_FRect
      * @param min The minimum value.
      * @param max The maximum value.
      */
-    void clamp(const math::Vec2& min = {}, const math::Vec2& max = SCREEN_SIZE);
+    void clamp(const math::Vec2& min, const math::Vec2& max);
 
     void setCenter(const math::Vec2& pos);
     void setLeft(float x);

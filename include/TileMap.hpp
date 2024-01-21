@@ -8,7 +8,6 @@
 
 #include "Cache.hpp"
 #include "Entity.hpp"
-#include "RenderWindow.hpp"
 
 namespace kn
 {
@@ -46,7 +45,6 @@ class TileMap final
     void draw();
 
   private:
-    RenderWindow& window = RenderWindow::get();
     tmx::Map map;
 
     std::vector<Tile> tileVec = {};

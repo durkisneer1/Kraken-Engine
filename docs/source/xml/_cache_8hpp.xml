@@ -41,12 +41,6 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="19">
-        <label>Globals.hpp</label>
-        <link refid="_globals_8hpp"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
       <node id="4">
         <label>Math.hpp</label>
         <link refid="_math_8hpp"/>
@@ -71,8 +65,6 @@
         <label>Rect.hpp</label>
         <link refid="_rect_8hpp"/>
         <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="19" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
@@ -161,25 +153,24 @@
 <codeline lineno="11" refid="namespacekn_1_1cache" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cache</highlight></codeline>
 <codeline lineno="12"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22" refid="namespacekn_1_1cache_1ad35949df16071ee0f3650f52f9d47966" refkind="member"><highlight class="normal">[[maybe_unused]]<sp/>std::shared_ptr&lt;Texture&gt;<sp/><ref refid="namespacekn_1_1cache_1ad35949df16071ee0f3650f52f9d47966" kindref="member">load</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>path);</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="namespacekn_1_1cache_1aa4a8e8e020b8b39a75a5f69a135fc98c" refkind="member"><highlight class="normal">[[maybe_unused]]<sp/>std::shared_ptr&lt;Texture&gt;<sp/><ref refid="namespacekn_1_1cache_1aa4a8e8e020b8b39a75a5f69a135fc98c" kindref="member">create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref>&amp;<sp/>size,<sp/><ref refid="namespacekn_1a91eb5db82680dedc10733f04def8dd2f" kindref="member">Color</ref><sp/>color);</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47" refid="namespacekn_1_1cache_1a7bc391c4e72c439d51434cd5e3ba5ed2" refkind="member"><highlight class="normal">[[maybe_unused]]<sp/>std::shared_ptr&lt;Texture&gt;<sp/><ref refid="namespacekn_1_1cache_1a7bc391c4e72c439d51434cd5e3ba5ed2" kindref="member">move</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;Texture&gt;<sp/>texture);</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55" refid="namespacekn_1_1cache_1a906845f508ca5876cd7a9f393f25df6a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map&lt;std::string,<sp/>std::shared_ptr&lt;Texture&gt;&gt;&amp;<sp/><ref refid="namespacekn_1_1cache_1a906845f508ca5876cd7a9f393f25df6a" kindref="member">getCache</ref>();</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62" refid="namespacekn_1_1cache_1ae9a61b38ef34af5f86b8e8487bf7348f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1_1cache_1ae9a61b38ef34af5f86b8e8487bf7348f" kindref="member">unload</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name);</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69" refid="namespacekn_1_1cache_1aeb78be4c80745a9fd629cdb34933279b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1_1cache_1aeb78be4c80745a9fd629cdb34933279b" kindref="member">unloadAll</ref>();</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78" refid="namespacekn_1_1cache_1a5624ddf3139abbf832c7699e98e48bd3" refkind="member"><highlight class="normal">std::shared_ptr&lt;Texture&gt;<sp/><ref refid="namespacekn_1_1cache_1a5624ddf3139abbf832c7699e98e48bd3" kindref="member">getTexture</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name);</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cache</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>kn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="namespacekn_1_1cache_1ad35949df16071ee0f3650f52f9d47966" refkind="member"><highlight class="normal">[[maybe_unused]]<sp/>std::shared_ptr&lt;Texture&gt;<sp/><ref refid="namespacekn_1_1cache_1ad35949df16071ee0f3650f52f9d47966" kindref="member">load</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>path);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="namespacekn_1_1cache_1aa4a8e8e020b8b39a75a5f69a135fc98c" refkind="member"><highlight class="normal">[[maybe_unused]]<sp/>std::shared_ptr&lt;Texture&gt;<sp/><ref refid="namespacekn_1_1cache_1aa4a8e8e020b8b39a75a5f69a135fc98c" kindref="member">create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref>&amp;<sp/>size,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacekn_1a91eb5db82680dedc10733f04def8dd2f" kindref="member">Color</ref><sp/>color);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="namespacekn_1_1cache_1a7bc391c4e72c439d51434cd5e3ba5ed2" refkind="member"><highlight class="normal">[[maybe_unused]]<sp/>std::shared_ptr&lt;Texture&gt;<sp/><ref refid="namespacekn_1_1cache_1a7bc391c4e72c439d51434cd5e3ba5ed2" kindref="member">move</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;Texture&gt;<sp/>texture);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="namespacekn_1_1cache_1a906845f508ca5876cd7a9f393f25df6a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map&lt;std::string,<sp/>std::shared_ptr&lt;Texture&gt;&gt;&amp;<sp/><ref refid="namespacekn_1_1cache_1a906845f508ca5876cd7a9f393f25df6a" kindref="member">getCache</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="namespacekn_1_1cache_1ae9a61b38ef34af5f86b8e8487bf7348f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1_1cache_1ae9a61b38ef34af5f86b8e8487bf7348f" kindref="member">unload</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="namespacekn_1_1cache_1aeb78be4c80745a9fd629cdb34933279b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1_1cache_1aeb78be4c80745a9fd629cdb34933279b" kindref="member">unloadAll</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="namespacekn_1_1cache_1a5624ddf3139abbf832c7699e98e48bd3" refkind="member"><highlight class="normal">std::shared_ptr&lt;Texture&gt;<sp/><ref refid="namespacekn_1_1cache_1a5624ddf3139abbf832c7699e98e48bd3" kindref="member">getTexture</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cache</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>kn</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="D:/Code/c++/Kraken-Engine/include/Cache.hpp"/>
   </compounddef>

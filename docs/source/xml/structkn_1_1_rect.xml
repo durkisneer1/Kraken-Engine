@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="16" column="5"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="15" column="5"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a29cf43d1e332203115a5db256416059a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="26" column="5" bodyfile="D:/Code/c++/Kraken-Engine/include/Rect.hpp" bodystart="26" bodyend="26"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="25" column="5" bodyfile="D:/Code/c++/Kraken-Engine/include/Rect.hpp" bodystart="25" bodyend="25"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a1c38171958eca9f653a67f7f6cae86c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -112,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="27" column="5" bodyfile="D:/Code/c++/Kraken-Engine/include/Rect.hpp" bodystart="27" bodyend="27"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="26" column="5" bodyfile="D:/Code/c++/Kraken-Engine/include/Rect.hpp" bodystart="26" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a86586255f5b88ff80d6dbd41486f50a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
@@ -130,7 +130,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="34" column="16"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="33" column="16"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a1ed727673cfc87e018928b1c11ba2461" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
@@ -148,7 +148,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="41" column="16"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="40" column="16"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1aea0899e6f189bfe35e0d2b9d8df2d2b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -177,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="48" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="47" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a7539227428f8bece54ec253f8560e30f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -208,7 +208,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="57" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="56" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a08c4d03cec415ae3f69e6cb5c4ba756d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -239,23 +239,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="66" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="65" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="structkn_1_1_rect_1a3d13d89842395715e7a27fc793047bb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="structkn_1_1_rect_1af6d22d6813c6bf5d445c4b344aab61b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void kn::Rect::clamp</definition>
-        <argsstring>(const math::Vec2 &amp;min={}, const math::Vec2 &amp;max=SCREEN_SIZE)</argsstring>
+        <argsstring>(const math::Vec2 &amp;min, const math::Vec2 &amp;max)</argsstring>
         <name>clamp</name>
         <qualifiedname>kn::Rect::clamp</qualifiedname>
         <param>
           <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
           <declname>min</declname>
-          <defval>{}</defval>
         </param>
         <param>
           <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref> &amp;</type>
           <declname>max</declname>
-          <defval><ref refid="namespacekn_1a4f6693c08dee924dd9d7cf1106f56815" kindref="member">SCREEN_SIZE</ref></defval>
         </param>
         <briefdescription>
 <para>Clamp the rectangle. </para>
@@ -282,7 +280,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="74" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="73" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a68ab3e17074513f1eefb079ab2aadaea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -300,7 +298,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="76" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="75" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1abede17fdb58e5d0c301cab2ff0d992db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -318,7 +316,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="77" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="76" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a17e302438daeb0b713800e876c069db1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -336,7 +334,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="78" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="77" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a0a5a51b5ef02146b5b6b6869608f6d4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -354,7 +352,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="79" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="78" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1add801ec48362102162b110490bf0f628" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -372,7 +370,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="80" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="79" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a0665bdc00e2f4b54529d2177ac3bc70f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -390,7 +388,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="81" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="80" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1afee6ad9269d943754512f8a168a1ae6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -408,7 +406,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="82" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="81" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1ad53eb8f8d221b99c1281b5c8539c7ac9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -426,7 +424,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="83" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="82" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1aac75aec1768fa6f6a506f4d00f6e0210" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -444,7 +442,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="84" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="83" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a9753a75bae9530ecff0baa551c44375d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -462,7 +460,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="85" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="84" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1aa2a6d65d69954027cf6c39d4226487b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -480,7 +478,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="86" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="85" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a716cf8a9ed3ae9a8163e0a29c8bb6728" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -498,7 +496,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="87" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="86" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1ad50a17779722f798d055cd2ddb37d904" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -516,7 +514,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="88" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="87" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a3a10eeee9f62b32e6adbf03ce62a7d9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
@@ -530,7 +528,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="90" column="16"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="89" column="16"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1ae707ef317c6259675c0e9a967e093769" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -544,7 +542,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="91" column="11"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="90" column="11"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a8aab249e226c6a8c1ab0b450721d929b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -558,7 +556,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="92" column="11"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="91" column="11"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a134a42bcde83259f1182be61e3c7495e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -572,7 +570,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="93" column="11"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="92" column="11"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a9199db44899f917b0077e334481e2766" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -586,7 +584,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="94" column="11"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="93" column="11"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a6987c049da3037ce5df590dc16b82ae1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
@@ -600,7 +598,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="95" column="16"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="94" column="16"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a8c75e4fd74cd9cd64dfe34506019cf7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
@@ -614,7 +612,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="96" column="16"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="95" column="16"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1ab4350c360c565452993af9df311261bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
@@ -628,7 +626,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="97" column="16"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="96" column="16"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1af3b29fa1f019a63145478dd6b6d95ba8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
@@ -642,7 +640,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="98" column="16"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="97" column="16"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a2e62ffc626eaef5c1b70395df0a66338" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
@@ -656,7 +654,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="99" column="16"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="98" column="16"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1a7b8e4da3c1667ec7acd73436186499f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
@@ -670,7 +668,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="100" column="16"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="99" column="16"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1ab6d716e2afb594ead210b9c7999a0763" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
@@ -684,7 +682,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="101" column="16"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="100" column="16"/>
       </memberdef>
       <memberdef kind="function" id="structkn_1_1_rect_1ae2394b363e51897403808dc774976dd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
@@ -698,7 +696,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="102" column="16"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="101" column="16"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -728,9 +726,9 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="14" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/Rect.hpp" bodystart="15" bodyend="103"/>
+    <location file="D:/Code/c++/Kraken-Engine/include/Rect.hpp" line="13" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/Rect.hpp" bodystart="14" bodyend="102"/>
     <listofallmembers>
-      <member refid="structkn_1_1_rect_1a3d13d89842395715e7a27fc793047bb3" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>clamp</name></member>
+      <member refid="structkn_1_1_rect_1af6d22d6813c6bf5d445c4b344aab61b2" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>clamp</name></member>
       <member refid="structkn_1_1_rect_1a7539227428f8bece54ec253f8560e30f" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>collidePoint</name></member>
       <member refid="structkn_1_1_rect_1a08c4d03cec415ae3f69e6cb5c4ba756d" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>collideRect</name></member>
       <member refid="structkn_1_1_rect_1a9199db44899f917b0077e334481e2766" prot="public" virt="non-virtual"><scope>kn::Rect</scope><name>getBottom</name></member>

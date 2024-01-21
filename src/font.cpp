@@ -1,6 +1,6 @@
 #include "Font.hpp"
 #include "ErrorLogger.hpp"
-#include "RenderWindow.hpp"
+#include "Window.hpp"
 
 namespace kn
 {
@@ -30,8 +30,7 @@ std::shared_ptr<Texture> Font::render(const std::string& text, bool antialias, C
     if (!surface)
         FATAL("Failed to render text: " + std::string(TTF_GetError()));
 
-    SDL_Texture* sdlTexture =
-        SDL_CreateTextureFromSurface(RenderWindow::get().getRenderer(), surface);
+    SDL_Texture* sdlTexture = SDL_CreateTextureFromSurface(window::getRenderer(), surface);
     if (!sdlTexture)
         FATAL("Failed to create texture: " + std::string(SDL_GetError()));
 

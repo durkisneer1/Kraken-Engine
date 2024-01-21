@@ -1,7 +1,7 @@
 #include <SDL.h>
 
 #include "Draw.hpp"
-#include "RenderWindow.hpp"
+#include "Window.hpp"
 
 namespace kn
 {
@@ -10,12 +10,11 @@ namespace draw
 
 void rect(Rect& rect, const Color color, int thickness)
 {
-    RenderWindow& window = RenderWindow::get();
-    SDL_SetRenderDrawColor(window.getRenderer(), color.r, color.g, color.b, color.a);
+    SDL_SetRenderDrawColor(window::getRenderer(), color.r, color.g, color.b, color.a);
 
     if (thickness == 0)
     {
-        SDL_RenderFillRectF(window.getRenderer(), &rect);
+        SDL_RenderFillRectF(window::getRenderer(), &rect);
         return;
     }
 
@@ -25,7 +24,7 @@ void rect(Rect& rect, const Color color, int thickness)
     for (int i = 0; i < thickness; i++)
     {
         Rect layerRect = {rect.x + i, rect.y + i, rect.w - i * 2, rect.h - i * 2};
-        SDL_RenderDrawRectF(window.getRenderer(), &layerRect);
+        SDL_RenderDrawRectF(window::getRenderer(), &layerRect);
     }
 }
 

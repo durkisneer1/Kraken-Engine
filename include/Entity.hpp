@@ -7,7 +7,6 @@
 
 #include "Math.hpp"
 #include "Rect.hpp"
-#include "RenderWindow.hpp"
 #include "Texture.hpp"
 
 namespace kn
@@ -41,7 +40,6 @@ class Entity
     math::Vec2 velocity;
 
   protected:
-    RenderWindow& window = RenderWindow::get();
     std::shared_ptr<Texture> texture;
 
     bool onGround = false;

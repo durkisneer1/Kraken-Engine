@@ -4,36 +4,28 @@
 #include "gtest/gtest.h"
 
 #include "ErrorLogger.hpp"
-#include "RenderWindow.hpp"
+#include "Window.hpp"
 
 #define KN_SCREEN_SIZE_DEFINED
-const kn::math::Vec2 kn::SCREEN_SIZE = {100, 100};
 
-namespace
+// FIXME: Irrelevant for now
+namespace kn
 {
-using kn::RenderWindow;
 
-class RenderWindowTest : public ::testing::Test
+class WindowTest : public ::testing::Test
 {
   protected:
-    RenderWindowTest()
+    WindowTest()
     {
         // Have to set this before first test
-        RenderWindow::setScale(2);
+        window::setScale(2);
     }
 
-    virtual ~RenderWindowTest() {}
+    virtual ~WindowTest() {}
 
     virtual void SetUp() {}
 
     virtual void TearDown() {}
 };
 
-TEST_F(RenderWindowTest, SingletonPointersEqual)
-{
-    const RenderWindow* window1 = &RenderWindow::get();
-    const RenderWindow* window2 = &RenderWindow::get();
-
-    EXPECT_EQ(window1, window2);
-}
-} // namespace
+} // namespace kn

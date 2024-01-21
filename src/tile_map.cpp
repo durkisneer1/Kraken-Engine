@@ -4,6 +4,7 @@
 
 #include "ErrorLogger.hpp"
 #include "TileMap.hpp"
+#include "Window.hpp"
 
 namespace kn
 {
@@ -69,7 +70,7 @@ TileMap::TileMap(const std::string& tmxPath)
 void TileMap::draw()
 {
     for (const auto& tile : tileVec)
-        window.blit(tile.texture, tile.crop, tile.rect);
+        window::blit(tile.texture, tile.crop, tile.rect);
 }
 
 } // namespace kn

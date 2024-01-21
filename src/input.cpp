@@ -1,7 +1,7 @@
 #include <algorithm>
 
 #include "Input.hpp"
-#include "RenderWindow.hpp"
+#include "Window.hpp"
 
 namespace kn
 {
@@ -12,7 +12,7 @@ math::Vec2 getMousePos()
 {
     int x, y;
     SDL_GetMouseState(&x, &y);
-    int scale = kn::RenderWindow::get().getScale();
+    int scale = window::getScale();
     return {x / scale, y / scale};
 }
 

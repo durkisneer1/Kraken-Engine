@@ -7,29 +7,30 @@ Creating a Window
 
 After following the :doc:`../installation` guide, you are ready for your first Kraken Engine program.
 
-.. code-block:: c
+.. code-block:: c++
     :linenos:
 
     #include <KrakenEngine.hpp>
 
-    const kn::math::Vec2 kn::SCREEN_SIZE = { 800, 600 };
-
-
-    int main() {
-        kn::RenderWindow& window = kn::RenderWindow::get();
+    int main()
+    {
+        kn::window::init({ 800, 600 });
         kn::time::Clock clock;
 
         bool done = false;
-        while (!done) {
+        while (!done)
+        {
             clock.tick();
 
-            for (const auto &event : window.getEvents())
-                if (event.type == kn::QUIT) done = true;
+            for (const auto &event : kn::window::getEvents())
+                if (event.type == kn::QUIT)
+                    done = true;
 
-            window.cls();
-            window.flip();
+            kn::window::cls();
+            kn::window::flip();
         }
 
+        kn::window::quit();
         return EXIT_SUCCESS;
     }
 

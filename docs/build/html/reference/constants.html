@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="input" href="input.html" /><link rel="prev" title="draw" href="draw.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="draw" href="draw.html" /><link rel="prev" title="cache" href="cache.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
-        <title>globals - Kraken Engine</title>
+        <title>constants - Kraken Engine</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
@@ -166,18 +166,18 @@
 <li class="toctree-l2"><a class="reference internal" href="error_logger.html">ErrorLogger</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rect.html">Rect</a></li>
-<li class="toctree-l2"><a class="reference internal" href="render_window.html">RenderWindow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sound.html">Sound</a></li>
 <li class="toctree-l2"><a class="reference internal" href="texture.html">Texture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tile_map.html">TileMap</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cache.html">cache</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">constants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="draw.html">draw</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">globals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="input.html">input</a></li>
 <li class="toctree-l2"><a class="reference internal" href="math.html">math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="music.html">music</a></li>
 <li class="toctree-l2"><a class="reference internal" href="overflow.html">overflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="time.html">time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="window.html">window</a></li>
 </ul>
 </li>
 </ul>
@@ -214,27 +214,8 @@
           </label>
         </div>
         <article role="main">
-          <section id="globals">
-<h1>globals<a class="headerlink" href="#globals" title="Link to this heading">#</a></h1>
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2kn11SCREEN_SIZEE">
-<span id="_CPPv3N2kn11SCREEN_SIZEE"></span><span id="_CPPv2N2kn11SCREEN_SIZEE"></span><span id="kn::SCREEN_SIZE__math::Vec2C"></span><span class="target" id="namespacekn_1a4f6693c08dee924dd9d7cf1106f56815"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">math</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="math.html#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="#_CPPv42kn" title="kn"><span class="n"><span class="pre">kn</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">SCREEN_SIZE</span></span></span><a class="headerlink" href="#_CPPv4N2kn11SCREEN_SIZEE" title="Link to this definition">#</a><br /></dt>
-<dd><p>The global size of the screen. </p>
-<p>Declare this before the window is instantiated.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is independent of the window size. </p>
-</div>
-</dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2kn7GRAVITYE">
-<span id="_CPPv3N2kn7GRAVITYE"></span><span id="_CPPv2N2kn7GRAVITYE"></span><span id="kn::GRAVITY__float"></span><span class="target" id="namespacekn_1ac1be3061d1c6178d71ebcbc1961e651a"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="#_CPPv42kn" title="kn"><span class="n"><span class="pre">kn</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">GRAVITY</span></span></span><a class="headerlink" href="#_CPPv4N2kn7GRAVITYE" title="Link to this definition">#</a><br /></dt>
-<dd><p>The global gravity. </p>
-</dd></dl>
-
-<section id="constants">
-<h2>constants<a class="headerlink" href="#constants" title="Link to this heading">#</a></h2>
+          <section id="constants">
+<h1>constants<a class="headerlink" href="#constants" title="Link to this heading">#</a></h1>
 <dl class="cpp type">
 <dt class="sig sig-object cpp" id="_CPPv42kn">
 <span id="_CPPv32kn"></span><span id="_CPPv22kn"></span><span id="kn"></span><span class="target" id="namespacekn"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kn</span></span></span><a class="headerlink" href="#_CPPv42kn" title="Link to this definition">#</a><br /></dt>
@@ -1313,30 +1294,29 @@
 </dd></dl>
 
 </section>
-</section>
 
         </article>
       </div>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="input.html">
+          <a class="next-page" href="draw.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">input</div>
+                <div class="title">draw</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="draw.html">
+          <a class="prev-page" href="cache.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">draw</div>
+                <div class="title">cache</div>
                 
               </div>
             </a>
@@ -1370,10 +1350,7 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">globals</a><ul>
-<li><a class="reference internal" href="#_CPPv4N2kn11SCREEN_SIZEE"><code class="docutils literal notranslate"><span class="pre">SCREEN_SIZE</span></code></a></li>
-<li><a class="reference internal" href="#_CPPv4N2kn7GRAVITYE"><code class="docutils literal notranslate"><span class="pre">GRAVITY</span></code></a></li>
-<li><a class="reference internal" href="#constants">constants</a><ul>
+<li><a class="reference internal" href="#">constants</a><ul>
 <li><a class="reference internal" href="#_CPPv42kn"><code class="docutils literal notranslate"><span class="pre">kn</span></code></a><ul>
 <li><a class="reference internal" href="#_CPPv4N2kn9float32_tE"><code class="docutils literal notranslate"><span class="pre">kn::float32_t</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn9float64_tE"><code class="docutils literal notranslate"><span class="pre">kn::float64_t</span></code></a></li>
@@ -1588,8 +1565,6 @@
 <li><a class="reference internal" href="#_CPPv4N2kn11BUTTON_LEFTE"><code class="docutils literal notranslate"><span class="pre">kn::BUTTON_LEFT</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn13BUTTON_MIDDLEE"><code class="docutils literal notranslate"><span class="pre">kn::BUTTON_MIDDLE</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn12BUTTON_RIGHTE"><code class="docutils literal notranslate"><span class="pre">kn::BUTTON_RIGHT</span></code></a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>

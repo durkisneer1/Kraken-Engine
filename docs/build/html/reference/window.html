@@ -1,0 +1,489 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="prev" title="time" href="time.html" />
+
+    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+        <title>window - Kraken Engine</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Kraken Engine</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/kraken_engine_logo.png" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/kraken_engine_logo.png" alt="Dark Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="entity.html">Entity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error_logger.html">ErrorLogger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rect.html">Rect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sound.html">Sound</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texture.html">Texture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tile_map.html">TileMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cache.html">cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constants.html">constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="draw.html">draw</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="math.html">math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="music.html">music</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overflow.html">overflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time.html">time</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">window</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="window">
+<h1>window<a class="headerlink" href="#window" title="Link to this heading">#</a></h1>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn6windowE">
+<span id="_CPPv3N2kn6windowE"></span><span id="_CPPv2N2kn6windowE"></span><span id="kn::window"></span><span class="target" id="namespacekn_1_1window"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">window</span></span></span><a class="headerlink" href="#_CPPv4N2kn6windowE" title="Link to this definition">#</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn6window4initEN4math4Vec2Ei">
+<span id="_CPPv3N2kn6window4initEN4math4Vec2Ei"></span><span id="_CPPv2N2kn6window4initEN4math4Vec2Ei"></span><span id="kn::window::init__math::Vec2.i"></span><span class="target" id="namespacekn_1_1window_1a8455fe7aeb3dd34c9a9b60cc3fe047ed"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">math</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="math.html#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">scale</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn6window4initEN4math4Vec2Ei" title="Link to this definition">#</a><br /></dt>
+<dd><p>Initialize the window. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>size</strong> – The size of the window. </p></li>
+<li><p><strong>scale</strong> – The scale of the window. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn6window3clsE5Color">
+<span id="_CPPv3N2kn6window3clsE5Color"></span><span id="_CPPv2N2kn6window3clsE5Color"></span><span id="kn::window::cls__Color"></span><span class="target" id="namespacekn_1_1window_1ac6416284db584e950d60896bbaf8b889"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cls</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="constants.html#_CPPv4N2kn5ColorE" title="kn::Color"><span class="n"><span class="pre">Color</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">color</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">255</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn6window3clsE5Color" title="Link to this definition">#</a><br /></dt>
+<dd><p>Clear the screen. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>color</strong> – The color to clear the screen. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn6window4flipEv">
+<span id="_CPPv3N2kn6window4flipEv"></span><span id="_CPPv2N2kn6window4flipEv"></span><span id="kn::window::flip"></span><span class="target" id="namespacekn_1_1window_1a30cb9845ea877d981d4855efa78eef5c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">flip</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn6window4flipEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Flip the render frame buffer. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn6window4blitERKNSt10shared_ptrI7TextureEE4Rect4Rect">
+<span id="_CPPv3N2kn6window4blitERKNSt10shared_ptrI7TextureEE4Rect4Rect"></span><span id="_CPPv2N2kn6window4blitERKNSt10shared_ptrI7TextureEE4Rect4Rect"></span><span id="kn::window::blit__std::shared_ptr:Texture:CR.Rect.Rect"></span><span class="target" id="namespacekn_1_1window_1aa0bbd7d81e5da8cc1521b72b697f34c6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">blit</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="texture.html#_CPPv4N2kn7TextureE" title="kn::Texture"><span class="n"><span class="pre">Texture</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">texture</span></span>, <a class="reference internal" href="rect.html#_CPPv4N2kn4RectE" title="kn::Rect"><span class="n"><span class="pre">Rect</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">crop</span></span>, <a class="reference internal" href="rect.html#_CPPv4N2kn4RectE" title="kn::Rect"><span class="n"><span class="pre">Rect</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">rect</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn6window4blitERKNSt10shared_ptrI7TextureEE4Rect4Rect" title="Link to this definition">#</a><br /></dt>
+<dd><p>Draw a texture using rects. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>texture</strong> – The texture to draw. </p></li>
+<li><p><strong>crop</strong> – The rectangle to draw from. </p></li>
+<li><p><strong>rect</strong> – The rectangle to draw to. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn6window4blitERKNSt10shared_ptrI7TextureEERKN4math4Vec2E">
+<span id="_CPPv3N2kn6window4blitERKNSt10shared_ptrI7TextureEERKN4math4Vec2E"></span><span id="_CPPv2N2kn6window4blitERKNSt10shared_ptrI7TextureEERKN4math4Vec2E"></span><span id="kn::window::blit__std::shared_ptr:Texture:CR.math::Vec2CR"></span><span class="target" id="namespacekn_1_1window_1a2618d7099a79a14e8a6fbbc05b1f95de"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">blit</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="texture.html#_CPPv4N2kn7TextureE" title="kn::Texture"><span class="n"><span class="pre">Texture</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">texture</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">math</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="math.html#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">position</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn6window4blitERKNSt10shared_ptrI7TextureEERKN4math4Vec2E" title="Link to this definition">#</a><br /></dt>
+<dd><p>Draw a texture to a position. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>texture</strong> – The texture to draw. </p></li>
+<li><p><strong>position</strong> – The position to draw at. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn6window6blitExERKNSt10shared_ptrI7TextureEE4Rect4Rectdbb">
+<span id="_CPPv3N2kn6window6blitExERKNSt10shared_ptrI7TextureEE4Rect4Rectdbb"></span><span id="_CPPv2N2kn6window6blitExERKNSt10shared_ptrI7TextureEE4Rect4Rectdbb"></span><span id="kn::window::blitEx__std::shared_ptr:Texture:CR.Rect.Rect.double.b.b"></span><span class="target" id="namespacekn_1_1window_1a81b716dc9f47c0c0ba269a369d397371"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">blitEx</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="texture.html#_CPPv4N2kn7TextureE" title="kn::Texture"><span class="n"><span class="pre">Texture</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">texture</span></span>, <a class="reference internal" href="rect.html#_CPPv4N2kn4RectE" title="kn::Rect"><span class="n"><span class="pre">Rect</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">crop</span></span>, <a class="reference internal" href="rect.html#_CPPv4N2kn4RectE" title="kn::Rect"><span class="n"><span class="pre">Rect</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">rect</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">angle</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flipX</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flipY</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn6window6blitExERKNSt10shared_ptrI7TextureEE4Rect4Rectdbb" title="Link to this definition">#</a><br /></dt>
+<dd><p>Draw a texture using rects. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>texture</strong> – The texture to draw. </p></li>
+<li><p><strong>crop</strong> – The rectangle to draw from. </p></li>
+<li><p><strong>rect</strong> – The rectangle to draw to. </p></li>
+<li><p><strong>angle</strong> – The angle to draw the texture. </p></li>
+<li><p><strong>flipX</strong> – Whether to flip the texture on the x-axis. </p></li>
+<li><p><strong>flipY</strong> – Whether to flip the texture on the y-axis. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn6window6blitExERKNSt10shared_ptrI7TextureEERKN4math4Vec2Edbb">
+<span id="_CPPv3N2kn6window6blitExERKNSt10shared_ptrI7TextureEERKN4math4Vec2Edbb"></span><span id="_CPPv2N2kn6window6blitExERKNSt10shared_ptrI7TextureEERKN4math4Vec2Edbb"></span><span id="kn::window::blitEx__std::shared_ptr:Texture:CR.math::Vec2CR.double.b.b"></span><span class="target" id="namespacekn_1_1window_1aa0cebd65eb41527689c2d92037e12781"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">blitEx</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="texture.html#_CPPv4N2kn7TextureE" title="kn::Texture"><span class="n"><span class="pre">Texture</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">texture</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">math</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="math.html#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">position</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">angle</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flipX</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flipY</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn6window6blitExERKNSt10shared_ptrI7TextureEERKN4math4Vec2Edbb" title="Link to this definition">#</a><br /></dt>
+<dd><p>Draw a texture to a position. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>texture</strong> – The texture to draw. </p></li>
+<li><p><strong>position</strong> – The position to draw at. </p></li>
+<li><p><strong>angle</strong> – The angle to draw the texture. </p></li>
+<li><p><strong>flipX</strong> – Whether to flip the texture on the x-axis. </p></li>
+<li><p><strong>flipY</strong> – Whether to flip the texture on the y-axis. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn6window11getRendererEv">
+<span id="_CPPv3N2kn6window11getRendererEv"></span><span id="_CPPv2N2kn6window11getRendererEv"></span><span id="kn::window::getRenderer"></span><span class="target" id="namespacekn_1_1window_1a3ce2cfb79f449f807efa417699d94081"></span><span class="n"><span class="pre">SDL_Renderer</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getRenderer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn6window11getRendererEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the window renderer. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The window renderer. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn6window9getEventsEv">
+<span id="_CPPv3N2kn6window9getEventsEv"></span><span id="_CPPv2N2kn6window9getEventsEv"></span><span id="kn::window::getEvents"></span><span class="target" id="namespacekn_1_1window_1aca5f015b5824a5056f796b57278f8812"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="constants.html#_CPPv42kn" title="kn"><span class="n"><span class="pre">kn</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="constants.html#_CPPv4N2kn5EventE" title="kn::Event"><span class="n"><span class="pre">Event</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getEvents</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn6window9getEventsEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get user events. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The user events. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn6window13getFullscreenEv">
+<span id="_CPPv3N2kn6window13getFullscreenEv"></span><span id="_CPPv2N2kn6window13getFullscreenEv"></span><span id="kn::window::getFullscreen"></span><span class="target" id="namespacekn_1_1window_1afac8f8f12520ae16bb24df69bbaf0a9c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFullscreen</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn6window13getFullscreenEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get whether the window is fullscreen or not. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Whether the window is fullscreen or not. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn6window8getScaleEv">
+<span id="_CPPv3N2kn6window8getScaleEv"></span><span id="_CPPv2N2kn6window8getScaleEv"></span><span id="kn::window::getScale"></span><span class="target" id="namespacekn_1_1window_1afb2689c6f36fb513e9b4827a1a998337"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getScale</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn6window8getScaleEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the scale of the window. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The scale of the window. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn6window7getSizeEv">
+<span id="_CPPv3N2kn6window7getSizeEv"></span><span id="_CPPv2N2kn6window7getSizeEv"></span><span id="kn::window::getSize"></span><span class="target" id="namespacekn_1_1window_1aa36dc83cb3bbd4a898546980370824f7"></span><span class="n"><span class="pre">math</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="math.html#_CPPv4N2kn4math4Vec2E" title="kn::math::Vec2"><span class="n"><span class="pre">Vec2</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn6window7getSizeEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the size of the screen. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The size of the screen. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn6window8setTitleERKNSt6stringE">
+<span id="_CPPv3N2kn6window8setTitleERKNSt6stringE"></span><span id="_CPPv2N2kn6window8setTitleERKNSt6stringE"></span><span id="kn::window::setTitle__ssCR"></span><span class="target" id="namespacekn_1_1window_1a53ecd356997f4620d560dcc3c88a9330"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setTitle</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newTitle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn6window8setTitleERKNSt6stringE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Set the title of the window. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>newTitle</strong> – The new title for the window. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn6window13setFullscreenEb">
+<span id="_CPPv3N2kn6window13setFullscreenEb"></span><span id="_CPPv2N2kn6window13setFullscreenEb"></span><span id="kn::window::setFullscreen__b"></span><span class="target" id="namespacekn_1_1window_1af5b8f4551b8a1f1289c727aa50456e5e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFullscreen</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fullscreen</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn6window13setFullscreenEb" title="Link to this definition">#</a><br /></dt>
+<dd><p>Set whether the window is fullscreen or not. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fullscreen</strong> – <code class="docutils literal notranslate"><span class="pre">true</span></code> if setting fullscreen, <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn6window4quitEv">
+<span id="_CPPv3N2kn6window4quitEv"></span><span id="_CPPv2N2kn6window4quitEv"></span><span id="kn::window::quit"></span><span class="target" id="namespacekn_1_1window_1ad4ab08f768d36a6c1a93613284df7075"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">quit</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn6window4quitEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Quit SDL and destroy the window. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          <a class="prev-page" href="time.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">time</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024, Derrick Martinez
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">window</a><ul>
+<li><a class="reference internal" href="#_CPPv4N2kn6windowE"><code class="docutils literal notranslate"><span class="pre">window</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N2kn6window4initEN4math4Vec2Ei"><code class="docutils literal notranslate"><span class="pre">window::init()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn6window3clsE5Color"><code class="docutils literal notranslate"><span class="pre">window::cls()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn6window4flipEv"><code class="docutils literal notranslate"><span class="pre">window::flip()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn6window4blitERKNSt10shared_ptrI7TextureEE4Rect4Rect"><code class="docutils literal notranslate"><span class="pre">window::blit()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn6window4blitERKNSt10shared_ptrI7TextureEERKN4math4Vec2E"><code class="docutils literal notranslate"><span class="pre">window::blit()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn6window6blitExERKNSt10shared_ptrI7TextureEE4Rect4Rectdbb"><code class="docutils literal notranslate"><span class="pre">window::blitEx()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn6window6blitExERKNSt10shared_ptrI7TextureEERKN4math4Vec2Edbb"><code class="docutils literal notranslate"><span class="pre">window::blitEx()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn6window11getRendererEv"><code class="docutils literal notranslate"><span class="pre">window::getRenderer()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn6window9getEventsEv"><code class="docutils literal notranslate"><span class="pre">window::getEvents()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn6window13getFullscreenEv"><code class="docutils literal notranslate"><span class="pre">window::getFullscreen()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn6window8getScaleEv"><code class="docutils literal notranslate"><span class="pre">window::getScale()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn6window7getSizeEv"><code class="docutils literal notranslate"><span class="pre">window::getSize()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn6window8setTitleERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">window::setTitle()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn6window13setFullscreenEb"><code class="docutils literal notranslate"><span class="pre">window::setFullscreen()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn6window4quitEv"><code class="docutils literal notranslate"><span class="pre">window::quit()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
+    </body>
+</html>

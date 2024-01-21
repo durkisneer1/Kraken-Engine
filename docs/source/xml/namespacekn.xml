@@ -6,7 +6,6 @@
     <innerclass refid="classkn_1_1_error_logger" prot="public">kn::ErrorLogger</innerclass>
     <innerclass refid="classkn_1_1_font" prot="public">kn::Font</innerclass>
     <innerclass refid="structkn_1_1_rect" prot="public">kn::Rect</innerclass>
-    <innerclass refid="classkn_1_1_render_window" prot="public">kn::RenderWindow</innerclass>
     <innerclass refid="classkn_1_1_sound" prot="public">kn::Sound</innerclass>
     <innerclass refid="classkn_1_1_texture" prot="public">kn::Texture</innerclass>
     <innerclass refid="structkn_1_1_tile" prot="public">kn::Tile</innerclass>
@@ -18,6 +17,7 @@
     <innernamespace refid="namespacekn_1_1music">kn::music</innernamespace>
     <innernamespace refid="namespacekn_1_1overflow">kn::overflow</innernamespace>
     <innernamespace refid="namespacekn_1_1time">kn::time</innernamespace>
+    <innernamespace refid="namespacekn_1_1window">kn::window</innernamespace>
     <sectiondef kind="typedef">
       <memberdef kind="typedef" id="namespacekn_1aa4afeb9761786f8b7b45f49db7bc0b1a" prot="public" static="no">
         <type>float</type>
@@ -3210,40 +3210,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/Code/c++/Kraken-Engine/include/Constants.hpp" line="225" column="11" bodyfile="D:/Code/c++/Kraken-Engine/include/Constants.hpp" bodystart="225" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="namespacekn_1a4f6693c08dee924dd9d7cf1106f56815" prot="public" static="no" extern="yes" mutable="no">
-        <type>const <ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
-        <definition>const math::Vec2 kn::SCREEN_SIZE</definition>
-        <argsstring></argsstring>
-        <name>SCREEN_SIZE</name>
-        <qualifiedname>kn::SCREEN_SIZE</qualifiedname>
-        <briefdescription>
-<para>The global size of the screen. </para>
-        </briefdescription>
-        <detaileddescription>
-<para>Declare this before the window is instantiated.</para>
-<para><simplesect kind="warning"><para>This is independent of the window size. </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Globals.hpp" line="13" column="25" declfile="D:/Code/c++/Kraken-Engine/include/Globals.hpp" declline="13" declcolumn="25"/>
-      </memberdef>
-      <memberdef kind="variable" id="namespacekn_1ac1be3061d1c6178d71ebcbc1961e651a" prot="public" static="no" extern="yes" mutable="no">
-        <type>float</type>
-        <definition>float kn::GRAVITY</definition>
-        <argsstring></argsstring>
-        <name>GRAVITY</name>
-        <qualifiedname>kn::GRAVITY</qualifiedname>
-        <briefdescription>
-<para>The global gravity. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Globals.hpp" line="18" column="14" declfile="D:/Code/c++/Kraken-Engine/include/Globals.hpp" declline="18" declcolumn="14"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
