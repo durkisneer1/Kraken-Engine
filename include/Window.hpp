@@ -122,6 +122,13 @@ math::Vec2 getSize();
 void setTitle(const std::string& newTitle);
 
 /**
+ * @brief Get the title of the window.
+ *
+ * @return The title of the window.
+ */
+std::string getTitle();
+
+/**
  * @brief Set whether the window is fullscreen or not.
  *
  * @param fullscreen ``true`` if setting fullscreen, ``false`` otherwise.

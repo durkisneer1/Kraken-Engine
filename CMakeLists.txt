@@ -174,31 +174,31 @@ if (WIN32)
   add_custom_command(
     TARGET ${TESTING}
     COMMENT "Copy gtest dlls"
-    PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/bld/bin/libgtest.dll ${CMAKE_SOURCE_DIR}/bin/
+    PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_BINARY_DIR}/bin/libgtest.dll ${CMAKE_SOURCE_DIR}/bin/
     VERBATIM
   )
 endif()
 if (WIN32)
   add_custom_command(
     TARGET ${TESTING}
-    COMMENT "Copy gtest dlls"
-    PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/bld/bin/libgmock.dll ${CMAKE_SOURCE_DIR}/bin/
+    COMMENT "Copy gmock dlls"
+    PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_BINARY_DIR}/bin/libgmock.dll ${CMAKE_SOURCE_DIR}/bin/
     VERBATIM
   )
 endif()
 if (WIN32)
   add_custom_command(
     TARGET ${TESTING}
-    COMMENT "Copy gtest dlls"
-    PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/bld/bin/libgtest_main.dll ${CMAKE_SOURCE_DIR}/bin/
+    COMMENT "Copy gtest_main dlls"
+    PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_BINARY_DIR}/bin/libgtest_main.dll ${CMAKE_SOURCE_DIR}/bin/
     VERBATIM
   )
 endif()
 if (WIN32)
   add_custom_command(
     TARGET ${TESTING}
-    COMMENT "Copy gtest dlls"
-    PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/bld/bin/libgmock_main.dll ${CMAKE_SOURCE_DIR}/bin/
+    COMMENT "Copy gmock_main dlls"
+    PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_BINARY_DIR}/bin/libgmock_main.dll ${CMAKE_SOURCE_DIR}/bin/
     VERBATIM
   )
 endif()

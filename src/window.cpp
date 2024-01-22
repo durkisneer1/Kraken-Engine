@@ -65,6 +65,8 @@ void quit()
         SDL_DestroyRenderer(_renderer);
     if (_window)
         SDL_DestroyWindow(_window);
+    _events.clear();
+    _event = Event();
     Mix_CloseAudio();
     IMG_Quit();
     TTF_Quit();
@@ -210,7 +212,27 @@ void setTitle(const std::string& newTitle)
     if (!_window)
         WARN("Cannot set title before creating the window");
 
+    if (newTitle.empty())
+    {
+        WARN("Cannot set title to empty string");
+        return;
+    }
+
+    if (newTitle.size() > 255)
+    {
+        WARN("Cannot set title to string longer than 255 characters");
+        return;
+    }
+
     SDL_SetWindowTitle(_window, newTitle.c_str());
+}
+
+std::string getTitle()
+{
+    if (!_window)
+        WARN("Cannot get title before creating the window");
+
+    return std::string(SDL_GetWindowTitle(_window));
 }
 
 void setFullscreen(bool fullscreen)

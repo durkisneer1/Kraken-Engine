@@ -7,6 +7,7 @@
 
 namespace
 {
+
 using kn::float32_t;
 using kn::float64_t;
 using kn::overflow::isProductValid;
