@@ -26,7 +26,7 @@ class WindowTest : public ::testing::Test
 
 TEST_F(WindowTest, WindowInit)
 {
-    if (kn::window::getRenderer != NULL)
+    if (kn::window::getRenderer() != NULL)
     {
         EXPECT_EQ(kn::window::getSize().x, m_size.x);
         EXPECT_EQ(kn::window::getSize().y, m_size.y);
