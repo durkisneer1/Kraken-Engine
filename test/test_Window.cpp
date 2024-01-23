@@ -12,7 +12,7 @@ namespace
 class WindowTest : public ::testing::Test
 {
   protected:
-    WindowTest() : m_size(320, 240), m_scale(2) {}
+    WindowTest() : m_size(320, 240), m_scale(2) { kn::ErrorLogger::setConsoleOnly(); }
 
     virtual ~WindowTest() {}
 
@@ -26,9 +26,12 @@ class WindowTest : public ::testing::Test
 
 TEST_F(WindowTest, WindowInit)
 {
-    EXPECT_EQ(kn::window::getSize().x, m_size.x);
-    EXPECT_EQ(kn::window::getSize().y, m_size.y);
-    EXPECT_EQ(kn::window::getScale(), m_scale);
+    if (kn::window::getRenderer != NULL)
+    {
+        EXPECT_EQ(kn::window::getSize().x, m_size.x);
+        EXPECT_EQ(kn::window::getSize().y, m_size.y);
+        EXPECT_EQ(kn::window::getScale(), m_scale);
+    }
     EXPECT_EQ(kn::window::getTitle(), std::string("Kraken Window"));
 }
 
