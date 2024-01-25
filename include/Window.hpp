@@ -136,6 +136,15 @@ std::string getTitle();
 void setFullscreen(bool fullscreen);
 
 /**
+ * @brief Set the icon of the window.
+ *
+ * @param path The path to the icon.
+ * 
+ * @note The file must be surface-compatible.
+ */
+void setIcon(const std::string& path);
+
+/**
  * @brief Quit SDL and destroy the window.
  */
 void quit();
