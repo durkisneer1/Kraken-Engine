@@ -3,7 +3,7 @@
   <option  id='DOXYFILE_ENCODING' default='yes' type='string'><value><![CDATA[UTF-8]]></value></option>
   <option  id='PROJECT_NAME' default='no' type='string'><value><![CDATA["Kraken Engine"]]></value></option>
   <option  id='PROJECT_NUMBER' default='no' type='string'><value><![CDATA[v0.1]]></value></option>
-  <option  id='PROJECT_BRIEF' default='no' type='string'><value><![CDATA["The next best SDL2 wrapper engine."]]></value></option>
+  <option  id='PROJECT_BRIEF' default='no' type='string'><value><![CDATA["The SDL2 wrapper framework."]]></value></option>
   <option  id='PROJECT_LOGO' default='no' type='string'><value><![CDATA[D:/Code/c++/Kraken-Engine/docs/source/_static/kraken_engine_icon.png]]></value></option>
   <option  id='OUTPUT_DIRECTORY' default='no' type='string'><value><![CDATA[D:/Code/c++/Kraken-Engine/docs/source]]></value></option>
   <option  id='CREATE_SUBDIRS' default='yes' type='bool'><value>NO</value></option>

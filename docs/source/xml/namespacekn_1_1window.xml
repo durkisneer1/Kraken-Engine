@@ -43,18 +43,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="26" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="26" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="27" column="14" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="27" declcolumn="14"/>
       </memberdef>
-      <memberdef kind="function" id="namespacekn_1_1window_1ac6416284db584e950d60896bbaf8b889" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacekn_1_1window_1aea2913b4cc2cc4307aa330e545ce5abf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void kn::window::cls</definition>
-        <argsstring>(Color color={0, 0, 0, 255})</argsstring>
+        <argsstring>(Color color={ 0, 0, 0, 255 })</argsstring>
         <name>cls</name>
         <qualifiedname>kn::window::cls</qualifiedname>
         <param>
           <type><ref refid="namespacekn_1a91eb5db82680dedc10733f04def8dd2f" kindref="member">Color</ref></type>
           <declname>color</declname>
-          <defval>{0, 0, 0, 255}</defval>
+          <defval>{ 0, 0, 0, 255 }</defval>
         </param>
         <briefdescription>
 <para>Clear the screen. </para>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="33" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="33" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="34" column="14" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="34" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1window_1a30cb9845ea877d981d4855efa78eef5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -88,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="38" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="38" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="39" column="14" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="39" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1window_1aa0bbd7d81e5da8cc1521b72b697f34c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -141,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="47" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="47" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="48" column="14" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="48" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1window_1a2618d7099a79a14e8a6fbbc05b1f95de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -182,7 +182,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="55" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="55" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="56" column="14" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="56" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1window_1a81b716dc9f47c0c0ba269a369d397371" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -274,7 +274,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="67" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="67" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="68" column="14" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="68" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1window_1aa0cebd65eb41527689c2d92037e12781" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -354,7 +354,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="79" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="79" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="80" column="14" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="80" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1window_1a3ce2cfb79f449f807efa417699d94081" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>SDL_Renderer *</type>
@@ -372,7 +372,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="87" column="14" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="87" declcolumn="14"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="88" column="22" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="88" declcolumn="22"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1window_1aca5f015b5824a5056f796b57278f8812" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const std::vector&lt; <ref refid="namespacekn_1af947a748461c782cd90f4d4b7cdbea21" kindref="member">kn::Event</ref> &gt; &amp;</type>
@@ -390,7 +390,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="94" column="19" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="94" declcolumn="19"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="95" column="27" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="95" declcolumn="27"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1window_1afac8f8f12520ae16bb24df69bbaf0a9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -408,7 +408,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="101" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="101" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="102" column="14" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="102" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1window_1afb2689c6f36fb513e9b4827a1a998337" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -426,7 +426,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="108" column="5" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="108" declcolumn="5"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="109" column="13" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="109" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1window_1aa36dc83cb3bbd4a898546980370824f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref></type>
@@ -444,7 +444,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="115" column="12" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="115" declcolumn="12"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="116" column="20" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="116" declcolumn="20"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1window_1a53ecd356997f4620d560dcc3c88a9330" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -473,7 +473,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="122" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="122" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="123" column="14" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="123" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacekn_1_1window_1a98947eb3cb3df5229495adf0d9cad5df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string kn::window::getTitle</definition>
+        <argsstring>()</argsstring>
+        <name>getTitle</name>
+        <qualifiedname>kn::window::getTitle</qualifiedname>
+        <briefdescription>
+<para>Get the title of the window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The title of the window. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="130" column="21" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="130" declcolumn="21"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1window_1af5b8f4551b8a1f1289c727aa50456e5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -502,7 +520,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="129" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="129" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="137" column="14" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="137" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1window_1ad4ab08f768d36a6c1a93613284df7075" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -517,13 +535,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="134" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="134" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="142" column="14" declfile="D:/Code/c++/Kraken-Engine/include/Window.hpp" declline="142" declcolumn="14"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="17" column="1"/>
+    <location file="D:/Code/c++/Kraken-Engine/include/Window.hpp" line="19" column="5"/>
   </compounddef>
 </doxygen>

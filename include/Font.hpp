@@ -1,15 +1,14 @@
 #pragma once
 
+#include <SDL_ttf.h>
 #include <memory>
 #include <string>
 
-#include <SDL_ttf.h>
-
 #include "Constants.hpp"
-#include "Texture.hpp"
 
 namespace kn
 {
+class Texture;
 
 /**
  * @brief A class to render text.
@@ -46,5 +45,4 @@ class Font final
   private:
     TTF_Font* font;
 };
-
 } // namespace kn

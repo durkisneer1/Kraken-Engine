@@ -6,12 +6,10 @@
 
 namespace kn
 {
-
 using namespace overflow;
 
 namespace math
 {
-
 Vec2::Vec2() : x(0.0), y(0.0), tolerance(0.0001) {}
 
 Vec2 Vec2::ZERO() { return Vec2(); }
@@ -115,6 +113,5 @@ Vec2 lerpVec(const Vec2& a, const Vec2& b, double t)
     // TODO: figure out a way to signal if an overflow happens
     return a + (b - a) * t;
 }
-
 } // namespace math
 } // namespace kn

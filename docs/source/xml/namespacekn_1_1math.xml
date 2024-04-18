@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="122" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" declline="122" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="120" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" declline="120" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1math_1a9a6ecf740568eb799b85a2f10d764de5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">Vec2</ref></type>
@@ -112,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="133" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" declline="133" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="131" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" declline="131" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1math_1a98048b6b75328ae4acbff11d314bfeae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="143" column="18" bodyfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" bodystart="143" bodyend="156"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="141" column="18" bodyfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" bodystart="141" bodyend="154"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1math_1aa46e046256f2e9707eac97345b3e251b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -226,13 +226,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="166" column="18" bodyfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" bodystart="166" bodyend="166"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="164" column="18" bodyfile="D:/Code/c++/Kraken-Engine/include/Math.hpp" bodystart="164" bodyend="164"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Code/c++/Kraken-Engine/include/Math.hpp" line="13" column="1"/>
+    <location file="D:/Code/c++/Kraken-Engine/include/Cache.hpp" line="10" column="5"/>
   </compounddef>
 </doxygen>

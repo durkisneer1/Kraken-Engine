@@ -10,13 +10,14 @@
 #include <SDL_ttf.h>
 
 #include "Constants.hpp"
+#include "Math.hpp"
+#include "Rect.hpp"
 #include "Texture.hpp"
 
 namespace kn
 {
 namespace window
 {
-
 /**
  * @brief Initialize the window.
  *
@@ -134,15 +135,6 @@ std::string getTitle();
  * @param fullscreen ``true`` if setting fullscreen, ``false`` otherwise.
  */
 void setFullscreen(bool fullscreen);
-
-/**
- * @brief Set the icon of the window.
- *
- * @param path The path to the icon.
- * 
- * @note The file must be surface-compatible.
- */
-void setIcon(const std::string& path);
 
 /**
  * @brief Quit SDL and destroy the window.

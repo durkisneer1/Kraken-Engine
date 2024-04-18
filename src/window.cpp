@@ -7,7 +7,6 @@ namespace kn
 {
 namespace window
 {
-
 static SDL_Renderer* _renderer;
 static SDL_Window* _window;
 static Event _event;
@@ -54,7 +53,7 @@ void init(math::Vec2 size, int scale)
 
     if (scale > 1)
     {
-        SDL_RenderSetLogicalSize(_renderer, size.x, size.y);
+        SDL_RenderSetLogicalSize(_renderer, (int)size.x, (int)size.y);
         SDL_RenderSetIntegerScale(_renderer, SDL_TRUE);
     }
 }
@@ -115,11 +114,11 @@ void blit(const std::shared_ptr<Texture>& texture, Rect crop, Rect rect)
         return;
     }
 
-    SDL_Rect src;
-    src.x = crop.x;
-    src.y = crop.y;
-    src.w = crop.w;
-    src.h = crop.h;
+    SDL_Rect src{};
+    src.x = (int)crop.x;
+    src.y = (int)crop.y;
+    src.w = (int)crop.w;
+    src.h = (int)crop.h;
 
     SDL_RenderCopyF(_renderer, texture->getSDLTexture(), &src, &rect);
 }
@@ -154,11 +153,11 @@ void blitEx(const std::shared_ptr<Texture>& texture, Rect crop, Rect rect, doubl
         return;
     }
 
-    SDL_Rect src;
-    src.x = crop.x;
-    src.y = crop.y;
-    src.w = crop.w;
-    src.h = crop.h;
+    SDL_Rect src{};
+    src.x = (int)crop.x;
+    src.y = (int)crop.y;
+    src.w = (int)crop.w;
+    src.h = (int)crop.h;
 
     SDL_RenderCopyExF(_renderer, texture->getSDLTexture(), &src, &rect, angle, nullptr, flip);
 }
@@ -250,24 +249,9 @@ math::Vec2 getSize()
 
     int w, h;
     SDL_RenderGetLogicalSize(_renderer, &w, &h);
+    if (w == 0 || h == 0)
+        SDL_GetWindowSize(_window, &w, &h);
     return {w, h};
 }
-
-void setIcon(const std::string& path)
-{
-    if (!_window)
-        WARN("Cannot set icon before creating the window");
-
-    SDL_Surface* icon = IMG_Load(path.c_str());
-    if (!icon)
-    {
-        WARN("Cannot load icon: " + path);
-        return;
-    }
-
-    SDL_SetWindowIcon(_window, icon);
-    SDL_FreeSurface(icon);
-}
-
 } // namespace window
 } // namespace kn

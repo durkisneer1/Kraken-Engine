@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="96" column="17" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="96" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="101" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="101" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classkn_1_1_error_logger_1abc8515d943e8becf326ae0115a62b336" prot="private" static="no" mutable="no">
         <type>std::fstream</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="97" column="18" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="97" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="102" column="22" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="102" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classkn_1_1_error_logger_1a121348660efa43533db76a03851ebaca" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -41,13 +41,14 @@
         <name>m_canWriteToFile</name>
         <qualifiedname>kn::ErrorLogger::m_canWriteToFile</qualifiedname>
         <briefdescription>
-<para>true if there has been no issue opening the file, false if there has been </para>
+<para>true if there has been no issue opening the </para>
         </briefdescription>
         <detaileddescription>
+<para>file, false if there has been </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="98" column="10" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="98" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="103" column="14" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="103" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -67,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="33" column="24" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="33" bodyend="38"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="35" column="28" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="35" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_error_logger_1a9fc940f085f9c26dc77b0895b6e7328d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -81,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="40" column="17" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="40" bodyend="40"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="42" column="21" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="42" bodyend="42"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -113,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="48" column="10" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="48" bodyend="72"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="50" column="14" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="50" bodyend="77"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -134,7 +135,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="75" column="14" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="75" bodyend="84"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="80" column="18" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="80" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_error_logger_1ac071973dd70429a14feff5d35aa65b95" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -148,7 +149,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="86" column="5" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="86" bodyend="90"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="91" column="9" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="91" bodyend="95"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_error_logger_1a752a413466b17bf29b3e27a815b851b8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -166,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="92" column="5"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="97" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_error_logger_1a641baf058f5586a129aec4d28d6a9ca5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -184,7 +185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="94" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="99" column="14"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -195,7 +196,7 @@
 </simplesect>
 </para>
     </detaileddescription>
-    <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="25" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="26" bodyend="100"/>
+    <location file="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" line="27" column="5" bodyfile="D:/Code/c++/Kraken-Engine/include/ErrorLogger.hpp" bodystart="28" bodyend="105"/>
     <listofallmembers>
       <member refid="classkn_1_1_error_logger_1a6a8ac7be4777c9615999be4a2f1a1460" prot="private" virt="non-virtual"><scope>kn::ErrorLogger</scope><name>ErrorLogger</name></member>
       <member refid="classkn_1_1_error_logger_1a752a413466b17bf29b3e27a815b851b8" prot="private" virt="non-virtual"><scope>kn::ErrorLogger</scope><name>ErrorLogger</name></member>

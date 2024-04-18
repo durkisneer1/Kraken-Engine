@@ -1,10 +1,12 @@
 #pragma once
+#pragma warning(disable : 4996)
 
 #include <chrono>
 #include <ctime>
 #include <fstream>
 #include <iostream>
-#include <string.h>
+#include <sstream>
+#include <string>
 
 /**
  * LOG_LEVELS
@@ -50,8 +52,11 @@ class ErrorLogger
         auto currentTime = std::chrono::system_clock::now();
         std::time_t now = std::chrono::system_clock::to_time_t(currentTime);
 
-        std::string output;
-        output = output + strtok(ctime(&now), "\n") + logString + "\n";
+        char timeBuffer[80];
+        std::strftime(timeBuffer, sizeof(timeBuffer), "%c", localtime(&now));
+
+        std::string output(timeBuffer);
+        output.append(logString + "\n");
 
         if (!m_canWriteToFile)
         {
@@ -96,7 +101,7 @@ class ErrorLogger
     std::string m_filename; //!< logfile name
     std::fstream m_file;    //!< internal file object
     bool m_canWriteToFile;  //!< true if there has been no issue opening the
-                            //!< file, false if there has been
+    //!< file, false if there has been
 };
 
 } // namespace kn

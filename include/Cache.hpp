@@ -3,14 +3,17 @@
 #include <map>
 #include <memory>
 
-#include "Math.hpp"
 #include "Texture.hpp"
 
 namespace kn
 {
+namespace math
+{
+class Vec2;
+};
+
 namespace cache
 {
-
 /**
  * @brief Load a texture file.
  *
@@ -75,6 +78,5 @@ void unloadAll();
  * @return The texture pointer.
  */
 std::shared_ptr<Texture> getTexture(const std::string& name);
-
 } // namespace cache
 } // namespace kn

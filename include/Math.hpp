@@ -5,14 +5,12 @@
 
 namespace kn
 {
-
 using overflow::closeToZero;
 using overflow::isProductValid;
 using overflow::isSumValid;
 
 namespace math
 {
-
 /**
  * @brief A 2D vector.
  */

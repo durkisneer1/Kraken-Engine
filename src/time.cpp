@@ -5,7 +5,6 @@ namespace kn
 {
 namespace time
 {
-
 Clock::Clock()
     : m_frameTime(0), m_targetFrameTime(0), m_deltaTime(0),
       m_frequency(SDL_GetPerformanceFrequency()), m_now(0), m_last(SDL_GetPerformanceCounter())
@@ -28,6 +27,5 @@ double Clock::tick(int frameRate)
 
     return m_deltaTime;
 }
-
 } // namespace time
 } // namespace kn

@@ -2,11 +2,12 @@
 
 #include <SDL.h>
 
-#include "Math.hpp"
-
 namespace kn
 {
-
+namespace math
+{
+class Vec2;
+};
 /**
  * @brief A 2D rectangle.
  */
@@ -53,7 +54,7 @@ struct Rect : public SDL_FRect
      *
      * @return Whether the rectangle collides with a point.
      */
-    bool collidePoint(const math::Vec2& pos);
+    bool collidePoint(const math::Vec2& pos) const;
 
     /**
      * @brief Check if the rectangle collides with another rectangle.
@@ -62,7 +63,7 @@ struct Rect : public SDL_FRect
      *
      * @return Whether the rectangle collides with another rectangle.
      */
-    bool collideRect(const Rect& rect);
+    bool collideRect(const Rect& rect) const;
 
     /**
      * @brief Clamp the rectangle.
@@ -87,10 +88,10 @@ struct Rect : public SDL_FRect
     void setRightMid(const math::Vec2& pos);
 
     math::Vec2 getCenter();
-    float getLeft();
-    float getRight();
-    float getTop();
-    float getBottom();
+    float getLeft() const;
+    float getRight() const;
+    float getTop() const;
+    float getBottom() const;
     math::Vec2 getTopLeft();
     math::Vec2 getTopMid();
     math::Vec2 getTopRight();
@@ -100,5 +101,4 @@ struct Rect : public SDL_FRect
     math::Vec2 getLeftMid();
     math::Vec2 getRightMid();
 };
-
 } // namespace kn

@@ -8,7 +8,6 @@ namespace kn
 {
 namespace music
 {
-
 static Mix_Music* m_music = nullptr;
 static float m_volume = MIX_MAX_VOLUME;
 
@@ -124,10 +123,9 @@ void fadeOut(int fadeMs)
 void setVolume(float volume)
 {
     m_volume = volume;
-    Mix_VolumeMusic(MIX_MAX_VOLUME * std::clamp(m_volume, 0.0f, 1.0f));
+    Mix_VolumeMusic(int(MIX_MAX_VOLUME * std::clamp(m_volume, 0.0f, 1.0f)));
 }
 
 float getVolume() { return m_volume; }
-
 } // namespace music
 } // namespace kn

@@ -2,16 +2,14 @@
 
 namespace kn
 {
-
 namespace overflow
 {
-
-bool isSumValid(const float64_t& first, const float64_t& second)
+bool isSumValid(const double& first, const double& second)
 {
     if (first >= 0)
     {
         // check for overflowing the float64_t maximum
-        if (second >= 0 && (first > std::numeric_limits<float64_t>::max() - second))
+        if (second >= 0 && (first > std::numeric_limits<double>::max() - second))
         {
             return false;
         }
@@ -22,7 +20,7 @@ bool isSumValid(const float64_t& first, const float64_t& second)
         // note that std::numeric_limits<float64_t>::min() doesn't return a negative
         // but instead returns the minimum representable value that is as close to
         // zero as doubles can get without becoming zero
-        if (second < 0 && (first < -std::numeric_limits<float64_t>::max() - second))
+        if (second < 0 && (first < -std::numeric_limits<double>::max() - second))
         {
             return false;
         }
@@ -31,12 +29,12 @@ bool isSumValid(const float64_t& first, const float64_t& second)
     return true;
 }
 
-bool isSumValid(const float32_t& first, const float32_t& second)
+bool isSumValid(const float& first, const float& second)
 {
     if (first >= 0)
     {
         // check for overflowing the float32_t maximum
-        if (second >= 0 && (first > std::numeric_limits<float32_t>::max() - second))
+        if (second >= 0 && (first > std::numeric_limits<float>::max() - second))
         {
             return false;
         }
@@ -47,7 +45,7 @@ bool isSumValid(const float32_t& first, const float32_t& second)
         // note that std::numeric_limits<float32_t>::min() doesn't return a negative
         // but instead returns the minimum representable value that is as close to
         // zero as floats can get without becoming zero
-        if (second < 0 && (first < -std::numeric_limits<float32_t>::max() - second))
+        if (second < 0 && (first < -std::numeric_limits<float>::max() - second))
         {
             return false;
         }
@@ -116,33 +114,33 @@ bool isSumValid(const int64_t& first, const int64_t& second)
     return true;
 }
 
-bool isProductValid(const float64_t& first, const float64_t& second)
+bool isProductValid(const double& first, const double& second)
 {
     if (!std::isfinite(first) || !std::isfinite(second))
         // one of them is NaN or inf
         return false;
 
-    float64_t absFirst = std::fabs(first);
-    float64_t absSecond = std::fabs(second);
+    double absFirst = std::fabs(first);
+    double absSecond = std::fabs(second);
 
     if (absFirst > 1.0 && absSecond > 1.0)
-        if (absFirst > std::numeric_limits<float64_t>::max() / absSecond)
+        if (absFirst > std::numeric_limits<double>::max() / absSecond)
             return false;
 
     return true;
 }
 
-bool isProductValid(const float32_t& first, const float32_t& second)
+bool isProductValid(const float& first, const float& second)
 {
     if (!std::isfinite(first) || !std::isfinite(second))
         // one of them is NaN or inf
         return false;
 
-    float32_t absFirst = std::fabs(first);
-    float32_t absSecond = std::fabs(second);
+    float absFirst = std::fabs(first);
+    float absSecond = std::fabs(second);
 
     if (absFirst > 1.0 && absSecond > 1.0)
-        if (absFirst > std::numeric_limits<float32_t>::max() / absSecond)
+        if (absFirst > std::numeric_limits<float>::max() / absSecond)
             return false;
 
     return true;
@@ -228,7 +226,7 @@ bool isProductValid(const int64_t& first, const int64_t& second)
     return true;
 }
 
-bool closeToZero(const float64_t& value, const float64_t tolerance)
+bool closeToZero(const double& value, const double tolerance)
 {
     if (std::fabs(value) < tolerance)
         return true;
@@ -236,13 +234,12 @@ bool closeToZero(const float64_t& value, const float64_t tolerance)
     return false;
 }
 
-bool closeToZero(const float32_t& value, const float32_t tolerance)
+bool closeToZero(const float& value, const float tolerance)
 {
     if (std::fabs(value) < tolerance)
         return true;
 
     return false;
 }
-
 } // namespace overflow
 } // namespace kn

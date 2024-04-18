@@ -3,18 +3,18 @@
   <compounddef id="namespacekn_1_1overflow" kind="namespace" language="C++">
     <compoundname>kn::overflow</compoundname>
     <sectiondef kind="func">
-      <memberdef kind="function" id="namespacekn_1_1overflow_1a25ab9731e8502f23db1ab8742ccb35d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacekn_1_1overflow_1ad3ee30b8b27693bdb530d6d141419c2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool kn::overflow::isSumValid</definition>
-        <argsstring>(const float64_t &amp;first, const float64_t &amp;second)</argsstring>
+        <argsstring>(const double &amp;first, const double &amp;second)</argsstring>
         <name>isSumValid</name>
         <qualifiedname>kn::overflow::isSumValid</qualifiedname>
         <param>
-          <type>const <ref refid="namespacekn_1a78388bdab82eefeb22b5ec58e12eb0d9" kindref="member">float64_t</ref> &amp;</type>
+          <type>const double &amp;</type>
           <declname>first</declname>
         </param>
         <param>
-          <type>const <ref refid="namespacekn_1a78388bdab82eefeb22b5ec58e12eb0d9" kindref="member">float64_t</ref> &amp;</type>
+          <type>const double &amp;</type>
           <declname>second</declname>
         </param>
         <briefdescription>
@@ -44,20 +44,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="24" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="24" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="21" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="21" declcolumn="6"/>
       </memberdef>
-      <memberdef kind="function" id="namespacekn_1_1overflow_1a1e2b14657503be12a66a856450d86dbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacekn_1_1overflow_1aed83d457479296ad3a113389cf7f9777" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool kn::overflow::isSumValid</definition>
-        <argsstring>(const float32_t &amp;first, const float32_t &amp;second)</argsstring>
+        <argsstring>(const float &amp;first, const float &amp;second)</argsstring>
         <name>isSumValid</name>
         <qualifiedname>kn::overflow::isSumValid</qualifiedname>
         <param>
-          <type>const <ref refid="namespacekn_1aa4afeb9761786f8b7b45f49db7bc0b1a" kindref="member">float32_t</ref> &amp;</type>
+          <type>const float &amp;</type>
           <declname>first</declname>
         </param>
         <param>
-          <type>const <ref refid="namespacekn_1aa4afeb9761786f8b7b45f49db7bc0b1a" kindref="member">float32_t</ref> &amp;</type>
+          <type>const float &amp;</type>
           <declname>second</declname>
         </param>
         <briefdescription>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="26" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="26" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="23" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="23" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1overflow_1a4bf336d52bc2e64c29ef02b6de188019" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -88,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="28" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="28" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="25" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="25" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1overflow_1a6be2d4d95ceafe583e17eb9f4012ffcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -110,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="30" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="30" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="27" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="27" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1overflow_1ada0ca3132f003596ccef488fd069aa6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -132,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="32" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="32" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="29" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="29" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1overflow_1a2f8cec4c7b67aa9ed81f0bc1bfc70958" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -154,20 +154,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="34" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="34" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="31" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="31" declcolumn="6"/>
       </memberdef>
-      <memberdef kind="function" id="namespacekn_1_1overflow_1aedd4a8f8c97bd656ef79b194c0d9ab95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacekn_1_1overflow_1a9137b9047939c0b5b26011096ffec3bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool kn::overflow::isProductValid</definition>
-        <argsstring>(const float64_t &amp;first, const float64_t &amp;second)</argsstring>
+        <argsstring>(const double &amp;first, const double &amp;second)</argsstring>
         <name>isProductValid</name>
         <qualifiedname>kn::overflow::isProductValid</qualifiedname>
         <param>
-          <type>const <ref refid="namespacekn_1a78388bdab82eefeb22b5ec58e12eb0d9" kindref="member">float64_t</ref> &amp;</type>
+          <type>const double &amp;</type>
           <declname>first</declname>
         </param>
         <param>
-          <type>const <ref refid="namespacekn_1a78388bdab82eefeb22b5ec58e12eb0d9" kindref="member">float64_t</ref> &amp;</type>
+          <type>const double &amp;</type>
           <declname>second</declname>
         </param>
         <briefdescription>
@@ -197,20 +197,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="45" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="45" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="42" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="42" declcolumn="6"/>
       </memberdef>
-      <memberdef kind="function" id="namespacekn_1_1overflow_1ac796f84b0d52b38f495e7ba776e195d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacekn_1_1overflow_1a236c4186d0bf850dcda86d6786f37717" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool kn::overflow::isProductValid</definition>
-        <argsstring>(const float32_t &amp;first, const float32_t &amp;second)</argsstring>
+        <argsstring>(const float &amp;first, const float &amp;second)</argsstring>
         <name>isProductValid</name>
         <qualifiedname>kn::overflow::isProductValid</qualifiedname>
         <param>
-          <type>const <ref refid="namespacekn_1aa4afeb9761786f8b7b45f49db7bc0b1a" kindref="member">float32_t</ref> &amp;</type>
+          <type>const float &amp;</type>
           <declname>first</declname>
         </param>
         <param>
-          <type>const <ref refid="namespacekn_1aa4afeb9761786f8b7b45f49db7bc0b1a" kindref="member">float32_t</ref> &amp;</type>
+          <type>const float &amp;</type>
           <declname>second</declname>
         </param>
         <briefdescription>
@@ -219,7 +219,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="47" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="47" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="44" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="44" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1overflow_1afefec0547816919c2437e88d37fd8490" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -241,7 +241,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="49" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="49" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="46" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="46" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1overflow_1a9b3581d891889d52669940436cc12c04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -263,7 +263,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="51" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="51" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="48" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="48" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1overflow_1a66e6261965e16ff6a11370fe068aba0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -285,7 +285,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="53" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="53" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="50" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="50" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacekn_1_1overflow_1a24a49539a10f1d745cf7936fda3243ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -307,20 +307,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="55" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="55" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="52" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="52" declcolumn="6"/>
       </memberdef>
-      <memberdef kind="function" id="namespacekn_1_1overflow_1a03ba5307ac62ee0ca8eb795b6a4fb401" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacekn_1_1overflow_1ae2822823016fe3378120ef5a93a26976" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool kn::overflow::closeToZero</definition>
-        <argsstring>(const float64_t &amp;value, const float64_t tolerance=0.0001)</argsstring>
+        <argsstring>(const double &amp;value, const double tolerance=0.0001)</argsstring>
         <name>closeToZero</name>
         <qualifiedname>kn::overflow::closeToZero</qualifiedname>
         <param>
-          <type>const <ref refid="namespacekn_1a78388bdab82eefeb22b5ec58e12eb0d9" kindref="member">float64_t</ref> &amp;</type>
+          <type>const double &amp;</type>
           <declname>value</declname>
         </param>
         <param>
-          <type>const <ref refid="namespacekn_1a78388bdab82eefeb22b5ec58e12eb0d9" kindref="member">float64_t</ref></type>
+          <type>const double</type>
           <declname>tolerance</declname>
           <defval>0.0001</defval>
         </param>
@@ -351,20 +351,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="66" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="66" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="63" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="63" declcolumn="6"/>
       </memberdef>
-      <memberdef kind="function" id="namespacekn_1_1overflow_1ab2861cc5b433dc24b0d9d0b2139f3af8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacekn_1_1overflow_1aecdcfbaf631cb8f3add68c4f4fcafd42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool kn::overflow::closeToZero</definition>
-        <argsstring>(const float32_t &amp;value, const float32_t tolerance=0.0001f)</argsstring>
+        <argsstring>(const float &amp;value, const float tolerance=0.0001f)</argsstring>
         <name>closeToZero</name>
         <qualifiedname>kn::overflow::closeToZero</qualifiedname>
         <param>
-          <type>const <ref refid="namespacekn_1aa4afeb9761786f8b7b45f49db7bc0b1a" kindref="member">float32_t</ref> &amp;</type>
+          <type>const float &amp;</type>
           <declname>value</declname>
         </param>
         <param>
-          <type>const <ref refid="namespacekn_1aa4afeb9761786f8b7b45f49db7bc0b1a" kindref="member">float32_t</ref></type>
+          <type>const float</type>
           <declname>tolerance</declname>
           <defval>0.0001f</defval>
         </param>
@@ -374,13 +374,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="68" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="68" declcolumn="6"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="65" column="6" declfile="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" declline="65" declcolumn="6"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="13" column="1"/>
+    <location file="D:/Code/c++/Kraken-Engine/include/Overflow.hpp" line="11" column="1"/>
   </compounddef>
 </doxygen>

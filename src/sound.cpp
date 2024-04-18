@@ -6,7 +6,6 @@
 
 namespace kn
 {
-
 Sound::Sound(const std::string& fileDir)
 {
     std::filesystem::path filePath(fileDir);
@@ -54,5 +53,4 @@ void Sound::unload()
     if (m_sound)
         Mix_FreeChunk(m_sound);
 }
-
 } // namespace kn
