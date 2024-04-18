@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Getting Started" href="getting_started/index.html" /><link rel="prev" title="Kraken Engine Docs" href="index.html" />
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+    <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
         <title>Installation - Kraken Engine</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
@@ -162,13 +162,11 @@
 <li class="toctree-l1"><a class="reference internal" href="getting_started/index.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">Tutorials</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="reference/index.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="reference/entity.html">Entity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/error_logger.html">ErrorLogger</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/rect.html">Rect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/sound.html">Sound</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/texture.html">Texture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/tile_map.html">TileMap</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/cache.html">cache</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/constants.html">constants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/draw.html">draw</a></li>
@@ -216,56 +214,22 @@
         <article role="main">
           <section id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h1>
-<p>Kraken Engine as of now has only been tested and confirmed to work on the following systems using <a class="reference external" href="https://github.com/niXman/mingw-builds-binaries/releases">mingw64</a>:</p>
-<ul class="simple">
-<li><p>Windows 10/11</p></li>
-<li><p>Manjaro (Arch), Ubuntu (Debian)</p></li>
-</ul>
+<p>Kraken Engine as of now is only compatible with Windows platforms.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Kraken Engine is still in development and is not ready for production use.
 This means that there aren’t any pre-built binaries for Kraken Engine yet, so you have to build it yourself.</p>
 </div>
-<p>Before starting, ensure you have a C++ compiler, <a class="reference external" href="https://cmake.org/download/">cmake</a>, and <a class="reference external" href="https://www.git-scm.com/downloads">git</a> installed.</p>
+<p>Before starting, ensure you have <a class="reference external" href="https://visualstudio.microsoft.com/downloads/">Visual Studio 2022</a> and the complete SDL2 framework installed.</p>
 <ol class="arabic simple">
 <li><p>Clone the <a class="reference external" href="https://github.com/durkisneer1/Kraken-Engine">repository</a>.</p></li>
-<li><p>Open install directory in cmd.</p></li>
-<li><p>Enter these commands into your terminal:</p></li>
+<li><p>Open the solution - you may have to edit the project properties to point to the correct SDL2 include and lib directories.</p></li>
+<li><p>Build the solution as either a release or debug type.</p></li>
 </ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">md build</span>
-<span class="go">cd build</span>
-<span class="go">cmake -G &quot;Unix Makefiles&quot; -D CMAKE_CXX_COMPILER=x86_64-w64-mingw32-g++ ..</span>
-<span class="go">make</span>
-</pre></div>
-</div>
-<ol class="arabic simple" start="4">
-<li><p>Drag <code class="docutils literal notranslate"><span class="pre">.dll</span></code> files from <code class="docutils literal notranslate"><span class="pre">/bin</span></code> next to your program executable.</p></li>
-</ol>
+<p>You will find the .lib file in the <code class="docutils literal notranslate"><span class="pre">x64/Release</span></code> or <code class="docutils literal notranslate"><span class="pre">x64/Debug</span></code> directory.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You may use your own generator and compiler as long as it compiles to 64-bit.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> file is still under development as it is currently a difficult process to include and link dependencies.
-As of now, you must include these directories:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/include</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/build/_deps/sdl2-src/include</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/build/_deps/sdl2_ttf-src</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/build/_deps/sdl2_mixer-src/include</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/build/_deps/sdl2_image-src/include</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/build/_deps/tmxlite-src/tmxlite/include</span></code></p></li>
-</ul>
-<p>And for linking, you must use these directories:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/build</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/build/_deps/sdl2_build</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/build/_deps/sdl2_image-build</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/build/_deps/sdl2_mixer-build</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/build/_deps/sdl2_ttf-build</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">/Kraken-Engine/build/_deps/tmxlite-build</span></code></p></li>
-</ul>
+<p>If you have any issues building the solution, please open an issue.</p>
 </div>
 </section>
 

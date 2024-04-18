@@ -11,20 +11,6 @@
     <member refid="classkn_1_1time_1_1_clock_1a56cc398c51d9cb271b2d405999e2152b" kind="function"><name>~Clock</name></member>
     <member refid="classkn_1_1time_1_1_clock_1a6d4652b18060b534cad6dedf9f021c56" kind="function"><name>tick</name></member>
   </compound>
-  <compound refid="classkn_1_1_entity" kind="class"><name>kn::Entity</name>
-    <member refid="classkn_1_1_entity_1a6f690f1e6e8a1d1887a017bee54aac46" kind="variable"><name>crop</name></member>
-    <member refid="classkn_1_1_entity_1aca3c6b0924ad57ca9aa7816021b6e120" kind="variable"><name>rect</name></member>
-    <member refid="classkn_1_1_entity_1a9c6a28eba8f8340c16b49c1b8ec64462" kind="variable"><name>position</name></member>
-    <member refid="classkn_1_1_entity_1ad25589b0534f80990123989cecaca4ec" kind="variable"><name>direction</name></member>
-    <member refid="classkn_1_1_entity_1a6644aaa615968606093840ae8dceeb85" kind="variable"><name>velocity</name></member>
-    <member refid="classkn_1_1_entity_1af6109be4fbfc369f7c1f1f38f38b84a1" kind="variable"><name>texture</name></member>
-    <member refid="classkn_1_1_entity_1ad0c09ff24133b85f7120efc85827f08f" kind="variable"><name>onGround</name></member>
-    <member refid="classkn_1_1_entity_1a976ef6a43e451094c526013c5c6d87d2" kind="variable"><name>onCeiling</name></member>
-    <member refid="classkn_1_1_entity_1a399022356d952d4ce651bc63c91d3f5d" kind="function"><name>Entity</name></member>
-    <member refid="classkn_1_1_entity_1af9efefed7c88b675f000739072cdeb5a" kind="function"><name>~Entity</name></member>
-    <member refid="classkn_1_1_entity_1a88fa93e9e9cad9336d80e10b36199acf" kind="function"><name>getTexture</name></member>
-    <member refid="classkn_1_1_entity_1a03660630f087052ffe629c2a5ef81987" kind="function"><name>moveAndCollide</name></member>
-  </compound>
   <compound refid="classkn_1_1_error_logger" kind="class"><name>kn::ErrorLogger</name>
     <member refid="classkn_1_1_error_logger_1a5f7d66d8b27a0a655455c64ae0711d2e" kind="variable"><name>m_filename</name></member>
     <member refid="classkn_1_1_error_logger_1abc8515d943e8becf326ae0115a62b336" kind="variable"><name>m_file</name></member>
@@ -50,8 +36,8 @@
     <member refid="structkn_1_1_rect_1a86586255f5b88ff80d6dbd41486f50a1" kind="function"><name>getPos</name></member>
     <member refid="structkn_1_1_rect_1a1ed727673cfc87e018928b1c11ba2461" kind="function"><name>getSize</name></member>
     <member refid="structkn_1_1_rect_1aea0899e6f189bfe35e0d2b9d8df2d2b6" kind="function"><name>setSize</name></member>
-    <member refid="structkn_1_1_rect_1a7539227428f8bece54ec253f8560e30f" kind="function"><name>collidePoint</name></member>
-    <member refid="structkn_1_1_rect_1a08c4d03cec415ae3f69e6cb5c4ba756d" kind="function"><name>collideRect</name></member>
+    <member refid="structkn_1_1_rect_1a9eefeb46be43454c6dddaffa663b065c" kind="function"><name>collidePoint</name></member>
+    <member refid="structkn_1_1_rect_1ad201647536bc4d8255c628ea058afff6" kind="function"><name>collideRect</name></member>
     <member refid="structkn_1_1_rect_1af6d22d6813c6bf5d445c4b344aab61b2" kind="function"><name>clamp</name></member>
     <member refid="structkn_1_1_rect_1a68ab3e17074513f1eefb079ab2aadaea" kind="function"><name>setCenter</name></member>
     <member refid="structkn_1_1_rect_1abede17fdb58e5d0c301cab2ff0d992db" kind="function"><name>setLeft</name></member>
@@ -67,10 +53,10 @@
     <member refid="structkn_1_1_rect_1a716cf8a9ed3ae9a8163e0a29c8bb6728" kind="function"><name>setLeftMid</name></member>
     <member refid="structkn_1_1_rect_1ad50a17779722f798d055cd2ddb37d904" kind="function"><name>setRightMid</name></member>
     <member refid="structkn_1_1_rect_1a3a10eeee9f62b32e6adbf03ce62a7d9b" kind="function"><name>getCenter</name></member>
-    <member refid="structkn_1_1_rect_1ae707ef317c6259675c0e9a967e093769" kind="function"><name>getLeft</name></member>
-    <member refid="structkn_1_1_rect_1a8aab249e226c6a8c1ab0b450721d929b" kind="function"><name>getRight</name></member>
-    <member refid="structkn_1_1_rect_1a134a42bcde83259f1182be61e3c7495e" kind="function"><name>getTop</name></member>
-    <member refid="structkn_1_1_rect_1a9199db44899f917b0077e334481e2766" kind="function"><name>getBottom</name></member>
+    <member refid="structkn_1_1_rect_1a99f07d8de4f46aaec3303dfa636cefbd" kind="function"><name>getLeft</name></member>
+    <member refid="structkn_1_1_rect_1a1e1f47dfb2a6040f6eb396d1ced48ea2" kind="function"><name>getRight</name></member>
+    <member refid="structkn_1_1_rect_1aebb9f0ac6ab3d8e7015e98d189e8b2e8" kind="function"><name>getTop</name></member>
+    <member refid="structkn_1_1_rect_1a72cb2014294d8bf15a3900ae07f038f4" kind="function"><name>getBottom</name></member>
     <member refid="structkn_1_1_rect_1a6987c049da3037ce5df590dc16b82ae1" kind="function"><name>getTopLeft</name></member>
     <member refid="structkn_1_1_rect_1a8c75e4fd74cd9cd64dfe34506019cf7d" kind="function"><name>getTopMid</name></member>
     <member refid="structkn_1_1_rect_1ab4350c360c565452993af9df311261bc" kind="function"><name>getTopRight</name></member>
@@ -104,19 +90,6 @@
     <member refid="classkn_1_1_texture_1a558c7e7566f3e2d3c11346cc8179771a" kind="function"><name>fitHeight</name></member>
     <member refid="classkn_1_1_texture_1a9aaf1984bf48c920410c57eddb2c7365" kind="function"><name>query</name></member>
   </compound>
-  <compound refid="structkn_1_1_tile" kind="struct"><name>kn::Tile</name>
-    <member refid="structkn_1_1_tile_1a8e7d9dbfe6a90692c70b5dbd35eb8f01" kind="variable"><name>texture</name></member>
-    <member refid="structkn_1_1_tile_1a65ccf5af9c9b8459015fcb3caa45e9dc" kind="variable"><name>crop</name></member>
-    <member refid="structkn_1_1_tile_1abe91be0f6c7a3943b5927bf6f4995f66" kind="variable"><name>rect</name></member>
-  </compound>
-  <compound refid="classkn_1_1_tile_map" kind="class"><name>kn::TileMap</name>
-    <member refid="classkn_1_1_tile_map_1a51ba9bb263de217615956a04f1197ef2" kind="variable"><name>map</name></member>
-    <member refid="classkn_1_1_tile_map_1a51eefec828511d1c09dfcd618f7d1e06" kind="variable"><name>tileVec</name></member>
-    <member refid="classkn_1_1_tile_map_1abefad7330e18b15f8eee70c624ff6b7b" kind="variable"><name>tileSetMap</name></member>
-    <member refid="classkn_1_1_tile_map_1a4a699a96d23212e5c341fe9a93d947a2" kind="function"><name>TileMap</name></member>
-    <member refid="classkn_1_1_tile_map_1ae5fafab74bad33d0a854f932b6ce39dc" kind="function"><name>~TileMap</name></member>
-    <member refid="classkn_1_1_tile_map_1a7e73d751180a3c49c8ba0361bf94380f" kind="function"><name>draw</name></member>
-  </compound>
   <compound refid="classkn_1_1math_1_1_vec2" kind="class"><name>kn::math::Vec2</name>
     <member refid="classkn_1_1math_1_1_vec2_1a7493826a5a0dd5e5d638e17e085c1679" kind="variable"><name>x</name></member>
     <member refid="classkn_1_1math_1_1_vec2_1a9718fb34619baaf3ea2f0380f8d5c0bb" kind="variable"><name>y</name></member>
@@ -136,60 +109,58 @@
     <member refid="classkn_1_1math_1_1_vec2_1a1d175a651f18b89df7ed11efdd80da8b" kind="function"><name>ZERO</name></member>
   </compound>
   <compound refid="namespacekn" kind="namespace"><name>kn</name>
-    <member refid="namespacekn_1aa4afeb9761786f8b7b45f49db7bc0b1a" kind="typedef"><name>float32_t</name></member>
-    <member refid="namespacekn_1a78388bdab82eefeb22b5ec58e12eb0d9" kind="typedef"><name>float64_t</name></member>
     <member refid="namespacekn_1a438de58efec73267dee3696ce9bc8c7d" kind="typedef"><name>KEYS</name></member>
     <member refid="namespacekn_1af947a748461c782cd90f4d4b7cdbea21" kind="typedef"><name>Event</name></member>
     <member refid="namespacekn_1a91eb5db82680dedc10733f04def8dd2f" kind="typedef"><name>Color</name></member>
-    <member refid="namespacekn_1ae722a8550cc1db8f08796eef82faace0" kind="variable"><name>SC_0</name></member>
-    <member refid="namespacekn_1a0ce969d5512889b793e3a1f35056edb4" kind="variable"><name>SC_1</name></member>
-    <member refid="namespacekn_1aa93fd3394f6d146651ff274805f970e3" kind="variable"><name>SC_2</name></member>
-    <member refid="namespacekn_1acbf7396315821e4e43744b52b7614f4d" kind="variable"><name>SC_3</name></member>
-    <member refid="namespacekn_1a2be7875bd4cc044f102883d8dfdac21b" kind="variable"><name>SC_4</name></member>
-    <member refid="namespacekn_1adb1e0b7504024eaf704ab4edb78a7781" kind="variable"><name>SC_5</name></member>
-    <member refid="namespacekn_1aeb22b3ce8eb862267f2f5a8b9ea38a5c" kind="variable"><name>SC_6</name></member>
-    <member refid="namespacekn_1a5b8a4b318e4bfcd66b70e15321eab4d0" kind="variable"><name>SC_7</name></member>
-    <member refid="namespacekn_1a442b7a8a253e5b5ff058167d6356368b" kind="variable"><name>SC_8</name></member>
-    <member refid="namespacekn_1ac68f74219e1f9ee5fe1b1c563f643762" kind="variable"><name>SC_9</name></member>
-    <member refid="namespacekn_1ae8aa913820c2b2a3b8926949939cffd4" kind="variable"><name>SC_A</name></member>
-    <member refid="namespacekn_1af1747a8c2dd792b6ff97cb2cc2c29180" kind="variable"><name>SC_B</name></member>
-    <member refid="namespacekn_1aeb6518940d680aee528e589d9ac1552c" kind="variable"><name>SC_C</name></member>
-    <member refid="namespacekn_1a0f179392fb510fb81c7b14b03cccc606" kind="variable"><name>SC_D</name></member>
-    <member refid="namespacekn_1af0e9e54da5a274c26dad4692d3e63e58" kind="variable"><name>SC_E</name></member>
-    <member refid="namespacekn_1a8575e7395da3dadfccaddc138c91620e" kind="variable"><name>SC_F</name></member>
-    <member refid="namespacekn_1a52cf42c7a9db2ee10a3d487f3b7ce827" kind="variable"><name>SC_G</name></member>
-    <member refid="namespacekn_1a640c84339d11f41feaeb91dac563ac0d" kind="variable"><name>SC_H</name></member>
-    <member refid="namespacekn_1af570b327b03b0440424848ae0c97713e" kind="variable"><name>SC_I</name></member>
-    <member refid="namespacekn_1a92011e7e81c7b2b2d0c494799d1ff52d" kind="variable"><name>SC_J</name></member>
-    <member refid="namespacekn_1a76c0b55c40ea3f8ab3ea49f005baa57c" kind="variable"><name>SC_K</name></member>
-    <member refid="namespacekn_1aa1339f3e671635226296d65e70a9dc94" kind="variable"><name>SC_L</name></member>
-    <member refid="namespacekn_1a865c2c472cd3610ac2bb3388877faec5" kind="variable"><name>SC_M</name></member>
-    <member refid="namespacekn_1a4182c90a310e9a02d385ab07da4fd7f6" kind="variable"><name>SC_N</name></member>
-    <member refid="namespacekn_1a8447d90d26be41521f811492e16e20ce" kind="variable"><name>SC_O</name></member>
-    <member refid="namespacekn_1a1cb3b7dd5a5be81145f6153c1c4edd31" kind="variable"><name>SC_P</name></member>
-    <member refid="namespacekn_1a481a2add70df7639fe0cb95dc771a08e" kind="variable"><name>SC_Q</name></member>
-    <member refid="namespacekn_1aab53a58fdd7e969fc23c880cc4504741" kind="variable"><name>SC_R</name></member>
-    <member refid="namespacekn_1accfb0fbb0384893a80bae5f64ea3bee5" kind="variable"><name>SC_S</name></member>
-    <member refid="namespacekn_1a95f2bcf7f6aa127a18aac9733ac814b0" kind="variable"><name>SC_T</name></member>
-    <member refid="namespacekn_1a5602868762ff149c00e03303571bf24c" kind="variable"><name>SC_U</name></member>
-    <member refid="namespacekn_1a38045cc03cd18d1fb4cb74f0d8899cf9" kind="variable"><name>SC_V</name></member>
-    <member refid="namespacekn_1af35d588d8f9de50aab4780118fa5e4b5" kind="variable"><name>SC_W</name></member>
-    <member refid="namespacekn_1a248a63dd72e953ff6a9eca29c7ccd197" kind="variable"><name>SC_X</name></member>
-    <member refid="namespacekn_1a9988a87a737b6fe7e102aa90d41f9a6a" kind="variable"><name>SC_Y</name></member>
-    <member refid="namespacekn_1a07e439454b905220c0193fb00209e9f0" kind="variable"><name>SC_Z</name></member>
-    <member refid="namespacekn_1acdd2392712c6ae0b9e029033838df479" kind="variable"><name>SC_DOWN</name></member>
-    <member refid="namespacekn_1a24e243a4ab167ac1c1b36ea806c8060a" kind="variable"><name>SC_LEFT</name></member>
-    <member refid="namespacekn_1af3763988cb14dcfd652a071b2c7cc3e9" kind="variable"><name>SC_RIGHT</name></member>
-    <member refid="namespacekn_1a08577d7b1925871c140768575034565f" kind="variable"><name>SC_UP</name></member>
-    <member refid="namespacekn_1a9c18a5454f7c0b7efbe43f5626cd8a14" kind="variable"><name>SC_LALT</name></member>
-    <member refid="namespacekn_1acc3e0ab909f0cbe07928f8b07b3b8388" kind="variable"><name>SC_LCTRL</name></member>
-    <member refid="namespacekn_1ae6772e06413030f906f4a846cc61bf03" kind="variable"><name>SC_LSHIFT</name></member>
-    <member refid="namespacekn_1ae2771b905e3de67e9e59e65a2ac8bb2f" kind="variable"><name>SC_RALT</name></member>
-    <member refid="namespacekn_1a40fb39c81393e1aa3f74d980113abe95" kind="variable"><name>SC_RCTRL</name></member>
-    <member refid="namespacekn_1afcc0f261bd447e433aa60a78abb026c8" kind="variable"><name>SC_RETURN</name></member>
-    <member refid="namespacekn_1ad025d54f4264447523806709ecbbf71e" kind="variable"><name>SC_RSHIFT</name></member>
-    <member refid="namespacekn_1ae78e3b0d4aa184f55ff9b05cdac1e035" kind="variable"><name>SC_SPACE</name></member>
-    <member refid="namespacekn_1acb5a0173df2d328e60f2eda858cb2680" kind="variable"><name>SC_TAB</name></member>
+    <member refid="namespacekn_1abfb4e0df7454c5905cfe5bbf966c0674" kind="variable"><name>S_0</name></member>
+    <member refid="namespacekn_1a49d6de7cc6c0cd51fc49b656aae71dab" kind="variable"><name>S_1</name></member>
+    <member refid="namespacekn_1a7b113204dc0b30150b1335f10a1991e3" kind="variable"><name>S_2</name></member>
+    <member refid="namespacekn_1a5f2c5d4d733e1271503f2505e04c860c" kind="variable"><name>S_3</name></member>
+    <member refid="namespacekn_1ab81f1e64881f82d065547e059ffab153" kind="variable"><name>S_4</name></member>
+    <member refid="namespacekn_1ac7b66b2f86733c218fb434a9d863b0ba" kind="variable"><name>S_5</name></member>
+    <member refid="namespacekn_1a39541d65939194f7a0796d5a3ded121a" kind="variable"><name>S_6</name></member>
+    <member refid="namespacekn_1a6cac69c2c3aba54d1c9077fff93073cd" kind="variable"><name>S_7</name></member>
+    <member refid="namespacekn_1a2057683b7798d75ea686fa705e128612" kind="variable"><name>S_8</name></member>
+    <member refid="namespacekn_1a9eb2746850284648f936361ed4a29b0b" kind="variable"><name>S_9</name></member>
+    <member refid="namespacekn_1a3780c1b2b702081553b72c40c8408023" kind="variable"><name>S_a</name></member>
+    <member refid="namespacekn_1a0692af0e45e8783935a52d323fee7a51" kind="variable"><name>S_b</name></member>
+    <member refid="namespacekn_1a79fb68d1c53dd94c6fe6158d8625570a" kind="variable"><name>S_c</name></member>
+    <member refid="namespacekn_1a63bb5879b3605be2d89233061416b419" kind="variable"><name>S_d</name></member>
+    <member refid="namespacekn_1a457de35cfb6ba4a16cf6ddcfcb6045d0" kind="variable"><name>S_e</name></member>
+    <member refid="namespacekn_1a6df98aff99114cd443ed2a33209f71ca" kind="variable"><name>S_f</name></member>
+    <member refid="namespacekn_1ab1861580acef9aaedeab3039b269c5af" kind="variable"><name>S_g</name></member>
+    <member refid="namespacekn_1a14eff692f3ed100de00251ca8cf9ce6b" kind="variable"><name>S_h</name></member>
+    <member refid="namespacekn_1a34d90bb5ac5f66e49472fbcb292e662a" kind="variable"><name>S_i</name></member>
+    <member refid="namespacekn_1a1257a36911477c8af5c888103c683de2" kind="variable"><name>S_j</name></member>
+    <member refid="namespacekn_1aabc3312deffbb8c7cb8b3c6061d74b65" kind="variable"><name>S_k</name></member>
+    <member refid="namespacekn_1a6f55d144ed88a47bf07ea30475469370" kind="variable"><name>S_l</name></member>
+    <member refid="namespacekn_1acc399c744432098fd5f96f31fbdeb644" kind="variable"><name>S_m</name></member>
+    <member refid="namespacekn_1a2061eed3594928ad1e6bd313c2f3f850" kind="variable"><name>S_n</name></member>
+    <member refid="namespacekn_1ac6846dcd309658a2124b4d3e3810c71c" kind="variable"><name>S_o</name></member>
+    <member refid="namespacekn_1a9ea92a4ee7534b7f1427bff50608e034" kind="variable"><name>S_p</name></member>
+    <member refid="namespacekn_1a832e43fbdb6fe80fd0a7b904eb8e9d39" kind="variable"><name>S_q</name></member>
+    <member refid="namespacekn_1a7998c5801ca513624788c622ee61156e" kind="variable"><name>S_r</name></member>
+    <member refid="namespacekn_1a41cc887b5482ac1284e9508c46c36418" kind="variable"><name>S_s</name></member>
+    <member refid="namespacekn_1a84fbfd7c7ebb1b85087fe3e40017961f" kind="variable"><name>S_t</name></member>
+    <member refid="namespacekn_1ae7375393de00cb2c666d38d7ab7a7664" kind="variable"><name>S_u</name></member>
+    <member refid="namespacekn_1ab50cdf8401b0156dc0569254004b16f6" kind="variable"><name>S_v</name></member>
+    <member refid="namespacekn_1af98cc150e2e362115edc9e0c73063b14" kind="variable"><name>S_w</name></member>
+    <member refid="namespacekn_1ae27d653c10b23e384c17f0eab38e13b6" kind="variable"><name>S_x</name></member>
+    <member refid="namespacekn_1a14bf26d2123d07dc5dabe48a2336a53f" kind="variable"><name>S_y</name></member>
+    <member refid="namespacekn_1aa6abe390e45c7c561b93e5720c93627a" kind="variable"><name>S_z</name></member>
+    <member refid="namespacekn_1aaeb265a5b17d17feaaf0a5d074f6acf1" kind="variable"><name>S_DOWN</name></member>
+    <member refid="namespacekn_1a5f83a27dae2d7a95a6a842b3f31f8aba" kind="variable"><name>S_LEFT</name></member>
+    <member refid="namespacekn_1a661e10e591e1762845d31e7b1d7c332e" kind="variable"><name>S_RIGHT</name></member>
+    <member refid="namespacekn_1a9b713b1c8791b7cb0dce5da7964b5dd6" kind="variable"><name>S_UP</name></member>
+    <member refid="namespacekn_1a6374da45e2553454ba19443075355970" kind="variable"><name>S_LALT</name></member>
+    <member refid="namespacekn_1a52d197b6ab05d777806134851f765863" kind="variable"><name>S_LCTRL</name></member>
+    <member refid="namespacekn_1a9ecc02fa2d0c2bde4eea1130d5612110" kind="variable"><name>S_LSHIFT</name></member>
+    <member refid="namespacekn_1a806db82309005d9c316992026dd83287" kind="variable"><name>S_RALT</name></member>
+    <member refid="namespacekn_1abeac3fc8f61c7b2e8f98f5f3185b444e" kind="variable"><name>S_RCTRL</name></member>
+    <member refid="namespacekn_1a38ae781f492aa7ed3e0667b3985fda00" kind="variable"><name>S_RETURN</name></member>
+    <member refid="namespacekn_1af40a8d43d22c742a78437f968c76671b" kind="variable"><name>S_RSHIFT</name></member>
+    <member refid="namespacekn_1a2bcf064fd20161db716a517322d6ebd5" kind="variable"><name>S_SPACE</name></member>
+    <member refid="namespacekn_1a3a652c7dd336cb4ebc1416624b2a30f9" kind="variable"><name>S_TAB</name></member>
     <member refid="namespacekn_1a46a3850c8d62c63cd2e91f00a0ec0d1a" kind="variable"><name>QUIT</name></member>
     <member refid="namespacekn_1a762f40854ff13c1dfe90851415dbe4ac" kind="variable"><name>DISPLAYEVENT</name></member>
     <member refid="namespacekn_1a165134d59b5b9f3f8f328d83068b3694" kind="variable"><name>WINDOWEVENT</name></member>
@@ -387,26 +358,26 @@
     <member refid="namespacekn_1_1music_1a294ce07ee2327d528d4a5e1f93f167b0" kind="function"><name>getVolume</name></member>
   </compound>
   <compound refid="namespacekn_1_1overflow" kind="namespace"><name>kn::overflow</name>
-    <member refid="namespacekn_1_1overflow_1a25ab9731e8502f23db1ab8742ccb35d1" kind="function"><name>isSumValid</name></member>
-    <member refid="namespacekn_1_1overflow_1a1e2b14657503be12a66a856450d86dbf" kind="function"><name>isSumValid</name></member>
+    <member refid="namespacekn_1_1overflow_1ad3ee30b8b27693bdb530d6d141419c2b" kind="function"><name>isSumValid</name></member>
+    <member refid="namespacekn_1_1overflow_1aed83d457479296ad3a113389cf7f9777" kind="function"><name>isSumValid</name></member>
     <member refid="namespacekn_1_1overflow_1a4bf336d52bc2e64c29ef02b6de188019" kind="function"><name>isSumValid</name></member>
     <member refid="namespacekn_1_1overflow_1a6be2d4d95ceafe583e17eb9f4012ffcf" kind="function"><name>isSumValid</name></member>
     <member refid="namespacekn_1_1overflow_1ada0ca3132f003596ccef488fd069aa6a" kind="function"><name>isSumValid</name></member>
     <member refid="namespacekn_1_1overflow_1a2f8cec4c7b67aa9ed81f0bc1bfc70958" kind="function"><name>isSumValid</name></member>
-    <member refid="namespacekn_1_1overflow_1aedd4a8f8c97bd656ef79b194c0d9ab95" kind="function"><name>isProductValid</name></member>
-    <member refid="namespacekn_1_1overflow_1ac796f84b0d52b38f495e7ba776e195d4" kind="function"><name>isProductValid</name></member>
+    <member refid="namespacekn_1_1overflow_1a9137b9047939c0b5b26011096ffec3bf" kind="function"><name>isProductValid</name></member>
+    <member refid="namespacekn_1_1overflow_1a236c4186d0bf850dcda86d6786f37717" kind="function"><name>isProductValid</name></member>
     <member refid="namespacekn_1_1overflow_1afefec0547816919c2437e88d37fd8490" kind="function"><name>isProductValid</name></member>
     <member refid="namespacekn_1_1overflow_1a9b3581d891889d52669940436cc12c04" kind="function"><name>isProductValid</name></member>
     <member refid="namespacekn_1_1overflow_1a66e6261965e16ff6a11370fe068aba0e" kind="function"><name>isProductValid</name></member>
     <member refid="namespacekn_1_1overflow_1a24a49539a10f1d745cf7936fda3243ce" kind="function"><name>isProductValid</name></member>
-    <member refid="namespacekn_1_1overflow_1a03ba5307ac62ee0ca8eb795b6a4fb401" kind="function"><name>closeToZero</name></member>
-    <member refid="namespacekn_1_1overflow_1ab2861cc5b433dc24b0d9d0b2139f3af8" kind="function"><name>closeToZero</name></member>
+    <member refid="namespacekn_1_1overflow_1ae2822823016fe3378120ef5a93a26976" kind="function"><name>closeToZero</name></member>
+    <member refid="namespacekn_1_1overflow_1aecdcfbaf631cb8f3add68c4f4fcafd42" kind="function"><name>closeToZero</name></member>
   </compound>
   <compound refid="namespacekn_1_1time" kind="namespace"><name>kn::time</name>
   </compound>
   <compound refid="namespacekn_1_1window" kind="namespace"><name>kn::window</name>
     <member refid="namespacekn_1_1window_1a8455fe7aeb3dd34c9a9b60cc3fe047ed" kind="function"><name>init</name></member>
-    <member refid="namespacekn_1_1window_1ac6416284db584e950d60896bbaf8b889" kind="function"><name>cls</name></member>
+    <member refid="namespacekn_1_1window_1aea2913b4cc2cc4307aa330e545ce5abf" kind="function"><name>cls</name></member>
     <member refid="namespacekn_1_1window_1a30cb9845ea877d981d4855efa78eef5c" kind="function"><name>flip</name></member>
     <member refid="namespacekn_1_1window_1aa0bbd7d81e5da8cc1521b72b697f34c6" kind="function"><name>blit</name></member>
     <member refid="namespacekn_1_1window_1a2618d7099a79a14e8a6fbbc05b1f95de" kind="function"><name>blit</name></member>
@@ -418,6 +389,7 @@
     <member refid="namespacekn_1_1window_1afb2689c6f36fb513e9b4827a1a998337" kind="function"><name>getScale</name></member>
     <member refid="namespacekn_1_1window_1aa36dc83cb3bbd4a898546980370824f7" kind="function"><name>getSize</name></member>
     <member refid="namespacekn_1_1window_1a53ecd356997f4620d560dcc3c88a9330" kind="function"><name>setTitle</name></member>
+    <member refid="namespacekn_1_1window_1a98947eb3cb3df5229495adf0d9cad5df" kind="function"><name>getTitle</name></member>
     <member refid="namespacekn_1_1window_1af5b8f4551b8a1f1289c727aa50456e5e" kind="function"><name>setFullscreen</name></member>
     <member refid="namespacekn_1_1window_1ad4ab08f768d36a6c1a93613284df7075" kind="function"><name>quit</name></member>
   </compound>
@@ -426,8 +398,6 @@
   <compound refid="_constants_8hpp" kind="file"><name>Constants.hpp</name>
   </compound>
   <compound refid="_draw_8hpp" kind="file"><name>Draw.hpp</name>
-  </compound>
-  <compound refid="_entity_8hpp" kind="file"><name>Entity.hpp</name>
   </compound>
   <compound refid="_error_logger_8hpp" kind="file"><name>ErrorLogger.hpp</name>
     <member refid="_error_logger_8hpp_1a581c80fac2f98f600eb47b621aea9fa0" kind="define"><name>COMMON_ENDING</name></member>
@@ -455,8 +425,6 @@
   <compound refid="_sound_8hpp" kind="file"><name>Sound.hpp</name>
   </compound>
   <compound refid="_texture_8hpp" kind="file"><name>Texture.hpp</name>
-  </compound>
-  <compound refid="_tile_map_8hpp" kind="file"><name>TileMap.hpp</name>
   </compound>
   <compound refid="_time_8hpp" kind="file"><name>Time.hpp</name>
   </compound>

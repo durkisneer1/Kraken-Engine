@@ -1,13 +1,10 @@
 #pragma once
 
-#include <string>
-
-#include <SDL.h>
 #include <SDL_mixer.h>
+#include <string>
 
 namespace kn
 {
-
 /**
  * @brief A sound object.
  */
@@ -58,5 +55,4 @@ class Sound final
     Mix_Chunk* m_sound = nullptr;
     float m_volume = MIX_MAX_VOLUME;
 };
-
 } // namespace kn

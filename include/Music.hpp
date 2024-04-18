@@ -67,6 +67,5 @@ void setVolume(float volume);
  * @return The volume of the currently loaded music file.
  */
 float getVolume();
-
 } // namespace music
 } // namespace kn

@@ -1,12 +1,12 @@
 #include "Cache.hpp"
 #include "ErrorLogger.hpp"
+#include "Math.hpp"
 #include "Window.hpp"
 
 namespace kn
 {
 namespace cache
 {
-
 static std::map<std::string, std::shared_ptr<Texture>> textures;
 
 std::shared_ptr<Texture> load(const std::string& name, const std::string& path)
@@ -27,7 +27,7 @@ std::shared_ptr<Texture> load(const std::string& name, const std::string& path)
 
 std::shared_ptr<Texture> create(const std::string& name, const math::Vec2& size, Color color)
 {
-    SDL_Surface* surface = SDL_CreateRGBSurface(0, size.x, size.y, 32, 0, 0, 0, 0);
+    SDL_Surface* surface = SDL_CreateRGBSurface(0, (int)size.x, (int)size.y, 32, 0, 0, 0, 0);
     if (!surface)
     {
         WARN("Failed to create surface: " + name);
@@ -70,8 +70,5 @@ std::shared_ptr<Texture> getTexture(const std::string& name)
 }
 
 const std::map<std::string, std::shared_ptr<Texture>>& getCache() { return textures; }
-
-std::shared_ptr<Texture> getTexture(const std::string& name);
-
 } // namespace cache
 } // namespace kn

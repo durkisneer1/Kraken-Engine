@@ -7,6 +7,10 @@
 
 namespace kn
 {
+namespace math
+{
+class Vec2;
+};
 
 /**
  * @brief A texture object.
@@ -90,5 +94,4 @@ class Texture final
 
     void query();
 };
-
 } // namespace kn

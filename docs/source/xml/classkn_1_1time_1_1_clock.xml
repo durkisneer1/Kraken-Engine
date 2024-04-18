@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="31" column="12" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="31" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="30" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classkn_1_1time_1_1_clock_1a49a9a9a3f47340c08216c32ae66cb85a" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="32" column="12" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="32" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="31" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classkn_1_1time_1_1_clock_1a55ab147e4812c3a8667e9d7a12185348" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="33" column="12" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="33" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="32" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classkn_1_1time_1_1_clock_1a055e2c60f4b2c9de902d048d1b3b8335" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="34" column="12" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="34" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="33" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classkn_1_1time_1_1_clock_1a755af5e4a40933fb411d161f210b9d9a" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -77,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="35" column="12" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="35" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="34" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classkn_1_1time_1_1_clock_1a9db5b2acc7ec28e6ff2aa2042de96a25" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -92,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="36" column="12" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="36" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="35" column="20" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="35" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="18" column="5"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="17" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1time_1_1_clock_1a56cc398c51d9cb271b2d405999e2152b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -122,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="19" column="5"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="18" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1time_1_1_clock_1a6d4652b18060b534cad6dedf9f021c56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -154,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="28" column="12"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="27" column="20"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -165,7 +165,7 @@
 </simplesect>
 </para>
     </detaileddescription>
-    <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="15" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="16" bodyend="37"/>
+    <location file="D:/Code/c++/Kraken-Engine/include/Time.hpp" line="14" column="9" bodyfile="D:/Code/c++/Kraken-Engine/include/Time.hpp" bodystart="15" bodyend="36"/>
     <listofallmembers>
       <member refid="classkn_1_1time_1_1_clock_1aa29d38b9090f4f03856011c8e5945ab4" prot="public" virt="non-virtual"><scope>kn::time::Clock</scope><name>Clock</name></member>
       <member refid="classkn_1_1time_1_1_clock_1a55ab147e4812c3a8667e9d7a12185348" prot="private" virt="non-virtual"><scope>kn::time::Clock</scope><name>m_deltaTime</name></member>

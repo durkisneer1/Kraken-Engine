@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="prev" title="time" href="time.html" />
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+    <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
         <title>window - Kraken Engine</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
@@ -162,13 +162,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="entity.html">Entity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="error_logger.html">ErrorLogger</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rect.html">Rect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sound.html">Sound</a></li>
 <li class="toctree-l2"><a class="reference internal" href="texture.html">Texture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tile_map.html">TileMap</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cache.html">cache</a></li>
 <li class="toctree-l2"><a class="reference internal" href="constants.html">constants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="draw.html">draw</a></li>
@@ -237,7 +235,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N2kn6window3clsE5Color">
-<span id="_CPPv3N2kn6window3clsE5Color"></span><span id="_CPPv2N2kn6window3clsE5Color"></span><span id="kn::window::cls__Color"></span><span class="target" id="namespacekn_1_1window_1ac6416284db584e950d60896bbaf8b889"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cls</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="constants.html#_CPPv4N2kn5ColorE" title="kn::Color"><span class="n"><span class="pre">Color</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">color</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">255</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn6window3clsE5Color" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N2kn6window3clsE5Color"></span><span id="_CPPv2N2kn6window3clsE5Color"></span><span id="kn::window::cls__Color"></span><span class="target" id="namespacekn_1_1window_1aea2913b4cc2cc4307aa330e545ce5abf"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cls</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="constants.html#_CPPv4N2kn5ColorE" title="kn::Color"><span class="n"><span class="pre">Color</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">color</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">255</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn6window3clsE5Color" title="Link to this definition">#</a><br /></dt>
 <dd><p>Clear the screen. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -383,6 +381,17 @@
 </dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2kn6window8getTitleEv">
+<span id="_CPPv3N2kn6window8getTitleEv"></span><span id="_CPPv2N2kn6window8getTitleEv"></span><span id="kn::window::getTitle"></span><span class="target" id="namespacekn_1_1window_1a98947eb3cb3df5229495adf0d9cad5df"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTitle</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn6window8getTitleEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the title of the window. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The title of the window. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N2kn6window13setFullscreenEb">
 <span id="_CPPv3N2kn6window13setFullscreenEb"></span><span id="_CPPv2N2kn6window13setFullscreenEb"></span><span id="kn::window::setFullscreen__b"></span><span class="target" id="namespacekn_1_1window_1af5b8f4551b8a1f1289c727aa50456e5e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFullscreen</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fullscreen</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2kn6window13setFullscreenEb" title="Link to this definition">#</a><br /></dt>
 <dd><p>Set whether the window is fullscreen or not. </p>
@@ -466,6 +475,7 @@
 <li><a class="reference internal" href="#_CPPv4N2kn6window8getScaleEv"><code class="docutils literal notranslate"><span class="pre">window::getScale()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn6window7getSizeEv"><code class="docutils literal notranslate"><span class="pre">window::getSize()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn6window8setTitleERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">window::setTitle()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N2kn6window8getTitleEv"><code class="docutils literal notranslate"><span class="pre">window::getTitle()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn6window13setFullscreenEb"><code class="docutils literal notranslate"><span class="pre">window::setFullscreen()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N2kn6window4quitEv"><code class="docutils literal notranslate"><span class="pre">window::quit()</span></code></a></li>
 </ul>

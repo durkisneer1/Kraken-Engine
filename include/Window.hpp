@@ -10,13 +10,14 @@
 #include <SDL_ttf.h>
 
 #include "Constants.hpp"
+#include "Math.hpp"
+#include "Rect.hpp"
 #include "Texture.hpp"
 
 namespace kn
 {
 namespace window
 {
-
 /**
  * @brief Initialize the window.
  *

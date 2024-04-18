@@ -5,7 +5,6 @@
     <innerfile refid="_cache_8hpp">Cache.hpp</innerfile>
     <innerfile refid="_constants_8hpp">Constants.hpp</innerfile>
     <innerfile refid="_draw_8hpp">Draw.hpp</innerfile>
-    <innerfile refid="_entity_8hpp">Entity.hpp</innerfile>
     <innerfile refid="_error_logger_8hpp">ErrorLogger.hpp</innerfile>
     <innerfile refid="_font_8hpp">Font.hpp</innerfile>
     <innerfile refid="_input_8hpp">Input.hpp</innerfile>
@@ -16,7 +15,6 @@
     <innerfile refid="_rect_8hpp">Rect.hpp</innerfile>
     <innerfile refid="_sound_8hpp">Sound.hpp</innerfile>
     <innerfile refid="_texture_8hpp">Texture.hpp</innerfile>
-    <innerfile refid="_tile_map_8hpp">TileMap.hpp</innerfile>
     <innerfile refid="_time_8hpp">Time.hpp</innerfile>
     <innerfile refid="_window_8hpp">Window.hpp</innerfile>
     <briefdescription>

@@ -1,10 +1,10 @@
 #include "Font.hpp"
 #include "ErrorLogger.hpp"
+#include "Texture.hpp"
 #include "Window.hpp"
 
 namespace kn
 {
-
 Font::Font(const std::string& fileDir, int ptSize)
 {
     font = TTF_OpenFont(fileDir.c_str(), ptSize);
@@ -39,5 +39,4 @@ std::shared_ptr<Texture> Font::render(const std::string& text, bool antialias, C
 
     return texture;
 }
-
 } // namespace kn

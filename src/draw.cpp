@@ -1,13 +1,13 @@
 #include <SDL.h>
 
 #include "Draw.hpp"
+#include "Rect.hpp"
 #include "Window.hpp"
 
 namespace kn
 {
 namespace draw
 {
-
 void rect(Rect& rect, const Color color, int thickness)
 {
     SDL_SetRenderDrawColor(window::getRenderer(), color.r, color.g, color.b, color.a);
@@ -27,6 +27,5 @@ void rect(Rect& rect, const Color color, int thickness)
         SDL_RenderDrawRectF(window::getRenderer(), &layerRect);
     }
 }
-
 } // namespace draw
 } // namespace kn

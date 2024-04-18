@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Sound.hpp" line="58" column="15" bodyfile="D:/Code/c++/Kraken-Engine/include/Sound.hpp" bodystart="58" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Sound.hpp" line="55" column="19" bodyfile="D:/Code/c++/Kraken-Engine/include/Sound.hpp" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classkn_1_1_sound_1a0f5dbf56994e6914eceb150887612937" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Sound.hpp" line="59" column="11" bodyfile="D:/Code/c++/Kraken-Engine/include/Sound.hpp" bodystart="59" bodyend="-1"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Sound.hpp" line="56" column="15" bodyfile="D:/Code/c++/Kraken-Engine/include/Sound.hpp" bodystart="56" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -63,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Sound.hpp" line="22" column="14"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Sound.hpp" line="19" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_sound_1ab3d96a83099bbac05632882f07eb4c7d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -77,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Sound.hpp" line="23" column="5" bodyfile="D:/Code/c++/Kraken-Engine/include/Sound.hpp" bodystart="23" bodyend="27"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Sound.hpp" line="20" column="9" bodyfile="D:/Code/c++/Kraken-Engine/include/Sound.hpp" bodystart="20" bodyend="24"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_sound_1a475db8853693191340bb86e2bb001c54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -133,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Sound.hpp" line="36" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Sound.hpp" line="33" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_sound_1ac537563488214a87b177c3b3df6462a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -162,7 +162,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Sound.hpp" line="43" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Sound.hpp" line="40" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_sound_1af141a58501d0aa4585ff07b9bd4bf72b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -180,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Sound.hpp" line="50" column="11"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Sound.hpp" line="47" column="15"/>
       </memberdef>
       <memberdef kind="function" id="classkn_1_1_sound_1a58cc163db5ac4d593bd76b44489cbf2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -195,7 +195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/Code/c++/Kraken-Engine/include/Sound.hpp" line="55" column="10"/>
+        <location file="D:/Code/c++/Kraken-Engine/include/Sound.hpp" line="52" column="14"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -203,7 +203,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/Code/c++/Kraken-Engine/include/Sound.hpp" line="14" column="1" bodyfile="D:/Code/c++/Kraken-Engine/include/Sound.hpp" bodystart="15" bodyend="60"/>
+    <location file="D:/Code/c++/Kraken-Engine/include/Sound.hpp" line="11" column="5" bodyfile="D:/Code/c++/Kraken-Engine/include/Sound.hpp" bodystart="12" bodyend="57"/>
     <listofallmembers>
       <member refid="classkn_1_1_sound_1af141a58501d0aa4585ff07b9bd4bf72b" prot="public" virt="non-virtual"><scope>kn::Sound</scope><name>getVolume</name></member>
       <member refid="classkn_1_1_sound_1a03b8ed7a6b66bfd861b77735c9df97b8" prot="private" virt="non-virtual"><scope>kn::Sound</scope><name>m_sound</name></member>

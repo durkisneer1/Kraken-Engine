@@ -2,7 +2,6 @@
 
 namespace kn
 {
-
 Texture::Texture(SDL_Texture* texture) : texture(texture) { query(); }
 
 void Texture::query()
@@ -20,8 +19,8 @@ SDL_Texture* Texture::getSDLTexture() const { return texture; }
 
 void Texture::setSize(const math::Vec2& size)
 {
-    rect.w = size.x;
-    rect.h = size.y;
+    rect.w = (float)size.x;
+    rect.h = (float)size.y;
 }
 
 void Texture::scaleBy(float factor)
@@ -43,5 +42,4 @@ void Texture::fitHeight(float height)
     rect.w = rect.w * scale;
     rect.h = height;
 }
-
 } // namespace kn

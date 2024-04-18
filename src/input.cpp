@@ -1,13 +1,14 @@
 #include <algorithm>
 
+#include "Constants.hpp"
 #include "Input.hpp"
+#include "Math.hpp"
 #include "Window.hpp"
 
 namespace kn
 {
 namespace input
 {
-
 math::Vec2 getMousePos()
 {
     int x, y;
@@ -40,6 +41,5 @@ math::Vec2 getVector(const std::vector<KEYS>& left, const std::vector<KEYS>& rig
 
     return vector;
 }
-
 } // namespace input
 } // namespace kn

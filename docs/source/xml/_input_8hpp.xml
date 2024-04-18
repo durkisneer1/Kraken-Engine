@@ -5,27 +5,12 @@
     <includes local="no">vector</includes>
     <includes local="no">SDL.h</includes>
     <includes refid="_constants_8hpp" local="yes">Constants.hpp</includes>
-    <includes refid="_math_8hpp" local="yes">Math.hpp</includes>
     <includedby refid="_kraken_engine_8hpp" local="yes">D:/Code/c++/Kraken-Engine/include/KrakenEngine.hpp</includedby>
     <incdepgraph>
       <node id="4">
         <label>Constants.hpp</label>
         <link refid="_constants_8hpp"/>
         <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>ErrorLogger.hpp</label>
-        <link refid="_error_logger_8hpp"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -37,55 +22,9 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>Math.hpp</label>
-        <link refid="_math_8hpp"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-      </node>
-      <node id="12">
-        <label>Overflow.hpp</label>
-        <link refid="_overflow_8hpp"/>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
       </node>
       <node id="3">
         <label>SDL.h</label>
-      </node>
-      <node id="7">
-        <label>chrono</label>
-      </node>
-      <node id="13">
-        <label>cmath</label>
-      </node>
-      <node id="8">
-        <label>ctime</label>
-      </node>
-      <node id="9">
-        <label>fstream</label>
-      </node>
-      <node id="10">
-        <label>iostream</label>
-      </node>
-      <node id="14">
-        <label>limits</label>
-      </node>
-      <node id="15">
-        <label>stdint.h</label>
-      </node>
-      <node id="11">
-        <label>string.h</label>
       </node>
       <node id="2">
         <label>vector</label>
@@ -104,6 +43,7 @@
       </node>
     </invincdepgraph>
     <innernamespace refid="namespacekn">kn</innernamespace>
+    <innernamespace refid="namespacekn_1_1math">kn::math</innernamespace>
     <innernamespace refid="namespacekn_1_1input">kn::input</innernamespace>
     <briefdescription>
     </briefdescription>
@@ -113,28 +53,26 @@
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SDL.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_constants_8hpp" kindref="compound">Constants.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_math_8hpp" kindref="compound">Math.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacekn" kindref="compound">kn</ref></highlight></codeline>
-<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="12" refid="namespacekn_1_1input" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">input</highlight></codeline>
-<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20" refid="namespacekn_1_1input_1ab94bdc7cf362294b49bad95aaefbc40e" refkind="member"><highlight class="normal"><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref><sp/><ref refid="namespacekn_1_1input_1ab94bdc7cf362294b49bad95aaefbc40e" kindref="member">getMousePos</ref>();</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27" refid="namespacekn_1_1input_1a56c5538ff782a7797cb2f4c17b96f998" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1_1input_1a56c5538ff782a7797cb2f4c17b96f998" kindref="member">getMouseButtonPressed</ref>();</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="namespacekn_1_1input_1a07334d96762236043c84d75f3504d480" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Uint8*<sp/><ref refid="namespacekn_1_1input_1a07334d96762236043c84d75f3504d480" kindref="member">getKeysPressed</ref>();</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46" refid="namespacekn_1_1input_1a318cd009ccea529aabb2aca1e60c0af7" refkind="member"><highlight class="normal"><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref><sp/><ref refid="namespacekn_1_1input_1a318cd009ccea529aabb2aca1e60c0af7" kindref="member">getVector</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;KEYS&gt;&amp;<sp/>left<sp/>=<sp/>{},<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;KEYS&gt;&amp;<sp/>right<sp/>=<sp/>{},</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;KEYS&gt;&amp;<sp/>up<sp/>=<sp/>{},<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;KEYS&gt;&amp;<sp/>down<sp/>=<sp/>{});</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>input</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>kn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SDL.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_constants_8hpp" kindref="compound">Constants.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacekn" kindref="compound">kn</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">math<sp/>{<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Vec2;<sp/>};</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="namespacekn_1_1input" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">input</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19" refid="namespacekn_1_1input_1ab94bdc7cf362294b49bad95aaefbc40e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref><sp/><ref refid="namespacekn_1_1input_1ab94bdc7cf362294b49bad95aaefbc40e" kindref="member">getMousePos</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="namespacekn_1_1input_1a56c5538ff782a7797cb2f4c17b96f998" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacekn_1_1input_1a56c5538ff782a7797cb2f4c17b96f998" kindref="member">getMouseButtonPressed</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="namespacekn_1_1input_1a07334d96762236043c84d75f3504d480" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Uint8*<sp/><ref refid="namespacekn_1_1input_1a07334d96762236043c84d75f3504d480" kindref="member">getKeysPressed</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="namespacekn_1_1input_1a318cd009ccea529aabb2aca1e60c0af7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classkn_1_1math_1_1_vec2" kindref="compound">math::Vec2</ref><sp/><ref refid="namespacekn_1_1input_1a318cd009ccea529aabb2aca1e60c0af7" kindref="member">getVector</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;KEYS&gt;&amp;<sp/>left<sp/>=<sp/>{},<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;KEYS&gt;&amp;<sp/>right<sp/>=<sp/>{},</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;KEYS&gt;&amp;<sp/>up<sp/>=<sp/>{},<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;KEYS&gt;&amp;<sp/>down<sp/>=<sp/>{});</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>input</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>kn</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="D:/Code/c++/Kraken-Engine/include/Input.hpp"/>
   </compounddef>
