@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 
 #include "ErrorLogger.hpp"
 #include "Window.hpp"

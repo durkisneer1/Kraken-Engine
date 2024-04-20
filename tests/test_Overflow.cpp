@@ -1,22 +1,19 @@
 #include <stdint.h>
 
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 
 #include "Constants.hpp"
 #include "Overflow.hpp"
 
 namespace
 {
-
-using kn::float32_t;
-using kn::float64_t;
 using kn::overflow::isProductValid;
 using kn::overflow::isSumValid;
 
 class DoubleOverflowTest : public ::testing::Test
 {
   protected:
-    DoubleOverflowTest() : doubleMax(std::numeric_limits<float64_t>::max()) {}
+    DoubleOverflowTest() : doubleMax(std::numeric_limits<double>::max()) {}
 
     virtual ~DoubleOverflowTest() {}
 
@@ -24,7 +21,7 @@ class DoubleOverflowTest : public ::testing::Test
 
     virtual void TearDown() {}
 
-    const float64_t doubleMax;
+    const double doubleMax;
 };
 
 TEST_F(DoubleOverflowTest, SumOfDoubleMax) { EXPECT_FALSE(isSumValid(doubleMax, doubleMax)); }
@@ -36,8 +33,8 @@ TEST_F(DoubleOverflowTest, SumOfNegativeDoubleMax)
 
 TEST_F(DoubleOverflowTest, SumOfHalfAndThreeFifthsDoubleMax)
 {
-    const float64_t half = doubleMax / 2;
-    const float64_t threeFifths = (double)3 / 5 * doubleMax;
+    const double half = doubleMax / 2;
+    const double threeFifths = (double)3 / 5 * doubleMax;
     EXPECT_FALSE(isSumValid(half, threeFifths));
 }
 
@@ -57,7 +54,7 @@ TEST_F(DoubleOverflowTest, SumOfDoubleMaxAndZero) { EXPECT_TRUE(isSumValid(doubl
 
 TEST_F(DoubleOverflowTest, SumOfTwoFifthsDoubleMax)
 {
-    const float64_t twoFifths = (double)2 / 5 * doubleMax;
+    const double twoFifths = (double)2 / 5 * doubleMax;
 
     EXPECT_TRUE(isSumValid(twoFifths, twoFifths));
 }
@@ -65,7 +62,7 @@ TEST_F(DoubleOverflowTest, SumOfTwoFifthsDoubleMax)
 class FloatOverflowTest : public ::testing::Test
 {
   protected:
-    FloatOverflowTest() : floatMax(std::numeric_limits<float32_t>::max()) {}
+    FloatOverflowTest() : floatMax(std::numeric_limits<float>::max()) {}
 
     virtual ~FloatOverflowTest() {}
 
@@ -73,7 +70,7 @@ class FloatOverflowTest : public ::testing::Test
 
     virtual void TearDown() {}
 
-    const float32_t floatMax;
+    const float floatMax;
 };
 
 TEST_F(FloatOverflowTest, SumOfFloatMax) { EXPECT_FALSE(isSumValid(floatMax, floatMax)); }
@@ -82,8 +79,8 @@ TEST_F(FloatOverflowTest, SumOfNegativeFloatMax) { EXPECT_FALSE(isSumValid(-floa
 
 TEST_F(FloatOverflowTest, SumOfHalfAndThreeFifthsFloatMax)
 {
-    const float32_t half = floatMax / 2;
-    const float32_t threeFifths = (float)3 / 5 * floatMax;
+    const float half = floatMax / 2;
+    const float threeFifths = (float)3 / 5 * floatMax;
     EXPECT_FALSE(isSumValid(half, threeFifths));
 }
 
@@ -103,7 +100,7 @@ TEST_F(FloatOverflowTest, SumOfFloatMaxAndZero) { EXPECT_TRUE(isSumValid(floatMa
 
 TEST_F(FloatOverflowTest, SumOfTwoFifthsFloatMax)
 {
-    const float32_t twoFifths = (float)2 / 5 * floatMax;
+    const float twoFifths = (float)2 / 5 * floatMax;
 
     EXPECT_TRUE(isSumValid(twoFifths, twoFifths));
 }

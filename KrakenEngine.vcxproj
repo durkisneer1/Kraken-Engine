@@ -49,6 +49,46 @@
     <ClCompile Include="src\time.cpp" />
     <ClCompile Include="src\window.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include=".clang-format" />
+    <None Include=".gitattributes" />
+    <None Include=".github\workflows\codacy.yml" />
+    <None Include=".gitignore" />
+    <None Include=".pre-commit-config.yaml" />
+    <None Include=".readthedocs.yaml" />
+    <None Include="docs\Makefile" />
+    <None Include="docs\source\conf.py" />
+    <None Include="docs\source\getting_started\index.rst" />
+    <None Include="docs\source\index.rst" />
+    <None Include="docs\source\installation.rst" />
+    <None Include="docs\source\reference\cache.rst" />
+    <None Include="docs\source\reference\constants.rst" />
+    <None Include="docs\source\reference\draw.rst" />
+    <None Include="docs\source\reference\error_logger.rst" />
+    <None Include="docs\source\reference\font.rst" />
+    <None Include="docs\source\reference\index.rst" />
+    <None Include="docs\source\reference\input.rst" />
+    <None Include="docs\source\reference\math.rst" />
+    <None Include="docs\source\reference\music.rst" />
+    <None Include="docs\source\reference\overflow.rst" />
+    <None Include="docs\source\reference\rect.rst" />
+    <None Include="docs\source\reference\sound.rst" />
+    <None Include="docs\source\reference\texture.rst" />
+    <None Include="docs\source\reference\time.rst" />
+    <None Include="docs\source\reference\window.rst" />
+    <None Include="docs\source\tutorials\index.rst" />
+    <None Include="LICENSE" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="docs\requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="docs\source\_static\kraken-engine-banner.png" />
+    <Image Include="docs\source\_static\kraken_engine_icon.png" />
+    <Image Include="docs\source\_static\kraken_engine_logo.png" />
+    <Image Include="docs\source\_static\under_construction.gif" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
