@@ -1,10 +1,10 @@
 #pragma once
 
-#include <SDL_ttf.h>
+#include "Constants.hpp"
+
+#include KN_TTF_PATH
 #include <memory>
 #include <string>
-
-#include "Constants.hpp"
 
 namespace kn
 {

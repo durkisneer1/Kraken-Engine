@@ -1,9 +1,9 @@
 #pragma once
 
-#include <SDL.h>
-#include <vector>
-
 #include "Constants.hpp"
+
+#include KN_SDL_PATH
+#include <vector>
 
 namespace kn
 {

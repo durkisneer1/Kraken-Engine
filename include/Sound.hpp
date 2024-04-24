@@ -1,6 +1,7 @@
 #pragma once
 
-#include <SDL_mixer.h>
+#include "Config.hpp"
+#include KN_MIX_PATH
 #include <string>
 
 namespace kn

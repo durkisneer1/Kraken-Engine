@@ -4,10 +4,10 @@
 #include <string>
 #include <vector>
 
-#include <SDL.h>
-#include <SDL_image.h>
-#include <SDL_mixer.h>
-#include <SDL_ttf.h>
+#include KN_SDL_PATH
+#include KN_IMG_PATH
+#include KN_MIXER_PATH
+#include KN_TTF_PATH
 
 #include "Constants.hpp"
 #include "Math.hpp"
