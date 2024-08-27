@@ -26,7 +26,7 @@ math::Vec2 getMousePos();
  *
  * @return The mouse button pressed.
  */
-const int getMouseButtonPressed();
+int getMouseButtonPressed();
 
 /**
  * @brief Get the keys pressed.

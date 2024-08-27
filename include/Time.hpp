@@ -14,7 +14,7 @@ namespace time
 class Clock final
 {
   public:
-    Clock();
+    Clock() = default;
     ~Clock() = default;
 
     /**

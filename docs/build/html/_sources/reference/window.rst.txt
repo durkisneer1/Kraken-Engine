@@ -1,5 +1,0 @@
-======
-window
-======
-
-.. doxygennamespace:: kn::window

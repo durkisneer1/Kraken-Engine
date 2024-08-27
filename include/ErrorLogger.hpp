@@ -1,5 +1,4 @@
 #pragma once
-#pragma warning(disable : 4996)
 
 #include <chrono>
 #include <ctime>

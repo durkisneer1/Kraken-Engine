@@ -12,8 +12,7 @@ Font::Font(const std::string& fileDir, int ptSize)
         FATAL("Failed to load font: " + std::string(TTF_GetError()));
 }
 
-std::shared_ptr<Texture> Font::render(const std::string& text, bool antialias, Color color,
-                                      int wrapLength)
+Texture Font::render(const std::string& text, bool antialias, Color color, int wrapLength)
 {
     SDL_Surface* surface;
 
@@ -34,9 +33,8 @@ std::shared_ptr<Texture> Font::render(const std::string& text, bool antialias, C
     if (!sdlTexture)
         FATAL("Failed to create texture: " + std::string(SDL_GetError()));
 
-    std::shared_ptr<Texture> texture = std::make_shared<Texture>(sdlTexture);
     SDL_FreeSurface(surface);
 
-    return texture;
+    return Texture(sdlTexture);
 }
 } // namespace kn

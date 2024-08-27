@@ -1,7 +1,6 @@
 #pragma once
 
 #include <SDL_ttf.h>
-#include <memory>
 #include <string>
 
 #include "Constants.hpp"
@@ -39,8 +38,7 @@ class Font final
      *
      * @return The rendered text.
      */
-    std::shared_ptr<Texture> render(const std::string& text, bool antialias, Color color,
-                                    int wrapLength = 0);
+    Texture render(const std::string& text, bool antialias, Color color, int wrapLength = 0);
 
   private:
     TTF_Font* font;

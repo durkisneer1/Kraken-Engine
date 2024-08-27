@@ -11,10 +11,10 @@ class MathTest : public ::testing::Test
 {
   protected:
     MathTest() {}
-    ~MathTest() {}
+    ~MathTest() override = default;
 
-    virtual void SetUp() {}
-    virtual void TearDown() {}
+    void SetUp() override {}
+    void TearDown() override {}
 };
 
 TEST_F(MathTest, Vec2DefaultConstructor)

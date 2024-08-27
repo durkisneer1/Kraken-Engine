@@ -22,16 +22,16 @@ namespace window
  * @brief Initialize the window.
  *
  * @param size The size of the window.
- * @param scale The scale of the window.
+ * @param title The title of the window.
  */
-void init(math::Vec2 size, int scale = 1);
+void init(math::Vec2 size, const std::string& title = "Kraken Window");
 
 /**
  * @brief Clear the screen.
  *
  * @param color The color to clear the screen.
  */
-void cls(Color color = {0, 0, 0, 255});
+void clear(Color color = {0, 0, 0, 255});
 
 /**
  * @brief Flip the render frame buffer.
@@ -45,7 +45,7 @@ void flip();
  * @param crop The rectangle to draw from.
  * @param rect The rectangle to draw to.
  */
-void blit(const std::shared_ptr<Texture>& texture, Rect crop, Rect rect);
+void blit(const Texture& texture, Rect crop, Rect rect);
 
 /**
  *  @brief Draw a texture to a position.
@@ -53,7 +53,7 @@ void blit(const std::shared_ptr<Texture>& texture, Rect crop, Rect rect);
  *  @param texture The texture to draw.
  *  @param position The position to draw at.
  */
-void blit(const std::shared_ptr<Texture>& texture, const math::Vec2& position);
+void blit(const Texture& texture, const math::Vec2& position = {0, 0});
 
 /**
  *  @brief Draw a texture using rects.
@@ -65,8 +65,8 @@ void blit(const std::shared_ptr<Texture>& texture, const math::Vec2& position);
  *  @param flipX Whether to flip the texture on the x-axis.
  *  @param flipY Whether to flip the texture on the y-axis.
  */
-void blitEx(const std::shared_ptr<Texture>& texture, Rect crop, Rect rect, double angle = 0.0,
-            bool flipX = false, bool flipY = false);
+void blitEx(const Texture& texture, Rect crop, Rect rect, double angle = 0.0, bool flipX = false,
+            bool flipY = false);
 
 /**
  *  @brief Draw a texture to a position.
@@ -77,7 +77,7 @@ void blitEx(const std::shared_ptr<Texture>& texture, Rect crop, Rect rect, doubl
  *  @param flipX Whether to flip the texture on the x-axis.
  *  @param flipY Whether to flip the texture on the y-axis.
  */
-void blitEx(const std::shared_ptr<Texture>& texture, const math::Vec2& position, double angle = 0.0,
+void blitEx(const Texture& texture, const math::Vec2& position, double angle = 0.0,
             bool flipX = false, bool flipY = false);
 
 /**
@@ -100,13 +100,6 @@ const std::vector<kn::Event>& getEvents();
  * @return Whether the window is fullscreen or not.
  */
 bool getFullscreen();
-
-/**
- * @brief Get the scale of the window.
- *
- * @return The scale of the window.
- */
-int getScale();
 
 /**
  * @brief Get the size of the screen.

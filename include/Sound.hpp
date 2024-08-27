@@ -44,7 +44,7 @@ class Sound final
      *
      * @return The volume of the sound. Between 0.0f and 1.0f.
      */
-    float getVolume() const;
+    [[nodiscard]] float getVolume() const;
 
     /**
      * @brief Free the sound from memory.

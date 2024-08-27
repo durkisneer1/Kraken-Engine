@@ -1,8 +1,9 @@
 #pragma once
 
 #include <SDL.h>
+#include <string>
 
-#include "Math.hpp"
+#include "Constants.hpp"
 #include "Rect.hpp"
 
 namespace kn
@@ -19,17 +20,26 @@ class Texture final
 {
   public:
     /**
-     * @brief Create a texture.
+     * @brief Load an image from disk.
      *
-     * @param texture The SDL texture.
-     *
-     * @note This function is not meant to be used by the user.
-     *
-     * @see kn::cache::load()
-     * @see kn::cache::create()
-     * @see kn::cache::move()
+     * @param path The path to the texture file.
      */
-    explicit Texture(SDL_Texture* texture);
+    explicit Texture(const std::string& path);
+
+    /**
+     * @brief Create a solid color texture.
+     *
+     * @param size The size of the texture.
+     * @param color The color of the texture.
+     */
+    Texture(const math::Vec2& size, Color color);
+
+    /**
+     * @brief Create a texture from an existing surface.
+     *
+     * @param sdlTexture An SDL texture object.
+     */
+    explicit Texture(SDL_Texture* sdlTexture);
 
     ~Texture()
     {
@@ -55,8 +65,6 @@ class Texture final
      * @brief Get the SDL texture.
      *
      * @return The SDL texture.
-     *
-     * @note This function is not meant to be used by the user.
      */
     SDL_Texture* getSDLTexture() const;
 

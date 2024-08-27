@@ -5,19 +5,16 @@
 #include "Math.hpp"
 #include "Window.hpp"
 
-namespace kn
-{
-namespace input
+namespace kn::input
 {
 math::Vec2 getMousePos()
 {
     int x, y;
     SDL_GetMouseState(&x, &y);
-    int scale = window::getScale();
-    return {x / scale, y / scale};
+    return {x, y};
 }
 
-const int getMouseButtonPressed() { return SDL_GetMouseState(nullptr, nullptr); }
+int getMouseButtonPressed() { return (int)SDL_GetMouseState(nullptr, nullptr); }
 
 const Uint8* getKeysPressed() { return SDL_GetKeyboardState(nullptr); }
 
@@ -41,5 +38,4 @@ math::Vec2 getVector(const std::vector<KEYS>& left, const std::vector<KEYS>& rig
 
     return vector;
 }
-} // namespace input
-} // namespace kn
+} // namespace kn::input

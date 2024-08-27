@@ -15,17 +15,17 @@ Sound::Sound(const std::string& fileDir)
     {
         m_sound = Mix_LoadWAV(fileDir.c_str());
         if (!m_sound)
-            FATAL("Failed to load sound: " + fileDir);
+            FATAL("Failed to load sound: " + fileDir)
     }
     else
     {
-        FATAL("Unsupported file format: " + fileDir);
+        FATAL("Unsupported file format: " + fileDir)
     }
 }
 
 void Sound::play(int loops, int playTime, int fadeMs)
 {
-    int channelNum = -1;
+    int channelNum;
 
     if (fadeMs > 0)
         channelNum = Mix_FadeInChannelTimed(-1, m_sound, loops, fadeMs, playTime);
@@ -34,7 +34,7 @@ void Sound::play(int loops, int playTime, int fadeMs)
 
     if (channelNum == -1)
     {
-        FATAL("Failed to play sound: " + std::string(Mix_GetError()));
+        FATAL("Failed to play sound: " + std::string(Mix_GetError()))
         return;
     }
 
