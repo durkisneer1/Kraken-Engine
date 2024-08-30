@@ -2,10 +2,13 @@
 
 int main(int argc, char** argv)
 {
-    kn::window::init({800, 600});
+    const kn::math::Vec2 WIN_SIZE = {800, 600};
+    kn::window::init(WIN_SIZE);
     kn::time::Clock clock;
 
-    kn::Texture boxTex({20, 20}, {100, 100, 100});
+    kn::Texture boxTex({100, 100}, {100, 100, 100});
+    kn::Rect boxRect = boxTex.getRect();
+    boxRect.setCenter(WIN_SIZE / 2);
 
     bool done = false;
     while (!done)
@@ -18,7 +21,7 @@ int main(int argc, char** argv)
 
         kn::window::clear({20, 20, 20, 255});
 
-        kn::window::blit(boxTex);
+        kn::window::blit(boxTex, boxRect);
 
         kn::window::flip();
     }

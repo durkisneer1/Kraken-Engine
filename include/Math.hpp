@@ -51,7 +51,7 @@ class Vec2
      * @brief Normalize the vector in-place. Fails if an overflow occurs or the vector is the zero
      * vector
      */
-    bool normalize();
+    [[maybe_unused]] bool normalize();
 
     /**
      * @brief Get the distance to another vector.

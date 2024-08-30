@@ -9,7 +9,7 @@ static SDL_Window* _window;
 static Event _event;
 static std::vector<Event> _events;
 
-void init(math::Vec2 size, const std::string& title)
+void init(const math::Vec2& size, const std::string& title)
 {
     if (_renderer)
         WARN("Cannot initialize renderer more than once")
@@ -95,24 +95,24 @@ void flip()
     SDL_RenderPresent(_renderer);
 }
 
-void blit(const Texture& texture, Rect crop, Rect rect)
+void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
 {
     if (!_renderer)
         WARN("Cannot blit before creating the window")
 
-    if (crop.getSize() == math::Vec2::ZERO())
+    if (math::Vec2{srcRect.x, srcRect.y} == math::Vec2::ZERO())
     {
-        SDL_RenderCopyF(_renderer, texture.getSDLTexture(), nullptr, &rect);
+        SDL_RenderCopyF(_renderer, texture.getSDLTexture(), nullptr, &dstRect);
         return;
     }
 
     SDL_Rect src{};
-    src.x = (int)crop.x;
-    src.y = (int)crop.y;
-    src.w = (int)crop.w;
-    src.h = (int)crop.h;
+    src.x = (int)srcRect.x;
+    src.y = (int)srcRect.y;
+    src.w = (int)srcRect.w;
+    src.h = (int)srcRect.h;
 
-    SDL_RenderCopyF(_renderer, texture.getSDLTexture(), &src, &rect);
+    SDL_RenderCopyF(_renderer, texture.getSDLTexture(), &src, &dstRect);
 }
 
 void blit(const Texture& texture, const math::Vec2& position)
@@ -126,7 +126,8 @@ void blit(const Texture& texture, const math::Vec2& position)
     SDL_RenderCopyF(_renderer, texture.getSDLTexture(), nullptr, &rect);
 }
 
-void blitEx(const Texture& texture, Rect crop, Rect rect, double angle, bool flipX, bool flipY)
+void blitEx(const Texture& texture, const Rect& dstRect, const Rect& srcRect, double angle,
+            bool flipX, bool flipY)
 {
     if (!_renderer)
         WARN("Cannot blit before creating the window")
@@ -137,19 +138,20 @@ void blitEx(const Texture& texture, Rect crop, Rect rect, double angle, bool fli
     if (flipY)
         flip = (SDL_RendererFlip)(flip | SDL_FLIP_VERTICAL);
 
-    if (crop.getSize() == math::Vec2::ZERO())
+    if (math::Vec2{srcRect.x, srcRect.y} == math::Vec2::ZERO())
     {
-        SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &rect, angle, nullptr, flip);
+        SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &dstRect, angle, nullptr,
+                          flip);
         return;
     }
 
     SDL_Rect src{};
-    src.x = (int)crop.x;
-    src.y = (int)crop.y;
-    src.w = (int)crop.w;
-    src.h = (int)crop.h;
+    src.x = (int)srcRect.x;
+    src.y = (int)srcRect.y;
+    src.w = (int)srcRect.w;
+    src.h = (int)srcRect.h;
 
-    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), &src, &rect, angle, nullptr, flip);
+    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), &src, &dstRect, angle, nullptr, flip);
 }
 
 void blitEx(const Texture& texture, const math::Vec2& position, double angle, bool flipX,

@@ -24,7 +24,7 @@ class Clock final
      *
      * @return The delta time between frames.
      */
-    double tick(int frameRate = 60);
+    [[maybe_unused]] double tick(int frameRate = 60);
 
   private:
     double m_frameTime = 0.0;

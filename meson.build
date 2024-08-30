@@ -32,9 +32,9 @@ libkraken = static_library('kraken', sources: sources, include_directories: incs
 # Compile Executable
 executable(
     'app',
-    'main.cpp',
+    'example/main.cpp',
     include_directories: incs,
     dependencies: deps,
     win_subsystem: 'console',
-    link_with: libkraken,
+    link_with: libkraken
 )

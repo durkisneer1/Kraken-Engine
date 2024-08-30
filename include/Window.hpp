@@ -24,7 +24,7 @@ namespace window
  * @param size The size of the window.
  * @param title The title of the window.
  */
-void init(math::Vec2 size, const std::string& title = "Kraken Window");
+void init(const math::Vec2& size, const std::string& title = "Kraken Window");
 
 /**
  * @brief Clear the screen.
@@ -42,10 +42,10 @@ void flip();
  * @brief Draw a texture using rects.
  *
  * @param texture The texture to draw.
- * @param crop The rectangle to draw from.
- * @param rect The rectangle to draw to.
+ * @param dstRect The rectangle to draw to.
+ * @param srcRect The rectangle to draw from.
  */
-void blit(const Texture& texture, Rect crop, Rect rect);
+void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect = {});
 
 /**
  *  @brief Draw a texture to a position.
@@ -59,14 +59,14 @@ void blit(const Texture& texture, const math::Vec2& position = {0, 0});
  *  @brief Draw a texture using rects.
  *
  *  @param texture The texture to draw.
- *  @param crop The rectangle to draw from.
- *  @param rect The rectangle to draw to.
+ *  @param dstRect The rectangle to draw to.
+ *  @param srcRect The rectangle to draw from.
  *  @param angle The angle to draw the texture.
  *  @param flipX Whether to flip the texture on the x-axis.
  *  @param flipY Whether to flip the texture on the y-axis.
  */
-void blitEx(const Texture& texture, Rect crop, Rect rect, double angle = 0.0, bool flipX = false,
-            bool flipY = false);
+void blitEx(const Texture& texture, const Rect& dstRect, const Rect& srcRect = {},
+            double angle = 0.0, bool flipX = false, bool flipY = false);
 
 /**
  *  @brief Draw a texture to a position.
