@@ -21,25 +21,16 @@ subdir('src')
 # Includes
 incs = include_directories('include')
 
-# Install Dependencies ---------------------------------------
-python = find_program('python3', 'python')
-
-result = run_command(python, 'scripts/install_sdl.py')
-if result.returncode() != 0
-    error('install_sdl.py script failed.\n', result.stderr())
-endif
-
+# Dependencies
 deps = [
     dependency('sdl2'),
     dependency('sdl2_image'),
     dependency('sdl2_ttf'),
     dependency('sdl2_mixer'),
 ]
-
 if compiler.get_id() == 'msvc'
     deps += dependency('sdl2main')
 endif
-# -----------------------------------------------------------
 
 # Static Library File
 libkraken = static_library('kraken', sources: sources, include_directories: incs, dependencies: deps)
