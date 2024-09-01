@@ -1,6 +1,6 @@
 #include <KrakenEngine.hpp>
 
-int main(int argc, char** argv)
+int main()
 {
     const kn::math::Vec2 WIN_SIZE = {800, 600};
     kn::window::init(WIN_SIZE);

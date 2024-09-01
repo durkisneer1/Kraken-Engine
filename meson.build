@@ -9,8 +9,11 @@ project(
         'c_std=c17',
         'cpp_std=c++17',
         'warning_level=2',
-    ]
+    ],
 )
+
+# Compiler Type
+compiler = meson.get_compiler('c')
 
 # Sources
 subdir('src')
@@ -18,23 +21,37 @@ subdir('src')
 # Includes
 incs = include_directories('include')
 
-# Dependencies
+# Install Dependencies ---------------------------------------
+python = find_program('python3', 'python')
+
+result = run_command(python, 'scripts/install_sdl.py')
+if result.returncode() != 0
+    error('install_sdl.py script failed.\n', result.stderr())
+endif
+
 deps = [
     dependency('sdl2'),
     dependency('sdl2_image'),
     dependency('sdl2_ttf'),
-    dependency('sdl2_mixer')
+    dependency('sdl2_mixer'),
 ]
+
+if compiler.get_id() == 'msvc'
+    deps += dependency('sdl2main')
+endif
+# -----------------------------------------------------------
 
 # Static Library File
 libkraken = static_library('kraken', sources: sources, include_directories: incs, dependencies: deps)
 
-# Compile Executable
-executable(
-    'app',
-    'example/main.cpp',
-    include_directories: incs,
-    dependencies: deps,
-    win_subsystem: 'console',
-    link_with: libkraken
-)
+# Build Example Program
+if get_option('build_example')
+    executable(
+        'krakenapp',
+        'example/main.cpp',
+        include_directories: incs,
+        dependencies: deps,
+        win_subsystem: 'console',
+        link_with: libkraken,
+    )
+endif

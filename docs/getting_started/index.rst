@@ -12,7 +12,7 @@ After following the :doc:`../installation` guide, you are ready for your first K
 
     #include <KrakenEngine.hpp>
 
-    int main(int argc, char** argv)
+    int main()
     {
         kn::window::init({800, 600});
         kn::time::Clock clock;
