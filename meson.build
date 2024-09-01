@@ -1,3 +1,4 @@
+
 # Meson Project Details
 project(
     'kraken-engine',
@@ -20,21 +21,28 @@ subdir('src')
 
 # Includes
 incs = include_directories('include')
-
 # Install Dependencies ---------------------------------------
-python = find_program('python3', 'python')
 
-result = run_command(python, 'scripts/install_sdl.py')
-if result.returncode() != 0
-    error('install_sdl.py script failed.\n', result.stderr())
+# Check for SDL2 and optional SDL2 dependencies
+deps = [
+    dependency('sdl2', required: true),
+]
+
+# Optional dependencies
+sdl2_image_dep = dependency('sdl2_image', required: false)
+if sdl2_image_dep.found()
+    deps += sdl2_image_dep
 endif
 
-deps = [
-    dependency('sdl2'),
-    dependency('sdl2_image'),
-    dependency('sdl2_ttf'),
-    dependency('sdl2_mixer'),
-]
+sdl2_ttf_dep = dependency('sdl2_ttf', required: false)
+if sdl2_ttf_dep.found()
+    deps += sdl2_ttf_dep
+endif
+
+sdl2_mixer_dep = dependency('sdl2_mixer', required: false)
+if sdl2_mixer_dep.found()
+    deps += sdl2_mixer_dep
+endif
 
 if compiler.get_id() == 'msvc'
     deps += dependency('sdl2main')
@@ -43,7 +51,6 @@ endif
 
 # Static Library File
 libkraken = static_library('kraken', sources: sources, include_directories: incs, dependencies: deps)
-
 # Build Example Program
 if get_option('build_example')
     executable(
