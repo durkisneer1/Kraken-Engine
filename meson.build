@@ -1,4 +1,3 @@
-
 # Meson Project Details
 project(
     'kraken-engine',
@@ -22,30 +21,13 @@ subdir('src')
 # Includes
 incs = include_directories('include')
 
-# Install Dependencies ---------------------------------------
-
-# Check for SDL2 and optional SDL2 dependencies
-
+# Install Dependencies
 deps = [
-    dependency('sdl2', required: true),
+    dependency('sdl2'),
+    dependency('sdl2_image'),
+    dependency('sdl2_ttf'),
+    dependency('sdl2_mixer'),
 ]
-
-# Optional dependencies
-sdl2_image_dep = dependency('sdl2_image', required: false)
-if sdl2_image_dep.found()
-    deps += sdl2_image_dep
-endif
-
-sdl2_ttf_dep = dependency('sdl2_ttf', required: false)
-if sdl2_ttf_dep.found()
-    deps += sdl2_ttf_dep
-endif
-
-sdl2_mixer_dep = dependency('sdl2_mixer', required: false)
-if sdl2_mixer_dep.found()
-    deps += sdl2_mixer_dep
-endif
-
 
 if compiler.get_id() == 'msvc'
     deps += dependency('sdl2main')
