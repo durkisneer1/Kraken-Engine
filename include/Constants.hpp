@@ -1,7 +1,5 @@
 #pragma once
-
 #include <SDL.h>
-
 namespace kn
 {
 typedef SDL_Scancode KEYS;
