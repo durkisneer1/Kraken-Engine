@@ -100,7 +100,7 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
     if (!_renderer)
         WARN("Cannot blit before creating the window")
 
-    if (math::Vec2{srcRect.x, srcRect.y} == math::Vec2::ZERO())
+    if (math::Vec2{srcRect.x, srcRect.y} == math::Vec2())
     {
         SDL_RenderCopyF(_renderer, texture.getSDLTexture(), nullptr, &dstRect);
         return;
@@ -138,7 +138,7 @@ void blitEx(const Texture& texture, const Rect& dstRect, const Rect& srcRect, do
     if (flipY)
         flip = (SDL_RendererFlip)(flip | SDL_FLIP_VERTICAL);
 
-    if (math::Vec2{srcRect.x, srcRect.y} == math::Vec2::ZERO())
+    if (math::Vec2{srcRect.x, srcRect.y} == math::Vec2())
     {
         SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &dstRect, angle, nullptr,
                           flip);
