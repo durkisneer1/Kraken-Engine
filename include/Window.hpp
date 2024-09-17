@@ -21,10 +21,11 @@ namespace window
 /**
  * @brief Initialize the window.
  *
- * @param size The size of the window.
+ * @param resolution The size of the window.
  * @param title The title of the window.
+ * @param scale The scale of the window.
  */
-void init(const math::Vec2& size, const std::string& title = "Kraken Window");
+void init(const math::Vec2& resolution, const std::string& title = "Kraken Window", int scale = 1);
 
 /**
  * @brief Clear the screen.
@@ -100,6 +101,13 @@ const std::vector<kn::Event>& getEvents();
  * @return Whether the window is fullscreen or not.
  */
 bool getFullscreen();
+
+/**
+ * @brief Get the scale of the window.
+ *
+ * @return The scale of the window.
+ */
+int getScale();
 
 /**
  * @brief Get the size of the screen.

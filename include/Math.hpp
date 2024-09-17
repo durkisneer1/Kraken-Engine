@@ -15,7 +15,6 @@ namespace math
 /**
  * @brief Polar coordinates representation.
  */
-
 struct PolarCoordinate
 {
     double angle;
@@ -133,7 +132,7 @@ class Vec2
      */
     double distanceTo(const Vec2& other) const;
 
-    template <typename T> Vec2 operator/(T scalar) const { return Vec2(x / scalar, y / scalar); }
+    template <typename T> Vec2 operator/(T scalar) const { return {x / scalar, y / scalar}; }
 
     Vec2 operator+(const Vec2& other) const;
 
@@ -166,6 +165,15 @@ Vec2 clampVec(const Vec2& vec, const Vec2& min, const Vec2& max);
  * @return The interpolated vector.
  */
 Vec2 lerpVec(const Vec2& a, const Vec2& b, double t);
+
+/**
+ * @brief Linear interpolate a value
+ * @param a The starting value.
+ * @param b The final value.
+ * @param t The time in seconds.
+ * @return The interpolated value.
+ */
+double lerp(double a, double b, double t);
 
 /**
  * @brief  Remaps a value from an input range to an output range

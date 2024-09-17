@@ -162,8 +162,11 @@ Vec2 clampVec(const Vec2& vec, const Vec2& min, const Vec2& max)
 Vec2 lerpVec(const Vec2& a, const Vec2& b, double t)
 {
     // TODO: figure out a way to signal if an overflow happens
+    // FIXME: Not the correct lerp formula
     return a + (b - a) * t;
 }
+
+double lerp(double a, double b, double t) { return a + (b - a) * t; }
 
 Vec2 Vec2::operator+(const Vec2& other) const { return Vec2(x + other.x, y + other.y); }
 
@@ -200,7 +203,9 @@ double remap(double in_min, double in_max, double out_min, double out_max, doubl
         WARN("in_min and in_max must not be equal.")
         return 0.0f;
     }
+
     double percentage = (value - in_min) / (in_max - in_min);
+
     return (double)(out_max - out_min) * (percentage);
 }
 

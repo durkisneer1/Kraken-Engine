@@ -35,12 +35,14 @@ endif
 
 # Static Library File
 libkraken = static_library('kraken', sources: sources, include_directories: incs, dependencies: deps)
+
 # Build Example Program
 if get_option('build_example')
+    subdir('example')
     executable(
         'krakenapp',
-        'example/main.cpp',
-        include_directories: incs,
+        sources: example_src,
+        include_directories: [incs, include_directories('example')],
         dependencies: deps,
         win_subsystem: 'console',
         link_with: libkraken,
