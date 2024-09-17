@@ -123,13 +123,6 @@ class Vec2
      * zero vector.
      * @return A normalized vector.
      */
-    Vec2 normalize() const;
-
-    /**
-     * @brief Normalize the vector and returns it. Fails if an overflow occurs or the vector is the
-     * zero vector.
-     * @return A normalized vector.
-     */
     [[maybe_unused]] Vec2 normalize() const;
     /**
      * @brief Get the distance to another vector.
