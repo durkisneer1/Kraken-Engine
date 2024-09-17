@@ -19,7 +19,7 @@ if not os.path.exists("subprojects"):
 def meson_build():
     command = "meson setup".split(" ")
     command.extend(sys.argv[1:])
-    command.append("builddir")
+    command.append("build")
     return " ".join(command)
 
 

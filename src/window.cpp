@@ -9,7 +9,7 @@ static SDL_Window* _window;
 static Event _event;
 static std::vector<Event> _events;
 
-void init(const math::Vec2& size, const std::string& title)
+void init(const math::Vec2& size, const std::string& title, int scale)
 {
     if (_renderer)
         WARN("Cannot initialize renderer more than once")
@@ -38,7 +38,7 @@ void init(const math::Vec2& size, const std::string& title)
     }
 
     _window = SDL_CreateWindow("Kraken Window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-                               (int)size.x, (int)size.y, SDL_WINDOW_SHOWN);
+                               (int)size.x * scale, (int)size.y * scale, SDL_WINDOW_SHOWN);
 
     if (!_window)
         FATAL("SDL_CreateWindow Error: " + std::string(SDL_GetError()))
@@ -47,6 +47,12 @@ void init(const math::Vec2& size, const std::string& title)
 
     if (!_renderer)
         FATAL("SDL_CreateRenderer Error: " + std::string(SDL_GetError()));
+
+    if (scale > 1)
+    {
+        SDL_RenderSetLogicalSize(_renderer, (int)size.x, (int)size.y);
+        SDL_RenderSetIntegerScale(_renderer, SDL_TRUE);
+    }
 
     setTitle(title);
 }
@@ -100,13 +106,13 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
     if (!_renderer)
         WARN("Cannot blit before creating the window")
 
-    if (math::Vec2{srcRect.x, srcRect.y} == math::Vec2::ZERO())
+    if (math::Vec2{srcRect.x, srcRect.y} == math::Vec2())
     {
         SDL_RenderCopyF(_renderer, texture.getSDLTexture(), nullptr, &dstRect);
         return;
     }
 
-    SDL_Rect src{};
+    SDL_Rect src;
     src.x = (int)srcRect.x;
     src.y = (int)srcRect.y;
     src.w = (int)srcRect.w;
@@ -132,26 +138,26 @@ void blitEx(const Texture& texture, const Rect& dstRect, const Rect& srcRect, do
     if (!_renderer)
         WARN("Cannot blit before creating the window")
 
-    SDL_RendererFlip flip = SDL_FLIP_NONE;
+    SDL_RendererFlip flipAxis = SDL_FLIP_NONE;
     if (flipX)
-        flip = (SDL_RendererFlip)(flip | SDL_FLIP_HORIZONTAL);
+        flipAxis = (SDL_RendererFlip)(flipAxis | SDL_FLIP_HORIZONTAL);
     if (flipY)
-        flip = (SDL_RendererFlip)(flip | SDL_FLIP_VERTICAL);
+        flipAxis = (SDL_RendererFlip)(flipAxis | SDL_FLIP_VERTICAL);
 
-    if (math::Vec2{srcRect.x, srcRect.y} == math::Vec2::ZERO())
+    if (math::Vec2{srcRect.x, srcRect.y} == math::Vec2())
     {
         SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &dstRect, angle, nullptr,
-                          flip);
+                          flipAxis);
         return;
     }
 
-    SDL_Rect src{};
+    SDL_Rect src;
     src.x = (int)srcRect.x;
     src.y = (int)srcRect.y;
     src.w = (int)srcRect.w;
     src.h = (int)srcRect.h;
 
-    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), &src, &dstRect, angle, nullptr, flip);
+    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), &src, &dstRect, angle, nullptr, flipAxis);
 }
 
 void blitEx(const Texture& texture, const math::Vec2& position, double angle, bool flipX,
@@ -160,16 +166,16 @@ void blitEx(const Texture& texture, const math::Vec2& position, double angle, bo
     if (!_renderer)
         WARN("Cannot blit before creating the window")
 
-    SDL_RendererFlip flip = SDL_FLIP_NONE;
+    SDL_RendererFlip flipAxis = SDL_FLIP_NONE;
     if (flipX)
-        flip = (SDL_RendererFlip)(flip | SDL_FLIP_HORIZONTAL);
+        flipAxis = (SDL_RendererFlip)(flipAxis | SDL_FLIP_HORIZONTAL);
     if (flipY)
-        flip = (SDL_RendererFlip)(flip | SDL_FLIP_VERTICAL);
+        flipAxis = (SDL_RendererFlip)(flipAxis | SDL_FLIP_VERTICAL);
 
     Rect rect = {(float)position.x, (float)position.y, (float)texture.getSize().x,
                  (float)texture.getSize().y};
 
-    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &rect, angle, nullptr, flip);
+    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &rect, angle, nullptr, flipAxis);
 }
 
 SDL_Renderer* getRenderer()
@@ -186,6 +192,17 @@ bool getFullscreen()
         WARN("Cannot get fullscreen before creating the window")
 
     return SDL_GetWindowFlags(_window) & SDL_WINDOW_FULLSCREEN;
+}
+
+int getScale()
+{
+    if (!_window)
+        WARN("Cannot get scale before creating the window");
+
+    float scale;
+    SDL_RenderGetScale(_renderer, &scale, nullptr);
+
+    return (int)scale;
 }
 
 void setTitle(const std::string& newTitle)
@@ -230,7 +247,10 @@ math::Vec2 getSize()
         WARN("Cannot get size before creating the window")
 
     int w, h;
-    SDL_GetWindowSize(_window, &w, &h);
+    SDL_RenderGetLogicalSize(_renderer, &w, &h);
+    if (!w || !h)
+        SDL_GetWindowSize(_window, &w, &h);
+
     return {w, h};
 }
 } // namespace kn::window
