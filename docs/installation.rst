@@ -9,7 +9,7 @@ Installation
 Before starting, ensure you have meson installed, as well as the four core SDL2 frameworks installed in any package manager.
 
 1. Clone the Kraken Engine `repository <https://github.com/durkisneer1/Kraken-Engine>`_.
-2. Run the ``setup.py`` script with optional meson setup flags to install the necessary dependencies.
+2. Follow typical meson procedure to compile; start with ``meson setup build``.
 3. Once that's done, navigate into the ``build`` folder.
 4. Run ``meson compile`` to build the static library file and optional example exe.
 

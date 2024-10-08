@@ -24,7 +24,6 @@ int main()
             }
 
         kn::window::clear({35, 137, 218, 255});
-
         boat.update(dt);
 
         kn::window::flip();
