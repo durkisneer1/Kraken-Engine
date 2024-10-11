@@ -1,8 +1,8 @@
 #include "Overflow.hpp"
+#include <limits>
+#include <cmath>
 
-namespace kn
-{
-namespace overflow
+namespace kn::overflow
 {
 bool isSumValid(const double& first, const double& second)
 {
@@ -20,7 +20,7 @@ bool isSumValid(const double& first, const double& second)
         // note that std::numeric_limits<float64_t>::min() doesn't return a negative
         // but instead returns the minimum representable value that is as close to
         // zero as doubles can get without becoming zero
-        if (second < 0 && (first < -std::numeric_limits<double>::max() - second))
+        if (second < 0 && first < -std::numeric_limits<double>::max() - second)
         {
             return false;
         }
@@ -120,8 +120,8 @@ bool isProductValid(const double& first, const double& second)
         // one of them is NaN or inf
         return false;
 
-    double absFirst = std::fabs(first);
-    double absSecond = std::fabs(second);
+    const double absFirst = std::fabs(first);
+    const double absSecond = std::fabs(second);
 
     if (absFirst > 1.0 && absSecond > 1.0)
         if (absFirst > std::numeric_limits<double>::max() / absSecond)
@@ -136,8 +136,8 @@ bool isProductValid(const float& first, const float& second)
         // one of them is NaN or inf
         return false;
 
-    float absFirst = std::fabs(first);
-    float absSecond = std::fabs(second);
+    const float absFirst = std::fabs(first);
+    const float absSecond = std::fabs(second);
 
     if (absFirst > 1.0 && absSecond > 1.0)
         if (absFirst > std::numeric_limits<float>::max() / absSecond)
@@ -241,5 +241,4 @@ bool closeToZero(const float& value, const float tolerance)
 
     return false;
 }
-} // namespace overflow
-} // namespace kn
+} // namespace kn::overflow

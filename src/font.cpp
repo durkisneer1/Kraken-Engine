@@ -12,19 +12,23 @@ Font::Font(const std::string& fileDir, int ptSize)
         FATAL("Failed to load font: " + std::string(TTF_GetError()));
 }
 
-Texture Font::render(const std::string& text, bool antialias, Color color, int wrapLength)
+Texture Font::render(const std::string& text, const bool antialias, const Color color,
+                     const int wrapLength) const
 {
     SDL_Surface* surface;
 
     if (antialias)
-        if (wrapLength > 0)
-            surface = TTF_RenderUTF8_Blended_Wrapped(font, text.c_str(), color, wrapLength);
-        else
-            surface = TTF_RenderUTF8_Blended(font, text.c_str(), color);
-    else if (wrapLength > 0)
-        surface = TTF_RenderText_Solid_Wrapped(font, text.c_str(), color, wrapLength);
+    {
+        surface = wrapLength > 0 ?
+            TTF_RenderUTF8_Blended_Wrapped(font, text.c_str(), color, wrapLength) :
+            TTF_RenderUTF8_Blended(font, text.c_str(), color);
+    }
     else
-        surface = TTF_RenderText_Solid(font, text.c_str(), color);
+    {
+        surface = wrapLength > 0 ?
+            TTF_RenderText_Solid_Wrapped(font, text.c_str(), color, wrapLength) :
+            TTF_RenderText_Solid(font, text.c_str(), color);
+    }
 
     if (!surface)
         FATAL("Failed to render text: " + std::string(TTF_GetError()));

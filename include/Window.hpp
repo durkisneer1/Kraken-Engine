@@ -1,22 +1,17 @@
 #pragma once
 
-#include <memory>
 #include <string>
 #include <vector>
 
 #include <SDL.h>
-#include <SDL_image.h>
-#include <SDL_mixer.h>
-#include <SDL_ttf.h>
 
 #include "Constants.hpp"
 #include "Math.hpp"
 #include "Rect.hpp"
 #include "Texture.hpp"
 
-namespace kn
-{
-namespace window
+
+namespace kn::window
 {
 /**
  * @brief Initialize the window.
@@ -54,7 +49,7 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect = {})
  *  @param texture The texture to draw.
  *  @param position The position to draw at.
  */
-void blit(const Texture& texture, const math::Vec2& position = {0, 0});
+void blit(const Texture& texture, const math::Vec2& position = {});
 
 /**
  *  @brief Draw a texture using rects.
@@ -93,7 +88,7 @@ SDL_Renderer* getRenderer();
  *
  *  @return The user events.
  */
-const std::vector<kn::Event>& getEvents();
+const std::vector<Event>& getEvents();
 
 /**
  * @brief Get whether the window is fullscreen or not.
@@ -142,5 +137,5 @@ void setFullscreen(bool fullscreen);
  */
 void quit();
 
-} // namespace window
-} // namespace kn
+} // namespace kn::window
+

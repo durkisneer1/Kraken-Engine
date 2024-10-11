@@ -2,9 +2,7 @@
 
 #include <SDL.h>
 
-namespace kn
-{
-namespace time
+namespace kn::time
 {
 /**
  * @brief A class to keep track of time.
@@ -34,5 +32,4 @@ class Clock final
     double m_now = SDL_GetPerformanceCounter();
     double m_last = SDL_GetPerformanceCounter();
 };
-} // namespace time
-} // namespace kn
+} // namespace kn::time

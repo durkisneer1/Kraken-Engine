@@ -33,22 +33,14 @@ class Vec2
     Vec2();
 
     template <typename _first, typename _second>
-    Vec2(_first x, _second y)
-        : x(static_cast<double>(x)), y(static_cast<double>(y)), tolerance(0.0001)
-    {
-    }
-
-    template <typename _first, typename _second>
-    Vec2(_first x, _second y, double tolerance)
-        : x(static_cast<double>(x)), y(static_cast<double>(y)), tolerance(tolerance)
-    {
-    }
+    Vec2(_first x, _second y, const float tolerance = 0.0001)
+        : x(static_cast<float>(x)), y(static_cast<float>(y)), tolerance(tolerance) {}
 
     /**
      * @brief Get the length of the vector.
      * @return The length of the vector if no overflow happens, otherwise -1.0.
      */
-    double getLength() const;
+    [[nodiscard]] double getLength() const;
 
     /**
      * @brief Rotates a vector in-place by a given angle in degrees.
@@ -67,15 +59,7 @@ class Vec2
      * @return Returns a PolarCoordinate struct which contains an angle in degrees and the vector
      * magnitude as radius.
      */
-    PolarCoordinate asPolar();
-
-    /**
-     * @brief Constructs a vector from it's polar representation.
-     * @param angle The angle in degrees.
-     * @param radius The radius.
-     * @return Returns a vector from it's polar representation.
-     */
-    Vec2 fromPolar(double angle, double radius);
+    [[nodiscard]] PolarCoordinate asPolar() const;
 
     /**
      * @brief Scales a vector in-place to a given scalar.
@@ -86,31 +70,31 @@ class Vec2
     /**
      * @brief Scales a vector to a given value and returns it.
      * @param scalar The scalar to scale the vector to.
-     * @return Returns a vector of magnitude equal to a given scalar while mantaining it's original
+     * @return Returns a vector of magnitude equal to a given scalar while maintaining its original
      * direction.
      */
-    Vec2 scaleToLength(double scalar);
+    [[nodiscard]] Vec2 scaleToLength(double scalar) const;
 
     /**
      * @brief Calculates the vector projection of this vector onto another vector.
      * @param other The vector to project onto.
      * @return Returns the projection of a vector onto another vector.
      */
-    Vec2 project(const Vec2& other);
+    [[nodiscard]] Vec2 project(const Vec2& other) const;
 
     /**
      * @brief Calculates the vector rejection of this vector onto another vector.
      * @param other The vector to reject onto.
      * @return Returns the vector rejection between two vectors.
      */
-    Vec2 reject(const Vec2& other);
+    [[nodiscard]] Vec2 reject(const Vec2& other) const;
 
     /**
      * @brief Calculates the reflection of a vector onto another vector.
      * @param other The vector to reflect onto.
      * @return Returns the reflection of a vector onto another vector.
      */
-    Vec2 reflect(const Vec2& other) const;
+    [[nodiscard]] Vec2 reflect(const Vec2& other) const;
 
     /**
      * @brief Normalize the vector in-place. Fails if an overflow occurs or the vector is the zero
@@ -123,14 +107,14 @@ class Vec2
      * zero vector.
      * @return A normalized vector.
      */
-    Vec2 normalize() const;
+    [[nodiscard]] Vec2 normalize() const;
 
     /**
      * @brief Get the distance to another vector.
      * @param other The vector to calculate the distance to.
      * @return The distance to another vector if no overflow happens, otherwise -1.0.
      */
-    double distanceTo(const Vec2& other) const;
+    [[nodiscard]] double distanceTo(const Vec2& other) const;
 
     template <typename T> Vec2 operator/(T scalar) const { return {x / scalar, y / scalar}; }
 
@@ -147,6 +131,14 @@ class Vec2
   protected:
     double tolerance; //!< the accuracy with which comparisons are made
 };
+
+/**
+ * @brief Constructs a vector from its polar representation.
+ * @param angle The angle in degrees.
+ * @param radius The radius.
+ * @return Returns a vector from its polar representation.
+ */
+Vec2 fromPolar(double angle, double radius);
 
 /**
  * @brief Clamp a vector.
@@ -245,7 +237,7 @@ template <typename T> Vec2 operator*(const T& lhs, const Vec2& rhs)
     const double x = lhs * rhs.x;
     const double y = lhs * rhs.y;
 
-    return Vec2(x, y);
+    return {x, y};
 }
 
 template <typename T> Vec2 operator*(const Vec2& lhs, const T& rhs) { return rhs * lhs; }

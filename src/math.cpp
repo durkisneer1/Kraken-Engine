@@ -1,6 +1,6 @@
 #include <algorithm>
 #define _USE_MATH_DEFINES
-#include <math.h>
+#include <cmath>
 
 #include "ErrorLogger.hpp"
 #include "Math.hpp"
@@ -33,16 +33,16 @@ double Vec2::getLength() const
     return sqrt(first + second);
 }
 
-void Vec2::rotate(double angle)
+void Vec2::rotate(const double angle)
 {
-    double rad = toRadians(angle);
+    const double rad = toRadians(angle);
     const double cosine = cos(toRadians(rad));
     const double sine = sin(rad);
     x = x * cosine - y * sine;
     y = x * sine + y * cosine;
 }
 
-void Vec2::rotateRad(double angle)
+void Vec2::rotateRad(const double angle)
 {
     const double cosine = cos(angle);
     const double sine = sin(angle);
@@ -50,50 +50,41 @@ void Vec2::rotateRad(double angle)
     y = x * sine + y * cosine;
 }
 
-PolarCoordinate Vec2::asPolar()
+PolarCoordinate Vec2::asPolar() const
 {
     const double radius = this->getLength();
     const double azimuthalAngle = toDegrees(atan2(y, x));
     return {azimuthalAngle, radius};
 }
 
-Vec2 Vec2::fromPolar(double angle, double radius)
-{
-    Vec2 v;
-    double rad = toRadians(angle);
-    v.x = radius * cos(rad);
-    v.y = radius * sin(rad);
-    return v;
-}
-
-void Vec2::scaleToLengthIP(double value)
+void Vec2::scaleToLengthIP(const double scalar)
 {
     this->normalizeIP();
-    this->x *= value;
-    this->y *= value;
+    this->x *= scalar;
+    this->y *= scalar;
 }
 
-Vec2 Vec2::scaleToLength(double value)
+Vec2 Vec2::scaleToLength(const double scalar) const
 {
-    Vec2 scaled = this->normalize() * value;
+    const Vec2 scaled = this->normalize() * scalar;
     return scaled;
 }
 
-Vec2 Vec2::project(const Vec2& other)
+Vec2 Vec2::project(const Vec2& other) const
 {
-    double abdot = dot(*this, other);
-    double bbdot = dot(other, other);
+    const double abdot = dot(*this, other);
+    const double bbdot = dot(other, other);
 
-    double frac = abdot / bbdot;
+    const double frac = abdot / bbdot;
 
     return other * frac;
 }
 
-Vec2 Vec2::reject(const Vec2& other) { return other - this->project(other); }
+Vec2 Vec2::reject(const Vec2& other) const { return other - this->project(other); }
 
 Vec2 Vec2::reflect(const Vec2& other) const
 {
-    Vec2 otherNormalized = other.normalize();
+    const Vec2 otherNormalized = other.normalize();
     return *this - 2 * dot(*this, otherNormalized) * otherNormalized;
 }
 
@@ -106,8 +97,7 @@ bool Vec2::normalizeIP()
         return false;
     }
 
-    const double factor = 1 / c;
-    if (!isProductValid(x, factor) || !isProductValid(y, factor))
+    if (const double factor = 1 / c; !isProductValid(x, factor) || !isProductValid(y, factor))
     {
         WARN("Cannot normalize vector due to overflow");
         return false;
@@ -128,8 +118,7 @@ Vec2 Vec2::normalize() const
         return {};
     }
 
-    const double factor = 1 / c;
-    if (!isProductValid(x, factor) || !isProductValid(y, factor))
+    if (const double factor = 1 / c; !isProductValid(x, factor) || !isProductValid(y, factor))
     {
         WARN("Cannot normalize vector due to overflow");
         return {};
@@ -149,28 +138,34 @@ double Vec2::distanceTo(const Vec2& other) const
     return (other - *this).getLength();
 }
 
-Vec2 clampVec(const Vec2& vec, const Vec2& min, const Vec2& max)
+Vec2 fromPolar(const double angle, const double radius)
 {
-    Vec2 retVec;
-
-    retVec.x = std::clamp(vec.x, min.x, max.x);
-    retVec.y = std::clamp(vec.y, min.y, max.y);
-
-    return retVec;
+    const double rad = toRadians(angle);
+    double x = radius * cos(rad);
+    double y = radius * sin(rad);
+    return {x, y};
 }
 
-Vec2 lerpVec(const Vec2& a, const Vec2& b, double t)
+Vec2 clampVec(const Vec2& vec, const Vec2& min, const Vec2& max)
+{
+    double x = std::clamp(vec.x, min.x, max.x);
+    double y = std::clamp(vec.y, min.y, max.y);
+
+    return {x, y};
+}
+
+Vec2 lerpVec(const Vec2& a, const Vec2& b, const double t)
 {
     // TODO: figure out a way to signal if an overflow happens
     // FIXME: Not the correct lerp formula
     return a + (b - a) * t;
 }
 
-double lerp(double a, double b, double t) { return a + (b - a) * t; }
+double lerp(const double a, const double b, const double t) { return a + (b - a) * t; }
 
-Vec2 Vec2::operator+(const Vec2& other) const { return Vec2(x + other.x, y + other.y); }
+Vec2 Vec2::operator+(const Vec2& other) const { return {x + other.x, y + other.y}; }
 
-Vec2 Vec2::operator-(const Vec2& other) const { return *this + (-1.0 * other); }
+Vec2 Vec2::operator-(const Vec2& other) const { return *this + -1.0 * other; }
 
 Vec2& Vec2::operator+=(const Vec2& other)
 {
@@ -196,7 +191,7 @@ bool Vec2::operator==(const Vec2& other) const
 
 bool Vec2::operator!=(const Vec2& other) const { return !(*this == other); }
 
-double remap(double in_min, double in_max, double out_min, double out_max, double value)
+double remap(const double in_min, const double in_max, const double out_min, const double out_max, const double value)
 {
     if (in_min == in_max)
     {
@@ -204,21 +199,21 @@ double remap(double in_min, double in_max, double out_min, double out_max, doubl
         return 0.0f;
     }
 
-    double percentage = (value - in_min) / (in_max - in_min);
+    const double percentage = (value - in_min) / (in_max - in_min);
 
-    return (double)(out_max - out_min) * (percentage);
+    return (out_max - out_min) * percentage;
 }
 
-double toDegrees(double angle) { return angle * 180 / M_PI; }
+double toDegrees(const double angle) { return angle * 180 / M_PI; }
 
-double toRadians(double angle) { return angle * M_PI / 180; }
+double toRadians(const double angle) { return angle * M_PI / 180; }
 
 double dot(const Vec2& a, const Vec2& b) { return a.x * b.x + a.y * b.y; }
 
 double cross(const Vec2& a, const Vec2& b)
 {
-    double product = b.getLength() * a.getLength();
-    double angle = angleBetween(a, b);
+    const double product = b.getLength() * a.getLength();
+    const double angle = angleBetween(a, b);
 
     return product * sin(angle);
 }
@@ -233,7 +228,7 @@ double angleBetween(const Vec2& a, const Vec2& b)
 
 double angleOfDifference(const Vec2& a, const Vec2& b)
 {
-    Vec2 dVec = a - b;
+    const Vec2 dVec = a - b;
 
     return toDegrees(atan2(dVec.y, dVec.x));
 }

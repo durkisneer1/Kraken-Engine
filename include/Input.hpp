@@ -10,7 +10,7 @@ namespace kn
 namespace math
 {
 class Vec2;
-};
+}  // namespace math
 
 namespace input
 {
@@ -47,5 +47,5 @@ const Uint8* getKeysPressed();
  */
 math::Vec2 getVector(const std::vector<KEYS>& left = {}, const std::vector<KEYS>& right = {},
                      const std::vector<KEYS>& up = {}, const std::vector<KEYS>& down = {});
-} // namespace input
-} // namespace kn
+}  // namespace input
+}  // namespace kn

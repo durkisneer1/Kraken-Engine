@@ -1,11 +1,9 @@
 #pragma once
 
-#include <SDL_mixer.h>
 #include <string>
 
-namespace kn
-{
-namespace music
+
+namespace kn::music
 {
 /**
  * @brief Loads a music file.
@@ -48,7 +46,7 @@ void pause();
 void resume();
 
 /**
- * @brief Fades out the currently loaded music file to the a stop.
+ * @brief Fades out the currently loaded music file to a stop.
  *
  * @param fadeMs The number of milliseconds to fade out the music.
  */
@@ -67,5 +65,5 @@ void setVolume(float volume);
  * @return The volume of the currently loaded music file.
  */
 float getVolume();
-} // namespace music
-} // namespace kn
+} // namespace kn::music
+

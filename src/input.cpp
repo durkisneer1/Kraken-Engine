@@ -11,11 +11,11 @@ math::Vec2 getMousePos()
 {
     int x, y;
     SDL_GetMouseState(&x, &y);
-    int scale = window::getScale();
+    const int scale = window::getScale();
     return {x / scale, y / scale};
 }
 
-int getMouseButtonPressed() { return (int)SDL_GetMouseState(nullptr, nullptr); }
+int getMouseButtonPressed() { return static_cast<int>(SDL_GetMouseState(nullptr, nullptr)); }
 
 const Uint8* getKeysPressed() { return SDL_GetKeyboardState(nullptr); }
 
@@ -35,7 +35,7 @@ math::Vec2 getVector(const std::vector<KEYS>& left, const std::vector<KEYS>& rig
         vector.x += 1;
 
     if (vector.getLength() > 0)
-        vector.normalize();
+        vector.normalizeIP();
 
     return vector;
 }

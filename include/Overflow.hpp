@@ -1,14 +1,9 @@
 #pragma once
 
-#include <cmath>
-#include <limits>
-#include <stdint.h>
+#include <cstdint>
 
-#include "Constants.hpp"
 
-namespace kn
-{
-namespace overflow
+namespace kn::overflow
 {
 //@{
 /**
@@ -33,7 +28,7 @@ bool isSumValid(const int64_t& first, const int64_t& second);
 
 //@{
 /**
- * @brief Checks if an overflow would occur in multiplcation
+ * @brief Checks if an overflow would occur in multiplication
  *
  * @param first first value
  * @param second second value
@@ -60,11 +55,11 @@ bool isProductValid(const int64_t& first, const int64_t& second);
  * @param tolerance the accuracy to use, anything closer to 0 than this will be considered zero
  * @return true if close to zero, false otherwise
  */
-bool closeToZero(const double& value, const double tolerance = 0.0001);
+bool closeToZero(const double& value, double tolerance = 0.0001);
 
-bool closeToZero(const float& value, const float tolerance = 0.0001f);
+bool closeToZero(const float& value, float tolerance = 0.0001f);
 //@}
 
-} // namespace overflow
+} // namespace kn::overflow
 
-} // namespace kn
+

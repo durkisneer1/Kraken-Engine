@@ -1,14 +1,11 @@
 #include <SDL.h>
 
-#include "Draw.hpp"
 #include "Rect.hpp"
 #include "Window.hpp"
 
-namespace kn
+namespace kn::draw
 {
-namespace draw
-{
-void rect(Rect& rect, const Color& color, int thickness)
+void rect(const Rect& rect, const Color& color, float thickness)
 {
     SDL_SetRenderDrawColor(window::getRenderer(), color.r, color.g, color.b, color.a);
 
@@ -19,13 +16,15 @@ void rect(Rect& rect, const Color& color, int thickness)
     }
 
     if (thickness > rect.w / 2 || thickness > rect.h / 2)
-        thickness = (int)std::min(rect.w / 2, rect.h / 2);
+        thickness = std::min(rect.w / 2, rect.h / 2);
 
-    for (int i = 0; i < thickness; i++)
+    for (int i = 0; static_cast<float>(i) < thickness; i++)
     {
-        Rect layerRect = {rect.x + i, rect.y + i, rect.w - i * 2, rect.h - i * 2};
+        const auto offset = static_cast<float>(i);
+        Rect layerRect = {
+            rect.x + offset, rect.y + offset, rect.w - offset * 2, rect.h - offset * 2
+        };
         SDL_RenderDrawRectF(window::getRenderer(), &layerRect);
     }
 }
-} // namespace draw
-} // namespace kn
+} // namespace kn::draw

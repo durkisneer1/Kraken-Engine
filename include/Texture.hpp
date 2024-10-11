@@ -11,7 +11,7 @@ namespace kn
 namespace math
 {
 class Vec2;
-};
+} // namespace math
 
 /**
  * @brief A texture object.
@@ -52,21 +52,21 @@ class Texture final
      *
      * @return The size of the texture.
      */
-    math::Vec2 getSize() const;
+    [[nodiscard]] math::Vec2 getSize() const;
 
     /**
      * @brief Get the rect of the texture.
      *
      * @return The rect of the texture.
      */
-    Rect getRect() const;
+    [[nodiscard]] Rect getRect() const;
 
     /**
      * @brief Get the SDL texture.
      *
      * @return The SDL texture.
      */
-    SDL_Texture* getSDLTexture() const;
+    [[nodiscard]] SDL_Texture* getSDLTexture() const;
 
     /**
      * @brief Set the size of the texture rect.
