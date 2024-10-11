@@ -35,7 +35,7 @@ math::Vec2 getVector(const std::vector<KEYS>& left, const std::vector<KEYS>& rig
         vector.x += 1;
 
     if (vector.getLength() > 0)
-        vector.normalizeIP();
+        vector.normalize();
 
     return vector;
 }

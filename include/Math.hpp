@@ -34,7 +34,9 @@ class Vec2
 
     template <typename _first, typename _second>
     Vec2(_first x, _second y, const float tolerance = 0.0001)
-        : x(static_cast<float>(x)), y(static_cast<float>(y)), tolerance(tolerance) {}
+        : x(static_cast<float>(x)), y(static_cast<float>(y)), tolerance(tolerance)
+    {
+    }
 
     /**
      * @brief Get the length of the vector.
@@ -65,15 +67,7 @@ class Vec2
      * @brief Scales a vector in-place to a given scalar.
      * @param scalar The scalar to scale the vector to.
      */
-    void scaleToLengthIP(double scalar);
-
-    /**
-     * @brief Scales a vector to a given value and returns it.
-     * @param scalar The scalar to scale the vector to.
-     * @return Returns a vector of magnitude equal to a given scalar while maintaining its original
-     * direction.
-     */
-    [[nodiscard]] Vec2 scaleToLength(double scalar) const;
+    void scaleToLength(double scalar);
 
     /**
      * @brief Calculates the vector projection of this vector onto another vector.
@@ -97,17 +91,11 @@ class Vec2
     [[nodiscard]] Vec2 reflect(const Vec2& other) const;
 
     /**
-     * @brief Normalize the vector in-place. Fails if an overflow occurs or the vector is the zero
+     * @brief Normalize the vector. Fails if an overflow occurs or the vector is the zero
      * vector.
+     * @return Whether the normalization succeeded or not.
      */
-    [[maybe_unused]] bool normalizeIP();
-
-    /**
-     * @brief Normalize the vector and returns it. Fails if an overflow occurs or the vector is the
-     * zero vector.
-     * @return A normalized vector.
-     */
-    [[nodiscard]] Vec2 normalize() const;
+    [[maybe_unused]] bool normalize();
 
     /**
      * @brief Get the distance to another vector.
@@ -133,12 +121,27 @@ class Vec2
 };
 
 /**
+ * @brief Scales a vector to a given value and returns it.
+ * @param scalar The scalar to scale the vector to.
+ * @return Returns a vector of magnitude equal to a given scalar while maintaining its original
+ * direction.
+ */
+[[nodiscard]] Vec2 scaleToLength(const Vec2& vec, double scalar);
+
+/**
  * @brief Constructs a vector from its polar representation.
  * @param angle The angle in degrees.
  * @param radius The radius.
  * @return Returns a vector from its polar representation.
  */
 Vec2 fromPolar(double angle, double radius);
+
+/**
+ * @brief Get a normalized transformed vector from the given vector.
+ * Fails if an overflow occurs or the vector is the zero vector.
+ * @return A normalized vector.
+ */
+[[nodiscard]] Vec2 normalize(const Vec2& vec);
 
 /**
  * @brief Clamp a vector.
@@ -230,7 +233,7 @@ template <typename T> Vec2 operator*(const T& lhs, const Vec2& rhs)
     if (!isProductValid(static_cast<double>(lhs), rhs.x) ||
         !isProductValid(static_cast<double>(lhs), rhs.y))
     {
-        WARN("Multiplication would result in overflow");
+        WARN("Multiplication would result in overflow")
         return {};
     }
 

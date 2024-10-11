@@ -17,7 +17,7 @@ double Vec2::getLength() const
 {
     if (!isProductValid(x, x) || !isProductValid(y, y))
     {
-        WARN("Calculation of magnitude would result in overflow");
+        WARN("Calculation of magnitude would result in overflow")
         return -1.0;
     }
 
@@ -26,7 +26,7 @@ double Vec2::getLength() const
 
     if (!isSumValid(first, second))
     {
-        WARN("Calculation of magnitude would result in overflow");
+        WARN("Calculation of magnitude would result in overflow")
         return -1.0;
     }
 
@@ -57,25 +57,19 @@ PolarCoordinate Vec2::asPolar() const
     return {azimuthalAngle, radius};
 }
 
-void Vec2::scaleToLengthIP(const double scalar)
+void Vec2::scaleToLength(const double scalar)
 {
-    this->normalizeIP();
+    this->normalize();
     this->x *= scalar;
     this->y *= scalar;
 }
 
-Vec2 Vec2::scaleToLength(const double scalar) const
-{
-    const Vec2 scaled = this->normalize() * scalar;
-    return scaled;
-}
-
 Vec2 Vec2::project(const Vec2& other) const
 {
-    const double abdot = dot(*this, other);
-    const double bbdot = dot(other, other);
+    const double abDot = dot(*this, other);
+    const double bbDot = dot(other, other);
 
-    const double frac = abdot / bbdot;
+    const double frac = abDot / bbDot;
 
     return other * frac;
 }
@@ -84,22 +78,22 @@ Vec2 Vec2::reject(const Vec2& other) const { return other - this->project(other)
 
 Vec2 Vec2::reflect(const Vec2& other) const
 {
-    const Vec2 otherNormalized = other.normalize();
+    const Vec2 otherNormalized = math::normalize(other);
     return *this - 2 * dot(*this, otherNormalized) * otherNormalized;
 }
 
-bool Vec2::normalizeIP()
+bool Vec2::normalize()
 {
     const double c = getLength();
     if (c <= 0.0)
     {
-        WARN("Cannot normalize vector either because it is the zero vector, or it would overflow");
+        WARN("Cannot normalize vector either because it is the zero vector, or it would overflow")
         return false;
     }
 
     if (const double factor = 1 / c; !isProductValid(x, factor) || !isProductValid(y, factor))
     {
-        WARN("Cannot normalize vector due to overflow");
+        WARN("Cannot normalize vector due to overflow")
         return false;
     }
 
@@ -109,33 +103,40 @@ bool Vec2::normalizeIP()
     return true;
 }
 
-Vec2 Vec2::normalize() const
-{
-    const double c = getLength();
-    if (c <= 0.0)
-    {
-        WARN("Cannot normalize vector either because it is the zero vector, or it would overflow");
-        return {};
-    }
-
-    if (const double factor = 1 / c; !isProductValid(x, factor) || !isProductValid(y, factor))
-    {
-        WARN("Cannot normalize vector due to overflow");
-        return {};
-    }
-
-    return {x / c, y / c};
-}
-
 double Vec2::distanceTo(const Vec2& other) const
 {
     if (!isSumValid(other.x, -x) || !isSumValid(other.y, -y))
     {
-        WARN("Calculation would result in overflow");
+        WARN("Calculation would result in overflow")
         return -1.0;
     }
 
     return (other - *this).getLength();
+}
+
+Vec2 normalize(const Vec2& vec)
+{
+    const double c = vec.getLength();
+    if (c <= 0.0)
+    {
+        WARN("Cannot normalize vector either because it is the zero vector, or it would overflow")
+        return {};
+    }
+
+    if (const double factor = 1 / c;
+        !isProductValid(vec.x, factor) || !isProductValid(vec.y, factor))
+    {
+        WARN("Cannot normalize vector due to overflow")
+        return {};
+    }
+
+    return {vec.x / c, vec.y / c};
+}
+
+Vec2 scaleToLength(const Vec2& vec, const double scalar)
+{
+    const Vec2 scaled = math::normalize(vec) * scalar;
+    return scaled;
 }
 
 Vec2 fromPolar(const double angle, const double radius)
@@ -179,7 +180,7 @@ bool Vec2::operator==(const Vec2& other) const
 {
     if (!isSumValid(x, -other.x) || !isSumValid(y, -other.y))
     {
-        TRACE("Vector comparison would result in overflow, they can't be the same");
+        TRACE("Vector comparison would result in overflow, they can't be the same")
         return false;
     }
 
@@ -191,7 +192,8 @@ bool Vec2::operator==(const Vec2& other) const
 
 bool Vec2::operator!=(const Vec2& other) const { return !(*this == other); }
 
-double remap(const double in_min, const double in_max, const double out_min, const double out_max, const double value)
+double remap(const double in_min, const double in_max, const double out_min, const double out_max,
+             const double value)
 {
     if (in_min == in_max)
     {
