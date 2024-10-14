@@ -91,7 +91,7 @@ class Vec2
     [[nodiscard]] Vec2 reflect(const Vec2& other) const;
 
     /**
-     * @brief Normalize the vector. Fails if an overflow occurs or the vector is the zero
+     * @brief Normalize the vector in-place. Fails if an overflow occurs or the vector is the zero
      * vector.
      * @return Whether the normalization succeeded or not.
      */
