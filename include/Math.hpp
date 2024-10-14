@@ -13,7 +13,7 @@ namespace math
 {
 
 /**
- * @brief Polar coordinates representation.
+ * @brief Polar coordinate representation.
  */
 struct PolarCoordinate
 {
