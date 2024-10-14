@@ -2,7 +2,7 @@
 math
 ====
 
-.. doxygenclass:: kn::math::PolarCoordinate
+.. doxygenstruct:: kn::math::PolarCoordinate
     :members:
 
 .. doxygenclass:: kn::math::Vec2
