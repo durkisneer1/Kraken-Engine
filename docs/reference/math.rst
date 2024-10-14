@@ -3,7 +3,7 @@ math
 ====
 
 .. doxygenstruct:: kn::math::PolarCoordinate
-    :members:
+    :undoc-members:
 
 .. doxygenclass:: kn::math::Vec2
     :members:
