@@ -122,6 +122,7 @@ class Vec2
 
 /**
  * @brief Scales a vector to a given value and returns it.
+ * @param vec The vector to scale.
  * @param scalar The scalar to scale the vector to.
  * @return Returns a vector of magnitude equal to a given scalar while maintaining its original
  * direction.
@@ -139,6 +140,7 @@ Vec2 fromPolar(double angle, double radius);
 /**
  * @brief Get a normalized transformed vector from the given vector.
  * Fails if an overflow occurs or the vector is the zero vector.
+ * @param vec The vector to normalize.
  * @return A normalized vector.
  */
 [[nodiscard]] Vec2 normalize(const Vec2& vec);
