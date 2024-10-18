@@ -16,7 +16,6 @@ int main()
     rect.setCenter(kn::window::getSize() / 2);
 
     const kn::TileMap tileMap("../example/assets/room.tmx");
-    const kn::Layer& wallLayer = tileMap.getLayer("Background");
 
     bool done = false;
     while (!done)
@@ -32,8 +31,8 @@ int main()
 
         kn::window::clear();
 
-        for (const kn::Tile& tile : wallLayer.tiles)
-            kn::window::blit(*tileMap.getTexture(), tile.rect, tile.crop);
+        tileMap.drawLayer("Background");
+        tileMap.drawLayer("Wall");
         kn::window::blit(texture, rect);
 
         kn::window::flip();
