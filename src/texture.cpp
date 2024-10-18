@@ -17,11 +17,13 @@ Texture::Texture(const std::string& path)
 
 Texture::Texture(const math::Vec2& size, const Color color)
 {
-    SDL_Surface* surface = SDL_CreateRGBSurface(0, static_cast<int>(size.x), static_cast<int>(size.y), 32, 0, 0, 0, 0);
+    SDL_Surface* surface =
+        SDL_CreateRGBSurface(0, static_cast<int>(size.x), static_cast<int>(size.y), 32, 0, 0, 0, 0);
     if (!surface)
         WARN("Failed to create surface")
     else
-        SDL_FillRect(surface, nullptr, SDL_MapRGB(surface->format, color.r, color.g, color.b));
+        SDL_FillRect(surface, nullptr,
+                     SDL_MapRGBA(surface->format, color.r, color.g, color.b, color.a));
 
     texture = SDL_CreateTextureFromSurface(window::getRenderer(), surface);
     if (!texture)

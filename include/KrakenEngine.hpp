@@ -12,5 +12,6 @@
 #include "Rect.hpp"
 #include "Sound.hpp"
 #include "Texture.hpp"
+#include "TileMap.hpp"
 #include "Time.hpp"
 #include "Window.hpp"

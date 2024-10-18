@@ -2,9 +2,9 @@
 #include <SDL_mixer.h>
 #include <SDL_ttf.h>
 
-#include "Window.hpp"
 #include "ErrorLogger.hpp"
 #include "Music.hpp"
+#include "Window.hpp"
 
 namespace kn::window
 {
@@ -42,7 +42,8 @@ void init(const math::Vec2& resolution, const std::string& title, const int scal
     }
 
     _window = SDL_CreateWindow("Kraken Window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-                               static_cast<int>(resolution.x) * scale, static_cast<int>(resolution.y) * scale, SDL_WINDOW_SHOWN);
+                               static_cast<int>(resolution.x) * scale,
+                               static_cast<int>(resolution.y) * scale, SDL_WINDOW_SHOWN);
     if (!_window)
         FATAL("SDL_CreateWindow Error: " + std::string(SDL_GetError()))
 
@@ -52,7 +53,8 @@ void init(const math::Vec2& resolution, const std::string& title, const int scal
 
     if (scale > 1)
     {
-        SDL_RenderSetLogicalSize(_renderer, static_cast<int>(resolution.x), static_cast<int>(resolution.y));
+        SDL_RenderSetLogicalSize(_renderer, static_cast<int>(resolution.x),
+                                 static_cast<int>(resolution.y));
         SDL_RenderSetIntegerScale(_renderer, SDL_TRUE);
     }
 
@@ -109,7 +111,7 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
     if (!_renderer)
         WARN("Cannot blit before creating the window")
 
-    if (math::Vec2{srcRect.x, srcRect.y} == math::Vec2())
+    if (math::Vec2{srcRect.w, srcRect.h} == math::Vec2())
     {
         SDL_RenderCopyF(_renderer, texture.getSDLTexture(), nullptr, &dstRect);
         return;
@@ -163,8 +165,8 @@ void blitEx(const Texture& texture, const Rect& dstRect, const Rect& srcRect, co
     SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), &src, &dstRect, angle, nullptr, flipAxis);
 }
 
-void blitEx(const Texture& texture, const math::Vec2& position, const double angle, const bool flipX,
-            const bool flipY)
+void blitEx(const Texture& texture, const math::Vec2& position, const double angle,
+            const bool flipX, const bool flipY)
 {
     if (!_renderer)
         WARN("Cannot blit before creating the window")

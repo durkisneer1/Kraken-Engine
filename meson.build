@@ -2,9 +2,9 @@
 project(
     'kraken-engine',
     ['c', 'cpp'],
-    license: 'MIT',
-    license_files: 'LICENSE',
-    default_options: [
+    license : 'MIT',
+    license_files : 'LICENSE',
+    default_options : [
         'default_library=static',
         'c_std=c17',
         'cpp_std=c++17',
@@ -34,17 +34,17 @@ if compiler.get_id() == 'msvc'
 endif
 
 # Static Library File
-libkraken = static_library('kraken', sources: sources, include_directories: incs, dependencies: deps)
+libkraken = static_library('kraken', sources : sources, include_directories : incs, dependencies : deps)
 
 # Build Example Program
 if get_option('build_example')
     subdir('example')
     executable(
         'krakenapp',
-        sources: example_src,
-        include_directories: [incs, include_directories('example')],
-        dependencies: deps,
-        win_subsystem: 'console',
-        link_with: libkraken,
+        sources : example_src,
+        include_directories : [incs, include_directories('example')],
+        dependencies : deps,
+        win_subsystem : 'console',
+        link_with : libkraken,
     )
 endif
