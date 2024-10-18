@@ -9,6 +9,7 @@ API Reference
     rect.rst
     sound.rst
     texture.rst
+    tile_map.rst
     constants.rst
     draw.rst
     input.rst
