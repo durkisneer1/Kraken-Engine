@@ -1,6 +1,6 @@
 option(
     'build_example',
-    type: 'boolean',
-    value: true,
-    description: 'Build example demos, installs SDL2. On by default.',
+    type : 'boolean',
+    value : true,
+    description : 'Build example demo. Off by default.',
 )
