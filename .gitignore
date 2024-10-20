@@ -36,3 +36,4 @@ subprojects/**/
 .vscode/
 .idea/
 *.gz
+*.tar
