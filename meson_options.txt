@@ -1,0 +1,6 @@
+option(
+    'build_example',
+    type : 'boolean',
+    value : true,
+    description : 'Build example demo. Off by default.',
+)

@@ -13,16 +13,13 @@ TileMap::TileMap(const std::string& filePath)
 {
     pugi::xml_document doc;
     if (!doc.load_file(filePath.c_str()))
-    {
-        std::cout << "Failed to load " + filePath << std::endl;
-        return;
-    }
+        throw std::runtime_error("Failed to load " + filePath);
 
     const size_t lastSlashPos = filePath.find_last_of('/');
     dirPath = (lastSlashPos != std::string::npos) ? filePath.substr(0, lastSlashPos + 1) : "";
 
     const auto map = doc.child("map");
-    if (!getTexture(map))
+    if (getTexture(map); !texture)
         return;
 
     const int mapWidth = std::stoi(map.attribute("width").value());
@@ -42,13 +39,18 @@ TileMap::TileMap(const std::string& filePath)
         int tileCounter = 0;
         while (std::getline(ss, value, ','))
         {
-            if (value.empty() || value.find_first_not_of("123456789") != std::string::npos)
+            if (value.empty() || !std::all_of(value.begin(), value.end(), ::isdigit))
             {
                 tileCounter++;
                 continue;
             }
 
             const int tileId = std::stoi(value) - 1;
+            if (tileId < 0)
+            {
+                tileCounter++;
+                continue;
+            }
 
             const int srcX = (tileId % srcMapWidth) * tileWidth;
             const int srcY = (tileId / srcMapWidth) * tileHeight;
@@ -61,7 +63,7 @@ TileMap::TileMap(const std::string& filePath)
             tileCounter++;
         }
 
-        layers.emplace_back(Layer{child.attribute("name").value(), std::move(tiles)});
+        layerHash[child.attribute("name").value()] = Layer{std::move(tiles)};
     }
 }
 
@@ -71,32 +73,44 @@ TileMap::~TileMap()
     texture = nullptr;
 }
 
-bool TileMap::getTexture(const pugi::xml_node& map)
+void TileMap::drawMap() const
+{
+    for (const auto& [name, layer] : layerHash)
+        drawLayer(name);
+}
+
+void TileMap::getTexture(const pugi::xml_node& map)
 {
     const std::string tsxPath = dirPath + map.child("tileset").attribute("source").value();
 
     pugi::xml_document doc;
     if (!doc.load_file(tsxPath.c_str()))
     {
-        ERROR("Failed to load " + tsxPath);
-        return false;
+        ERROR("Failed to load " + tsxPath)
+        return;
     }
 
     texture =
         new Texture(dirPath + doc.child("tileset").child("image").attribute("source").value());
-    return true;
 }
 
 const Layer& TileMap::getLayer(const std::string& name) const
 {
-    for (const auto& layer : layers)
-        if (layer.name == name)
-            return layer;
+    if (const auto it = layerHash.find(name); it != layerHash.end())
+        return it->second;
 
-    ERROR("Layer " + name + " not found");
-    return Layer();
+    throw std::runtime_error("Layer " + name + " not found");
 }
 
-Texture* TileMap::getTexture() const { return texture; }
+void TileMap::drawLayer(const std::string& name) const
+{
+    if (const auto it = layerHash.find(name); it != layerHash.end())
+    {
+        for (const Tile& tile : it->second.tiles)
+            window::blit(*texture, tile.rect, tile.crop);
+    }
+    else
+        throw std::runtime_error("Layer " + name + " not found");
+}
 
 } // namespace kn
