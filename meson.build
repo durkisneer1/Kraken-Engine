@@ -8,12 +8,12 @@ project(
         'default_library=static',
         'c_std=c17',
         'cpp_std=c++17',
-        'warning_level=2',
+        'warning_level=3',
     ],
 )
 
 # Compiler Type
-compiler = meson.get_compiler('c')
+cc = meson.get_compiler('c')
 
 # Sources
 subdir('src')
@@ -29,12 +29,14 @@ deps = [
     dependency('sdl2_mixer'),
 ]
 
-if compiler.get_id() == 'msvc'
+if cc.get_id() == 'msvc'
     deps += dependency('sdl2main')
 endif
 
 # Static Library File
 libkraken = static_library('kraken', sources : sources, include_directories : incs, dependencies : deps)
+kraken_engine_dep = declare_dependency(link_with : libkraken, dependencies : deps, include_directories : incs)
+meson.override_dependency('kraken-engine', kraken_engine_dep)
 
 # Build Example Program
 if get_option('build_example')
@@ -43,7 +45,7 @@ if get_option('build_example')
         'krakenapp',
         sources : example_src,
         include_directories : [incs, include_directories('example')],
-        dependencies : deps,
+        dependencies : deps + [kraken_engine_dep],
         win_subsystem : 'console',
         link_with : libkraken,
     )
