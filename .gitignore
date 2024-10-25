@@ -37,3 +37,4 @@ subprojects/**/
 .idea/
 *.gz
 *.tar
+.vs/

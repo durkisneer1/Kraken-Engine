@@ -29,7 +29,7 @@ deps = [
 ]
 
 if cc.get_id() == 'msvc'
-    deps += dependency('sdl2main')
+    message('Using MSVC Compiler')
 endif
 
 # Static Library File
