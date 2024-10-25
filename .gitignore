@@ -32,7 +32,8 @@
 *.app
 
 build/
-subprojects/**/
+subprojects/*
+!subprojects/wrapdb.json
 .vscode/
 .idea/
 *.gz
