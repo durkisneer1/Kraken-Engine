@@ -3,7 +3,6 @@ project(
     'kraken-engine',
     ['c', 'cpp'],
     license : 'MIT',
-    license_files : 'LICENSE',
     default_options : [
         'default_library=static',
         'c_std=c17',
