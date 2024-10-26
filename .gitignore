@@ -38,3 +38,7 @@ subprojects/**/
 *.gz
 *.tar
 .vs/
+
+# Wrap files that meson is scared of for some reason
+subprojects/libpng.wrap
+subprojects/zlib.wrap
