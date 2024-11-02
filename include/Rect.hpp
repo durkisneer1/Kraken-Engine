@@ -7,7 +7,7 @@ namespace kn
 namespace math
 {
 class Vec2;
-}  // namespace math
+} // namespace math
 /**
  * @brief A 2D rectangle.
  */
@@ -92,13 +92,13 @@ struct Rect : SDL_FRect
     [[nodiscard]] float getRight() const;
     [[nodiscard]] float getTop() const;
     [[nodiscard]] float getBottom() const;
-    math::Vec2 getTopLeft();
-    math::Vec2 getTopMid();
-    math::Vec2 getTopRight();
-    math::Vec2 getBottomLeft();
+    [[nodiscard]] math::Vec2 getTopLeft() const;
+    [[nodiscard]] math::Vec2 getTopMid() const;
+    [[nodiscard]] math::Vec2 getTopRight() const;
+    [[nodiscard]] math::Vec2 getBottomLeft() const;
     [[nodiscard]] math::Vec2 getBottomMid() const;
     [[nodiscard]] math::Vec2 getBottomRight() const;
-    math::Vec2 getLeftMid();
+    [[nodiscard]] math::Vec2 getLeftMid() const;
     [[nodiscard]] math::Vec2 getRightMid() const;
 };
 } // namespace kn

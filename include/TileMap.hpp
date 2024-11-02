@@ -47,7 +47,7 @@ class TileMap final
      *
      * @param name The name of the layer
      */
-    [[nodiscard]] const Layer& getLayer(const std::string& name) const;
+    [[nodiscard]] const Layer* getLayer(const std::string& name) const;
 
     /**
      * @brief Draw a layer from the tile map

@@ -25,14 +25,20 @@ TileMap::TileMap(const std::string& filePath)
     const int mapWidth = std::stoi(map.attribute("width").value());
     const int tileWidth = std::stoi(map.attribute("tilewidth").value());
     const int tileHeight = std::stoi(map.attribute("tileheight").value());
-    const int srcMapWidth = static_cast<int>(texture->getSize().x) / tileWidth;
+    const int tileSetWidth = static_cast<int>(texture->getSize().x) / tileWidth;
 
     for (const auto& child : map.children())
     {
         if (std::string(child.name()) != "layer")
             continue;
 
-        std::stringstream ss(child.child("data").child_value());
+        std::string dataContent = child.child("data").child_value();
+        dataContent.erase(std::remove(dataContent.begin(), dataContent.end(), '\n'),
+                          dataContent.end());
+        dataContent.erase(std::remove(dataContent.begin(), dataContent.end(), '\r'),
+                          dataContent.end());
+
+        std::stringstream ss(dataContent);
         std::string value;
         std::vector<Tile> tiles;
 
@@ -52,8 +58,8 @@ TileMap::TileMap(const std::string& filePath)
                 continue;
             }
 
-            const int srcX = (tileId % srcMapWidth) * tileWidth;
-            const int srcY = (tileId / srcMapWidth) * tileHeight;
+            const int srcX = (tileId % tileSetWidth) * tileWidth;
+            const int srcY = (tileId / tileSetWidth) * tileHeight;
             const int destX = (tileCounter % mapWidth) * tileWidth;
             const int destY = (tileCounter / mapWidth) * tileHeight;
 
@@ -63,7 +69,7 @@ TileMap::TileMap(const std::string& filePath)
             tileCounter++;
         }
 
-        layerHash[child.attribute("name").value()] = Layer{std::move(tiles)};
+        layerHash[child.attribute("name").value()] = {std::move(tiles)};
     }
 }
 
@@ -94,23 +100,21 @@ void TileMap::getTexture(const pugi::xml_node& map)
         new Texture(dirPath + doc.child("tileset").child("image").attribute("source").value());
 }
 
-const Layer& TileMap::getLayer(const std::string& name) const
+const Layer* TileMap::getLayer(const std::string& name) const
 {
     if (const auto it = layerHash.find(name); it != layerHash.end())
-        return it->second;
+        return &it->second;
 
     throw std::runtime_error("Layer " + name + " not found");
 }
 
 void TileMap::drawLayer(const std::string& name) const
 {
-    if (const auto it = layerHash.find(name); it != layerHash.end())
-    {
-        for (const Tile& tile : it->second.tiles)
-            window::blit(*texture, tile.rect, tile.crop);
-    }
-    else
+    const auto it = layerHash.find(name);
+    if (it == layerHash.end())
         throw std::runtime_error("Layer " + name + " not found");
+    for (const Tile& tile : it->second.tiles)
+        window::blit(*texture, tile.rect, tile.crop);
 }
 
 } // namespace kn

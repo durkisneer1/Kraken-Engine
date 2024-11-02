@@ -10,8 +10,12 @@
 #include "Rect.hpp"
 #include "Texture.hpp"
 
+namespace kn
+{
 
-namespace kn::window
+inline math::Vec2 camera;
+
+namespace window
 {
 /**
  * @brief Initialize the window.
@@ -136,6 +140,5 @@ void setFullscreen(bool fullscreen);
  * @brief Quit SDL and destroy the window.
  */
 void quit();
-
-} // namespace kn::window
-
+} // namespace window
+} // namespace kn

@@ -7,14 +7,13 @@ math::Vec2 Rect::getPos() { return {x, y}; }
 
 math::Vec2 Rect::getSize() { return {w, h}; }
 
-Rect::Rect(const float x, const float y, const float w, const float h)
-    : SDL_FRect{x, y, w, h} {}
+Rect::Rect(const float x, const float y, const float w, const float h) : SDL_FRect{x, y, w, h} {}
 
- Rect::Rect(const int x, const int y, const int w, const int h)
-     : SDL_FRect{
-         static_cast<float>(x), static_cast<float>(y), static_cast<float>(w), static_cast<float>(h)
-     } {}
-
+Rect::Rect(const int x, const int y, const int w, const int h)
+    : SDL_FRect{static_cast<float>(x), static_cast<float>(y), static_cast<float>(w),
+                static_cast<float>(h)}
+{
+}
 
 void Rect::setSize(const math::Vec2& size)
 {
@@ -112,19 +111,19 @@ float Rect::getTop() const { return y; }
 
 float Rect::getBottom() const { return y + h; }
 
-math::Vec2 Rect::getTopLeft() { return {x, y}; }
+math::Vec2 Rect::getTopLeft() const { return {x, y}; }
 
-math::Vec2 Rect::getTopMid() { return {x + w / 2, y}; }
+math::Vec2 Rect::getTopMid() const { return {x + w / 2, y}; }
 
-math::Vec2 Rect::getTopRight() { return {x + w, y}; }
+math::Vec2 Rect::getTopRight() const { return {x + w, y}; }
 
-math::Vec2 Rect::getBottomLeft() { return {x, y + h}; }
+math::Vec2 Rect::getBottomLeft() const { return {x, y + h}; }
 
 math::Vec2 Rect::getBottomMid() const { return {x + w / 2, y + h}; }
 
 math::Vec2 Rect::getBottomRight() const { return {x + w, y + h}; }
 
-math::Vec2 Rect::getLeftMid() { return {x, y + h / 2}; }
+math::Vec2 Rect::getLeftMid() const { return {x, y + h / 2}; }
 
 math::Vec2 Rect::getRightMid() const { return {x + w, y + h / 2}; }
 } // namespace kn
