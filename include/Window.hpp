@@ -13,6 +13,9 @@
 namespace kn
 {
 
+/**
+ * @brief A global camera position.
+ */
 inline math::Vec2 camera;
 
 namespace window

@@ -7,7 +7,7 @@ int main()
 {
     kn::window::init({320, 180}, "Kraken", 4);
     kn::time::Clock clock;
-    kn::camera = {-32, -24};
+    kn::camera = {-32, -26};
 
     const kn::TileMap tileMap("../example/assets/room.tmx");
     const kn::Layer* wallLayer = tileMap.getLayer("Wall");
