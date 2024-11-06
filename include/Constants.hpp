@@ -220,4 +220,6 @@ const int BUTTON_LEFT = SDL_BUTTON_LEFT;
 const int BUTTON_MIDDLE = SDL_BUTTON_MIDDLE;
 const int BUTTON_RIGHT = SDL_BUTTON_RIGHT;
 
+const unsigned int MILLISECONDS_PER_SECOND = 1000U;
+
 } // namespace kn

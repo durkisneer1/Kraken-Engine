@@ -11,6 +11,7 @@ sources = [
     'src/tile_map.cpp',
     'src/time.cpp',
     'src/window.cpp',
+    'src/AnimatedTexture.cpp'
 ]
 
 sources += 'src/pugixml/pugixml.cpp'

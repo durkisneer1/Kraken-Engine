@@ -4,9 +4,14 @@
 #define AxisY 1
 
 Player::Player(const kn::Layer* collisionLayer)
-    : texture("../example/assets/player.png"), rect(texture.getRect()),
+    : texture(), rect(),
       collisionLayer(collisionLayer)
 {
+    if (!texture.loadFromFile("../example/assets/player.png"))
+    {
+        ERROR("Failed to load texture from file ../example/assets/player.png")
+    }
+    rect = texture.getRect();
     rect.setTopLeft({48, 120});
 }
 
