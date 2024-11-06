@@ -20,11 +20,11 @@ class Texture final
 {
   public:
     /**
-     * @brief Load an image from disk.
+     * @brief Constructs an empty Texture object. Note that the internal SDL_Texture* is nullptr until
+     *        loadFromFile is called.
      *
-     * @param path The path to the texture file.
      */
-    explicit Texture(const std::string& path);
+    explicit Texture();
 
     /**
      * @brief Create a solid color texture.
@@ -67,6 +67,15 @@ class Texture final
      * @return The SDL texture.
      */
     [[nodiscard]] SDL_Texture* getSDLTexture() const;
+
+    /**
+     * @brief Loads the Texture from the given file
+     *
+     * @param path
+     * @return true
+     * @return false
+     */
+    bool loadFromFile(const std::string& path);
 
     /**
      * @brief Set the size of the texture rect.

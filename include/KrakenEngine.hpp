@@ -15,3 +15,4 @@
 #include "TileMap.hpp"
 #include "Time.hpp"
 #include "Window.hpp"
+#include "AnimatedTexture.hpp"

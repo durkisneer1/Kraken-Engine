@@ -20,7 +20,9 @@ TileMap::TileMap(const std::string& filePath)
 
     const auto map = doc.child("map");
     if (getTexture(map); !texture)
+    {
         return;
+    }
 
     const int mapWidth = std::stoi(map.attribute("width").value());
     const int tileWidth = std::stoi(map.attribute("tilewidth").value());
@@ -96,8 +98,11 @@ void TileMap::getTexture(const pugi::xml_node& map)
         return;
     }
 
-    texture =
-        new Texture(dirPath + doc.child("tileset").child("image").attribute("source").value());
+    texture = new Texture();
+    if (!texture->loadFromFile(dirPath + doc.child("tileset").child("image").attribute("source").value()))
+    {
+        ERROR("Failed to load texture from file: " + dirPath + doc.child("tileset").child("image").attribute("source").value());
+    }
 }
 
 const Layer* TileMap::getLayer(const std::string& name) const
