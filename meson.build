@@ -18,9 +18,9 @@ incs = include_directories('include')
 
 deps = [
     dependency('sdl2'),
-    dependency('sdl2_image'),
-    dependency('sdl2_ttf'),
-    dependency('sdl2_mixer'),
+    dependency('SDL2_image'),
+    dependency('SDL2_ttf'),
+    dependency('SDL2_mixer'),
 ]
 
 # Declare kraken engine lib and dependency
@@ -37,5 +37,31 @@ if get_option('build_example')
         dependencies : deps + [kraken_engine_dep],
         win_subsystem : 'console',
         link_with : libkraken,
+    )
+endif
+
+if get_option('build_tests')
+    gtest_proj = subproject('gtest')
+
+    gtest_dep = gtest_proj.get_variable('gtest_dep')
+    gmock_dep = gtest_proj.get_variable('gmock_dep')
+    gtest_main_dep = gtest_proj.get_variable('gtest_main_dep')
+    gtest_dep = dependency('gtest', main : true, required : false)
+    gmock_dep = dependency('gmock', main : true, required : false)
+    gtest_main_dep = dependency('gtest_main', main : true, required : false)
+
+    gtest = shared_library('gtest', install : true)
+    gmock = shared_library('gmock', install: true)
+    gtest_main = shared_library('gtest_main', install: true)
+
+
+    subdir('tests')
+    executable(
+        'krakentests',
+        sources : test_src,
+        include_directories : [incs, include_directories('tests')],
+        dependencies : deps + [kraken_engine_dep, gtest_dep, gtest_main_dep],
+        win_subsystem : 'console',
+        link_with : [libkraken, gtest, gtest_main]
     )
 endif
