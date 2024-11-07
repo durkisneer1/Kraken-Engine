@@ -1,21 +1,29 @@
 #include <gtest/gtest.h>
 
 #include "Math.hpp"
+#include "TestBase.hpp"
 
 using kn::math::Vec2;
 
 namespace
 {
 
-class MathTest : public ::testing::Test
+class MathTest : public TestBase
 {
-  protected:
-    MathTest() {}
-    ~MathTest() override = default;
+  public:
+    MathTest() : TestBase() {}
+    virtual ~MathTest() override = default;
 
-    void SetUp() override {}
-    void TearDown() override {}
+  protected:
+    virtual void SetUp() override {}
+    virtual void TearDown() override {}
+
+    static const double DOUBLE_INF;
+    static const float  FLOAT_INF;
 };
+
+const double MathTest::DOUBLE_INF = std::numeric_limits<double>::infinity();
+const float MathTest::FLOAT_INF  = std::numeric_limits<float> ::infinity();
 
 TEST_F(MathTest, Vec2DefaultConstructor)
 {
@@ -99,7 +107,7 @@ TEST_F(MathTest, GetLength)
 {
     Vec2 first = Vec2();
     Vec2 second = Vec2(3.0, 4.0);
-    Vec2 third = Vec2(INFINITY, INFINITY);
+    Vec2 third = Vec2(FLOAT_INF, FLOAT_INF);
     Vec2 fourth = Vec2(4.0, 3.0);
 
     EXPECT_EQ(first.getLength(), 0.0);
@@ -112,15 +120,15 @@ TEST_F(MathTest, Normalize)
 {
     Vec2 first = Vec2();
     Vec2 second = Vec2(3.0, 4.0);
-    Vec2 third = Vec2(INFINITY, INFINITY);
+    Vec2 third = Vec2(DOUBLE_INF, DOUBLE_INF);
 
     EXPECT_EQ(first.normalize(), false);
-    EXPECT_EQ(first, Vec2::ZERO());
+    EXPECT_EQ(first, Vec2());
     EXPECT_EQ(second.normalize(), true);
     EXPECT_EQ(second, Vec2(0.6, 0.8));
     EXPECT_EQ(third.normalize(), false);
-    EXPECT_EQ(third.x, std::numeric_limits<double>::infinity());
-    EXPECT_EQ(third.y, std::numeric_limits<double>::infinity());
+    EXPECT_EQ(third.x, DOUBLE_INF);
+    EXPECT_EQ(third.y, DOUBLE_INF);
 }
 
 } // namespace
