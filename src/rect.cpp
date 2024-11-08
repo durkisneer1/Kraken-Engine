@@ -3,9 +3,9 @@
 
 namespace kn
 {
-math::Vec2 Rect::getPos() { return {x, y}; }
+math::Vec2 Rect::getPos() const { return {x, y}; }
 
-math::Vec2 Rect::getSize() { return {w, h}; }
+math::Vec2 Rect::getSize() const { return {w, h}; }
 
 Rect::Rect(const float x, const float y, const float w, const float h) : SDL_FRect{x, y, w, h} {}
 

@@ -6,8 +6,11 @@
 
 namespace kn
 {
-Texture::Texture()
+
+Texture::~Texture()
 {
+    if (texture)
+        SDL_DestroyTexture(texture);
 }
 
 bool Texture::loadFromFile(const std::string& path)
@@ -83,4 +86,5 @@ void Texture::fitHeight(const float height)
     rect.w = rect.w * scale;
     rect.h = height;
 }
+
 } // namespace kn

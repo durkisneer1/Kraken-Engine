@@ -2,10 +2,9 @@
 
 #include <cstdint>
 
-
 namespace kn::overflow
 {
-//@{
+
 /**
  * @brief Checks if an overflow would occur in summation
  *
@@ -24,9 +23,7 @@ bool isSumValid(const uint64_t& first, const uint64_t& second);
 bool isSumValid(const int32_t& first, const int32_t& second);
 
 bool isSumValid(const int64_t& first, const int64_t& second);
-//@}
 
-//@{
 /**
  * @brief Checks if an overflow would occur in multiplication
  *
@@ -45,9 +42,7 @@ bool isProductValid(const uint64_t& first, const uint64_t& second);
 bool isProductValid(const int32_t& first, const int32_t& second);
 
 bool isProductValid(const int64_t& first, const int64_t& second);
-//@}
 
-//@{
 /**
  * @brief Checks if the value is close to zero
  *
@@ -58,8 +53,5 @@ bool isProductValid(const int64_t& first, const int64_t& second);
 bool closeToZero(const double& value, double tolerance = 0.0001);
 
 bool closeToZero(const float& value, float tolerance = 0.0001f);
-//@}
 
 } // namespace kn::overflow
-
-

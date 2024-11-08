@@ -5,7 +5,7 @@
 
 namespace kn
 {
-Font::Font(const std::string& fileDir, int ptSize)
+Font::Font(const std::string& fileDir, const int ptSize)
 {
     font = TTF_OpenFont(fileDir.c_str(), ptSize);
     if (!font)
@@ -19,15 +19,15 @@ Texture Font::render(const std::string& text, const bool antialias, const Color 
 
     if (antialias)
     {
-        surface = wrapLength > 0 ?
-            TTF_RenderUTF8_Blended_Wrapped(font, text.c_str(), color, wrapLength) :
-            TTF_RenderUTF8_Blended(font, text.c_str(), color);
+        surface = wrapLength > 0
+                      ? TTF_RenderUTF8_Blended_Wrapped(font, text.c_str(), color, wrapLength)
+                      : TTF_RenderUTF8_Blended(font, text.c_str(), color);
     }
     else
     {
-        surface = wrapLength > 0 ?
-            TTF_RenderText_Solid_Wrapped(font, text.c_str(), color, wrapLength) :
-            TTF_RenderText_Solid(font, text.c_str(), color);
+        surface = wrapLength > 0
+                      ? TTF_RenderText_Solid_Wrapped(font, text.c_str(), color, wrapLength)
+                      : TTF_RenderText_Solid(font, text.c_str(), color);
     }
 
     if (!surface)

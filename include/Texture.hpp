@@ -4,14 +4,11 @@
 #include <string>
 
 #include "Constants.hpp"
+#include "Math.hpp"
 #include "Rect.hpp"
 
 namespace kn
 {
-namespace math
-{
-class Vec2;
-} // namespace math
 
 /**
  * @brief A texture object.
@@ -20,11 +17,10 @@ class Texture final
 {
   public:
     /**
-     * @brief Constructs an empty Texture object. Note that the internal SDL_Texture* is nullptr until
-     *        loadFromFile is called.
-     *
+     * @brief Constructs an empty Texture object.
+     * @note The internal SDL_Texture* is nullptr until loadFromFile is called.
      */
-    explicit Texture();
+    Texture() = default;
 
     /**
      * @brief Create a solid color texture.
@@ -35,17 +31,13 @@ class Texture final
     Texture(const math::Vec2& size, Color color);
 
     /**
-     * @brief Create a texture from an existing surface.
+     * @brief Create a texture from an existing SDL texture pointer.
      *
      * @param sdlTexture An SDL texture object.
      */
     explicit Texture(SDL_Texture* sdlTexture);
 
-    ~Texture()
-    {
-        if (texture)
-            SDL_DestroyTexture(texture);
-    }
+    ~Texture();
 
     /**
      * @brief Get the size of the texture.
@@ -62,20 +54,20 @@ class Texture final
     [[nodiscard]] Rect getRect() const;
 
     /**
-     * @brief Get the SDL texture.
+     * @brief Get the SDL texture pointer.
      *
-     * @return The SDL texture.
+     * @return The SDL texture pointer.
      */
     [[nodiscard]] SDL_Texture* getSDLTexture() const;
 
     /**
-     * @brief Loads the Texture from the given file
+     * @brief Loads an image from disk.
      *
-     * @param path
-     * @return true
-     * @return false
+     * @param filePath Path to the image file.
+     *
+     * @return true when successful, false on failure.
      */
-    bool loadFromFile(const std::string& path);
+    bool loadFromFile(const std::string& filePath);
 
     /**
      * @brief Set the size of the texture rect.
@@ -92,14 +84,14 @@ class Texture final
     void scaleBy(float factor);
 
     /**
-     * @brief Fit the texture rect to a width while maintaining the aspect ratio.
+     * @brief Fit the texture rect to a width while maintaining aspect ratio.
      *
      * @param width The width to fit to.
      */
     void fitWidth(float width);
 
     /**
-     * @brief Fit the texture rect to a height while maintaining the aspect ratio.
+     * @brief Fit the texture rect to a height while maintaining aspect ratio.
      *
      * @param height The height to fit to.
      */

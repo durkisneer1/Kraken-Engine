@@ -2,6 +2,7 @@
 
 #define SDL_MAIN_HANDLED
 
+#include "AnimationController.hpp"
 #include "Constants.hpp"
 #include "Draw.hpp"
 #include "Font.hpp"
@@ -15,4 +16,3 @@
 #include "TileMap.hpp"
 #include "Time.hpp"
 #include "Window.hpp"
-#include "AnimatedTexture.hpp"

@@ -31,14 +31,14 @@ struct Rect : SDL_FRect
      *
      * @return The position of the rectangle.
      */
-    math::Vec2 getPos();
+    math::Vec2 getPos() const;
 
     /**
      * @brief Get the size of the rectangle.
      *
      * @return The size of the rectangle.
      */
-    math::Vec2 getSize();
+    math::Vec2 getSize() const;
 
     /**
      * @brief Set the size of the rectangle.

@@ -5,6 +5,7 @@ API Reference
 .. toctree::
     :maxdepth: 1
 
+    animation_controller.rst
     font.rst
     rect.rst
     sound.rst

@@ -2,10 +2,8 @@
 Tutorials
 =========
 
-This page is currently under construction.
-We are working hard to create and compile video tutorials to
-help you get the most out of the Kraken Engine. Please check
-back soon for updates!
-
-.. image:: ../_static/under_construction.gif
-    :alt: Page Under Construction
+.. image:: https://img.youtube.com/vi/WxGaBL7S3X8/maxresdefault.jpg
+    :alt: Get Started with Kraken Engine
+    :target: https://www.youtube.com/watch?v=WxGaBL7S3X8
+    :align: center
+    :width: 600px

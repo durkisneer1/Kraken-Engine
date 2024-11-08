@@ -1,8 +1,15 @@
 #pragma once
 
 #include <KrakenEngine.hpp>
+#include <unordered_map>
 
-class Player
+enum AnimState
+{
+    IDLE,
+    WALK
+};
+
+class Player final
 {
   public:
     explicit Player(const kn::Layer* collisionLayer);
@@ -13,7 +20,11 @@ class Player
   private:
     void handleCollision(int axis);
 
-    kn::Texture texture;
+    kn::AnimationController animController;
+    bool facingRight = true;
+    AnimState animState = IDLE;
+    std::unordered_map<AnimState, kn::Texture> animMap;
+
     kn::Rect rect;
     kn::math::Vec2 velocity;
     const kn::Layer* collisionLayer;

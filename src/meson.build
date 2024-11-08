@@ -1,4 +1,5 @@
 sources = [
+    'src/animation_controller.cpp',
     'src/draw.cpp',
     'src/font.cpp',
     'src/input.cpp',
@@ -11,7 +12,6 @@ sources = [
     'src/tile_map.cpp',
     'src/time.cpp',
     'src/window.cpp',
-    'src/AnimatedTexture.cpp'
 ]
 
 sources += 'src/pugixml/pugixml.cpp'

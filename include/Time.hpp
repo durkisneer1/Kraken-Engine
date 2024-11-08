@@ -28,8 +28,8 @@ class Clock final
     double m_frameTime = 0.0;
     double m_targetFrameTime = 0.0;
     double m_deltaTime = 0.0;
-    double m_frequency = SDL_GetPerformanceFrequency();
-    double m_now = SDL_GetPerformanceCounter();
-    double m_last = SDL_GetPerformanceCounter();
+    double m_frequency = static_cast<double>(SDL_GetPerformanceFrequency());
+    double m_now = static_cast<double>(SDL_GetPerformanceCounter());
+    double m_last = static_cast<double>(SDL_GetPerformanceCounter());
 };
 } // namespace kn::time

@@ -19,9 +19,7 @@ void init(const math::Vec2& resolution, const std::string& title, const int scal
         WARN("Cannot initialize renderer more than once")
 
     if (SDL_Init(SDL_INIT_VIDEO))
-    {
         FATAL("SDL_Init Error: " + std::string(SDL_GetError()))
-    }
     if (!IMG_Init(IMG_INIT_PNG))
     {
         FATAL("IMG_Init Error: " + std::string(IMG_GetError()))
@@ -68,13 +66,11 @@ void quit()
     if (_window)
         SDL_DestroyWindow(_window);
 
-    _events.clear();
-    _event = Event();
+    music::unload();
     Mix_CloseAudio();
     IMG_Quit();
     TTF_Quit();
     SDL_Quit();
-    music::unload();
 }
 
 const std::vector<Event>& getEvents()
@@ -114,17 +110,14 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
     Rect offsetRect = dstRect;
     offsetRect.setTopLeft(offsetRect.getTopLeft() - camera);
 
-    if (math::Vec2{srcRect.w, srcRect.h} == math::Vec2())
+    if (srcRect.getSize() == math::Vec2())
     {
         SDL_RenderCopyF(_renderer, texture.getSDLTexture(), nullptr, &offsetRect);
         return;
     }
 
-    SDL_Rect src;
-    src.x = static_cast<int>(srcRect.x);
-    src.y = static_cast<int>(srcRect.y);
-    src.w = static_cast<int>(srcRect.w);
-    src.h = static_cast<int>(srcRect.h);
+    const SDL_Rect src = {static_cast<int>(srcRect.x), static_cast<int>(srcRect.y),
+                          static_cast<int>(srcRect.w), static_cast<int>(srcRect.h)};
 
     SDL_RenderCopyF(_renderer, texture.getSDLTexture(), &src, &offsetRect);
 }
@@ -155,18 +148,15 @@ void blitEx(const Texture& texture, const Rect& dstRect, const Rect& srcRect, co
     Rect offsetRect = dstRect;
     offsetRect.setTopLeft(offsetRect.getTopLeft() - camera);
 
-    if (math::Vec2{srcRect.x, srcRect.y} == math::Vec2())
+    if (srcRect.getSize() == math::Vec2())
     {
         SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &offsetRect, angle, nullptr,
                           flipAxis);
         return;
     }
 
-    SDL_Rect src;
-    src.x = static_cast<int>(srcRect.x);
-    src.y = static_cast<int>(srcRect.y);
-    src.w = static_cast<int>(srcRect.w);
-    src.h = static_cast<int>(srcRect.h);
+    const SDL_Rect src = {static_cast<int>(srcRect.x), static_cast<int>(srcRect.y),
+                          static_cast<int>(srcRect.w), static_cast<int>(srcRect.h)};
 
     SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), &src, &offsetRect, angle, nullptr,
                       flipAxis);
