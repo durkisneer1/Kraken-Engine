@@ -3,25 +3,27 @@
 
 #include <gtest/gtest.h>
 
-#include "ErrorLogger.hpp"
 #include "Window.hpp"
+#include "TestBase.hpp"
 
 namespace
 {
 
-class WindowTest : public ::testing::Test
+class WindowTest : public TestBase
 {
-  protected:
-    WindowTest() : m_size(320, 240), m_scale(2) { kn::ErrorLogger::setConsoleOnly(); }
+  public:
+    WindowTest() : TestBase(), m_size(320, 240), m_scale(2), m_title("Kraken Window") {}
 
     virtual ~WindowTest() {}
 
-    virtual void SetUp() { kn::window::init(m_size, m_scale); }
+  protected:
+    virtual void SetUp() { kn::window::init(m_size, m_title, m_scale); }
 
     virtual void TearDown() { kn::window::quit(); }
 
     kn::math::Vec2 m_size;
     int m_scale;
+    std::string m_title;
 };
 
 TEST_F(WindowTest, WindowInit)

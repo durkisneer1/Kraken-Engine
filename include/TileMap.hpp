@@ -35,29 +35,29 @@ class TileMap final
 {
   public:
     /**
-     * @brief Load a Tiled tmx file
+     * @brief Load a Tiled tmx file.
      *
-     * @param filePath The directory to the Tiled tmx file
+     * @param filePath The path to the Tiled tmx file.
      */
     explicit TileMap(const std::string& filePath);
     ~TileMap();
 
     /**
-     * @brief Get a layer from the loaded tile map
+     * @brief Get a layer from the loaded tile map.
      *
-     * @param name The name of the layer
+     * @param name The name of the layer.
      */
-    [[nodiscard]] const Layer& getLayer(const std::string& name) const;
+    [[nodiscard]] const Layer* getLayer(const std::string& name) const;
 
     /**
-     * @brief Draw a layer from the tile map
+     * @brief Draw a layer from the tile map.
      *
-     * @param name The name of the layer
+     * @param name The name of the layer.
      */
     void drawLayer(const std::string& name) const;
 
     /**
-     * @brief Draw all layers of the tile map
+     * @brief Draw all layers of the tile map.
      */
     void drawMap() const;
 

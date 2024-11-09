@@ -1,0 +1,84 @@
+name: Run GTest MacOS
+
+env:
+  SDL_VIDEODRIVER: "dummy"
+  SDL_AUDIODRIVER: "dummy"
+
+on:
+  push:
+    branches: [ "main", "**dev" ]
+  pull_request:
+
+jobs:
+  macos-gtest:
+    env:
+      MAC_ARCH: ${{ matrix.macarch }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      # Set fail-fast to false to ensure that feedback is delivered for all matrix combinations. Consider changing this to true when your workflow is stable.
+      fail-fast: false
+      # Set up a matrix to run the following 2 configurations:
+      # 1. <MacOS 13, x86_64, latest GCC compier toolchain on the default runner image, default generator>
+      # 2. <MacOS 13, arm64, latest GCC compiler toolchain on the default runner image, default generator>
+      # 3. <MacOS 13, x86_64, latest Clang compiler toolchain on the default runner image, default generator>
+      # 4. <MacOS 13, x86_64, latest Clang compiler toolchain on the default runner image, default generator>
+      # 5. <MacOS 14, x86_64, latest GCC compiler toolchain on the default runner image, default generator>
+      # 6. <MacOS 14, arm64, latest GCC compiler toolchain on the default runner image, default generator>
+      # 7. <MacOS 14, x86_64, latest Clang compiler toolchain on the default runner image, default generator>
+      # 8. <MacOS 14, x86_64, latest Clang compiler toolchain on the default runner image, default generator>
+      #
+      # To add more build types (Release, Debug, RelWithDebInfo, etc.) customize the build_type list.
+      matrix:
+        os: [macos-13, macos-14]
+        c_compiler: [gcc, clang]
+        macarch: [x86_64, arm64]
+        include:
+          - os: macos-13
+            macarch: x86_64
+            c_compiler: gcc
+            cpp_compiler: g++
+          - os: macos-13
+            macarch: arm64
+            c_compiler: gcc
+            cpp_compiler: g++
+          - os: macos-13
+            macarch: x86_64
+            c_compiler: clang
+            cpp_compiler: clang++
+          - os: macos-13
+            macarch: arm64
+            c_compiler: clang
+            cpp_compiler: clang++
+          - os: macos-14
+            macarch: x86_64
+            c_compiler: gcc
+            cpp_compiler: g++
+          - os: macos-14
+            macarch: arm64
+            c_compiler: gcc
+            cpp_compiler: g++
+          - os: macos-14
+            macarch: x86_64
+            c_compiler: clang
+            cpp_compiler: clang++
+          - os: macos-14
+            macarch: arm64
+            c_compiler: clang
+            cpp_compiler: clang++
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set reusable strings
+      # Turn repeated input strings (such as the build output directory) into step outputs. These step outputs can be used throughout the workflow file.
+      id: strings
+      shell: bash
+      run: |
+        echo "build-output-dir=${{ github.workspace }}/build" >> "$GITHUB_OUTPUT"
+    - uses: actions/setup-python@v5
+    - name: Install meson
+      run: python3 -m pip install meson ninja --break-system-packages
+    - name: Configure meson
+      run: meson setup build -Dbuild_tests=true
+    - name: Build test executable
+      run: cd build && meson compile -j$(sysctl -n hw.ncpu)
+    - name: Run Tests
+      run: cd build && ./krakentests --gtest_shuffle --gtest_color=true

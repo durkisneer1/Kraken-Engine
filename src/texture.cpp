@@ -6,13 +6,25 @@
 
 namespace kn
 {
-Texture::Texture(const std::string& path)
+
+Texture::~Texture()
+{
+    if (texture)
+        SDL_DestroyTexture(texture);
+}
+
+bool Texture::loadFromFile(const std::string& path)
 {
     texture = IMG_LoadTexture(window::getRenderer(), path.c_str());
     if (!texture)
+    {
         WARN("Failed to create texture from: " + path);
+        return false;
+    }
 
     query();
+
+    return true;
 }
 
 Texture::Texture(const math::Vec2& size, const Color color)
@@ -74,4 +86,5 @@ void Texture::fitHeight(const float height)
     rect.w = rect.w * scale;
     rect.h = height;
 }
+
 } // namespace kn

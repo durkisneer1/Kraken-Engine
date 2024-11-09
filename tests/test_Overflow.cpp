@@ -4,16 +4,17 @@
 
 #include "Constants.hpp"
 #include "Overflow.hpp"
+#include "TestBase.hpp"
 
 namespace
 {
 using kn::overflow::isProductValid;
 using kn::overflow::isSumValid;
 
-class DoubleOverflowTest : public ::testing::Test
+class DoubleOverflowTest : public TestBase
 {
   protected:
-    DoubleOverflowTest() : doubleMax(std::numeric_limits<double>::max()) {}
+    DoubleOverflowTest() : TestBase(), doubleMax(std::numeric_limits<double>::max()) {}
 
     virtual ~DoubleOverflowTest() {}
 
@@ -144,7 +145,7 @@ TEST_F(UnsignedFourByteIntTest, SumOfTwoFifthsMax)
 
 class UnsignedEightByteIntTest : public ::testing::Test
 {
-  protected:
+  public:
     UnsignedEightByteIntTest()
         : max(std::numeric_limits<uint64_t>::max()), min(std::numeric_limits<uint64_t>::min())
     {
@@ -152,6 +153,7 @@ class UnsignedEightByteIntTest : public ::testing::Test
 
     virtual ~UnsignedEightByteIntTest() {}
 
+  protected:
     virtual void SetUp() {}
 
     virtual void TearDown() {}

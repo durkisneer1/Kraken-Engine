@@ -1,9 +1,9 @@
+#include <SDL_mixer.h>
 #include <algorithm>
 #include <filesystem>
-#include <SDL_mixer.h>
 
-#include "Music.hpp"
 #include "ErrorLogger.hpp"
+#include "Music.hpp"
 
 namespace kn::music
 {
@@ -24,9 +24,7 @@ void load(const std::string& fileDir)
             FATAL("Failed to load music: " + fileDir);
     }
     else
-    {
         FATAL("Unsupported file format: " + fileDir);
-    }
 }
 
 void unload()
@@ -120,4 +118,5 @@ void setVolume(const float volume)
 }
 
 float getVolume() { return m_volume; }
+
 } // namespace kn::music
