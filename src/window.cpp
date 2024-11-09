@@ -1,6 +1,10 @@
-#include "Window.hpp"
+#include <SDL_image.h>
+#include <SDL_mixer.h>
+#include <SDL_ttf.h>
+
 #include "ErrorLogger.hpp"
 #include "Music.hpp"
+#include "Window.hpp"
 
 namespace kn::window
 {
@@ -9,15 +13,13 @@ static SDL_Window* _window;
 static Event _event;
 static std::vector<Event> _events;
 
-void init(const math::Vec2& size, const std::string& title)
+void init(const math::Vec2& resolution, const std::string& title, const int scale)
 {
     if (_renderer)
         WARN("Cannot initialize renderer more than once")
 
     if (SDL_Init(SDL_INIT_VIDEO))
-    {
         FATAL("SDL_Init Error: " + std::string(SDL_GetError()))
-    }
     if (!IMG_Init(IMG_INIT_PNG))
     {
         FATAL("IMG_Init Error: " + std::string(IMG_GetError()))
@@ -38,15 +40,21 @@ void init(const math::Vec2& size, const std::string& title)
     }
 
     _window = SDL_CreateWindow("Kraken Window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-                               (int)size.x, (int)size.y, SDL_WINDOW_SHOWN);
-
+                               static_cast<int>(resolution.x) * scale,
+                               static_cast<int>(resolution.y) * scale, SDL_WINDOW_SHOWN);
     if (!_window)
         FATAL("SDL_CreateWindow Error: " + std::string(SDL_GetError()))
 
     _renderer = SDL_CreateRenderer(_window, -1, SDL_RENDERER_ACCELERATED);
-
     if (!_renderer)
         FATAL("SDL_CreateRenderer Error: " + std::string(SDL_GetError()));
+
+    if (scale > 1)
+    {
+        SDL_RenderSetLogicalSize(_renderer, static_cast<int>(resolution.x),
+                                 static_cast<int>(resolution.y));
+        SDL_RenderSetIntegerScale(_renderer, SDL_TRUE);
+    }
 
     setTitle(title);
 }
@@ -57,13 +65,12 @@ void quit()
         SDL_DestroyRenderer(_renderer);
     if (_window)
         SDL_DestroyWindow(_window);
-    _events.clear();
-    _event = Event();
+
+    music::unload();
     Mix_CloseAudio();
     IMG_Quit();
     TTF_Quit();
     SDL_Quit();
-    music::unload();
 }
 
 const std::vector<Event>& getEvents()
@@ -78,7 +85,7 @@ const std::vector<Event>& getEvents()
     return _events;
 }
 
-void clear(Color color)
+void clear(const Color color)
 {
     if (!_renderer)
         WARN("Cannot clear screen before creating the window")
@@ -100,19 +107,19 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
     if (!_renderer)
         WARN("Cannot blit before creating the window")
 
-    if (math::Vec2{srcRect.x, srcRect.y} == math::Vec2::ZERO())
+    Rect offsetRect = dstRect;
+    offsetRect.setTopLeft(offsetRect.getTopLeft() - camera);
+
+    if (srcRect.getSize() == math::Vec2())
     {
-        SDL_RenderCopyF(_renderer, texture.getSDLTexture(), nullptr, &dstRect);
+        SDL_RenderCopyF(_renderer, texture.getSDLTexture(), nullptr, &offsetRect);
         return;
     }
 
-    SDL_Rect src{};
-    src.x = (int)srcRect.x;
-    src.y = (int)srcRect.y;
-    src.w = (int)srcRect.w;
-    src.h = (int)srcRect.h;
+    const SDL_Rect src = {static_cast<int>(srcRect.x), static_cast<int>(srcRect.y),
+                          static_cast<int>(srcRect.w), static_cast<int>(srcRect.h)};
 
-    SDL_RenderCopyF(_renderer, texture.getSDLTexture(), &src, &dstRect);
+    SDL_RenderCopyF(_renderer, texture.getSDLTexture(), &src, &offsetRect);
 }
 
 void blit(const Texture& texture, const math::Vec2& position)
@@ -120,56 +127,57 @@ void blit(const Texture& texture, const math::Vec2& position)
     if (!_renderer)
         WARN("Cannot blit before creating the window")
 
-    Rect rect = {(float)position.x, (float)position.y, (float)texture.getSize().x,
-                 (float)texture.getSize().y};
+    Rect rect = texture.getRect();
+    rect.setTopLeft(position - camera);
 
     SDL_RenderCopyF(_renderer, texture.getSDLTexture(), nullptr, &rect);
 }
 
-void blitEx(const Texture& texture, const Rect& dstRect, const Rect& srcRect, double angle,
-            bool flipX, bool flipY)
+void blitEx(const Texture& texture, const Rect& dstRect, const Rect& srcRect, const double angle,
+            const bool flipX, const bool flipY)
 {
     if (!_renderer)
         WARN("Cannot blit before creating the window")
 
-    SDL_RendererFlip flip = SDL_FLIP_NONE;
+    SDL_RendererFlip flipAxis = SDL_FLIP_NONE;
     if (flipX)
-        flip = (SDL_RendererFlip)(flip | SDL_FLIP_HORIZONTAL);
+        flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_HORIZONTAL);
     if (flipY)
-        flip = (SDL_RendererFlip)(flip | SDL_FLIP_VERTICAL);
+        flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_VERTICAL);
 
-    if (math::Vec2{srcRect.x, srcRect.y} == math::Vec2::ZERO())
+    Rect offsetRect = dstRect;
+    offsetRect.setTopLeft(offsetRect.getTopLeft() - camera);
+
+    if (srcRect.getSize() == math::Vec2())
     {
-        SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &dstRect, angle, nullptr,
-                          flip);
+        SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &offsetRect, angle, nullptr,
+                          flipAxis);
         return;
     }
 
-    SDL_Rect src{};
-    src.x = (int)srcRect.x;
-    src.y = (int)srcRect.y;
-    src.w = (int)srcRect.w;
-    src.h = (int)srcRect.h;
+    const SDL_Rect src = {static_cast<int>(srcRect.x), static_cast<int>(srcRect.y),
+                          static_cast<int>(srcRect.w), static_cast<int>(srcRect.h)};
 
-    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), &src, &dstRect, angle, nullptr, flip);
+    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), &src, &offsetRect, angle, nullptr,
+                      flipAxis);
 }
 
-void blitEx(const Texture& texture, const math::Vec2& position, double angle, bool flipX,
-            bool flipY)
+void blitEx(const Texture& texture, const math::Vec2& position, const double angle,
+            const bool flipX, const bool flipY)
 {
     if (!_renderer)
         WARN("Cannot blit before creating the window")
 
-    SDL_RendererFlip flip = SDL_FLIP_NONE;
+    SDL_RendererFlip flipAxis = SDL_FLIP_NONE;
     if (flipX)
-        flip = (SDL_RendererFlip)(flip | SDL_FLIP_HORIZONTAL);
+        flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_HORIZONTAL);
     if (flipY)
-        flip = (SDL_RendererFlip)(flip | SDL_FLIP_VERTICAL);
+        flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_VERTICAL);
 
-    Rect rect = {(float)position.x, (float)position.y, (float)texture.getSize().x,
-                 (float)texture.getSize().y};
+    Rect rect = texture.getRect();
+    rect.setTopLeft(position - camera);
 
-    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &rect, angle, nullptr, flip);
+    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &rect, angle, nullptr, flipAxis);
 }
 
 SDL_Renderer* getRenderer()
@@ -186,6 +194,17 @@ bool getFullscreen()
         WARN("Cannot get fullscreen before creating the window")
 
     return SDL_GetWindowFlags(_window) & SDL_WINDOW_FULLSCREEN;
+}
+
+int getScale()
+{
+    if (!_window)
+        WARN("Cannot get scale before creating the window");
+
+    float scale;
+    SDL_RenderGetScale(_renderer, &scale, nullptr);
+
+    return static_cast<int>(scale);
 }
 
 void setTitle(const std::string& newTitle)
@@ -216,7 +235,7 @@ std::string getTitle()
     return {SDL_GetWindowTitle(_window)};
 }
 
-void setFullscreen(bool fullscreen)
+void setFullscreen(const bool fullscreen)
 {
     if (!_window)
         WARN("Cannot set fullscreen before creating the window")
@@ -230,7 +249,10 @@ math::Vec2 getSize()
         WARN("Cannot get size before creating the window")
 
     int w, h;
-    SDL_GetWindowSize(_window, &w, &h);
+    SDL_RenderGetLogicalSize(_renderer, &w, &h);
+    if (!w || !h)
+        SDL_GetWindowSize(_window, &w, &h);
+
     return {w, h};
 }
 } // namespace kn::window

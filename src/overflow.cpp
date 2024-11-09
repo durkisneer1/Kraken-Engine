@@ -1,8 +1,8 @@
 #include "Overflow.hpp"
+#include <cmath>
+#include <limits>
 
-namespace kn
-{
-namespace overflow
+namespace kn::overflow
 {
 bool isSumValid(const double& first, const double& second)
 {
@@ -10,9 +10,7 @@ bool isSumValid(const double& first, const double& second)
     {
         // check for overflowing the float64_t maximum
         if (second >= 0 && (first > std::numeric_limits<double>::max() - second))
-        {
             return false;
-        }
     }
     else
     {
@@ -20,10 +18,8 @@ bool isSumValid(const double& first, const double& second)
         // note that std::numeric_limits<float64_t>::min() doesn't return a negative
         // but instead returns the minimum representable value that is as close to
         // zero as doubles can get without becoming zero
-        if (second < 0 && (first < -std::numeric_limits<double>::max() - second))
-        {
+        if (second < 0 && first < -std::numeric_limits<double>::max() - second)
             return false;
-        }
     }
 
     return true;
@@ -35,9 +31,7 @@ bool isSumValid(const float& first, const float& second)
     {
         // check for overflowing the float32_t maximum
         if (second >= 0 && (first > std::numeric_limits<float>::max() - second))
-        {
             return false;
-        }
     }
     else
     {
@@ -46,9 +40,7 @@ bool isSumValid(const float& first, const float& second)
         // but instead returns the minimum representable value that is as close to
         // zero as floats can get without becoming zero
         if (second < 0 && (first < -std::numeric_limits<float>::max() - second))
-        {
             return false;
-        }
     }
 
     return true;
@@ -76,17 +68,13 @@ bool isSumValid(const int32_t& first, const int32_t& second)
     {
         // check for overflowing the int32_t maximum
         if (second >= 0 && (first > std::numeric_limits<int32_t>::max() - second))
-        {
             return false;
-        }
     }
     else
     {
         // check for overflowing the int32_t min
         if (second < 0 && (first < std::numeric_limits<int32_t>::min() - second))
-        {
             return false;
-        }
     }
 
     return true;
@@ -98,17 +86,13 @@ bool isSumValid(const int64_t& first, const int64_t& second)
     {
         // check for overflowing the int64_t maximum
         if (second >= 0 && (first > std::numeric_limits<int64_t>::max() - second))
-        {
             return false;
-        }
     }
     else
     {
         // check for overflowing the int64_t min
         if (second < 0 && (first < std::numeric_limits<int64_t>::min() - second))
-        {
             return false;
-        }
     }
 
     return true;
@@ -120,12 +104,12 @@ bool isProductValid(const double& first, const double& second)
         // one of them is NaN or inf
         return false;
 
-    double absFirst = std::fabs(first);
-    double absSecond = std::fabs(second);
+    const double absFirst = std::fabs(first);
+    const double absSecond = std::fabs(second);
 
-    if (absFirst > 1.0 && absSecond > 1.0)
-        if (absFirst > std::numeric_limits<double>::max() / absSecond)
-            return false;
+    if (absFirst > 1.0 && absSecond > 1.0 &&
+        absFirst > std::numeric_limits<double>::max() / absSecond)
+        return false;
 
     return true;
 }
@@ -136,30 +120,28 @@ bool isProductValid(const float& first, const float& second)
         // one of them is NaN or inf
         return false;
 
-    float absFirst = std::fabs(first);
-    float absSecond = std::fabs(second);
+    const float absFirst = std::fabs(first);
+    const float absSecond = std::fabs(second);
 
-    if (absFirst > 1.0 && absSecond > 1.0)
-        if (absFirst > std::numeric_limits<float>::max() / absSecond)
-            return false;
+    if (absFirst > 1.0 && absSecond > 1.0 &&
+        absFirst > std::numeric_limits<float>::max() / absSecond)
+        return false;
 
     return true;
 }
 
 bool isProductValid(const uint32_t& first, const uint32_t& second)
 {
-    if (first > 0U && second > 0U)
-        if (first > std::numeric_limits<uint32_t>::max() / second)
-            return false;
+    if (first > 0U && second > 0U && first > std::numeric_limits<uint32_t>::max() / second)
+        return false;
 
     return true;
 }
 
 bool isProductValid(const uint64_t& first, const uint64_t& second)
 {
-    if (first > 0U && second > 0U)
-        if (first > std::numeric_limits<uint64_t>::max() / second)
-            return false;
+    if (first > 0U && second > 0U && first > std::numeric_limits<uint64_t>::max() / second)
+        return false;
 
     return true;
 }
@@ -167,30 +149,23 @@ bool isProductValid(const uint64_t& first, const uint64_t& second)
 bool isProductValid(const int32_t& first, const int32_t& second)
 {
     if (first != 0 && second != 0)
-    {
         if ((first > 0 && second > 0) || (first < 0 && second < 0))
         {
             // result is positive, so check max
             if (first > std::numeric_limits<int32_t>::max() / second)
-            {
                 return false;
-            }
-            else if (first > 0)
+
+            if (first > 0)
             {
                 if (second < -std::numeric_limits<int32_t>::max() / first)
-                {
                     return false;
-                }
             }
             else
             {
                 if (first < -std::numeric_limits<int32_t>::max() / second)
-                {
                     return false;
-                }
             }
         }
-    }
 
     return true;
 }
@@ -198,30 +173,23 @@ bool isProductValid(const int32_t& first, const int32_t& second)
 bool isProductValid(const int64_t& first, const int64_t& second)
 {
     if (first != 0 && second != 0)
-    {
         if ((first > 0 && second > 0) || (first < 0 && second < 0))
         {
             // result is positive, so check max
             if (first > std::numeric_limits<int64_t>::max() / second)
-            {
                 return false;
-            }
-            else if (first > 0)
+
+            if (first > 0)
             {
                 if (second < -std::numeric_limits<int64_t>::max() / first)
-                {
                     return false;
-                }
             }
             else
             {
                 if (first < -std::numeric_limits<int64_t>::max() / second)
-                {
                     return false;
-                }
             }
         }
-    }
 
     return true;
 }
@@ -241,5 +209,4 @@ bool closeToZero(const float& value, const float tolerance)
 
     return false;
 }
-} // namespace overflow
-} // namespace kn
+} // namespace kn::overflow

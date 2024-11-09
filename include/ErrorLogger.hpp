@@ -4,8 +4,8 @@
 #include <ctime>
 #include <fstream>
 #include <iostream>
-#include <sstream>
 #include <string>
+#include <utility>
 
 /**
  * LOG_LEVELS
@@ -48,8 +48,8 @@ class ErrorLogger
      */
     void log(const std::string& logString)
     {
-        auto currentTime = std::chrono::system_clock::now();
-        std::time_t now = std::chrono::system_clock::to_time_t(currentTime);
+        const auto currentTime = std::chrono::system_clock::now();
+        const std::time_t now = std::chrono::system_clock::to_time_t(currentTime);
 
         char timeBuffer[80];
         std::strftime(timeBuffer, sizeof(timeBuffer), "%c", localtime(&now));
@@ -75,9 +75,13 @@ class ErrorLogger
         m_file.close();
     }
 
+    ErrorLogger(const ErrorLogger& other) = delete;
+
+    void operator=(const ErrorLogger& rhs) = delete;
+
   private:
-    explicit ErrorLogger(const std::string& filename = "output.log")
-        : m_filename(filename), m_file(), m_canWriteToFile(false)
+    explicit ErrorLogger(std::string filename = "output.log")
+        : m_filename(std::move(filename)), m_canWriteToFile(false)
     {
         m_file.open(m_filename, std::ios::out);
         if (!m_file)
@@ -92,10 +96,6 @@ class ErrorLogger
         if (m_file.is_open())
             m_file.close();
     }
-
-    ErrorLogger(const ErrorLogger& other) = delete;
-
-    void operator=(const ErrorLogger& rhs) = delete;
 
     std::string m_filename; //!< logfile name
     std::fstream m_file;    //!< internal file object

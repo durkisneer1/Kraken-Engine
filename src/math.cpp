@@ -1,8 +1,11 @@
+#include "Math.hpp"
+#include "ErrorLogger.hpp"
 #include <algorithm>
 #include <cmath>
 
-#include "ErrorLogger.hpp"
-#include "Math.hpp"
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
 
 namespace kn
 {
@@ -10,15 +13,13 @@ using namespace overflow;
 
 namespace math
 {
-Vec2::Vec2() : x(0.0), y(0.0), tolerance(0.0001) {}
-
-Vec2 Vec2::ZERO() { return Vec2(); }
+Vec2::Vec2() : x(0.0), y(0.0), tolerance(1e-6) {}
 
 double Vec2::getLength() const
 {
     if (!isProductValid(x, x) || !isProductValid(y, y))
     {
-        WARN("Calculation of magnitude would result in overflow");
+        WARN("Calculation of magnitude would result in overflow")
         return -1.0;
     }
 
@@ -27,11 +28,60 @@ double Vec2::getLength() const
 
     if (!isSumValid(first, second))
     {
-        WARN("Calculation of magnitude would result in overflow");
+        WARN("Calculation of magnitude would result in overflow")
         return -1.0;
     }
 
     return sqrt(first + second);
+}
+
+void Vec2::rotate(const double angle)
+{
+    const double rad = toRadians(angle);
+    const double cosine = cos(toRadians(rad));
+    const double sine = sin(rad);
+    x = x * cosine - y * sine;
+    y = x * sine + y * cosine;
+}
+
+void Vec2::rotateRad(const double angle)
+{
+    const double cosine = cos(angle);
+    const double sine = sin(angle);
+    x = x * cosine - y * sine;
+    y = x * sine + y * cosine;
+}
+
+PolarCoordinate Vec2::asPolar() const
+{
+    const double radius = this->getLength();
+    const double azimuthalAngle = toDegrees(atan2(y, x));
+    return {azimuthalAngle, radius};
+}
+
+void Vec2::scaleToLength(const double scalar)
+{
+    this->normalize();
+    this->x *= scalar;
+    this->y *= scalar;
+}
+
+Vec2 Vec2::project(const Vec2& other) const
+{
+    const double abDot = dot(*this, other);
+    const double bbDot = dot(other, other);
+
+    const double frac = abDot / bbDot;
+
+    return other * frac;
+}
+
+Vec2 Vec2::reject(const Vec2& other) const { return other - this->project(other); }
+
+Vec2 Vec2::reflect(const Vec2& other) const
+{
+    const Vec2 otherNormalized = math::normalize(other);
+    return *this - 2 * dot(*this, otherNormalized) * otherNormalized;
 }
 
 bool Vec2::normalize()
@@ -39,14 +89,13 @@ bool Vec2::normalize()
     const double c = getLength();
     if (c <= 0.0)
     {
-        WARN("Cannot normalize vector either because it is the zero vector, or it would overflow");
+        WARN("Cannot normalize vector either because it is the zero vector, or it would overflow")
         return false;
     }
 
-    const double factor = 1 / c;
-    if (!isProductValid(x, factor) || !isProductValid(y, factor))
+    if (const double factor = 1 / c; !isProductValid(x, factor) || !isProductValid(y, factor))
     {
-        WARN("Cannot normalize vector due to overflow");
+        WARN("Cannot normalize vector due to overflow")
         return false;
     }
 
@@ -60,19 +109,66 @@ double Vec2::distanceTo(const Vec2& other) const
 {
     if (!isSumValid(other.x, -x) || !isSumValid(other.y, -y))
     {
-        WARN("Calculation would result in overflow");
+        WARN("Calculation would result in overflow")
         return -1.0;
     }
 
-    const double dx = other.x - x;
-    const double dy = other.y - y;
-
-    return Vec2(dx, dy).getLength();
+    return (other - *this).getLength();
 }
 
-Vec2 Vec2::operator+(const Vec2& other) const { return Vec2(x + other.x, y + other.y); }
+Vec2 normalize(const Vec2& vec)
+{
+    const double c = vec.getLength();
+    if (c <= 0.0)
+    {
+        WARN("Cannot normalize vector either because it is the zero vector, or it would overflow")
+        return {};
+    }
 
-Vec2 Vec2::operator-(const Vec2& other) const { return *this + (-1.0 * other); }
+    if (const double factor = 1 / c;
+        !isProductValid(vec.x, factor) || !isProductValid(vec.y, factor))
+    {
+        WARN("Cannot normalize vector due to overflow")
+        return {};
+    }
+
+    return {vec.x / c, vec.y / c};
+}
+
+Vec2 scaleToLength(const Vec2& vec, const double scalar)
+{
+    const Vec2 scaled = math::normalize(vec) * scalar;
+    return scaled;
+}
+
+Vec2 fromPolar(const double angle, const double radius)
+{
+    const double rad = toRadians(angle);
+    double x = radius * cos(rad);
+    double y = radius * sin(rad);
+    return {x, y};
+}
+
+Vec2 clampVec(const Vec2& vec, const Vec2& min, const Vec2& max)
+{
+    double x = std::clamp(vec.x, min.x, max.x);
+    double y = std::clamp(vec.y, min.y, max.y);
+
+    return {x, y};
+}
+
+Vec2 lerpVec(const Vec2& a, const Vec2& b, const double t)
+{
+    // TODO: figure out a way to signal if an overflow happens
+    // FIXME: Not the correct lerp formula
+    return a + (b - a) * t;
+}
+
+double lerp(const double a, const double b, const double t) { return a + (b - a) * t; }
+
+Vec2 Vec2::operator+(const Vec2& other) const { return {x + other.x, y + other.y}; }
+
+Vec2 Vec2::operator-(const Vec2& other) const { return *this + -1.0 * other; }
 
 Vec2& Vec2::operator+=(const Vec2& other)
 {
@@ -86,7 +182,7 @@ bool Vec2::operator==(const Vec2& other) const
 {
     if (!isSumValid(x, -other.x) || !isSumValid(y, -other.y))
     {
-        TRACE("Vector comparison would result in overflow, they can't be the same");
+        TRACE("Vector comparison would result in overflow, they can't be the same")
         return false;
     }
 
@@ -98,20 +194,48 @@ bool Vec2::operator==(const Vec2& other) const
 
 bool Vec2::operator!=(const Vec2& other) const { return !(*this == other); }
 
-Vec2 clampVec(const Vec2& vec, const Vec2& min, const Vec2& max)
+double remap(const double in_min, const double in_max, const double out_min, const double out_max,
+             const double value)
 {
-    Vec2 retVec;
+    if (in_min == in_max)
+    {
+        WARN("in_min and in_max must not be equal.")
+        return 0.0f;
+    }
 
-    retVec.x = std::clamp(vec.x, min.x, max.x);
-    retVec.y = std::clamp(vec.y, min.y, max.y);
+    const double percentage = (value - in_min) / (in_max - in_min);
 
-    return retVec;
+    return (out_max - out_min) * percentage;
 }
 
-Vec2 lerpVec(const Vec2& a, const Vec2& b, double t)
+double toDegrees(const double angle) { return angle * 180 / M_PI; }
+
+double toRadians(const double angle) { return angle * M_PI / 180; }
+
+double dot(const Vec2& a, const Vec2& b) { return a.x * b.x + a.y * b.y; }
+
+double cross(const Vec2& a, const Vec2& b)
 {
-    // TODO: figure out a way to signal if an overflow happens
-    return a + (b - a) * t;
+    const double product = b.getLength() * a.getLength();
+    const double angle = angleBetween(a, b);
+
+    return product * sin(angle);
 }
+
+double angleBetween(const Vec2& a, const Vec2& b)
+{
+    const double numerator = dot(a, b);
+    const double denominator = a.getLength() * b.getLength();
+
+    return (denominator == 0.0f) ? 0.0f : acos(numerator / denominator);
+}
+
+double angleOfDifference(const Vec2& a, const Vec2& b)
+{
+    const Vec2 dVec = a - b;
+
+    return toDegrees(atan2(dVec.y, dVec.x));
+}
+
 } // namespace math
 } // namespace kn

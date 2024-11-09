@@ -38,7 +38,7 @@ class Font final
      *
      * @return The rendered text.
      */
-    Texture render(const std::string& text, bool antialias, Color color, int wrapLength = 0);
+    [[nodiscard]] Texture render(const std::string& text, bool antialias, Color color, int wrapLength = 0) const;
 
   private:
     TTF_Font* font;

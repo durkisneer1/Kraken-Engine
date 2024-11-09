@@ -1,12 +1,11 @@
-#include "Music.hpp"
-#include "ErrorLogger.hpp"
-
+#include <SDL_mixer.h>
 #include <algorithm>
 #include <filesystem>
 
-namespace kn
-{
-namespace music
+#include "ErrorLogger.hpp"
+#include "Music.hpp"
+
+namespace kn::music
 {
 static Mix_Music* m_music = nullptr;
 static float m_volume = MIX_MAX_VOLUME;
@@ -15,19 +14,17 @@ void load(const std::string& fileDir)
 {
     unload();
 
-    std::filesystem::path filePath(fileDir);
-    std::string extension = filePath.extension().string();
+    const std::filesystem::path filePath(fileDir);
 
-    if (extension == ".ogg" || extension == ".mp3" || extension == ".wav")
+    if (const std::string extension = filePath.extension().string();
+        extension == ".ogg" || extension == ".mp3" || extension == ".wav")
     {
         m_music = Mix_LoadMUS(fileDir.c_str());
         if (!m_music)
             FATAL("Failed to load music: " + fileDir);
     }
     else
-    {
         FATAL("Unsupported file format: " + fileDir);
-    }
 }
 
 void unload()
@@ -39,7 +36,7 @@ void unload()
     }
 }
 
-void play(int loops, int fadeMs)
+void play(const int loops, const int fadeMs)
 {
     if (!m_music)
     {
@@ -50,18 +47,12 @@ void play(int loops, int fadeMs)
     if (fadeMs > 0)
     {
         if (Mix_FadeInMusic(m_music, loops, fadeMs) == -1)
-        {
             FATAL("Failed to play music: " + std::string(Mix_GetError()));
-            return;
-        }
     }
     else
     {
         if (Mix_PlayMusic(m_music, loops) == -1)
-        {
             FATAL("Failed to play music: " + std::string(Mix_GetError()));
-            return;
-        }
     }
 }
 
@@ -109,7 +100,7 @@ void resume()
     Mix_ResumeMusic();
 }
 
-void fadeOut(int fadeMs)
+void fadeOut(const int fadeMs)
 {
     if (!m_music)
     {
@@ -120,12 +111,12 @@ void fadeOut(int fadeMs)
     Mix_FadeOutMusic(fadeMs);
 }
 
-void setVolume(float volume)
+void setVolume(const float volume)
 {
     m_volume = volume;
-    Mix_VolumeMusic(int(MIX_MAX_VOLUME * std::clamp(m_volume, 0.0f, 1.0f)));
+    Mix_VolumeMusic(static_cast<int>(MIX_MAX_VOLUME * std::clamp(m_volume, 0.0f, 1.0f)));
 }
 
 float getVolume() { return m_volume; }
-} // namespace music
-} // namespace kn
+
+} // namespace kn::music

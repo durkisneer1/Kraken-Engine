@@ -2,18 +2,43 @@
 Installation
 ============
 
-.. note::
-    Kraken Engine is still in development and is not ready for production use.
-    This means that there aren't any pre-built binaries for Kraken Engine yet, so you have to build it yourself.
+Before starting, ensure you have the Meson build system and a C++ compiler installed.
 
-Before starting, ensure you have meson installed, as well as the four core SDL2 frameworks installed in any package manager.
+1. In your Meson project directory, create a subdirectory called ``subprojects``.
 
+    .. code-block:: bash
+
+        mkdir subprojects
+
+2. Run ``meson wrap install kraken-engine`` to install the latest version of Kraken Engine.
+
+3. Include the Kraken Engine dependency in your Meson build file.
+
+1. In your Meson project directory, create a subdirectory called ``subprojects``.
+
+<<<<<<< HEAD
 1. Clone the Kraken Engine `repository <https://github.com/durkisneer1/Kraken-Engine>`_.
 2. In the top directory, run ``meson setup builddir`` twice.
 3. Once that's done, navigate into the ``builddir`` folder.
 4. Run ``meson compile`` to build the static library file and example exe.
+=======
+    .. code-block:: bash
+>>>>>>> upstream/0.0.3dev
 
-You will find the compiled .a file in this folder.
+        mkdir subprojects
+
+2. Run ``meson wrap install kraken-engine`` to install the latest version of Kraken Engine.
+
+3. Include the Kraken Engine dependency in your Meson build file.
+
+    .. code-block:: python
+
+        project('MyProject', 'cpp')
+        kraken_dep = dependency('kraken-engine')
+        executable('MyProject', 'main.cpp', dependencies: kraken_dep)
+
+4. Continue with the typical Meson build and compile process.
 
 .. note::
-	If you run into problems building the project, please open an issue.
+	Currently, SDL2 builds as dynamic link libraries (DLLs). You'll need to move the SDL2 DLLs from
+	``builddir/subprojects/SDL2[_image | _mixer | _ttf]`` to your executable location, usually under ``builddir``.

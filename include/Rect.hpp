@@ -7,11 +7,11 @@ namespace kn
 namespace math
 {
 class Vec2;
-};
+} // namespace math
 /**
  * @brief A 2D rectangle.
  */
-struct Rect : public SDL_FRect
+struct Rect : SDL_FRect
 {
     Rect() = default;
 
@@ -23,22 +23,22 @@ struct Rect : public SDL_FRect
      * @param w The width.
      * @param h The height.
      */
-    Rect(float x, float y, float w, float h) : SDL_FRect{x, y, w, h} {}
-    Rect(int x, int y, int w, int h) : SDL_FRect{(float)x, (float)y, (float)w, (float)h} {}
+    Rect(float x, float y, float w, float h);
+    Rect(int x, int y, int w, int h);
 
     /**
      * @brief Get the position of the rectangle.
      *
      * @return The position of the rectangle.
      */
-    math::Vec2 getPos();
+    math::Vec2 getPos() const;
 
     /**
      * @brief Get the size of the rectangle.
      *
      * @return The size of the rectangle.
      */
-    math::Vec2 getSize();
+    math::Vec2 getSize() const;
 
     /**
      * @brief Set the size of the rectangle.
@@ -54,7 +54,7 @@ struct Rect : public SDL_FRect
      *
      * @return Whether the rectangle collides with a point.
      */
-    bool collidePoint(const math::Vec2& pos) const;
+    [[nodiscard]] bool collidePoint(const math::Vec2& pos) const;
 
     /**
      * @brief Check if the rectangle collides with another rectangle.
@@ -63,7 +63,7 @@ struct Rect : public SDL_FRect
      *
      * @return Whether the rectangle collides with another rectangle.
      */
-    bool collideRect(const Rect& rect) const;
+    [[nodiscard]] bool collideRect(const Rect& rect) const;
 
     /**
      * @brief Clamp the rectangle.
@@ -87,18 +87,18 @@ struct Rect : public SDL_FRect
     void setLeftMid(const math::Vec2& pos);
     void setRightMid(const math::Vec2& pos);
 
-    math::Vec2 getCenter();
-    float getLeft() const;
-    float getRight() const;
-    float getTop() const;
-    float getBottom() const;
-    math::Vec2 getTopLeft();
-    math::Vec2 getTopMid();
-    math::Vec2 getTopRight();
-    math::Vec2 getBottomLeft();
-    math::Vec2 getBottomMid();
-    math::Vec2 getBottomRight();
-    math::Vec2 getLeftMid();
-    math::Vec2 getRightMid();
+    [[nodiscard]] math::Vec2 getCenter() const;
+    [[nodiscard]] float getLeft() const;
+    [[nodiscard]] float getRight() const;
+    [[nodiscard]] float getTop() const;
+    [[nodiscard]] float getBottom() const;
+    [[nodiscard]] math::Vec2 getTopLeft() const;
+    [[nodiscard]] math::Vec2 getTopMid() const;
+    [[nodiscard]] math::Vec2 getTopRight() const;
+    [[nodiscard]] math::Vec2 getBottomLeft() const;
+    [[nodiscard]] math::Vec2 getBottomMid() const;
+    [[nodiscard]] math::Vec2 getBottomRight() const;
+    [[nodiscard]] math::Vec2 getLeftMid() const;
+    [[nodiscard]] math::Vec2 getRightMid() const;
 };
 } // namespace kn

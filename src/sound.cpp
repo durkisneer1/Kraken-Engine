@@ -8,10 +8,10 @@ namespace kn
 {
 Sound::Sound(const std::string& fileDir)
 {
-    std::filesystem::path filePath(fileDir);
-    std::string extension = filePath.extension().string();
+    const std::filesystem::path filePath(fileDir);
 
-    if (extension == ".ogg" || extension == ".mp3" || extension == ".wav")
+    if (const std::string extension = filePath.extension().string();
+        extension == ".ogg" || extension == ".mp3" || extension == ".wav")
     {
         m_sound = Mix_LoadWAV(fileDir.c_str());
         if (!m_sound)
@@ -23,7 +23,7 @@ Sound::Sound(const std::string& fileDir)
     }
 }
 
-void Sound::play(int loops, int playTime, int fadeMs)
+void Sound::play(const int loops, const int playTime, const int fadeMs) const
 {
     int channelNum;
 
@@ -38,17 +38,17 @@ void Sound::play(int loops, int playTime, int fadeMs)
         return;
     }
 
-    Mix_Volume(channelNum, (int)m_volume);
+    Mix_Volume(channelNum, static_cast<int>(m_volume));
 }
 
-void Sound::setVolume(float newVolume)
+void Sound::setVolume(const float volume)
 {
-    m_volume = MIX_MAX_VOLUME * std::clamp(newVolume, 0.0f, 1.0f);
+    m_volume = MIX_MAX_VOLUME * std::clamp(volume, 0.0f, 1.0f);
 }
 
 float Sound::getVolume() const { return m_volume / MIX_MAX_VOLUME; }
 
-void Sound::unload()
+void Sound::unload() const
 {
     if (m_sound)
         Mix_FreeChunk(m_sound);

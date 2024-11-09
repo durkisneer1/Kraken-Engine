@@ -6,22 +6,36 @@
 
 namespace kn
 {
-Texture::Texture(const std::string& path)
+
+Texture::~Texture()
+{
+    if (texture)
+        SDL_DestroyTexture(texture);
+}
+
+bool Texture::loadFromFile(const std::string& path)
 {
     texture = IMG_LoadTexture(window::getRenderer(), path.c_str());
     if (!texture)
+    {
         WARN("Failed to create texture from: " + path);
+        return false;
+    }
 
     query();
+
+    return true;
 }
 
-Texture::Texture(const math::Vec2& size, Color color)
+Texture::Texture(const math::Vec2& size, const Color color)
 {
-    SDL_Surface* surface = SDL_CreateRGBSurface(0, (int)size.x, (int)size.y, 32, 0, 0, 0, 0);
+    SDL_Surface* surface =
+        SDL_CreateRGBSurface(0, static_cast<int>(size.x), static_cast<int>(size.y), 32, 0, 0, 0, 0);
     if (!surface)
-        WARN("Failed to create surface");
-
-    SDL_FillRect(surface, nullptr, SDL_MapRGB(surface->format, color.r, color.g, color.b));
+        WARN("Failed to create surface")
+    else
+        SDL_FillRect(surface, nullptr,
+                     SDL_MapRGBA(surface->format, color.r, color.g, color.b, color.a));
 
     texture = SDL_CreateTextureFromSurface(window::getRenderer(), surface);
     if (!texture)
@@ -49,27 +63,28 @@ SDL_Texture* Texture::getSDLTexture() const { return texture; }
 
 void Texture::setSize(const math::Vec2& size)
 {
-    rect.w = (float)size.x;
-    rect.h = (float)size.y;
+    rect.w = static_cast<float>(size.x);
+    rect.h = static_cast<float>(size.y);
 }
 
-void Texture::scaleBy(float factor)
+void Texture::scaleBy(const float factor)
 {
     rect.w = rect.w * factor;
     rect.h = rect.h * factor;
 }
 
-void Texture::fitWidth(float width)
+void Texture::fitWidth(const float width)
 {
-    float scale = width / rect.w;
+    const float scale = width / rect.w;
     rect.w = width;
     rect.h = rect.h * scale;
 }
 
-void Texture::fitHeight(float height)
+void Texture::fitHeight(const float height)
 {
-    float scale = height / rect.h;
+    const float scale = height / rect.h;
     rect.w = rect.w * scale;
     rect.h = height;
 }
+
 } // namespace kn

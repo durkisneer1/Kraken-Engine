@@ -30,7 +30,7 @@ class Sound final
      * @param playTime The number of milliseconds to play the sound for.
      * @param fadeMs The number of milliseconds to fade in.
      */
-    void play(int loops = 0, int playTime = -1, int fadeMs = 0);
+    void play(int loops = 0, int playTime = -1, int fadeMs = 0) const;
 
     /**
      * @brief Set the volume of the sound.
@@ -44,12 +44,12 @@ class Sound final
      *
      * @return The volume of the sound. Between 0.0f and 1.0f.
      */
-    float getVolume() const;
+    [[nodiscard]] float getVolume() const;
 
     /**
      * @brief Free the sound from memory.
      */
-    void unload();
+    void unload() const;
 
   private:
     Mix_Chunk* m_sound = nullptr;

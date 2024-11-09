@@ -7,7 +7,7 @@
 
 <br>
 
-The `Kraken Engine` is a powerful extension to SDL2, designed to streamline your game development process. It provides a suite of easy-to-use features such as <em>texture caching</em> and <em>collision logic</em>, allowing you to focus on creating immersive experiences for your players.
+The `Kraken Engine` is a powerful extension to SDL2, designed to streamline your game development process. It provides a suite of easy-to-use features such as <em>spritesheet animations</em> and <em>tilemap loading and rendering</em>, allowing you to focus on creating immersive experiences for your players.
 
 ## Documentation
 

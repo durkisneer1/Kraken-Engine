@@ -1,0 +1,1 @@
+example_src = ['example/main.cpp', 'example/src/player.cpp']

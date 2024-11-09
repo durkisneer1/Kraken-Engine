@@ -1,0 +1,13 @@
+option(
+    'build_example',
+    type : 'boolean',
+    value : false,
+    description : 'Build example demo. Off by default.',
+)
+
+option(
+    'build_tests',
+    type : 'boolean',
+    value : false,
+    description : 'Build test suite. Off by default.',
+)

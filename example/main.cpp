@@ -1,27 +1,36 @@
 #include <KrakenEngine.hpp>
+#include <vector>
+
+#include "include/Player.hpp"
 
 int main()
 {
-    const kn::math::Vec2 WIN_SIZE = {800, 600};
-    kn::window::init(WIN_SIZE);
+    kn::window::init({320, 180}, "Kraken", 4);
     kn::time::Clock clock;
+    kn::camera = {-32, -26};
 
-    kn::Texture boxTex({100, 100}, {100, 100, 100});
-    kn::Rect boxRect = boxTex.getRect();
-    boxRect.setCenter(WIN_SIZE / 2);
+    const kn::TileMap tileMap("../example/assets/room.tmx");
+    const kn::Layer* wallLayer = tileMap.getLayer("Wall");
+
+    Player player(wallLayer);
 
     bool done = false;
     while (!done)
     {
-        clock.tick();
+        const double dt = clock.tick();
 
         for (const auto& event : kn::window::getEvents())
-            if (event.type == kn::QUIT)
+        {
+            if (event.type == kn::QUIT ||
+                event.type == kn::KEYDOWN && event.key.keysym.sym == kn::K_ESCAPE)
                 done = true;
+        }
 
-        kn::window::clear({20, 20, 20, 255});
+        kn::window::clear();
+        tileMap.drawLayer("Background");
+        tileMap.drawLayer("Wall");
 
-        kn::window::blit(boxTex, boxRect);
+        player.update(dt);
 
         kn::window::flip();
     }
