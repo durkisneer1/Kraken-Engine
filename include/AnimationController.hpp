@@ -1,10 +1,23 @@
 #pragma once
 
 #include "Rect.hpp"
+#include "Texture.hpp"
+#include <memory>
+#include <unordered_map>
 #include <vector>
 
 namespace kn
 {
+
+/**
+ * @brief Container for a texture pointer and rect
+ */
+struct Frame
+{
+    std::shared_ptr<Texture> tex;
+    Rect rect;
+};
+
 /**
  * @brief Handler for sprite sheet animations.
  */
@@ -22,22 +35,33 @@ class AnimationController final
     /**
      * @brief Set up the animation controller.
      *
-     * @param size The size of the sprite sheet.
+     * @param filePath The path to the sprite sheet image file.
+     * @param name The name of the animation.
      * @param frameWidth The width of each frame.
      * @param frameHeight The height of each frame.
      *
      * @return true if the setup was successful, false otherwise.
      */
-    [[maybe_unused]] bool setup(const math::Vec2& size, int frameWidth, int frameHeight);
+    [[maybe_unused]] bool addAnim(const std::string& filePath, const std::string& name,
+                                  int frameWidth, int frameHeight);
 
     /**
-     * @brief Update the animation.
+     * @brief Change the active animation.
      *
-     * @param deltaTime The time since the last frame.
+     * @param name The name of an added animation.
      *
-     * @return The srcRect area of the current frame. Use when blitting.
+     * @return true if the animation was successfully changed, false otherwise.
      */
-    [[nodiscard]] const Rect& update(double deltaTime);
+    [[maybe_unused]] bool setAnim(const std::string& name);
+
+    /**
+     * @brief Get the next frame of the animation.
+     *
+     * @param deltaTime The time since the last time this function was called.
+     *
+     * @return The next frame's texture and area to render from.
+     */
+    [[nodiscard]] const Frame& nextFrame(double deltaTime);
 
     /**
      * @brief Set the frame rate of the animation.
@@ -64,10 +88,11 @@ class AnimationController final
     int m_fps;
     int m_index = 0;
     bool m_paused = false;
+    std::string m_currAnim;
 
     double m_frameTime_ms;
     double m_timeLeftInFrame_ms = 0.0;
 
-    std::vector<Rect> m_frameRects;
+    std::unordered_map<std::string, std::vector<Frame>> m_animMap;
 };
 } // namespace kn

@@ -17,6 +17,6 @@ namespace draw
  *
  * @note If thickness remains 0, the rectangle will be filled.
  */
-void rect(Rect& rect, const Color& color, float thickness = 0.0f);
+void rect(const Rect& rect, const Color& color, int thickness = 0);
 } // namespace draw
 } // namespace kn

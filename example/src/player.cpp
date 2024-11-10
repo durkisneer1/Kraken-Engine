@@ -6,15 +6,8 @@
 Player::Player(const kn::Layer* collisionLayer)
     : animController(5), rect(48, 120, 13, 16), collisionLayer(collisionLayer)
 {
-    animMap[IDLE] = kn::Texture();
-    animMap[WALK] = kn::Texture();
-
-    if (!animMap.at(IDLE).loadFromFile("../example/assets/player_idle.png") ||
-        !animMap.at(WALK).loadFromFile("../example/assets/player_walk.png"))
-        ERROR("Failed to load texture");
-
-    if (!animController.setup(animMap.at(IDLE).getSize(), 13, 16))
-        ERROR("Failed to set up animation");
+    animController.addAnim("../example/assets/player_idle.png", "idle", 13, 16);
+    animController.addAnim("../example/assets/player_walk.png", "walk", 13, 16);
 }
 
 void Player::update(const double dt)
@@ -34,7 +27,7 @@ void Player::update(const double dt)
     const auto dirVec = kn::input::getVector({kn::S_a}, {kn::S_d});
     if (dirVec.x != 0.0)
     {
-        animState = WALK;
+        animController.setAnim("walk");
 
         if (dirVec.x > 0.0)
             facingRight = true;
@@ -42,7 +35,7 @@ void Player::update(const double dt)
             facingRight = false;
     }
     else
-        animState = IDLE;
+        animController.setAnim("idle");
 
     velocity.x = dirVec.x * moveSpeed;
 
@@ -51,10 +44,11 @@ void Player::update(const double dt)
     rect.y += static_cast<float>(velocity.y * dt);
     handleCollision(AxisY);
 
+    const kn::Frame frame = animController.nextFrame(dt);
     if (facingRight)
-        kn::window::blit(animMap.at(animState), rect, animController.update(dt));
+        kn::window::blit(*frame.tex, rect, frame.rect);
     else
-        kn::window::blitEx(animMap.at(animState), rect, animController.update(dt), 0, true);
+        kn::window::blitEx(*frame.tex, rect, frame.rect, 0, true);
 }
 
 void Player::handleCollision(const int axis)

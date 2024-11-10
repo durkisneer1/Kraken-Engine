@@ -22,7 +22,7 @@ int main()
         for (const auto& event : kn::window::getEvents())
         {
             if (event.type == kn::QUIT ||
-                event.type == kn::KEYDOWN && event.key.keysym.sym == kn::K_ESCAPE)
+                (event.type == kn::KEYDOWN && event.key.keysym.sym == kn::K_ESCAPE))
                 done = true;
         }
 
