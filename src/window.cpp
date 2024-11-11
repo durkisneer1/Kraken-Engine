@@ -255,4 +255,21 @@ math::Vec2 getSize()
 
     return {w, h};
 }
+
+void setIcon(const std::string& path)
+{
+    if (!_window)
+        WARN("Cannot set icon before creating the window")
+
+    SDL_Surface* icon = IMG_Load(path.c_str());
+    if (!icon)
+    {
+        WARN("IMG_Load Error: " + std::string(IMG_GetError()))
+        return;
+    }
+
+    SDL_SetWindowIcon(_window, icon);
+    SDL_FreeSurface(icon);
+}
+
 } // namespace kn::window

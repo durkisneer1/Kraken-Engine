@@ -143,5 +143,11 @@ void setFullscreen(bool fullscreen);
  * @brief Quit SDL and destroy the window.
  */
 void quit();
+
+/**
+ * @brief Set the window icon.
+ */
+void setIcon(const std::string& path);
+
 } // namespace window
 } // namespace kn

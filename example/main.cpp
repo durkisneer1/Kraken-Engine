@@ -1,11 +1,11 @@
 #include <KrakenEngine.hpp>
-#include <vector>
 
 #include "include/Player.hpp"
 
 int main()
 {
     kn::window::init({320, 180}, "Kraken", 4);
+    kn::window::setIcon("../example/assets/icon.png");
     kn::time::Clock clock;
     kn::camera = {-32, -26};
 
@@ -26,7 +26,7 @@ int main()
                 done = true;
         }
 
-        kn::window::clear();
+        kn::window::clear({21, 18, 37});
         tileMap.drawLayer("Background");
         tileMap.drawLayer("Wall");
 
