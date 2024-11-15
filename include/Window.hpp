@@ -146,6 +146,8 @@ void quit();
 
 /**
  * @brief Set the window icon.
+ *
+ * @param path The path to the icon image file.
  */
 void setIcon(const std::string& path);
 

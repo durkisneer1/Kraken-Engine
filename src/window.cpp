@@ -57,6 +57,7 @@ void init(const math::Vec2& resolution, const std::string& title, const int scal
     }
 
     setTitle(title);
+    setIcon("../docs/_static/kraken_engine_window_icon.png");
 }
 
 void quit()

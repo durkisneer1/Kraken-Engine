@@ -4,8 +4,7 @@
 
 int main()
 {
-    kn::window::init({320, 180}, "Kraken", 4);
-    kn::window::setIcon("../example/assets/icon.png");
+    kn::window::init({320, 180}, "Night Terror", 4);
     kn::time::Clock clock;
     kn::camera = {-32, -26};
 

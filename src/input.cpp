@@ -12,7 +12,8 @@ math::Vec2 getMousePos()
     int x, y;
     SDL_GetMouseState(&x, &y);
     const int scale = window::getScale();
-    return {x / scale, y / scale};
+    const math::Vec2 pos{x / scale, y / scale};
+    return pos + camera;
 }
 
 int getMouseButtonPressed() { return static_cast<int>(SDL_GetMouseState(nullptr, nullptr)); }
