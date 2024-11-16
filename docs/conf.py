@@ -1,4 +1,5 @@
 import subprocess
+
 subprocess.call('doxygen', shell=True)
 
 extensions = [
@@ -6,7 +7,7 @@ extensions = [
     'sphinx.ext.autosectionlabel'
 ]
 
-breathe_projects = {'KrakenEngine' : 'xml'}
+breathe_projects = {'KrakenEngine': 'xml'}
 breathe_default_project = 'KrakenEngine'
 
 master_doc = 'index'
@@ -18,7 +19,7 @@ copyright = '2024, Derrick Martinez'
 author = 'Derrick Martinez'
 
 html_static_path = ['_static']
-html_theme = 'furo'
+html_theme = 'sphinx_rtd_theme'
 html_title = 'Kraken Engine'
 
 html_theme_options = {

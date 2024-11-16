@@ -43,3 +43,8 @@ subprojects/**/
 # Wrap files that meson is scared of for some reason
 subprojects/libpng.wrap
 subprojects/zlib.wrap
+
+# Docs stuff
+docs/html/
+docs/latex/
+docs/xml/
