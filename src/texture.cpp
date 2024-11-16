@@ -13,12 +13,12 @@ Texture::~Texture()
         SDL_DestroyTexture(texture);
 }
 
-bool Texture::loadFromFile(const std::string& path)
+bool Texture::loadFromFile(const std::string& filePath)
 {
-    texture = IMG_LoadTexture(window::getRenderer(), path.c_str());
+    texture = IMG_LoadTexture(window::getRenderer(), filePath.c_str());
     if (!texture)
     {
-        WARN("Failed to create texture from: " + path);
+        WARN("Failed to create texture from: " + filePath);
         return false;
     }
 

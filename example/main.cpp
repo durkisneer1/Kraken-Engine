@@ -1,11 +1,10 @@
 #include <KrakenEngine.hpp>
-#include <vector>
 
 #include "include/Player.hpp"
 
 int main()
 {
-    kn::window::init({320, 180}, "Kraken", 4);
+    kn::window::init({320, 180}, "Night Terror", 4);
     kn::time::Clock clock;
     kn::camera = {-32, -26};
 
@@ -22,11 +21,11 @@ int main()
         for (const auto& event : kn::window::getEvents())
         {
             if (event.type == kn::QUIT ||
-                event.type == kn::KEYDOWN && event.key.keysym.sym == kn::K_ESCAPE)
+                (event.type == kn::KEYDOWN && event.key.keysym.sym == kn::K_ESCAPE))
                 done = true;
         }
 
-        kn::window::clear();
+        kn::window::clear({21, 18, 37});
         tileMap.drawLayer("Background");
         tileMap.drawLayer("Wall");
 
