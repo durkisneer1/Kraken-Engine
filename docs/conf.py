@@ -52,23 +52,6 @@ author = 'Derrick Martinez'
 version = os.getenv("READTHEDOCS_VERSION", "0.0.3")
 release = version
 
-supported_languages = {
-    "en": "Kraken Engine %s documentation in English",
-}
-
-language = os.getenv("READTHEDOCS_LANGUAGE", "en")
-if "-" in language:
-    (lang_name, lang_country) = language.split("-")
-    language = lang_name + "_" + lang_country.upper()
-
-if not language in supported_languages.keys():
-    print("Unknown language: " + language)
-    print("Supported languages: " + ", ".join(supported_languages.keys()))
-    print(
-        "The configured language is either wrong, or it should be added to supported_languages in conf.py. Falling back to 'en'."
-    )
-    language = "en"
-
 html_theme = "sphinx_rtd_theme"
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
@@ -78,7 +61,7 @@ html_theme_options = {
     "collapse_navigation": False,
 }
 
-html_title = supported_languages[language] % ("(" + version + ")")
+html_title = f"Kraken Engine ({version}) documentation in English"
 html_logo = "_static/kraken-engine-banner.png"
 html_static_path = ['_static']
 
