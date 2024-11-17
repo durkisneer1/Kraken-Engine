@@ -1,8 +1,6 @@
 import os
 import subprocess
 
-import sphinx_rtd_theme
-
 breathe_projects = {'KrakenEngine': 'xml'}
 breathe_default_project = 'KrakenEngine'
 
@@ -10,7 +8,8 @@ needs_sphinx = "7.1"
 
 extensions = [
     'breathe',
-    'sphinx.ext.autosectionlabel'
+    'sphinx.ext.autosectionlabel',
+    'notfound.extension',
 ]
 
 notfound_context = {
@@ -36,9 +35,11 @@ notfound_context = {
 
 on_rtd = os.environ.get("READTHEDOCS", None) == "True"
 if on_rtd:
-    subprocess.call('cd ../doxygen; doxygen', shell=True)
+    subprocess.call('doxygen', shell=True)
 else:
     notfound_urls_prefix = ''
+
+templates_path = ["_templates"]
 
 source_suffix = '.rst'
 source_encoding = "utf-8-sig"
@@ -52,22 +53,49 @@ author = 'Derrick Martinez'
 version = os.getenv("READTHEDOCS_VERSION", "0.0.3")
 release = version
 
+exclude_patterns = ["_build"]
+
+smartquotes = False
+
+pygments_style = "sphinx"
+highlight_language = "cpp"
+
 html_theme = "sphinx_rtd_theme"
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+using_rtd_theme = True
 
 html_theme_options = {
-    'logo_only': True,
-    "display_version": False,
+    "logo_only": True,
     "collapse_navigation": False,
+    "display_version": False,
 }
 
-html_title = "Kraken Engine %s documentation in English" % ("(" + version + ")")
+html_title = f"Kraken Engine ({version}) documentation in English"
+
+html_context = {
+    "display_github": True,  # Integrate GitHub
+    "github_user": "durkisneer1",  # Username
+    "github_repo": "Kraken-Engine",  # Repo name
+    "github_version": "0.0.3",  # Version
+    "conf_py_path": "/",  # Path in the checkout to the docs root
+    "kraken_docs_title": html_title,
+    "kraken_docs_basepath": "https://kraken-engine.readthedocs.io/",
+    "kraken_docs_suffix": ".html",
+    "kraken_default_lang": "en",
+    "kraken_canonical_version": "stable",
+    # Set this to `True` when in the `latest` branch to clearly indicate to the reader
+    # that they are not reading the `stable` documentation.
+    "kraken_is_latest": False,
+    "kraken_version": "0.0.3",
+    # Enables a banner that displays the up-to-date status of each article.
+    "kraken_show_article_status": True,
+}
+
 html_logo = "_static/kraken-engine-banner.png"
 html_static_path = ['_static']
 
 html_css_files = [
     'css/algolia.css',
-    'https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css',
+    'https://cdn.jsdelivr.net/npm/@docsearch/css@3',
     "css/custom.css",
 ]
 
@@ -76,3 +104,10 @@ html_js_files = [
 ]
 
 file_insertion_enabled = False
+
+linkcheck_anchors = False
+linkcheck_timeout = 10
+
+gettext_compact = False
+
+epub_tocscope = 'includehidden'

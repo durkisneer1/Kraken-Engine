@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@docsearch/css": "^3.8.0"
+  }
+}

@@ -39,7 +39,7 @@ const registerOnScrollEvent = (function () {
         // This padding is needed to correctly adjust the height of the scrollable area in the sidebar.
         // It has to have the same height as the ethical block, if there is one.
         let $menuPadding = $menu.children('.wy-menu-ethical-padding');
-        if ($menuPadding.length === 0) {
+        if ($menuPadding.length == 0) {
             $menuPadding = $('<div class="wy-menu-ethical-padding"></div>');
             $menu.append($menuPadding);
         }
@@ -216,7 +216,7 @@ const registerSidebarObserver = (function () {
 
         const navigationSections = document.querySelectorAll('.wy-menu-vertical ul');
         navigationSections.forEach(it => {
-            if (it.previousSibling == null || typeof it.previousSibling === 'undefined' || it.previousSibling.tagName !== 'A') {
+            if (it.previousSibling == null || typeof it.previousSibling === 'undefined' || it.previousSibling.tagName != 'A') {
                 return;
             }
 
@@ -236,65 +236,6 @@ const registerSidebarObserver = (function () {
     };
 })();
 
-/**
- * Registers Giscus if there's an #godot-giscus container.
- * @returns {void} Nothing.
- */
-const registerGiscus = function () {
-    const giscusContainer = document.getElementById("godot-giscus");
-    if (giscusContainer == null) {
-        return;
-    }
-
-    const removeGiscusContainer = function () {
-        giscusContainer.remove();
-    };
-
-    const pageNameMetaElement = Array.from(document.head.querySelectorAll("meta")).find((meta) => meta.name === "doc_pagename");
-    if (pageNameMetaElement == null) {
-        removeGiscusContainer();
-        return;
-    }
-
-    const pageNameDenyList = [
-        "search"
-    ];
-    if (pageNameDenyList.includes(pageNameMetaElement.content)) {
-        removeGiscusContainer();
-        return;
-    }
-
-    // Use https://giscus.app/ to regenerate the script tag if needed.
-    // data-term is set to be language-independent and version-independent, so that comments can be centralized for each page.
-    // This increases the likelihood that users will encounter comments on less frequently visited pages.
-    const scriptElement = document.createElement("script");
-    scriptElement.src = "https://giscus.app/client.js";
-    scriptElement.crossOrigin = "anonymous";
-    scriptElement.async = true;
-
-    const dataset = {
-        repo: "godotengine/godot-docs-user-notes",
-        repoId: "R_kgDOKuNx0w",
-        category: "User-contributed notes",
-        categoryId: "DIC_kwDOKuNx084CbANb",
-        mapping: "specific",
-        term: pageNameMetaElement.content,
-        strict: "1",
-        reactionsEnabled: "0",
-        emitMetadata: "0",
-        inputPosition: "bottom",
-        theme: "preferred_color_scheme",
-        lang: "en",
-        loading: "lazy",
-    };
-
-    for (const [key, value] of Object.entries(dataset)) {
-        scriptElement.dataset[key] = value;
-    }
-
-    giscusContainer.append(scriptElement);
-};
-
 $(document).ready(() => {
     // Remove the search match highlights from the page, and adjust the URL in the
     // navigation history.
@@ -305,7 +246,7 @@ $(document).ready(() => {
 
     window.addEventListener('keydown', function (event) {
         if (event.key === '/') {
-            const searchField = document.querySelector('#rtd-search-form input[type=text]');
+            var searchField = document.querySelector('#rtd-search-form input[type=text]');
             if (document.activeElement !== searchField) {
                 searchField.focus();
                 searchField.select();
@@ -369,7 +310,7 @@ $(document).ready(() => {
         }
         let html = codeBlock.innerHTML.replace(/^(<span class="w">)?( {4})/gm, '\t');
         let html_old = "";
-        while (html !== html_old) {
+        while (html != html_old) {
             html_old = html;
             html = html.replace(/\t( {4})/gm, '\t\t')
         }
@@ -482,9 +423,6 @@ $(document).ready(() => {
 
         registerOnScrollEvent(mediaQuery);
     }
-
-    // Giscus
-    registerGiscus();
 });
 
 // Override the default implementation from doctools.js to avoid this behavior.

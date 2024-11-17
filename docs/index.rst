@@ -1,4 +1,3 @@
-==================
 Kraken Engine Docs
 ==================
 
@@ -31,8 +30,6 @@ We look forward to seeing the incredible games you create with the Kraken Engine
 .. toctree::
     :hidden:
     :maxdepth: 1
-    :caption: Getting Started
-    :name: sec-learn
 
     getting_started/installation
     getting_started/create_window
@@ -40,35 +37,17 @@ We look forward to seeing the incredible games you create with the Kraken Engine
 .. toctree::
     :hidden:
     :maxdepth: 1
-    :caption: Manual
-    :name: sec-tutorials
 
     tutorials/index
 
 .. toctree::
     :hidden:
     :maxdepth: 1
-    :caption: Contributing
-    :name: sec-contributing
 
     contributing/how_to_contribute
 
 .. toctree::
     :hidden:
     :maxdepth: 1
-    :caption: API Reference
-    :name: sec-api-reference
 
-    reference/animation_controller
-    reference/font
-    reference/rect
-    reference/sound
-    reference/texture
-    reference/tile_map
-    reference/constants
-    reference/draw
-    reference/input
-    reference/math
-    reference/music
-    reference/time
-    reference/window
+    reference/index

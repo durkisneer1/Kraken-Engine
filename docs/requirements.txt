@@ -1,3 +1,5 @@
 breathe
 sphinx
 sphinx-rtd-theme
+pygments
+sphinx-notfound-page
