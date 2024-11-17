@@ -61,7 +61,7 @@ html_theme_options = {
     "collapse_navigation": False,
 }
 
-html_title = f"Kraken Engine ({version}) documentation in English"
+html_title = "Kraken Engine %s documentation in English" % ("(" + version + ")")
 html_logo = "_static/kraken-engine-banner.png"
 html_static_path = ['_static']
 

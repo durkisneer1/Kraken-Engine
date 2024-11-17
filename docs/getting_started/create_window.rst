@@ -1,11 +1,8 @@
-===============
-Getting Started
-===============
-
+=================
 Creating a Window
------------------
+=================
 
-After following the :doc:`../installation` guide, you are ready for your first Kraken Engine program.
+After following the :doc:`installation` guide, you are ready for your first Kraken Engine program.
 
 .. code-block:: c++
     :linenos:
