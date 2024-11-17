@@ -6,7 +6,7 @@ import sphinx_rtd_theme
 breathe_projects = {'KrakenEngine': 'xml'}
 breathe_default_project = 'KrakenEngine'
 
-needs_sphinx = "1.3"
+needs_sphinx = "7.1"
 
 extensions = [
     'breathe',
@@ -68,11 +68,11 @@ html_static_path = ['_static']
 html_css_files = [
     'css/algolia.css',
     'https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css',
-    "css/custom.css?10",  # Increment the number at the end when the file changes to bust the cache.
+    "css/custom.css",
 ]
 
 html_js_files = [
-    "js/custom.js?7",  # Increment the number at the end when the file changes to bust the cache.
+    "js/custom.js",
 ]
 
 file_insertion_enabled = False
