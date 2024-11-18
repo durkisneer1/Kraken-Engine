@@ -1,4 +1,4 @@
-<div align="center"><img src="https://kraken-engine.readthedocs.io/en/latest/_images/kraken-engine-banner.png"/></div>
+<div align="center"><img src="https://github.com/durkisneer1/Kraken-Engine/blob/main/docs/_static/kraken-engine-banner.png"/></div>
 
 <div align="center">
   <a href="https://app.codacy.com/gh/durkisneer1/Kraken-Engine/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade">
