@@ -21,14 +21,6 @@ struct Tile
 };
 
 /**
- * @brief Container for tile map layer tiles
- */
-struct Layer
-{
-    std::vector<Tile> tiles;
-};
-
-/**
  * @brief Object that parses Tiled tmx files and contains tile map layers
  */
 class TileMap final
@@ -47,7 +39,7 @@ class TileMap final
      *
      * @param name The name of the layer.
      */
-    [[nodiscard]] const Layer* getLayer(const std::string& name) const;
+    [[nodiscard]] const std::vector<Tile>* getLayer(const std::string& name) const;
 
     /**
      * @brief Draw a layer from the tile map.
@@ -64,10 +56,11 @@ class TileMap final
   private:
     std::string dirPath;
     Texture* texture = nullptr;
-    std::unordered_map<std::string, Layer> layerHash;
+
+    std::vector<std::string> layerNames;
+    std::unordered_map<std::string, std::vector<Tile>> layerHash;
 
     void getTexture(const pugi::xml_node& map);
-    void parse();
 };
 
 } // namespace kn

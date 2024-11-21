@@ -9,7 +9,7 @@ int main()
     kn::camera = {-32, -26};
 
     const kn::TileMap tileMap("../example/assets/room.tmx");
-    const kn::Layer* wallLayer = tileMap.getLayer("Wall");
+    const auto* wallLayer = tileMap.getLayer("Wall");
 
     Player player(wallLayer);
 
@@ -26,8 +26,7 @@ int main()
         }
 
         kn::window::clear({21, 18, 37});
-        tileMap.drawLayer("Background");
-        tileMap.drawLayer("Wall");
+        tileMap.drawMap();
 
         player.update(dt);
 

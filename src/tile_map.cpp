@@ -1,6 +1,5 @@
 #include <algorithm>
 #include <fstream>
-#include <pugixml/pugixml.hpp>
 #include <sstream>
 
 #include "ErrorLogger.hpp"
@@ -20,9 +19,7 @@ TileMap::TileMap(const std::string& filePath)
 
     const auto map = doc.child("map");
     if (getTexture(map); !texture)
-    {
         return;
-    }
 
     const int mapWidth = std::stoi(map.attribute("width").value());
     const int tileWidth = std::stoi(map.attribute("tilewidth").value());
@@ -71,7 +68,9 @@ TileMap::TileMap(const std::string& filePath)
             tileCounter++;
         }
 
-        layerHash[child.attribute("name").value()] = {std::move(tiles)};
+        std::string layerName = child.attribute("name").value();
+        layerNames.push_back(layerName);
+        layerHash[layerName] = std::move(tiles);
     }
 }
 
@@ -83,7 +82,7 @@ TileMap::~TileMap()
 
 void TileMap::drawMap() const
 {
-    for (const auto& [name, layer] : layerHash)
+    for (const auto& name : layerNames)
         drawLayer(name);
 }
 
@@ -99,13 +98,15 @@ void TileMap::getTexture(const pugi::xml_node& map)
     }
 
     texture = new Texture();
-    if (!texture->loadFromFile(dirPath + doc.child("tileset").child("image").attribute("source").value()))
+    if (!texture->loadFromFile(dirPath +
+                               doc.child("tileset").child("image").attribute("source").value()))
     {
-        ERROR("Failed to load texture from file: " + dirPath + doc.child("tileset").child("image").attribute("source").value());
+        ERROR("Failed to load texture from file: " + dirPath +
+              doc.child("tileset").child("image").attribute("source").value());
     }
 }
 
-const Layer* TileMap::getLayer(const std::string& name) const
+const std::vector<Tile>* TileMap::getLayer(const std::string& name) const
 {
     if (const auto it = layerHash.find(name); it != layerHash.end())
         return &it->second;
@@ -116,9 +117,11 @@ const Layer* TileMap::getLayer(const std::string& name) const
 void TileMap::drawLayer(const std::string& name) const
 {
     const auto it = layerHash.find(name);
+
     if (it == layerHash.end())
         throw std::runtime_error("Layer " + name + " not found");
-    for (const Tile& tile : it->second.tiles)
+
+    for (const Tile& tile : it->second)
         window::blit(*texture, tile.rect, tile.crop);
 }
 

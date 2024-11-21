@@ -3,7 +3,7 @@
 #define AxisX 0
 #define AxisY 1
 
-Player::Player(const kn::Layer* collisionLayer)
+Player::Player(const std::vector<kn::Tile>* collisionLayer)
     : animController(5), rect(48, 120, 13, 16), collisionLayer(collisionLayer)
 {
     animController.addAnim("../example/assets/player_idle.png", "idle", 13, 16);
@@ -53,7 +53,7 @@ void Player::update(const double dt)
 
 void Player::handleCollision(const int axis)
 {
-    for (const auto& tile : collisionLayer->tiles)
+    for (const auto& tile : *collisionLayer)
         if (rect.collideRect(tile.rect))
         {
             if (axis == AxisX)
