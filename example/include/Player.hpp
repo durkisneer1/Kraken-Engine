@@ -5,7 +5,7 @@
 class Player final
 {
   public:
-    explicit Player(const std::vector<kn::Tile>* collisionLayer);
+    explicit Player(const kn::TileMap& tileMap);
     ~Player() = default;
 
     void update(double dt);
@@ -18,7 +18,9 @@ class Player final
 
     kn::Rect rect;
     kn::math::Vec2 velocity;
-    const std::vector<kn::Tile>* collisionLayer;
+    const kn::Layer* collisionLayer;
     bool onGround = false;
     float moveSpeed = 45.0f;
+
+    std::vector<kn::Tile> interactables;
 };

@@ -66,12 +66,19 @@ struct Rect : SDL_FRect
     [[nodiscard]] bool collideRect(const Rect& rect) const;
 
     /**
-     * @brief Clamp the rectangle.
+     * @brief Clamp the rectangle within two points.
      *
      * @param min The minimum value.
      * @param max The maximum value.
      */
     void clamp(const math::Vec2& min, const math::Vec2& max);
+
+    /**
+     * @brief Clamp the rectangle within another rectangle.
+     *
+     * @param rect The rectangle to clamp within.
+     */
+    void clamp(const Rect& rect);
 
     void setCenter(const math::Vec2& pos);
     void setLeft(float x);

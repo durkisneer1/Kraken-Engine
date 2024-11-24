@@ -9,9 +9,8 @@ int main()
     kn::camera = {-32, -26};
 
     const kn::TileMap tileMap("../example/assets/room.tmx");
-    const auto* wallLayer = tileMap.getLayer("Wall");
 
-    Player player(wallLayer);
+    Player player(tileMap);
 
     bool done = false;
     while (!done)
@@ -26,8 +25,8 @@ int main()
         }
 
         kn::window::clear({21, 18, 37});
-        tileMap.drawMap();
 
+        tileMap.drawMap();
         player.update(dt);
 
         kn::window::flip();
