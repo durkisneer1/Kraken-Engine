@@ -18,11 +18,9 @@ int main()
         const double dt = clock.tick();
 
         for (const auto& event : kn::window::getEvents())
-        {
             if (event.type == kn::QUIT ||
                 (event.type == kn::KEYDOWN && event.key.keysym.sym == kn::K_ESCAPE))
                 done = true;
-        }
 
         kn::window::clear({21, 18, 37});
 

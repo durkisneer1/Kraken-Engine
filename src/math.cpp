@@ -194,6 +194,14 @@ bool Vec2::operator==(const Vec2& other) const
 
 bool Vec2::operator!=(const Vec2& other) const { return !(*this == other); }
 
+bool Vec2::operator<(const Vec2& other) const { return (x < other.x && y < other.y); }
+
+bool Vec2::operator>(const Vec2& other) const { return (x > other.x && y > other.y); }
+
+bool Vec2::operator<=(const Vec2& other) const { return !(*this > other); }
+
+bool Vec2::operator>=(const Vec2& other) const { return !(*this < other); }
+
 double remap(const double in_min, const double in_max, const double out_min, const double out_max,
              const double value)
 {

@@ -108,6 +108,9 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
     if (!_renderer)
         WARN("Cannot blit before creating the window")
 
+    if (dstRect.getBottomRight() < camera || dstRect.getTopLeft() > getSize() + camera)
+        return;
+
     SDL_RendererFlip flipAxis = SDL_FLIP_NONE;
     if (texture.flip.x)
         flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_HORIZONTAL);
@@ -135,6 +138,9 @@ void blit(const Texture& texture, const math::Vec2& position)
 {
     if (!_renderer)
         WARN("Cannot blit before creating the window")
+
+    if (texture.getSize() + position < camera || position > getSize() + camera)
+        return;
 
     SDL_RendererFlip flipAxis = SDL_FLIP_NONE;
     if (texture.flip.x)
