@@ -67,7 +67,13 @@ class TileMap final
      */
     void drawMap() const;
 
-    std::vector<Tile> getTileCollection(const std::vector<std::string>& layerNames) const;
+    /**
+     * @brief Get a collection of tiles from the tile map.
+     *
+     * @param layerNames The names of the layers to get tiles from.
+     */
+    [[nodiscard]] std::vector<Tile>
+    getTileCollection(const std::vector<std::string>& layerNames) const;
 
   private:
     std::string dirPath;

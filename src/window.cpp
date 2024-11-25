@@ -57,7 +57,7 @@ void init(const math::Vec2& resolution, const std::string& title, const int scal
     }
 
     setTitle(title);
-    setIcon("../docs/_static/kraken_engine_window_icon.png");
+    setIcon("../example/assets/kraken_engine_window_icon.png");
 }
 
 void quit()
@@ -108,19 +108,27 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
     if (!_renderer)
         WARN("Cannot blit before creating the window")
 
+    SDL_RendererFlip flipAxis = SDL_FLIP_NONE;
+    if (texture.flip.x)
+        flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_HORIZONTAL);
+    if (texture.flip.y)
+        flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_VERTICAL);
+
     Rect offsetRect = dstRect;
     offsetRect.setTopLeft(offsetRect.getTopLeft() - camera);
 
     if (srcRect.getSize() == math::Vec2())
     {
-        SDL_RenderCopyF(_renderer, texture.getSDLTexture(), nullptr, &offsetRect);
+        SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &offsetRect, texture.angle,
+                          nullptr, flipAxis);
         return;
     }
 
     const SDL_Rect src = {static_cast<int>(srcRect.x), static_cast<int>(srcRect.y),
                           static_cast<int>(srcRect.w), static_cast<int>(srcRect.h)};
 
-    SDL_RenderCopyF(_renderer, texture.getSDLTexture(), &src, &offsetRect);
+    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), &src, &offsetRect, texture.angle, nullptr,
+                      flipAxis);
 }
 
 void blit(const Texture& texture, const math::Vec2& position)
@@ -128,57 +136,17 @@ void blit(const Texture& texture, const math::Vec2& position)
     if (!_renderer)
         WARN("Cannot blit before creating the window")
 
+    SDL_RendererFlip flipAxis = SDL_FLIP_NONE;
+    if (texture.flip.x)
+        flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_HORIZONTAL);
+    if (texture.flip.y)
+        flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_VERTICAL);
+
     Rect rect = texture.getRect();
     rect.setTopLeft(position - camera);
 
-    SDL_RenderCopyF(_renderer, texture.getSDLTexture(), nullptr, &rect);
-}
-
-void blitEx(const Texture& texture, const Rect& dstRect, const Rect& srcRect, const double angle,
-            const bool flipX, const bool flipY)
-{
-    if (!_renderer)
-        WARN("Cannot blit before creating the window")
-
-    SDL_RendererFlip flipAxis = SDL_FLIP_NONE;
-    if (flipX)
-        flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_HORIZONTAL);
-    if (flipY)
-        flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_VERTICAL);
-
-    Rect offsetRect = dstRect;
-    offsetRect.setTopLeft(offsetRect.getTopLeft() - camera);
-
-    if (srcRect.getSize() == math::Vec2())
-    {
-        SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &offsetRect, angle, nullptr,
-                          flipAxis);
-        return;
-    }
-
-    const SDL_Rect src = {static_cast<int>(srcRect.x), static_cast<int>(srcRect.y),
-                          static_cast<int>(srcRect.w), static_cast<int>(srcRect.h)};
-
-    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), &src, &offsetRect, angle, nullptr,
+    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &rect, texture.angle, nullptr,
                       flipAxis);
-}
-
-void blitEx(const Texture& texture, const math::Vec2& position, const double angle,
-            const bool flipX, const bool flipY)
-{
-    if (!_renderer)
-        WARN("Cannot blit before creating the window")
-
-    SDL_RendererFlip flipAxis = SDL_FLIP_NONE;
-    if (flipX)
-        flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_HORIZONTAL);
-    if (flipY)
-        flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_VERTICAL);
-
-    Rect rect = texture.getRect();
-    rect.setTopLeft(position - camera);
-
-    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &rect, angle, nullptr, flipAxis);
 }
 
 SDL_Renderer* getRenderer()
