@@ -3,11 +3,13 @@
 #define AxisX 0
 #define AxisY 1
 
-Player::Player(const kn::Layer* collisionLayer)
-    : animController(5), rect(48, 120, 13, 16), collisionLayer(collisionLayer)
+Player::Player(const kn::TileMap& tileMap)
+    : animController(5), rect(48, 120, 13, 16), collisionLayer(tileMap.getLayer("Wall"))
 {
     animController.addAnim("../example/assets/player_idle.png", "idle", 13, 16);
     animController.addAnim("../example/assets/player_walk.png", "walk", 13, 16);
+
+    interactables = tileMap.getTileCollection({"Mirror", "Bed", "Desk"});
 }
 
 void Player::update(const double dt)
@@ -44,11 +46,14 @@ void Player::update(const double dt)
     rect.y += static_cast<float>(velocity.y * dt);
     handleCollision(AxisY);
 
+    for (const auto& tile : interactables)
+        if (rect.collideRect(tile.collider))
+            kn::draw::rect(tile.rect, {255, 255, 0}, 1);
+
     const kn::Frame frame = animController.nextFrame(dt);
-    if (facingRight)
-        kn::window::blit(*frame.tex, rect, frame.rect);
-    else
-        kn::window::blitEx(*frame.tex, rect, frame.rect, 0, true);
+
+    frame.tex->flip.x = !facingRight;
+    kn::window::blit(*frame.tex, rect, frame.rect);
 }
 
 void Player::handleCollision(const int axis)

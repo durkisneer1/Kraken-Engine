@@ -7,7 +7,7 @@ namespace kn
 struct Rect;
 namespace math
 {
-struct Vec2;
+class Vec2;
 }
 
 namespace draw

@@ -9,26 +9,22 @@ int main()
     kn::camera = {-32, -26};
 
     const kn::TileMap tileMap("../example/assets/room.tmx");
-    const kn::Layer* wallLayer = tileMap.getLayer("Wall");
 
-    Player player(wallLayer);
+    Player player(tileMap);
 
     bool done = false;
     while (!done)
     {
-        const double dt = clock.tick();
+        const double dt = clock.tick(240);
 
         for (const auto& event : kn::window::getEvents())
-        {
             if (event.type == kn::QUIT ||
                 (event.type == kn::KEYDOWN && event.key.keysym.sym == kn::K_ESCAPE))
                 done = true;
-        }
 
         kn::window::clear({21, 18, 37});
-        tileMap.drawLayer("Background");
-        tileMap.drawLayer("Wall");
 
+        tileMap.drawMap();
         player.update(dt);
 
         kn::window::flip();

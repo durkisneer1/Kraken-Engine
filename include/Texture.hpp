@@ -17,6 +17,21 @@ class Texture final
 {
   public:
     /**
+     * @brief The rotation angle of the texture, in degrees.
+     */
+    double angle = 0.0;
+
+    /**
+     * @brief The flip state of the texture.
+     * Indicates whether the texture is flipped horizontally (x) or vertically (y).
+     */
+    struct Flip
+    {
+        bool x = false;
+        bool y = false;
+    } flip;
+
+    /**
      * @brief Constructs an empty Texture object.
      * @note The internal SDL_Texture* is nullptr until loadFromFile is called.
      */

@@ -59,31 +59,6 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect = {})
 void blit(const Texture& texture, const math::Vec2& position = {});
 
 /**
- *  @brief Draw a texture using rects.
- *
- *  @param texture The texture to draw.
- *  @param dstRect The rectangle to draw to.
- *  @param srcRect The rectangle to draw from.
- *  @param angle The angle to draw the texture.
- *  @param flipX Whether to flip the texture on the x-axis.
- *  @param flipY Whether to flip the texture on the y-axis.
- */
-void blitEx(const Texture& texture, const Rect& dstRect, const Rect& srcRect = {},
-            double angle = 0.0, bool flipX = false, bool flipY = false);
-
-/**
- *  @brief Draw a texture to a position.
- *
- *  @param texture The texture to draw.
- *  @param position The position to draw at.
- *  @param angle The angle to draw the texture.
- *  @param flipX Whether to flip the texture on the x-axis.
- *  @param flipY Whether to flip the texture on the y-axis.
- */
-void blitEx(const Texture& texture, const math::Vec2& position, double angle = 0.0,
-            bool flipX = false, bool flipY = false);
-
-/**
  *  @brief Get the window renderer.
  *
  *  @return The window renderer.

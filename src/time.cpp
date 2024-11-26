@@ -9,7 +9,9 @@ double Clock::tick(int frameRate)
         frameRate = 1;
 
     m_targetFrameTime = 1000.0 / frameRate;
-    m_frameTime = (static_cast<double>(SDL_GetPerformanceCounter()) / m_frequency - m_last / m_frequency) * 1000.0;
+    m_frameTime =
+        (static_cast<double>(SDL_GetPerformanceCounter()) / m_frequency - m_last / m_frequency) *
+        1000.0;
     if (m_frameTime < m_targetFrameTime)
         SDL_Delay(static_cast<uint32_t>(m_targetFrameTime - m_frameTime));
 
@@ -17,6 +19,6 @@ double Clock::tick(int frameRate)
     m_deltaTime = m_now / m_frequency - m_last / m_frequency;
     m_last = m_now;
 
-    return m_deltaTime;
+    return std::min(m_deltaTime, 0.033); // Limit delta time at 33ms or 30fps
 }
 } // namespace kn::time

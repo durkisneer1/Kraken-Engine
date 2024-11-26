@@ -116,6 +116,14 @@ class Vec2
 
     bool operator!=(const Vec2& other) const;
 
+    bool operator<(const Vec2& other) const;
+
+    bool operator>(const Vec2& other) const;
+
+    bool operator<=(const Vec2& other) const;
+
+    bool operator>=(const Vec2& other) const;
+
   protected:
     double tolerance; //!< the accuracy with which comparisons are made
 };

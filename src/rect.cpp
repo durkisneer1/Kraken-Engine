@@ -35,9 +35,12 @@ void Rect::clamp(const math::Vec2& min, const math::Vec2& max)
 {
     if (max.x - min.x < this->w || max.y - min.y < this->h)
         return;
+
     setTopLeft(clampVec(getTopLeft(), min, max));
     setBottomRight(clampVec(getBottomRight(), min, max));
 }
+
+void Rect::clamp(const Rect& rect) { clamp(rect.getTopLeft(), rect.getBottomRight()); }
 
 void Rect::setCenter(const math::Vec2& pos)
 {

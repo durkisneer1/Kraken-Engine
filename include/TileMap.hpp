@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 #include <pugixml/pugixml.hpp>
 #include <string>
 #include <unordered_map>
@@ -11,20 +12,25 @@
 namespace kn
 {
 
+struct Layer;
+
 /**
  * @brief Container for source and destination Rects
  */
 struct Tile
 {
+    std::shared_ptr<Layer> layer;
     Rect crop;
     Rect rect;
+    Rect collider;
 };
 
 /**
- * @brief Container for tile map layer tiles
+ * @brief Container for a layer of tiles
  */
 struct Layer
 {
+    std::string name;
     std::vector<Tile> tiles;
 };
 
@@ -61,13 +67,25 @@ class TileMap final
      */
     void drawMap() const;
 
+    /**
+     * @brief Get a collection of tiles from the tile map.
+     *
+     * @param layerNames The names of the layers to get tiles from.
+     */
+    [[nodiscard]] std::vector<Tile>
+    getTileCollection(const std::vector<std::string>& layerNames) const;
+
   private:
     std::string dirPath;
     Texture* texture = nullptr;
+
+    std::vector<std::string> layerNames;
     std::unordered_map<std::string, Layer> layerHash;
 
-    void getTexture(const pugi::xml_node& map);
-    void parse();
+    std::string getTexturePath(const pugi::xml_node& map);
+
+    static Rect getFittedRect(const SDL_Surface* surface, const Rect& srcRect,
+                              const math::Vec2& position);
 };
 
 } // namespace kn
