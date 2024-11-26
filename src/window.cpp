@@ -53,7 +53,6 @@ void init(const math::Vec2& resolution, const std::string& title, const int scal
     {
         SDL_RenderSetLogicalSize(_renderer, static_cast<int>(resolution.x),
                                  static_cast<int>(resolution.y));
-        SDL_RenderSetIntegerScale(_renderer, SDL_TRUE);
     }
 
     setTitle(title);
@@ -119,10 +118,12 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
 
     Rect offsetRect = dstRect;
     offsetRect.setTopLeft(offsetRect.getTopLeft() - camera);
+    const SDL_Rect offsetRectInt = {static_cast<int>(offsetRect.x), static_cast<int>(offsetRect.y),
+                              static_cast<int>(offsetRect.w), static_cast<int>(offsetRect.h)};
 
     if (srcRect.getSize() == math::Vec2())
     {
-        SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &offsetRect, texture.angle,
+        SDL_RenderCopyEx(_renderer, texture.getSDLTexture(), nullptr, &offsetRectInt, texture.angle,
                           nullptr, flipAxis);
         return;
     }
@@ -130,7 +131,7 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
     const SDL_Rect src = {static_cast<int>(srcRect.x), static_cast<int>(srcRect.y),
                           static_cast<int>(srcRect.w), static_cast<int>(srcRect.h)};
 
-    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), &src, &offsetRect, texture.angle, nullptr,
+    SDL_RenderCopyEx(_renderer, texture.getSDLTexture(), &src, &offsetRectInt, texture.angle, nullptr,
                       flipAxis);
 }
 
@@ -150,8 +151,10 @@ void blit(const Texture& texture, const math::Vec2& position)
 
     Rect rect = texture.getRect();
     rect.setTopLeft(position - camera);
+    const SDL_Rect rectInt = {static_cast<int>(rect.x), static_cast<int>(rect.y),
+                              static_cast<int>(rect.w), static_cast<int>(rect.h)};
 
-    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &rect, texture.angle, nullptr,
+    SDL_RenderCopyEx(_renderer, texture.getSDLTexture(), nullptr, &rectInt, texture.angle, nullptr,
                       flipAxis);
 }
 

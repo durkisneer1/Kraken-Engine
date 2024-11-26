@@ -15,7 +15,7 @@ int main()
     bool done = false;
     while (!done)
     {
-        const double dt = clock.tick();
+        const double dt = clock.tick(240);
 
         for (const auto& event : kn::window::getEvents())
             if (event.type == kn::QUIT ||
