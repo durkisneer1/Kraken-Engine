@@ -21,6 +21,7 @@ deps = [
     dependency('SDL2_image'),
     dependency('SDL2_ttf'),
     dependency('SDL2_mixer'),
+    dependency('pugixml'),
 ]
 
 # Declare kraken engine lib and dependency

@@ -1,10 +1,11 @@
 #pragma once
 
 #include <memory>
-#include <pugixml/pugixml.hpp>
 #include <string>
 #include <unordered_map>
 #include <vector>
+
+#include <pugixml.hpp>
 
 #include "Rect.hpp"
 #include "Texture.hpp"

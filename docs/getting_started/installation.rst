@@ -15,12 +15,8 @@ Before starting, ensure you have the Meson build system and a C++ compiler insta
 
 .. code-block:: python
 
-    project('MyProject', 'cpp')
+    project('MyProject', 'cpp', default_options: ['cpp_std=c++17', 'default_library=static'])
     kraken_dep = dependency('kraken-engine')
     executable('MyProject', 'main.cpp', dependencies: kraken_dep)
 
 4. Continue with the typical Meson build and compile process.
-
-.. note::
-    Currently, SDL2 builds as dynamic link libraries (DLLs). You'll need to move the SDL2 DLLs from
-    ``builddir/subprojects/SDL2[_image | _mixer | _ttf]`` to your executable location, usually under ``builddir``.
