@@ -106,11 +106,52 @@ class Vec2
 
     template <typename T> Vec2 operator/(T scalar) const { return {x / scalar, y / scalar}; }
 
+    template <typename T> Vec2& operator/=(T scalar)
+    {
+        x /= scalar;
+        y /= scalar;
+
+        return *this;
+    }
+
+    template <typename T> Vec2 operator*(const T& lhs, const Vec2& rhs)
+    {
+        if (!isProductValid(static_cast<double>(lhs), rhs.x) ||
+            !isProductValid(static_cast<double>(lhs), rhs.y))
+        {
+            WARN("Multiplication would result in overflow")
+            return {};
+        }
+
+        const double x = lhs * rhs.x;
+        const double y = lhs * rhs.y;
+
+        return {x, y};
+    }
+
+    template <typename T> Vec2 operator*(const Vec2& lhs, const T& rhs) { return rhs * lhs; }
+
+    template <typename T> Vec2& operator*=(T scalar)
+    {
+        if (!isProductValid(x, scalar) || !isProductValid(y, scalar))
+        {
+            WARN("Multiplication would result in overflow")
+            return *this;
+        }
+
+        x *= scalar;
+        y *= scalar;
+
+        return *this;
+    }
+
     Vec2 operator+(const Vec2& other) const;
 
     Vec2 operator-(const Vec2& other) const;
 
     Vec2& operator+=(const Vec2& other);
+
+    Vec2& operator-=(const Vec2& other);
 
     bool operator==(const Vec2& other) const;
 
@@ -143,7 +184,7 @@ class Vec2
  * @param radius The radius.
  * @return Returns a vector from its polar representation.
  */
-Vec2 fromPolar(double angle, double radius);
+[[nodiscard]] Vec2 fromPolar(double angle, double radius);
 
 /**
  * @brief Get a normalized transformed vector from the given vector.
@@ -160,7 +201,7 @@ Vec2 fromPolar(double angle, double radius);
  * @param max The maximum value.
  * @return The clamped vector.
  */
-Vec2 clampVec(const Vec2& vec, const Vec2& min, const Vec2& max);
+[[nodiscard]] Vec2 clampVec(const Vec2& vec, const Vec2& min, const Vec2& max);
 
 /**
  * @brief Linearly interpolate a vector.
@@ -169,7 +210,7 @@ Vec2 clampVec(const Vec2& vec, const Vec2& min, const Vec2& max);
  * @param t The time in seconds.
  * @return The interpolated vector.
  */
-Vec2 lerpVec(const Vec2& a, const Vec2& b, double t);
+[[nodiscard]] Vec2 lerpVec(const Vec2& a, const Vec2& b, double t);
 
 /**
  * @brief Linear interpolate a value
@@ -237,23 +278,6 @@ double angleBetween(const Vec2& a, const Vec2& b);
  * @return The angle in radians between the heads of the vectors.
  */
 double angleOfDifference(const Vec2& a, const Vec2& b);
-
-template <typename T> Vec2 operator*(const T& lhs, const Vec2& rhs)
-{
-    if (!isProductValid(static_cast<double>(lhs), rhs.x) ||
-        !isProductValid(static_cast<double>(lhs), rhs.y))
-    {
-        WARN("Multiplication would result in overflow")
-        return {};
-    }
-
-    const double x = lhs * rhs.x;
-    const double y = lhs * rhs.y;
-
-    return {x, y};
-}
-
-template <typename T> Vec2 operator*(const Vec2& lhs, const T& rhs) { return rhs * lhs; }
 
 } // namespace math
 } // namespace kn
