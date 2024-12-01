@@ -11,12 +11,12 @@ class TestBase : public ::testing::Test
 {
   public:
     TestBase() { kn::ErrorLogger::setConsoleOnly(); }
-    virtual ~TestBase() {}
+    ~TestBase() override = default;
 
   protected:
-    virtual void SetUp() {}
+    void SetUp() override {}
 
-    virtual void TearDown() {}
+    void TearDown() override {}
 };
 
 } // namespace

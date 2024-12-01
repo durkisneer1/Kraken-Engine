@@ -2,7 +2,7 @@ project(
     'kraken-engine',
     ['c', 'cpp'],
     license : 'MIT',
-    license_files: 'LICENSE',
+    license_files : 'LICENSE',
     default_options : [
         'default_library=static',
         'c_std=c17',
@@ -51,9 +51,8 @@ if get_option('build_tests')
     gtest_main_dep = dependency('gtest_main', main : true, required : false)
 
     gtest = shared_library('gtest', install : true)
-    gmock = shared_library('gmock', install: true)
-    gtest_main = shared_library('gtest_main', install: true)
-
+    gmock = shared_library('gmock', install : true)
+    gtest_main = shared_library('gtest_main', install : true)
 
     subdir('tests')
     executable(

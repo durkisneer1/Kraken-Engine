@@ -44,8 +44,12 @@ class TileMap final
      * @brief Load a Tiled tmx file.
      *
      * @param filePath The path to the Tiled tmx file.
+     * @param borderSize The size of the border around the tiles.
+     * The border must be on all sides of the tiles
+     *
+     * @note It is recommended to have a border around the tiles to prevent texture bleeding.
      */
-    explicit TileMap(const std::string& filePath);
+    explicit TileMap(const std::string& filePath, int borderSize = 0);
     ~TileMap();
 
     /**
