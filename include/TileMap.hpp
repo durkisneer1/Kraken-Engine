@@ -31,6 +31,7 @@ struct Tile
  */
 struct Layer
 {
+    bool isVisible;
     std::string name;
     std::vector<Tile> tiles;
 };

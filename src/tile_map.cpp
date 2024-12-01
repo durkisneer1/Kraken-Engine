@@ -44,7 +44,9 @@ TileMap::TileMap(const std::string& filePath, const int borderSize)
 
         std::string layerName = child.attribute("name").value();
         layerNames.push_back(layerName);
-        layerHash[layerName] = {layerName, {}};
+        const auto layerVisibility = std::string(child.attribute("visible").value());
+        const bool isVisible = layerVisibility.empty() || layerVisibility != "0";
+        layerHash[layerName] = {isVisible, layerName, {}};
         const auto layerPtr = std::make_shared<Layer>(layerHash.at(layerName));
 
         std::string dataContent = child.child("data").child_value();
@@ -102,7 +104,8 @@ TileMap::~TileMap()
 void TileMap::drawMap() const
 {
     for (const auto& name : layerNames)
-        drawLayer(name);
+        if (layerHash.at(name).isVisible)
+            drawLayer(name);
 }
 
 std::string TileMap::getTexturePath(const pugi::xml_node& map)
