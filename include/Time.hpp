@@ -32,4 +32,12 @@ class Clock final
     double m_now = static_cast<double>(SDL_GetPerformanceCounter());
     double m_last = static_cast<double>(SDL_GetPerformanceCounter());
 };
+
+/**
+ * @brief Get the elapsed time in seconds since Kraken was initialized.
+ *
+ * @return The elapsed time.
+ */
+[[nodiscard]] double getTicks();
+
 } // namespace kn::time

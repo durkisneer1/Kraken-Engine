@@ -167,7 +167,7 @@ bool getFullscreen()
     if (!_window)
         WARN("Cannot get fullscreen before creating the window")
 
-    return SDL_GetWindowFlags(_window) & SDL_WINDOW_FULLSCREEN_DESKTOP;
+    return SDL_GetWindowFlags(_window) & SDL_WINDOW_FULLSCREEN;
 }
 
 int getScale()
@@ -214,7 +214,7 @@ void setFullscreen(const bool fullscreen)
     if (!_window)
         WARN("Cannot set fullscreen before creating the window")
 
-    SDL_SetWindowFullscreen(_window, fullscreen ? SDL_WINDOW_FULLSCREEN_DESKTOP : 0);
+    SDL_SetWindowFullscreen(_window, fullscreen ? SDL_WINDOW_FULLSCREEN : 0);
 }
 
 math::Vec2 getSize()

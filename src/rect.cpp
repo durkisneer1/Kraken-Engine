@@ -42,12 +42,6 @@ void Rect::clamp(const math::Vec2& min, const math::Vec2& max)
 
 void Rect::clamp(const Rect& rect) { clamp(rect.getTopLeft(), rect.getBottomRight()); }
 
-void Rect::setCenter(const math::Vec2& pos)
-{
-    x = static_cast<float>(pos.x - w / 2);
-    y = static_cast<float>(pos.y - h / 2);
-}
-
 void Rect::setLeft(const float x) { this->x = x; }
 
 void Rect::setRight(const float x) { this->x = x - w; }
@@ -74,6 +68,24 @@ void Rect::setTopRight(const math::Vec2& pos)
     y = static_cast<float>(pos.y);
 }
 
+void Rect::setLeftMid(const math::Vec2& pos)
+{
+    x = static_cast<float>(pos.x);
+    y = static_cast<float>(pos.y - h / 2);
+}
+
+void Rect::setCenter(const math::Vec2& pos)
+{
+    x = static_cast<float>(pos.x - w / 2);
+    y = static_cast<float>(pos.y - h / 2);
+}
+
+void Rect::setRightMid(const math::Vec2& pos)
+{
+    x = static_cast<float>(pos.x - w);
+    y = static_cast<float>(pos.y - h / 2.f);
+}
+
 void Rect::setBottomLeft(const math::Vec2& pos)
 {
     x = static_cast<float>(pos.x);
@@ -92,20 +104,6 @@ void Rect::setBottomRight(const math::Vec2& pos)
     y = static_cast<float>(pos.y - h);
 }
 
-void Rect::setLeftMid(const math::Vec2& pos)
-{
-    x = static_cast<float>(pos.x);
-    y = static_cast<float>(pos.y - h / 2);
-}
-
-void Rect::setRightMid(const math::Vec2& pos)
-{
-    x = static_cast<float>(pos.x - w);
-    y = static_cast<float>(pos.y - h / 2.f);
-}
-
-math::Vec2 Rect::getCenter() const { return {x + w / 2, y + h / 2}; }
-
 float Rect::getLeft() const { return x; }
 
 float Rect::getRight() const { return x + w; }
@@ -120,13 +118,15 @@ math::Vec2 Rect::getTopMid() const { return {x + w / 2, y}; }
 
 math::Vec2 Rect::getTopRight() const { return {x + w, y}; }
 
+math::Vec2 Rect::getLeftMid() const { return {x, y + h / 2}; }
+
+math::Vec2 Rect::getCenter() const { return {x + w / 2, y + h / 2}; }
+
+math::Vec2 Rect::getRightMid() const { return {x + w, y + h / 2}; }
+
 math::Vec2 Rect::getBottomLeft() const { return {x, y + h}; }
 
 math::Vec2 Rect::getBottomMid() const { return {x + w / 2, y + h}; }
 
 math::Vec2 Rect::getBottomRight() const { return {x + w, y + h}; }
-
-math::Vec2 Rect::getLeftMid() const { return {x, y + h / 2}; }
-
-math::Vec2 Rect::getRightMid() const { return {x + w, y + h / 2}; }
 } // namespace kn
