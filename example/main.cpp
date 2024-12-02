@@ -5,7 +5,6 @@
 int main()
 {
     kn::window::init({320, 180}, "Night Terror", 4);
-    kn::window::setFullscreen(true);
     kn::time::Clock clock;
     kn::camera = {-32, -26};
 

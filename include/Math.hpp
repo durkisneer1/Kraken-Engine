@@ -114,23 +114,6 @@ class Vec2
         return *this;
     }
 
-    template <typename T> Vec2 operator*(const T& lhs, const Vec2& rhs)
-    {
-        if (!isProductValid(static_cast<double>(lhs), rhs.x) ||
-            !isProductValid(static_cast<double>(lhs), rhs.y))
-        {
-            WARN("Multiplication would result in overflow")
-            return {};
-        }
-
-        const double x = lhs * rhs.x;
-        const double y = lhs * rhs.y;
-
-        return {x, y};
-    }
-
-    template <typename T> Vec2 operator*(const Vec2& lhs, const T& rhs) { return rhs * lhs; }
-
     template <typename T> Vec2& operator*=(T scalar)
     {
         if (!isProductValid(x, scalar) || !isProductValid(y, scalar))
@@ -278,6 +261,23 @@ double angleBetween(const Vec2& a, const Vec2& b);
  * @return The angle in radians between the heads of the vectors.
  */
 double angleOfDifference(const Vec2& a, const Vec2& b);
+
+template <typename T> Vec2 operator*(const T& lhs, const Vec2& rhs)
+{
+    if (!isProductValid(static_cast<double>(lhs), rhs.x) ||
+        !isProductValid(static_cast<double>(lhs), rhs.y))
+    {
+        WARN("Multiplication would result in overflow")
+        return {};
+    }
+
+    const double x = lhs * rhs.x;
+    const double y = lhs * rhs.y;
+
+    return {x, y};
+}
+
+template <typename T> Vec2 operator*(const Vec2& lhs, const T& rhs) { return rhs * lhs; }
 
 } // namespace math
 } // namespace kn

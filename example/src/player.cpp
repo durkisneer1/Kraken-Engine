@@ -14,10 +14,9 @@ Player::Player(const kn::TileMap& tileMap)
 
 void Player::update(const double dt)
 {
-    const Uint8* keys = kn::input::getKeysPressed();
     if (onGround)
     {
-        if (keys[kn::S_SPACE])
+        if (kn::input::isKeyPressed(kn::S_SPACE))
         {
             velocity.y = -200;
             onGround = false;
