@@ -22,18 +22,22 @@ namespace input
 math::Vec2 getMousePos();
 
 /**
- * @brief Get the mouse button pressed.
+ * @brief Check if the argument mouse button is pressed.
  *
- * @return The mouse button pressed.
+ * @param button The mouse button to check.
+ *
+ * @return If the argument mouse button is pressed.
  */
-int getMouseButtonPressed();
+bool isMouseButtonPressed(int button);
 
 /**
- * @brief Get the keys pressed.
+ * @brief Check if the argument key is pressed.
  *
- * @return The keys pressed.
+ * @param key The key to check.
+ *
+ * @return If the argument key is pressed.
  */
-const Uint8* getKeysPressed();
+bool isKeyPressed(int key);
 
 /**
  * @brief Get the vector of the keys pressed.

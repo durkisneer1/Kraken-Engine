@@ -5,6 +5,7 @@
 int main()
 {
     kn::window::init({320, 180}, "Night Terror", 4);
+    kn::window::setFullscreen(true);
     kn::time::Clock clock;
     kn::camera = {-32, -26};
 
@@ -15,7 +16,7 @@ int main()
     bool done = false;
     while (!done)
     {
-        const double dt = clock.tick(240);
+        const double dt = clock.tick();
 
         for (const auto& event : kn::window::getEvents())
             if (event.type == kn::QUIT ||

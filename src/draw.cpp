@@ -33,6 +33,7 @@ void rect(const Rect& rect, const Color& color, const int thickness)
         SDL_RenderDrawRectF(window::getRenderer(), &layerRect);
     }
 }
+
 void line(const math::Vec2& start, const math::Vec2& end, const Color& color)
 {
     SDL_SetRenderDrawColor(window::getRenderer(), color.r, color.g, color.b, color.a);
@@ -41,6 +42,7 @@ void line(const math::Vec2& start, const math::Vec2& end, const Color& color)
                         static_cast<float>(start.y - camera.y),
                         static_cast<float>(end.x - camera.x), static_cast<float>(end.y - camera.y));
 }
+
 void point(const math::Vec2& point, const Color& color)
 {
     SDL_SetRenderDrawColor(window::getRenderer(), color.r, color.g, color.b, color.a);
@@ -48,6 +50,7 @@ void point(const math::Vec2& point, const Color& color)
     SDL_RenderDrawPointF(window::getRenderer(), static_cast<float>(point.x - camera.x),
                          static_cast<float>(point.y - camera.y));
 }
+
 void circle(const math::Vec2& center, double radius, const Color& color, const int thickness)
 {
     if (thickness < 0)

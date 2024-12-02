@@ -13,5 +13,3 @@ sources = [
     'src/time.cpp',
     'src/window.cpp',
 ]
-
-sources += 'src/pugixml/pugixml.cpp'

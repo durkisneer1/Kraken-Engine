@@ -9,14 +9,14 @@
 
 namespace kn
 {
-TileMap::TileMap(const std::string& filePath)
+TileMap::TileMap(const std::string& filePath, const int borderSize)
 {
     pugi::xml_document doc;
     if (!doc.load_file(filePath.c_str()))
         throw std::runtime_error("Failed to load " + filePath);
 
     const size_t lastSlashPos = filePath.find_last_of('/');
-    dirPath = (lastSlashPos != std::string::npos) ? filePath.substr(0, lastSlashPos + 1) : "";
+    dirPath = lastSlashPos != std::string::npos ? filePath.substr(0, lastSlashPos + 1) : "";
 
     const auto map = doc.child("map");
 
@@ -35,7 +35,7 @@ TileMap::TileMap(const std::string& filePath)
     const int mapWidth = std::stoi(map.attribute("width").value());
     const int tileWidth = std::stoi(map.attribute("tilewidth").value());
     const int tileHeight = std::stoi(map.attribute("tileheight").value());
-    const int tileSetWidth = static_cast<int>(texture->getSize().x) / tileWidth;
+    const int tileSetWidth = static_cast<int>(texture->getSize().x) / (tileWidth + 2 * borderSize);
 
     for (const auto& child : map.children())
     {
@@ -44,7 +44,9 @@ TileMap::TileMap(const std::string& filePath)
 
         std::string layerName = child.attribute("name").value();
         layerNames.push_back(layerName);
-        layerHash[layerName] = {layerName, {}};
+        const auto layerVisibility = std::string(child.attribute("visible").value());
+        const bool isVisible = layerVisibility.empty() || layerVisibility != "0";
+        layerHash[layerName] = {isVisible, layerName, {}};
         const auto layerPtr = std::make_shared<Layer>(layerHash.at(layerName));
 
         std::string dataContent = child.child("data").child_value();
@@ -73,8 +75,8 @@ TileMap::TileMap(const std::string& filePath)
                 continue;
             }
 
-            const int srcX = (tileId % tileSetWidth) * tileWidth;
-            const int srcY = (tileId / tileSetWidth) * tileHeight;
+            const int srcX = (tileId % tileSetWidth) * (tileWidth + 2 * borderSize) + borderSize;
+            const int srcY = (tileId / tileSetWidth) * (tileHeight + 2 * borderSize) + borderSize;
             const int destX = (tileCounter % mapWidth) * tileWidth;
             const int destY = (tileCounter / mapWidth) * tileHeight;
 
@@ -102,7 +104,8 @@ TileMap::~TileMap()
 void TileMap::drawMap() const
 {
     for (const auto& name : layerNames)
-        drawLayer(name);
+        if (layerHash.at(name).isVisible)
+            drawLayer(name);
 }
 
 std::string TileMap::getTexturePath(const pugi::xml_node& map)

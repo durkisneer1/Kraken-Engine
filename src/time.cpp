@@ -21,4 +21,12 @@ double Clock::tick(int frameRate)
 
     return std::min(m_deltaTime, 0.033); // Limit delta time at 33ms or 30fps
 }
+
+double getTicks()
+{
+    const auto now = static_cast<double>(SDL_GetPerformanceCounter());
+    const auto frequency = static_cast<double>(SDL_GetPerformanceFrequency());
+    return now / frequency;
+}
+
 } // namespace kn::time

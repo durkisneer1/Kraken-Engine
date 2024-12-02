@@ -23,6 +23,12 @@ Sound::Sound(const std::string& fileDir)
     }
 }
 
+Sound::~Sound()
+{
+    if (m_sound)
+        Mix_FreeChunk(m_sound);
+}
+
 void Sound::play(const int loops, const int playTime, const int fadeMs) const
 {
     int channelNum;
@@ -48,9 +54,4 @@ void Sound::setVolume(const float volume)
 
 float Sound::getVolume() const { return m_volume / MIX_MAX_VOLUME; }
 
-void Sound::unload() const
-{
-    if (m_sound)
-        Mix_FreeChunk(m_sound);
-}
 } // namespace kn

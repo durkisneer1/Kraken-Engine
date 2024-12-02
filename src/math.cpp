@@ -35,21 +35,16 @@ double Vec2::getLength() const
     return sqrt(first + second);
 }
 
-void Vec2::rotate(const double angle)
-{
-    const double rad = toRadians(angle);
-    const double cosine = cos(toRadians(rad));
-    const double sine = sin(rad);
-    x = x * cosine - y * sine;
-    y = x * sine + y * cosine;
-}
+void Vec2::rotate(const double angle) { rotateRad(toRadians(angle)); }
 
 void Vec2::rotateRad(const double angle)
 {
     const double cosine = cos(angle);
     const double sine = sin(angle);
-    x = x * cosine - y * sine;
-    y = x * sine + y * cosine;
+    const double oldX = x;
+
+    x = oldX * cosine - y * sine;
+    y = oldX * sine + y * cosine;
 }
 
 PolarCoordinate Vec2::asPolar() const
@@ -174,6 +169,14 @@ Vec2& Vec2::operator+=(const Vec2& other)
 {
     x += other.x;
     y += other.y;
+
+    return *this;
+}
+
+Vec2& Vec2::operator-=(const Vec2& other)
+{
+    x -= other.x;
+    y -= other.y;
 
     return *this;
 }

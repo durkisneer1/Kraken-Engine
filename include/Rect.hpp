@@ -80,7 +80,6 @@ struct Rect : SDL_FRect
      */
     void clamp(const Rect& rect);
 
-    void setCenter(const math::Vec2& pos);
     void setLeft(float x);
     void setRight(float x);
     void setTop(float y);
@@ -88,13 +87,13 @@ struct Rect : SDL_FRect
     void setTopLeft(const math::Vec2& pos);
     void setTopMid(const math::Vec2& pos);
     void setTopRight(const math::Vec2& pos);
+    void setLeftMid(const math::Vec2& pos);
+    void setCenter(const math::Vec2& pos);
+    void setRightMid(const math::Vec2& pos);
     void setBottomLeft(const math::Vec2& pos);
     void setBottomMid(const math::Vec2& pos);
     void setBottomRight(const math::Vec2& pos);
-    void setLeftMid(const math::Vec2& pos);
-    void setRightMid(const math::Vec2& pos);
 
-    [[nodiscard]] math::Vec2 getCenter() const;
     [[nodiscard]] float getLeft() const;
     [[nodiscard]] float getRight() const;
     [[nodiscard]] float getTop() const;
@@ -102,10 +101,11 @@ struct Rect : SDL_FRect
     [[nodiscard]] math::Vec2 getTopLeft() const;
     [[nodiscard]] math::Vec2 getTopMid() const;
     [[nodiscard]] math::Vec2 getTopRight() const;
+    [[nodiscard]] math::Vec2 getLeftMid() const;
+    [[nodiscard]] math::Vec2 getCenter() const;
+    [[nodiscard]] math::Vec2 getRightMid() const;
     [[nodiscard]] math::Vec2 getBottomLeft() const;
     [[nodiscard]] math::Vec2 getBottomMid() const;
     [[nodiscard]] math::Vec2 getBottomRight() const;
-    [[nodiscard]] math::Vec2 getLeftMid() const;
-    [[nodiscard]] math::Vec2 getRightMid() const;
 };
 } // namespace kn

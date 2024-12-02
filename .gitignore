@@ -45,7 +45,5 @@ subprojects/libpng.wrap
 subprojects/zlib.wrap
 
 # Docs stuff
-docs/html/
-docs/latex/
 docs/xml/
 docs/_build/

@@ -61,30 +61,4 @@ Rect Texture::getRect() const { return rect; }
 
 SDL_Texture* Texture::getSDLTexture() const { return texture; }
 
-void Texture::setSize(const math::Vec2& size)
-{
-    rect.w = static_cast<float>(size.x);
-    rect.h = static_cast<float>(size.y);
-}
-
-void Texture::scaleBy(const float factor)
-{
-    rect.w = rect.w * factor;
-    rect.h = rect.h * factor;
-}
-
-void Texture::fitWidth(const float width)
-{
-    const float scale = width / rect.w;
-    rect.w = width;
-    rect.h = rect.h * scale;
-}
-
-void Texture::fitHeight(const float height)
-{
-    const float scale = height / rect.h;
-    rect.w = rect.w * scale;
-    rect.h = height;
-}
-
 } // namespace kn

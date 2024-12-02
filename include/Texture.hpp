@@ -49,6 +49,8 @@ class Texture final
      * @brief Create a texture from an existing SDL texture pointer.
      *
      * @param sdlTexture An SDL texture object.
+     *
+     * @note This should rarely or never have to be used.
      */
     explicit Texture(SDL_Texture* sdlTexture);
 
@@ -72,6 +74,8 @@ class Texture final
      * @brief Get the SDL texture pointer.
      *
      * @return The SDL texture pointer.
+     *
+     * @note This should rarely or never have to be used.
      */
     [[nodiscard]] SDL_Texture* getSDLTexture() const;
 
@@ -82,35 +86,7 @@ class Texture final
      *
      * @return true when successful, false on failure.
      */
-    bool loadFromFile(const std::string& filePath);
-
-    /**
-     * @brief Set the size of the texture rect.
-     *
-     * @param size The size of the texture rect.
-     */
-    void setSize(const math::Vec2& size);
-
-    /**
-     * @brief Scale the texture rect by a factor.
-     *
-     * @param factor The factor to scale by.
-     */
-    void scaleBy(float factor);
-
-    /**
-     * @brief Fit the texture rect to a width while maintaining aspect ratio.
-     *
-     * @param width The width to fit to.
-     */
-    void fitWidth(float width);
-
-    /**
-     * @brief Fit the texture rect to a height while maintaining aspect ratio.
-     *
-     * @param height The height to fit to.
-     */
-    void fitHeight(float height);
+    [[maybe_unused]] bool loadFromFile(const std::string& filePath);
 
   private:
     SDL_Texture* texture = nullptr;

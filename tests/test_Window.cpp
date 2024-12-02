@@ -3,8 +3,8 @@
 
 #include <gtest/gtest.h>
 
-#include "Window.hpp"
 #include "TestBase.hpp"
+#include "Window.hpp"
 
 namespace
 {
@@ -12,14 +12,14 @@ namespace
 class WindowTest : public TestBase
 {
   public:
-    WindowTest() : TestBase(), m_size(320, 240), m_scale(2), m_title("Kraken Window") {}
+    WindowTest() : m_size(320, 240), m_scale(2), m_title("Kraken Window") {}
 
-    virtual ~WindowTest() {}
+    ~WindowTest() override = default;
 
   protected:
-    virtual void SetUp() { kn::window::init(m_size, m_title, m_scale); }
+    void SetUp() override { kn::window::init(m_size, m_title, m_scale); }
 
-    virtual void TearDown() { kn::window::quit(); }
+    void TearDown() override { kn::window::quit(); }
 
     kn::math::Vec2 m_size;
     int m_scale;
@@ -28,7 +28,7 @@ class WindowTest : public TestBase
 
 TEST_F(WindowTest, WindowInit)
 {
-    if (kn::window::getRenderer() != NULL)
+    if (kn::window::getRenderer() != nullptr)
     {
         EXPECT_EQ(kn::window::getSize().x, m_size.x);
         EXPECT_EQ(kn::window::getSize().y, m_size.y);
