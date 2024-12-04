@@ -1905,8 +1905,3 @@ p + .classref-constant {
         padding: 3px 5px;
     }
 }
-
-/* Giscus */
-#godot-giscus {
-    margin-bottom: 1em;
-}

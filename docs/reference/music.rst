@@ -28,6 +28,9 @@ Usage
     // Fade out the music over 2 seconds.
     kn::music::fadeOut(2000);
 
+Functions
+---------
+
 .. doxygenfunction:: kn::music::load
 
 .. doxygenfunction:: kn::music::unload

@@ -31,6 +31,9 @@ Usage
 
     kn::math::Vec2 inputDir = kn::input::getVector(left, right, up, down);
 
+Functions
+---------
+
 .. doxygenfunction:: kn::input::getMousePos
 
 .. doxygenfunction:: kn::input::isMouseButtonPressed

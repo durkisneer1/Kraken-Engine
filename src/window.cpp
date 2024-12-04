@@ -10,8 +10,7 @@ namespace kn::window
 {
 static SDL_Renderer* _renderer;
 static SDL_Window* _window;
-static Event _event;
-static std::vector<Event> _events;
+static bool _isOpen;
 
 void init(const math::Vec2& resolution, const std::string& title, const int scale)
 {
@@ -57,7 +56,13 @@ void init(const math::Vec2& resolution, const std::string& title, const int scal
 
     setTitle(title);
     setIcon("../example/assets/kraken_engine_window_icon.png");
+
+    _isOpen = true;
 }
+
+bool isOpen() { return _isOpen; }
+
+void close() { _isOpen = false; }
 
 void quit()
 {
@@ -73,16 +78,12 @@ void quit()
     SDL_Quit();
 }
 
-const std::vector<Event>& getEvents()
+void pollEvent(Event& event)
 {
     if (!_window)
         WARN("Cannot get events before creating the window")
 
-    _events.clear();
-    while (SDL_PollEvent(&_event))
-        _events.push_back(_event);
-
-    return _events;
+    SDL_PollEvent(&event);
 }
 
 void clear(const Color color)

@@ -11,7 +11,7 @@ What the AnimationController class does **NOT** do is provide a draw function.
 This design decision is to give users the flexibility to draw the current frame in a desired position and size.
 
 Usage
--------------
+-----
 
 .. code-block:: cpp
 
@@ -32,6 +32,9 @@ Usage
 
     // Draw the current frame texture at position (50, 50) and size (16, 16).
     kn::window::blit(*frame.tex, {50, 50, 16, 16}, frame.rect);
+
+Members
+-------
 
 .. doxygenclass:: kn::AnimationController
     :members:

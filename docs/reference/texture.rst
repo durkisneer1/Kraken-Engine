@@ -29,6 +29,8 @@ Usage
     kn::window::blit(imageTexture, {50, 50});
     kn::window::blit(colorTexture, {100, 100});
 
+Members
+-------
 
 .. doxygenclass:: kn::Texture
     :members:

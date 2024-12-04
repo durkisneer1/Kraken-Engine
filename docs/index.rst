@@ -30,6 +30,7 @@ We look forward to seeing the incredible games you create with the Kraken Engine
 .. toctree::
     :hidden:
     :maxdepth: 1
+    :caption: Getting Started
 
     getting_started/installation
     getting_started/create_window
@@ -37,17 +38,32 @@ We look forward to seeing the incredible games you create with the Kraken Engine
 .. toctree::
     :hidden:
     :maxdepth: 1
+    :caption: Manual
 
     tutorials/index
 
 .. toctree::
     :hidden:
     :maxdepth: 1
+    :caption: Contributing
 
     contributing/how_to_contribute
 
 .. toctree::
     :hidden:
     :maxdepth: 1
+    :caption: API Reference
 
-    reference/index
+    reference/animation_controller
+    reference/font
+    reference/rect
+    reference/sound
+    reference/texture
+    reference/tile_map
+    reference/constants
+    reference/draw
+    reference/input
+    reference/math
+    reference/music
+    reference/time
+    reference/window

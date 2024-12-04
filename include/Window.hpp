@@ -30,6 +30,18 @@ namespace window
 void init(const math::Vec2& resolution, const std::string& title = "Kraken Window", int scale = 1);
 
 /**
+ * @brief Get whether the window is open.
+ *
+ * @return Whether the window is open.
+ */
+bool isOpen();
+
+/**
+ * @brief Close the window.
+ */
+void close();
+
+/**
  * @brief Clear the screen.
  *
  * @param color The color to clear the screen.
@@ -66,11 +78,11 @@ void blit(const Texture& texture, const math::Vec2& position = {});
 SDL_Renderer* getRenderer();
 
 /**
- *  @brief Get user events.
+ *  @brief Populate an event with the next window events.
  *
- *  @return The user events.
+ *  @param event The event to poll.
  */
-const std::vector<Event>& getEvents();
+void pollEvent(Event& event);
 
 /**
  * @brief Get whether the window is fullscreen or not.

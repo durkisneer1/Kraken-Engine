@@ -21,7 +21,13 @@ Usage
     // Get the time since Kraken was initialized.
     double elapsedTime = kn::time::getTicks();
 
+Members
+-------
+
 .. doxygenclass:: kn::time::Clock
     :members:
+
+Functions
+---------
 
 .. doxygenfunction:: kn::time::getTicks
