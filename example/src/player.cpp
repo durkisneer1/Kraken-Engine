@@ -4,10 +4,10 @@
 #define AxisY 1
 
 Player::Player(const kn::TileMap& tileMap)
-    : animController(5), rect(48, 120, 13, 16), collisionLayer(tileMap.getLayer("Wall"))
+    : rect(48, 120, 13, 16), collisionLayer(tileMap.getLayer("Wall"))
 {
-    animController.addAnim("../example/assets/player_idle.png", "idle", 13, 16);
-    animController.addAnim("../example/assets/player_walk.png", "walk", 13, 16);
+    animController.addAnim("idle", "../example/assets/player_idle.png", {13, 16}, 5);
+    animController.addAnim("walk", "../example/assets/player_walk.png", {13, 16}, 5);
 
     interactables = tileMap.getTileCollection({"Mirror", "Bed", "Desk"});
 }

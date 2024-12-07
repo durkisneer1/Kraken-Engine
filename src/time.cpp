@@ -3,6 +3,7 @@
 
 namespace kn::time
 {
+
 double Clock::tick(int frameRate)
 {
     if (frameRate < 1)
@@ -22,11 +23,6 @@ double Clock::tick(int frameRate)
     return std::min(m_deltaTime, 0.033); // Limit delta time at 33ms or 30fps
 }
 
-double getTicks()
-{
-    const auto now = static_cast<double>(SDL_GetPerformanceCounter());
-    const auto frequency = static_cast<double>(SDL_GetPerformanceFrequency());
-    return now / frequency;
-}
+double getTicks() { return SDL_GetTicks() / 1000.0; }
 
 } // namespace kn::time

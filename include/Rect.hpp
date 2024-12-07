@@ -18,13 +18,17 @@ struct Rect : SDL_FRect
     /**
      * @brief Construct a new rectangle.
      *
-     * @param x The x position.
-     * @param y The y position.
+     * @param x The x ordinate of its top left.
+     * @param y The y ordinate of its top left.
      * @param w The width.
      * @param h The height.
      */
-    Rect(float x, float y, float w, float h);
-    Rect(int x, int y, int w, int h);
+    template <typename T>
+    Rect(T x, T y, T w, T h)
+        : SDL_FRect{static_cast<float>(x), static_cast<float>(y), static_cast<float>(w),
+                    static_cast<float>(h)}
+    {
+    }
 
     /**
      * @brief Get the position of the rectangle.
