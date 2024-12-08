@@ -9,9 +9,13 @@ Before starting, ensure you have the Meson build system and a C++ compiler insta
 
     mkdir subprojects
 
-2. Run ``meson wrap install kraken-engine`` to install the latest version of Kraken Engine.
+2. Use the following command to install the latest version of Kraken Engine:
 
-3. Include the Kraken Engine dependency in your Meson build file.
+.. code-block:: bash
+
+    meson wrap install kraken-engine
+
+3. Include the Kraken Engine dependency in your Meson build file (usually ``meson.build``).
 
 .. code-block:: python
 
@@ -19,4 +23,21 @@ Before starting, ensure you have the Meson build system and a C++ compiler insta
     kraken_dep = dependency('kraken-engine')
     executable('MyProject', 'main.cpp', dependencies: kraken_dep)
 
-4. Continue with the typical Meson build and compile process.
+4. Build and compile your project using Meson:
+
+.. code-block:: bash
+
+    meson setup build
+    cd build
+    meson compile
+
+You can also use the ``-j`` flag to specify the number of threads to use to speed up compilation (e.g., ``meson compile -j4``).
+
+Updating
+--------
+
+To update Kraken Engine to the latest version, use the following command:
+
+.. code-block:: bash
+
+    meson wrap update kraken-engine
