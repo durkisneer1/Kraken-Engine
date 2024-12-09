@@ -15,9 +15,6 @@ The following code creates a window and keeps it open until the user closes it.
 
         while (kn::window::isOpen()) {
             kn::window::pollEvent(event);
-            if (event.type == kn::QUIT)
-                kn::window::close();
-
             kn::window::flip();
         }
         kn::window::quit();
@@ -36,14 +33,13 @@ Let's break down the key components that make this program function:
     This function prepares the underlying graphical context, ensuring the application is ready to display content.
 
 * Event Handling
-    Before entering the main game loop, an Event union is instantiated.
+    Before entering the main game loop, an ``Event`` union is instantiated.
     This union acts as a container for user inputs and system events.
     The call to ``kn::window::pollEvent(event)`` continuously monitors for user interactions or system-generated signals, populating the event union with the details of the most recent occurrence.
 
 * Closing the Application
-    The event-handling system allows the program to respond dynamically to user actions.
-    Specifically, ``if (event.type == kn::QUIT)`` detects when the user clicks the window’s close button.
-    Upon detecting this event, the call to ``kn::window::close()`` ends the game loop.
+    By default, Kraken Engine applications close when the user clicks the window’s close button.
+    Upon detecting this event internally, the call to ``kn::window::close()`` ends the game loop.
 
 * Updating the Display
     ``kn::window::flip()`` acts as the final piece in the game loop, swapping the back buffer to the front.

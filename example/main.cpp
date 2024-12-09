@@ -18,12 +18,8 @@ int main()
         const double dt = clock.tick();
 
         kn::window::pollEvent(event);
-        if (event.type == kn::QUIT ||
-            (event.type == kn::KEYDOWN && event.key.keysym.sym == kn::K_ESCAPE))
+        if (event.type == kn::KEYDOWN && event.key.keysym.sym == kn::K_ESCAPE)
             kn::window::close();
-        if (event.type == kn::MOUSEMOTION)
-            if (event.type == kn::MOUSEBUTTONDOWN)
-                std::cout << "yes\n";
 
         kn::window::clear({21, 18, 37});
 

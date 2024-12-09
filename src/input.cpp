@@ -7,6 +7,8 @@
 
 namespace kn::input
 {
+// static float _deadZone = 0.1f;
+
 math::Vec2 getMousePos()
 {
     int x, y;
@@ -16,7 +18,10 @@ math::Vec2 getMousePos()
     return pos + camera;
 }
 
-bool isMouseButtonPressed(const int button) { return SDL_GetMouseState(nullptr, nullptr) == button; }
+bool isMouseButtonPressed(const Uint32 button)
+{
+    return SDL_GetMouseState(nullptr, nullptr) == button;
+}
 
 bool isKeyPressed(const int key) { return SDL_GetKeyboardState(nullptr)[key]; }
 
@@ -27,16 +32,42 @@ math::Vec2 getVector(const std::vector<KEYS>& left, const std::vector<KEYS>& rig
 
     if (std::any_of(up.begin(), up.end(), [&](auto scancode) { return isKeyPressed(scancode); }))
         vector.y -= 1;
-    if (std::any_of(left.begin(), left.end(), [&](auto scancode) { return isKeyPressed(scancode); }))
+    if (std::any_of(left.begin(), left.end(),
+                    [&](auto scancode) { return isKeyPressed(scancode); }))
         vector.x -= 1;
-    if (std::any_of(down.begin(), down.end(), [&](auto scancode) { return isKeyPressed(scancode); }))
+    if (std::any_of(down.begin(), down.end(),
+                    [&](auto scancode) { return isKeyPressed(scancode); }))
         vector.y += 1;
-    if (std::any_of(right.begin(), right.end(), [&](auto scancode) { return isKeyPressed(scancode); }))
+    if (std::any_of(right.begin(), right.end(),
+                    [&](auto scancode) { return isKeyPressed(scancode); }))
         vector.x += 1;
 
-    if (vector.getLength() > 0)
+    if (vector.getLength() > 1)
         vector.normalize();
+
+    // if (_controller)
+    // {
+    //     const double leftX = SDL_GameControllerGetAxis(_controller, SDL_CONTROLLER_AXIS_LEFTX) /
+    //     32767.0; const double leftY = SDL_GameControllerGetAxis(_controller,
+    //     SDL_CONTROLLER_AXIS_LEFTY) / 32767.0; if (std::abs(leftX) > _deadZone || std::abs(leftY)
+    //     > _deadZone)
+    //     {
+    //         vector.x += leftX;
+    //         vector.y += leftY;
+    //     }
+    // }
+    //
+    // if (vector.getLength() > 1)
+    //     vector.scaleToLength(1);
 
     return vector;
 }
+
+// void setControllerDeadZone(const float deadZone)
+// {
+//     _deadZone = std::clamp(deadZone, 0.0f, 1.0f);
+// }
+//
+// float getControllerDeadZone() { return _deadZone; }
+
 } // namespace kn::input

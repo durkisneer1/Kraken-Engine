@@ -1,7 +1,6 @@
 #pragma once
 
 #include <string>
-#include <vector>
 
 #include <SDL.h>
 
@@ -26,15 +25,18 @@ namespace window
  * @param resolution The size of the window.
  * @param title The title of the window.
  * @param scale The scale of the window.
+ *
+ * @return Whether the window was successfully initialized.
  */
-void init(const math::Vec2& resolution, const std::string& title = "Kraken Window", int scale = 1);
+[[maybe_unused]] bool init(const math::Vec2& resolution, const std::string& title = "Kraken Window",
+                           int scale = 1);
 
 /**
  * @brief Get whether the window is open.
  *
  * @return Whether the window is open.
  */
-bool isOpen();
+[[nodiscard]] bool isOpen();
 
 /**
  * @brief Close the window.
@@ -75,7 +77,7 @@ void blit(const Texture& texture, const math::Vec2& position = {});
  *
  *  @return The window renderer.
  */
-SDL_Renderer* getRenderer();
+[[nodiscard]] SDL_Renderer* getRenderer();
 
 /**
  *  @brief Populate an event with the next window events.
@@ -89,21 +91,21 @@ void pollEvent(Event& event);
  *
  * @return Whether the window is fullscreen or not.
  */
-bool getFullscreen();
+[[nodiscard]] bool getFullscreen();
 
 /**
  * @brief Get the scale of the window.
  *
  * @return The scale of the window.
  */
-int getScale();
+[[nodiscard]] int getScale();
 
 /**
  * @brief Get the size of the screen.
  *
  * @return The size of the screen.
  */
-math::Vec2 getSize();
+[[nodiscard]] math::Vec2 getSize();
 
 /**
  * @brief Set the title of the window.
@@ -117,7 +119,7 @@ void setTitle(const std::string& newTitle);
  *
  * @return The title of the window.
  */
-std::string getTitle();
+[[nodiscard]] std::string getTitle();
 
 /**
  * @brief Set whether the window is fullscreen or not.

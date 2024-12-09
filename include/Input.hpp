@@ -1,6 +1,5 @@
 #pragma once
 
-#include <SDL.h>
 #include <vector>
 
 #include "Constants.hpp"
@@ -10,7 +9,7 @@ namespace kn
 namespace math
 {
 class Vec2;
-}  // namespace math
+} // namespace math
 
 namespace input
 {
@@ -51,5 +50,23 @@ bool isKeyPressed(int key);
  */
 math::Vec2 getVector(const std::vector<KEYS>& left = {}, const std::vector<KEYS>& right = {},
                      const std::vector<KEYS>& up = {}, const std::vector<KEYS>& down = {});
-}  // namespace input
-}  // namespace kn
+
+// /**
+// * @brief Change the dead zone for controller joystick input.
+// *
+// * @param deadZone The dead zone for the controller from the range 0.0 to 1.0.
+// *
+// * @note Negative values will be clamped to 0.0 and values greater than 1.0 will be clamped
+// to 1.0.
+// */
+// void setControllerDeadZone(float deadZone);
+//
+// /**
+//  * @brief Get the dead zone for controller joystick input.
+//  *
+//  * @return The dead zone for the controller from the range 0.0 to 1.0.
+//  */
+// float getControllerDeadZone();
+
+} // namespace input
+} // namespace kn
