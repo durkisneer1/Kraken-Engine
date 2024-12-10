@@ -5,84 +5,136 @@
 #include "ErrorLogger.hpp"
 #include "Music.hpp"
 #include "Window.hpp"
+#include "_globals.hpp"
 
 namespace kn::window
 {
 static SDL_Renderer* _renderer;
 static SDL_Window* _window;
-static Event _event;
-static std::vector<Event> _events;
+static bool _isOpen;
 
-void init(const math::Vec2& resolution, const std::string& title, const int scale)
+bool init(const math::Vec2& resolution, const std::string& title, const int scale)
 {
     if (_renderer)
+    {
         WARN("Cannot initialize renderer more than once")
+        return false;
+    }
 
-    if (SDL_Init(SDL_INIT_VIDEO))
+    if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_GAMECONTROLLER) < 0)
+    {
         FATAL("SDL_Init Error: " + std::string(SDL_GetError()))
+        return false;
+    }
+
     if (!IMG_Init(IMG_INIT_PNG))
     {
         FATAL("IMG_Init Error: " + std::string(IMG_GetError()))
         SDL_Quit();
+        return false;
     }
+
     if (TTF_Init())
     {
         FATAL("TTF_Init Error: " + std::string(TTF_GetError()))
         IMG_Quit();
         SDL_Quit();
+        return false;
     }
+
     if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048))
     {
         FATAL("Mix_OpenAudio Error: " + std::string(Mix_GetError()))
         TTF_Quit();
         IMG_Quit();
         SDL_Quit();
+        return false;
     }
 
+    const int resolutionWidth = static_cast<int>(resolution.x);
+    const int resolutionHeight = static_cast<int>(resolution.y);
     _window = SDL_CreateWindow("Kraken Window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-                               static_cast<int>(resolution.x) * scale,
-                               static_cast<int>(resolution.y) * scale, SDL_WINDOW_SHOWN);
+                               resolutionWidth * scale, resolutionHeight * scale, SDL_WINDOW_SHOWN);
     if (!_window)
+    {
         FATAL("SDL_CreateWindow Error: " + std::string(SDL_GetError()))
+        return false;
+    }
 
     _renderer = SDL_CreateRenderer(_window, -1, SDL_RENDERER_ACCELERATED);
     if (!_renderer)
-        FATAL("SDL_CreateRenderer Error: " + std::string(SDL_GetError()));
+    {
+        FATAL("SDL_CreateRenderer Error: " + std::string(SDL_GetError()))
+        return false;
+    }
 
     if (scale > 1)
-    {
-        SDL_RenderSetLogicalSize(_renderer, static_cast<int>(resolution.x),
-                                 static_cast<int>(resolution.y));
-    }
+        SDL_RenderSetLogicalSize(_renderer, resolutionWidth, resolutionHeight);
 
     setTitle(title);
     setIcon("../example/assets/kraken_engine_window_icon.png");
+
+    _isOpen = true;
+
+    return true;
 }
+
+bool isOpen() { return _isOpen; }
+
+void close() { _isOpen = false; }
 
 void quit()
 {
+    music::unload();
+
     if (_renderer)
         SDL_DestroyRenderer(_renderer);
     if (_window)
         SDL_DestroyWindow(_window);
+    if (_controller)
+        SDL_GameControllerClose(_controller);
 
-    music::unload();
     Mix_CloseAudio();
     IMG_Quit();
     TTF_Quit();
     SDL_Quit();
 }
 
-const std::vector<Event>& getEvents()
+int pollEvent(Event& event)
 {
     if (!_window)
         WARN("Cannot get events before creating the window")
 
-    _events.clear();
-    while (SDL_PollEvent(&_event))
-        _events.push_back(_event);
+    const int pending = SDL_PollEvent(&event);
 
-    return _events;
+    if (pending)
+    {
+        switch (event.type)
+        {
+        case QUIT:
+            close();
+            break;
+        case CONTROLLERDEVICEADDED:
+        {
+            if (!_controller)
+                _controller = SDL_GameControllerOpen(event.cdevice.which);
+            break;
+        }
+        case CONTROLLERDEVICEREMOVED:
+            if (_controller &&
+                event.cdevice.which ==
+                    SDL_JoystickInstanceID(SDL_GameControllerGetJoystick(_controller)))
+            {
+                SDL_GameControllerClose(_controller);
+                _controller = nullptr;
+            }
+            break;
+        default:
+            break;
+        }
+    }
+
+    return pending;
 }
 
 void clear(const Color color)

@@ -25,5 +25,8 @@ Usage
     // Play the sound 3 times after it fades in over 2 seconds.
     sound.play(2, -1, 2000);
 
+Members
+-------
+
 .. doxygenclass:: kn::Sound
     :members:

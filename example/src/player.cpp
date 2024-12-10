@@ -4,10 +4,10 @@
 #define AxisY 1
 
 Player::Player(const kn::TileMap& tileMap)
-    : animController(5), rect(48, 120, 13, 16), collisionLayer(tileMap.getLayer("Wall"))
+    : rect(48, 120, 13, 16), collisionLayer(tileMap.getLayer("Wall"))
 {
-    animController.addAnim("../example/assets/player_idle.png", "idle", 13, 16);
-    animController.addAnim("../example/assets/player_walk.png", "walk", 13, 16);
+    animController.addAnim("idle", "../example/assets/player_idle.png", {13, 16}, 5);
+    animController.addAnim("walk", "../example/assets/player_walk.png", {13, 16}, 5);
 
     interactables = tileMap.getTileCollection({"Mirror", "Bed", "Desk"});
 }
@@ -16,7 +16,7 @@ void Player::update(const double dt)
 {
     if (onGround)
     {
-        if (kn::input::isKeyPressed(kn::S_SPACE))
+        if (kn::key::isPressed(kn::S_SPACE))
         {
             velocity.y = -200;
             onGround = false;
@@ -25,20 +25,20 @@ void Player::update(const double dt)
     else
         velocity.y += 980.0 * dt;
 
-    const auto dirVec = kn::input::getVector({kn::S_a}, {kn::S_d});
-    if (dirVec.x != 0.0)
+    const int xDir = kn::key::isPressed(kn::S_d) - kn::key::isPressed(kn::S_a);
+    if (xDir != 0)
     {
         animController.setAnim("walk");
 
-        if (dirVec.x > 0.0)
+        if (xDir > 0)
             facingRight = true;
-        else if (dirVec.x < 0.0)
+        else if (xDir < 0)
             facingRight = false;
     }
     else
         animController.setAnim("idle");
 
-    velocity.x = dirVec.x * moveSpeed;
+    velocity.x = xDir * moveSpeed;
 
     rect.x += static_cast<float>(velocity.x * dt);
     handleCollision(AxisX);

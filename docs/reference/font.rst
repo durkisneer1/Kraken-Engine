@@ -20,5 +20,8 @@ Usage
     // Draw the text texture at position (50, 50).
     kn::window::blit(text, {50, 50});
 
+Members
+-------
+
 .. doxygenclass:: kn::Font
     :members:

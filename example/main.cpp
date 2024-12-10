@@ -12,15 +12,16 @@ int main()
 
     Player player(tileMap);
 
-    bool done = false;
-    while (!done)
+    kn::Event event;
+    while (kn::window::isOpen())
     {
-        const double dt = clock.tick();
+        const double dt = clock.tick() / 1000.0;
 
-        for (const auto& event : kn::window::getEvents())
-            if (event.type == kn::QUIT ||
-                (event.type == kn::KEYDOWN && event.key.keysym.sym == kn::K_ESCAPE))
-                done = true;
+        while (kn::window::pollEvent(event))
+        {
+            if (event.type == kn::KEYDOWN && event.key.keysym.sym == SDLK_ESCAPE)
+                kn::window::close();
+        }
 
         kn::window::clear({21, 18, 37});
 

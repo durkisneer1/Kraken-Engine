@@ -11,20 +11,23 @@ What the AnimationController class does **NOT** do is provide a draw function.
 This design decision is to give users the flexibility to draw the current frame in a desired position and size.
 
 Usage
--------------
+-----
 
 .. code-block:: cpp
 
-    // Create an AnimationController with a frame rate of 10 frames per second.
-    kn::AnimationController animController(10);
+    // Instantiate an AnimationController.
+    kn::AnimationController animController;
 
     // Load animations from sprite sheets where every frame is 16x16 pixels.
-    animController.addAnim("assets/idle.png", "idle", 16, 16);
-    animController.addAnim("assets/walk.png", "walk", 16, 16);
+    animController.addAnim("idle", "assets/idle.png", {16, 16}, 5);  // 5fps
+    animController.addAnim("walk", "assets/walk.png", {16, 16}, 10);  // 10fps
 
     // Since the current animation set is the last one added,
     // we can switch to the first animation by name.
     animController.setAnim("idle");
+
+    // Change the animation controller's playback speed.
+    animController.setPlaybackSpeed(-1.5f);  // Reverse playback at 1.5x speed.
 
     // Using AnimationController::nextFrame is simple.
     // It returns the current frame texture, srcRect, and advances the animation.
@@ -32,6 +35,17 @@ Usage
 
     // Draw the current frame texture at position (50, 50) and size (16, 16).
     kn::window::blit(*frame.tex, {50, 50, 16, 16}, frame.rect);
+
+Members
+-------
+
+.. doxygenstruct:: kn::Frame
+    :members:
+    :undoc-members:
+
+.. doxygenstruct:: kn::Animation
+    :members:
+    :undoc-members:
 
 .. doxygenclass:: kn::AnimationController
     :members:

@@ -7,14 +7,6 @@ math::Vec2 Rect::getPos() const { return {x, y}; }
 
 math::Vec2 Rect::getSize() const { return {w, h}; }
 
-Rect::Rect(const float x, const float y, const float w, const float h) : SDL_FRect{x, y, w, h} {}
-
-Rect::Rect(const int x, const int y, const int w, const int h)
-    : SDL_FRect{static_cast<float>(x), static_cast<float>(y), static_cast<float>(w),
-                static_cast<float>(h)}
-{
-}
-
 void Rect::setSize(const math::Vec2& size)
 {
     w = static_cast<float>(size.x);

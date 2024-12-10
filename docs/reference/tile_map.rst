@@ -41,6 +41,9 @@ Usage
     tileMap.drawMap();
     tileMap.drawLayer("walls");
 
+Members
+-------
+
 .. doxygenstruct:: kn::Tile
     :members:
     :undoc-members:
