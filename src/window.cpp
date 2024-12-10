@@ -100,35 +100,41 @@ void quit()
     SDL_Quit();
 }
 
-void pollEvent(Event& event)
+int pollEvent(Event& event)
 {
     if (!_window)
         WARN("Cannot get events before creating the window")
 
-    SDL_PollEvent(&event);
+    const int pending = SDL_PollEvent(&event);
 
-    switch (event.type)
+    if (pending)
     {
-    case QUIT:
-        close();
-        break;
-    case CONTROLLERDEVICEADDED:
-    {
-        if (!_controller)
-            _controller = SDL_GameControllerOpen(event.cdevice.which);
-        break;
-    }
-    case CONTROLLERDEVICEREMOVED:
-        if (_controller && event.cdevice.which ==
-                               SDL_JoystickInstanceID(SDL_GameControllerGetJoystick(_controller)))
+        switch (event.type)
         {
-            SDL_GameControllerClose(_controller);
-            _controller = nullptr;
+        case QUIT:
+            close();
+            break;
+        case CONTROLLERDEVICEADDED:
+        {
+            if (!_controller)
+                _controller = SDL_GameControllerOpen(event.cdevice.which);
+            break;
         }
-        break;
-    default:
-        break;
+        case CONTROLLERDEVICEREMOVED:
+            if (_controller &&
+                event.cdevice.which ==
+                    SDL_JoystickInstanceID(SDL_GameControllerGetJoystick(_controller)))
+            {
+                SDL_GameControllerClose(_controller);
+                _controller = nullptr;
+            }
+            break;
+        default:
+            break;
+        }
     }
+
+    return pending;
 }
 
 void clear(const Color color)

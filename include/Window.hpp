@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <vector>
 
 #include <SDL.h>
 
@@ -80,11 +81,13 @@ void blit(const Texture& texture, const math::Vec2& position = {});
 [[nodiscard]] SDL_Renderer* getRenderer();
 
 /**
- *  @brief Populate an event with the next window events.
+ *  @brief Populate the event object with the concurrent user events.
  *
- *  @param event The event to poll.
+ *  @param event The event object to populate.
+ *
+ *  @return
  */
-void pollEvent(Event& event);
+int pollEvent(Event& event);
 
 /**
  * @brief Get whether the window is fullscreen or not.

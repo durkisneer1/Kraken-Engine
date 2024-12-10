@@ -14,7 +14,9 @@ The following code creates a window and keeps it open until the user closes it.
         kn::Event event;
 
         while (kn::window::isOpen()) {
-            kn::window::pollEvent(event);
+            while (kn::window::pollEvent(event)) {
+                // handle events
+            }
             kn::window::flip();
         }
         kn::window::quit();

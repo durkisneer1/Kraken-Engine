@@ -67,9 +67,11 @@ We’re excited to see how you push the boundaries of creativity with the Kraken
     reference/texture
     reference/tile_map
     reference/constants
+    reference/controller
     reference/draw
-    reference/input
+    reference/key
     reference/math
+    reference/mouse
     reference/music
     reference/time
     reference/window
