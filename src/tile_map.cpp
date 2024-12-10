@@ -180,7 +180,6 @@ Rect TileMap::getFittedRect(const SDL_Surface* surface, const Rect& srcRect,
     const int bytesPerPixel = surface->format->BytesPerPixel;
 
     for (int y = rectInt.y; y < rectInt.y + rectInt.h; y++)
-    {
         for (int x = rectInt.x; x < rectInt.x + rectInt.w; x++)
         {
             const Uint8* pixel = pixels + y * pitch + x * bytesPerPixel;
@@ -192,7 +191,6 @@ Rect TileMap::getFittedRect(const SDL_Surface* surface, const Rect& srcRect,
             left = std::min(left, x - rectInt.x);
             right = std::max(right, x - rectInt.x);
         }
-    }
 
     return {static_cast<int>(position.x + left), static_cast<int>(position.y + top),
             right - left + 1, bottom - top + 1};

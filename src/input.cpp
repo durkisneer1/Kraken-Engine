@@ -5,9 +5,11 @@
 #include "Math.hpp"
 #include "Window.hpp"
 
+#include <_globals.hpp>
+
 namespace kn::input
 {
-// static float _deadZone = 0.1f;
+static float _deadZone = 0.1f;
 
 math::Vec2 getMousePos()
 {
@@ -45,20 +47,18 @@ math::Vec2 getVector(const std::vector<KEYS>& left, const std::vector<KEYS>& rig
     if (vector.getLength() > 1)
         vector.normalize();
 
-    // if (_controller)
-    // {
-    //     const double leftX = SDL_GameControllerGetAxis(_controller, SDL_CONTROLLER_AXIS_LEFTX) /
-    //     32767.0; const double leftY = SDL_GameControllerGetAxis(_controller,
-    //     SDL_CONTROLLER_AXIS_LEFTY) / 32767.0; if (std::abs(leftX) > _deadZone || std::abs(leftY)
-    //     > _deadZone)
-    //     {
-    //         vector.x += leftX;
-    //         vector.y += leftY;
-    //     }
-    // }
-    //
-    // if (vector.getLength() > 1)
-    //     vector.scaleToLength(1);
+    if (_controller)
+    {
+        math::Vec2 controllerDir = {
+            SDL_GameControllerGetAxis(_controller, SDL_CONTROLLER_AXIS_LEFTX),
+            SDL_GameControllerGetAxis(_controller, SDL_CONTROLLER_AXIS_LEFTY)};
+        controllerDir /= 32767.0;
+        if (controllerDir.getLength() > _deadZone)
+            vector += controllerDir;
+    }
+
+    if (vector.getLength() > 1)
+        vector.scaleToLength(1);
 
     return vector;
 }

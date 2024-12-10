@@ -112,20 +112,20 @@ void pollEvent(Event& event)
     case QUIT:
         close();
         break;
-    // case CONTROLLERDEVICEADDED:
-    // {
-    //     if (!_controller)
-    //         _controller = SDL_GameControllerOpen(event.cdevice.which);
-    //     break;
-    // }
-    // case CONTROLLERDEVICEREMOVED:
-    //     if (_controller && event.cdevice.which == SDL_JoystickInstanceID(
-    //         SDL_GameControllerGetJoystick(_controller)))
-    //     {
-    //         SDL_GameControllerClose(_controller);
-    //         _controller = nullptr;
-    //     }
-    //     break;
+    case CONTROLLERDEVICEADDED:
+    {
+        if (!_controller)
+            _controller = SDL_GameControllerOpen(event.cdevice.which);
+        break;
+    }
+    case CONTROLLERDEVICEREMOVED:
+        if (_controller && event.cdevice.which ==
+                               SDL_JoystickInstanceID(SDL_GameControllerGetJoystick(_controller)))
+        {
+            SDL_GameControllerClose(_controller);
+            _controller = nullptr;
+        }
+        break;
     default:
         break;
     }
