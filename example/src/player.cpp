@@ -1,4 +1,5 @@
-#include "include/Player.hpp"
+#include "Player.hpp"
+#include <algorithm>
 
 #define AxisX 0
 #define AxisY 1
@@ -14,25 +15,27 @@ Player::Player(const kn::TileMap& tileMap)
 
 void Player::update(const double dt)
 {
+    const auto* keys = kn::key::getPressed();
     if (onGround)
     {
-        if (kn::key::isPressed(kn::S_SPACE))
+        if (keys[kn::S_SPACE] || kn::controller::isPressed(kn::CONTROLLER_A))
         {
             velocity.y = -200;
             onGround = false;
         }
     }
     else
-        velocity.y += 980.0 * dt;
+        velocity.y += 980.7 * dt;
 
-    const int xDir = kn::key::isPressed(kn::S_d) - kn::key::isPressed(kn::S_a);
-    if (xDir != 0)
+    double xDir = kn::key::getDirection("left", "right").x + kn::controller::getLeftJoystick().x;
+    xDir = std::clamp(xDir, -1.0, 1.0);
+    if (xDir != 0.0)
     {
         animController.setAnim("walk");
 
-        if (xDir > 0)
+        if (xDir > 0.0)
             facingRight = true;
-        else if (xDir < 0)
+        else if (xDir < 0.0)
             facingRight = false;
     }
     else
@@ -47,7 +50,7 @@ void Player::update(const double dt)
 
     for (const auto& tile : interactables)
         if (rect.collideRect(tile.collider))
-            kn::draw::rect(tile.rect, {255, 255, 0}, 1);
+            kn::draw::rect(tile.rect, kn::color::YELLOW, 1);
 
     const kn::Frame frame = animController.nextFrame(dt);
 

@@ -1,6 +1,10 @@
 AnimationController
 ===================
 
+.. warning::
+
+    This class is still in development and is subject to change at any time.
+
 Description
 -----------
 

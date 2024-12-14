@@ -8,6 +8,11 @@ int main()
     kn::time::Clock clock;
     kn::camera = {-32, -26};
 
+    constexpr kn::Color bgColor = {21, 18, 37, 255};
+
+    kn::key::bind("left", {kn::S_LEFT, kn::S_a});
+    kn::key::bind("right", {kn::S_RIGHT, kn::S_d});
+
     const kn::TileMap tileMap("../example/assets/room.tmx");
 
     Player player(tileMap);
@@ -23,7 +28,7 @@ int main()
                 kn::window::close();
         }
 
-        kn::window::clear({21, 18, 37});
+        kn::window::clear(bgColor);
 
         tileMap.drawMap();
         player.update(dt);

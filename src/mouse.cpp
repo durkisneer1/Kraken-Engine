@@ -12,5 +12,5 @@ math::Vec2 getPos()
     return pos / window::getScale() + camera;
 }
 
-bool isPressed(const uint32_t button) { return SDL_GetMouseState(nullptr, nullptr) == button; }
+uint32_t getPressed() { return SDL_GetMouseState(nullptr, nullptr); }
 } // namespace kn::mouse

@@ -1,6 +1,10 @@
 controller
 ==========
 
+.. warning::
+
+    This namespace is still in development and is subject to change at any time.
+
 Description
 -----------
 
@@ -24,6 +28,11 @@ Usage
         // Do something
     }
 
+    // Check if the A button is pressed
+    if (kn::controller::isPressed(kn::CONTROLLER_A)) {
+        // Do something
+    }
+
 Functions
 ---------
 
@@ -34,6 +43,8 @@ Functions
 .. doxygenfunction:: kn::controller::getLeftTrigger
 
 .. doxygenfunction:: kn::controller::getRightTrigger
+
+.. doxygenfunction:: kn::controller::isPressed
 
 .. doxygenfunction:: kn::controller::setDeadZone
 

@@ -4,60 +4,88 @@
 
 namespace kn
 {
-typedef SDL_Scancode KEYS;
+typedef SDL_Scancode Scancode;
+typedef SDL_Keycode Keycode;
+typedef SDL_GameControllerButton ControllerButton;
+typedef SDL_GameControllerAxis ControllerAxis;
 typedef SDL_Event Event;
 typedef SDL_Color Color;
 
-constexpr SDL_Scancode S_0 = SDL_SCANCODE_0;
-constexpr SDL_Scancode S_1 = SDL_SCANCODE_1;
-constexpr SDL_Scancode S_2 = SDL_SCANCODE_2;
-constexpr SDL_Scancode S_3 = SDL_SCANCODE_3;
-constexpr SDL_Scancode S_4 = SDL_SCANCODE_4;
-constexpr SDL_Scancode S_5 = SDL_SCANCODE_5;
-constexpr SDL_Scancode S_6 = SDL_SCANCODE_6;
-constexpr SDL_Scancode S_7 = SDL_SCANCODE_7;
-constexpr SDL_Scancode S_8 = SDL_SCANCODE_8;
-constexpr SDL_Scancode S_9 = SDL_SCANCODE_9;
-constexpr SDL_Scancode S_a = SDL_SCANCODE_A;
-constexpr SDL_Scancode S_b = SDL_SCANCODE_B;
-constexpr SDL_Scancode S_c = SDL_SCANCODE_C;
-constexpr SDL_Scancode S_d = SDL_SCANCODE_D;
-constexpr SDL_Scancode S_e = SDL_SCANCODE_E;
-constexpr SDL_Scancode S_f = SDL_SCANCODE_F;
-constexpr SDL_Scancode S_g = SDL_SCANCODE_G;
-constexpr SDL_Scancode S_h = SDL_SCANCODE_H;
-constexpr SDL_Scancode S_i = SDL_SCANCODE_I;
-constexpr SDL_Scancode S_j = SDL_SCANCODE_J;
-constexpr SDL_Scancode S_k = SDL_SCANCODE_K;
-constexpr SDL_Scancode S_l = SDL_SCANCODE_L;
-constexpr SDL_Scancode S_m = SDL_SCANCODE_M;
-constexpr SDL_Scancode S_n = SDL_SCANCODE_N;
-constexpr SDL_Scancode S_o = SDL_SCANCODE_O;
-constexpr SDL_Scancode S_p = SDL_SCANCODE_P;
-constexpr SDL_Scancode S_q = SDL_SCANCODE_Q;
-constexpr SDL_Scancode S_r = SDL_SCANCODE_R;
-constexpr SDL_Scancode S_s = SDL_SCANCODE_S;
-constexpr SDL_Scancode S_t = SDL_SCANCODE_T;
-constexpr SDL_Scancode S_u = SDL_SCANCODE_U;
-constexpr SDL_Scancode S_v = SDL_SCANCODE_V;
-constexpr SDL_Scancode S_w = SDL_SCANCODE_W;
-constexpr SDL_Scancode S_x = SDL_SCANCODE_X;
-constexpr SDL_Scancode S_y = SDL_SCANCODE_Y;
-constexpr SDL_Scancode S_z = SDL_SCANCODE_Z;
-constexpr SDL_Scancode S_DOWN = SDL_SCANCODE_DOWN;
-constexpr SDL_Scancode S_LEFT = SDL_SCANCODE_LEFT;
-constexpr SDL_Scancode S_RIGHT = SDL_SCANCODE_RIGHT;
-constexpr SDL_Scancode S_UP = SDL_SCANCODE_UP;
-constexpr SDL_Scancode S_LALT = SDL_SCANCODE_LALT;
-constexpr SDL_Scancode S_LCTRL = SDL_SCANCODE_LCTRL;
-constexpr SDL_Scancode S_LSHIFT = SDL_SCANCODE_LSHIFT;
-constexpr SDL_Scancode S_RALT = SDL_SCANCODE_RALT;
-constexpr SDL_Scancode S_RCTRL = SDL_SCANCODE_RCTRL;
-constexpr SDL_Scancode S_RETURN = SDL_SCANCODE_RETURN;
-constexpr SDL_Scancode S_RSHIFT = SDL_SCANCODE_RSHIFT;
-constexpr SDL_Scancode S_SPACE = SDL_SCANCODE_SPACE;
-constexpr SDL_Scancode S_TAB = SDL_SCANCODE_TAB;
+// Predefined colors
+namespace color
+{
+constexpr Color BLACK = {0, 0, 0, 255};
+constexpr Color WHITE = {255, 255, 255, 255};
+constexpr Color RED = {255, 0, 0, 255};
+constexpr Color GREEN = {0, 255, 0, 255};
+constexpr Color BLUE = {0, 0, 255, 255};
+constexpr Color YELLOW = {255, 255, 0, 255};
+constexpr Color MAGENTA = {255, 0, 255, 255};
+constexpr Color CYAN = {0, 255, 255, 255};
+constexpr Color GRAY = {128, 128, 128, 255};
+constexpr Color DARK_GRAY = {64, 64, 64, 255};
+constexpr Color LIGHT_GRAY = {192, 192, 192, 255};
+constexpr Color ORANGE = {255, 165, 0, 255};
+constexpr Color BROWN = {139, 69, 19, 255};
+constexpr Color PINK = {255, 192, 203, 255};
+constexpr Color PURPLE = {128, 0, 128, 255};
+constexpr Color NAVY = {0, 0, 128, 255};
+constexpr Color TEAL = {0, 128, 128, 255};
+constexpr Color OLIVE = {128, 128, 0, 255};
+} // namespace color
 
+// Scancodes
+constexpr Scancode S_0 = SDL_SCANCODE_0;
+constexpr Scancode S_1 = SDL_SCANCODE_1;
+constexpr Scancode S_2 = SDL_SCANCODE_2;
+constexpr Scancode S_3 = SDL_SCANCODE_3;
+constexpr Scancode S_4 = SDL_SCANCODE_4;
+constexpr Scancode S_5 = SDL_SCANCODE_5;
+constexpr Scancode S_6 = SDL_SCANCODE_6;
+constexpr Scancode S_7 = SDL_SCANCODE_7;
+constexpr Scancode S_8 = SDL_SCANCODE_8;
+constexpr Scancode S_9 = SDL_SCANCODE_9;
+constexpr Scancode S_a = SDL_SCANCODE_A;
+constexpr Scancode S_b = SDL_SCANCODE_B;
+constexpr Scancode S_c = SDL_SCANCODE_C;
+constexpr Scancode S_d = SDL_SCANCODE_D;
+constexpr Scancode S_e = SDL_SCANCODE_E;
+constexpr Scancode S_f = SDL_SCANCODE_F;
+constexpr Scancode S_g = SDL_SCANCODE_G;
+constexpr Scancode S_h = SDL_SCANCODE_H;
+constexpr Scancode S_i = SDL_SCANCODE_I;
+constexpr Scancode S_j = SDL_SCANCODE_J;
+constexpr Scancode S_k = SDL_SCANCODE_K;
+constexpr Scancode S_l = SDL_SCANCODE_L;
+constexpr Scancode S_m = SDL_SCANCODE_M;
+constexpr Scancode S_n = SDL_SCANCODE_N;
+constexpr Scancode S_o = SDL_SCANCODE_O;
+constexpr Scancode S_p = SDL_SCANCODE_P;
+constexpr Scancode S_q = SDL_SCANCODE_Q;
+constexpr Scancode S_r = SDL_SCANCODE_R;
+constexpr Scancode S_s = SDL_SCANCODE_S;
+constexpr Scancode S_t = SDL_SCANCODE_T;
+constexpr Scancode S_u = SDL_SCANCODE_U;
+constexpr Scancode S_v = SDL_SCANCODE_V;
+constexpr Scancode S_w = SDL_SCANCODE_W;
+constexpr Scancode S_x = SDL_SCANCODE_X;
+constexpr Scancode S_y = SDL_SCANCODE_Y;
+constexpr Scancode S_z = SDL_SCANCODE_Z;
+constexpr Scancode S_DOWN = SDL_SCANCODE_DOWN;
+constexpr Scancode S_LEFT = SDL_SCANCODE_LEFT;
+constexpr Scancode S_RIGHT = SDL_SCANCODE_RIGHT;
+constexpr Scancode S_UP = SDL_SCANCODE_UP;
+constexpr Scancode S_LALT = SDL_SCANCODE_LALT;
+constexpr Scancode S_LCTRL = SDL_SCANCODE_LCTRL;
+constexpr Scancode S_LSHIFT = SDL_SCANCODE_LSHIFT;
+constexpr Scancode S_RALT = SDL_SCANCODE_RALT;
+constexpr Scancode S_RCTRL = SDL_SCANCODE_RCTRL;
+constexpr Scancode S_RETURN = SDL_SCANCODE_RETURN;
+constexpr Scancode S_RSHIFT = SDL_SCANCODE_RSHIFT;
+constexpr Scancode S_SPACE = SDL_SCANCODE_SPACE;
+constexpr Scancode S_TAB = SDL_SCANCODE_TAB;
+
+// Event types
 constexpr SDL_EventType QUIT = SDL_QUIT;
 constexpr SDL_EventType DISPLAYEVENT = SDL_DISPLAYEVENT;
 constexpr SDL_EventType WINDOWEVENT = SDL_WINDOWEVENT;
@@ -93,6 +121,7 @@ constexpr SDL_EventType AUDIODEVICEADDED = SDL_AUDIODEVICEADDED;
 constexpr SDL_EventType AUDIODEVICEREMOVED = SDL_AUDIODEVICEREMOVED;
 constexpr SDL_EventType USEREVENT = SDL_USEREVENT;
 
+// Keycodes
 constexpr SDL_KeyCode K_0 = SDLK_0;
 constexpr SDL_KeyCode K_1 = SDLK_1;
 constexpr SDL_KeyCode K_2 = SDLK_2;
@@ -216,9 +245,29 @@ constexpr SDL_KeyCode K_QUOTEDBL = SDLK_QUOTEDBL;
 constexpr SDL_KeyCode K_RIGHTPAREN = SDLK_RIGHTPAREN;
 constexpr SDL_KeyCode K_UNDERSCORE = SDLK_UNDERSCORE;
 
-constexpr int BUTTON_LEFT = SDL_BUTTON_LEFT;
-constexpr int BUTTON_MIDDLE = SDL_BUTTON_MIDDLE;
-constexpr int BUTTON_RIGHT = SDL_BUTTON_RIGHT;
+// Mouse buttons
+constexpr int MOUSE_LEFT = SDL_BUTTON_LEFT;
+constexpr int MOUSE_MIDDLE = SDL_BUTTON_MIDDLE;
+constexpr int MOUSE_RIGHT = SDL_BUTTON_RIGHT;
+constexpr int MOUSE_X1 = SDL_BUTTON_X1;
+constexpr int MOUSE_X2 = SDL_BUTTON_X2;
+
+// Controller buttonsW
+constexpr ControllerButton CONTROLLER_A = SDL_CONTROLLER_BUTTON_A;
+constexpr ControllerButton CONTROLLER_B = SDL_CONTROLLER_BUTTON_B;
+constexpr ControllerButton CONTROLLER_X = SDL_CONTROLLER_BUTTON_X;
+constexpr ControllerButton CONTROLLER_Y = SDL_CONTROLLER_BUTTON_Y;
+constexpr ControllerButton CONTROLLER_BACK = SDL_CONTROLLER_BUTTON_BACK;
+constexpr ControllerButton CONTROLLER_GUIDE = SDL_CONTROLLER_BUTTON_GUIDE;
+constexpr ControllerButton CONTROLLER_START = SDL_CONTROLLER_BUTTON_START;
+constexpr ControllerButton CONTROLLER_LEFTSTICK = SDL_CONTROLLER_BUTTON_LEFTSTICK;
+constexpr ControllerButton CONTROLLER_RIGHTSTICK = SDL_CONTROLLER_BUTTON_RIGHTSTICK;
+constexpr ControllerButton CONTROLLER_LEFTSHOULDER = SDL_CONTROLLER_BUTTON_LEFTSHOULDER;
+constexpr ControllerButton CONTROLLER_RIGHTSHOULDER = SDL_CONTROLLER_BUTTON_RIGHTSHOULDER;
+constexpr ControllerButton CONTROLLER_DPAD_UP = SDL_CONTROLLER_BUTTON_DPAD_UP;
+constexpr ControllerButton CONTROLLER_DPAD_DOWN = SDL_CONTROLLER_BUTTON_DPAD_DOWN;
+constexpr ControllerButton CONTROLLER_DPAD_LEFT = SDL_CONTROLLER_BUTTON_DPAD_LEFT;
+constexpr ControllerButton CONTROLLER_DPAD_RIGHT = SDL_CONTROLLER_BUTTON_DPAD_RIGHT;
 
 constexpr unsigned int MILLISECONDS_PER_SECOND = 1000U;
 

@@ -68,6 +68,12 @@ const Frame& AnimationController::nextFrame(const double deltaTime)
     return currAnim.frames.at(static_cast<int>(m_index));
 }
 
+void AnimationController::rewind()
+{
+    m_index = 0.0;
+    m_prevIndex = 0.0;
+}
+
 void AnimationController::pause() { m_paused = true; }
 
 void AnimationController::resume()
@@ -93,5 +99,7 @@ bool AnimationController::isFinished()
     m_prevIndex = m_index;
     return false;
 }
+
+const std::string& AnimationController::getCurrentAnim() const { return m_currAnim; }
 
 } // namespace kn

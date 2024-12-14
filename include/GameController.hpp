@@ -1,4 +1,5 @@
 #pragma once
+#include "Constants.hpp"
 
 namespace kn
 {
@@ -38,6 +39,16 @@ namespace controller
  * connected, 0.0 is returned.
  */
 [[nodiscard]] double getRightTrigger();
+
+/**
+ * @brief Check if a button on the controller is pressed.
+ *
+ * @param button The button to check.
+ *
+ * @return True if the button is pressed, false otherwise. If the controller is not connected,
+ * false is returned.
+ */
+[[nodiscard]] bool isPressed(ControllerButton button);
 
 /**
 * @brief Change the dead zone for controller joystick input.

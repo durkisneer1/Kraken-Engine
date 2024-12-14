@@ -97,7 +97,12 @@ class AnimationController final
      *
      * @return The name of the current animation.
      */
-    [[nodiscard]] const std::string& getCurrentAnim() const { return m_currAnim; }
+    [[nodiscard]] const std::string& getCurrentAnim() const;
+
+    /**
+     * @brief Rewind the currently playing animation to the beginning.
+     */
+    void rewind();
 
     /**
      * @brief Pause the animation.

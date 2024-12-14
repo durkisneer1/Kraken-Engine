@@ -45,6 +45,13 @@ class Vec2
     [[nodiscard]] double getLength() const;
 
     /**
+     * @brief Get the angle of the vector in degrees.
+     *
+     * @return The angle of the vector in degrees.
+     */
+    [[nodiscard]] double getAngle() const;
+
+    /**
      * @brief Rotates a vector in-place by a given angle in degrees.
      * @param angle The angle in degrees.
      */
@@ -253,14 +260,6 @@ double cross(const Vec2& a, const Vec2& b);
  * @return The angle in radians between two vectors.
  */
 double angleBetween(const Vec2& a, const Vec2& b);
-
-/**
- * @brief Calculates the angle in radians between the heads of the vectors.
- * @param a The lhs vector.
- * @param b The rhs vector.
- * @return The angle in radians between the heads of the vectors.
- */
-double angleOfDifference(const Vec2& a, const Vec2& b);
 
 template <typename T> Vec2 operator*(const T& lhs, const Vec2& rhs)
 {

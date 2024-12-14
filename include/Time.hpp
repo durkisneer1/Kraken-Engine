@@ -6,8 +6,6 @@ namespace kn::time
 {
 /**
  * @brief A class to keep track of time.
- *
- * @warning This class is planned to become a singleton.
  */
 class Clock final
 {
