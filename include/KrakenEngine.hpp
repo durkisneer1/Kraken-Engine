@@ -7,6 +7,7 @@
 #include "Draw.hpp"
 #include "Font.hpp"
 #include "GameController.hpp"
+#include "Input.hpp"
 #include "Key.hpp"
 #include "Math.hpp"
 #include "Mouse.hpp"

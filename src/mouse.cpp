@@ -13,4 +13,5 @@ math::Vec2 getPos()
 }
 
 uint32_t getPressed() { return SDL_GetMouseState(nullptr, nullptr); }
+
 } // namespace kn::mouse

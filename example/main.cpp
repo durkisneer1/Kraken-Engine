@@ -10,8 +10,20 @@ int main()
 
     constexpr kn::Color bgColor = {21, 18, 37, 255};
 
-    kn::key::bind("left", {kn::S_LEFT, kn::S_a});
-    kn::key::bind("right", {kn::S_RIGHT, kn::S_d});
+    kn::input::bind("left", {
+                                kn::InputAction(kn::S_a),
+                                kn::InputAction(kn::S_LEFT),
+                                kn::InputAction(kn::C_AXIS_LEFTX, false),
+                            });
+    kn::input::bind("right", {
+                                 kn::InputAction(kn::S_d),
+                                 kn::InputAction(kn::S_RIGHT),
+                                 kn::InputAction(kn::C_AXIS_LEFTX, true),
+                             });
+    kn::input::bind("jump", {
+                                kn::InputAction(kn::S_SPACE),
+                                kn::InputAction(kn::C_A),
+                            });
 
     const kn::TileMap tileMap("../example/assets/room.tmx");
 
@@ -23,10 +35,8 @@ int main()
         const double dt = clock.tick() / 1000.0;
 
         while (kn::window::pollEvent(event))
-        {
             if (event.type == kn::KEYDOWN && event.key.keysym.sym == SDLK_ESCAPE)
                 kn::window::close();
-        }
 
         kn::window::clear(bgColor);
 

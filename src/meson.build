@@ -3,6 +3,7 @@ sources = [
     'src/draw.cpp',
     'src/font.cpp',
     'src/game_controller.cpp',
+    'src/input.cpp',
     'src/key.cpp',
     'src/math.cpp',
     'src/mouse.cpp',

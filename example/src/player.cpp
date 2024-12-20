@@ -15,10 +15,9 @@ Player::Player(const kn::TileMap& tileMap)
 
 void Player::update(const double dt)
 {
-    const auto* keys = kn::key::getPressed();
     if (onGround)
     {
-        if (keys[kn::S_SPACE] || kn::controller::isPressed(kn::CONTROLLER_A))
+        if (kn::input::isPressed("jump"))
         {
             velocity.y = -200;
             onGround = false;
@@ -27,8 +26,7 @@ void Player::update(const double dt)
     else
         velocity.y += 980.7 * dt;
 
-    double xDir = kn::key::getDirection("left", "right").x + kn::controller::getLeftJoystick().x;
-    xDir = std::clamp(xDir, -1.0, 1.0);
+    const double xDir = kn::input::getDirection("left", "right").x;
     if (xDir != 0.0)
     {
         animController.setAnim("walk");

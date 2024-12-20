@@ -45,8 +45,8 @@ namespace controller
  *
  * @param button The button to check.
  *
- * @return True if the button is pressed, false otherwise. If the controller is not connected,
- * false is returned.
+ * @return ``true`` if the button is pressed, ``false`` otherwise. If the controller is not
+ * connected, ``false`` is returned.
  */
 [[nodiscard]] bool isPressed(ControllerButton button);
 
