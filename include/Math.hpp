@@ -40,7 +40,7 @@ class Vec2
 
     /**
      * @brief Get the length of the vector.
-     * @return The length of the vector if no overflow happens, otherwise -1.0.
+     * @return The length of the vector if no overflow happens, otherwise ``-1.0``.
      */
     [[nodiscard]] double getLength() const;
 
@@ -107,7 +107,7 @@ class Vec2
     /**
      * @brief Get the distance to another vector.
      * @param other The vector to calculate the distance to.
-     * @return The distance to another vector if no overflow happens, otherwise -1.0.
+     * @return The distance to another vector if no overflow happens, otherwise ``-1.0``.
      */
     [[nodiscard]] double distanceTo(const Vec2& other) const;
 

@@ -47,7 +47,7 @@ class AnimationController final
      * @param frameSize The size of each frame in the sprite sheet.
      * @param fps The frame rate of the animation.
      *
-     * @return true if the setup was successful, false otherwise.
+     * @return ``true`` if the setup was successful, ``false`` otherwise.
      */
     [[maybe_unused]] bool addAnim(const std::string& name, const std::string& filePath,
                                   const math::Vec2& frameSize, int fps);
@@ -64,7 +64,7 @@ class AnimationController final
      *
      * @param name The name of an added animation.
      *
-     * @return true if the animation was successfully changed, false otherwise.
+     * @return ``true`` if the animation was successfully changed, ``false`` otherwise.
      */
     [[maybe_unused]] bool setAnim(const std::string& name);
 
@@ -88,7 +88,7 @@ class AnimationController final
     /**
      * @brief Check if the current animation playing is finished.
      *
-     * @return true if the animation is finished, false otherwise.
+     * @return ``true`` if the animation is finished, ``false`` otherwise.
      */
     [[nodiscard]] bool isFinished();
 

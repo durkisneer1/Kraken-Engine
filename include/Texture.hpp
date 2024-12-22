@@ -84,7 +84,7 @@ class Texture final
      *
      * @param filePath Path to the image file.
      *
-     * @return true when successful, false on failure.
+     * @return ``true`` when successful, ``false`` on failure.
      */
     [[maybe_unused]] bool loadFromFile(const std::string& filePath);
 

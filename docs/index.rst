@@ -44,7 +44,8 @@ We’re excited to see how you push the boundaries of creativity with the Kraken
     :maxdepth: 1
     :caption: Manual
 
-    tutorials/index
+    manual/things_to_know
+    manual/tutorials
 
 .. toctree::
     :hidden:
@@ -69,6 +70,7 @@ We’re excited to see how you push the boundaries of creativity with the Kraken
     reference/constants
     reference/controller
     reference/draw
+    reference/input
     reference/key
     reference/math
     reference/mouse

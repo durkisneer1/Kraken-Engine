@@ -18,7 +18,7 @@ Usage
 .. code-block:: cpp
 
     // Get the vector of the left joystick
-    kn::Vec2 leftJoystick = kn::controller::getLeftJoystick();
+    kn::math::Vec2 leftJoystick = kn::controller::getLeftJoystick();
 
     // Change the joysticks' dead zones
     kn::controller::setDeadZone(0.2f);
@@ -28,8 +28,8 @@ Usage
         // Do something
     }
 
-    // Check if the A button is pressed
-    if (kn::controller::isPressed(kn::CONTROLLER_A)) {
+    // Check if the A (bottom) button is pressed
+    if (kn::controller::isPressed(kn::C_A)) {
         // Do something
     }
 
@@ -49,3 +49,5 @@ Functions
 .. doxygenfunction:: kn::controller::setDeadZone
 
 .. doxygenfunction:: kn::controller::getDeadZone
+
+.. note:: Functions for getting controller buttons that were just pressed or just released are planned for the future.

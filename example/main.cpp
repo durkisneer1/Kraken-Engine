@@ -10,20 +10,29 @@ int main()
 
     constexpr kn::Color bgColor = {21, 18, 37, 255};
 
-    kn::input::bind("left", {
-                                kn::InputAction(kn::S_a),
-                                kn::InputAction(kn::S_LEFT),
-                                kn::InputAction(kn::C_AXIS_LEFTX, false),
-                            });
-    kn::input::bind("right", {
-                                 kn::InputAction(kn::S_d),
-                                 kn::InputAction(kn::S_RIGHT),
-                                 kn::InputAction(kn::C_AXIS_LEFTX, true),
-                             });
-    kn::input::bind("jump", {
-                                kn::InputAction(kn::S_SPACE),
-                                kn::InputAction(kn::C_A),
-                            });
+    kn::input::bind(
+        "left",
+        {
+            kn::InputAction(kn::S_a),
+            kn::InputAction(kn::S_LEFT),
+            kn::InputAction(kn::C_AXIS_LEFTX, false),
+        }
+    );
+    kn::input::bind(
+        "right",
+        {
+            kn::InputAction(kn::S_d),
+            kn::InputAction(kn::S_RIGHT),
+            kn::InputAction(kn::C_AXIS_LEFTX, true),
+        }
+    );
+    kn::input::bind(
+        "jump",
+        {
+            kn::InputAction(kn::S_SPACE),
+            kn::InputAction(kn::C_A),
+        }
+    );
 
     const kn::TileMap tileMap("../example/assets/room.tmx");
 

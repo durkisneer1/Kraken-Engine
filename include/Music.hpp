@@ -19,7 +19,7 @@ void unload();
 /**
  * @brief Plays the currently loaded audio file.
  *
- * @param loops The number of times to loop the music. -1 loops forever.
+ * @param loops The number of times to loop the music. ``-1`` loops forever.
  * @param fadeMs The number of milliseconds to fade in the music.
  */
 void play(int loops = 0, int fadeMs = 0);
@@ -54,7 +54,7 @@ void fadeOut(int fadeMs);
 /**
  * @brief Sets the volume of the music.
  *
- * @param volume The volume to set the music to. 0.0f is silent, 1.0f is full volume.
+ * @param volume The volume to set the music to. ``0.0f`` is silent, ``1.0f`` is full volume.
  */
 void setVolume(float volume);
 

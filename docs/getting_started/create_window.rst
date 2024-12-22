@@ -49,4 +49,4 @@ Let's break down the key components that make this program function:
     Think of it as flipping the pages of a book—ensuring smooth, sequential updates for the user.
 
 This template establishes a foundation for more advanced game logic and rendering.
-In-depth tutorials on the next page cover the more intricate aspects of the Kraken Engine.
+In-depth tutorials in the next section cover the more intricate aspects of the Kraken Engine.
