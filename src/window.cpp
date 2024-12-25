@@ -129,6 +129,10 @@ int pollEvent(Event& event)
                 _controller = nullptr;
             }
             break;
+        case KEYDOWN:
+            if (event.key.keysym.sym == SDLK_F11)
+                setFullscreen(!getFullscreen());
+            break;
         default:
             break;
         }

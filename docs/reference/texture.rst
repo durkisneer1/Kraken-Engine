@@ -23,7 +23,7 @@ Usage
     imageTexture.angle = 30.0;
 
     // Create a 16x16 red texture.
-    kn::Texture colorTexture({16, 16}, {255, 0, 0});
+    kn::Texture colorTexture({16, 16}, kn::color::RED);
 
     // Draw the textures.
     kn::window::blit(imageTexture, {50, 50});

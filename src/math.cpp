@@ -35,6 +35,8 @@ double Vec2::getLength() const
     return sqrt(first + second);
 }
 
+double Vec2::getAngle() const { return toDegrees(atan2(y, x)); }
+
 void Vec2::rotate(const double angle) { rotateRad(toRadians(angle)); }
 
 void Vec2::rotateRad(const double angle)
@@ -239,13 +241,6 @@ double angleBetween(const Vec2& a, const Vec2& b)
     const double denominator = a.getLength() * b.getLength();
 
     return (denominator == 0.0f) ? 0.0f : acos(numerator / denominator);
-}
-
-double angleOfDifference(const Vec2& a, const Vec2& b)
-{
-    const Vec2 dVec = a - b;
-
-    return toDegrees(atan2(dVec.y, dVec.x));
 }
 
 } // namespace math

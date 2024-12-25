@@ -1,9 +1,10 @@
 #include "Key.hpp"
+#include "Math.hpp"
 #include <SDL.h>
 
 namespace kn::key
 {
 
-bool isPressed(const int key) { return SDL_GetKeyboardState(nullptr)[key]; }
+const uint8_t* getPressed() { return SDL_GetKeyboardState(nullptr); }
 
 } // namespace kn::key

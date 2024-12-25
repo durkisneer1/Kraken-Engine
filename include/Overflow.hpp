@@ -10,7 +10,7 @@ namespace kn::overflow
  *
  * @param first first value
  * @param second second value
- * @return true if sum is valid, false otherwise
+ * @return ``true`` if sum is valid, ``false`` otherwise
  */
 bool isSumValid(const double& first, const double& second);
 
@@ -29,7 +29,7 @@ bool isSumValid(const int64_t& first, const int64_t& second);
  *
  * @param first first value
  * @param second second value
- * @return true if product is valid, false otherwise
+ * @return ``true`` if product is valid, ``false`` otherwise
  */
 bool isProductValid(const double& first, const double& second);
 
@@ -48,7 +48,7 @@ bool isProductValid(const int64_t& first, const int64_t& second);
  *
  * @param value value to check
  * @param tolerance the accuracy to use, anything closer to 0 than this will be considered zero
- * @return true if close to zero, false otherwise
+ * @return ``true`` if close to zero, ``false`` otherwise
  */
 bool closeToZero(const double& value, double tolerance = 0.0001);
 

@@ -26,7 +26,7 @@ class Sound final
      * @param playTime The number of milliseconds to play the sound for.
      * @param fadeMs The number of milliseconds to fade in.
      *
-     * @note If the loops parameter is set to -1, the sound will loop indefinitely.
+     * @note If the loops parameter is set to ``-1``, the sound will loop indefinitely.
      */
     void play(int loops = 0, int playTime = -1, int fadeMs = 0) const;
 
@@ -40,7 +40,7 @@ class Sound final
     /**
      * @brief Get the volume of the sound.
      *
-     * @return The volume of the sound. Between 0.0f and 1.0f.
+     * @return The volume of the sound. Between ``0.0f`` and ``1.0f``.
      */
     [[nodiscard]] float getVolume() const;
 

@@ -1,6 +1,10 @@
 Rect
 ====
 
+.. warning::
+
+    This class may undergo changes in the near future.
+
 Description
 -----------
 

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Constants.hpp"
+
 namespace kn
 {
 namespace math
@@ -10,12 +12,11 @@ class Vec2;
 namespace key
 {
 /**
- * @brief Check if the argument key is pressed.
+ * @brief Get the keys that are currently pressed.
  *
- * @param key The key to check.
- *
- * @return If the argument key is pressed.
+ * @return The keys that are currently pressed.
  */
-bool isPressed(int key);
+[[nodiscard]] const uint8_t* getPressed();
+
 } // namespace key
 } // namespace kn
