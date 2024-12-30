@@ -44,8 +44,10 @@ int main()
         const double dt = clock.tick() / 1000.0;
 
         while (kn::window::pollEvent(event))
-            if (event.type == kn::KEYDOWN && event.key.keysym.sym == SDLK_ESCAPE)
+        {
+            if (event.type == kn::KEYDOWN && event.key.keysym.sym == kn::K_ESCAPE)
                 kn::window::close();
+        }
 
         kn::window::clear(bgColor);
 

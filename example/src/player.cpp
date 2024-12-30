@@ -1,5 +1,4 @@
 #include "Player.hpp"
-#include <algorithm>
 
 #define AxisX 0
 #define AxisY 1
@@ -7,8 +6,8 @@
 Player::Player(const kn::TileMap& tileMap)
     : rect(48, 120, 13, 16), collisionLayer(tileMap.getLayer("Wall"))
 {
-    animController.addAnim("idle", "../example/assets/player_idle.png", {13, 16}, 5);
-    animController.addAnim("walk", "../example/assets/player_walk.png", {13, 16}, 5);
+    animController.loadSpriteSheet("idle", "../example/assets/player_idle.png", {13, 16}, 5);
+    animController.loadSpriteSheet("walk", "../example/assets/player_walk.png", {13, 16}, 5);
 
     interactables = tileMap.getTileCollection({"Mirror", "Bed", "Desk"});
 }

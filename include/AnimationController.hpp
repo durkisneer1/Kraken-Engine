@@ -33,14 +33,11 @@ struct Animation
 class AnimationController final
 {
   public:
-    /**
-     * @brief Construct a new Animation Controller object.
-     */
     AnimationController() = default;
     ~AnimationController() = default;
 
     /**
-     * @brief Set up the animation controller.
+     * @brief Load a sprite sheet image file as an animation.
      *
      * @param name The name of the animation.
      * @param filePath The path to the sprite sheet image file.
@@ -49,8 +46,19 @@ class AnimationController final
      *
      * @return ``true`` if the setup was successful, ``false`` otherwise.
      */
-    [[maybe_unused]] bool addAnim(const std::string& name, const std::string& filePath,
+    [[maybe_unused]] bool loadSpriteSheet(const std::string& name, const std::string& filePath,
                                   const math::Vec2& frameSize, int fps);
+
+    /**
+     * @brief Load all images in a directory as an animation.
+     *
+     * @param name The name of the animation.
+     * @param dirPath The path to the directory containing the images.
+     * @param fps The frame rate of the animation.
+     *
+     * @return ``true`` if the setup was successful, ``false`` otherwise.
+     **/
+    [[maybe_unused]] bool loadFolder(const std::string& name, const std::string& dirPath, int fps);
 
     /**
      * @brief Remove an animation from the controller.
@@ -112,7 +120,7 @@ class AnimationController final
     /**
      * @brief Resume the animation.
      *
-     * @note Will not do anything if fps is set to 0.
+     * @note Will not do anything if fps is set to ``0``.
      */
     void resume();
 
