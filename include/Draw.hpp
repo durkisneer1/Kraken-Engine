@@ -9,6 +9,27 @@ namespace math
 {
 class Vec2;
 }
+namespace color
+{
+constexpr Color BLACK = {0, 0, 0, 255};
+constexpr Color WHITE = {255, 255, 255, 255};
+constexpr Color RED = {255, 0, 0, 255};
+constexpr Color GREEN = {0, 255, 0, 255};
+constexpr Color BLUE = {0, 0, 255, 255};
+constexpr Color YELLOW = {255, 255, 0, 255};
+constexpr Color MAGENTA = {255, 0, 255, 255};
+constexpr Color CYAN = {0, 255, 255, 255};
+constexpr Color GRAY = {128, 128, 128, 255};
+constexpr Color DARK_GRAY = {64, 64, 64, 255};
+constexpr Color LIGHT_GRAY = {192, 192, 192, 255};
+constexpr Color ORANGE = {255, 165, 0, 255};
+constexpr Color BROWN = {139, 69, 19, 255};
+constexpr Color PINK = {255, 192, 203, 255};
+constexpr Color PURPLE = {128, 0, 128, 255};
+constexpr Color NAVY = {0, 0, 128, 255};
+constexpr Color TEAL = {0, 128, 128, 255};
+constexpr Color OLIVE = {128, 128, 0, 255};
+} // namespace color
 
 namespace draw
 {

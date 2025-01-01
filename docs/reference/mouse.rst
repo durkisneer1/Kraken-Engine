@@ -26,6 +26,20 @@ Functions
 
 .. doxygenfunction:: kn::mouse::getPos
 
+.. doxygenfunction:: kn::mouse::getRel
+
 .. doxygenfunction:: kn::mouse::getPressed
+
+.. doxygenfunction:: kn::mouse::lock
+
+.. doxygenfunction:: kn::mouse::unlock
+
+.. doxygenfunction:: kn::mouse::isLocked
+
+.. doxygenfunction:: kn::mouse::hide
+
+.. doxygenfunction:: kn::mouse::show
+
+.. doxygenfunction:: kn::mouse::isHidden
 
 .. note:: Functions for getting mouse buttons that were just pressed or just released are planned for the future.
