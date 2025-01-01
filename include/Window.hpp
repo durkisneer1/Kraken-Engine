@@ -1,17 +1,17 @@
 #pragma once
 
 #include <string>
-#include <vector>
 
 #include <SDL.h>
 
 #include "Constants.hpp"
 #include "Math.hpp"
 #include "Rect.hpp"
-#include "Texture.hpp"
 
 namespace kn
 {
+
+class Texture;
 
 /**
  * @brief A global camera position.

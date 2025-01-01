@@ -9,7 +9,7 @@ namespace kn
 {
 
 bool AnimationController::loadSpriteSheet(const std::string& name, const std::string& filePath,
-                                  const math::Vec2& frameSize, const int fps)
+                                          const math::Vec2& frameSize, const int fps)
 {
     const std::shared_ptr<Texture> texPtr(new Texture());
     if (!texPtr->loadFromFile(filePath))
@@ -43,7 +43,8 @@ bool AnimationController::loadSpriteSheet(const std::string& name, const std::st
     return true;
 }
 
-bool AnimationController::loadFolder(const std::string& name, const std::string& dirPath, const int fps)
+bool AnimationController::loadFolder(const std::string& name, const std::string& dirPath,
+                                     const int fps)
 {
     if (m_animMap.find(name) != m_animMap.end())
         m_animMap.erase(name);
@@ -72,7 +73,6 @@ bool AnimationController::loadFolder(const std::string& name, const std::string&
     return true;
 }
 
-
 void AnimationController::removeAnim(const std::string& name)
 {
     if (m_animMap.find(name) != m_animMap.end())
@@ -88,17 +88,17 @@ bool AnimationController::setAnim(const std::string& name)
     return true;
 }
 
-const Frame& AnimationController::nextFrame(const double deltaTime)
+const Frame* AnimationController::nextFrame(const double deltaTime)
 {
-    Animation& currAnim = m_animMap.at(m_currAnim);
+    const Animation& currAnim = m_animMap.at(m_currAnim);
 
     if (m_paused)
-        return currAnim.frames.at(static_cast<int>(m_index));
+        return &currAnim.frames.at(static_cast<int>(m_index));
 
     m_index += deltaTime * currAnim.fps * m_playbackSpeed;
     m_index = fmod(m_index + static_cast<double>(currAnim.frames.size()), currAnim.frames.size());
 
-    return currAnim.frames.at(static_cast<int>(m_index));
+    return &currAnim.frames.at(static_cast<int>(m_index));
 }
 
 void AnimationController::rewind()

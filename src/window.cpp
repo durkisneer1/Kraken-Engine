@@ -4,6 +4,7 @@
 
 #include "ErrorLogger.hpp"
 #include "Music.hpp"
+#include "Texture.hpp"
 #include "Window.hpp"
 #include "_globals.hpp"
 

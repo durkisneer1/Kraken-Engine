@@ -23,11 +23,6 @@ Usage
     // Draw a circle at position (50, 50) with radius 16.
     kn::draw::circle({50, 50}, 16, kn::color::YELLOW);
 
-Constants
----------
-
-.. doxygennamespace:: kn::color
-
 Functions
 ---------
 
@@ -38,3 +33,8 @@ Functions
 .. doxygenfunction:: kn::draw::point
 
 .. doxygenfunction:: kn::draw::circle
+
+Constants
+---------
+
+.. doxygennamespace:: kn::color

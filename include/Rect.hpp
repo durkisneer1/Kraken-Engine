@@ -8,9 +8,6 @@ namespace math
 {
 class Vec2;
 } // namespace math
-/**
- * @brief A 2D rectangle.
- */
 struct Rect : SDL_FRect
 {
     Rect() = default;
@@ -29,13 +26,6 @@ struct Rect : SDL_FRect
                     static_cast<float>(h)}
     {
     }
-
-    /**
-     * @brief Get the position of the rectangle.
-     *
-     * @return The position of the rectangle.
-     */
-    [[nodiscard]] math::Vec2 getPos() const;
 
     /**
      * @brief Get the size of the rectangle.

@@ -11,19 +11,18 @@ using overflow::isSumValid;
 
 namespace math
 {
-
-/**
- * @brief Polar coordinate representation.
- */
 struct PolarCoordinate
 {
+    /**
+     * @brief The angle in degrees.
+     */
     double angle;
+    /**
+     * @brief The magnitude of the vector.
+     */
     double radius;
 };
 
-/**
- * @brief A 2D vector.
- */
 class Vec2
 {
   public:

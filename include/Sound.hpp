@@ -5,19 +5,21 @@
 
 namespace kn
 {
-/**
- * @brief A sound object.
- */
 class Sound final
 {
   public:
+    Sound() = default;
+    ~Sound();
+
     /**
-     * @brief Create a sound.
+     * @brief Load a sound from an audio file.
+     * Accepts .ogg, .mp3, and .wav files.
      *
      * @param fileDir The directory of the sound file.
+     *
+     * @return ``true`` if the sound was loaded successfully, ``false`` otherwise.
      */
-    explicit Sound(const std::string& fileDir);
-    ~Sound();
+    [[maybe_unused]] bool loadFromFile(const std::string& fileDir);
 
     /**
      * @brief Play the sound.

@@ -34,7 +34,8 @@ int main()
         }
     );
 
-    const kn::TileMap tileMap("../example/assets/room.tmx");
+    kn::TileMap tileMap;
+    tileMap.loadTMX("../example/assets/room.tmx");
 
     Player player(tileMap);
 

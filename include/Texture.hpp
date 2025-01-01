@@ -10,9 +10,6 @@
 namespace kn
 {
 
-/**
- * @brief A texture object.
- */
 class Texture final
 {
   public:
@@ -21,20 +18,18 @@ class Texture final
      */
     double angle = 0.0;
 
-    /**
-     * @brief The flip state of the texture.
-     * Indicates whether the texture is flipped horizontally (x) or vertically (y).
-     */
     struct Flip
     {
+        /**
+         * @brief Whether to flip the texture horizontally.
+         */
         bool x = false;
+        /**
+         * @brief Whether to flip the texture vertically.
+         */
         bool y = false;
     } flip;
 
-    /**
-     * @brief Constructs an empty Texture object.
-     * @note The internal SDL_Texture* is nullptr until loadFromFile is called.
-     */
     Texture() = default;
 
     /**
@@ -57,6 +52,15 @@ class Texture final
     ~Texture();
 
     /**
+     * @brief Loads an image from disk.
+     *
+     * @param filePath Path to the image file.
+     *
+     * @return ``true`` when successful, ``false`` on failure.
+     */
+    [[maybe_unused]] bool loadFromFile(const std::string& filePath);
+
+    /**
      * @brief Get the size of the texture.
      *
      * @return The size of the texture.
@@ -74,19 +78,8 @@ class Texture final
      * @brief Get the SDL texture pointer.
      *
      * @return The SDL texture pointer.
-     *
-     * @note This should rarely or never have to be used.
      */
     [[nodiscard]] SDL_Texture* getSDLTexture() const;
-
-    /**
-     * @brief Loads an image from disk.
-     *
-     * @param filePath Path to the image file.
-     *
-     * @return ``true`` when successful, ``false`` on failure.
-     */
-    [[maybe_unused]] bool loadFromFile(const std::string& filePath);
 
   private:
     SDL_Texture* texture = nullptr;

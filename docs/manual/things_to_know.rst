@@ -19,7 +19,7 @@ For example, to check if the ``A`` button on a controller is pressed, you would 
 .. code-block:: cpp
 
     if (kn::controller::isPressed(kn::C_A)) {
-        std::cout << "A button is pressed!" << std::endl;
+        std::cout << "A button is pressed!\n";
     }
 
 Keycode VS Scancode
@@ -53,5 +53,17 @@ Here is a comparison of keycodes and scancodes for different scenarios:
       - ❌ User layout might vary
       - ✅ Always maps to physical key
 
+Camera
+~~~~~~
+
+There is a global ``kn::camera`` vector that you can use to offset rendering.
+This is useful for creating a camera system that follows the player or to pan around the game world.
+
+In the example usage below, the rectangle's top left corner is visually at ``(150, 150)``:
+
+.. code-block:: cpp
+
+    kn::camera = {-100, -100};
+    kn::draw::rect({50, 50, 16, 16}, kn::color::RED);
 
 .. note:: This page is a work in progress and will be updated as more information becomes available.

@@ -30,7 +30,7 @@ Usage
 
     // Check if they collide.
     if (rectA.collideRect(rectB)) {
-        // handle collision
+        // Handle collision
     }
 
     // Move the top left of rectB to the bottom right of rectA

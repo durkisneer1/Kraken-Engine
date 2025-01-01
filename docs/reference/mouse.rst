@@ -12,14 +12,12 @@ Usage
 .. code-block:: cpp
 
     // Check if the user left clicked.
-    const auto mousePressed = kn::mouse::getPressed();
-    if (mousePressed == kn::MOUSE_LEFT) {
+    if (kn::mouse::getPressed() == kn::MOUSE_LEFT) {
         // Handle left mouse button press.
     }
 
     // Get the mouse position and draw a circle at that position.
-    kn::math::Vec2 mousePos = kn::mouse::getPos();
-    kn::draw::circle(mousePos, 10, kn::color::RED);
+    kn::draw::circle(kn::mouse::getPos(), 10, kn::color::RED);
 
 Functions
 ---------

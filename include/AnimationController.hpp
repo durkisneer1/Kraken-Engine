@@ -8,28 +8,30 @@
 
 namespace kn
 {
-
-/**
- * @brief Container for a texture pointer and source rect
- */
 struct Frame
 {
+    /**
+     * @brief A pointer to the full loaded animation texture.
+     */
     std::shared_ptr<Texture> tex;
+    /**
+     * @brief The area of the texture to render.
+     */
     Rect rect;
 };
 
-/**
- * @brief Container for a list of frames.
- */
 struct Animation
 {
+    /**
+     * @brief A collection of frames that make up the animation.
+     */
     std::vector<Frame> frames;
+    /**
+     * @brief The frame rate of the animation.
+     */
     int fps;
 };
 
-/**
- * @brief Handler for sprite sheet animations.
- */
 class AnimationController final
 {
   public:
@@ -47,7 +49,7 @@ class AnimationController final
      * @return ``true`` if the setup was successful, ``false`` otherwise.
      */
     [[maybe_unused]] bool loadSpriteSheet(const std::string& name, const std::string& filePath,
-                                  const math::Vec2& frameSize, int fps);
+                                          const math::Vec2& frameSize, int fps);
 
     /**
      * @brief Load all images in a directory as an animation.
@@ -81,9 +83,9 @@ class AnimationController final
      *
      * @param deltaTime The time since the last time this function was called.
      *
-     * @return The next frame's texture and area to render from.
+     * @return A pointer to the next frame of the animation.
      */
-    [[nodiscard]] const Frame& nextFrame(double deltaTime);
+    [[nodiscard]] const Frame* nextFrame(double deltaTime);
 
     /**
      * @brief Set the playback speed of animations.

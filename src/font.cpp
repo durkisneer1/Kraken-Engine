@@ -5,16 +5,24 @@
 
 namespace kn
 {
-Font::Font(const std::string& fileDir, const int ptSize)
+Font::~Font()
+{
+    if (font)
+        TTF_CloseFont(font);
+}
+
+bool Font::openFromFile(const std::string& fileDir, const int ptSize)
 {
     font = TTF_OpenFont(fileDir.c_str(), ptSize);
-    if (!font)
-        FATAL("Failed to load font: " + std::string(TTF_GetError()));
+    return font != nullptr;
 }
 
 Texture Font::render(const std::string& text, const bool antialias, const Color color,
                      const int wrapLength) const
 {
+    if (!font)
+        return {};
+
     SDL_Surface* surface;
 
     if (antialias)

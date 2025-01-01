@@ -4,16 +4,20 @@
 #include <sstream>
 
 #include "ErrorLogger.hpp"
+#include "Rect.hpp"
 #include "TileMap.hpp"
 #include "Window.hpp"
 
 namespace kn
 {
-TileMap::TileMap(const std::string& filePath, const int borderSize)
+bool TileMap::loadTMX(const std::string& filePath, const int borderSize)
 {
     pugi::xml_document doc;
     if (!doc.load_file(filePath.c_str()))
-        throw std::runtime_error("Failed to load " + filePath);
+    {
+        ERROR("Failed to load " + filePath)
+        return false;
+    }
 
     const size_t lastSlashPos = filePath.find_last_of('/');
     dirPath = lastSlashPos != std::string::npos ? filePath.substr(0, lastSlashPos + 1) : "";
@@ -22,13 +26,22 @@ TileMap::TileMap(const std::string& filePath, const int borderSize)
 
     std::string texturePath = getTexturePath(map);
     if (texturePath.empty())
-        ERROR("Failed to get texture path");
+    {
+        ERROR("Failed to get texture path")
+        return false;
+    }
+
+    if (texture)
+    {
+        delete texture;
+        texture = nullptr;
+    }
     texture = new Texture();
     if (!texture->loadFromFile(texturePath))
     {
         delete texture;
         texture = nullptr;
-        return;
+        return false;
     }
     SDL_Surface* surface = IMG_Load(texturePath.c_str());
 
@@ -36,6 +49,11 @@ TileMap::TileMap(const std::string& filePath, const int borderSize)
     const int tileWidth = std::stoi(map.attribute("tilewidth").value());
     const int tileHeight = std::stoi(map.attribute("tileheight").value());
     const int tileSetWidth = static_cast<int>(texture->getSize().x) / (tileWidth + 2 * borderSize);
+
+    if (!layerNames.empty())
+        layerNames.clear();
+    if (!layerHash.empty())
+        layerHash.clear();
 
     for (const auto& child : map.children())
     {
@@ -93,6 +111,8 @@ TileMap::TileMap(const std::string& filePath, const int borderSize)
     }
 
     SDL_FreeSurface(surface);
+
+    return true;
 }
 
 TileMap::~TileMap()
@@ -129,7 +149,7 @@ const Layer* TileMap::getLayer(const std::string& name) const
     if (const auto it = layerHash.find(name); it != layerHash.end())
         return &it->second;
 
-    throw std::runtime_error("Layer " + name + " not found");
+    return nullptr;
 }
 
 void TileMap::drawLayer(const std::string& name) const
@@ -137,7 +157,7 @@ void TileMap::drawLayer(const std::string& name) const
     const auto it = layerHash.find(name);
 
     if (it == layerHash.end())
-        throw std::runtime_error("Layer " + name + " not found");
+        return;
 
     for (const Tile& tile : it->second.tiles)
         window::blit(*texture, tile.rect, tile.crop);

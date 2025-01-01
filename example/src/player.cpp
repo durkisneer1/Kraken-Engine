@@ -49,10 +49,10 @@ void Player::update(const double dt)
         if (rect.collideRect(tile.collider))
             kn::draw::rect(tile.rect, kn::color::YELLOW, 1);
 
-    const kn::Frame frame = animController.nextFrame(dt);
+    const kn::Frame* frame = animController.nextFrame(dt);
 
-    frame.tex->flip.x = !facingRight;
-    kn::window::blit(*frame.tex, rect, frame.rect);
+    frame->tex->flip.x = !facingRight;
+    kn::window::blit(*frame->tex, rect, frame->rect);
 }
 
 void Player::handleCollision(const int axis)

@@ -15,7 +15,7 @@ Usage
     // Instantiate a Texture object and load an image from a file.
     kn::Texture imageTexture;
     if (!imageTexture.loadFromFile("assets/image.png")) {
-        std::cerr << "Failed to load image.png" << std::endl;
+        // Handle error
     }
 
     // Flip the image texture horizontally and rotate it 30 degrees.
@@ -31,6 +31,8 @@ Usage
 
 Members
 -------
+
+.. note:: The internal SDL_Texture* is a nullptr until ``loadFromFile`` is called.
 
 .. doxygenclass:: kn::Texture
     :members:

@@ -35,10 +35,10 @@ Usage
 
     // Using AnimationController::nextFrame is simple.
     // It returns the current frame texture, srcRect, and advances the animation.
-    const kn::Frame frame = animController.nextFrame(deltaTime);
+    const kn::Frame* frame = animController.nextFrame(deltaTime);
 
     // Draw the current frame texture at position (50, 50) and size (16, 16).
-    kn::window::blit(*frame.tex, {50, 50, 16, 16}, frame.rect);
+    kn::window::blit(*frame->tex, {50, 50, 16, 16}, frame->rect);
 
 Members
 -------

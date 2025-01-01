@@ -17,13 +17,16 @@ Usage
 .. code-block:: cpp
 
     // Create a Sound object from an audio file.
-    kn::Sound sound("assets/sound.ogg");
+    kn::Sound sfx;
+    if (!sfx.loadFromFile("assets/sfx.ogg")) {
+        // Handle error
+    }
 
     // Set the volume of the sound to 50%.
-    sound.setVolume(0.5f);
+    sfx.setVolume(0.5f);
 
     // Play the sound 3 times after it fades in over 2 seconds.
-    sound.play(2, -1, 2000);
+    sfx.play(2, -1, 2000);
 
 Members
 -------

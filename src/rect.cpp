@@ -3,8 +3,6 @@
 
 namespace kn
 {
-math::Vec2 Rect::getPos() const { return {x, y}; }
-
 math::Vec2 Rect::getSize() const { return {w, h}; }
 
 void Rect::setSize(const math::Vec2& size)
