@@ -164,7 +164,7 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
     if (!_renderer)
         WARN("Cannot blit before creating the window")
 
-    if (dstRect.getBottomRight() < camera || dstRect.getTopLeft() > getSize() + camera)
+    if (dstRect.getPoint(BOTTOM_RIGHT) < camera || dstRect.getPoint(TOP_LEFT) > getSize() + camera)
         return;
 
     SDL_RendererFlip flipAxis = SDL_FLIP_NONE;
@@ -174,7 +174,7 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
         flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_VERTICAL);
 
     Rect offsetRect = dstRect;
-    offsetRect.setTopLeft(offsetRect.getTopLeft() - camera);
+    offsetRect.setPoint(TOP_LEFT, offsetRect.getPoint(TOP_LEFT) - camera);
 
     if (srcRect.getSize() == math::Vec2())
     {
@@ -190,7 +190,7 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
                       flipAxis);
 }
 
-void blit(const Texture& texture, const math::Vec2& position)
+void blit(const Texture& texture, const math::Vec2& position, const Anchor anchor)
 {
     if (!_renderer)
         WARN("Cannot blit before creating the window")
@@ -205,7 +205,7 @@ void blit(const Texture& texture, const math::Vec2& position)
         flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_VERTICAL);
 
     Rect rect = texture.getRect();
-    rect.setTopLeft(position - camera);
+    rect.setPoint(anchor, position - camera);
 
     SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &rect, texture.angle, nullptr,
                       flipAxis);

@@ -661,17 +661,23 @@ footer {
 
 .rst-content .cpp.class > dt,
 .rst-content .cpp.struct > dt,
-.rst-content .cpp.type > dt {
+.rst-content .cpp.type > dt,
+.rst-content .cpp.enum > dt {
     margin-bottom: 16px !important;
     width: fit-content !important;
 }
 
 .rst-content .cpp.class > dd,
 .rst-content .cpp.struct > dd,
-.rst-content .cpp.type > dd {
+.rst-content .cpp.type > dd,
+.rst-content .cpp.enum > dd {
     border-left: 2px dashed var(--navbar-background-color);
     padding-left: 24px !important;
     margin-left: 0 !important;
+}
+
+.rst-content .cpp.enum > dd > p {
+    display: none;
 }
 
 .cpp.function .admonition.note {
@@ -696,6 +702,17 @@ footer {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     width: 100% !important;
+}
+
+.rst-content .cpp.enumerator > dt,
+.rst-content .cpp.var > dt {
+    width: fit-content !important;
+    border-radius: 8px;
+    margin-bottom: 0 !important;
+}
+
+#constants > .cpp.type > dd > p {
+    display: none;
 }
 
 .rst-content .cpp.function > dd,

@@ -70,8 +70,9 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect = {})
  *
  *  @param texture The texture to draw.
  *  @param position The position to draw at.
+ *  @param anchor The anchor point to draw from.
  */
-void blit(const Texture& texture, const math::Vec2& position = {});
+void blit(const Texture& texture, const math::Vec2& position = {}, Anchor anchor = TOP_LEFT);
 
 /**
  *  @brief Get the window renderer.
