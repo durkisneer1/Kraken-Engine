@@ -5,7 +5,6 @@
 #include <SDL.h>
 
 #include "Constants.hpp"
-#include "Math.hpp"
 #include "Rect.hpp"
 
 namespace kn

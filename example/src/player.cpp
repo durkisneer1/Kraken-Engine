@@ -63,19 +63,19 @@ void Player::handleCollision(const int axis)
             if (axis == AxisX)
             {
                 if (velocity.x > 0.0)
-                    rect.setSide(kn::RIGHT, tile.rect.getSide(kn::LEFT));
+                    rect.right(tile.rect.left());
                 else if (velocity.x < 0.0)
-                    rect.setSide(kn::LEFT, tile.rect.getSide(kn::RIGHT));
+                    rect.left(tile.rect.right());
             }
             else if (axis == AxisY)
             {
                 if (velocity.y > 0.0)
                 {
-                    rect.setSide(kn::BOTTOM, tile.rect.getSide(kn::TOP));
+                    rect.bottom(tile.rect.top());
                     onGround = true;
                 }
                 else if (velocity.y < 0.0)
-                    rect.setSide(kn::TOP, tile.rect.getSide(kn::BOTTOM));
+                    rect.top(tile.rect.bottom());
                 velocity.y = 0.0;
             }
             break;

@@ -11,7 +11,7 @@ Description
 The **Rect** class represents a rectangle in 2D space. It is defined by its top-left corner and its size.
 Its most common uses are source and destination rectangles in blitting operations, as well as collision detection.
 
-The diagram below shows how the anchor points and sides of a Rect are defined:
+It may be undocumented, but there are methods for all 9 anchor points and 4 sides of the rectangle, as shown below:
 
 .. image:: ../_static/rect.png
     :alt: The anchor points and sides of a Rect
@@ -34,7 +34,7 @@ Usage
     }
 
     // Move the top left of rectB to the bottom right of rectA
-    rectB.setPoint(kn::TOP_LEFT, rectA.getPoint(kn::BOTTOM_RIGHT));
+    rectB.topLeft(rectA.bottomRight());
 
     // Clamp rectA inside rectB
     rectA.clamp(rectB);
@@ -44,10 +44,3 @@ Members
 
 .. doxygenstruct:: kn::Rect
     :members:
-
-Constants
----------
-
-.. doxygenenum:: kn::Anchor
-
-.. doxygenenum:: kn::Side

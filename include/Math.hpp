@@ -155,7 +155,7 @@ class Vec2
     bool operator>=(const Vec2& other) const;
 
   protected:
-    double tolerance; //!< the accuracy with which comparisons are made
+    double tolerance; // the accuracy with which comparisons are made
 };
 
 /**
@@ -276,6 +276,8 @@ template <typename T> Vec2 operator*(const T& lhs, const Vec2& rhs)
 }
 
 template <typename T> Vec2 operator*(const Vec2& lhs, const T& rhs) { return rhs * lhs; }
+
+std::ostream& operator<<(std::ostream& os, const Vec2& vec);
 
 } // namespace math
 } // namespace kn

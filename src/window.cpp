@@ -3,6 +3,7 @@
 #include <SDL_ttf.h>
 
 #include "ErrorLogger.hpp"
+#include "Math.hpp"
 #include "Music.hpp"
 #include "Texture.hpp"
 #include "Window.hpp"
@@ -164,7 +165,7 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
     if (!_renderer)
         WARN("Cannot blit before creating the window")
 
-    if (dstRect.getPoint(BOTTOM_RIGHT) < camera || dstRect.getPoint(TOP_LEFT) > getSize() + camera)
+    if (dstRect.bottomRight() < camera || dstRect.topLeft() > getSize() + camera)
         return;
 
     SDL_RendererFlip flipAxis = SDL_FLIP_NONE;
@@ -174,9 +175,9 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
         flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_VERTICAL);
 
     Rect offsetRect = dstRect;
-    offsetRect.setPoint(TOP_LEFT, offsetRect.getPoint(TOP_LEFT) - camera);
+    offsetRect.topLeft(offsetRect.topLeft() - camera);
 
-    if (srcRect.getSize() == math::Vec2())
+    if (srcRect.size() == math::Vec2())
     {
         SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &offsetRect, texture.angle,
                           nullptr, flipAxis);
@@ -205,7 +206,36 @@ void blit(const Texture& texture, const math::Vec2& position, const Anchor ancho
         flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_VERTICAL);
 
     Rect rect = texture.getRect();
-    rect.setPoint(anchor, position - camera);
+    switch (anchor)
+    {
+    case TOP_LEFT:
+        rect.topLeft(position - camera);
+        break;
+    case TOP_MID:
+        rect.topMid(position - camera);
+        break;
+    case TOP_RIGHT:
+        rect.topRight(position - camera);
+        break;
+    case LEFT_MID:
+        rect.leftMid(position - camera);
+        break;
+    case CENTER:
+        rect.center(position - camera);
+        break;
+    case RIGHT_MID:
+        rect.rightMid(position - camera);
+        break;
+    case BOTTOM_LEFT:
+        rect.bottomLeft(position - camera);
+        break;
+    case BOTTOM_MID:
+        rect.bottomMid(position - camera);
+        break;
+    case BOTTOM_RIGHT:
+        rect.bottomRight(position - camera);
+        break;
+    }
 
     SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &rect, texture.angle, nullptr,
                       flipAxis);

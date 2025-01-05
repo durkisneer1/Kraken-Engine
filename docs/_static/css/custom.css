@@ -3,7 +3,7 @@
  * visual identity. Many colors are also overridden to use CSS variables.
  * This makes it possible to provide an automatically-used dark theme
  * based on browser preferences.
- **/
+ */
 
 @font-face {
     font-family: "JetBrains Mono";
@@ -705,7 +705,7 @@ footer {
 }
 
 .rst-content .cpp.enumerator > dt,
-.rst-content .cpp.var > dt {
+#constants .cpp.var > dt {
     width: fit-content !important;
     border-radius: 8px;
     margin-bottom: 0 !important;

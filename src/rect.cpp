@@ -3,138 +3,94 @@
 
 namespace kn
 {
-math::Vec2 Rect::getSize() const { return {w, h}; }
-
-void Rect::setSize(const math::Vec2& size)
-{
-    w = static_cast<float>(size.x);
-    h = static_cast<float>(size.y);
-}
-
 bool Rect::collidePoint(const math::Vec2& pos) const
 {
     return pos.x >= x && pos.x <= x + w && pos.y >= y && pos.y <= y + h;
 }
 
-bool Rect::collideRect(const Rect& rect) const
-{
-    return x < rect.x + rect.w && x + w > rect.x && y < rect.y + rect.h && y + h > rect.y;
-}
+bool Rect::collideRect(const Rect& rect) const { return SDL_HasIntersectionF(this, &rect); }
 
 void Rect::clamp(const math::Vec2& min, const math::Vec2& max)
 {
     if (max.x - min.x < this->w || max.y - min.y < this->h)
         return;
 
-    setPoint(TOP_LEFT, clampVec(getPoint(TOP_LEFT), min, max));
-    setPoint(BOTTOM_RIGHT, clampVec(getPoint(BOTTOM_RIGHT), min, max));
+    topLeft(clampVec(topLeft(), min, max));
+    bottomRight(clampVec(bottomRight(), min, max));
 }
 
-void Rect::clamp(const Rect& rect) { clamp(rect.getPoint(TOP_LEFT), rect.getPoint(BOTTOM_RIGHT)); }
+void Rect::clamp(const Rect& rect) { clamp(rect.topLeft(), rect.bottomRight()); }
 
-void Rect::setSide(const Side side, const float value)
+// Setters
+void Rect::size(const math::Vec2& size)
 {
-    switch (side)
-    {
-    case LEFT:
-        this->x = value;
-        break;
-    case RIGHT:
-        this->x = value - w;
-        break;
-    case TOP:
-        this->y = value;
-        break;
-    case BOTTOM:
-        this->y = value - h;
-        break;
-    }
+    w = static_cast<float>(size.x);
+    h = static_cast<float>(size.y);
+}
+void Rect::left(const float x) { this->x = x; }
+void Rect::right(const float x) { this->x = x - w; }
+void Rect::top(const float y) { this->y = y; }
+void Rect::bottom(const float y) { this->y = y - h; }
+void Rect::topLeft(const math::Vec2& pos)
+{
+    x = static_cast<float>(pos.x);
+    y = static_cast<float>(pos.y);
+}
+void Rect::topMid(const math::Vec2& pos)
+{
+    x = static_cast<float>(pos.x) - w / 2.f;
+    y = static_cast<float>(pos.y);
+}
+void Rect::topRight(const math::Vec2& pos)
+{
+    x = static_cast<float>(pos.x) - w;
+    y = static_cast<float>(pos.y);
+}
+void Rect::leftMid(const math::Vec2& pos)
+{
+    x = static_cast<float>(pos.x);
+    y = static_cast<float>(pos.y) - h / 2.f;
+}
+void Rect::center(const math::Vec2& pos)
+{
+    x = static_cast<float>(pos.x) - w / 2.f;
+    y = static_cast<float>(pos.y) - h / 2.f;
+}
+void Rect::rightMid(const math::Vec2& pos)
+{
+    x = static_cast<float>(pos.x) - w;
+    y = static_cast<float>(pos.y) - h / 2.f;
+}
+void Rect::bottomLeft(const math::Vec2& pos)
+{
+    x = static_cast<float>(pos.x);
+    y = static_cast<float>(pos.y) - h;
+}
+void Rect::bottomMid(const math::Vec2& pos)
+{
+    x = static_cast<float>(pos.x) - w / 2.f;
+    y = static_cast<float>(pos.y) - h;
+}
+void Rect::bottomRight(const math::Vec2& pos)
+{
+    x = static_cast<float>(pos.x) - w;
+    y = static_cast<float>(pos.y) - h;
 }
 
-float Rect::getSide(const Side side) const
-{
-    switch (side)
-    {
-    case LEFT:
-        return x;
-    case RIGHT:
-        return x + w;
-    case TOP:
-        return y;
-    case BOTTOM:
-        return y + h;
-    default:
-        return 0.f;
-    }
-}
+// Getters
+math::Vec2 Rect::size() const { return {w, h}; }
+float Rect::left() const { return x; }
+float Rect::right() const { return x + w; }
+float Rect::top() const { return y; }
+float Rect::bottom() const { return y + h; }
+math::Vec2 Rect::topLeft() const { return {x, y}; }
+math::Vec2 Rect::topMid() const { return {x + w / 2.f, y}; }
+math::Vec2 Rect::topRight() const { return {x + w, y}; }
+math::Vec2 Rect::leftMid() const { return {x, y + h / 2.f}; }
+math::Vec2 Rect::center() const { return {x + w / 2.f, y + h / 2.f}; }
+math::Vec2 Rect::rightMid() const { return {x + w, y + h / 2.f}; }
+math::Vec2 Rect::bottomLeft() const { return {x, y + h}; }
+math::Vec2 Rect::bottomMid() const { return {x + w / 2.f, y + h}; }
+math::Vec2 Rect::bottomRight() const { return {x + w, y + h}; }
 
-void Rect::setPoint(const Anchor anchor, const math::Vec2& pos)
-{
-    switch (anchor)
-    {
-    case TOP_LEFT:
-        x = static_cast<float>(pos.x);
-        y = static_cast<float>(pos.y);
-        break;
-    case TOP_MID:
-        x = static_cast<float>(pos.x) - w / 2.f;
-        y = static_cast<float>(pos.y);
-        break;
-    case TOP_RIGHT:
-        x = static_cast<float>(pos.x) - w;
-        y = static_cast<float>(pos.y);
-        break;
-    case LEFT_MID:
-        x = static_cast<float>(pos.x);
-        y = static_cast<float>(pos.y) - h / 2.f;
-        break;
-    case CENTER:
-        x = static_cast<float>(pos.x) - w / 2.f;
-        y = static_cast<float>(pos.y) - h / 2.f;
-        break;
-    case RIGHT_MID:
-        x = static_cast<float>(pos.x) - w;
-        y = static_cast<float>(pos.y) - h / 2.f;
-        break;
-    case BOTTOM_LEFT:
-        x = static_cast<float>(pos.x);
-        y = static_cast<float>(pos.y) - h;
-        break;
-    case BOTTOM_MID:
-        x = static_cast<float>(pos.x) - w / 2.f;
-        y = static_cast<float>(pos.y) - h;
-        break;
-    case BOTTOM_RIGHT:
-        x = static_cast<float>(pos.x) - w;
-        y = static_cast<float>(pos.y) - h;
-        break;
-    }
-}
-
-math::Vec2 Rect::getPoint(const Anchor anchor) const
-{
-    switch (anchor)
-    {
-    case TOP_LEFT:
-        return {x, y};
-    case TOP_MID:
-        return {x + w / 2.f, y};
-    case TOP_RIGHT:
-        return {x + w, y};
-    case LEFT_MID:
-        return {x, y + h / 2.f};
-    case CENTER:
-        return {x + w / 2.f, y + h / 2.f};
-    case RIGHT_MID:
-        return {x + w, y + h / 2.f};
-    case BOTTOM_LEFT:
-        return {x, y + h};
-    case BOTTOM_MID:
-        return {x + w / 2.f, y + h};
-    case BOTTOM_RIGHT:
-        return {x + w, y + h};
-    default:
-        return {x, y};
-    }
-}
 } // namespace kn

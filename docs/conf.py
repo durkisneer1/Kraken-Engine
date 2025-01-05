@@ -50,7 +50,7 @@ project = "Kraken Engine"
 copyright = "2024, Derrick Martinez"
 author = "Derrick Martinez"
 
-version = os.getenv("READTHEDOCS_VERSION", "0.0.6")
+version = os.getenv("READTHEDOCS_VERSION", "0.0.8")
 release = version
 
 exclude_patterns = ["_build"]
@@ -84,7 +84,7 @@ html_context = {
     # Set this to `True` when in the `latest` branch to clearly indicate to the reader
     # that they are not reading the `stable` documentation.
     "kraken_is_latest": True,
-    "kraken_version": "0.0.6",
+    "kraken_version": "0.0.8",
     # Enables a banner that displays the up-to-date status of each article.
     "kraken_show_article_status": True,
 }

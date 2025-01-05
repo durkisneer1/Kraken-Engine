@@ -11,6 +11,20 @@ typedef SDL_GameControllerAxis ControllerAxis;
 typedef SDL_Event Event;
 typedef SDL_Color Color;
 
+// Anchor points for rendering
+enum Anchor
+{
+    TOP_LEFT,
+    TOP_MID,
+    TOP_RIGHT,
+    LEFT_MID,
+    CENTER,
+    RIGHT_MID,
+    BOTTOM_LEFT,
+    BOTTOM_MID,
+    BOTTOM_RIGHT
+};
+
 // Scancodes
 constexpr Scancode S_a = SDL_SCANCODE_A;
 constexpr Scancode S_b = SDL_SCANCODE_B;

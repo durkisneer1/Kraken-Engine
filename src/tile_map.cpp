@@ -101,9 +101,8 @@ bool TileMap::loadTMX(const std::string& filePath, const int borderSize)
             Rect tileSrcRect = {srcX, srcY, tileWidth, tileHeight};
             Rect tileDstRect = {destX, destY, tileWidth, tileHeight};
 
-            tiles.emplace_back(
-                Tile{layerPtr, tileSrcRect, tileDstRect,
-                     getFittedRect(surface, tileSrcRect, tileDstRect.getPoint(TOP_LEFT))});
+            tiles.emplace_back(Tile{layerPtr, tileSrcRect, tileDstRect,
+                                    getFittedRect(surface, tileSrcRect, tileDstRect.topLeft())});
 
             tileCounter++;
         }
