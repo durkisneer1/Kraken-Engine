@@ -33,6 +33,9 @@ Usage
         // Handle collision
     }
 
+    // Move the center of rectA to the center of the window
+    rectA.center(kn::window::getSize() / 2.0);
+
     // Move the top left of rectB to the bottom right of rectA
     rectB.topLeft(rectA.bottomRight());
 

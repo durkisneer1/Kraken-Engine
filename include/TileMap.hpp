@@ -13,6 +13,7 @@ namespace kn
 {
 
 struct Layer;
+struct Group;
 struct Rect;
 
 struct Tile
@@ -22,7 +23,7 @@ struct Tile
      */
     std::shared_ptr<Layer> layer;
     /**
-     * @brief The position of the tile in its tileset.
+     * @brief The area of the tile in its tileset.
      */
     Rect crop;
     /**
@@ -33,6 +34,11 @@ struct Tile
      * @brief An accurate bounding box for the tile.
      */
     Rect collider;
+
+    bool horizontalFlip;
+    bool verticalFlip;
+    bool antiDiagonalFlip;
+    double angle;
 };
 
 struct Layer
@@ -42,7 +48,7 @@ struct Layer
      */
     bool isVisible;
     /**
-     * @brief The name of the layer within the tmx file.
+     * @brief The name of the layer in the tmx file.
      */
     std::string name;
     /**
@@ -74,6 +80,11 @@ class TileMap final
     [[nodiscard]] const Layer* getLayer(const std::string& name) const;
 
     /**
+     * @brief Get the names of the layers in the tile map.
+     */
+    [[nodiscard]] const std::vector<std::string>& getLayerNames() const;
+
+    /**
      * @brief Draw a layer from the tile map.
      *
      * @param name The name of the layer.
@@ -86,7 +97,7 @@ class TileMap final
     void drawMap() const;
 
     /**
-     * @brief Get a collection of tiles from the tile map.
+     * @brief Get a collection of tiles from different layers of the tile map.
      *
      * @param layerNames The names of the layers to get tiles from.
      */
@@ -95,7 +106,8 @@ class TileMap final
 
   private:
     std::string dirPath;
-    Texture* texture = nullptr;
+    Texture* tileSetTexture = nullptr;
+
     std::vector<std::string> layerNames;
     std::unordered_map<std::string, Layer> layerHash;
 
