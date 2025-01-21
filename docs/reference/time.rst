@@ -16,7 +16,7 @@ Usage
     kn::time::Clock clock;
 
     // Get the time since the last frame with a maximum frame rate of 144 fps.
-    double deltaTime = clock.tick(144);
+    double deltaTime = clock.tick(144) / 1000.0;
 
     // Get the time since Kraken was initialized.
     double elapsedTime = kn::time::getTicks();

@@ -3,6 +3,7 @@
 
 #include <gtest/gtest.h>
 
+#include "Math.hpp"
 #include "TestBase.hpp"
 #include "Window.hpp"
 

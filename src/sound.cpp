@@ -6,7 +6,13 @@
 
 namespace kn
 {
-Sound::Sound(const std::string& fileDir)
+Sound::~Sound()
+{
+    if (m_sound)
+        Mix_FreeChunk(m_sound);
+}
+
+bool Sound::loadFromFile(const std::string& fileDir)
 {
     const std::filesystem::path filePath(fileDir);
 
@@ -15,18 +21,18 @@ Sound::Sound(const std::string& fileDir)
     {
         m_sound = Mix_LoadWAV(fileDir.c_str());
         if (!m_sound)
+        {
             FATAL("Failed to load sound: " + fileDir)
+            return false;
+        }
     }
     else
     {
         FATAL("Unsupported file format: " + fileDir)
+        return false;
     }
-}
 
-Sound::~Sound()
-{
-    if (m_sound)
-        Mix_FreeChunk(m_sound);
+    return true;
 }
 
 void Sound::play(const int loops, const int playTime, const int fadeMs) const

@@ -2,11 +2,14 @@
 #include "ErrorLogger.hpp"
 #include "Math.hpp"
 
+#include <filesystem>
+namespace fs = std::filesystem;
+
 namespace kn
 {
 
-bool AnimationController::addAnim(const std::string& name, const std::string& filePath,
-                                  const math::Vec2& frameSize, const int fps)
+bool AnimationController::loadSpriteSheet(const std::string& name, const std::string& filePath,
+                                          const math::Vec2& frameSize, const int fps)
 {
     const std::shared_ptr<Texture> texPtr(new Texture());
     if (!texPtr->loadFromFile(filePath))
@@ -27,12 +30,42 @@ bool AnimationController::addAnim(const std::string& name, const std::string& fi
 
     Animation newAnim;
     newAnim.fps = fps;
-    for (int x = 0; x < size.x; x += frameWidth)
-        for (int y = 0; y < size.y; y += frameHeight)
+    for (int y = 0; y < size.y; y += frameHeight)
+        for (int x = 0; x < size.x; x += frameWidth)
         {
             const Frame frame{texPtr, {x, y, frameWidth, frameHeight}};
             newAnim.frames.emplace_back(frame);
         }
+
+    m_animMap[name] = std::move(newAnim);
+    m_currAnim = name;
+
+    return true;
+}
+
+bool AnimationController::loadFolder(const std::string& name, const std::string& dirPath,
+                                     const int fps)
+{
+    if (m_animMap.find(name) != m_animMap.end())
+        m_animMap.erase(name);
+
+    Animation newAnim;
+    newAnim.fps = fps;
+
+    for (const auto& entry : fs::directory_iterator(dirPath))
+    {
+        const std::string filePath = entry.path().string();
+
+        const std::shared_ptr<Texture> texPtr(new Texture());
+        if (!texPtr->loadFromFile(filePath))
+            continue;
+
+        const Frame frame{texPtr, texPtr->getRect()};
+        newAnim.frames.emplace_back(frame);
+    }
+
+    if (newAnim.frames.empty())
+        return false;
 
     m_animMap[name] = std::move(newAnim);
     m_currAnim = name;
@@ -55,17 +88,17 @@ bool AnimationController::setAnim(const std::string& name)
     return true;
 }
 
-const Frame& AnimationController::nextFrame(const double deltaTime)
+const Frame* AnimationController::nextFrame(const double deltaTime)
 {
-    Animation& currAnim = m_animMap.at(m_currAnim);
+    const Animation& currAnim = m_animMap.at(m_currAnim);
 
     if (m_paused)
-        return currAnim.frames.at(static_cast<int>(m_index));
+        return &currAnim.frames.at(static_cast<int>(m_index));
 
     m_index += deltaTime * currAnim.fps * m_playbackSpeed;
     m_index = fmod(m_index + static_cast<double>(currAnim.frames.size()), currAnim.frames.size());
 
-    return currAnim.frames.at(static_cast<int>(m_index));
+    return &currAnim.frames.at(static_cast<int>(m_index));
 }
 
 void AnimationController::rewind()

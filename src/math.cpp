@@ -134,7 +134,7 @@ Vec2 normalize(const Vec2& vec)
 
 Vec2 scaleToLength(const Vec2& vec, const double scalar)
 {
-    const Vec2 scaled = math::normalize(vec) * scalar;
+    const Vec2 scaled = normalize(vec) * scalar;
     return scaled;
 }
 
@@ -241,6 +241,12 @@ double angleBetween(const Vec2& a, const Vec2& b)
     const double denominator = a.getLength() * b.getLength();
 
     return (denominator == 0.0f) ? 0.0f : acos(numerator / denominator);
+}
+
+std::ostream& operator<<(std::ostream& os, const Vec2& vec)
+{
+    os << '(' << vec.x << ", " << vec.y << ')';
+    return os;
 }
 
 } // namespace math

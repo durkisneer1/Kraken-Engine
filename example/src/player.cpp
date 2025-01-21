@@ -1,5 +1,4 @@
 #include "Player.hpp"
-#include <algorithm>
 
 #define AxisX 0
 #define AxisY 1
@@ -7,8 +6,8 @@
 Player::Player(const kn::TileMap& tileMap)
     : rect(48, 120, 13, 16), collisionLayer(tileMap.getLayer("Wall"))
 {
-    animController.addAnim("idle", "../example/assets/player_idle.png", {13, 16}, 5);
-    animController.addAnim("walk", "../example/assets/player_walk.png", {13, 16}, 5);
+    animController.loadSpriteSheet("idle", "../example/assets/player_idle.png", {13, 16}, 5);
+    animController.loadSpriteSheet("walk", "../example/assets/player_walk.png", {13, 16}, 5);
 
     interactables = tileMap.getTileCollection({"Mirror", "Bed", "Desk"});
 }
@@ -50,10 +49,10 @@ void Player::update(const double dt)
         if (rect.collideRect(tile.collider))
             kn::draw::rect(tile.rect, kn::color::YELLOW, 1);
 
-    const kn::Frame frame = animController.nextFrame(dt);
+    const kn::Frame* frame = animController.nextFrame(dt);
 
-    frame.tex->flip.x = !facingRight;
-    kn::window::blit(*frame.tex, rect, frame.rect);
+    frame->tex->flip.x = !facingRight;
+    kn::window::blit(*frame->tex, rect, frame->rect);
 }
 
 void Player::handleCollision(const int axis)
@@ -64,19 +63,19 @@ void Player::handleCollision(const int axis)
             if (axis == AxisX)
             {
                 if (velocity.x > 0.0)
-                    rect.setRight(tile.rect.getLeft());
+                    rect.right(tile.rect.left());
                 else if (velocity.x < 0.0)
-                    rect.setLeft(tile.rect.getRight());
+                    rect.left(tile.rect.right());
             }
             else if (axis == AxisY)
             {
                 if (velocity.y > 0.0)
                 {
-                    rect.setBottom(tile.rect.getTop());
+                    rect.bottom(tile.rect.top());
                     onGround = true;
                 }
                 else if (velocity.y < 0.0)
-                    rect.setTop(tile.rect.getBottom());
+                    rect.top(tile.rect.bottom());
                 velocity.y = 0.0;
             }
             break;

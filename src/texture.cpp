@@ -15,6 +15,12 @@ Texture::~Texture()
 
 bool Texture::loadFromFile(const std::string& filePath)
 {
+    if (texture)
+    {
+        SDL_DestroyTexture(texture);
+        texture = nullptr;
+    }
+
     texture = IMG_LoadTexture(window::getRenderer(), filePath.c_str());
     if (!texture)
     {

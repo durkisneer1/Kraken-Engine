@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Constants.hpp"
+#include <cstdint>
 
 namespace kn
 {

@@ -4,9 +4,6 @@
 
 namespace kn::time
 {
-/**
- * @brief A class to keep track of time.
- */
 class Clock final
 {
   public:

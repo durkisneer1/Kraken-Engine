@@ -5,6 +5,7 @@
 int main()
 {
     kn::window::init({320, 180}, "Night Terror", 4);
+    kn::window::setFullscreen(false);
     kn::time::Clock clock;
     kn::camera = {-32, -26};
 
@@ -34,18 +35,20 @@ int main()
         }
     );
 
-    const kn::TileMap tileMap("../example/assets/room.tmx");
+    kn::TileMap tileMap;
+    tileMap.loadTMX("../example/assets/room.tmx");
 
     Player player(tileMap);
 
     kn::Event event;
     while (kn::window::isOpen())
     {
-        const double dt = clock.tick() / 1000.0;
+        const double dt = clock.tick(240) / 1000.0;
 
         while (kn::window::pollEvent(event))
-            if (event.type == kn::KEYDOWN && event.key.keysym.sym == SDLK_ESCAPE)
-                kn::window::close();
+            if (event.type == kn::KEYDOWN)
+                if (event.key.keysym.sym == kn::K_ESCAPE)
+                    kn::window::close();
 
         kn::window::clear(bgColor);
 

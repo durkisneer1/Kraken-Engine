@@ -8,8 +8,8 @@ AnimationController
 Description
 -----------
 
-The **AnimationController** class is used to control the playback of sprite sheet animations.
-It is used to pause and resume animations, get the current frame content, and switch between animations.
+The **AnimationController** class is used to control the playback of animations.
+It can pause and resume animations, get the current frame content, and switch between animations.
 
 What the AnimationController class does **NOT** do is provide a draw function.
 This design decision is to give users the flexibility to draw the current frame in a desired position and size.
@@ -22,9 +22,9 @@ Usage
     // Instantiate an AnimationController.
     kn::AnimationController animController;
 
-    // Load animations from sprite sheets where every frame is 16x16 pixels.
-    animController.addAnim("idle", "assets/idle.png", {16, 16}, 5);  // 5fps
-    animController.addAnim("walk", "assets/walk.png", {16, 16}, 10);  // 10fps
+    // Load animations from a sprite sheet where every frame is 16x16 pixels and a directory.
+    animController.loadSpriteSheet("idle", "assets/idle.png", {16, 16}, 5);  // 5fps
+    animController.loadFolder("walk", "assets/walk", 10);  // 10fps
 
     // Since the current animation set is the last one added,
     // we can switch to the first animation by name.
@@ -35,10 +35,10 @@ Usage
 
     // Using AnimationController::nextFrame is simple.
     // It returns the current frame texture, srcRect, and advances the animation.
-    const Frame frame = animController.nextFrame(deltaTime);
+    const kn::Frame* frame = animController.nextFrame(deltaTime);
 
     // Draw the current frame texture at position (50, 50) and size (16, 16).
-    kn::window::blit(*frame.tex, {50, 50, 16, 16}, frame.rect);
+    kn::window::blit(*frame->tex, {50, 50, 16, 16}, frame->rect);
 
 Members
 -------

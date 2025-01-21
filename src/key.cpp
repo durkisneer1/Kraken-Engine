@@ -1,5 +1,4 @@
 #include "Key.hpp"
-#include "Math.hpp"
 #include <SDL.h>
 
 namespace kn::key

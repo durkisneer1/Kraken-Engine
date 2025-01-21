@@ -11,19 +11,18 @@ using overflow::isSumValid;
 
 namespace math
 {
-
-/**
- * @brief Polar coordinate representation.
- */
 struct PolarCoordinate
 {
+    /**
+     * @brief The angle in degrees.
+     */
     double angle;
+    /**
+     * @brief The magnitude of the vector.
+     */
     double radius;
 };
 
-/**
- * @brief A 2D vector.
- */
 class Vec2
 {
   public:
@@ -156,7 +155,7 @@ class Vec2
     bool operator>=(const Vec2& other) const;
 
   protected:
-    double tolerance; //!< the accuracy with which comparisons are made
+    double tolerance; // the accuracy with which comparisons are made
 };
 
 /**
@@ -277,6 +276,8 @@ template <typename T> Vec2 operator*(const T& lhs, const Vec2& rhs)
 }
 
 template <typename T> Vec2 operator*(const Vec2& lhs, const T& rhs) { return rhs * lhs; }
+
+std::ostream& operator<<(std::ostream& os, const Vec2& vec);
 
 } // namespace math
 } // namespace kn

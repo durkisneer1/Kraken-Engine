@@ -7,52 +7,70 @@
 
 #include <pugixml.hpp>
 
-#include "Rect.hpp"
 #include "Texture.hpp"
 
 namespace kn
 {
 
 struct Layer;
+struct Group;
+struct Rect;
 
-/**
- * @brief Container for source and destination Rects
- */
 struct Tile
 {
+    /**
+     * @brief The layer the tile belongs to.
+     */
     std::shared_ptr<Layer> layer;
+    /**
+     * @brief The area of the tile in its tileset.
+     */
     Rect crop;
+    /**
+     * @brief The position of the tile in the tile map.
+     */
     Rect rect;
+    /**
+     * @brief An accurate bounding box for the tile.
+     */
     Rect collider;
+
+    bool horizontalFlip;
+    bool verticalFlip;
+    bool antiDiagonalFlip;
+    double angle;
 };
 
-/**
- * @brief Container for a layer of tiles
- */
 struct Layer
 {
+    /**
+     * @brief Whether the layer is visible when calling ``TileMap::drawMap``.
+     */
     bool isVisible;
+    /**
+     * @brief The name of the layer in the tmx file.
+     */
     std::string name;
+    /**
+     * @brief A collection of tiles that belong to the layer.
+     */
     std::vector<Tile> tiles;
 };
 
-/**
- * @brief Object that parses Tiled tmx files and contains tile map layers
- */
 class TileMap final
 {
   public:
+    TileMap() = default;
+    ~TileMap() = default;
+
     /**
      * @brief Load a Tiled tmx file.
      *
      * @param filePath The path to the Tiled tmx file.
      * @param borderSize The size of the border around the tiles.
-     * The border must be on all sides of the tiles
-     *
-     * @note It is recommended to have a border around the tiles to prevent texture bleeding.
+     * The border must be on all sides of the tiles.
      */
-    explicit TileMap(const std::string& filePath, int borderSize = 0);
-    ~TileMap();
+    [[maybe_unused]] bool loadTMX(const std::string& filePath, int borderSize = 0);
 
     /**
      * @brief Get a layer from the loaded tile map.
@@ -60,6 +78,11 @@ class TileMap final
      * @param name The name of the layer.
      */
     [[nodiscard]] const Layer* getLayer(const std::string& name) const;
+
+    /**
+     * @brief Get the names of the layers in the tile map.
+     */
+    [[nodiscard]] const std::vector<std::string>& getLayerNames() const;
 
     /**
      * @brief Draw a layer from the tile map.
@@ -74,7 +97,7 @@ class TileMap final
     void drawMap() const;
 
     /**
-     * @brief Get a collection of tiles from the tile map.
+     * @brief Get a collection of tiles from different layers of the tile map.
      *
      * @param layerNames The names of the layers to get tiles from.
      */
@@ -83,7 +106,7 @@ class TileMap final
 
   private:
     std::string dirPath;
-    Texture* texture = nullptr;
+    std::unique_ptr<Texture> tileSetTexture = nullptr;
 
     std::vector<std::string> layerNames;
     std::unordered_map<std::string, Layer> layerHash;

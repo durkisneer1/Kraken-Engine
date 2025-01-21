@@ -1,23 +1,30 @@
 TileMap
 =======
 
+.. warning::
+
+    This class is still in development and is subject to change at any time.
+
 Description
 -----------
 
 The **TileMap** class is used to load tile maps from a Tiled tmx file and render them.
 It also allows for getting a layer or a collection of tiles from one or more layers.
 
-What the TileMap class does **NOT** support at the moment is object type layers or rotated tiles.
-Multiple tile sets per tile map are not supported either.
+What the TileMap class does **NOT** support at the moment is the use of more than one tile set.
+
+.. note:: It is recommended to have a border around the tiles to prevent texture bleeding.
 
 Usage
 -----
 
 .. code-block:: cpp
 
-    // Load a tile map from a tmx file.
-    // The second argument is the border size around every tile in the tile set. (recommended)
-    kn::TileMap tileMap("assets/map.tmx", 1);
+    // Load a tile map from a tmx file where its tileset has a 1px border around each tile.
+    kn::TileMap tileMap;
+    if (!tileMap.loadTMX("assets/map.tmx", 1)) {
+        // Handle error.
+    }
 
     // Get the layer named "ground" from the tile map.
     const kn::Layer* groundLayer = tileMap.getLayer("ground");

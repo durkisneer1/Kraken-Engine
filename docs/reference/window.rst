@@ -9,11 +9,6 @@ It provides methods to draw onto the screen, get input events, and manage the wi
 
 You can find an example of window usage in the `Creating a Window <../getting_started/create_window.html>`_ guide.
 
-Variables
----------
-
-.. doxygenvariable:: kn::camera
-
 Functions
 ---------
 

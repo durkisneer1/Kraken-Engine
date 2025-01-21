@@ -11,23 +11,23 @@ namespace
 class MathTest : public TestBase
 {
   public:
-    MathTest() : TestBase() {}
-    virtual ~MathTest() override = default;
+    MathTest() = default;
+    ~MathTest() override = default;
 
   protected:
-    virtual void SetUp() override {}
-    virtual void TearDown() override {}
+    void SetUp() override {}
+    void TearDown() override {}
 
     static const double DOUBLE_INF;
-    static const float  FLOAT_INF;
+    static const float FLOAT_INF;
 };
 
 const double MathTest::DOUBLE_INF = std::numeric_limits<double>::infinity();
-const float MathTest::FLOAT_INF  = std::numeric_limits<float> ::infinity();
+const float MathTest::FLOAT_INF = std::numeric_limits<float>::infinity();
 
 TEST_F(MathTest, Vec2DefaultConstructor)
 {
-    Vec2 vec;
+    const Vec2 vec;
 
     EXPECT_EQ(vec.x, 0.0);
     EXPECT_EQ(vec.y, 0.0);
@@ -35,7 +35,7 @@ TEST_F(MathTest, Vec2DefaultConstructor)
 
 TEST_F(MathTest, Vec2TwoArgConstructor)
 {
-    Vec2 vec = Vec2(1.0, 2.0);
+    const Vec2 vec{1.0, 2.0};
 
     EXPECT_EQ(vec.x, 1.0);
     EXPECT_EQ(vec.y, 2.0);
@@ -43,10 +43,10 @@ TEST_F(MathTest, Vec2TwoArgConstructor)
 
 TEST_F(MathTest, EqualityOperator)
 {
-    Vec2 first = Vec2(1.0, 2.0);
-    Vec2 second = Vec2(1.0, 2.0);
-    Vec2 third = Vec2(2.0, 1.0);
-    Vec2 fourth = Vec2(1.0, 3.0);
+    const Vec2 first{1.0, 2.0};
+    const Vec2 second{1.0, 2.0};
+    const Vec2 third{2.0, 1.0};
+    const Vec2 fourth{1.0, 3.0};
 
     EXPECT_EQ(first, second);
     EXPECT_NE(first, third);
@@ -56,8 +56,8 @@ TEST_F(MathTest, EqualityOperator)
 
 TEST_F(MathTest, Vec2ThreeArgConstructor)
 {
-    Vec2 first = Vec2(1.0, 2.0, 0.5);
-    Vec2 second = Vec2(1.0, 1.60);
+    const Vec2 first{1.0, 2.0, 0.5};
+    const Vec2 second{1.0, 1.60};
 
     // tolerance of first is set to 0.5, which is super large
     // but that should make these appear equal when using first's
@@ -69,9 +69,9 @@ TEST_F(MathTest, Vec2ThreeArgConstructor)
 
 TEST_F(MathTest, AdditionOperator)
 {
-    Vec2 first = Vec2(1.0, 2.0);
-    Vec2 second = Vec2(-1.0, 2.0);
-    Vec2 third = Vec2(900.6, 322.5);
+    const Vec2 first{1.0, 2.0};
+    const Vec2 second{-1.0, 2.0};
+    const Vec2 third{900.6, 322.5};
 
     EXPECT_EQ(first + second, Vec2(0.0, 4.0));
     EXPECT_EQ(Vec2() + third, third);
@@ -80,9 +80,9 @@ TEST_F(MathTest, AdditionOperator)
 
 TEST_F(MathTest, MultiplyOperator)
 {
-    Vec2 first = Vec2(1.0, 2.0);
-    Vec2 second = Vec2(2.0, 4.0);
-    Vec2 third = Vec2(-1.0, -2.0);
+    const Vec2 first{1.0, 2.0};
+    const Vec2 second{2.0, 4.0};
+    const Vec2 third{-1.0, -2.0};
 
     EXPECT_EQ(2 * first, first * 2.0);
     EXPECT_EQ(2.0f * first, second);
@@ -94,7 +94,7 @@ TEST_F(MathTest, CopyConstructor)
 {
     // Copy constructor is not explicitly defined
     // and is defined by the compiler
-    Vec2 original = Vec2(1.0, 2.0);
+    Vec2 original{1.0, 2.0};
     Vec2 copy = original;
 
     EXPECT_EQ(original, copy);
@@ -105,10 +105,10 @@ TEST_F(MathTest, CopyConstructor)
 
 TEST_F(MathTest, GetLength)
 {
-    Vec2 first = Vec2();
-    Vec2 second = Vec2(3.0, 4.0);
-    Vec2 third = Vec2(FLOAT_INF, FLOAT_INF);
-    Vec2 fourth = Vec2(4.0, 3.0);
+    const Vec2 first;
+    const Vec2 second{3.0, 4.0};
+    const Vec2 third{FLOAT_INF, FLOAT_INF};
+    const Vec2 fourth{4.0, 3.0};
 
     EXPECT_EQ(first.getLength(), 0.0);
     EXPECT_EQ(second.getLength(), 5.0);
@@ -118,9 +118,9 @@ TEST_F(MathTest, GetLength)
 
 TEST_F(MathTest, Normalize)
 {
-    Vec2 first = Vec2();
-    Vec2 second = Vec2(3.0, 4.0);
-    Vec2 third = Vec2(DOUBLE_INF, DOUBLE_INF);
+    Vec2 first;
+    Vec2 second{3.0, 4.0};
+    Vec2 third{DOUBLE_INF, DOUBLE_INF};
 
     EXPECT_EQ(first.normalize(), false);
     EXPECT_EQ(first, Vec2());

@@ -19,7 +19,7 @@ void rect(const Rect& rect, const Color& color, const int thickness)
     if (thickness == 0 || thickness > halfWidth || thickness > halfHeight)
     {
         Rect offsetRect = rect;
-        offsetRect.setTopLeft(offsetRect.getTopLeft() - camera);
+        offsetRect.topLeft(offsetRect.topLeft() - camera);
         SDL_RenderFillRectF(window::getRenderer(), &offsetRect);
         return;
     }

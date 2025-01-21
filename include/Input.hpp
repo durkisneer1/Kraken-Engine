@@ -16,10 +16,6 @@ enum class InputType
     CONTROLLER_BUTTON
 };
 
-/**
- * @brief An input action.
- * Can either be a keyboard key, a mouse button, a controller button or a controller joystick.
- */
 struct InputAction
 {
     InputType type;
@@ -36,22 +32,30 @@ struct InputAction
     };
 
     /**
+     * @brief Construct a new keyboard input action.
+     *
      * @param key The keyboard key.
      */
     explicit InputAction(Scancode key);
 
     /**
+     * @brief Construct a new controller axis input action.
+     *
      * @param axis The controller axis.
      * @param isPositive Whether the axis is positive or negative.
      */
     InputAction(ControllerAxis axis, bool isPositive);
 
     /**
+     * @brief Construct a new controller button input action.
+     *
      * @param controllerButton The controller button.
      */
     explicit InputAction(ControllerButton controllerButton);
 
     /**
+     * @brief Construct a new mouse input action.
+     *
      * @param mouseButton The mouse button.
      */
     explicit InputAction(int mouseButton);
