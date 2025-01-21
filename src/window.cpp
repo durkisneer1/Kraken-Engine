@@ -249,14 +249,6 @@ SDL_Renderer* getRenderer()
     return _renderer;
 }
 
-bool getFullscreen()
-{
-    if (!_window)
-        WARN("Cannot get fullscreen before creating the window")
-
-    return SDL_GetWindowFlags(_window) & SDL_WINDOW_FULLSCREEN;
-}
-
 int getScale()
 {
     if (!_window)
@@ -299,9 +291,23 @@ std::string getTitle()
 void setFullscreen(const bool fullscreen)
 {
     if (!_window)
+    {
         WARN("Cannot set fullscreen before creating the window")
+        return;
+    }
 
-    SDL_SetWindowFullscreen(_window, fullscreen ? SDL_WINDOW_FULLSCREEN : 0);
+    SDL_SetWindowFullscreen(_window, fullscreen ? SDL_WINDOW_FULLSCREEN_DESKTOP : 0);
+}
+
+bool getFullscreen()
+{
+    if (!_window)
+    {
+        WARN("Cannot get fullscreen before creating the window")
+        return false;
+    }
+
+    return SDL_GetWindowFlags(_window) & SDL_WINDOW_FULLSCREEN_DESKTOP;
 }
 
 math::Vec2 getSize()
