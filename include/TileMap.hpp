@@ -61,7 +61,7 @@ class TileMap final
 {
   public:
     TileMap() = default;
-    ~TileMap();
+    ~TileMap() = default;
 
     /**
      * @brief Load a Tiled tmx file.
@@ -106,7 +106,7 @@ class TileMap final
 
   private:
     std::string dirPath;
-    Texture* tileSetTexture = nullptr;
+    std::unique_ptr<Texture> tileSetTexture = nullptr;
 
     std::vector<std::string> layerNames;
     std::unordered_map<std::string, Layer> layerHash;

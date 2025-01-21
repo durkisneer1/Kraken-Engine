@@ -31,20 +31,16 @@ bool TileMap::loadTMX(const std::string& filePath, const int borderSize)
         return false;
     }
 
-    if (tileSetTexture)
-        this->~TileMap();
-    tileSetTexture = new Texture();
     if (!tileSetTexture->loadFromFile(texturePath))
-    {
-        this->~TileMap();
         return false;
-    }
+
     SDL_Surface* surface = IMG_Load(texturePath.c_str());
 
     const int mapWidth = std::stoi(map.attribute("width").value());
     const int tileWidth = std::stoi(map.attribute("tilewidth").value());
     const int tileHeight = std::stoi(map.attribute("tileheight").value());
-    const int tileSetWidth = static_cast<int>(tileSetTexture->getSize().x) / (tileWidth + 2 * borderSize);
+    const int tileSetWidth =
+        static_cast<int>(tileSetTexture->getSize().x) / (tileWidth + 2 * borderSize);
 
     if (!layerNames.empty())
         layerNames.clear();
@@ -109,12 +105,9 @@ bool TileMap::loadTMX(const std::string& filePath, const int borderSize)
                 const Rect tileSrcRect = {srcX, srcY, tileWidth, tileHeight};
                 const Rect tileDstRect = {destX, destY, tileWidth, tileHeight};
 
-                tiles.emplace_back(
-                    Tile{
-                        layerPtr, tileSrcRect, tileDstRect, getFittedRect(surface, tileSrcRect, tileDstRect.topLeft()),
-                        horizontalFlip, verticalFlip, antiDiagonalFlip, 0.0
-                    }
-                );
+                tiles.emplace_back(Tile{layerPtr, tileSrcRect, tileDstRect,
+                                        getFittedRect(surface, tileSrcRect, tileDstRect.topLeft()),
+                                        horizontalFlip, verticalFlip, antiDiagonalFlip, 0.0});
 
                 tileCounter++;
             }
@@ -162,14 +155,13 @@ bool TileMap::loadTMX(const std::string& filePath, const int borderSize)
                     objectDstRect.bottomRight({destX, destY});
                     break;
                 default:
-                    objectDstRect.bottomLeft({destX, destY});  // 0 degrees
+                    objectDstRect.bottomLeft({destX, destY}); // 0 degrees
                 }
 
                 objects.emplace_back(
                     Tile{layerPtr, objectSrcRect, objectDstRect,
-                        getFittedRect(surface, objectSrcRect, objectDstRect.topLeft()),
-                        horizontalFlip, verticalFlip, false, static_cast<double>(angle)}
-                    );
+                         getFittedRect(surface, objectSrcRect, objectDstRect.topLeft()),
+                         horizontalFlip, verticalFlip, false, static_cast<double>(angle)});
             }
 
             layerHash.at(layerName).tiles = std::move(objects);
@@ -179,12 +171,6 @@ bool TileMap::loadTMX(const std::string& filePath, const int borderSize)
     SDL_FreeSurface(surface);
 
     return true;
-}
-
-TileMap::~TileMap()
-{
-    delete tileSetTexture;
-    tileSetTexture = nullptr;
 }
 
 void TileMap::drawMap() const
@@ -205,7 +191,7 @@ std::string TileMap::getTexturePath(const pugi::xml_node& map)
         return "";
     }
 
-    tileSetTexture = new Texture();
+    tileSetTexture = std::make_unique<Texture>();
     const auto texDir = dirPath + doc.child("tileset").child("image").attribute("source").value();
     return texDir;
 }
@@ -218,10 +204,7 @@ const Layer* TileMap::getLayer(const std::string& name) const
     return nullptr;
 }
 
-const std::vector<std::string>& TileMap::getLayerNames() const
-{
-    return layerNames;
-}
+const std::vector<std::string>& TileMap::getLayerNames() const { return layerNames; }
 
 void TileMap::drawLayer(const std::string& name) const
 {
