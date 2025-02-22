@@ -56,6 +56,17 @@ class Texture final
      */
     Texture(const math::Vec2& size, Color color);
 
+    /**
+     * @brief Load a texture from an array of pixel data.
+     *
+     * @param pixelData The pixel data.
+     * @param size The size of the texture.
+     * @param depth The depth of the pixel data.
+     *
+     * @note If the pixel data fails to load, a `kn::Exception` will be thrown.
+     */
+    Texture(const void* pixelData, const math::Vec2& size, int depth = 32);
+
     Texture() = default;
     ~Texture();
 
@@ -75,6 +86,18 @@ class Texture final
      * @param color The color of the texture.
      */
     [[maybe_unused]] bool create(const math::Vec2& size, Color color);
+
+    /**
+     * @brief Load a texture from an array of pixel data.
+     *
+     * @param pixelData The pixel data.
+     * @param size The size of the texture.
+     * @param depth The depth of the pixel data.
+     *
+     * @return ``true`` when successful, ``false`` on failure.
+     */
+    [[maybe_unused]] bool loadFromArray(const void* pixelData, const math::Vec2& size,
+                                        int depth = 32);
 
     /**
      * @brief Get the size of the texture.

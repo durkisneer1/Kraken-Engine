@@ -17,10 +17,7 @@ Usage
 .. code-block:: cpp
 
     // Create a Sound object from an audio file.
-    kn::Sound sfx;
-    if (!sfx.loadFromFile("assets/sfx.ogg")) {
-        // Handle error
-    }
+    kn::Sound sfx("assets/sfx.ogg");
 
     // Set the volume of the sound to 50%.
     sfx.setVolume(0.5f);

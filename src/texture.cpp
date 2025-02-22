@@ -18,6 +18,14 @@ Texture::Texture(const math::Vec2& size, const Color color)
         throw Exception("Failed to create texture");
 }
 
+Texture::Texture(const void* pixelData, const math::Vec2& size, int depth)
+{
+    if (!loadFromArray(pixelData, size, depth))
+        throw Exception("Failed to load texture from pixel data");
+}
+
+Texture::Texture(SDL_Texture* sdlTexture) : texture(sdlTexture) { query(); }
+
 Texture::~Texture()
 {
     if (texture)
@@ -77,7 +85,33 @@ bool Texture::create(const math::Vec2& size, const Color color)
     return true;
 }
 
-Texture::Texture(SDL_Texture* sdlTexture) : texture(sdlTexture) { query(); }
+bool Texture::loadFromArray(const void* pixelData, const math::Vec2& size, int depth)
+{
+    if (texture)
+    {
+        SDL_DestroyTexture(texture);
+        texture = nullptr;
+    }
+
+    texture =
+        SDL_CreateTexture(window::getRenderer(), SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_STATIC,
+                          static_cast<int>(size.x), static_cast<int>(size.y));
+    if (!texture)
+    {
+        WARN("Failed to create texture from pixel data");
+        return false;
+    }
+
+    if (SDL_UpdateTexture(texture, nullptr, pixelData, size.x * depth / 8) != 0)
+    {
+        WARN("Failed to update texture with pixel data");
+        return false;
+    }
+
+    query();
+
+    return true;
+}
 
 void Texture::query()
 {
