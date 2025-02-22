@@ -35,7 +35,7 @@ if get_option('build_example')
         'krakenapp',
         sources : example_src,
         include_directories : [incs, include_directories('example/include')],
-        dependencies : deps + [kraken_engine_dep],
+        dependencies : deps + kraken_engine_dep,
         win_subsystem : 'console',
         link_with : libkraken,
     )

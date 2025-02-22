@@ -4,10 +4,11 @@
 #include <ctime>
 #include <fstream>
 #include <iostream>
+#include <stdexcept>
 #include <string>
 #include <utility>
 
-/**
+/*
  * LOG_LEVELS
  * TRACE >= 1
  * DEBUG >= 2
@@ -18,10 +19,16 @@
 
 namespace kn
 {
-/**
- * @brief Singleton class for logging errors to file (or if file handling fails, console)
+class Exception final : public std::runtime_error
+{
+  public:
+    using std::runtime_error::runtime_error;
+};
+
+/*
+ * Singleton class for logging errors to file (or if file handling fails, console)
  *
- * @warning This class will go from being a singleton to a static namespace in the future
+ * FIXME: Turn singleton to a static namespace
  */
 class ErrorLogger
 {

@@ -96,7 +96,8 @@ const Frame* AnimationController::nextFrame(const double deltaTime)
         return &currAnim.frames.at(static_cast<int>(m_index));
 
     m_index += deltaTime * currAnim.fps * m_playbackSpeed;
-    m_index = fmod(m_index + static_cast<double>(currAnim.frames.size()), currAnim.frames.size());
+    const auto frameCount = static_cast<double>(currAnim.frames.size());
+    m_index = fmod(m_index + frameCount, frameCount);
 
     return &currAnim.frames.at(static_cast<int>(m_index));
 }

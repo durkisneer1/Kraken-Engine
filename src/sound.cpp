@@ -6,6 +6,12 @@
 
 namespace kn
 {
+Sound::Sound(const std::string& fileDir)
+{
+    if (!loadFromFile(fileDir))
+        throw Exception("Failed to load sound: " + fileDir);
+}
+
 Sound::~Sound()
 {
     if (m_sound)

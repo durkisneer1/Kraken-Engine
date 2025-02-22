@@ -30,16 +30,6 @@ class Texture final
         bool y = false;
     } flip;
 
-    Texture() = default;
-
-    /**
-     * @brief Create a solid color texture.
-     *
-     * @param size The size of the texture.
-     * @param color The color of the texture.
-     */
-    Texture(const math::Vec2& size, Color color);
-
     /**
      * @brief Create a texture from an existing SDL texture pointer.
      *
@@ -49,6 +39,24 @@ class Texture final
      */
     explicit Texture(SDL_Texture* sdlTexture);
 
+    /**
+     * @brief Loads an image from disk.
+     *
+     * @param filePath Path to the image file.
+     *
+     * @note If the image file fails to load, a `kn::Exception` will be thrown.
+     */
+    explicit Texture(const std::string& filePath);
+
+    /**
+     * @brief Create a solid color texture.
+     *
+     * @param size The size of the texture.
+     * @param color The color of the texture.
+     */
+    Texture(const math::Vec2& size, Color color);
+
+    Texture() = default;
     ~Texture();
 
     /**
@@ -59,6 +67,14 @@ class Texture final
      * @return ``true`` when successful, ``false`` on failure.
      */
     [[maybe_unused]] bool loadFromFile(const std::string& filePath);
+
+    /**
+     * @brief Create a solid color texture.
+     *
+     * @param size The size of the texture.
+     * @param color The color of the texture.
+     */
+    [[maybe_unused]] bool create(const math::Vec2& size, Color color);
 
     /**
      * @brief Get the size of the texture.
