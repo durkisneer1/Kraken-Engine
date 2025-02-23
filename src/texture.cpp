@@ -60,8 +60,9 @@ bool Texture::create(const math::Vec2& size, const Color color)
         texture = nullptr;
     }
 
-    SDL_Surface* surface =
-        SDL_CreateRGBSurface(0, static_cast<int>(size.x), static_cast<int>(size.y), 32, 0, 0, 0, 0);
+    SDL_Surface* surface = SDL_CreateRGBSurfaceWithFormat(
+        0, static_cast<int>(size.x), static_cast<int>(size.y), 32, SDL_PIXELFORMAT_RGBA8888);
+
     if (!surface)
     {
         WARN("Failed to create surface")
@@ -71,7 +72,16 @@ bool Texture::create(const math::Vec2& size, const Color color)
     SDL_FillRect(surface, nullptr,
                  SDL_MapRGBA(surface->format, color.r, color.g, color.b, color.a));
 
-    texture = SDL_CreateTextureFromSurface(window::getRenderer(), surface);
+    if (color.a == 255)
+    {
+        texture = SDL_CreateTextureFromSurface(window::getRenderer(), surface);
+    }
+    else
+    {
+        texture = SDL_CreateTextureFromSurface(window::getRenderer(), surface);
+        SDL_SetTextureBlendMode(texture, SDL_BLENDMODE_BLEND);
+    }
+
     if (!texture)
     {
         WARN("Failed to create texture from surface");
@@ -93,9 +103,25 @@ bool Texture::loadFromArray(const void* pixelData, const math::Vec2& size, int d
         texture = nullptr;
     }
 
-    texture =
-        SDL_CreateTexture(window::getRenderer(), SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_STATIC,
-                          static_cast<int>(size.x), static_cast<int>(size.y));
+    if (depth == 32)
+    {
+        texture = SDL_CreateTexture(window::getRenderer(), SDL_PIXELFORMAT_RGBA8888,
+                                    SDL_TEXTUREACCESS_STATIC, static_cast<int>(size.x),
+                                    static_cast<int>(size.y));
+        SDL_SetTextureBlendMode(texture, SDL_BLENDMODE_BLEND);
+    }
+    else if (depth == 24)
+    {
+        texture = SDL_CreateTexture(window::getRenderer(), SDL_PIXELFORMAT_RGB24,
+                                    SDL_TEXTUREACCESS_STATIC, static_cast<int>(size.x),
+                                    static_cast<int>(size.y));
+    }
+    else
+    {
+        WARN("Unsupported pixel depth: " + std::to_string(depth));
+        return false;
+    }
+
     if (!texture)
     {
         WARN("Failed to create texture from pixel data");

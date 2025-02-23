@@ -74,7 +74,8 @@ bool init(const math::Vec2& resolution, const std::string& title, const int scal
         SDL_RenderSetLogicalSize(_renderer, resolutionWidth, resolutionHeight);
 
     setTitle(title);
-    setIcon("../example/assets/kraken_engine_window_icon.png");
+    // setIcon("../example/assets/kraken_engine_window_icon.png");
+    SDL_SetRenderDrawBlendMode(_renderer, SDL_BLENDMODE_BLEND);
 
     _isOpen = true;
 
