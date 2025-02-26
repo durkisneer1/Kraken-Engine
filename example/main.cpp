@@ -8,10 +8,11 @@ int main()
     kn::window::init({320, 180}, "Night Terror", 4);
     kn::window::setFullscreen(true);
     kn::time::Clock clock;
-    kn::camera = {-32, -26};
+    kn::camera::pos({128, 64});
 
     constexpr kn::Color bgColor = {21, 18, 37, 255};
 
+    // Bind input actions
     kn::input::bind(
         "left",
         {
@@ -37,37 +38,29 @@ int main()
     );
 
     kn::TileMap tileMap("../example/assets/room.tmx");
-
     Player player(tileMap);
 
-    const int width = 100;
-    const int height = 100;
+    // Generate static animation with a random grayscale noise texture
+    const int width = 320;
+    const int height = 180;
     Uint32 rgbArray[width * height];
-    for (int i = 0; i < width * height; ++i)
-    {
-        Uint8 r = rand() % 256;
-        Uint8 g = rand() % 256;
-        Uint8 b = rand() % 256;
-        Uint8 a = 50;
-        // Combine channels into a single 32-bit value
-        rgbArray[i] = (r << 24) | (g << 16) | (b << 8) | a;
-    }
-    kn::Texture randTex(rgbArray, {width, height});
 
-    for (int i = 0; i < width * height; ++i)
+    kn::AnimationController staticAnimation;
+    std::vector<std::shared_ptr<kn::Texture>> staticFrames;
+    const Uint8 a = 4;
+    for (int i = 0; i < 10; ++i)  // 10 anim frames
     {
-        Uint8 r = rand() % 256;
-        Uint8 g = r;
-        Uint8 b = g;
-        Uint8 a = 255;
-        // Combine channels into a single 32-bit value
-        rgbArray[i] = (r << 24) | (g << 16) | (b << 8) | a;
+        for (int j = 0; j < width * height; ++j)
+        {
+            const Uint8 value = rand() % 256;
+            rgbArray[j] = (value << 24) | (value << 16) | (value << 8) | a;
+        }
+        staticFrames.push_back(std::make_shared<kn::Texture>(rgbArray, kn::math::Vec2{width, height}));
     }
-    kn::Texture randTex2(rgbArray, {width, height});
-
-    kn::Rect testRect = {0, 0, 100, 100};
+    staticAnimation.loadTextures("static", staticFrames, 10);
 
     kn::Event event;
+    float rotation = 0.0f;
     while (kn::window::isOpen())
     {
         const double dt = clock.tick(240) / 1000.0;
@@ -79,17 +72,21 @@ int main()
                 if (event.key.keysym.sym == kn::K_ESCAPE)
                     kn::window::close();
             }
+            else if (event.type == kn::MOUSEWHEEL)
+            {
+                rotation += event.wheel.y * 5.0f;
+                kn::camera::rot(rotation);
+            }
         }
 
         kn::window::clear(bgColor);
-        kn::window::blit(randTex);
-        kn::window::blit(randTex2, {100, 0});
 
-        // tileMap.drawMap();
-        // player.update(dt);
+        tileMap.drawMap();
+        player.update(dt);
 
-        testRect.center(kn::mouse::getPos());
-        kn::draw::rect(testRect, {255, 0, 0, 50});
+        const kn::Frame* frame = staticAnimation.nextFrame(dt);
+        frame->tex->angle = -rotation;  // stabilize the noise texture
+        kn::window::blit(*frame->tex, kn::camera::pos());
 
         kn::window::flip();
     }

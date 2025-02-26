@@ -122,7 +122,8 @@ class Vec2
 
     template <typename T> Vec2& operator*=(T scalar)
     {
-        if (!isProductValid(x, scalar) || !isProductValid(y, scalar))
+        if (!isProductValid(x, static_cast<double>(scalar)) ||
+            !isProductValid(y, static_cast<double>(scalar)))
         {
             WARN("Multiplication would result in overflow")
             return *this;
@@ -137,6 +138,8 @@ class Vec2
     Vec2 operator+(const Vec2& other) const;
 
     Vec2 operator-(const Vec2& other) const;
+
+    Vec2 operator-() const;
 
     Vec2& operator+=(const Vec2& other);
 

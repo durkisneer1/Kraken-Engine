@@ -1,5 +1,6 @@
 sources = [
     'src/animation_controller.cpp',
+    'src/camera.cpp',
     'src/draw.cpp',
     'src/font.cpp',
     'src/game_controller.cpp',

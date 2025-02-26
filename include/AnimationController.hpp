@@ -2,6 +2,7 @@
 
 #include "Rect.hpp"
 #include "Texture.hpp"
+
 #include <memory>
 #include <unordered_map>
 #include <vector>
@@ -61,6 +62,32 @@ class AnimationController final
      * @return ``true`` if the setup was successful, ``false`` otherwise.
      **/
     [[maybe_unused]] bool loadFolder(const std::string& name, const std::string& dirPath, int fps);
+
+    /**
+     * @brief Load an existing texture sprite sheet as an animation.
+     *
+     * @param name The name of the animation.
+     * @param tex A shared pointer to the texture to use.
+     * @param frameSize The size of the frame.
+     * @param fps The frame rate of the animation.
+     *
+     * @return ``true`` if the setup was successful, ``false`` otherwise.
+     */
+    [[maybe_unused]] bool loadTexture(const std::string& name, const std::shared_ptr<Texture>& tex,
+                                      const math::Vec2& frameSize, int fps);
+
+    /**
+     * @brief Load a collection of textures as an animation.
+     *
+     * @param name The name of the animation.
+     * @param textures A vector of shared pointers to textures.
+     * @param fps The frame rate of the animation.
+     *
+     * @return ``true`` if the setup was successful, ``false`` otherwise.
+     */
+    [[maybe_unused]] bool loadTextures(const std::string& name,
+                                       const std::vector<std::shared_ptr<Texture>>& textures,
+                                       int fps);
 
     /**
      * @brief Remove an animation from the controller.

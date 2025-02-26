@@ -74,20 +74,20 @@ math::Vec2 getDirection(const std::string& left, const std::string& right, const
                 if (action.type == InputType::CONTROLLER_AXIS)
                 {
                     if (action.controllerAxis.axis == C_AXIS_LEFTX &&
-                        (action.controllerAxis.isPositive && leftJoystick.x > 0.0 ||
-                         !action.controllerAxis.isPositive && leftJoystick.x < 0.0))
+                        ((action.controllerAxis.isPositive && leftJoystick.x > 0.0) ||
+                         (!action.controllerAxis.isPositive && leftJoystick.x < 0.0)))
                         axisValue += leftJoystick.x;
                     if (action.controllerAxis.axis == C_AXIS_LEFTY &&
-                        (action.controllerAxis.isPositive && leftJoystick.y > 0.0 ||
-                         !action.controllerAxis.isPositive && leftJoystick.y < 0.0))
+                        ((action.controllerAxis.isPositive && leftJoystick.y > 0.0) ||
+                         (!action.controllerAxis.isPositive && leftJoystick.y < 0.0)))
                         axisValue += leftJoystick.y;
                     if (action.controllerAxis.axis == C_AXIS_RIGHTX &&
-                        (action.controllerAxis.isPositive && rightJoystick.x > 0.0 ||
-                         !action.controllerAxis.isPositive && rightJoystick.x < 0.0))
+                        ((action.controllerAxis.isPositive && rightJoystick.x > 0.0) ||
+                         (!action.controllerAxis.isPositive && rightJoystick.x < 0.0)))
                         axisValue += rightJoystick.x;
                     if (action.controllerAxis.axis == C_AXIS_RIGHTY &&
-                        (action.controllerAxis.isPositive && rightJoystick.y > 0.0 ||
-                         !action.controllerAxis.isPositive && rightJoystick.y < 0.0))
+                        ((action.controllerAxis.isPositive && rightJoystick.y > 0.0) ||
+                         (!action.controllerAxis.isPositive && rightJoystick.y < 0.0)))
                         axisValue += rightJoystick.y;
                 }
             }

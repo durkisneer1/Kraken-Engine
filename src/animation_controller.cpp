@@ -2,7 +2,9 @@
 #include "ErrorLogger.hpp"
 #include "Math.hpp"
 
+#include <cmath>
 #include <filesystem>
+
 namespace fs = std::filesystem;
 
 namespace kn
@@ -37,6 +39,9 @@ bool AnimationController::loadSpriteSheet(const std::string& name, const std::st
             newAnim.frames.emplace_back(frame);
         }
 
+    if (newAnim.frames.empty())
+        return false;
+
     m_animMap[name] = std::move(newAnim);
     m_currAnim = name;
 
@@ -61,6 +66,65 @@ bool AnimationController::loadFolder(const std::string& name, const std::string&
             continue;
 
         const Frame frame{texPtr, texPtr->getRect()};
+        newAnim.frames.emplace_back(frame);
+    }
+
+    if (newAnim.frames.empty())
+        return false;
+
+    m_animMap[name] = std::move(newAnim);
+    m_currAnim = name;
+
+    return true;
+}
+
+bool AnimationController::loadTexture(const std::string& name, const std::shared_ptr<Texture>& tex,
+                                      const math::Vec2& frameSize, const int fps)
+{
+    const math::Vec2 size = tex->getSize();
+    const int frameWidth = static_cast<int>(frameSize.x);
+    const int frameHeight = static_cast<int>(frameSize.y);
+
+    if (static_cast<int>(size.x) % frameWidth || static_cast<int>(size.y) % frameHeight)
+    {
+        ERROR("Sprite sheet dimensions are not divisible by frame dimensions");
+        return false;
+    }
+
+    if (m_animMap.find(name) != m_animMap.end())
+        m_animMap.erase(name);
+
+    Animation newAnim;
+    newAnim.fps = fps;
+    for (int y = 0; y < size.y; y += frameHeight)
+        for (int x = 0; x < size.x; x += frameWidth)
+        {
+            const Frame frame{tex, {x, y, frameWidth, frameHeight}};
+            newAnim.frames.emplace_back(frame);
+        }
+
+    if (newAnim.frames.empty())
+        return false;
+
+    m_animMap[name] = std::move(newAnim);
+    m_currAnim = name;
+
+    return true;
+}
+
+bool AnimationController::loadTextures(const std::string& name,
+                                       const std::vector<std::shared_ptr<Texture>>& textures,
+                                       const int fps)
+{
+    if (m_animMap.find(name) != m_animMap.end())
+        m_animMap.erase(name);
+
+    Animation newAnim;
+    newAnim.fps = fps;
+
+    for (const auto& tex : textures)
+    {
+        const Frame frame{tex, tex->getRect()};
         newAnim.frames.emplace_back(frame);
     }
 

@@ -2,6 +2,7 @@
 #include <SDL_mixer.h>
 #include <SDL_ttf.h>
 
+#include "Camera.hpp"
 #include "ErrorLogger.hpp"
 #include "Math.hpp"
 #include "Music.hpp"
@@ -164,10 +165,10 @@ void flip()
 void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
 {
     if (!_renderer)
+    {
         WARN("Cannot blit before creating the window")
-
-    if (dstRect.bottomRight() < camera || dstRect.topLeft() > getSize() + camera)
         return;
+    }
 
     SDL_RendererFlip flipAxis = SDL_FLIP_NONE;
     if (texture.flip.x)
@@ -175,30 +176,39 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
     if (texture.flip.y)
         flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_VERTICAL);
 
-    Rect offsetRect = dstRect;
-    offsetRect.topLeft(offsetRect.topLeft() - camera);
+    const math::Vec2 worldCenter = dstRect.center();
+    const math::Vec2 screenCenter = camera::worldToScreen(worldCenter);
 
-    if (srcRect.size() == math::Vec2())
+    Rect finalRect;
+    finalRect.size(dstRect.size());
+    finalRect.center(screenCenter);
+
+    const float finalAngle = texture.angle + kn::camera::rot();
+
+    SDL_FPoint pivot;
+    pivot.x = finalRect.w / 2.0;
+    pivot.y = finalRect.h / 2.0;
+
+    SDL_Rect src;
+    SDL_Rect* pSrc = nullptr;
+    if (srcRect.size() != math::Vec2())
     {
-        SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &offsetRect, texture.angle,
-                          nullptr, flipAxis);
-        return;
+        src = {static_cast<int>(srcRect.x), static_cast<int>(srcRect.y),
+               static_cast<int>(srcRect.w), static_cast<int>(srcRect.h)};
+        pSrc = &src;
     }
 
-    const SDL_Rect src = {static_cast<int>(srcRect.x), static_cast<int>(srcRect.y),
-                          static_cast<int>(srcRect.w), static_cast<int>(srcRect.h)};
-
-    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), &src, &offsetRect, texture.angle, nullptr,
+    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), pSrc, &finalRect, finalAngle, &pivot,
                       flipAxis);
 }
 
 void blit(const Texture& texture, const math::Vec2& position, const Anchor anchor)
 {
     if (!_renderer)
-        WARN("Cannot blit before creating the window")
-
-    if (texture.getSize() + position < camera || position > getSize() + camera)
+    {
+        WARN("Cannot blit before creating the window");
         return;
+    }
 
     SDL_RendererFlip flipAxis = SDL_FLIP_NONE;
     if (texture.flip.x)
@@ -206,39 +216,83 @@ void blit(const Texture& texture, const math::Vec2& position, const Anchor ancho
     if (texture.flip.y)
         flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_VERTICAL);
 
+    const math::Vec2 screenPos = camera::worldToScreen(position);
     Rect rect = texture.getRect();
     switch (anchor)
     {
     case TOP_LEFT:
-        rect.topLeft(position - camera);
+        rect.topLeft(screenPos);
         break;
     case TOP_MID:
-        rect.topMid(position - camera);
+        rect.topMid(screenPos);
         break;
     case TOP_RIGHT:
-        rect.topRight(position - camera);
+        rect.topRight(screenPos);
         break;
     case LEFT_MID:
-        rect.leftMid(position - camera);
+        rect.leftMid(screenPos);
         break;
     case CENTER:
-        rect.center(position - camera);
+        rect.center(screenPos);
         break;
     case RIGHT_MID:
-        rect.rightMid(position - camera);
+        rect.rightMid(screenPos);
         break;
     case BOTTOM_LEFT:
-        rect.bottomLeft(position - camera);
+        rect.bottomLeft(screenPos);
         break;
     case BOTTOM_MID:
-        rect.bottomMid(position - camera);
+        rect.bottomMid(screenPos);
         break;
     case BOTTOM_RIGHT:
-        rect.bottomRight(position - camera);
+        rect.bottomRight(screenPos);
         break;
     }
 
-    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &rect, texture.angle, nullptr,
+    SDL_FPoint pivot;
+    switch (anchor)
+    {
+    case TOP_LEFT:
+        pivot.x = 0.0f;
+        pivot.y = 0.0f;
+        break;
+    case TOP_MID:
+        pivot.x = rect.w * 0.5;
+        pivot.y = 0.0f;
+        break;
+    case TOP_RIGHT:
+        pivot.x = rect.w;
+        pivot.y = 0.0f;
+        break;
+    case LEFT_MID:
+        pivot.x = 0.0f;
+        pivot.y = rect.h * 0.5;
+        break;
+    case CENTER:
+        pivot.x = rect.w * 0.5;
+        pivot.y = rect.h * 0.5;
+        break;
+    case RIGHT_MID:
+        pivot.x = rect.w;
+        pivot.y = rect.h * 0.5;
+        break;
+    case BOTTOM_LEFT:
+        pivot.x = 0.0f;
+        pivot.y = rect.h;
+        break;
+    case BOTTOM_MID:
+        pivot.x = rect.w * 0.5;
+        pivot.y = rect.h;
+        break;
+    case BOTTOM_RIGHT:
+        pivot.x = rect.w;
+        pivot.y = rect.h;
+        break;
+    }
+
+    const float finalAngle = texture.angle + camera::rot();
+
+    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &rect, finalAngle, &pivot,
                       flipAxis);
 }
 
