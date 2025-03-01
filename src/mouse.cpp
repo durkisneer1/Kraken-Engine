@@ -1,5 +1,4 @@
 #include "Mouse.hpp"
-#include "Camera.hpp"
 #include "Math.hpp"
 #include "Window.hpp"
 
@@ -10,7 +9,7 @@ math::Vec2 getPos()
     int x, y;
     SDL_GetMouseState(&x, &y);
     const math::Vec2 pos{x, y};
-    return pos / window::getScale() + camera::pos();
+    return pos / window::getScale() + camera;
 }
 
 math::Vec2 getRel()

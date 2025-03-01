@@ -3,7 +3,6 @@
 #define SDL_MAIN_HANDLED
 
 #include "AnimationController.hpp"
-#include "Camera.hpp"
 #include "Constants.hpp"
 #include "Draw.hpp"
 #include "Font.hpp"

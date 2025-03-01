@@ -2,7 +2,6 @@
 #include <SDL_mixer.h>
 #include <SDL_ttf.h>
 
-#include "Camera.hpp"
 #include "ErrorLogger.hpp"
 #include "Math.hpp"
 #include "Music.hpp"
@@ -170,35 +169,34 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
         return;
     }
 
+    if (dstRect.bottomRight() < camera || dstRect.topLeft() > getSize() + camera)
+        return;
+
     SDL_RendererFlip flipAxis = SDL_FLIP_NONE;
     if (texture.flip.x)
         flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_HORIZONTAL);
     if (texture.flip.y)
         flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_VERTICAL);
 
-    const math::Vec2 worldCenter = dstRect.center();
-    const math::Vec2 screenCenter = camera::worldToScreen(worldCenter);
+    Rect offsetRect = dstRect;
+    offsetRect.topLeft(offsetRect.topLeft() - camera);
 
-    Rect finalRect;
-    finalRect.size(dstRect.size());
-    finalRect.center(screenCenter);
-
-    const float finalAngle = texture.angle + kn::camera::rot();
-
-    SDL_FPoint pivot;
-    pivot.x = finalRect.w / 2.0;
-    pivot.y = finalRect.h / 2.0;
+    if (srcRect.size() == math::Vec2())
+    {
+        SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &offsetRect, texture.angle,
+                          nullptr, flipAxis);
+        return;
+    }
 
     SDL_Rect src;
     SDL_Rect* pSrc = nullptr;
     if (srcRect.size() != math::Vec2())
     {
-        src = {static_cast<int>(srcRect.x), static_cast<int>(srcRect.y),
-               static_cast<int>(srcRect.w), static_cast<int>(srcRect.h)};
+        src = srcRect;
         pSrc = &src;
     }
 
-    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), pSrc, &finalRect, finalAngle, &pivot,
+    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), pSrc, &offsetRect, texture.angle, nullptr,
                       flipAxis);
 }
 
@@ -210,13 +208,16 @@ void blit(const Texture& texture, const math::Vec2& position, const Anchor ancho
         return;
     }
 
+    if (texture.getSize() + position < camera || position > getSize() + camera)
+        return;
+
     SDL_RendererFlip flipAxis = SDL_FLIP_NONE;
     if (texture.flip.x)
         flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_HORIZONTAL);
     if (texture.flip.y)
         flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_VERTICAL);
 
-    const math::Vec2 screenPos = camera::worldToScreen(position);
+    const math::Vec2 screenPos = position - camera;
     Rect rect = texture.getRect();
     switch (anchor)
     {
@@ -249,50 +250,7 @@ void blit(const Texture& texture, const math::Vec2& position, const Anchor ancho
         break;
     }
 
-    SDL_FPoint pivot;
-    switch (anchor)
-    {
-    case TOP_LEFT:
-        pivot.x = 0.0f;
-        pivot.y = 0.0f;
-        break;
-    case TOP_MID:
-        pivot.x = rect.w * 0.5;
-        pivot.y = 0.0f;
-        break;
-    case TOP_RIGHT:
-        pivot.x = rect.w;
-        pivot.y = 0.0f;
-        break;
-    case LEFT_MID:
-        pivot.x = 0.0f;
-        pivot.y = rect.h * 0.5;
-        break;
-    case CENTER:
-        pivot.x = rect.w * 0.5;
-        pivot.y = rect.h * 0.5;
-        break;
-    case RIGHT_MID:
-        pivot.x = rect.w;
-        pivot.y = rect.h * 0.5;
-        break;
-    case BOTTOM_LEFT:
-        pivot.x = 0.0f;
-        pivot.y = rect.h;
-        break;
-    case BOTTOM_MID:
-        pivot.x = rect.w * 0.5;
-        pivot.y = rect.h;
-        break;
-    case BOTTOM_RIGHT:
-        pivot.x = rect.w;
-        pivot.y = rect.h;
-        break;
-    }
-
-    const float finalAngle = texture.angle + camera::rot();
-
-    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &rect, finalAngle, &pivot,
+    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &rect, texture.angle, nullptr,
                       flipAxis);
 }
 

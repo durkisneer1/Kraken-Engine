@@ -3,6 +3,22 @@
 
 namespace kn
 {
+Rect::Rect(const math::Vec2& pos, const math::Vec2& size)
+    : SDL_FRect{static_cast<float>(pos.x), static_cast<float>(pos.y), static_cast<float>(size.x),
+                static_cast<float>(size.y)}
+{
+}
+
+Rect::Rect(const math::Vec2& pos, float w, float h)
+    : SDL_FRect{static_cast<float>(pos.x), static_cast<float>(pos.y), w, h}
+{
+}
+
+Rect::Rect(float x, float y, const math::Vec2& size)
+    : SDL_FRect{x, y, static_cast<float>(size.x), static_cast<float>(size.y)}
+{
+}
+
 bool Rect::collidePoint(const math::Vec2& pos) const
 {
     return pos.x >= x && pos.x <= x + w && pos.y >= y && pos.y <= y + h;

@@ -29,6 +29,32 @@ struct Rect : SDL_FRect
     }
 
     /**
+     * @brief Construct a new rectangle.
+     *
+     * @param pos The position of its top left.
+     * @param size The size.
+     */
+    Rect(const math::Vec2& pos, const math::Vec2& size);
+
+    /**
+     * @brief Construct a new rectangle.
+     *
+     * @param pos The position of its top left.
+     * @param w The width.
+     * @param h The height.
+     */
+    Rect(const math::Vec2& pos, float w, float h);
+
+    /**
+     * @brief Construct a new rectangle.
+     *
+     * @param x The x ordinate of its top left.
+     * @param y The y ordinate of its top left.
+     * @param size The size.
+     */
+    Rect(float x, float y, const math::Vec2& size);
+
+    /**
      * @brief Check if the rectangle collides with a point.
      *
      * @param pos The point to check.
@@ -60,6 +86,11 @@ struct Rect : SDL_FRect
      * @param rect The rectangle to clamp within.
      */
     void clamp(const Rect& rect);
+
+    operator SDL_Rect() const
+    {
+        return {static_cast<int>(x), static_cast<int>(y), static_cast<int>(w), static_cast<int>(h)};
+    }
 
     // Setters
     void size(const math::Vec2& size);

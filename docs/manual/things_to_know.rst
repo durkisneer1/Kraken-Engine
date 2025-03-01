@@ -66,4 +66,15 @@ In the example usage below, the rectangle's top left corner is visually at ``(15
     kn::camera = {-100, -100};
     kn::draw::rect({50, 50, 16, 16}, kn::color::RED);
 
+Color Constants
+~~~~~~~~~~~~~~~
+
+Kraken Engine provides a set of predefined color constants that you can use to set drawing colors easily. These constants use the syntax ``kn::color::[COLOR]``, for example:
+
+.. code-block:: cpp
+
+    kn::Texture yellowTex({16, 16}, kn::color::YELLOW);
+
+All available color constants can be seen in :doc:`../reference/draw`.
+
 .. note:: This page is a work in progress and will be updated as more information becomes available.

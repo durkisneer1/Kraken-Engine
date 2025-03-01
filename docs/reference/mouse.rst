@@ -12,7 +12,7 @@ Usage
 .. code-block:: cpp
 
     // Check if the user left clicked.
-    if (kn::mouse::getPressed() == kn::MOUSE_LEFT) {
+    if (kn::mouse::getPressed() & kn::M_LEFT) {
         // Handle left mouse button press.
     }
 

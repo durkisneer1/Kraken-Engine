@@ -6,18 +6,17 @@
 int main()
 {
     kn::window::init({320, 180}, "Night Terror", 4);
-    kn::window::setFullscreen(true);
+    // kn::window::setFullscreen(true);
     kn::time::Clock clock;
-    kn::camera::pos({128, 64});
+    kn::camera = {-32, -26};
 
     constexpr kn::Color bgColor = {21, 18, 37, 255};
 
-    // Bind input actions
+    // Bind player movement controls
     kn::input::bind(
         "left",
         {
             kn::InputAction(kn::S_a),
-            kn::InputAction(kn::S_LEFT),
             kn::InputAction(kn::C_AXIS_LEFTX, false),
         }
     );
@@ -25,7 +24,6 @@ int main()
         "right",
         {
             kn::InputAction(kn::S_d),
-            kn::InputAction(kn::S_RIGHT),
             kn::InputAction(kn::C_AXIS_LEFTX, true),
         }
     );
@@ -36,6 +34,12 @@ int main()
             kn::InputAction(kn::C_A),
         }
     );
+
+    // Camera pan controls
+    kn::input::bind("pan_left", {kn::InputAction(kn::S_LEFT),});
+    kn::input::bind("pan_right", {kn::InputAction(kn::S_RIGHT),});
+    kn::input::bind("pan_up", {kn::InputAction(kn::S_UP),});
+    kn::input::bind("pan_down", {kn::InputAction(kn::S_DOWN),});
 
     kn::TileMap tileMap("../example/assets/room.tmx");
     Player player(tileMap);
@@ -60,7 +64,6 @@ int main()
     staticAnimation.loadTextures("static", staticFrames, 10);
 
     kn::Event event;
-    float rotation = 0.0f;
     while (kn::window::isOpen())
     {
         const double dt = clock.tick(240) / 1000.0;
@@ -72,12 +75,11 @@ int main()
                 if (event.key.keysym.sym == kn::K_ESCAPE)
                     kn::window::close();
             }
-            else if (event.type == kn::MOUSEWHEEL)
-            {
-                rotation += event.wheel.y * 5.0f;
-                kn::camera::rot(rotation);
-            }
         }
+
+        // Camera panning
+        const auto cameraPanDirection = kn::input::getDirection("pan_left", "pan_right", "pan_up", "pan_down");
+        kn::camera += cameraPanDirection * 100 * dt;
 
         kn::window::clear(bgColor);
 
@@ -85,8 +87,9 @@ int main()
         player.update(dt);
 
         const kn::Frame* frame = staticAnimation.nextFrame(dt);
-        frame->tex->angle = -rotation;  // stabilize the noise texture
-        kn::window::blit(*frame->tex, kn::camera::pos());
+        kn::window::blit(*frame->tex, kn::camera);
+
+        kn::draw::line(frame->rect.center(), kn::mouse::getPos(), kn::color::WHITE, 6);
 
         kn::window::flip();
     }
