@@ -10,8 +10,22 @@
 
 namespace kn
 {
+TileMap::TileMap(const std::string& filePath, const int borderSize)
+{
+    if (!loadTMX(filePath, borderSize))
+        throw Exception("Failed to load tile map");
+}
+
 bool TileMap::loadTMX(const std::string& filePath, const int borderSize)
 {
+    if (tileSetTexture)
+    {
+        tileSetTexture.reset();
+        tileSetTexture = nullptr;
+        layerNames.clear();
+        layerHash.clear();
+    }
+
     pugi::xml_document doc;
     if (!doc.load_file(filePath.c_str()))
     {

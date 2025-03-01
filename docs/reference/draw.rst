@@ -14,8 +14,8 @@ Usage
     // Draw a rectangle at position (50, 50) with size (16, 16).
     kn::draw::rect({50, 50, 16, 16}, kn::color::RED);
 
-    // Draw a line from (50, 50) to (100, 100).
-    kn::draw::line({50, 50}, {100, 100}, kn::color::GREEN);
+    // Draw a line from (50, 50) to (100, 100) with a thickness of 4 pixels.
+    kn::draw::line({50, 50}, {100, 100}, kn::color::GREEN, 4);
 
     // Draw a point at position (50, 50).
     kn::draw::point({50, 50}, kn::color::BLUE);

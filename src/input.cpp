@@ -55,8 +55,7 @@ math::Vec2 getDirection(const std::string& left, const std::string& right, const
     const auto leftJoystick = controller::getLeftJoystick();
     const auto rightJoystick = controller::getRightJoystick();
 
-    static const auto processActions =
-        [&](const std::string& name, double& axisValue, const int direction)
+    const auto processActions = [&](const std::string& name, double& axisValue, const int direction)
     {
         if (const auto it = _inputBindings.find(name); it != _inputBindings.end())
             for (const InputAction& action : it->second)
@@ -73,22 +72,18 @@ math::Vec2 getDirection(const std::string& left, const std::string& right, const
 
                 if (action.type == InputType::CONTROLLER_AXIS)
                 {
-                    if (action.controllerAxis.axis == C_AXIS_LEFTX &&
-                        (action.controllerAxis.isPositive && leftJoystick.x > 0.0 ||
-                         !action.controllerAxis.isPositive && leftJoystick.x < 0.0))
-                        axisValue += leftJoystick.x;
-                    if (action.controllerAxis.axis == C_AXIS_LEFTY &&
-                        (action.controllerAxis.isPositive && leftJoystick.y > 0.0 ||
-                         !action.controllerAxis.isPositive && leftJoystick.y < 0.0))
-                        axisValue += leftJoystick.y;
-                    if (action.controllerAxis.axis == C_AXIS_RIGHTX &&
-                        (action.controllerAxis.isPositive && rightJoystick.x > 0.0 ||
-                         !action.controllerAxis.isPositive && rightJoystick.x < 0.0))
-                        axisValue += rightJoystick.x;
-                    if (action.controllerAxis.axis == C_AXIS_RIGHTY &&
-                        (action.controllerAxis.isPositive && rightJoystick.y > 0.0 ||
-                         !action.controllerAxis.isPositive && rightJoystick.y < 0.0))
-                        axisValue += rightJoystick.y;
+                    auto processAxis = [&](int axis, double value)
+                    {
+                        if (action.controllerAxis.axis == axis &&
+                            ((action.controllerAxis.isPositive && value > 0.0) ||
+                             (!action.controllerAxis.isPositive && value < 0.0)))
+                            axisValue += value;
+                    };
+
+                    processAxis(C_AXIS_LEFTX, leftJoystick.x);
+                    processAxis(C_AXIS_LEFTY, leftJoystick.y);
+                    processAxis(C_AXIS_RIGHTX, rightJoystick.x);
+                    processAxis(C_AXIS_RIGHTY, rightJoystick.y);
                 }
             }
     };
@@ -110,15 +105,16 @@ bool isPressed(const std::string& name)
     if (it == _inputBindings.end())
         return false;
 
-    return std::any_of(
-        it->second.begin(), it->second.end(),
-        [](const InputAction& action)
-        {
-            return (action.type == InputType::KEYBOARD && key::getPressed()[action.key]) ||
-                   (action.type == InputType::MOUSE && mouse::getPressed() == action.mouseButton) ||
-                   (action.type == InputType::CONTROLLER_BUTTON &&
-                    controller::isPressed(action.controllerButton));
-        });
+    return std::any_of(it->second.begin(), it->second.end(),
+                       [](const InputAction& action)
+                       {
+                           return (action.type == InputType::KEYBOARD &&
+                                   key::getPressed()[action.key]) ||
+                                  (action.type == InputType::MOUSE &&
+                                   (mouse::getPressed() & action.mouseButton)) ||
+                                  (action.type == InputType::CONTROLLER_BUTTON &&
+                                   controller::isPressed(action.controllerButton));
+                       });
 }
 } // namespace input
 } // namespace kn

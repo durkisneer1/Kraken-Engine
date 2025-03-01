@@ -30,7 +30,23 @@ class Texture final
         bool y = false;
     } flip;
 
-    Texture() = default;
+    /**
+     * @brief Create a texture from an existing SDL texture pointer.
+     *
+     * @param sdlTexture An SDL texture object.
+     *
+     * @note This should rarely or never have to be used.
+     */
+    explicit Texture(SDL_Texture* sdlTexture);
+
+    /**
+     * @brief Loads an image from disk.
+     *
+     * @param filePath Path to the image file.
+     *
+     * @note If the image file fails to load, a `kn::Exception` will be thrown.
+     */
+    explicit Texture(const std::string& filePath);
 
     /**
      * @brief Create a solid color texture.
@@ -41,14 +57,17 @@ class Texture final
     Texture(const math::Vec2& size, Color color);
 
     /**
-     * @brief Create a texture from an existing SDL texture pointer.
+     * @brief Load a texture from an array of pixel data.
      *
-     * @param sdlTexture An SDL texture object.
+     * @param pixelData The pixel data.
+     * @param size The size of the texture.
+     * @param depth The depth of the pixel data.
      *
-     * @note This should rarely or never have to be used.
+     * @note If the pixel data fails to load, a `kn::Exception` will be thrown.
      */
-    explicit Texture(SDL_Texture* sdlTexture);
+    Texture(const void* pixelData, const math::Vec2& size, int depth = 32);
 
+    Texture() = default;
     ~Texture();
 
     /**
@@ -59,6 +78,26 @@ class Texture final
      * @return ``true`` when successful, ``false`` on failure.
      */
     [[maybe_unused]] bool loadFromFile(const std::string& filePath);
+
+    /**
+     * @brief Create a solid color texture.
+     *
+     * @param size The size of the texture.
+     * @param color The color of the texture.
+     */
+    [[maybe_unused]] bool create(const math::Vec2& size, Color color);
+
+    /**
+     * @brief Load a texture from an array of pixel data.
+     *
+     * @param pixelData The pixel data.
+     * @param size The size of the texture.
+     * @param depth The depth of the pixel data.
+     *
+     * @return ``true`` when successful, ``false`` on failure.
+     */
+    [[maybe_unused]] bool loadFromArray(const void* pixelData, const math::Vec2& size,
+                                        int depth = 32);
 
     /**
      * @brief Get the size of the texture.

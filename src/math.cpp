@@ -167,6 +167,8 @@ Vec2 Vec2::operator+(const Vec2& other) const { return {x + other.x, y + other.y
 
 Vec2 Vec2::operator-(const Vec2& other) const { return *this + -1.0 * other; }
 
+Vec2 Vec2::operator-() const { return {-x, -y}; }
+
 Vec2& Vec2::operator+=(const Vec2& other)
 {
     x += other.x;

@@ -74,7 +74,8 @@ bool init(const math::Vec2& resolution, const std::string& title, const int scal
         SDL_RenderSetLogicalSize(_renderer, resolutionWidth, resolutionHeight);
 
     setTitle(title);
-    setIcon("../example/assets/kraken_engine_window_icon.png");
+    // setIcon("../example/assets/kraken_engine_window_icon.png");
+    SDL_SetRenderDrawBlendMode(_renderer, SDL_BLENDMODE_BLEND);
 
     _isOpen = true;
 
@@ -163,7 +164,10 @@ void flip()
 void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
 {
     if (!_renderer)
+    {
         WARN("Cannot blit before creating the window")
+        return;
+    }
 
     if (dstRect.bottomRight() < camera || dstRect.topLeft() > getSize() + camera)
         return;
@@ -184,17 +188,25 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
         return;
     }
 
-    const SDL_Rect src = {static_cast<int>(srcRect.x), static_cast<int>(srcRect.y),
-                          static_cast<int>(srcRect.w), static_cast<int>(srcRect.h)};
+    SDL_Rect src;
+    SDL_Rect* pSrc = nullptr;
+    if (srcRect.size() != math::Vec2())
+    {
+        src = srcRect;
+        pSrc = &src;
+    }
 
-    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), &src, &offsetRect, texture.angle, nullptr,
+    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), pSrc, &offsetRect, texture.angle, nullptr,
                       flipAxis);
 }
 
 void blit(const Texture& texture, const math::Vec2& position, const Anchor anchor)
 {
     if (!_renderer)
-        WARN("Cannot blit before creating the window")
+    {
+        WARN("Cannot blit before creating the window");
+        return;
+    }
 
     if (texture.getSize() + position < camera || position > getSize() + camera)
         return;
@@ -205,35 +217,36 @@ void blit(const Texture& texture, const math::Vec2& position, const Anchor ancho
     if (texture.flip.y)
         flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_VERTICAL);
 
+    const math::Vec2 screenPos = position - camera;
     Rect rect = texture.getRect();
     switch (anchor)
     {
     case TOP_LEFT:
-        rect.topLeft(position - camera);
+        rect.topLeft(screenPos);
         break;
     case TOP_MID:
-        rect.topMid(position - camera);
+        rect.topMid(screenPos);
         break;
     case TOP_RIGHT:
-        rect.topRight(position - camera);
+        rect.topRight(screenPos);
         break;
     case LEFT_MID:
-        rect.leftMid(position - camera);
+        rect.leftMid(screenPos);
         break;
     case CENTER:
-        rect.center(position - camera);
+        rect.center(screenPos);
         break;
     case RIGHT_MID:
-        rect.rightMid(position - camera);
+        rect.rightMid(screenPos);
         break;
     case BOTTOM_LEFT:
-        rect.bottomLeft(position - camera);
+        rect.bottomLeft(screenPos);
         break;
     case BOTTOM_MID:
-        rect.bottomMid(position - camera);
+        rect.bottomMid(screenPos);
         break;
     case BOTTOM_RIGHT:
-        rect.bottomRight(position - camera);
+        rect.bottomRight(screenPos);
         break;
     }
 

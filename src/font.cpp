@@ -5,6 +5,12 @@
 
 namespace kn
 {
+Font::Font(const std::string& fileDir, const int ptSize)
+{
+    if (!openFromFile(fileDir, ptSize))
+        throw Exception("Failed to open font: " + fileDir);
+}
+
 Font::~Font()
 {
     if (font)
@@ -13,6 +19,12 @@ Font::~Font()
 
 bool Font::openFromFile(const std::string& fileDir, const int ptSize)
 {
+    if (font)
+    {
+        TTF_CloseFont(font);
+        font = nullptr;
+    }
+
     font = TTF_OpenFont(fileDir.c_str(), ptSize);
     return font != nullptr;
 }

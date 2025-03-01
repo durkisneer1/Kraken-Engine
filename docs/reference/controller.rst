@@ -17,7 +17,7 @@ Usage
 
 .. code-block:: cpp
 
-    // Get the vector of the left joystick
+    // Get the direction vector of the left joystick
     kn::math::Vec2 leftJoystick = kn::controller::getLeftJoystick();
 
     // Change the joysticks' dead zones

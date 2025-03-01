@@ -1,3 +1,4 @@
+subdir('gfx')
 sources = [
     'src/animation_controller.cpp',
     'src/draw.cpp',
@@ -15,4 +16,4 @@ sources = [
     'src/tile_map.cpp',
     'src/time.cpp',
     'src/window.cpp',
-]
+] + gfx_src

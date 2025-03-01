@@ -23,10 +23,10 @@ Usage
 .. code-block:: cpp
 
     // Instantiate a Rect.
-    kn::Rect rectA{50, 50, 16, 16};
+    kn::Rect rectA = {50, 50, 16, 16};
 
     // Instantiate another Rect.
-    kn::Rect rectB{100, 100, 12, 12};
+    kn::Rect rectB = {100, 100, 12, 12};
 
     // Check if they collide.
     if (rectA.collideRect(rectB)) {

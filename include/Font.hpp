@@ -12,6 +12,14 @@ class Texture;
 class Font final
 {
   public:
+    /**
+     * @brief Construct a font from a file.
+     * @param fileDir The directory of the font file.
+     * @param ptSize The point size of the font.
+     *
+     * @note If the font file fails to open, a `kn::Exception` will be thrown.
+     */
+    Font(const std::string& fileDir, int ptSize);
     Font() = default;
     ~Font();
 
@@ -38,6 +46,6 @@ class Font final
                                  int wrapLength = 0) const;
 
   private:
-    TTF_Font* font;
+    TTF_Font* font = nullptr;
 };
 } // namespace kn

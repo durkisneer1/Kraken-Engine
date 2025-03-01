@@ -21,10 +21,7 @@ Usage
 .. code-block:: cpp
 
     // Load a tile map from a tmx file where its tileset has a 1px border around each tile.
-    kn::TileMap tileMap;
-    if (!tileMap.loadTMX("assets/map.tmx", 1)) {
-        // Handle error.
-    }
+    kn::TileMap tileMap("assets/map.tmx", 1);
 
     // Get the layer named "ground" from the tile map.
     const kn::Layer* groundLayer = tileMap.getLayer("ground");
@@ -53,11 +50,9 @@ Members
 
 .. doxygenstruct:: kn::Tile
     :members:
-    :undoc-members:
 
 .. doxygenstruct:: kn::Layer
     :members:
-    :undoc-members:
 
 .. doxygenclass:: kn::TileMap
     :members:

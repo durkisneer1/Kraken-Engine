@@ -22,35 +22,16 @@ math::Vec2 getRel()
 
 uint32_t getPressed() { return SDL_GetMouseState(nullptr, nullptr); }
 
-void lock()
-{
-    SDL_SetRelativeMouseMode(SDL_TRUE);
-}
+void lock() { SDL_SetRelativeMouseMode(SDL_TRUE); }
 
-void unlock()
-{
-    SDL_SetRelativeMouseMode(SDL_FALSE);
-}
+void unlock() { SDL_SetRelativeMouseMode(SDL_FALSE); }
 
-bool isLocked()
-{
-    return SDL_GetRelativeMouseMode();
-}
+bool isLocked() { return SDL_GetRelativeMouseMode(); }
 
-void hide()
-{
-    SDL_ShowCursor(SDL_DISABLE);
-}
+void hide() { SDL_ShowCursor(SDL_DISABLE); }
 
-void show()
-{
-    SDL_ShowCursor(SDL_ENABLE);
-}
+void show() { SDL_ShowCursor(SDL_ENABLE); }
 
-bool isHidden()
-{
-    return !SDL_ShowCursor(SDL_QUERY);
-}
-
+bool isHidden() { return !SDL_ShowCursor(SDL_QUERY); }
 
 } // namespace kn::mouse

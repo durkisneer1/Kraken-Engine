@@ -13,17 +13,14 @@ Usage
 .. code-block:: cpp
 
     // Instantiate a Texture object and load an image from a file.
-    kn::Texture imageTexture;
-    if (!imageTexture.loadFromFile("assets/image.png")) {
-        // Handle error
-    }
+    kn::Texture imageTexture("assets/image.png");
+
+    // Create a 16x16 red texture.
+    kn::Texture colorTexture({16, 16}, kn::color::RED);
 
     // Flip the image texture horizontally and rotate it 30 degrees.
     imageTexture.flip.x = true;
     imageTexture.angle = 30.0;
-
-    // Create a 16x16 red texture.
-    kn::Texture colorTexture({16, 16}, kn::color::RED);
 
     // Draw the textures.
     kn::window::blit(imageTexture, {50, 50});

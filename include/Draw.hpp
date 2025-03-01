@@ -40,7 +40,7 @@ namespace draw
  * @param color The color of the rectangle.
  * @param thickness The thickness of the rectangle.
  *
- * @note If thickness remains 0, the rectangle will be filled.
+ * @note If `thickness` remains 0, the rectangle will be filled.
  */
 void rect(const Rect& rect, const Color& color, int thickness = 0);
 
@@ -50,10 +50,11 @@ void rect(const Rect& rect, const Color& color, int thickness = 0);
  * @param start The starting point of the line.
  * @param end The ending point of the line.
  * @param color The color of the line.
+ * @param thickness The thickness of the line.
  *
- * @note A 'thickness' parameter is in development.
+ * @note A `thickness` of 0 or less will not draw anything.
  */
-void line(const math::Vec2& start, const math::Vec2& end, const Color& color);
+void line(const math::Vec2& start, const math::Vec2& end, const Color& color, int thickness = 1);
 
 /**
  * @brief Draw a point.
@@ -71,9 +72,10 @@ void point(const math::Vec2& point, const Color& color);
  * @param color The color of the circle.
  * @param thickness The thickness of the circle.
  *
- * @note If thickness remains 0, the circle will be filled.
+ * @note If `thickness` remains 0 or is given a value 0 or less, the circle will be filled.
+ * A `radius` of 0 or less will not draw anything.
  */
-void circle(const math::Vec2& center, double radius, const Color& color, int thickness = 0);
+void circle(const math::Vec2& center, int radius, const Color& color, int thickness = 0);
 
 } // namespace draw
 } // namespace kn
