@@ -43,7 +43,12 @@ struct Rect : SDL_FRect
      * @param w The width.
      * @param h The height.
      */
-    Rect(const math::Vec2& pos, float w, float h);
+    template <typename T>
+    Rect(const math::Vec2& pos, T w, T h)
+        : SDL_FRect{static_cast<float>(pos.x), static_cast<float>(pos.y), static_cast<float>(w),
+                    static_cast<float>(h)}
+    {
+    }
 
     /**
      * @brief Construct a new rectangle.
@@ -52,7 +57,12 @@ struct Rect : SDL_FRect
      * @param y The y ordinate of its top left.
      * @param size The size.
      */
-    Rect(float x, float y, const math::Vec2& size);
+    template <typename T>
+    Rect(T x, T y, const math::Vec2& size)
+        : SDL_FRect{static_cast<float>(x), static_cast<float>(y), static_cast<float>(size.x),
+                    static_cast<float>(size.y)}
+    {
+    }
 
     /**
      * @brief Check if the rectangle collides with a point.
