@@ -2,12 +2,10 @@
 
 #include <SDL.h>
 
+#include "Math.hpp"
+
 namespace kn
 {
-namespace math
-{
-class Vec2;
-} // namespace math
 
 struct Rect : SDL_FRect
 {
