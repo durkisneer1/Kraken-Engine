@@ -16,11 +16,13 @@ The prefixes are as follows:
 
 For example, to check if the ``A`` button on a controller is pressed, you would use the following code:
 
-.. code-block:: cpp
+.. raw:: html
 
-    if (kn::controller::isPressed(kn::C_A)) {
-        std::cout << "A button is pressed!\n";
+    <div class="highlight"><pre>
+    <span class="k">if</span> (<span class="nc">kn</span>::<span class="nc">controller</span>::<span class="nf">isPressed</span>(<span class="nc">kn</span>::<span class="n">C_A</span>)) {
+        <span class="nc">std</span>::<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"A button is pressed!\n"</span>;
     }
+    </pre></div>
 
 Keycode VS Scancode
 ~~~~~~~~~~~~~~~~~~~
@@ -61,19 +63,23 @@ This is useful for creating a camera system that follows the player or to pan ar
 
 In the example usage below, the rectangle's top left corner is visually at ``(150, 150)``:
 
-.. code-block:: cpp
+.. raw:: html
 
-    kn::camera = {-100, -100};
-    kn::draw::rect({50, 50, 16, 16}, kn::color::RED);
+    <div class="highlight"><pre>
+    <span class="nc">kn</span>::<span class="n">camera</span> <span class="o">=</span> {<span class="mi">-100</span>, <span class="mi">-100</span>};
+    <span class="nc">kn</span>::<span class="nc">draw</span>::<span class="nf">rect</span>({<span class="mi">50</span>, <span class="mi">50</span>, <span class="mi">16</span>, <span class="mi">16</span>}, <span class="nc">kn</span>::<span class="nc">color</span>::<span class="n">RED</span>);
+    </pre></div>
 
 Color Constants
 ~~~~~~~~~~~~~~~
 
 Kraken Engine provides a set of predefined color constants that you can use to set drawing colors easily. These constants use the syntax ``kn::color::[COLOR]``, for example:
 
-.. code-block:: cpp
+.. raw:: html
 
-    kn::Texture yellowTex({16, 16}, kn::color::YELLOW);
+    <div class="highlight"><pre>
+    <span class="nc">kn</span>::<span class="nc">Texture</span> <span class="n">yellowTex</span>({<span class="mi">16</span>, <span class="mi">16</span>}, <span class="nc">kn</span>::<span class="nc">color</span>::<span class="n">YELLOW</span>);
+    </pre></div>
 
 All available color constants can be seen in :doc:`../reference/draw`.
 

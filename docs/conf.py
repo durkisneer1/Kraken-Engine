@@ -89,10 +89,11 @@ html_context = {
     "kraken_show_article_status": True,
 }
 
-html_logo = "_static/kraken-engine-banner.png"
+html_logo = "_static/kraken-engine-banner2.png"
 html_static_path = ["_static"]
 html_css_files = ["css/custom.css"]
 html_js_files = ["js/custom.js"]
+html_favicon = 'kraken.ico'
 
 file_insertion_enabled = False
 

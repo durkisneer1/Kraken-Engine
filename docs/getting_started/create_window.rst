@@ -4,25 +4,26 @@ Creating a Window
 After following the :doc:`installation` guide, you are ready for your first Kraken Engine program.
 The following code creates a window and keeps it open until the user closes it.
 
-.. code-block:: c++
-    :linenos:
+.. raw:: html
 
-    #include <KrakenEngine.hpp>
+    <div class="highlight"><pre>
+    <span class="cp">#include</span> <span class="cpf">&lt;KrakenEngine.hpp&gt;</span>
 
-    int main() {
-        kn::window::init({800, 600});
-        kn::Event event;
+    <span class="kt">int</span> <span class="nf">main</span>() {
+        <span class="nc">kn</span>::<span class="nc">window</span>::<span class="nf">init</span>({<span class="mi">800</span>, <span class="mi">600</span>});
+        <span class="nc">kn</span>::<span class="nc">Event</span> event;
 
-        while (kn::window::isOpen()) {
-            while (kn::window::pollEvent(event)) {
-                // handle events
+        <span class="k">while</span> (<span class="nc">kn</span>::<span class="nc">window</span>::<span class="nf">isOpen</span>()) {
+            <span class="k">while</span> (<span class="nc">kn</span>::<span class="nc">window</span>::<span class="nf">pollEvent</span>(event)) {
+                <span class="c1">// handle events</span>
             }
-            kn::window::flip();
+            <span class="nc">kn</span>::<span class="nc">window</span>::<span class="nf">flip</span>();
         }
-        kn::window::quit();
+        <span class="nc">kn</span>::<span class="nc">window</span>::<span class="nf">quit</span>();
 
-        return EXIT_SUCCESS;
+        <span class="k">return</span> <span class="n">EXIT_SUCCESS</span>;
     }
+    </pre></div>
 
 Explanation
 -----------

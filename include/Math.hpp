@@ -283,4 +283,5 @@ template <typename T> Vec2 operator*(const Vec2& lhs, const T& rhs) { return rhs
 std::ostream& operator<<(std::ostream& os, const Vec2& vec);
 
 } // namespace math
+using math::Vec2;
 } // namespace kn

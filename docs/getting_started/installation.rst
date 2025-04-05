@@ -17,11 +17,13 @@ Before starting, ensure you have the Meson build system and a C++ compiler insta
 
 3. Include the Kraken Engine dependency in your Meson build file (usually ``meson.build``).
 
-.. code-block:: python
+.. raw:: html
 
-    project('MyProject', 'cpp', default_options: ['cpp_std=c++17', 'default_library=static'])
-    kraken_dep = dependency('kraken-engine')
-    executable('MyProject', 'main.cpp', dependencies: kraken_dep)
+    <div class="highlight"><pre>
+    <span class="nf">project</span>(<span class="s">'MyProject'</span>, <span class="s">'cpp'</span>, <span class="n">default_options</span>: [<span class="s">'cpp_std=c++17'</span>, <span class="s">'default_library=static'</span>])
+    <span class="n">kraken_dep</span> <span class="o">=</span> <span class="nf">dependency</span>(<span class="s">'kraken-engine'</span>)
+    <span class="nf">executable</span>(<span class="s">'MyProject'</span>, <span class="s">'main.cpp'</span>, <span class="n">dependencies</span>: <span class="n">kraken_dep</span>)
+    </pre></div>
 
 4. Build and compile your project using Meson:
 

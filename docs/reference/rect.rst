@@ -20,27 +20,29 @@ It may be undocumented, but there are methods for all 9 anchor points and 4 side
 Usage
 -----
 
-.. code-block:: cpp
+.. raw:: html
 
-    // Instantiate a Rect.
-    kn::Rect rectA = {50, 50, 16, 16};
+    <div class="highlight"><pre>
+    <span class="c1">// Instantiate a Rect.</span>
+    <span class="nc">kn</span>::<span class="nc">Rect</span> <span class="n">rectA</span> <span class="o">=</span> <span class="p">{</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">};</span>
 
-    // Instantiate another Rect.
-    kn::Rect rectB = {100, 100, 12, 12};
+    <span class="c1">// Instantiate another Rect.</span>
+    <span class="nc">kn</span>::<span class="nc">Rect</span> <span class="n">rectB</span> <span class="o">=</span> <span class="p">{</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">};</span>
 
-    // Check if they collide.
-    if (rectA.collideRect(rectB)) {
-        // Handle collision
-    }
+    <span class="c1">// Check if they collide.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">rectA</span><span class="p">.</span><span class="nf">collideRect</span><span class="p">(</span><span class="n">rectB</span><span class="p">)</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Handle collision</span>
+    <span class="p">}</span>
 
-    // Move the center of rectA to the center of the window
-    rectA.center(kn::window::getSize() / 2.0);
+    <span class="c1">// Move the center of rectA to the center of the window</span>
+    <span class="n">rectA</span><span class="p">.</span><span class="nf">center</span><span class="p">(</span><span class="nc">kn</span>::<span class="nc">window</span>::<span class="nf">getSize</span><span class="p">(</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">);</span>
 
-    // Move the top left of rectB to the bottom right of rectA
-    rectB.topLeft(rectA.bottomRight());
+    <span class="c1">// Move the top left of rectB to the bottom right of rectA</span>
+    <span class="n">rectB</span><span class="p">.</span><span class="nf">topLeft</span><span class="p">(</span><span class="n">rectA</span><span class="p">.</span><span class="nf">bottomRight</span><span class="p">(</span><span class="p">)</span><span class="p">);</span>
 
-    // Clamp rectA inside rectB
-    rectA.clamp(rectB);
+    <span class="c1">// Clamp rectA inside rectB</span>
+    <span class="n">rectA</span><span class="p">.</span><span class="nf">clamp</span><span class="p">(</span><span class="n">rectB</span><span class="p">);</span>
+    </pre></div>
 
 Members
 -------

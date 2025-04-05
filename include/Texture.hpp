@@ -34,8 +34,6 @@ class Texture final
      * @brief Create a texture from an existing SDL texture pointer.
      *
      * @param sdlTexture An SDL texture object.
-     *
-     * @note This should rarely or never have to be used.
      */
     explicit Texture(SDL_Texture* sdlTexture);
 

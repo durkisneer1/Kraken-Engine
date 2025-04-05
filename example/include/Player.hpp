@@ -17,7 +17,7 @@ class Player final
     bool facingRight = true;
 
     kn::Rect rect;
-    kn::math::Vec2 velocity;
+    kn::Vec2 velocity;
     const kn::Layer* collisionLayer;
     bool onGround = false;
     float moveSpeed = 45.0f;

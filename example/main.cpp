@@ -1,13 +1,12 @@
-#include <KrakenEngine.hpp>
-
 #include "include/Player.hpp"
+#include <KrakenEngine.hpp>
 
 // clang-format off
 int main()
 {
     kn::window::init({320, 180}, "Night Terror", 4);
     // kn::window::setFullscreen(true);
-    kn::time::Clock clock;
+    kn::Clock clock;
     kn::camera = {-32, -26};
 
     constexpr kn::Color bgColor = {21, 18, 37, 255};
@@ -59,7 +58,7 @@ int main()
             const Uint8 value = rand() % 256;
             rgbArray[j] = (value << 24) | (value << 16) | (value << 8) | a;
         }
-        staticFrames.push_back(std::make_shared<kn::Texture>(rgbArray, kn::math::Vec2{width, height}));
+        staticFrames.push_back(std::make_shared<kn::Texture>(rgbArray, kn::Vec2{width, height}));
     }
     staticAnimation.loadTextures("static", staticFrames, 10);
 
