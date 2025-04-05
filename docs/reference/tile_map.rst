@@ -53,7 +53,7 @@ Members
 .. doxygenstruct:: kn::Tile
     :members:
 
-.. doxygenstruct:: kn::Layer
+.. doxygenclass:: kn::Layer
     :members:
 
 .. doxygenclass:: kn::TileMap

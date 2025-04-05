@@ -41,20 +41,42 @@ struct Tile
     double angle;
 };
 
-struct Layer
+class Layer
 {
+  public:
+    /**
+     * @brief The type of tiles the layer contains.
+     */
+    enum Type
+    {
+        OBJECT,
+        TILE,
+    } const type;
     /**
      * @brief Whether the layer is visible when calling ``TileMap::drawMap``.
      */
-    bool isVisible;
+    const bool isVisible;
     /**
      * @brief The name of the layer in the tmx file.
      */
-    std::string name;
+    const std::string name;
     /**
      * @brief A collection of tiles that belong to the layer.
      */
     std::vector<Tile> tiles;
+
+    Layer() = default;
+    Layer(Type type, bool isVisible, const std::string& name,
+          const std::shared_ptr<Texture>& tileSetTexture);
+    ~Layer() = default;
+
+    /**
+     * @brief Draw the layer.
+     */
+    void draw() const;
+
+  private:
+    const std::shared_ptr<Texture> tileSetTexture;
 };
 
 class TileMap final
@@ -88,19 +110,13 @@ class TileMap final
      *
      * @param name The name of the layer.
      */
-    [[nodiscard]] const Layer* getLayer(const std::string& name) const;
+    [[nodiscard]] const Layer* getLayer(const std::string& name,
+                                        Layer::Type type = Layer::TILE) const;
 
     /**
-     * @brief Get the names of the layers in the tile map.
+     * @brief Get all the layers in the tile map.
      */
-    [[nodiscard]] const std::vector<std::string>& getLayerNames() const;
-
-    /**
-     * @brief Draw a layer from the tile map.
-     *
-     * @param name The name of the layer.
-     */
-    void drawLayer(const std::string& name) const;
+    [[nodiscard]] const std::vector<std::shared_ptr<Layer>>& getLayers() const;
 
     /**
      * @brief Draw all layers of the tile map.
@@ -117,10 +133,8 @@ class TileMap final
 
   private:
     std::string dirPath;
-    std::unique_ptr<Texture> tileSetTexture = nullptr;
 
-    std::vector<std::string> layerNames;
-    std::unordered_map<std::string, Layer> layerHash;
+    std::vector<std::shared_ptr<Layer>> layerVec;
 
     std::string getTexturePath(const pugi::xml_node& map);
 

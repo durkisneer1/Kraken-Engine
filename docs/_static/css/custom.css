@@ -578,12 +578,12 @@ html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(
     font-weight: normal;
 }
 
-html.writer-html5 .rst-content dl[class]:not(.class):not(.struct):not(.var):not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.simple) .sig-name.descname {
+html.writer-html5 .rst-content dl[class]:not(.class):not(.struct):not(.var):not(.enum):not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.simple) .sig-name.descname {
     color: var(--highlight-function-color);
     font-weight: 700;
 }
 
-html.writer-html5 .rst-content dl[class]:not(.class):not(.struct):not(.function):not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.simple) .sig-name.descname {
+html.writer-html5 .rst-content dl[class]:not(.class):not(.struct):not(.function):not(.enum):not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.simple) .sig-name.descname {
     color: var(--highlight-default-color);
     font-weight: 700;
 }
