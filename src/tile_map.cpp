@@ -250,21 +250,15 @@ const Layer* TileMap::getLayer(const std::string& name, Layer::Type type) const
 
 const std::vector<std::shared_ptr<Layer>>& TileMap::getLayers() const { return layerVec; }
 
-std::vector<Tile> TileMap::getTileCollection(const std::vector<std::string>& layerNames) const
+std::vector<Tile> TileMap::getTileCollection(const std::vector<const Layer*>& layers)
 {
     std::vector<Tile> tiles;
-    if (layerNames.empty())
+    if (layers.empty())
         return tiles;
 
-    for (const auto& layerName : layerNames)
+    for (const auto& layer : layers)
     {
-        auto it = std::find_if(layerVec.begin(), layerVec.end(),
-                               [&layerName](const std::shared_ptr<Layer>& layer)
-                               { return layer->name == layerName; });
-        if (it == layerVec.end())
-            continue;
-
-        const auto& layerTiles = (*it)->tiles;
+        const auto& layerTiles = layer->tiles;
         tiles.insert(tiles.end(), layerTiles.begin(), layerTiles.end());
     }
 

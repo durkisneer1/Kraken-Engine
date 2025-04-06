@@ -126,10 +126,10 @@ class TileMap final
     /**
      * @brief Get a collection of tiles from different layers of the tile map.
      *
-     * @param layerNames The names of the layers to get tiles from.
+     * @param layers The layer pointers to grab tiles from.
      */
-    [[nodiscard]] std::vector<Tile>
-    getTileCollection(const std::vector<std::string>& layerNames) const;
+    [[nodiscard]] static std::vector<Tile>
+    getTileCollection(const std::vector<const Layer*>& layers);
 
   private:
     std::string dirPath;
