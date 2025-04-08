@@ -101,7 +101,7 @@ int main()
 
         elapsedTime += dt;
         double t = std::min(elapsedTime / duration, 1.0);
-        double easedT = kn::ease::inOutBounce(t);
+        double easedT = kn::ease::inOutQuad(t);
         auto drawPos = kn::math::lerpVec(startPos, endPos, easedT);
         kn::draw::circle(drawPos, 4, kn::color::WHITE);
 
