@@ -23,7 +23,7 @@ bool AnimationController::loadSpriteSheet(const std::string& name, const std::st
 
     if (static_cast<int>(size.x) % frameWidth || static_cast<int>(size.y) % frameHeight)
     {
-        ERROR("Sprite sheet dimensions are not divisible by frame dimensions");
+        std::cerr << (filePath + " dimensions are not divisible by frame dimensions\n");
         return false;
     }
 

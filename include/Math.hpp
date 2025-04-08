@@ -196,19 +196,19 @@ class Vec2
 [[nodiscard]] Vec2 clampVec(const Vec2& vec, const Vec2& min, const Vec2& max);
 
 /**
- * @brief Linearly interpolate a vector.
- * @param a The start position.
- * @param b The end position.
- * @param t The time in seconds.
+ * @brief Linearly interpolates between two mathematical vectors.
+ * @param a The start vector.
+ * @param b The end vector.
+ * @param t The normalized interpolation factor (0.0 to 1.0).
  * @return The interpolated vector.
  */
 [[nodiscard]] Vec2 lerpVec(const Vec2& a, const Vec2& b, double t);
 
 /**
- * @brief Linear interpolate a value
+ * @brief Linearly interpolates between two values.
  * @param a The starting value.
  * @param b The final value.
- * @param t The time in seconds.
+ * @param t The normalized interpolation factor (0.0 to 1.0).
  * @return The interpolated value.
  */
 double lerp(double a, double b, double t);

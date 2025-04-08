@@ -173,9 +173,9 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
         return;
 
     SDL_RendererFlip flipAxis = SDL_FLIP_NONE;
-    if (texture.flip.x)
+    if (texture.flip.h)
         flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_HORIZONTAL);
-    if (texture.flip.y)
+    if (texture.flip.v)
         flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_VERTICAL);
 
     Rect offsetRect = dstRect;
@@ -212,9 +212,9 @@ void blit(const Texture& texture, const math::Vec2& position, const Anchor ancho
         return;
 
     SDL_RendererFlip flipAxis = SDL_FLIP_NONE;
-    if (texture.flip.x)
+    if (texture.flip.h)
         flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_HORIZONTAL);
-    if (texture.flip.y)
+    if (texture.flip.v)
         flipAxis = static_cast<SDL_RendererFlip>(flipAxis | SDL_FLIP_VERTICAL);
 
     const math::Vec2 screenPos = position - camera;

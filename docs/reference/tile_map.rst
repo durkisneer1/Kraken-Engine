@@ -22,7 +22,7 @@ Usage
 
     <div class="highlight"><pre>
     <span class="c1">// Load a tile map from a tmx file where its tileset has a 1px border around each tile.</span>
-    <span class="nc">kn</span>::<span class="nc">TileMap</span> <span class="n">tileMap</span> <span class="o">=</span> <span class="nc">kn</span>::<span class="nc">TileMap</span><span class="p">(</span><span class="s">"assets/map.tmx"</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="nc">kn</span>::<span class="nc">TileMap</span> <span class="n">tileMap(</span><span class="s">"assets/map.tmx"</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
 
     <span class="c1">// Get the layer named "ground" from the tile map.</span>
     <span class="kt">const</span> <span class="nc">kn</span>::<span class="nc">Layer</span><span class="o">*</span> <span class="n">groundLayer</span> <span class="o">=</span> <span class="n">tileMap</span>.<span class="nf">getLayer</span><span class="p">(</span><span class="s">"ground"</span><span class="p">);</span>

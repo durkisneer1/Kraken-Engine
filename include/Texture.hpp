@@ -23,11 +23,11 @@ class Texture final
         /**
          * @brief Whether to flip the texture horizontally.
          */
-        bool x = false;
+        bool h = false;
         /**
          * @brief Whether to flip the texture vertically.
          */
-        bool y = false;
+        bool v = false;
     } flip;
 
     /**
@@ -110,6 +110,34 @@ class Texture final
      * @return The rect of the texture.
      */
     [[nodiscard]] Rect getRect() const;
+
+    /**
+     * @brief Set the rgb mods for the texture.
+     * 
+     * @param colorMod The values to multiply texture color pixels by during rendering.
+     */
+    void setColorMod(Color colorMod) const;
+
+    /**
+     * @brief Get the rgb mods for the texture.
+     * 
+     * @return The values used to multiply texture color pixels during rendering.
+     */
+    Color getColorMod() const;
+
+    /**
+     * @brief Set the alpha mod for the texture.
+     * 
+     * @param alphaMod The value to multiply texture pixel alpha values by during rendering.
+     */
+    void setAlphaMod(uint8_t alphaMod) const;
+
+    /**
+     * @brief Get the alpha mod for the texture.
+     * 
+     * @return The value used to multiply texture pixel alpha values during rendering.
+     */
+    uint8_t getAlphaMod() const;
 
     /**
      * @brief Get the SDL texture pointer.

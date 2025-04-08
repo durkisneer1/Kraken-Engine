@@ -24,14 +24,14 @@ void Layer::draw() const
         if (tile.antiDiagonalFlip)
         {
             tileSetTexture->angle = 90.0;
-            tileSetTexture->flip.x = tile.verticalFlip;
-            tileSetTexture->flip.y = !tile.horizontalFlip;
+            tileSetTexture->flip.h = tile.verticalFlip;
+            tileSetTexture->flip.v = !tile.horizontalFlip;
         }
         else
         {
             tileSetTexture->angle = tile.angle;
-            tileSetTexture->flip.x = tile.horizontalFlip;
-            tileSetTexture->flip.y = tile.verticalFlip;
+            tileSetTexture->flip.h = tile.horizontalFlip;
+            tileSetTexture->flip.v = tile.verticalFlip;
         }
 
         window::blit(*tileSetTexture, tile.rect, tile.crop);

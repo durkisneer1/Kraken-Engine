@@ -4,6 +4,7 @@
 
 #include "AnimationController.hpp"
 #include "Constants.hpp"
+#include "Ease.hpp"
 #include "Draw.hpp"
 #include "Font.hpp"
 #include "GameController.hpp"

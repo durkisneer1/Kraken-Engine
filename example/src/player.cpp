@@ -55,7 +55,7 @@ void Player::update(const double dt)
 
     const kn::Frame* frame = animController.nextFrame(dt);
 
-    frame->tex->flip.x = !facingRight;
+    frame->tex->flip.h = !facingRight;
     kn::window::blit(*frame->tex, rect, frame->rect);
 }
 

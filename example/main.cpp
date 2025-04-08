@@ -11,6 +11,10 @@ int main()
 
     constexpr kn::Color bgColor = {21, 18, 37, 255};
 
+    kn::Texture pidle("../example/assets/player_idle.png");
+    pidle.setColorMod({255, 0, 0});
+    pidle.setAlphaMod(100);
+
     // Bind player movement controls
     kn::input::bind(
         "left",
@@ -62,6 +66,11 @@ int main()
     }
     staticAnimation.loadTextures("static", staticFrames, 10);
 
+    kn::Vec2 startPos = kn::camera;
+    kn::Vec2 endPos = kn::camera + kn::window::getSize();
+    double duration = 5.0;
+    double elapsedTime = 0.0;
+
     kn::Event event;
     while (kn::window::isOpen())
     {
@@ -88,7 +97,13 @@ int main()
         const kn::Frame* frame = staticAnimation.nextFrame(dt);
         kn::window::blit(*frame->tex, kn::camera);
 
-        kn::draw::line(frame->rect.center(), kn::mouse::getPos(), kn::color::WHITE, 6);
+        kn::window::blit(pidle, kn::window::getSize() / 2, kn::CENTER);
+
+        elapsedTime += dt;
+        double t = std::min(elapsedTime / duration, 1.0);
+        double easedT = kn::ease::inOutBounce(t);
+        auto drawPos = kn::math::lerpVec(startPos, endPos, easedT);
+        kn::draw::circle(drawPos, 4, kn::color::WHITE);
 
         kn::window::flip();
     }
