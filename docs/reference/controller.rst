@@ -15,23 +15,25 @@ The **controller** namespace contains functions to handle input from a game cont
 Usage
 -----
 
-.. code-block:: cpp
+.. raw:: html
 
-    // Get the direction vector of the left joystick
-    kn::math::Vec2 leftJoystick = kn::controller::getLeftJoystick();
+    <div class="highlight"><pre>
+    <span class="c1">// Get the direction vector of the left joystick</span>
+    <span class="nc">kn</span>::<span class="nc">Vec2</span> <span class="n">leftJoystick</span> <span class="o">=</span> <span class="nc">kn</span>::<span class="nc">controller</span>::<span class="nf">getLeftJoystick</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
 
-    // Change the joysticks' dead zones
-    kn::controller::setDeadZone(0.2f);
+    <span class="c1">// Change the joysticks' dead zones</span>
+    <span class="nc">kn</span>::<span class="nc">controller</span>::<span class="nf">setDeadZone</span><span class="p">(</span><span class="mf">0.2f</span><span class="p">);</span>
 
-    // Get how far the right trigger is pressed
-    if (kn::controller::getRightTrigger() > 0.5f) {
-        // Do something
-    }
+    <span class="c1">// Get how far the right trigger is pressed</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nc">kn</span>::<span class="nc">controller</span>::<span class="nf">getRightTrigger</span><span class="p">(</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">0.5f</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Do something</span>
+    <span class="p">}</span>
 
-    // Check if the A (bottom) button is pressed
-    if (kn::controller::isPressed(kn::C_A)) {
-        // Do something
-    }
+    <span class="c1">// Check if the A (bottom) button is pressed</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nc">kn</span>::<span class="nc">controller</span>::<span class="nf">isPressed</span><span class="p">(</span><span class="nc">kn</span>::<span class="n">C_A</span><span class="p">)</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Do something</span>
+    <span class="p">}</span>
+    </pre></div>
 
 Functions
 ---------

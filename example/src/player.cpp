@@ -9,7 +9,11 @@ Player::Player(const kn::TileMap& tileMap)
     animController.loadSpriteSheet("idle", "../example/assets/player_idle.png", {13, 16}, 5);
     animController.loadSpriteSheet("walk", "../example/assets/player_walk.png", {13, 16}, 5);
 
-    interactables = tileMap.getTileCollection({"Mirror", "Bed", "Desk"});
+    interactables = kn::TileMap::getTileCollection({
+        tileMap.getLayer("Mirror"),
+        tileMap.getLayer("Bed"),
+        tileMap.getLayer("Desk"),
+    });
 }
 
 void Player::update(const double dt)
@@ -51,7 +55,7 @@ void Player::update(const double dt)
 
     const kn::Frame* frame = animController.nextFrame(dt);
 
-    frame->tex->flip.x = !facingRight;
+    frame->tex->flip.h = !facingRight;
     kn::window::blit(*frame->tex, rect, frame->rect);
 }
 

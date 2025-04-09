@@ -10,15 +10,17 @@ If you aren't familiar with the usage of keycodes and scancodes, please refer to
 Usage
 -----
 
-.. code-block:: cpp
+.. raw:: html
 
-    // Get all currently pressed keys.
-    const auto* keys = kn::key::getPressed();
+    <div class="highlight"><pre>
+    <span class="c1">// Get all currently pressed keys.</span>
+    <span class="k">const</span> <span class="k">auto</span><span class="o">*</span> <span class="n">keys</span> <span class="o">=</span> <span class="nc">kn</span>::<span class="nc">key</span>::<span class="nf">getPressed</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
 
-    // Check if the 'W' key is pressed.
-    if (keys[kn::S_w]) {
-        // Handle 'W' key press.
-    }
+    <span class="c1">// Check if the 'W' key is pressed.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">keys</span><span class="p">[</span><span class="nc">kn</span>::<span class="n">S_w</span><span class="p">]</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Handle 'W' key press.</span>
+    <span class="p">}</span>
+    </pre></div>
 
 Functions
 ---------

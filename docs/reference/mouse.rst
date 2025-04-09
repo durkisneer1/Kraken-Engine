@@ -9,15 +9,17 @@ The **mouse** namespace contains functions to handle input from the mouse.
 Usage
 -----
 
-.. code-block:: cpp
+.. raw:: html
 
-    // Check if the user left clicked.
-    if (kn::mouse::getPressed() & kn::M_LEFT) {
-        // Handle left mouse button press.
-    }
+    <div class="highlight"><pre>
+    <span class="c1">// Check if the user left clicked.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nc">kn</span>::<span class="nc">mouse</span>::<span class="nf">getPressed</span><span class="p">(</span><span class="p">)</span> <span class="o">&amp;</span> <span class="nc">kn</span>::<span class="n">M_LEFT</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Handle left mouse button press.</span>
+    <span class="p">}</span>
 
-    // Get the mouse position and draw a circle at that position.
-    kn::draw::circle(kn::mouse::getPos(), 10, kn::color::RED);
+    <span class="c1">// Get the mouse position and draw a circle at that position.</span>
+    <span class="nc">kn</span>::<span class="nc">draw</span>::<span class="nf">circle</span><span class="p">(</span><span class="nc">kn</span>::<span class="nc">mouse</span>::<span class="nf">getPos</span><span class="p">(</span><span class="p">)</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="nc">kn</span>::<span class="nc">color</span>::<span class="n">RED</span><span class="p">);</span>
+    </pre></div>
 
 Functions
 ---------

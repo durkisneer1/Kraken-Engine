@@ -14,19 +14,21 @@ It is recommended to use OGG Vorbis for the best compatibility and quality.
 Usage
 -----
 
-.. code-block:: cpp
+.. raw:: html
 
-    // Load a music file to stream.
-    kn::music::load("assets/music.ogg");
+    <div class="highlight"><pre>
+    <span class="c1">// Load a music file to stream.</span>
+    <span class="nc">kn</span>::<span class="nc">music</span>::<span class="nf">load</span><span class="p">(</span><span class="s">"assets/music.ogg"</span><span class="p">);</span>
 
-    // Set the volume of the music to 50%.
-    kn::music::setVolume(0.5f);
+    <span class="c1">// Set the volume of the music to 50%.</span>
+    <span class="nc">kn</span>::<span class="nc">music</span>::<span class="nf">setVolume</span><span class="p">(</span><span class="mf">0.5f</span><span class="p">);</span>
 
-    // Play the music indefinitely after it fades in over 2 seconds.
-    kn::music::play(-1, 2000);
+    <span class="c1">// Play the music indefinitely after it fades in over 2 seconds.</span>
+    <span class="nc">kn</span>::<span class="nc">music</span>::<span class="nf">play</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2000</span><span class="p">);</span>
 
-    // Fade out the music over 2 seconds.
-    kn::music::fadeOut(2000);
+    <span class="c1">// Fade out the music over 2 seconds.</span>
+    <span class="nc">kn</span>::<span class="nc">music</span>::<span class="nf">fadeOut</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+    </pre></div>
 
 Functions
 ---------

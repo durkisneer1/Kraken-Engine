@@ -150,6 +150,27 @@ math::Vec2 Texture::getSize() const { return {rect.w, rect.h}; }
 
 Rect Texture::getRect() const { return rect; }
 
+void Texture::setColorMod(Color colorMod) const
+{
+    SDL_SetTextureColorMod(texture, colorMod.r, colorMod.g, colorMod.b);
+}
+
+Color Texture::getColorMod() const
+{
+    Color colorMod;
+    SDL_GetTextureColorMod(texture, &colorMod.r, &colorMod.g, &colorMod.b);
+    return colorMod;
+}
+
+void Texture::setAlphaMod(uint8_t alphaMod) const { SDL_SetTextureAlphaMod(texture, alphaMod); }
+
+uint8_t Texture::getAlphaMod() const
+{
+    uint8_t alphaMod;
+    SDL_GetTextureAlphaMod(texture, &alphaMod);
+    return alphaMod;
+}
+
 SDL_Texture* Texture::getSDLTexture() const { return texture; }
 
 } // namespace kn

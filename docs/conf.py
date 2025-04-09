@@ -50,9 +50,6 @@ project = "Kraken Engine"
 copyright = "2025, Derrick Martinez"
 author = "Derrick Martinez"
 
-version = os.getenv("READTHEDOCS_VERSION", "0.0.9")
-release = version
-
 exclude_patterns = ["_build"]
 
 smartquotes = False
@@ -61,14 +58,15 @@ pygments_style = "sphinx"
 highlight_language = "cpp"
 
 html_theme = "sphinx_rtd_theme"
-using_rtd_theme = True
 
 html_theme_options = {
     "logo_only": True,
     "collapse_navigation": False,
 }
 
-html_title = f"Kraken Engine ({version}) documentation in English"
+release = '0.0.10'  # Full version, including alpha/beta/rc tags
+version = '0.0.10'  # Short X.Y version
+html_title = f"Kraken Engine (v{release}) Documentation"
 
 html_context = {
     "display_github": True,  # Integrate GitHub
@@ -84,21 +82,19 @@ html_context = {
     # Set this to `True` when in the `latest` branch to clearly indicate to the reader
     # that they are not reading the `stable` documentation.
     "kraken_is_latest": True,
-    "kraken_version": "0.0.9",
+    "kraken_version": release,
     # Enables a banner that displays the up-to-date status of each article.
     "kraken_show_article_status": True,
 }
 
-html_logo = "_static/kraken-engine-banner.png"
+html_logo = "_static/kraken-engine-banner2.png"
 html_static_path = ["_static"]
 html_css_files = ["css/custom.css"]
 html_js_files = ["js/custom.js"]
-
-file_insertion_enabled = False
-
-linkcheck_anchors = False
-linkcheck_timeout = 10
-
-gettext_compact = False
+html_favicon = 'kraken.ico'
 
 epub_tocscope = "includehidden"
+
+suppress_warnings = ["autosectionlabel.*"]
+
+html_last_updated_fmt = "%B %d, %Y"

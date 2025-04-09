@@ -10,6 +10,34 @@
 
 namespace kn
 {
+
+Layer::Layer(Type type, bool isVisible, const std::string& name,
+             const std::shared_ptr<Texture>& tileSetTexture)
+    : type(type), isVisible(isVisible), name(name), tileSetTexture(tileSetTexture)
+{
+}
+
+void Layer::draw() const
+{
+    for (const auto& tile : tiles)
+    {
+        if (tile.antiDiagonalFlip)
+        {
+            tileSetTexture->angle = 90.0;
+            tileSetTexture->flip.h = tile.verticalFlip;
+            tileSetTexture->flip.v = !tile.horizontalFlip;
+        }
+        else
+        {
+            tileSetTexture->angle = tile.angle;
+            tileSetTexture->flip.h = tile.horizontalFlip;
+            tileSetTexture->flip.v = tile.verticalFlip;
+        }
+
+        window::blit(*tileSetTexture, tile.rect, tile.crop);
+    }
+}
+
 TileMap::TileMap(const std::string& filePath, const int borderSize)
 {
     if (!loadTMX(filePath, borderSize))
@@ -18,13 +46,8 @@ TileMap::TileMap(const std::string& filePath, const int borderSize)
 
 bool TileMap::loadTMX(const std::string& filePath, const int borderSize)
 {
-    if (tileSetTexture)
-    {
-        tileSetTexture.reset();
-        tileSetTexture = nullptr;
-        layerNames.clear();
-        layerHash.clear();
-    }
+    if (!layerVec.empty())
+        layerVec.clear();
 
     pugi::xml_document doc;
     if (!doc.load_file(filePath.c_str()))
@@ -45,6 +68,7 @@ bool TileMap::loadTMX(const std::string& filePath, const int borderSize)
         return false;
     }
 
+    const auto tileSetTexture = std::make_shared<Texture>();
     if (!tileSetTexture->loadFromFile(texturePath))
         return false;
 
@@ -56,10 +80,8 @@ bool TileMap::loadTMX(const std::string& filePath, const int borderSize)
     const int tileSetWidth =
         static_cast<int>(tileSetTexture->getSize().x) / (tileWidth + 2 * borderSize);
 
-    if (!layerNames.empty())
-        layerNames.clear();
-    if (!layerHash.empty())
-        layerHash.clear();
+    if (!layerVec.empty())
+        layerVec.clear();
 
     for (const auto& child : map.children())
     {
@@ -68,11 +90,10 @@ bool TileMap::loadTMX(const std::string& filePath, const int borderSize)
             continue;
 
         std::string layerName = child.attribute("name").value();
-        layerNames.push_back(layerName);
         const auto layerVisibility = std::string(child.attribute("visible").value());
         const bool isVisible = layerVisibility.empty() || layerVisibility != "0";
-        layerHash[layerName] = {isVisible, layerName, {}};
-        const auto layerPtr = std::make_shared<Layer>(layerHash.at(layerName));
+        std::vector<Tile> tiles;
+        std::shared_ptr<Layer> layerPtr = nullptr;
 
         if (childName == "layer")
         {
@@ -84,7 +105,8 @@ bool TileMap::loadTMX(const std::string& filePath, const int borderSize)
 
             std::stringstream ss(dataContent);
             std::string value;
-            std::vector<Tile> tiles;
+            layerPtr =
+                std::make_shared<Layer>(Layer(Layer::TILE, isVisible, layerName, tileSetTexture));
 
             int tileCounter = 0;
             while (std::getline(ss, value, ','))
@@ -119,18 +141,18 @@ bool TileMap::loadTMX(const std::string& filePath, const int borderSize)
                 const Rect tileSrcRect = {srcX, srcY, tileWidth, tileHeight};
                 const Rect tileDstRect = {destX, destY, tileWidth, tileHeight};
 
-                tiles.emplace_back(Tile{layerPtr, tileSrcRect, tileDstRect,
-                                        getFittedRect(surface, tileSrcRect, tileDstRect.topLeft()),
-                                        horizontalFlip, verticalFlip, antiDiagonalFlip, 0.0});
+                tiles.push_back({layerPtr, tileSrcRect, tileDstRect,
+                                 getFittedRect(surface, tileSrcRect, tileDstRect.topLeft()),
+                                 horizontalFlip, verticalFlip, antiDiagonalFlip, 0.0});
 
                 tileCounter++;
             }
-
-            layerHash.at(layerName).tiles = std::move(tiles);
+            layerPtr->tiles = std::move(tiles);
         }
         else if (childName == "objectgroup")
         {
-            std::vector<Tile> objects;
+            layerPtr =
+                std::make_shared<Layer>(Layer(Layer::OBJECT, isVisible, layerName, tileSetTexture));
 
             for (const auto& object : child.children())
             {
@@ -172,14 +194,13 @@ bool TileMap::loadTMX(const std::string& filePath, const int borderSize)
                     objectDstRect.bottomLeft({destX, destY}); // 0 degrees
                 }
 
-                objects.emplace_back(
-                    Tile{layerPtr, objectSrcRect, objectDstRect,
-                         getFittedRect(surface, objectSrcRect, objectDstRect.topLeft()),
-                         horizontalFlip, verticalFlip, false, static_cast<double>(angle)});
+                tiles.push_back({layerPtr, objectSrcRect, objectDstRect,
+                                 getFittedRect(surface, objectSrcRect, objectDstRect.topLeft()),
+                                 horizontalFlip, verticalFlip, false, static_cast<double>(angle)});
             }
-
-            layerHash.at(layerName).tiles = std::move(objects);
+            layerPtr->tiles = std::move(tiles);
         }
+        layerVec.push_back(layerPtr);
     }
 
     SDL_FreeSurface(surface);
@@ -189,9 +210,16 @@ bool TileMap::loadTMX(const std::string& filePath, const int borderSize)
 
 void TileMap::drawMap() const
 {
-    for (const auto& name : layerNames)
-        if (layerHash.at(name).isVisible)
-            drawLayer(name);
+    if (layerVec.empty())
+        return;
+
+    for (const auto& layer : layerVec)
+    {
+        if (!layer->isVisible)
+            continue;
+
+        layer->draw();
+    }
 }
 
 std::string TileMap::getTexturePath(const pugi::xml_node& map)
@@ -205,66 +233,33 @@ std::string TileMap::getTexturePath(const pugi::xml_node& map)
         return "";
     }
 
-    tileSetTexture = std::make_unique<Texture>();
     const auto texDir = dirPath + doc.child("tileset").child("image").attribute("source").value();
     return texDir;
 }
 
-const Layer* TileMap::getLayer(const std::string& name) const
+const Layer* TileMap::getLayer(const std::string& name, Layer::Type type) const
 {
-    if (const auto it = layerHash.find(name); it != layerHash.end())
-        return &it->second;
+    for (const auto& layer : layerVec)
+    {
+        if (layer->name == name && layer->type == type)
+            return layer.get();
+    }
 
     return nullptr;
 }
 
-const std::vector<std::string>& TileMap::getLayerNames() const { return layerNames; }
+const std::vector<std::shared_ptr<Layer>>& TileMap::getLayers() const { return layerVec; }
 
-void TileMap::drawLayer(const std::string& name) const
+std::vector<Tile> TileMap::getTileCollection(const std::vector<const Layer*>& layers)
 {
-    const auto it = layerHash.find(name);
-
-    if (it == layerHash.end())
-        return;
-
-    for (const Tile& tile : it->second.tiles)
-    {
-        tileSetTexture->angle = 0.0;
-        tileSetTexture->flip = {false, false};
-
-        if (tile.antiDiagonalFlip)
-        {
-            tileSetTexture->angle = 90.0;
-            tileSetTexture->flip.x = tile.verticalFlip;
-            tileSetTexture->flip.y = !tile.horizontalFlip;
-        }
-        else
-        {
-            tileSetTexture->angle = tile.angle;
-            tileSetTexture->flip.x = tile.horizontalFlip;
-            tileSetTexture->flip.y = tile.verticalFlip;
-        }
-
-        window::blit(*tileSetTexture, tile.rect, tile.crop);
-    }
-}
-
-std::vector<Tile> TileMap::getTileCollection(const std::vector<std::string>& layerNames) const
-{
-    if (layerNames.empty())
-        return {};
-
     std::vector<Tile> tiles;
-    for (const auto& layerName : layerNames)
-    {
-        if (layerHash.find(layerName) == layerHash.end())
-        {
-            WARN("Layer name not found in tile map")
-            continue;
-        }
+    if (layers.empty())
+        return tiles;
 
-        tiles.insert(tiles.end(), layerHash.at(layerName).tiles.begin(),
-                     layerHash.at(layerName).tiles.end());
+    for (const auto& layer : layers)
+    {
+        const auto& layerTiles = layer->tiles;
+        tiles.insert(tiles.end(), layerTiles.begin(), layerTiles.end());
     }
 
     return tiles;

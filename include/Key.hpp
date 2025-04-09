@@ -11,6 +11,7 @@ class Vec2;
 
 namespace key
 {
+
 /**
  * @brief Get the keys that are currently pressed.
  *

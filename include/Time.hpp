@@ -2,8 +2,11 @@
 
 #include <SDL.h>
 
-namespace kn::time
+namespace kn
 {
+namespace time
+{
+
 class Clock final
 {
   public:
@@ -34,4 +37,6 @@ class Clock final
  */
 [[nodiscard]] double getTicks();
 
-} // namespace kn::time
+} // namespace time
+using time::Clock;
+} // namespace kn
