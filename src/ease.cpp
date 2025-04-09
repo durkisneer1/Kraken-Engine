@@ -9,8 +9,63 @@
 #define M_PI_2 1.57079632679489661923
 #endif
 
-namespace kn::ease
+namespace kn
 {
+
+EasingAnimation::EasingAnimation(const Vec2& start, const Vec2& end, const double duration,
+                                 EasingFunction easeFunc)
+    : startPos(start), endPos(end), duration(duration), easingFunc(easeFunc)
+{
+}
+
+Vec2 EasingAnimation::update(const double deltaTime)
+{
+    if (state == State::PAUSED || state == State::FINISHED)
+        return getCurrentPosition();
+
+    elapsedTime += (forward ? deltaTime : -deltaTime);
+    elapsedTime = std::max(0.0, std::min(elapsedTime, duration));
+
+    if (elapsedTime == duration || elapsedTime == 0.0)
+        state = State::FINISHED;
+
+    return getCurrentPosition();
+}
+
+Vec2 EasingAnimation::getCurrentPosition() const
+{
+    double t = elapsedTime / duration;
+    t = std::max(0.0, std::min(t, 1.0));
+    double easedT = easingFunc(t);
+    return math::lerpVec(startPos, endPos, easedT);
+}
+
+void EasingAnimation::pause() { state = State::PAUSED; }
+
+void EasingAnimation::resume()
+{
+    if (state != State::FINISHED)
+        state = State::PLAYING;
+}
+
+void EasingAnimation::restart()
+{
+    elapsedTime = forward ? 0.0 : duration;
+    state = State::PLAYING;
+}
+
+void EasingAnimation::reverse()
+{
+    forward = !forward;
+    state = State::PLAYING;
+}
+
+bool EasingAnimation::isFinished() { return state == State::FINISHED; }
+
+namespace ease
+{
+
+double linear(const double t) { return t; }
 
 double inQuad(const double t) { return t * t; }
 
@@ -81,11 +136,11 @@ double outSine(const double t) { return sin(t * M_PI_2); }
 
 double inOutSine(const double t) { return 0.5 * (1 - cos(t * M_PI)); }
 
-double inCircular(const double t) { return 1 - sqrt(1 - (t * t)); }
+double inCirc(const double t) { return 1 - sqrt(1 - (t * t)); }
 
-double outCircular(const double t) { return sqrt((2 - t) * t); }
+double outCirc(const double t) { return sqrt((2 - t) * t); }
 
-double inOutCircular(const double t)
+double inOutCirc(const double t)
 {
     if (t < 0.5)
         return 0.5 * (1 - sqrt(1 - 4 * (t * t)));
@@ -93,11 +148,11 @@ double inOutCircular(const double t)
     return 0.5 * (sqrt(-((2 * t) - 3) * ((2 * t) - 1)) + 1);
 }
 
-double inExpon(const double t) { return (t == 0.0) ? t : pow(2, 10 * (t - 1)); }
+double inExpo(const double t) { return (t == 0.0) ? t : pow(2, 10 * (t - 1)); }
 
-double outExpon(const double t) { return (t == 1.0) ? t : 1 - pow(2, -10 * t); }
+double outExpo(const double t) { return (t == 1.0) ? t : 1 - pow(2, -10 * t); }
 
-double inOutExpon(const double t)
+double inOutExpo(const double t)
 {
     if (t == 0.0 || t == 1.0)
         return t;
@@ -162,4 +217,5 @@ double inOutBounce(const double t)
     return 0.5 * outBounce(t * 2 - 1) + 0.5;
 }
 
-} // namespace kn::ease
+} // namespace ease
+} // namespace kn

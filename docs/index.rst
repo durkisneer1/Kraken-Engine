@@ -70,6 +70,7 @@ We’re excited to see how you push the boundaries of creativity with the Kraken
     reference/constants
     reference/controller
     reference/draw
+    reference/ease
     reference/input
     reference/key
     reference/math

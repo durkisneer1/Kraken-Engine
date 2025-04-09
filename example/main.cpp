@@ -66,10 +66,10 @@ int main()
     }
     staticAnimation.loadTextures("static", staticFrames, 10);
 
-    kn::Vec2 startPos = kn::camera;
-    kn::Vec2 endPos = kn::camera + kn::window::getSize();
-    double duration = 5.0;
-    double elapsedTime = 0.0;
+    kn::EasingAnimation easeAnim(
+        kn::camera, kn::camera + kn::window::getSize(),
+        5.0, kn::ease::inOutQuad
+    );
 
     kn::Event event;
     while (kn::window::isOpen())
@@ -81,7 +81,13 @@ int main()
             if (event.type == kn::KEYDOWN)
             {
                 if (event.key.keysym.sym == kn::K_ESCAPE)
+                {
                     kn::window::close();
+                }
+                else if (event.key.keysym.sym == kn::K_v)
+                {
+                    easeAnim.reverse();
+                }
             }
         }
 
@@ -99,10 +105,7 @@ int main()
 
         kn::window::blit(pidle, kn::window::getSize() / 2, kn::CENTER);
 
-        elapsedTime += dt;
-        double t = std::min(elapsedTime / duration, 1.0);
-        double easedT = kn::ease::inOutQuad(t);
-        auto drawPos = kn::math::lerpVec(startPos, endPos, easedT);
+        auto drawPos = easeAnim.update(dt);
         kn::draw::circle(drawPos, 4, kn::color::WHITE);
 
         kn::window::flip();

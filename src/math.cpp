@@ -157,7 +157,6 @@ Vec2 clampVec(const Vec2& vec, const Vec2& min, const Vec2& max)
 Vec2 lerpVec(const Vec2& a, const Vec2& b, const double t)
 {
     // TODO: figure out a way to signal if an overflow happens
-    // FIXME: Not the correct lerp formula
     return a + (b - a) * t;
 }
 

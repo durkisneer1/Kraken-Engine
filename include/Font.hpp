@@ -14,6 +14,7 @@ class Font final
   public:
     /**
      * @brief Construct a font from a file.
+     * 
      * @param fileDir The directory of the font file.
      * @param ptSize The point size of the font.
      *
@@ -25,8 +26,10 @@ class Font final
 
     /**
      * @brief Open a font from a file.
+     * 
      * @param fileDir The directory of the font file.
      * @param ptSize The point size of the font.
+     * 
      * @return ``true`` if the font was opened successfully, ``false`` otherwise.
      */
     [[maybe_unused]] bool openFromFile(const std::string& fileDir, int ptSize);
