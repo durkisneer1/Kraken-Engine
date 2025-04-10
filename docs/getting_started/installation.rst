@@ -5,17 +5,15 @@ Before starting, ensure you have the Meson build system and a C++ compiler insta
 
 1. In your Meson project directory, create a subdirectory called ``subprojects``.
 
-.. code-block:: bash
+.. raw:: html
 
-    mkdir subprojects
+    <div class="highlight"><pre>
+    <span class="nf">mkdir</span> <span class="n">subprojects</span>
+    </pre></div>
 
-2. Use the following command to install the latest version of Kraken Engine:
+2. Download the `Kraken wrap file <https://github.com/durkisneer1/Kraken-Engine/releases/download/v0.0.10/kraken-engine.wrap>`_ and place it in the ``subprojects`` directory.
 
-.. code-block:: bash
-
-    meson wrap install kraken-engine
-
-1. Include the Kraken Engine dependency in your ``meson.build`` file.
+3. Include the Kraken Engine dependency in your ``meson.build`` file.
 
 .. raw:: html
 
@@ -26,21 +24,14 @@ Before starting, ensure you have the Meson build system and a C++ compiler insta
     <span class="nf">executable</span><span class="p">(</span><span class="s">'MyProject'</span><span class="p">,</span> <span class="s">'main.cpp'</span><span class="p">,</span> <span class="n">dependencies</span><span class="o">:</span> <span class="n">kraken_dep</span><span class="p">)</span>
     </pre></div>
 
-1. Build and compile your project using Meson:
+4. Build and compile your project using Meson after writing a ``main.cpp``:
 
-.. code-block:: bash
+.. raw:: html
 
-    meson setup build
-    cd build
-    meson compile
+    <div class="highlight"><pre>
+    <span class="nf">meson</span> <span class="n">setup</span> <span class="n">build</span>
+    <span class="nf">cd</span> <span class="n">build</span>
+    <span class="nf">meson</span> <span class="n">compile</span>
+    </pre></div>
 
 You can also use the ``-j`` flag to specify the number of threads to use to speed up compilation (e.g., ``meson compile -j4``).
-
-Updating
---------
-
-To update Kraken Engine to the latest version, use the following command:
-
-.. code-block:: bash
-
-    meson wrap update kraken-engine
