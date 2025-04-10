@@ -71,10 +71,13 @@ int main()
         5.0, kn::ease::inOutQuad
     );
 
+    kn::Timer timer(2.0);
+    timer.start();
+
     kn::Event event;
     while (kn::window::isOpen())
     {
-        const double dt = clock.tick(240) / 1000.0;
+        const double dt = clock.tick(240);
 
         while (kn::window::pollEvent(event))
         {
@@ -109,6 +112,12 @@ int main()
         kn::draw::circle(drawPos, 4, kn::color::WHITE);
 
         kn::window::flip();
+
+        if (timer.isFinished())
+        {
+            std::cout << "timer done!\n";
+            timer.start();
+        }
     }
 
     kn::window::quit();

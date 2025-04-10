@@ -1,6 +1,6 @@
 #pragma once
 
-#include <SDL.h>
+#include <chrono>
 
 namespace kn
 {
@@ -10,11 +10,11 @@ namespace time
 class Clock final
 {
   public:
-    Clock() = default;
+    Clock();
     ~Clock() = default;
 
     /**
-     * @brief Get the delta time between frames in milliseconds.
+     * @brief Get the delta time from the last frame in seconds.
      *
      * @param frameRate The frame rate to cap the program at.
      *
@@ -23,11 +23,58 @@ class Clock final
     [[maybe_unused]] double tick(int frameRate = 60);
 
   private:
-    double m_frameTime = 0.0;
-    double m_targetFrameTime = 0.0;
-    double m_frequency = static_cast<double>(SDL_GetPerformanceFrequency());
-    double m_now = static_cast<double>(SDL_GetPerformanceCounter());
-    double m_last = m_now;
+    std::chrono::high_resolution_clock::time_point m_last;
+};
+
+class Timer
+{
+  public:
+    /**
+     * @brief Create a timer with a specified duration in seconds.
+     *
+     * @param duration The duration of the timer in seconds.
+     * If the duration is negative, it will be set to 0.
+     */
+    explicit Timer(double duration);
+    ~Timer() = default;
+
+    /**
+     * @brief Start the timer.
+     * This will also reset the timer.
+     */
+    void start();
+
+    /**
+     * @brief Pause the timer.
+     */
+    void pause();
+
+    /**
+     * @brief Resume the timer.
+     */
+    void resume();
+
+    /**
+     * @brief Check if the timer is done counting down.
+     *
+     * @return ``true`` if the timer is finished, ``false`` otherwise.
+     */
+    [[nodiscard]] bool isFinished() const;
+
+    /**
+     * @brief Get the remaining time in seconds.
+     *
+     * @return The remaining time in seconds.
+     */
+    [[nodiscard]] double timeRemaining() const;
+
+  private:
+    double m_duration;
+    bool m_started = false;
+    bool m_paused = false;
+    std::chrono::steady_clock::time_point m_startTime;
+    std::chrono::steady_clock::time_point m_pauseTime;
+    double m_elapsedPausedTime = 0.0;
 };
 
 /**
@@ -39,4 +86,5 @@ class Clock final
 
 } // namespace time
 using time::Clock;
+using time::Timer;
 } // namespace kn
