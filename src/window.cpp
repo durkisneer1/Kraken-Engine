@@ -82,7 +82,26 @@ bool init(const math::Vec2& resolution, const std::string& title, const int scal
     return true;
 }
 
-bool isOpen() { return _isOpen; }
+bool isOpen()
+{
+    // Clear scancode events
+    std::fill(std::begin(g_scancodePressed), std::end(g_scancodePressed), false);
+    std::fill(std::begin(g_scancodeReleased), std::end(g_scancodeReleased), false);
+
+    // Clear keycode events
+    g_keycodePressed.clear();
+    g_keycodeReleased.clear();
+
+    // Clear mouse events
+    std::fill(std::begin(g_mousePressed), std::end(g_mousePressed), false);
+    std::fill(std::begin(g_mouseReleased), std::end(g_mouseReleased), false);
+
+    // Clear controller events
+    std::fill(std::begin(g_controllerPressed), std::end(g_controllerPressed), false);
+    std::fill(std::begin(g_controllerReleased), std::end(g_controllerReleased), false);
+
+    return _isOpen;
+}
 
 void close() { _isOpen = false; }
 
@@ -132,9 +151,34 @@ int pollEvent(Event& event)
                 _controller = nullptr;
             }
             break;
+        case CONTROLLERBUTTONDOWN:
+            if (_controller && event.cbutton.button < SDL_CONTROLLER_BUTTON_MAX)
+                g_controllerPressed[event.cbutton.button] = true;
+            break;
+        case CONTROLLERBUTTONUP:
+            if (_controller && event.cbutton.button < SDL_CONTROLLER_BUTTON_MAX)
+                g_controllerReleased[event.cbutton.button] = true;
+            break;
         case KEYDOWN:
             if (event.key.keysym.sym == SDLK_F11)
                 setFullscreen(!getFullscreen());
+            if (!event.key.repeat)
+            {
+                g_scancodePressed[event.key.keysym.scancode] = true;
+                g_keycodePressed[event.key.keysym.sym] = true;
+            }
+            break;
+        case KEYUP:
+            g_scancodeReleased[event.key.keysym.scancode] = true;
+            g_keycodeReleased[event.key.keysym.sym] = true;
+            break;
+        case MOUSEBUTTONDOWN:
+            if (event.button.button <= SDL_BUTTON_X2)
+                g_mousePressed[event.button.button - 1] = true;
+            break;
+        case MOUSEBUTTONUP:
+            if (event.button.button <= SDL_BUTTON_X2)
+                g_mouseReleased[event.button.button - 1] = true;
             break;
         default:
             break;

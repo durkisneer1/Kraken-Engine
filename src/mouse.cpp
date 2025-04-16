@@ -1,6 +1,7 @@
 #include "Mouse.hpp"
 #include "Math.hpp"
 #include "Window.hpp"
+#include "_globals.hpp"
 
 namespace kn::mouse
 {
@@ -20,7 +21,17 @@ math::Vec2 getRel()
     return rel / window::getScale();
 }
 
-uint32_t getPressed() { return SDL_GetMouseState(nullptr, nullptr); }
+bool isPressed(MouseButton button)
+{
+    return SDL_GetMouseState(nullptr, nullptr) & static_cast<uint32_t>(button);
+}
+
+bool isJustPressed(MouseButton button) { return g_mousePressed[static_cast<uint32_t>(button) - 1]; }
+
+bool isJustReleased(MouseButton button)
+{
+    return g_mouseReleased[static_cast<uint32_t>(button) - 1];
+}
 
 void lock() { SDL_SetRelativeMouseMode(SDL_TRUE); }
 

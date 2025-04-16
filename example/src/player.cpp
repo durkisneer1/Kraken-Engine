@@ -29,7 +29,7 @@ void Player::update(const double dt)
     else
         velocity.y += 980.7 * dt;
 
-    const double xDir = kn::input::getDirection("left", "right").x;
+    const double xDir = kn::input::getAxis("left", "right");
     if (xDir != 0.0)
     {
         animController.setAnim("walk");

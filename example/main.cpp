@@ -34,7 +34,7 @@ int main()
         "jump",
         {
             kn::InputAction(kn::S_SPACE),
-            kn::InputAction(kn::C_A),
+            kn::InputAction(kn::C_SOUTH),
         }
     );
 
@@ -79,20 +79,13 @@ int main()
     {
         const double dt = clock.tick(240);
 
-        while (kn::window::pollEvent(event))
-        {
-            if (event.type == kn::KEYDOWN)
-            {
-                if (event.key.keysym.sym == kn::K_ESCAPE)
-                {
-                    kn::window::close();
-                }
-                else if (event.key.keysym.sym == kn::K_v)
-                {
-                    easeAnim.reverse();
-                }
-            }
-        }
+        while (kn::window::pollEvent(event)) {}
+        
+        if (kn::key::isPressed(kn::K_ESC))
+            kn::window::close();
+
+        if (kn::key::isJustReleased(kn::S_r))
+            easeAnim.reverse();
 
         // Camera panning
         const auto cameraPanDirection = kn::input::getDirection("pan_left", "pan_right", "pan_up", "pan_down");
@@ -112,12 +105,6 @@ int main()
         kn::draw::circle(drawPos, 4, kn::color::WHITE);
 
         kn::window::flip();
-
-        if (timer.isFinished())
-        {
-            std::cout << "timer done!\n";
-            timer.start();
-        }
     }
 
     kn::window::quit();

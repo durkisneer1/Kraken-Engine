@@ -14,12 +14,12 @@ The prefixes are as follows:
 - ``M_`` for mouse button constants
 - ``C_`` for controller button constants
 
-For example, to check if the ``A`` button on a controller is pressed, you would use the following code:
+For example, to check if the ``A`` button on an Xbox controller is pressed, you would use the following code:
 
 .. raw:: html
 
     <div class="highlight"><pre>
-    <span class="k">if</span> (<span class="nc">kn</span>::<span class="nc">controller</span>::<span class="nf">isPressed</span>(<span class="nc">kn</span>::<span class="n">C_A</span>)) {
+    <span class="k">if</span> (<span class="nc">kn</span>::<span class="nc">controller</span>::<span class="nf">isPressed</span>(<span class="nc">kn</span>::<span class="n">C_SOUTH</span>)) {
         <span class="nc">std</span>::<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"A button is pressed!\n"</span>;
     }
     </pre></div>
@@ -29,7 +29,7 @@ Keycode VS Scancode
 
 Kraken Engine uses keycodes and scancodes to represent keyboard input.
 Keycodes are the character that the key represents, while scancodes are the physical location of the key on the keyboard.
-For example, the ``A`` key on a QWERTY keyboard has a keycode of ``K_a`` and a scancode of ``S_a``.
+For example, the ``Q`` key on a QWERTY keyboard has a keycode of ``K_q`` and a scancode of ``S_q``, whereas AZERTY keyboards would have a keycode of ``K_a``.
 
 If you are unsure which one to use, it is recommended to use keycodes in the event loop and scancodes for gameplay input.
 
@@ -81,6 +81,6 @@ Kraken Engine provides a set of predefined color constants that you can use to s
     <span class="nc">kn</span>::<span class="nc">Texture</span> <span class="n">yellowTex</span>({<span class="mi">16</span>, <span class="mi">16</span>}, <span class="nc">kn</span>::<span class="nc">color</span>::<span class="n">YELLOW</span>);
     </pre></div>
 
-All available color constants can be seen in :doc:`../reference/draw`.
+All available color constants can be found in :doc:`../reference/constants`.
 
 .. note:: This page is a work in progress and will be updated as more information becomes available.

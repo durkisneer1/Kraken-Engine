@@ -9,8 +9,7 @@ Description
 -----------
 
 The **controller** namespace contains functions to handle input from a game controller.
-
-.. note:: The default dead zone for the joysticks is 0.1f.
+The default dead zone for the joysticks is ``0.1f``.
 
 Usage
 -----
@@ -29,14 +28,20 @@ Usage
         <span class="c1">// Do something</span>
     <span class="p">}</span>
 
-    <span class="c1">// Check if the A (bottom) button is pressed</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nc">kn</span>::<span class="nc">controller</span>::<span class="nf">isPressed</span><span class="p">(</span><span class="nc">kn</span>::<span class="n">C_A</span><span class="p">)</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Check if the south/bottom button is pressed</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nc">kn</span>::<span class="nc">controller</span>::<span class="nf">isPressed</span><span class="p">(</span><span class="nc">kn</span>::<span class="n">C_SOUTH</span><span class="p">)</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// Do something</span>
     <span class="p">}</span>
     </pre></div>
 
 Functions
 ---------
+
+.. doxygenfunction:: kn::controller::isPressed
+
+.. doxygenfunction:: kn::controller::isJustPressed
+
+.. doxygenfunction:: kn::controller::isJustReleased
 
 .. doxygenfunction:: kn::controller::getLeftJoystick
 
@@ -46,10 +51,6 @@ Functions
 
 .. doxygenfunction:: kn::controller::getRightTrigger
 
-.. doxygenfunction:: kn::controller::isPressed
-
 .. doxygenfunction:: kn::controller::setDeadZone
 
 .. doxygenfunction:: kn::controller::getDeadZone
-
-.. note:: Functions for getting controller buttons that were just pressed or just released are planned for the future.

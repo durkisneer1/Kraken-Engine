@@ -1,4 +1,6 @@
 #pragma once
+
+#include "Constants.hpp"
 #include <cstdint>
 
 namespace kn
@@ -25,11 +27,28 @@ math::Vec2 getPos();
 math::Vec2 getRel();
 
 /**
- * @brief Get all the mouse buttons that are pressed.
+ * @brief Check if a button is pressed.
  *
- * @return A bitfield of all the mouse buttons that are pressed.
+ * @param button The button to check.
+ * @return ``true`` if pressed, ``false`` otherwise.
  */
-uint32_t getPressed();
+bool isPressed(MouseButton button);
+
+/**
+ * @brief Check if a button is just pressed.
+ *
+ * @param button The button to check.
+ * @return ``true`` if just pressed, ``false`` otherwise.
+ */
+bool isJustPressed(MouseButton button);
+
+/**
+ * @brief Check if a button is just released.
+ *
+ * @param button The button to check.
+ * @return ``true`` if just released, ``false`` otherwise.
+ */
+bool isJustReleased(MouseButton button);
 
 /**
  * @brief Lock the cursor to the center of the window and hide it.

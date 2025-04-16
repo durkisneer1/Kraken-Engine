@@ -44,25 +44,25 @@ Usage
 
     <span class="c1">/* Bind the 'jump' action to:</span>
     <span class="c1">   - The space key</span>
-    <span class="c1">   - The 'a' button on a controller</span>
+    <span class="c1">   - The south/bottom button on a controller</span>
     <span class="c1">*/</span>
     <span class="nc">kn</span>::<span class="nc">input</span>::<span class="nf">bind</span><span class="p">(</span><span class="s">"jump"</span><span class="p">,</span>
     <span class="p">    {</span>
             <span class="nc">kn</span>::<span class="nf">InputAction</span><span class="p">(</span><span class="nc">kn</span>::<span class="n">S_SPACE</span><span class="p">),</span>
-            <span class="nc">kn</span>::<span class="nf">InputAction</span><span class="p">(</span><span class="nc">kn</span>::<span class="n">C_A</span><span class="p">),</span>
+            <span class="nc">kn</span>::<span class="nf">InputAction</span><span class="p">(</span><span class="nc">kn</span>::<span class="n">C_SOUTH</span><span class="p">),</span>
     <span class="p">    }</span>
     <span class="p">);</span>
 
-    <span class="c1">// Check if the 'jump' action is pressed</span>
+    <span class="c1">// Check if the 'jump' action was just pressed</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">onGround</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nc">kn</span>::<span class="nc">input</span>::<span class="nf">isPressed</span><span class="p">(</span><span class="s">"jump"</span><span class="p">)</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nc">kn</span>::<span class="nc">input</span>::<span class="nf">isJustPressed</span><span class="p">(</span><span class="s">"jump"</span><span class="p">)</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">onGround</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
             <span class="c1">// Handle jump action</span>
         <span class="p">}</span>
     <span class="p">}</span>
 
     <span class="c1">// Get the direction of the 'left' and 'right' actions</span>
-    <span class="k">const</span> <span class="n">double</span> <span class="n">xDirection</span> <span class="o">=</span> <span class="nc">kn</span>::<span class="nc">input</span>::<span class="nf">getDirection</span><span class="p">(</span><span class="s">"left"</span><span class="p">,</span> <span class="s">"right"</span><span class="p">)</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
+    <span class="k">const</span> <span class="k">double</span> <span class="n">xDirection</span> <span class="o">=</span> <span class="nc">kn</span>::<span class="nc">input</span>::<span class="nf">getAxis</span><span class="p">(</span><span class="s">"left"</span><span class="p">,</span> <span class="s">"right"</span><span class="p">)</span><span class="p">;</span>
     </pre></div>
 
 Members
@@ -80,6 +80,10 @@ Functions
 
 .. doxygenfunction:: kn::input::getDirection
 
+.. doxygenfunction:: kn::input::getAxis
+
 .. doxygenfunction:: kn::input::isPressed
 
-.. note:: Functions for getting input actions that were just pressed or just released are planned for the future.
+.. doxygenfunction:: kn::input::isJustPressed
+
+.. doxygenfunction:: kn::input::isJustReleased
