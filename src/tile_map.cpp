@@ -268,15 +268,14 @@ std::vector<Tile> TileMap::getTileCollection(const std::vector<const Layer*>& la
 Rect TileMap::getFittedRect(const SDL_Surface* surface, const Rect& srcRect,
                             const math::Vec2& position)
 {
-    const SDL_Rect rectInt{static_cast<int>(srcRect.x), static_cast<int>(srcRect.y),
-                           static_cast<int>(srcRect.w), static_cast<int>(srcRect.h)};
+    const SDL_Rect rectInt = srcRect;
 
     int top = rectInt.h;
     int bottom = 0;
     int left = rectInt.w;
     int right = 0;
 
-    const Uint8* pixels = static_cast<Uint8*>(surface->pixels);
+    const auto* pixels = static_cast<uint8_t*>(surface->pixels);
     const int pitch = surface->pitch;
     const int bytesPerPixel = surface->format->BytesPerPixel;
 

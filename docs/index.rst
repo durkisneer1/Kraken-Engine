@@ -17,7 +17,7 @@ Features include:
 - 🧱 **Tile Map Support** – Load and render Tiled TMX maps with support for layers, object groups, and tile flipping.
 - 🔊 **Audio Management** – Stream music, trigger sound effects, and adjust volume levels with simple API calls.
 - 🧮 **Math Utilities** – Includes custom Vec2, easing functions, time utilities, and other game-dev math helpers.
-- 🖼️ **Texture & Font Handling** – Load images and fonts easily, render them with rotation, scaling, color tinting, and alpha control.
+- 🧊 **Image Masking** – Perform pixel-perfect collision detection using masks for precise gameplay logic.
 
 Getting Started
 ---------------
@@ -93,8 +93,10 @@ Want to be featured? Submit your game to the next jam or share it on our Discord
 
     reference/animation_controller
     reference/font
+    reference/mask
     reference/rect
     reference/sound
+    reference/surface
     reference/texture
     reference/tile_map
     reference/constants

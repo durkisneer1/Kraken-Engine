@@ -227,7 +227,7 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
 
     if (srcRect.size() == math::Vec2())
     {
-        SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &offsetRect, texture.angle,
+        SDL_RenderCopyExF(_renderer, texture.getSDL(), nullptr, &offsetRect, texture.angle,
                           nullptr, flipAxis);
         return;
     }
@@ -240,7 +240,7 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
         pSrc = &src;
     }
 
-    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), pSrc, &offsetRect, texture.angle, nullptr,
+    SDL_RenderCopyExF(_renderer, texture.getSDL(), pSrc, &offsetRect, texture.angle, nullptr,
                       flipAxis);
 }
 
@@ -294,7 +294,7 @@ void blit(const Texture& texture, const math::Vec2& position, const Anchor ancho
         break;
     }
 
-    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &rect, texture.angle, nullptr,
+    SDL_RenderCopyExF(_renderer, texture.getSDL(), nullptr, &rect, texture.angle, nullptr,
                       flipAxis);
 }
 

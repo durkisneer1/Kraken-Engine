@@ -9,8 +9,9 @@
 
 namespace kn
 {
+class Surface;
 
-class Texture final
+class Texture
 {
   public:
     /**
@@ -36,6 +37,14 @@ class Texture final
      * @param sdlTexture An SDL texture object.
      */
     explicit Texture(SDL_Texture* sdlTexture);
+
+    /**
+     * @brief Construct a new Texture object from a Surface object.
+     * 
+     * @param surface The surface to load the texture from.
+     * @note If the surface fails to load, a `kn::Exception` will be thrown.
+     */
+    explicit Texture(const Surface& surface);
 
     /**
      * @brief Loads an image from disk.
@@ -98,6 +107,14 @@ class Texture final
                                         int depth = 32);
 
     /**
+     * @brief Load a texture from a Surface object.
+     * 
+     * @param surface The surface to load the texture from.
+     * @return ``true`` when successful, ``false`` on failure.
+     */
+    [[maybe_unused]] bool loadFromSurface(const Surface& surface);
+
+    /**
      * @brief Get the size of the texture.
      *
      * @return The size of the texture.
@@ -113,28 +130,28 @@ class Texture final
 
     /**
      * @brief Set the rgb mods for the texture.
-     * 
+     *
      * @param colorMod The values to multiply texture color pixels by during rendering.
      */
     void setColorMod(Color colorMod) const;
 
     /**
      * @brief Get the rgb mods for the texture.
-     * 
+     *
      * @return The values used to multiply texture color pixels during rendering.
      */
     Color getColorMod() const;
 
     /**
      * @brief Set the alpha mod for the texture.
-     * 
+     *
      * @param alphaMod The value to multiply texture pixel alpha values by during rendering.
      */
     void setAlphaMod(uint8_t alphaMod) const;
 
     /**
      * @brief Get the alpha mod for the texture.
-     * 
+     *
      * @return The value used to multiply texture pixel alpha values during rendering.
      */
     uint8_t getAlphaMod() const;
@@ -144,12 +161,9 @@ class Texture final
      *
      * @return The SDL texture pointer.
      */
-    [[nodiscard]] SDL_Texture* getSDLTexture() const;
+    [[nodiscard]] SDL_Texture* getSDL() const;
 
-  private:
+  protected:
     SDL_Texture* texture = nullptr;
-    Rect rect = {};
-
-    void query();
 };
 } // namespace kn

@@ -74,6 +74,14 @@ int main()
     kn::Timer timer(2.0);
     timer.start();
 
+    kn::Surface surf("../example/assets/player_idle.png");
+    kn::Texture texA(surf);
+    kn::Rect rectA = texA.getRect();
+    kn::Texture texB(surf);
+    kn::Rect rectB = texB.getRect();
+    kn::Mask maskA(surf);
+    kn::Mask maskB(surf);
+
     kn::Event event;
     while (kn::window::isOpen())
     {
@@ -103,6 +111,15 @@ int main()
 
         auto drawPos = easeAnim.update(dt);
         kn::draw::circle(drawPos, 4, kn::color::WHITE);
+
+        rectA.center(kn::window::getSize() / 2);
+        rectB.center(kn::mouse::getPos());
+        if (rectA.collideRect(rectB) && maskA.collideMask(maskB, rectB.center() - rectA.center()))
+            texA.setColorMod({255, 0, 0});
+        else
+            texA.setColorMod({255, 255, 255});
+        kn::window::blit(texA, rectA);
+        kn::window::blit(texB, rectB);
 
         kn::window::flip();
     }

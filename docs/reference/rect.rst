@@ -1,10 +1,6 @@
 Rect
 ====
 
-.. warning::
-
-    This class may undergo changes in the near future.
-
 Description
 -----------
 
@@ -23,10 +19,8 @@ Usage
 .. raw:: html
 
     <div class="highlight"><pre>
-    <span class="c1">// Instantiate a Rect.</span>
+    <span class="c1">// Instantiate two Rect's.</span>
     <span class="nc">kn</span>::<span class="nc">Rect</span> <span class="n">rectA</span> <span class="o">=</span> <span class="p">{</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">};</span>
-
-    <span class="c1">// Instantiate another Rect.</span>
     <span class="nc">kn</span>::<span class="nc">Rect</span> <span class="n">rectB</span> <span class="o">=</span> <span class="p">{</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">};</span>
 
     <span class="c1">// Check if they collide.</span>
