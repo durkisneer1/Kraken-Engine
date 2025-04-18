@@ -34,6 +34,16 @@ class Mask
     bool collideMask(const Mask& other, const math::Vec2& offset) const;
 
     /**
+     * @brief Check if the mask collides with another mask at the given rectangles.
+     * 
+     * @param other The other mask to check for collision with.
+     * @param rectA The rectangle of the first mask.
+     * @param rectB The rectangle of the second mask.
+     * @return ``true`` if the masks collide, ``false`` otherwise.
+     */
+    bool collideMask(const Mask& other, const Rect& rectA, const Rect& rectB) const;
+
+    /**
      * @brief Get whether the pixel is opaque or transparent. The threshold is taken into account.
      *
      * @param x The x coordinate of the pixel.

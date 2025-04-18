@@ -25,17 +25,17 @@ namespace window
  *
  * @param resolution The size of the window.
  * @param title The title of the window.
- * @param scale The scale of the window.
+ * @param scaled Whether to scale the window to fit the largest resolution.
  *
- * @return Whether the window was successfully initialized.
+ * @return ``true`` if the window was created successfully, ``false`` otherwise.
  */
 [[maybe_unused]] bool init(const math::Vec2& resolution, const std::string& title = "Kraken Window",
-                           int scale = 1);
+                           bool scaled = false);
 
 /**
  * @brief Get whether the window is open.
  *
- * @return Whether the window is open.
+ * @return ``true`` if the window is open, ``false`` otherwise.
  */
 [[nodiscard]] bool isOpen();
 
@@ -93,7 +93,7 @@ int pollEvent(Event& event);
 /**
  * @brief Get whether the window is fullscreen or not.
  *
- * @return Whether the window is fullscreen or not.
+ * @return ``true`` if the window is fullscreen, ``false`` otherwise.
  */
 [[nodiscard]] bool getFullscreen();
 

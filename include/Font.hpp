@@ -17,8 +17,6 @@ class Font final
      * 
      * @param fileDir The directory of the font file.
      * @param ptSize The point size of the font.
-     *
-     * @note If the font file fails to open, a `kn::Exception` will be thrown.
      */
     Font(const std::string& fileDir, int ptSize);
     Font() = default;

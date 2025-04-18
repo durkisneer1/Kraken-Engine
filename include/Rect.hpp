@@ -95,6 +95,13 @@ struct Rect : SDL_FRect
      */
     void clamp(const Rect& rect);
 
+    /**
+     * @brief Scale the rectangle by a factor.
+     * 
+     * @param factor The factor to scale by.
+     */
+    void scaleBy(float factor);
+
     operator SDL_Rect() const
     {
         return {static_cast<int>(x), static_cast<int>(y), static_cast<int>(w), static_cast<int>(h)};

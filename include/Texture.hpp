@@ -42,7 +42,6 @@ class Texture
      * @brief Construct a new Texture object from a Surface object.
      * 
      * @param surface The surface to load the texture from.
-     * @note If the surface fails to load, a `kn::Exception` will be thrown.
      */
     explicit Texture(const Surface& surface);
 
@@ -50,8 +49,6 @@ class Texture
      * @brief Loads an image from disk.
      *
      * @param filePath Path to the image file.
-     *
-     * @note If the image file fails to load, a `kn::Exception` will be thrown.
      */
     explicit Texture(const std::string& filePath);
 
@@ -69,8 +66,6 @@ class Texture
      * @param pixelData The pixel data.
      * @param size The size of the texture.
      * @param depth The depth of the pixel data.
-     *
-     * @note If the pixel data fails to load, a `kn::Exception` will be thrown.
      */
     Texture(const void* pixelData, const math::Vec2& size, int depth = 32);
 
@@ -115,6 +110,15 @@ class Texture
     [[maybe_unused]] bool loadFromSurface(const Surface& surface);
 
     /**
+     * @brief Load a texture from an SDL texture pointer.
+     *
+     * @param sdlTexture An SDL texture object.
+     *
+     * @return ``true`` when successful, ``false`` on failure.
+     */
+    [[maybe_unused]] bool loadFromSDL(SDL_Texture* sdlTexture);
+
+    /**
      * @brief Get the size of the texture.
      *
      * @return The size of the texture.
@@ -129,32 +133,47 @@ class Texture
     [[nodiscard]] Rect getRect() const;
 
     /**
-     * @brief Set the rgb mods for the texture.
-     *
-     * @param colorMod The values to multiply texture color pixels by during rendering.
+     * @brief Set the color mod (tint) for the texture.
+     * 
+     * @param tint The color to multiply the texture color pixels by during rendering.
      */
-    void setColorMod(Color colorMod) const;
+    void setTint(Color tint) const;
 
     /**
-     * @brief Get the rgb mods for the texture.
-     *
-     * @return The values used to multiply texture color pixels during rendering.
+     * @brief Get the color mod (tint) for the texture.
+     * 
+     * @return The color used to multiply the texture color pixels during rendering. 
      */
-    Color getColorMod() const;
+    Color getTint() const;
 
     /**
      * @brief Set the alpha mod for the texture.
      *
-     * @param alphaMod The value to multiply texture pixel alpha values by during rendering.
+     * @param alpha The value to multiply texture pixel alpha values by during rendering.
      */
-    void setAlphaMod(uint8_t alphaMod) const;
+    void setAlpha(uint8_t alpha) const;
 
     /**
      * @brief Get the alpha mod for the texture.
      *
      * @return The value used to multiply texture pixel alpha values during rendering.
      */
-    uint8_t getAlphaMod() const;
+    uint8_t getAlpha() const;
+
+    /**
+     * @brief Set the texture blend mode to additive blending.
+     */
+    void makeAdditive() const;
+
+    /**
+     * @brief Set the texture blend mode to multiplicative blending.
+     */
+    void makeMultiply() const;
+
+    /**
+     * @brief Set the texture blend mode to normal (blend) blending.
+     */
+    void makeNormal() const;
 
     /**
      * @brief Get the SDL texture pointer.

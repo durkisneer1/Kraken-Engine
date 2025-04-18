@@ -19,7 +19,7 @@ Usage
 
     <div class="highlight"><pre>
     <span class="c1">// Create a 16x16 surface then fill it with red color.</span>
-    <span class="nc">kn</span>::<span class="nc">Surface</span> <span class="n">surface</span><span class="p">(</span><span class="p">{</span><span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">}</span><span class="p">);</span>
+    <span class="nc">kn</span>::<span class="nc">Surface</span> <span class="n">surface</span><span class="p">(</span><span class="nc">kn</span>::<span class="nc">Vec2</span><span class="p">{</span><span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">}</span><span class="p">);</span>
     <span class="n">surface</span><span class="p">.</span><span class="nf">fill</span><span class="p">(</span><span class="nc">kn</span>::<span class="nc">color</span>::<span class="n">RED</span><span class="p">);</span>
 
     <span class="c1">// Get a rect representing the surface dimensions.</span>

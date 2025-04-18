@@ -51,7 +51,7 @@ void point(const math::Vec2& point, const Color& color);
  * @param color The color of the circle.
  * @param thickness The thickness of the circle.
  *
- * @note If `thickness` remains 0 or is given a value 0 or less, the circle will be filled.
+ * @note If `thickness` is a value of 0 or less, the circle will be filled.
  * A `radius` of 0 or less will not draw anything.
  */
 void circle(const math::Vec2& center, int radius, const Color& color, int thickness = 0);

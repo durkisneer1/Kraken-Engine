@@ -25,7 +25,11 @@ Texture::Texture(const void* pixelData, const math::Vec2& size, int depth)
         throw Exception("Failed to load texture from pixel data");
 }
 
-Texture::Texture(SDL_Texture* sdlTexture) : texture(sdlTexture) {}
+Texture::Texture(SDL_Texture* sdlTexture)
+{
+    if (!loadFromSDL(sdlTexture))
+        throw Exception("Failed to load texture from SDL texture");
+}
 
 Texture::Texture(const Surface& surface)
 {
@@ -164,6 +168,18 @@ bool Texture::loadFromSurface(const Surface& surface)
     return true;
 }
 
+bool Texture::loadFromSDL(SDL_Texture* sdlTexture)
+{
+    if (texture)
+    {
+        SDL_DestroyTexture(texture);
+        texture = nullptr;
+    }
+
+    texture = sdlTexture;
+    return true;
+}
+
 math::Vec2 Texture::getSize() const
 {
     int w, h;
@@ -178,27 +194,30 @@ Rect Texture::getRect() const
     return {0, 0, w, h};
 }
 
-void Texture::setColorMod(Color colorMod) const
-{
-    SDL_SetTextureColorMod(texture, colorMod.r, colorMod.g, colorMod.b);
-}
+SDL_Texture* Texture::getSDL() const { return texture; }
 
-Color Texture::getColorMod() const
+void Texture::setTint(Color tint) const { SDL_SetTextureColorMod(texture, tint.r, tint.g, tint.b); }
+
+Color Texture::getTint() const
 {
     Color colorMod;
     SDL_GetTextureColorMod(texture, &colorMod.r, &colorMod.g, &colorMod.b);
     return colorMod;
 }
 
-void Texture::setAlphaMod(uint8_t alphaMod) const { SDL_SetTextureAlphaMod(texture, alphaMod); }
+void Texture::setAlpha(uint8_t alpha) const { SDL_SetTextureAlphaMod(texture, alpha); }
 
-uint8_t Texture::getAlphaMod() const
+uint8_t Texture::getAlpha() const
 {
     uint8_t alphaMod;
     SDL_GetTextureAlphaMod(texture, &alphaMod);
     return alphaMod;
 }
 
-SDL_Texture* Texture::getSDL() const { return texture; }
+void Texture::makeAdditive() const { SDL_SetTextureBlendMode(texture, SDL_BLENDMODE_ADD); }
+
+void Texture::makeMultiply() const { SDL_SetTextureBlendMode(texture, SDL_BLENDMODE_MUL); }
+
+void Texture::makeNormal() const { SDL_SetTextureBlendMode(texture, SDL_BLENDMODE_BLEND); }
 
 } // namespace kn

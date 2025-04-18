@@ -4,7 +4,7 @@
 // clang-format off
 int main()
 {
-    kn::window::init({320, 180}, "Night Terror", 4);
+    kn::window::init({320, 180}, "Night Terror", true);
     // kn::window::setFullscreen(true);
     kn::Clock clock;
     kn::camera = {-32, -26};
@@ -12,8 +12,8 @@ int main()
     constexpr kn::Color bgColor = {21, 18, 37, 255};
 
     kn::Texture pidle("../example/assets/player_idle.png");
-    pidle.setColorMod({255, 0, 0});
-    pidle.setAlphaMod(100);
+    pidle.setTint({255, 0, 0});
+    pidle.setAlpha(100);
 
     // Bind player movement controls
     kn::input::bind(
@@ -75,12 +75,18 @@ int main()
     timer.start();
 
     kn::Surface surf("../example/assets/player_idle.png");
+    // kn::Surface surf(kn::Vec2{16, 16});
+    // surf.fill(kn::color::RED);
+    kn::Surface transSurf = kn::transform::invert(surf);
     kn::Texture texA(surf);
+    texA.makeAdditive();
     kn::Rect rectA = texA.getRect();
-    kn::Texture texB(surf);
+    kn::Texture texB(transSurf);
     kn::Rect rectB = texB.getRect();
     kn::Mask maskA(surf);
-    kn::Mask maskB(surf);
+    kn::Mask maskB(transSurf);
+
+    int circleRadius = 10;
 
     kn::Event event;
     while (kn::window::isOpen())
@@ -112,14 +118,22 @@ int main()
         auto drawPos = easeAnim.update(dt);
         kn::draw::circle(drawPos, 4, kn::color::WHITE);
 
-        rectA.center(kn::window::getSize() / 2);
-        rectB.center(kn::mouse::getPos());
-        if (rectA.collideRect(rectB) && maskA.collideMask(maskB, rectB.center() - rectA.center()))
-            texA.setColorMod({255, 0, 0});
-        else
-            texA.setColorMod({255, 255, 255});
-        kn::window::blit(texA, rectA);
-        kn::window::blit(texB, rectB);
+        // rectA.center(kn::window::getSize() / 2);
+        // rectB.center(kn::mouse::getPos());
+        // if (rectA.collideRect(rectB) && maskA.collideMask(maskB, rectA, rectB))
+        //     texA.setTint({255, 0, 0});
+        // else
+        //     texA.setTint({255, 255, 255});
+        // kn::window::blit(texA, rectA);
+        // kn::window::blit(texB, rectB);
+
+        // kn::draw::line({0, 0}, kn::mouse::getPos(), {255, 255, 40, 100}, 4);
+        // kn::draw::rect({kn::mouse::getPos(), {16, 16}}, {255, 255, 40, 100});
+        if (kn::key::isJustPressed(kn::S_o))
+            circleRadius--;
+        if (kn::key::isJustPressed(kn::S_p))
+            circleRadius++;
+        kn::draw::circle(kn::mouse::getPos(), circleRadius, {255, 255, 40, 100});
 
         kn::window::flip();
     }

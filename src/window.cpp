@@ -15,7 +15,7 @@ static SDL_Renderer* _renderer;
 static SDL_Window* _window;
 static bool _isOpen;
 
-bool init(const math::Vec2& resolution, const std::string& title, const int scale)
+bool init(const math::Vec2& resolution, const std::string& title, const bool scaled)
 {
     if (_renderer)
     {
@@ -55,8 +55,27 @@ bool init(const math::Vec2& resolution, const std::string& title, const int scal
 
     const int resolutionWidth = static_cast<int>(resolution.x);
     const int resolutionHeight = static_cast<int>(resolution.y);
+    if (resolutionWidth <= 0 || resolutionHeight <= 0)
+    {
+        FATAL("Resolution must be greater than 0")
+        return false;
+    }
+
+    int scale = 1;
+    if (scaled)
+    {
+        SDL_DisplayMode dm;
+        SDL_GetDesktopDisplayMode(0, &dm);
+
+        int scaleX = dm.w / resolutionWidth;
+        int scaleY = dm.h / resolutionHeight;
+        scale = std::max(1, std::min(scaleX, scaleY)); // at least 1× scale
+    }
+    int winW = resolutionWidth * scale;
+    int winH = resolutionHeight * scale;
+
     _window = SDL_CreateWindow("Kraken Window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-                               resolutionWidth * scale, resolutionHeight * scale, SDL_WINDOW_SHOWN);
+                               winW, winH, SDL_WINDOW_SHOWN);
     if (!_window)
     {
         FATAL("SDL_CreateWindow Error: " + std::string(SDL_GetError()))
@@ -227,8 +246,8 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
 
     if (srcRect.size() == math::Vec2())
     {
-        SDL_RenderCopyExF(_renderer, texture.getSDL(), nullptr, &offsetRect, texture.angle,
-                          nullptr, flipAxis);
+        SDL_RenderCopyExF(_renderer, texture.getSDL(), nullptr, &offsetRect, texture.angle, nullptr,
+                          flipAxis);
         return;
     }
 

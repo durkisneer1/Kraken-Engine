@@ -20,4 +20,5 @@
 #include "Texture.hpp"
 #include "TileMap.hpp"
 #include "Time.hpp"
+#include "Transform.hpp"
 #include "Window.hpp"

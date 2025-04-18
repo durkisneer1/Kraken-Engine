@@ -23,6 +23,14 @@ Surface::Surface(const std::string& filePath)
     }
 }
 
+Surface::Surface(SDL_Surface* sdlSurface)
+{
+    if (!loadFromSDL(sdlSurface))
+    {
+        throw Exception("Failed to load surface from SDL_Surface pointer");
+    }
+}
+
 Surface::~Surface()
 {
     if (surface)
@@ -59,6 +67,15 @@ bool Surface::create(const math::Vec2& size)
 
     surface = SDL_CreateRGBSurfaceWithFormat(0, static_cast<int>(size.x), static_cast<int>(size.y),
                                              32, SDL_PIXELFORMAT_RGBA32);
+    return surface != nullptr;
+}
+
+bool Surface::loadFromSDL(SDL_Surface* sdlSurface)
+{
+    if (surface)
+        SDL_FreeSurface(surface);
+
+    surface = SDL_ConvertSurfaceFormat(sdlSurface, SDL_PIXELFORMAT_RGBA32, 0);
     return surface != nullptr;
 }
 

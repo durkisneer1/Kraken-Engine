@@ -54,3 +54,8 @@ bool Mask::collideMask(const Mask& other, const math::Vec2& offset) const
 
     return false;
 }
+
+bool Mask::collideMask(const Mask& other, const Rect& rectA, const Rect& rectB) const
+{
+    return collideMask(other, rectA.topLeft() - rectB.topLeft());
+}

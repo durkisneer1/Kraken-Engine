@@ -20,7 +20,7 @@ Usage
     <span class="nc">kn</span>::<span class="nc">Texture</span> <span class="n">colorTexture</span><span class="p">(</span><span class="p">{</span><span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">}</span><span class="p">,</span> <span class="nc">kn</span>::<span class="nc">color</span>::<span class="n">RED</span><span class="p">);</span>
 
     <span class="c1">// Flip the image texture horizontally and rotate it 30 degrees.</span>
-    <span class="n">imageTexture</span>.<span class="n">flip</span>.<span class="n">x</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="n">imageTexture</span>.<span class="n">flip</span>.<span class="n">h</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
     <span class="n">imageTexture</span>.<span class="n">angle</span> <span class="o">=</span> <span class="mf">30.0</span><span class="p">;</span>
 
     <span class="c1">// Draw the textures.</span>

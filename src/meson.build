@@ -19,5 +19,6 @@ sources = [
     'src/texture.cpp',
     'src/tile_map.cpp',
     'src/time.cpp',
+    'src/transform.cpp',
     'src/window.cpp',
 ] + gfx_src
