@@ -3,14 +3,15 @@
 #include <SDL.h>
 #include <string>
 
-#include "Constants.hpp"
 #include "Math.hpp"
 #include "Rect.hpp"
 
 namespace kn
 {
+class Surface;
+struct Color;
 
-class Texture final
+class Texture
 {
   public:
     /**
@@ -38,11 +39,16 @@ class Texture final
     explicit Texture(SDL_Texture* sdlTexture);
 
     /**
+     * @brief Construct a new Texture object from a Surface object.
+     * 
+     * @param surface The surface to load the texture from.
+     */
+    explicit Texture(const Surface& surface);
+
+    /**
      * @brief Loads an image from disk.
      *
      * @param filePath Path to the image file.
-     *
-     * @note If the image file fails to load, a `kn::Exception` will be thrown.
      */
     explicit Texture(const std::string& filePath);
 
@@ -52,7 +58,7 @@ class Texture final
      * @param size The size of the texture.
      * @param color The color of the texture.
      */
-    Texture(const math::Vec2& size, Color color);
+    Texture(const math::Vec2& size, const Color& color);
 
     /**
      * @brief Load a texture from an array of pixel data.
@@ -60,8 +66,6 @@ class Texture final
      * @param pixelData The pixel data.
      * @param size The size of the texture.
      * @param depth The depth of the pixel data.
-     *
-     * @note If the pixel data fails to load, a `kn::Exception` will be thrown.
      */
     Texture(const void* pixelData, const math::Vec2& size, int depth = 32);
 
@@ -83,7 +87,7 @@ class Texture final
      * @param size The size of the texture.
      * @param color The color of the texture.
      */
-    [[maybe_unused]] bool create(const math::Vec2& size, Color color);
+    [[maybe_unused]] bool create(const math::Vec2& size, const Color& color);
 
     /**
      * @brief Load a texture from an array of pixel data.
@@ -96,6 +100,23 @@ class Texture final
      */
     [[maybe_unused]] bool loadFromArray(const void* pixelData, const math::Vec2& size,
                                         int depth = 32);
+
+    /**
+     * @brief Load a texture from a Surface object.
+     * 
+     * @param surface The surface to load the texture from.
+     * @return ``true`` when successful, ``false`` on failure.
+     */
+    [[maybe_unused]] bool loadFromSurface(const Surface& surface);
+
+    /**
+     * @brief Load a texture from an SDL texture pointer.
+     *
+     * @param sdlTexture An SDL texture object.
+     *
+     * @return ``true`` when successful, ``false`` on failure.
+     */
+    [[maybe_unused]] bool loadFromSDL(SDL_Texture* sdlTexture);
 
     /**
      * @brief Get the size of the texture.
@@ -112,44 +133,56 @@ class Texture final
     [[nodiscard]] Rect getRect() const;
 
     /**
-     * @brief Set the rgb mods for the texture.
+     * @brief Set the color mod (tint) for the texture.
      * 
-     * @param colorMod The values to multiply texture color pixels by during rendering.
+     * @param tint The color to multiply the texture color pixels by during rendering.
      */
-    void setColorMod(Color colorMod) const;
+    void setTint(const Color& tint) const;
 
     /**
-     * @brief Get the rgb mods for the texture.
+     * @brief Get the color mod (tint) for the texture.
      * 
-     * @return The values used to multiply texture color pixels during rendering.
+     * @return The color used to multiply the texture color pixels during rendering. 
      */
-    Color getColorMod() const;
+    Color getTint() const;
 
     /**
      * @brief Set the alpha mod for the texture.
-     * 
-     * @param alphaMod The value to multiply texture pixel alpha values by during rendering.
+     *
+     * @param alpha The value to multiply texture pixel alpha values by during rendering.
      */
-    void setAlphaMod(uint8_t alphaMod) const;
+    void setAlpha(uint8_t alpha) const;
 
     /**
      * @brief Get the alpha mod for the texture.
-     * 
+     *
      * @return The value used to multiply texture pixel alpha values during rendering.
      */
-    uint8_t getAlphaMod() const;
+    uint8_t getAlpha() const;
+
+    /**
+     * @brief Set the texture blend mode to additive blending.
+     */
+    void makeAdditive() const;
+
+    /**
+     * @brief Set the texture blend mode to multiplicative blending.
+     */
+    void makeMultiply() const;
+
+    /**
+     * @brief Set the texture blend mode to normal (blend) blending.
+     */
+    void makeNormal() const;
 
     /**
      * @brief Get the SDL texture pointer.
      *
      * @return The SDL texture pointer.
      */
-    [[nodiscard]] SDL_Texture* getSDLTexture() const;
+    [[nodiscard]] SDL_Texture* getSDL() const;
 
-  private:
+  protected:
     SDL_Texture* texture = nullptr;
-    Rect rect = {};
-
-    void query();
 };
 } // namespace kn

@@ -3,22 +3,19 @@
 #include <SDL_ttf.h>
 #include <string>
 
-#include "Constants.hpp"
-
 namespace kn
 {
 class Texture;
+struct Color;
 
 class Font final
 {
   public:
     /**
      * @brief Construct a font from a file.
-     * 
+     *
      * @param fileDir The directory of the font file.
      * @param ptSize The point size of the font.
-     *
-     * @note If the font file fails to open, a `kn::Exception` will be thrown.
      */
     Font(const std::string& fileDir, int ptSize);
     Font() = default;
@@ -26,10 +23,10 @@ class Font final
 
     /**
      * @brief Open a font from a file.
-     * 
+     *
      * @param fileDir The directory of the font file.
      * @param ptSize The point size of the font.
-     * 
+     *
      * @return ``true`` if the font was opened successfully, ``false`` otherwise.
      */
     [[maybe_unused]] bool openFromFile(const std::string& fileDir, int ptSize);
@@ -45,7 +42,7 @@ class Font final
      * @return The generated texture object.
      * If a font has not been opened, an empty texture will be returned.
      */
-    [[nodiscard]] Texture render(const std::string& text, bool antialias, Color color,
+    [[nodiscard]] Texture render(const std::string& text, bool antialias, const Color& color,
                                  int wrapLength = 0) const;
 
   private:

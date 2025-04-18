@@ -4,16 +4,15 @@
 // clang-format off
 int main()
 {
-    kn::window::init({320, 180}, "Night Terror", 4);
-    // kn::window::setFullscreen(true);
+    kn::window::init({320, 180}, "Night Terror", true);
     kn::Clock clock;
     kn::camera = {-32, -26};
 
     constexpr kn::Color bgColor = {21, 18, 37, 255};
 
     kn::Texture pidle("../example/assets/player_idle.png");
-    pidle.setColorMod({255, 0, 0});
-    pidle.setAlphaMod(100);
+    pidle.setTint({255, 0, 0});
+    pidle.setAlpha(100);
 
     // Bind player movement controls
     kn::input::bind(
@@ -34,7 +33,7 @@ int main()
         "jump",
         {
             kn::InputAction(kn::S_SPACE),
-            kn::InputAction(kn::C_A),
+            kn::InputAction(kn::C_SOUTH),
         }
     );
 
@@ -74,25 +73,35 @@ int main()
     kn::Timer timer(2.0);
     timer.start();
 
+    kn::Surface surf("../example/assets/player_idle.png");
+    // kn::Surface surf(kn::Vec2{16, 16});
+    // surf.fill(kn::color::RED);
+    kn::Surface transSurf = kn::transform::invert(surf);
+    kn::Texture texA(surf);
+    texA.makeAdditive();
+    kn::Rect rectA = texA.getRect();
+    kn::Texture texB(transSurf);
+    kn::Rect rectB = texB.getRect();
+    kn::Mask maskA(surf);
+    kn::Mask maskB(transSurf);
+
+    int circleRadius = 10;
+
+    kn::Font font("kraken-retro", 8);
+    kn::Texture score = font.render("Points: 0", false, kn::color::WHITE);
+
     kn::Event event;
     while (kn::window::isOpen())
     {
         const double dt = clock.tick(240);
 
-        while (kn::window::pollEvent(event))
-        {
-            if (event.type == kn::KEYDOWN)
-            {
-                if (event.key.keysym.sym == kn::K_ESCAPE)
-                {
-                    kn::window::close();
-                }
-                else if (event.key.keysym.sym == kn::K_v)
-                {
-                    easeAnim.reverse();
-                }
-            }
-        }
+        while (kn::window::pollEvent(event)) {}
+        
+        if (kn::key::isPressed(kn::K_ESC))
+            kn::window::close();
+
+        if (kn::key::isJustReleased(kn::S_r))
+            easeAnim.reverse();
 
         // Camera panning
         const auto cameraPanDirection = kn::input::getDirection("pan_left", "pan_right", "pan_up", "pan_down");
@@ -111,13 +120,26 @@ int main()
         auto drawPos = easeAnim.update(dt);
         kn::draw::circle(drawPos, 4, kn::color::WHITE);
 
-        kn::window::flip();
+        // rectA.center(kn::window::getSize() / 2);
+        // rectB.center(kn::mouse::getPos());
+        // if (rectA.collideRect(rectB) && maskA.collideMask(maskB, rectA, rectB))
+        //     texA.setTint({255, 0, 0});
+        // else
+        //     texA.setTint({255, 255, 255});
+        // kn::window::blit(texA, rectA);
+        // kn::window::blit(texB, rectB);
 
-        if (timer.isFinished())
-        {
-            std::cout << "timer done!\n";
-            timer.start();
-        }
+        // kn::draw::line({0, 0}, kn::mouse::getPos(), {255, 255, 40, 100}, 4);
+        // kn::draw::rect({kn::mouse::getPos(), {16, 16}}, {255, 255, 40, 100});
+        if (kn::key::isJustPressed(kn::S_o))
+            circleRadius--;
+        if (kn::key::isJustPressed(kn::S_p))
+            circleRadius++;
+        kn::draw::circle(kn::mouse::getPos(), circleRadius, {255, 255, 40, 100});
+
+        kn::window::blit(score);
+
+        kn::window::flip();
     }
 
     kn::window::quit();

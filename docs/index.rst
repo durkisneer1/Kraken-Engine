@@ -1,35 +1,58 @@
-Kraken Engine Docs
-==================
+Kraken Engine Documentation
+===========================
 
-The **Kraken Engine** is a robust extension to *SDL2*, designed to strike a balance between high- and low-level control in game development.
-It supports input handling, audio management, and extra utilities like tile maps and animation controllers.
+**Kraken Engine** is a fast, lightweight 2D game framework built on top of *SDL2*. It's designed to offer just the right balance between high-level convenience and low-level control, making it ideal for both hobbyists and experienced developers.
 
-About
------
+Whether you're crafting a minimalist arcade game or building a fully-featured side-scrolling adventure, Kraken gives you the tools to develop confidently and creatively.
 
-This documentation provides a comprehensive guide to the Kraken Engine, catering to developers with a foundational understanding of C++.
-As the engine evolves, it will also become increasingly accessible to beginners, with a friendlier API and enhanced documentation.
+Overview
+--------
 
-Future of Kraken Engine
------------------------
+Kraken expands upon SDL2 with a rich set of utilities tailored for game development.
+It wraps common patterns into intuitive systems while keeping you close to the metal when you need to be.
+Features include:
 
-Planned features for the Kraken Engine include implementing essential mathematical tools like pathfinding, ray casting, and a built-in physics engine.
-These additions will further expand the engine’s capabilities and make it a one-stop solution for 2D game development.
+- 🎮 **Unified Input System** – A clean abstraction over keyboard, mouse, and controller input with support for just-pressed and just-released logic, input rebinding, and axis detection.
+- 🧭 **Animation Controller** – Effortlessly manage sprite sheet animations with flexible frame control and transitions.
+- 🧱 **Tile Map Support** – Load and render Tiled TMX maps with support for layers, object groups, and tile flipping.
+- 🔊 **Audio Management** – Stream music, trigger sound effects, and adjust volume levels with simple API calls.
+- 🧮 **Math Utilities** – Includes custom Vec2, easing functions, time utilities, and other game-dev math helpers.
+- 🧊 **Image Masking** – Perform pixel-perfect collision detection using masks for precise gameplay logic.
 
-Advanced Features
------------------
+Getting Started
+---------------
 
-The Kraken Engine stands out with its:
+If you're new to Kraken, the best place to begin is the :doc:`getting_started/installation` guide.
+The engine is written in modern C++ and requires a basic understanding of the language.
+Over time, the API is evolving to be even more beginner-friendly.
 
-- **Animation Controller Class**: A utility for managing sprite sheet animations efficiently.
-- **Tile Map Class**: Simplifying the process of loading, rendering, and managing tile maps.
+Planned Features
+----------------
 
-Community
----------
+Kraken is actively growing. Upcoming additions include:
 
-Join our `Discord <https://discord.gg/GyyddE7AD5>`_ to connect with fellow developers, share your projects, and contribute to the Kraken Engine.
+- A 2D **physics engine** with collision detection and response
+- Built-in **pathfinding** (A*, grid-based nav)
+- Basic **raycasting**
+- A **modular UI system** (planned)
+- Multiplayer/networking utilities
 
-We’re excited to see how you push the boundaries of creativity with the Kraken Engine!
+The goal is to offer a full development toolkit while staying simple, performant, and hackable.
+
+Community & Support
+-------------------
+
+Join the `Discord Community <https://discord.gg/GyyddE7AD5>`_ to connect with other developers, get help, or contribute to the engine.
+Kraken is a solo passion project with an open-source spirit — contributions and feedback are always welcome!
+
+Showcase
+--------
+
+Curious what others have made with Kraken Engine?  
+Check out the top entries from our :doc:`most recent game jam <showcase/springjam25>`.
+
+These projects highlight the creativity and flexibility Kraken offers.
+Want to be featured? Submit your game to the next jam or share it on our Discord!
 
 .. toctree::
     :hidden:
@@ -38,6 +61,13 @@ We’re excited to see how you push the boundaries of creativity with the Kraken
 
     getting_started/installation
     getting_started/create_window
+
+.. toctree::
+    :hidden:
+    :maxdepth: 1
+    :caption: Showcase
+    
+    showcase/springjam25
 
 .. toctree::
     :hidden:
@@ -63,10 +93,13 @@ We’re excited to see how you push the boundaries of creativity with the Kraken
 
     reference/animation_controller
     reference/font
+    reference/mask
     reference/rect
     reference/sound
+    reference/surface
     reference/texture
     reference/tile_map
+    reference/color
     reference/constants
     reference/controller
     reference/draw
@@ -77,4 +110,5 @@ We’re excited to see how you push the boundaries of creativity with the Kraken
     reference/mouse
     reference/music
     reference/time
+    reference/transform
     reference/window

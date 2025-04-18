@@ -149,7 +149,7 @@ class AnimationController final
     /**
      * @brief Resume the animation.
      *
-     * @note Will not do anything if fps is set to ``0``.
+     * Will not do anything if fps is set to ``0``.
      */
     void resume();
 

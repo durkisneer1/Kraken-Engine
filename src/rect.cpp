@@ -27,6 +27,15 @@ void Rect::clamp(const math::Vec2& min, const math::Vec2& max)
 
 void Rect::clamp(const Rect& rect) { clamp(rect.topLeft(), rect.bottomRight()); }
 
+void Rect::scaleBy(const float factor)
+{
+    if (factor < 0.f || factor == 1.f)
+        return;
+
+    w *= factor;
+    h *= factor;
+}
+
 // Setters
 void Rect::size(const math::Vec2& size)
 {

@@ -1,5 +1,6 @@
 #pragma once
 
+#include <SDL.h>
 #include <chrono>
 
 namespace kn
@@ -10,7 +11,7 @@ namespace time
 class Clock final
 {
   public:
-    Clock();
+    Clock() = default;
     ~Clock() = default;
 
     /**
@@ -22,8 +23,17 @@ class Clock final
      */
     [[maybe_unused]] double tick(int frameRate = 60);
 
+    /**
+     * @brief Get the current count of frames per second.
+     *
+     * @return The current FPS.
+     */
+    [[nodiscard]] int getFPS();
+
   private:
-    std::chrono::high_resolution_clock::time_point m_last;
+    const double m_frequency = static_cast<double>(SDL_GetPerformanceFrequency());
+    double m_last = static_cast<double>(SDL_GetPerformanceCounter());
+    int m_fps = 0;
 };
 
 class Timer

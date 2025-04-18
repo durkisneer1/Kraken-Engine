@@ -13,8 +13,6 @@ class Sound final
      * Accepts .ogg, .mp3, and .wav files.
      *
      * @param fileDir The directory of the sound file.
-     *
-     * @note If the sound file fails to load, a `kn::Exception` will be thrown.
      */
     explicit Sound(const std::string& fileDir);
     Sound() = default;

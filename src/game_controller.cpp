@@ -60,8 +60,12 @@ bool isPressed(const ControllerButton button)
     return SDL_GameControllerGetButton(_controller, button);
 }
 
-void setControllerDeadZone(const float deadZone) { _deadZone = std::clamp(deadZone, 0.0f, 1.0f); }
+bool isJustPressed(const ControllerButton button) { return g_controllerPressed[button]; }
 
-float getControllerDeadZone() { return _deadZone; }
+bool isJustReleased(const ControllerButton button) { return g_controllerReleased[button]; }
+
+void setDeadZone(const float deadZone) { _deadZone = std::clamp(deadZone, 0.0f, 1.0f); }
+
+float getDeadZone() { return _deadZone; }
 
 } // namespace kn::controller

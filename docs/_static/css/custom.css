@@ -698,7 +698,8 @@ footer {
     margin-left: 0 !important;
 }
 
-.rst-content .cpp.enum>dd>p {
+.rst-content .cpp.enum>dd>p,
+.rst-content .cpp.enum-class>dd>p {
     display: none;
 }
 
@@ -2009,7 +2010,7 @@ p+.classref-constant {
 .wy-menu.wy-menu-vertical {
     overflow-y: auto;
     overflow-x: hidden;
-    max-height: calc(100% - 161px);
+    max-height: calc(100% - 190px);
     padding-bottom: 24px;
 }
 

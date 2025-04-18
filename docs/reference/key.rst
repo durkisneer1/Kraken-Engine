@@ -13,18 +13,29 @@ Usage
 .. raw:: html
 
     <div class="highlight"><pre>
-    <span class="c1">// Get all currently pressed keys.</span>
-    <span class="k">const</span> <span class="k">auto</span><span class="o">*</span> <span class="n">keys</span> <span class="o">=</span> <span class="nc">kn</span>::<span class="nc">key</span>::<span class="nf">getPressed</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
-
-    <span class="c1">// Check if the 'W' key is pressed.</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">keys</span><span class="p">[</span><span class="nc">kn</span>::<span class="n">S_w</span><span class="p">]</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Check if the 'W' key is currently pressed.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nc">kn</span>::<span class="nc">key</span>::<span class="nf">isPressed</span><span class="p">(</span><span class="nc">kn</span>::<span class="n">S_w</span><span class="p">)</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// Handle 'W' key press.</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Check if the escape key was just pressed.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nc">kn</span>::<span class="nc">key</span>::<span class="nf">isJustPressed</span><span class="p">(</span><span class="nc">kn</span>::<span class="n">K_ESC</span><span class="p">)</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nc">kn</span>::<span class="nc">window</span>::<span class="nf">close</span><span class="p">(</span><span class="p">);</span>
     <span class="p">}</span>
     </pre></div>
 
 Functions
 ---------
 
-.. doxygenfunction:: kn::key::getPressed
+.. doxygenfunction:: kn::key::isPressed(Scancode)
 
-.. note:: Functions for getting keys that were just pressed or just released are planned for the future.
+.. doxygenfunction:: kn::key::isPressed(Keycode)
+
+.. doxygenfunction:: kn::key::isJustPressed(Scancode)
+
+.. doxygenfunction:: kn::key::isJustPressed(Keycode)
+
+.. doxygenfunction:: kn::key::isJustReleased(Scancode)
+
+.. doxygenfunction:: kn::key::isJustReleased(Keycode)
+

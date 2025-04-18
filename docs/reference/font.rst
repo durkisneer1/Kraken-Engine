@@ -6,6 +6,10 @@ Description
 
 The **Font** class is used to load ttf fonts and render textures containing text.
 
+**NEW!**
+Kraken provides default fonts under the names ``"kraken-clean"`` and ``"kraken-retro"``.
+Pass these names into the Font constructor/openFromFile method as ``fileDir`` to use them.
+
 Usage
 -----
 

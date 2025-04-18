@@ -1,6 +1,8 @@
 #include <SDL_image.h>
 #include <SDL_mixer.h>
 #include <SDL_ttf.h>
+#include <inttypes.h>
+#include <vector>
 
 #include "ErrorLogger.hpp"
 #include "Math.hpp"
@@ -9,13 +11,15 @@
 #include "Window.hpp"
 #include "_globals.hpp"
 
+#include "icon/kraken_icon.h"
+
 namespace kn::window
 {
 static SDL_Renderer* _renderer;
 static SDL_Window* _window;
 static bool _isOpen;
 
-bool init(const math::Vec2& resolution, const std::string& title, const int scale)
+bool init(const math::Vec2& resolution, const std::string& title, const bool scaled)
 {
     if (_renderer)
     {
@@ -55,8 +59,27 @@ bool init(const math::Vec2& resolution, const std::string& title, const int scal
 
     const int resolutionWidth = static_cast<int>(resolution.x);
     const int resolutionHeight = static_cast<int>(resolution.y);
+    if (resolutionWidth <= 0 || resolutionHeight <= 0)
+    {
+        FATAL("Resolution must be greater than 0")
+        return false;
+    }
+
+    int scale = 1;
+    if (scaled)
+    {
+        SDL_DisplayMode dm;
+        SDL_GetDesktopDisplayMode(0, &dm);
+
+        int scaleX = dm.w / resolutionWidth;
+        int scaleY = dm.h / resolutionHeight;
+        scale = std::max(1, std::min(scaleX, scaleY)); // at least 1× scale
+    }
+    int winW = resolutionWidth * scale;
+    int winH = resolutionHeight * scale;
+
     _window = SDL_CreateWindow("Kraken Window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-                               resolutionWidth * scale, resolutionHeight * scale, SDL_WINDOW_SHOWN);
+                               winW, winH, SDL_WINDOW_SHOWN);
     if (!_window)
     {
         FATAL("SDL_CreateWindow Error: " + std::string(SDL_GetError()))
@@ -74,7 +97,12 @@ bool init(const math::Vec2& resolution, const std::string& title, const int scal
         SDL_RenderSetLogicalSize(_renderer, resolutionWidth, resolutionHeight);
 
     setTitle(title);
-    // setIcon("../example/assets/kraken_engine_window_icon.png");
+
+    SDL_RWops* rw = SDL_RWFromMem((void*)kraken_icon_png, kraken_icon_png_len);
+    SDL_Surface* icon = IMG_Load_RW(rw, 1); // 1 = auto-free rw after load
+    SDL_SetWindowIcon(_window, icon);
+    SDL_FreeSurface(icon);
+
     SDL_SetRenderDrawBlendMode(_renderer, SDL_BLENDMODE_BLEND);
 
     _isOpen = true;
@@ -82,7 +110,26 @@ bool init(const math::Vec2& resolution, const std::string& title, const int scal
     return true;
 }
 
-bool isOpen() { return _isOpen; }
+bool isOpen()
+{
+    // Clear scancode events
+    std::fill(std::begin(g_scancodePressed), std::end(g_scancodePressed), false);
+    std::fill(std::begin(g_scancodeReleased), std::end(g_scancodeReleased), false);
+
+    // Clear keycode events
+    g_keycodePressed.clear();
+    g_keycodeReleased.clear();
+
+    // Clear mouse events
+    std::fill(std::begin(g_mousePressed), std::end(g_mousePressed), false);
+    std::fill(std::begin(g_mouseReleased), std::end(g_mouseReleased), false);
+
+    // Clear controller events
+    std::fill(std::begin(g_controllerPressed), std::end(g_controllerPressed), false);
+    std::fill(std::begin(g_controllerReleased), std::end(g_controllerReleased), false);
+
+    return _isOpen;
+}
 
 void close() { _isOpen = false; }
 
@@ -132,9 +179,34 @@ int pollEvent(Event& event)
                 _controller = nullptr;
             }
             break;
+        case CONTROLLERBUTTONDOWN:
+            if (_controller && event.cbutton.button < SDL_CONTROLLER_BUTTON_MAX)
+                g_controllerPressed[event.cbutton.button] = true;
+            break;
+        case CONTROLLERBUTTONUP:
+            if (_controller && event.cbutton.button < SDL_CONTROLLER_BUTTON_MAX)
+                g_controllerReleased[event.cbutton.button] = true;
+            break;
         case KEYDOWN:
             if (event.key.keysym.sym == SDLK_F11)
                 setFullscreen(!getFullscreen());
+            if (!event.key.repeat)
+            {
+                g_scancodePressed[event.key.keysym.scancode] = true;
+                g_keycodePressed[event.key.keysym.sym] = true;
+            }
+            break;
+        case KEYUP:
+            g_scancodeReleased[event.key.keysym.scancode] = true;
+            g_keycodeReleased[event.key.keysym.sym] = true;
+            break;
+        case MOUSEBUTTONDOWN:
+            if (event.button.button <= SDL_BUTTON_X2)
+                g_mousePressed[event.button.button - 1] = true;
+            break;
+        case MOUSEBUTTONUP:
+            if (event.button.button <= SDL_BUTTON_X2)
+                g_mouseReleased[event.button.button - 1] = true;
             break;
         default:
             break;
@@ -144,7 +216,7 @@ int pollEvent(Event& event)
     return pending;
 }
 
-void clear(const Color color)
+void clear(const Color& color)
 {
     if (!_renderer)
         WARN("Cannot clear screen before creating the window")
@@ -183,8 +255,8 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
 
     if (srcRect.size() == math::Vec2())
     {
-        SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &offsetRect, texture.angle,
-                          nullptr, flipAxis);
+        SDL_RenderCopyExF(_renderer, texture.getSDL(), nullptr, &offsetRect, texture.angle, nullptr,
+                          flipAxis);
         return;
     }
 
@@ -196,7 +268,7 @@ void blit(const Texture& texture, const Rect& dstRect, const Rect& srcRect)
         pSrc = &src;
     }
 
-    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), pSrc, &offsetRect, texture.angle, nullptr,
+    SDL_RenderCopyExF(_renderer, texture.getSDL(), pSrc, &offsetRect, texture.angle, nullptr,
                       flipAxis);
 }
 
@@ -250,7 +322,7 @@ void blit(const Texture& texture, const math::Vec2& position, const Anchor ancho
         break;
     }
 
-    SDL_RenderCopyExF(_renderer, texture.getSDLTexture(), nullptr, &rect, texture.angle, nullptr,
+    SDL_RenderCopyExF(_renderer, texture.getSDL(), nullptr, &rect, texture.angle, nullptr,
                       flipAxis);
 }
 
@@ -350,6 +422,36 @@ void setIcon(const std::string& path)
 
     SDL_SetWindowIcon(_window, icon);
     SDL_FreeSurface(icon);
+}
+
+bool saveScreenshot(const std::string& filePath)
+{
+    if (!_window || !_renderer)
+    {
+        WARN("Cannot save screenshot before creating the window or renderer")
+        return false;
+    }
+
+    int width, height;
+    SDL_GetRendererOutputSize(_renderer, &width, &height);
+    SDL_Surface* surface =
+        SDL_CreateRGBSurfaceWithFormat(0, width, height, 32, SDL_PIXELFORMAT_RGBA32);
+    if (!surface)
+        return false;
+
+    if (SDL_RenderReadPixels(_renderer, nullptr, surface->format->format, surface->pixels,
+                             surface->pitch) < 0)
+    {
+        SDL_FreeSurface(surface);
+        return false;
+    }
+
+    // Save the surface as PNG
+    bool success = (IMG_SavePNG(surface, filePath.c_str()) == 0);
+    SDL_FreeSurface(surface);
+    return success;
+
+    return true;
 }
 
 } // namespace kn::window

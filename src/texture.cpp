@@ -1,6 +1,8 @@
 #include <SDL_image.h>
 
+#include "Color.hpp"
 #include "Math.hpp"
+#include "Surface.hpp"
 #include "Texture.hpp"
 #include "Window.hpp"
 
@@ -12,7 +14,7 @@ Texture::Texture(const std::string& filePath)
         throw Exception("Failed to load texture from: " + filePath);
 }
 
-Texture::Texture(const math::Vec2& size, const Color color)
+Texture::Texture(const math::Vec2& size, const Color& color)
 {
     if (!create(size, color))
         throw Exception("Failed to create texture");
@@ -24,7 +26,17 @@ Texture::Texture(const void* pixelData, const math::Vec2& size, int depth)
         throw Exception("Failed to load texture from pixel data");
 }
 
-Texture::Texture(SDL_Texture* sdlTexture) : texture(sdlTexture) { query(); }
+Texture::Texture(SDL_Texture* sdlTexture)
+{
+    if (!loadFromSDL(sdlTexture))
+        throw Exception("Failed to load texture from SDL texture");
+}
+
+Texture::Texture(const Surface& surface)
+{
+    if (!loadFromSurface(surface))
+        throw Exception("Failed to load texture from surface");
+}
 
 Texture::~Texture()
 {
@@ -47,12 +59,10 @@ bool Texture::loadFromFile(const std::string& filePath)
         return false;
     }
 
-    query();
-
     return true;
 }
 
-bool Texture::create(const math::Vec2& size, const Color color)
+bool Texture::create(const math::Vec2& size, const Color& color)
 {
     if (texture)
     {
@@ -89,8 +99,6 @@ bool Texture::create(const math::Vec2& size, const Color color)
     }
 
     SDL_FreeSurface(surface);
-
-    query();
 
     return true;
 }
@@ -134,43 +142,86 @@ bool Texture::loadFromArray(const void* pixelData, const math::Vec2& size, int d
         return false;
     }
 
-    query();
+    return true;
+}
+
+bool Texture::loadFromSurface(const Surface& surface)
+{
+    if (!surface.getSDL())
+    {
+        WARN("Surface is null");
+        return false;
+    }
+
+    if (texture)
+    {
+        SDL_DestroyTexture(texture);
+        texture = nullptr;
+    }
+
+    texture = SDL_CreateTextureFromSurface(window::getRenderer(), surface.getSDL());
+    if (!texture)
+    {
+        WARN("Failed to create texture from surface");
+        return false;
+    }
 
     return true;
 }
 
-void Texture::query()
+bool Texture::loadFromSDL(SDL_Texture* sdlTexture)
+{
+    if (texture)
+    {
+        SDL_DestroyTexture(texture);
+        texture = nullptr;
+    }
+
+    texture = sdlTexture;
+    return true;
+}
+
+math::Vec2 Texture::getSize() const
 {
     int w, h;
     SDL_QueryTexture(texture, nullptr, nullptr, &w, &h);
-    this->rect = {0, 0, w, h};
+    return {w, h};
 }
 
-math::Vec2 Texture::getSize() const { return {rect.w, rect.h}; }
-
-Rect Texture::getRect() const { return rect; }
-
-void Texture::setColorMod(Color colorMod) const
+Rect Texture::getRect() const
 {
-    SDL_SetTextureColorMod(texture, colorMod.r, colorMod.g, colorMod.b);
+    int w, h;
+    SDL_QueryTexture(texture, nullptr, nullptr, &w, &h);
+    return {0, 0, w, h};
 }
 
-Color Texture::getColorMod() const
+SDL_Texture* Texture::getSDL() const { return texture; }
+
+void Texture::setTint(const Color& tint) const
+{
+    SDL_SetTextureColorMod(texture, tint.r, tint.g, tint.b);
+}
+
+Color Texture::getTint() const
 {
     Color colorMod;
     SDL_GetTextureColorMod(texture, &colorMod.r, &colorMod.g, &colorMod.b);
     return colorMod;
 }
 
-void Texture::setAlphaMod(uint8_t alphaMod) const { SDL_SetTextureAlphaMod(texture, alphaMod); }
+void Texture::setAlpha(uint8_t alpha) const { SDL_SetTextureAlphaMod(texture, alpha); }
 
-uint8_t Texture::getAlphaMod() const
+uint8_t Texture::getAlpha() const
 {
     uint8_t alphaMod;
     SDL_GetTextureAlphaMod(texture, &alphaMod);
     return alphaMod;
 }
 
-SDL_Texture* Texture::getSDLTexture() const { return texture; }
+void Texture::makeAdditive() const { SDL_SetTextureBlendMode(texture, SDL_BLENDMODE_ADD); }
+
+void Texture::makeMultiply() const { SDL_SetTextureBlendMode(texture, SDL_BLENDMODE_MUL); }
+
+void Texture::makeNormal() const { SDL_SetTextureBlendMode(texture, SDL_BLENDMODE_BLEND); }
 
 } // namespace kn

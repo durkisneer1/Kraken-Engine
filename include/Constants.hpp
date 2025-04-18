@@ -9,21 +9,45 @@ typedef SDL_Keycode Keycode;
 typedef SDL_GameControllerButton ControllerButton;
 typedef SDL_GameControllerAxis ControllerAxis;
 typedef SDL_Event Event;
-typedef SDL_Color Color;
+typedef SDL_EventType EventType;
+
+// Mouse buttons
+enum class MouseButton : uint8_t
+{
+    Left = SDL_BUTTON_LEFT,
+    Middle = SDL_BUTTON_MIDDLE,
+    Right = SDL_BUTTON_RIGHT,
+    Side1 = SDL_BUTTON_X1,
+    Side2 = SDL_BUTTON_X2,
+};
+constexpr MouseButton M_LEFT = MouseButton::Left;
+constexpr MouseButton M_MIDDLE = MouseButton::Middle;
+constexpr MouseButton M_RIGHT = MouseButton::Right;
+constexpr MouseButton M_SIDE1 = MouseButton::Side1;
+constexpr MouseButton M_SIDE2 = MouseButton::Side2;
 
 // Anchor points for rendering
-enum Anchor
+enum class Anchor
 {
-    TOP_LEFT,
-    TOP_MID,
-    TOP_RIGHT,
-    LEFT_MID,
-    CENTER,
-    RIGHT_MID,
-    BOTTOM_LEFT,
-    BOTTOM_MID,
-    BOTTOM_RIGHT
+    TopLeft,
+    TopMid,
+    TopRight,
+    LeftMid,
+    Center,
+    RightMid,
+    BottomLeft,
+    BottomMid,
+    BottomRight
 };
+constexpr Anchor TOP_LEFT = Anchor::TopLeft;
+constexpr Anchor TOP_MID = Anchor::TopMid;
+constexpr Anchor TOP_RIGHT = Anchor::TopRight;
+constexpr Anchor LEFT_MID = Anchor::LeftMid;
+constexpr Anchor CENTER = Anchor::Center;
+constexpr Anchor RIGHT_MID = Anchor::RightMid;
+constexpr Anchor BOTTOM_LEFT = Anchor::BottomLeft;
+constexpr Anchor BOTTOM_MID = Anchor::BottomMid;
+constexpr Anchor BOTTOM_RIGHT = Anchor::BottomRight;
 
 // Scancodes
 constexpr Scancode S_a = SDL_SCANCODE_A;
@@ -52,6 +76,7 @@ constexpr Scancode S_w = SDL_SCANCODE_W;
 constexpr Scancode S_x = SDL_SCANCODE_X;
 constexpr Scancode S_y = SDL_SCANCODE_Y;
 constexpr Scancode S_z = SDL_SCANCODE_Z;
+
 constexpr Scancode S_1 = SDL_SCANCODE_1;
 constexpr Scancode S_2 = SDL_SCANCODE_2;
 constexpr Scancode S_3 = SDL_SCANCODE_3;
@@ -62,15 +87,17 @@ constexpr Scancode S_7 = SDL_SCANCODE_7;
 constexpr Scancode S_8 = SDL_SCANCODE_8;
 constexpr Scancode S_9 = SDL_SCANCODE_9;
 constexpr Scancode S_0 = SDL_SCANCODE_0;
+
 constexpr Scancode S_RETURN = SDL_SCANCODE_RETURN;
-constexpr Scancode S_ESCAPE = SDL_SCANCODE_ESCAPE;
+constexpr Scancode S_ESC = SDL_SCANCODE_ESCAPE;
 constexpr Scancode S_BACKSPACE = SDL_SCANCODE_BACKSPACE;
 constexpr Scancode S_TAB = SDL_SCANCODE_TAB;
 constexpr Scancode S_SPACE = SDL_SCANCODE_SPACE;
+
 constexpr Scancode S_MINUS = SDL_SCANCODE_MINUS;
-constexpr Scancode S_EQUALS = SDL_SCANCODE_EQUALS;
-constexpr Scancode S_LEFTBRACKET = SDL_SCANCODE_LEFTBRACKET;
-constexpr Scancode S_RIGHTBRACKET = SDL_SCANCODE_RIGHTBRACKET;
+constexpr Scancode S_EQ = SDL_SCANCODE_EQUALS;
+constexpr Scancode S_LBRACKET = SDL_SCANCODE_LEFTBRACKET;
+constexpr Scancode S_RBRACKET = SDL_SCANCODE_RIGHTBRACKET;
 constexpr Scancode S_BACKSLASH = SDL_SCANCODE_BACKSLASH;
 constexpr Scancode S_SEMICOLON = SDL_SCANCODE_SEMICOLON;
 constexpr Scancode S_APOSTROPHE = SDL_SCANCODE_APOSTROPHE;
@@ -78,7 +105,8 @@ constexpr Scancode S_GRAVE = SDL_SCANCODE_GRAVE;
 constexpr Scancode S_COMMA = SDL_SCANCODE_COMMA;
 constexpr Scancode S_PERIOD = SDL_SCANCODE_PERIOD;
 constexpr Scancode S_SLASH = SDL_SCANCODE_SLASH;
-constexpr Scancode S_CAPSLOCK = SDL_SCANCODE_CAPSLOCK;
+constexpr Scancode S_CAPS = SDL_SCANCODE_CAPSLOCK;
+
 constexpr Scancode S_F1 = SDL_SCANCODE_F1;
 constexpr Scancode S_F2 = SDL_SCANCODE_F2;
 constexpr Scancode S_F3 = SDL_SCANCODE_F3;
@@ -91,22 +119,25 @@ constexpr Scancode S_F9 = SDL_SCANCODE_F9;
 constexpr Scancode S_F10 = SDL_SCANCODE_F10;
 constexpr Scancode S_F11 = SDL_SCANCODE_F11;
 constexpr Scancode S_F12 = SDL_SCANCODE_F12;
-constexpr Scancode S_PRINTSCREEN = SDL_SCANCODE_PRINTSCREEN;
-constexpr Scancode S_SCROLLLOCK = SDL_SCANCODE_SCROLLLOCK;
+
+constexpr Scancode S_PRTSCR = SDL_SCANCODE_PRINTSCREEN;
+constexpr Scancode S_SCRLK = SDL_SCANCODE_SCROLLLOCK;
 constexpr Scancode S_PAUSE = SDL_SCANCODE_PAUSE;
-constexpr Scancode S_INSERT = SDL_SCANCODE_INSERT;
+constexpr Scancode S_INS = SDL_SCANCODE_INSERT;
+
 constexpr Scancode S_HOME = SDL_SCANCODE_HOME;
-constexpr Scancode S_PAGEUP = SDL_SCANCODE_PAGEUP;
-constexpr Scancode S_DELETE = SDL_SCANCODE_DELETE;
+constexpr Scancode S_PGUP = SDL_SCANCODE_PAGEUP;
+constexpr Scancode S_DEL = SDL_SCANCODE_DELETE;
 constexpr Scancode S_END = SDL_SCANCODE_END;
-constexpr Scancode S_PAGEDOWN = SDL_SCANCODE_PAGEDOWN;
+constexpr Scancode S_PGDN = SDL_SCANCODE_PAGEDOWN;
 constexpr Scancode S_RIGHT = SDL_SCANCODE_RIGHT;
 constexpr Scancode S_LEFT = SDL_SCANCODE_LEFT;
 constexpr Scancode S_DOWN = SDL_SCANCODE_DOWN;
 constexpr Scancode S_UP = SDL_SCANCODE_UP;
-constexpr Scancode S_NUMLOCKCLEAR = SDL_SCANCODE_NUMLOCKCLEAR;
-constexpr Scancode S_KP_DIVIDE = SDL_SCANCODE_KP_DIVIDE;
-constexpr Scancode S_KP_MULTIPLY = SDL_SCANCODE_KP_MULTIPLY;
+constexpr Scancode S_NUMLOCK = SDL_SCANCODE_NUMLOCKCLEAR;
+
+constexpr Scancode S_KP_DIV = SDL_SCANCODE_KP_DIVIDE;
+constexpr Scancode S_KP_MULT = SDL_SCANCODE_KP_MULTIPLY;
 constexpr Scancode S_KP_MINUS = SDL_SCANCODE_KP_MINUS;
 constexpr Scancode S_KP_PLUS = SDL_SCANCODE_KP_PLUS;
 constexpr Scancode S_KP_ENTER = SDL_SCANCODE_KP_ENTER;
@@ -121,9 +152,10 @@ constexpr Scancode S_KP_8 = SDL_SCANCODE_KP_8;
 constexpr Scancode S_KP_9 = SDL_SCANCODE_KP_9;
 constexpr Scancode S_KP_0 = SDL_SCANCODE_KP_0;
 constexpr Scancode S_KP_PERIOD = SDL_SCANCODE_KP_PERIOD;
-constexpr Scancode S_APPLICATION = SDL_SCANCODE_APPLICATION;
-constexpr Scancode S_KP_EQUALS = SDL_SCANCODE_KP_EQUALS;
-constexpr Scancode S_EXECUTE = SDL_SCANCODE_EXECUTE;
+
+constexpr Scancode S_APP = SDL_SCANCODE_APPLICATION;
+constexpr Scancode S_KP_EQ = SDL_SCANCODE_KP_EQUALS;
+constexpr Scancode S_EXE = SDL_SCANCODE_EXECUTE;
 constexpr Scancode S_HELP = SDL_SCANCODE_HELP;
 constexpr Scancode S_MENU = SDL_SCANCODE_MENU;
 constexpr Scancode S_SELECT = SDL_SCANCODE_SELECT;
@@ -135,181 +167,237 @@ constexpr Scancode S_COPY = SDL_SCANCODE_COPY;
 constexpr Scancode S_PASTE = SDL_SCANCODE_PASTE;
 constexpr Scancode S_FIND = SDL_SCANCODE_FIND;
 constexpr Scancode S_MUTE = SDL_SCANCODE_MUTE;
-constexpr Scancode S_VOLUMEUP = SDL_SCANCODE_VOLUMEUP;
-constexpr Scancode S_VOLUMEDOWN = SDL_SCANCODE_VOLUMEDOWN;
+constexpr Scancode S_VOLUP = SDL_SCANCODE_VOLUMEUP;
+constexpr Scancode S_VOLDN = SDL_SCANCODE_VOLUMEDOWN;
+
+constexpr Scancode S_LCTRL = SDL_SCANCODE_LCTRL;
+constexpr Scancode S_LSHIFT = SDL_SCANCODE_LSHIFT;
+constexpr Scancode S_LALT = SDL_SCANCODE_LALT;
+constexpr Scancode S_LGUI = SDL_SCANCODE_LGUI;
+constexpr Scancode S_RCTRL = SDL_SCANCODE_RCTRL;
+constexpr Scancode S_RSHIFT = SDL_SCANCODE_RSHIFT;
+constexpr Scancode S_RALT = SDL_SCANCODE_RALT;
+constexpr Scancode S_RGUI = SDL_SCANCODE_RGUI;
+
+constexpr Scancode S_AUDIONEXT = SDL_SCANCODE_AUDIONEXT;
+constexpr Scancode S_AUDIOPREV = SDL_SCANCODE_AUDIOPREV;
+constexpr Scancode S_AUDIOSTOP = SDL_SCANCODE_AUDIOSTOP;
+constexpr Scancode S_AUDIOPLAY = SDL_SCANCODE_AUDIOPLAY;
+constexpr Scancode S_AUDIOMUTE = SDL_SCANCODE_AUDIOMUTE;
+constexpr Scancode S_MEDIASELECT = SDL_SCANCODE_MEDIASELECT;
+
+constexpr Scancode S_BRIGHTNESSDOWN = SDL_SCANCODE_BRIGHTNESSDOWN;
+constexpr Scancode S_BRIGHTNESSUP = SDL_SCANCODE_BRIGHTNESSUP;
+constexpr Scancode S_DISPLAYSWITCH = SDL_SCANCODE_DISPLAYSWITCH;
+
+constexpr Scancode S_EJECT = SDL_SCANCODE_EJECT;
+constexpr Scancode S_SLEEP = SDL_SCANCODE_SLEEP;
 
 // Event types
-constexpr SDL_EventType QUIT = SDL_QUIT;
-constexpr SDL_EventType DISPLAYEVENT = SDL_DISPLAYEVENT;
-constexpr SDL_EventType WINDOWEVENT = SDL_WINDOWEVENT;
-constexpr SDL_EventType SYSWMEVENT = SDL_SYSWMEVENT;
-constexpr SDL_EventType KEYDOWN = SDL_KEYDOWN;
-constexpr SDL_EventType KEYUP = SDL_KEYUP;
-constexpr SDL_EventType TEXTEDITING = SDL_TEXTEDITING;
-constexpr SDL_EventType TEXTINPUT = SDL_TEXTINPUT;
-constexpr SDL_EventType KEYMAPCHANGED = SDL_KEYMAPCHANGED;
-constexpr SDL_EventType MOUSEMOTION = SDL_MOUSEMOTION;
-constexpr SDL_EventType MOUSEBUTTONDOWN = SDL_MOUSEBUTTONDOWN;
-constexpr SDL_EventType MOUSEBUTTONUP = SDL_MOUSEBUTTONUP;
-constexpr SDL_EventType MOUSEWHEEL = SDL_MOUSEWHEEL;
-constexpr SDL_EventType JOYAXISMOTION = SDL_JOYAXISMOTION;
-constexpr SDL_EventType JOYBALLMOTION = SDL_JOYBALLMOTION;
-constexpr SDL_EventType JOYHATMOTION = SDL_JOYHATMOTION;
-constexpr SDL_EventType JOYBUTTONDOWN = SDL_JOYBUTTONDOWN;
-constexpr SDL_EventType JOYBUTTONUP = SDL_JOYBUTTONUP;
-constexpr SDL_EventType JOYDEVICEADDED = SDL_JOYDEVICEADDED;
-constexpr SDL_EventType JOYDEVICEREMOVED = SDL_JOYDEVICEREMOVED;
-constexpr SDL_EventType CONTROLLERAXISMOTION = SDL_CONTROLLERAXISMOTION;
-constexpr SDL_EventType CONTROLLERBUTTONDOWN = SDL_CONTROLLERBUTTONDOWN;
-constexpr SDL_EventType CONTROLLERBUTTONUP = SDL_CONTROLLERBUTTONUP;
-constexpr SDL_EventType CONTROLLERDEVICEADDED = SDL_CONTROLLERDEVICEADDED;
-constexpr SDL_EventType CONTROLLERDEVICEREMOVED = SDL_CONTROLLERDEVICEREMOVED;
-constexpr SDL_EventType CONTROLLERDEVICEREMAPPED = SDL_CONTROLLERDEVICEREMAPPED;
-constexpr SDL_EventType CLIPBOARDUPDATE = SDL_CLIPBOARDUPDATE;
-constexpr SDL_EventType DROPFILE = SDL_DROPFILE;
-constexpr SDL_EventType DROPTEXT = SDL_DROPTEXT;
-constexpr SDL_EventType DROPBEGIN = SDL_DROPBEGIN;
-constexpr SDL_EventType DROPCOMPLETE = SDL_DROPCOMPLETE;
-constexpr SDL_EventType AUDIODEVICEADDED = SDL_AUDIODEVICEADDED;
-constexpr SDL_EventType AUDIODEVICEREMOVED = SDL_AUDIODEVICEREMOVED;
-constexpr SDL_EventType USEREVENT = SDL_USEREVENT;
+constexpr EventType QUIT = SDL_QUIT;
+constexpr EventType DISPLAYEVENT = SDL_DISPLAYEVENT;
+constexpr EventType WINDOWEVENT = SDL_WINDOWEVENT;
+constexpr EventType SYSWMEVENT = SDL_SYSWMEVENT;
+constexpr EventType KEYDOWN = SDL_KEYDOWN;
+constexpr EventType KEYUP = SDL_KEYUP;
+constexpr EventType TEXTEDITING = SDL_TEXTEDITING;
+constexpr EventType TEXTINPUT = SDL_TEXTINPUT;
+constexpr EventType KEYMAPCHANGED = SDL_KEYMAPCHANGED;
+constexpr EventType MOUSEMOTION = SDL_MOUSEMOTION;
+constexpr EventType MOUSEBUTTONDOWN = SDL_MOUSEBUTTONDOWN;
+constexpr EventType MOUSEBUTTONUP = SDL_MOUSEBUTTONUP;
+constexpr EventType MOUSEWHEEL = SDL_MOUSEWHEEL;
+constexpr EventType JOYAXISMOTION = SDL_JOYAXISMOTION;
+constexpr EventType JOYBALLMOTION = SDL_JOYBALLMOTION;
+constexpr EventType JOYHATMOTION = SDL_JOYHATMOTION;
+constexpr EventType JOYBUTTONDOWN = SDL_JOYBUTTONDOWN;
+constexpr EventType JOYBUTTONUP = SDL_JOYBUTTONUP;
+constexpr EventType JOYDEVICEADDED = SDL_JOYDEVICEADDED;
+constexpr EventType JOYDEVICEREMOVED = SDL_JOYDEVICEREMOVED;
+constexpr EventType CONTROLLERAXISMOTION = SDL_CONTROLLERAXISMOTION;
+constexpr EventType CONTROLLERBUTTONDOWN = SDL_CONTROLLERBUTTONDOWN;
+constexpr EventType CONTROLLERBUTTONUP = SDL_CONTROLLERBUTTONUP;
+constexpr EventType CONTROLLERDEVICEADDED = SDL_CONTROLLERDEVICEADDED;
+constexpr EventType CONTROLLERDEVICEREMOVED = SDL_CONTROLLERDEVICEREMOVED;
+constexpr EventType CONTROLLERDEVICEREMAPPED = SDL_CONTROLLERDEVICEREMAPPED;
+constexpr EventType CLIPBOARDUPDATE = SDL_CLIPBOARDUPDATE;
+constexpr EventType DROPFILE = SDL_DROPFILE;
+constexpr EventType DROPTEXT = SDL_DROPTEXT;
+constexpr EventType DROPBEGIN = SDL_DROPBEGIN;
+constexpr EventType DROPCOMPLETE = SDL_DROPCOMPLETE;
+constexpr EventType AUDIODEVICEADDED = SDL_AUDIODEVICEADDED;
+constexpr EventType AUDIODEVICEREMOVED = SDL_AUDIODEVICEREMOVED;
+constexpr EventType USEREVENT = SDL_USEREVENT;
 
 // Keycodes
-constexpr SDL_KeyCode K_0 = SDLK_0;
-constexpr SDL_KeyCode K_1 = SDLK_1;
-constexpr SDL_KeyCode K_2 = SDLK_2;
-constexpr SDL_KeyCode K_3 = SDLK_3;
-constexpr SDL_KeyCode K_4 = SDLK_4;
-constexpr SDL_KeyCode K_5 = SDLK_5;
-constexpr SDL_KeyCode K_6 = SDLK_6;
-constexpr SDL_KeyCode K_7 = SDLK_7;
-constexpr SDL_KeyCode K_8 = SDLK_8;
-constexpr SDL_KeyCode K_9 = SDLK_9;
-constexpr SDL_KeyCode K_a = SDLK_a;
-constexpr SDL_KeyCode K_b = SDLK_b;
-constexpr SDL_KeyCode K_c = SDLK_c;
-constexpr SDL_KeyCode K_d = SDLK_d;
-constexpr SDL_KeyCode K_e = SDLK_e;
-constexpr SDL_KeyCode K_f = SDLK_f;
-constexpr SDL_KeyCode K_g = SDLK_g;
-constexpr SDL_KeyCode K_h = SDLK_h;
-constexpr SDL_KeyCode K_i = SDLK_i;
-constexpr SDL_KeyCode K_j = SDLK_j;
-constexpr SDL_KeyCode K_k = SDLK_k;
-constexpr SDL_KeyCode K_l = SDLK_l;
-constexpr SDL_KeyCode K_m = SDLK_m;
-constexpr SDL_KeyCode K_n = SDLK_n;
-constexpr SDL_KeyCode K_o = SDLK_o;
-constexpr SDL_KeyCode K_p = SDLK_p;
-constexpr SDL_KeyCode K_q = SDLK_q;
-constexpr SDL_KeyCode K_r = SDLK_r;
-constexpr SDL_KeyCode K_s = SDLK_s;
-constexpr SDL_KeyCode K_t = SDLK_t;
-constexpr SDL_KeyCode K_u = SDLK_u;
-constexpr SDL_KeyCode K_v = SDLK_v;
-constexpr SDL_KeyCode K_w = SDLK_w;
-constexpr SDL_KeyCode K_x = SDLK_x;
-constexpr SDL_KeyCode K_y = SDLK_y;
-constexpr SDL_KeyCode K_z = SDLK_z;
-constexpr SDL_KeyCode K_DOWN = SDLK_DOWN;
-constexpr SDL_KeyCode K_LEFT = SDLK_LEFT;
-constexpr SDL_KeyCode K_RIGHT = SDLK_RIGHT;
-constexpr SDL_KeyCode K_UP = SDLK_UP;
-constexpr SDL_KeyCode K_APPLICATION = SDLK_APPLICATION;
-constexpr SDL_KeyCode K_AUDIOMUTE = SDLK_AUDIOMUTE;
-constexpr SDL_KeyCode K_AUDIONEXT = SDLK_AUDIONEXT;
-constexpr SDL_KeyCode K_AUDIOPLAY = SDLK_AUDIOPLAY;
-constexpr SDL_KeyCode K_AUDIOPREV = SDLK_AUDIOPREV;
-constexpr SDL_KeyCode K_AUDIOSTOP = SDLK_AUDIOSTOP;
-constexpr SDL_KeyCode K_BACKSLASH = SDLK_BACKSLASH;
-constexpr SDL_KeyCode K_BACKSPACE = SDLK_BACKSPACE;
-constexpr SDL_KeyCode K_CAPSLOCK = SDLK_CAPSLOCK;
-constexpr SDL_KeyCode K_COMMA = SDLK_COMMA;
-constexpr SDL_KeyCode K_DELETE = SDLK_DELETE;
-constexpr SDL_KeyCode K_DISPLAYSWITCH = SDLK_DISPLAYSWITCH;
-constexpr SDL_KeyCode K_END = SDLK_END;
-constexpr SDL_KeyCode K_EQUALS = SDLK_EQUALS;
-constexpr SDL_KeyCode K_ESCAPE = SDLK_ESCAPE;
-constexpr SDL_KeyCode K_F1 = SDLK_F1;
-constexpr SDL_KeyCode K_F2 = SDLK_F2;
-constexpr SDL_KeyCode K_F3 = SDLK_F3;
-constexpr SDL_KeyCode K_F4 = SDLK_F4;
-constexpr SDL_KeyCode K_F5 = SDLK_F5;
-constexpr SDL_KeyCode K_F6 = SDLK_F6;
-constexpr SDL_KeyCode K_F7 = SDLK_F7;
-constexpr SDL_KeyCode K_F8 = SDLK_F8;
-constexpr SDL_KeyCode K_F9 = SDLK_F9;
-constexpr SDL_KeyCode K_F10 = SDLK_F10;
-constexpr SDL_KeyCode K_F11 = SDLK_F11;
-constexpr SDL_KeyCode K_F12 = SDLK_F12;
-constexpr SDL_KeyCode K_BACKQUOTE = SDLK_BACKQUOTE;
-constexpr SDL_KeyCode K_HOME = SDLK_HOME;
-constexpr SDL_KeyCode K_INSERT = SDLK_INSERT;
-constexpr SDL_KeyCode K_KP_0 = SDLK_KP_0;
-constexpr SDL_KeyCode K_KP_1 = SDLK_KP_1;
-constexpr SDL_KeyCode K_KP_2 = SDLK_KP_2;
-constexpr SDL_KeyCode K_KP_3 = SDLK_KP_3;
-constexpr SDL_KeyCode K_KP_4 = SDLK_KP_4;
-constexpr SDL_KeyCode K_KP_5 = SDLK_KP_5;
-constexpr SDL_KeyCode K_KP_6 = SDLK_KP_6;
-constexpr SDL_KeyCode K_KP_7 = SDLK_KP_7;
-constexpr SDL_KeyCode K_KP_8 = SDLK_KP_8;
-constexpr SDL_KeyCode K_KP_9 = SDLK_KP_9;
-constexpr SDL_KeyCode K_KP_DIVIDE = SDLK_KP_DIVIDE;
-constexpr SDL_KeyCode K_KP_ENTER = SDLK_KP_ENTER;
-constexpr SDL_KeyCode K_KP_MINUS = SDLK_KP_MINUS;
-constexpr SDL_KeyCode K_KP_MULTIPLY = SDLK_KP_MULTIPLY;
-constexpr SDL_KeyCode K_KP_PERIOD = SDLK_KP_PERIOD;
-constexpr SDL_KeyCode K_KP_PLUS = SDLK_KP_PLUS;
-constexpr SDL_KeyCode K_LALT = SDLK_LALT;
-constexpr SDL_KeyCode K_LCTRL = SDLK_LCTRL;
-constexpr SDL_KeyCode K_LEFTBRACKET = SDLK_LEFTBRACKET;
-constexpr SDL_KeyCode K_LSHIFT = SDLK_LSHIFT;
-constexpr SDL_KeyCode K_MINUS = SDLK_MINUS;
-constexpr SDL_KeyCode K_NUMLOCKCLEAR = SDLK_NUMLOCKCLEAR;
-constexpr SDL_KeyCode K_PAGEDOWN = SDLK_PAGEDOWN;
-constexpr SDL_KeyCode K_PAGEUP = SDLK_PAGEUP;
-constexpr SDL_KeyCode K_PERIOD = SDLK_PERIOD;
-constexpr SDL_KeyCode K_PRINTSCREEN = SDLK_PRINTSCREEN;
-constexpr SDL_KeyCode K_RALT = SDLK_RALT;
-constexpr SDL_KeyCode K_RCTRL = SDLK_RCTRL;
-constexpr SDL_KeyCode K_RETURN = SDLK_RETURN;
-constexpr SDL_KeyCode K_RIGHTBRACKET = SDLK_RIGHTBRACKET;
-constexpr SDL_KeyCode K_RSHIFT = SDLK_RSHIFT;
-constexpr SDL_KeyCode K_SEMICOLON = SDLK_SEMICOLON;
-constexpr SDL_KeyCode K_SLASH = SDLK_SLASH;
-constexpr SDL_KeyCode K_SPACE = SDLK_SPACE;
-constexpr SDL_KeyCode K_TAB = SDLK_TAB;
-constexpr SDL_KeyCode K_AMPERSAND = SDLK_AMPERSAND;
-constexpr SDL_KeyCode K_ASTERISK = SDLK_ASTERISK;
-constexpr SDL_KeyCode K_AT = SDLK_AT;
-constexpr SDL_KeyCode K_CARET = SDLK_CARET;
-constexpr SDL_KeyCode K_COLON = SDLK_COLON;
-constexpr SDL_KeyCode K_DOLLAR = SDLK_DOLLAR;
-constexpr SDL_KeyCode K_EXCLAIM = SDLK_EXCLAIM;
-constexpr SDL_KeyCode K_GREATER = SDLK_GREATER;
-constexpr SDL_KeyCode K_HASH = SDLK_HASH;
-constexpr SDL_KeyCode K_LEFTPAREN = SDLK_LEFTPAREN;
-constexpr SDL_KeyCode K_LESS = SDLK_LESS;
-constexpr SDL_KeyCode K_PERCENT = SDLK_PERCENT;
-constexpr SDL_KeyCode K_PLUS = SDLK_PLUS;
-constexpr SDL_KeyCode K_QUESTION = SDLK_QUESTION;
-constexpr SDL_KeyCode K_QUOTEDBL = SDLK_QUOTEDBL;
-constexpr SDL_KeyCode K_RIGHTPAREN = SDLK_RIGHTPAREN;
-constexpr SDL_KeyCode K_UNDERSCORE = SDLK_UNDERSCORE;
+constexpr Keycode K_BACKSPACE = SDLK_BACKSPACE;
+constexpr Keycode K_TAB = SDLK_TAB;
+constexpr Keycode K_RETURN = SDLK_RETURN;
+constexpr Keycode K_ESC = SDLK_ESCAPE;
+constexpr Keycode K_SPACE = SDLK_SPACE;
+constexpr Keycode K_EXCLAIM = SDLK_EXCLAIM;
+constexpr Keycode K_QUOTEDBL = SDLK_QUOTEDBL;
+constexpr Keycode K_HASH = SDLK_HASH;
+constexpr Keycode K_DOLLAR = SDLK_DOLLAR;
+constexpr Keycode K_PERCENT = SDLK_PERCENT;
+constexpr Keycode K_AMPERSAND = SDLK_AMPERSAND;
+constexpr Keycode K_QUOTE = SDLK_QUOTE;
+constexpr Keycode K_LPAREN = SDLK_LEFTPAREN;
+constexpr Keycode K_RPAREN = SDLK_RIGHTPAREN;
+constexpr Keycode K_ASTERISK = SDLK_ASTERISK;
+constexpr Keycode K_PLUS = SDLK_PLUS;
+constexpr Keycode K_COMMA = SDLK_COMMA;
+constexpr Keycode K_MINUS = SDLK_MINUS;
+constexpr Keycode K_PERIOD = SDLK_PERIOD;
+constexpr Keycode K_SLASH = SDLK_SLASH;
 
-// Mouse buttons
-constexpr int M_LEFT = SDL_BUTTON_LEFT;
-constexpr int M_MIDDLE = SDL_BUTTON_MIDDLE;
-constexpr int M_RIGHT = SDL_BUTTON_RIGHT;
-constexpr int M_SIDE1 = SDL_BUTTON_X1;
-constexpr int M_SIDE2 = SDL_BUTTON_X2;
+constexpr Keycode K_0 = SDLK_0;
+constexpr Keycode K_1 = SDLK_1;
+constexpr Keycode K_2 = SDLK_2;
+constexpr Keycode K_3 = SDLK_3;
+constexpr Keycode K_4 = SDLK_4;
+constexpr Keycode K_5 = SDLK_5;
+constexpr Keycode K_6 = SDLK_6;
+constexpr Keycode K_7 = SDLK_7;
+constexpr Keycode K_8 = SDLK_8;
+constexpr Keycode K_9 = SDLK_9;
+
+constexpr Keycode K_COLON = SDLK_COLON;
+constexpr Keycode K_SEMICOLON = SDLK_SEMICOLON;
+constexpr Keycode K_LT = SDLK_LESS;
+constexpr Keycode K_EQ = SDLK_EQUALS;
+constexpr Keycode K_GT = SDLK_GREATER;
+constexpr Keycode K_QUESTION = SDLK_QUESTION;
+constexpr Keycode K_AT = SDLK_AT;
+constexpr Keycode K_LBRACKET = SDLK_LEFTBRACKET;
+constexpr Keycode K_BACKSLASH = SDLK_BACKSLASH;
+constexpr Keycode K_RBRACKET = SDLK_RIGHTBRACKET;
+constexpr Keycode K_CARET = SDLK_CARET;
+constexpr Keycode K_UNDERSCORE = SDLK_UNDERSCORE;
+constexpr Keycode K_BACKQUOTE = SDLK_BACKQUOTE;
+
+constexpr Keycode K_a = SDLK_a;
+constexpr Keycode K_b = SDLK_b;
+constexpr Keycode K_c = SDLK_c;
+constexpr Keycode K_d = SDLK_d;
+constexpr Keycode K_e = SDLK_e;
+constexpr Keycode K_f = SDLK_f;
+constexpr Keycode K_g = SDLK_g;
+constexpr Keycode K_h = SDLK_h;
+constexpr Keycode K_i = SDLK_i;
+constexpr Keycode K_j = SDLK_j;
+constexpr Keycode K_k = SDLK_k;
+constexpr Keycode K_l = SDLK_l;
+constexpr Keycode K_m = SDLK_m;
+constexpr Keycode K_n = SDLK_n;
+constexpr Keycode K_o = SDLK_o;
+constexpr Keycode K_p = SDLK_p;
+constexpr Keycode K_q = SDLK_q;
+constexpr Keycode K_r = SDLK_r;
+constexpr Keycode K_s = SDLK_s;
+constexpr Keycode K_t = SDLK_t;
+constexpr Keycode K_u = SDLK_u;
+constexpr Keycode K_v = SDLK_v;
+constexpr Keycode K_w = SDLK_w;
+constexpr Keycode K_x = SDLK_x;
+constexpr Keycode K_y = SDLK_y;
+constexpr Keycode K_z = SDLK_z;
+
+constexpr Keycode K_DEL = SDLK_DELETE;
+constexpr Keycode K_CAPS = SDLK_CAPSLOCK;
+constexpr Keycode K_F1 = SDLK_F1;
+constexpr Keycode K_F2 = SDLK_F2;
+constexpr Keycode K_F3 = SDLK_F3;
+constexpr Keycode K_F4 = SDLK_F4;
+constexpr Keycode K_F5 = SDLK_F5;
+constexpr Keycode K_F6 = SDLK_F6;
+constexpr Keycode K_F7 = SDLK_F7;
+constexpr Keycode K_F8 = SDLK_F8;
+constexpr Keycode K_F9 = SDLK_F9;
+constexpr Keycode K_F10 = SDLK_F10;
+constexpr Keycode K_F11 = SDLK_F11;
+constexpr Keycode K_F12 = SDLK_F12;
+
+constexpr Keycode K_PRTSCR = SDLK_PRINTSCREEN;
+constexpr Keycode K_SCRLK = SDLK_SCROLLLOCK;
+constexpr Keycode K_PAUSE = SDLK_PAUSE;
+constexpr Keycode K_INS = SDLK_INSERT;
+constexpr Keycode K_HOME = SDLK_HOME;
+constexpr Keycode K_PGUP = SDLK_PAGEUP;
+constexpr Keycode K_END = SDLK_END;
+constexpr Keycode K_PGDN = SDLK_PAGEDOWN;
+constexpr Keycode K_RIGHT = SDLK_RIGHT;
+constexpr Keycode K_LEFT = SDLK_LEFT;
+constexpr Keycode K_DOWN = SDLK_DOWN;
+constexpr Keycode K_UP = SDLK_UP;
+constexpr Keycode K_NUMLOCK = SDLK_NUMLOCKCLEAR;
+
+constexpr Keycode K_KP_DIV = SDLK_KP_DIVIDE;
+constexpr Keycode K_KP_MULT = SDLK_KP_MULTIPLY;
+constexpr Keycode K_KP_MINUS = SDLK_KP_MINUS;
+constexpr Keycode K_KP_PLUS = SDLK_KP_PLUS;
+constexpr Keycode K_KP_ENTER = SDLK_KP_ENTER;
+constexpr Keycode K_KP_1 = SDLK_KP_1;
+constexpr Keycode K_KP_2 = SDLK_KP_2;
+constexpr Keycode K_KP_3 = SDLK_KP_3;
+constexpr Keycode K_KP_4 = SDLK_KP_4;
+constexpr Keycode K_KP_5 = SDLK_KP_5;
+constexpr Keycode K_KP_6 = SDLK_KP_6;
+constexpr Keycode K_KP_7 = SDLK_KP_7;
+constexpr Keycode K_KP_8 = SDLK_KP_8;
+constexpr Keycode K_KP_9 = SDLK_KP_9;
+constexpr Keycode K_KP_0 = SDLK_KP_0;
+constexpr Keycode K_KP_PERIOD = SDLK_KP_PERIOD;
+
+constexpr Keycode K_APPLICATION = SDLK_APPLICATION;
+constexpr Keycode K_KP_EQ = SDLK_KP_EQUALS;
+constexpr Keycode K_EXE = SDLK_EXECUTE;
+constexpr Keycode K_HELP = SDLK_HELP;
+constexpr Keycode K_MENU = SDLK_MENU;
+constexpr Keycode K_SELECT = SDLK_SELECT;
+constexpr Keycode K_STOP = SDLK_STOP;
+constexpr Keycode K_AGAIN = SDLK_AGAIN;
+constexpr Keycode K_UNDO = SDLK_UNDO;
+constexpr Keycode K_CUT = SDLK_CUT;
+constexpr Keycode K_COPY = SDLK_COPY;
+constexpr Keycode K_PASTE = SDLK_PASTE;
+constexpr Keycode K_FIND = SDLK_FIND;
+constexpr Keycode K_MUTE = SDLK_MUTE;
+constexpr Keycode K_VOLUP = SDLK_VOLUMEUP;
+constexpr Keycode K_VOLDOWN = SDLK_VOLUMEDOWN;
+constexpr Keycode K_CANCEL = SDLK_CANCEL;
+constexpr Keycode K_CLEAR = SDLK_CLEAR;
+constexpr Keycode K_PRIOR = SDLK_PRIOR;
+constexpr Keycode K_SEPERATOR = SDLK_SEPARATOR;
+constexpr Keycode K_OUT = SDLK_OUT;
+constexpr Keycode K_LCTRL = SDLK_LCTRL;
+constexpr Keycode K_LSHIFT = SDLK_LSHIFT;
+constexpr Keycode K_LALT = SDLK_LALT;
+constexpr Keycode K_LGUI = SDLK_LGUI;
+constexpr Keycode K_RCTRL = SDLK_RCTRL;
+constexpr Keycode K_RSHIFT = SDLK_RSHIFT;
+constexpr Keycode K_RALT = SDLK_RALT;
+constexpr Keycode K_RGUI = SDLK_RGUI;
+
+constexpr Keycode K_MODE = SDLK_MODE;
+constexpr Keycode K_AUDIONEXT = SDLK_AUDIONEXT;
+constexpr Keycode K_AUDIOPREV = SDLK_AUDIOPREV;
+constexpr Keycode K_AUDIOSTOP = SDLK_AUDIOSTOP;
+constexpr Keycode K_AUDIOPLAY = SDLK_AUDIOPLAY;
+constexpr Keycode K_AUDIOMUTE = SDLK_AUDIOMUTE;
+constexpr Keycode K_MEDIASELECT = SDLK_MEDIASELECT;
+
+constexpr Keycode K_BRIGHTNESSDOWN = SDLK_BRIGHTNESSDOWN;
+constexpr Keycode K_BRIGHTNESSUP = SDLK_BRIGHTNESSUP;
+constexpr Keycode K_DISPLAYSWITCH = SDLK_DISPLAYSWITCH;
+constexpr Keycode K_EJECT = SDLK_EJECT;
+constexpr Keycode K_SLEEP = SDLK_SLEEP;
 
 // Controller buttonsW
-constexpr ControllerButton C_A = SDL_CONTROLLER_BUTTON_A;
-constexpr ControllerButton C_B = SDL_CONTROLLER_BUTTON_B;
-constexpr ControllerButton C_X = SDL_CONTROLLER_BUTTON_X;
-constexpr ControllerButton C_Y = SDL_CONTROLLER_BUTTON_Y;
+constexpr ControllerButton C_SOUTH = SDL_CONTROLLER_BUTTON_A;
+constexpr ControllerButton C_EAST = SDL_CONTROLLER_BUTTON_B;
+constexpr ControllerButton C_WEST = SDL_CONTROLLER_BUTTON_X;
+constexpr ControllerButton C_NORTH = SDL_CONTROLLER_BUTTON_Y;
 constexpr ControllerButton C_BACK = SDL_CONTROLLER_BUTTON_BACK;
 constexpr ControllerButton C_GUIDE = SDL_CONTROLLER_BUTTON_GUIDE;
 constexpr ControllerButton C_START = SDL_CONTROLLER_BUTTON_START;

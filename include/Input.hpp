@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <variant>
 #include <vector>
 
 #include "Constants.hpp"
@@ -8,28 +9,11 @@
 namespace kn
 {
 
-enum class InputType
-{
-    KEYBOARD,
-    MOUSE,
-    CONTROLLER_AXIS,
-    CONTROLLER_BUTTON
-};
-
 struct InputAction
 {
-    InputType type;
-    union
-    {
-        Scancode key;
-        ControllerButton controllerButton;
-        uint32_t mouseButton;
-        struct
-        {
-            ControllerAxis axis;
-            bool isPositive;
-        } controllerAxis;
-    };
+    using InputData =
+        std::variant<Scancode, MouseButton, ControllerButton, std::pair<ControllerAxis, bool>>;
+    InputData data;
 
     /**
      * @brief Construct a new keyboard input action.
@@ -39,12 +23,11 @@ struct InputAction
     explicit InputAction(Scancode key);
 
     /**
-     * @brief Construct a new controller axis input action.
+     * @brief Construct a new mouse input action.
      *
-     * @param axis The controller axis.
-     * @param isPositive Whether the axis is positive or negative.
+     * @param mouseButton The mouse button.
      */
-    InputAction(ControllerAxis axis, bool isPositive);
+    explicit InputAction(MouseButton mouseButton);
 
     /**
      * @brief Construct a new controller button input action.
@@ -54,11 +37,12 @@ struct InputAction
     explicit InputAction(ControllerButton controllerButton);
 
     /**
-     * @brief Construct a new mouse input action.
+     * @brief Construct a new controller axis input action.
      *
-     * @param mouseButton The mouse button.
+     * @param axis The controller axis.
+     * @param isPositive Whether the axis is positive or negative.
      */
-    explicit InputAction(int mouseButton);
+    InputAction(ControllerAxis axis, bool isPositive);
 };
 
 namespace math
@@ -98,6 +82,15 @@ void unbind(const std::string& name);
                                       const std::string& up = "", const std::string& down = "");
 
 /**
+ * @brief Get the value of an axis based on the input actions.
+ *
+ * @param negative The name of the input action for negative axis movement.
+ * @param positive The name of the input action for positive axis movement.
+ * @return The value of the axis, ranging from ``-1.0`` to ``1.0``.
+ */
+[[nodiscard]] double getAxis(const std::string& negative = "", const std::string& positive = "");
+
+/**
  * @brief Check if an input action is pressed.
  *
  * @param name The name of the input action to check.
@@ -105,6 +98,24 @@ void unbind(const std::string& name);
  * @return ``true`` if the input action is pressed, ``false`` otherwise.
  */
 [[nodiscard]] bool isPressed(const std::string& name);
+
+/**
+ * @brief Check if an input action is just pressed.
+ *
+ * @param name The name of the input action to check.
+ *
+ * @return ``true`` if the input action is just pressed, ``false`` otherwise.
+ */
+[[nodiscard]] bool isJustPressed(const std::string& name);
+
+/**
+ * @brief Check if an input action is just released.
+ *
+ * @param name The name of the input action to check.
+ *
+ * @return ``true`` if the input action is released, ``false`` otherwise.
+ */
+[[nodiscard]] bool isJustReleased(const std::string& name);
 
 } // namespace input
 } // namespace kn

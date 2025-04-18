@@ -1,7 +1,11 @@
 #include "Font.hpp"
+#include "Color.hpp"
 #include "ErrorLogger.hpp"
 #include "Texture.hpp"
 #include "Window.hpp"
+
+#include "fonts/minecraftia.h"
+#include "fonts/titillium.h"
 
 namespace kn
 {
@@ -19,17 +23,35 @@ Font::~Font()
 
 bool Font::openFromFile(const std::string& fileDir, const int ptSize)
 {
+    if (ptSize < 0)
+        return false;
+
     if (font)
     {
         TTF_CloseFont(font);
         font = nullptr;
     }
 
-    font = TTF_OpenFont(fileDir.c_str(), ptSize);
+    if (fileDir == "kraken-clean")
+    {
+        SDL_RWops* rw = SDL_RWFromMem(TitilliumWeb_Regular_ttf, TitilliumWeb_Regular_ttf_len);
+        font = TTF_OpenFontRW(rw, 1, ptSize);
+    }
+    else if (fileDir == "kraken-retro")
+    {
+        SDL_RWops* rw = SDL_RWFromMem(Minecraftia_Regular_ttf, Minecraftia_Regular_ttf_len);
+        const int ptSizeFixed = ((ptSize + 4) / 8) * 8;
+        font = TTF_OpenFontRW(rw, 1, ptSizeFixed);
+    }
+    else
+    {
+        font = TTF_OpenFont(fileDir.c_str(), ptSize);
+    }
+
     return font != nullptr;
 }
 
-Texture Font::render(const std::string& text, const bool antialias, const Color color,
+Texture Font::render(const std::string& text, const bool antialias, const Color& color,
                      const int wrapLength) const
 {
     if (!font)

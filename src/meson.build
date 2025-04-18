@@ -1,5 +1,6 @@
 subdir('gfx')
 sources = [
+    'src/_globals.cpp',
     'src/animation_controller.cpp',
     'src/draw.cpp',
     'src/ease.cpp',
@@ -7,14 +8,17 @@ sources = [
     'src/game_controller.cpp',
     'src/input.cpp',
     'src/key.cpp',
+    'src/mask.cpp',
     'src/math.cpp',
     'src/mouse.cpp',
     'src/music.cpp',
     'src/overflow.cpp',
     'src/rect.cpp',
     'src/sound.cpp',
+    'src/surface.cpp',
     'src/texture.cpp',
     'src/tile_map.cpp',
     'src/time.cpp',
+    'src/transform.cpp',
     'src/window.cpp',
 ] + gfx_src

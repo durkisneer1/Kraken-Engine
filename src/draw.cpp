@@ -5,6 +5,7 @@
 #include "Math.hpp"
 #include "Rect.hpp"
 #include "Window.hpp"
+#include "Color.hpp"
 
 namespace kn::draw
 {
@@ -66,59 +67,6 @@ void point(const math::Vec2& point, const Color& color)
                          static_cast<float>(point.y - camera.y));
 }
 
-static void drawCircleSegment(SDL_Renderer* renderer, const math::Vec2& center, int radius,
-                              bool filled)
-{
-    int offsetX = 0;
-    int offsetY = radius;
-    int d = radius - 1;
-    // Precompute the camera-adjusted center.
-    const float cx = static_cast<float>(center.x - camera.x);
-    const float cy = static_cast<float>(center.y - camera.y);
-
-    while (offsetY >= offsetX)
-    {
-        if (filled)
-        {
-            // Draw horizontal spans to fill the circle.
-            SDL_RenderDrawLineF(renderer, cx - offsetY, cy + offsetX, cx + offsetY, cy + offsetX);
-            SDL_RenderDrawLineF(renderer, cx - offsetX, cy + offsetY, cx + offsetX, cy + offsetY);
-            SDL_RenderDrawLineF(renderer, cx - offsetX, cy - offsetY, cx + offsetX, cy - offsetY);
-            SDL_RenderDrawLineF(renderer, cx - offsetY, cy - offsetX, cx + offsetY, cy - offsetX);
-        }
-        else
-        {
-            // Plot the eight symmetrical points along the circle's edge.
-            SDL_RenderDrawPointF(renderer, cx + offsetX, cy + offsetY);
-            SDL_RenderDrawPointF(renderer, cx + offsetY, cy + offsetX);
-            SDL_RenderDrawPointF(renderer, cx - offsetX, cy + offsetY);
-            SDL_RenderDrawPointF(renderer, cx - offsetY, cy + offsetX);
-            SDL_RenderDrawPointF(renderer, cx + offsetX, cy - offsetY);
-            SDL_RenderDrawPointF(renderer, cx + offsetY, cy - offsetX);
-            SDL_RenderDrawPointF(renderer, cx - offsetX, cy - offsetY);
-            SDL_RenderDrawPointF(renderer, cx - offsetY, cy - offsetX);
-        }
-
-        // Midpoint circle algorithm decision step.
-        if (d >= offsetX * 2)
-        {
-            d -= offsetX * 2 + 1;
-            ++offsetX;
-        }
-        else if (d < 2 * (radius - offsetY))
-        {
-            d += offsetY * 2 - 1;
-            --offsetY;
-        }
-        else
-        {
-            d += 2 * (offsetY - offsetX - 1);
-            --offsetY;
-            ++offsetX;
-        }
-    }
-}
-
 void circle(const math::Vec2& center, int radius, const Color& color, const int thickness)
 {
     SDL_Renderer* renderer = window::getRenderer();
@@ -127,22 +75,57 @@ void circle(const math::Vec2& center, int radius, const Color& color, const int 
         WARN("Cannot draw circle before creating the window");
         return;
     }
-
-    if (radius < 1)
+    if (radius <= 0)
         return;
 
+    // Enable alpha blending
     SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
 
-    // For a filled circle, simply draw one segment using horizontal spans.
-    if (thickness <= 0)
-        drawCircleSegment(renderer, center, radius, true);
-    else
-        // For an outlined circle with thickness, draw multiple concentric outlines.
-        for (int i = 0; i < thickness; i++)
+    // Compute camera‑adjusted center
+    const float cx = center.x - camera.x;
+    const float cy = center.y - camera.y;
+    int r2 = radius * radius;
+
+    // Filled circle if thickness <= 0 or >= radius
+    if (thickness <= 0 || thickness >= radius)
+    {
+        for (int dy = -radius + 1; dy < radius; ++dy)
         {
-            drawCircleSegment(renderer, center, radius, false);
-            --radius;
+            int dx = static_cast<int>(std::floor(std::sqrt(r2 - dy * dy)));
+            if (dy == 0 && dx > 0)
+                dx--;
+            SDL_RenderDrawLineF(renderer, cx - dx, cy + dy, cx + dx, cy + dy);
         }
+        return;
+    }
+
+    // Outline ring of width `thickness`
+    int innerRadius = radius - thickness;
+    int ir2 = innerRadius * innerRadius;
+
+    for (int dy = -radius + 1; dy < radius; ++dy)
+    {
+        int absDy = std::abs(dy);
+        int dxOuter = static_cast<int>(std::floor(std::sqrt(r2 - dy * dy)));
+        if (dy == 0 && dxOuter > 0)
+            dxOuter--;
+
+        if (absDy < innerRadius)
+        {
+            int dxInner = static_cast<int>(std::floor(std::sqrt(ir2 - dy * dy)));
+            if (dy == 0 && dxInner > 0)
+                dxInner--;
+            // left edge of ring
+            SDL_RenderDrawLineF(renderer, cx - dxOuter, cy + dy, cx - dxInner, cy + dy);
+            // right edge of ring
+            SDL_RenderDrawLineF(renderer, cx + dxInner, cy + dy, cx + dxOuter, cy + dy);
+        }
+        else
+        {
+            // caps (top/bottom arcs)
+            SDL_RenderDrawLineF(renderer, cx - dxOuter, cy + dy, cx + dxOuter, cy + dy);
+        }
+    }
 }
 
 } // namespace kn::draw

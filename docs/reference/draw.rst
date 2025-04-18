@@ -35,8 +35,3 @@ Functions
 .. doxygenfunction:: kn::draw::point
 
 .. doxygenfunction:: kn::draw::circle
-
-Constants
----------
-
-.. doxygennamespace:: kn::color
