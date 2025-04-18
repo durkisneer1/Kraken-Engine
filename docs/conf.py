@@ -64,8 +64,8 @@ html_theme_options = {
     "collapse_navigation": False,
 }
 
-release = '0.0.10'  # Full version, including alpha/beta/rc tags
-version = '0.0.10'  # Short X.Y version
+release = '0.0.11'  # Full version, including alpha/beta/rc tags
+version = '0.0.11'  # Short X.Y version
 html_title = f"Kraken Engine (v{release}) Documentation"
 
 html_context = {
