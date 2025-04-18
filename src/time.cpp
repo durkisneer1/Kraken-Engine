@@ -1,31 +1,27 @@
 #include "Time.hpp"
 #include <SDL.h>
-#include <thread>
 
 namespace kn::time
 {
 
-Clock::Clock() : m_last(std::chrono::high_resolution_clock::now()) {}
-
 double Clock::tick(int frameRate)
 {
-    if (frameRate < 1)
-        frameRate = 1;
-
-    std::chrono::duration<double> targetFrameTime(1.0 / frameRate);
-
-    auto now = std::chrono::high_resolution_clock::now();
-    std::chrono::duration<double> frameTime = now - m_last;
+    const double targetFrameTime = 1000.0 / frameRate;
+    auto now = static_cast<double>(SDL_GetPerformanceCounter());
+    double frameTime = (now - m_last) / m_frequency * 1000.0;
 
     if (frameTime < targetFrameTime)
-        std::this_thread::sleep_for(targetFrameTime - frameTime);
+        SDL_Delay(static_cast<uint32_t>(targetFrameTime - frameTime));
 
-    now = std::chrono::high_resolution_clock::now();
-    frameTime = now - m_last;
+    now = static_cast<double>(SDL_GetPerformanceCounter());
+    frameTime = (now - m_last) / m_frequency;
     m_last = now;
 
-    return frameTime.count();
+    m_fps = static_cast<int>(1.0 / frameTime);
+    return frameTime;
 }
+
+int Clock::getFPS() { return m_fps; }
 
 Timer::Timer(const double duration) : m_duration(duration)
 {
