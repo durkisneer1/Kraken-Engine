@@ -3,8 +3,6 @@
 #include <SDL.h>
 #include <string>
 
-#include "Constants.hpp"
-
 namespace kn
 {
 namespace math
@@ -12,6 +10,7 @@ namespace math
 class Vec2;
 } // namespace math
 class Rect;
+struct Color;
 
 class Surface
 {
@@ -69,7 +68,7 @@ class Surface
      *
      * @param color The color to fill the surface with.
      */
-    void fill(Color color);
+    void fill(const Color& color);
 
     /**
      * @brief Get the size of the surface.

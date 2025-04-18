@@ -30,6 +30,8 @@ Functions
 
 .. doxygenfunction:: kn::window::blit(const Texture &texture, const math::Vec2 &position = {}, Anchor anchor = TOP_LEFT)
 
+.. doxygenfunction:: kn::window::saveScreenshot
+
 .. doxygenfunction:: kn::window::setIcon
 
 .. doxygenfunction:: kn::window::getFullscreen

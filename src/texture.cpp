@@ -1,5 +1,6 @@
 #include <SDL_image.h>
 
+#include "Color.hpp"
 #include "Math.hpp"
 #include "Surface.hpp"
 #include "Texture.hpp"
@@ -13,7 +14,7 @@ Texture::Texture(const std::string& filePath)
         throw Exception("Failed to load texture from: " + filePath);
 }
 
-Texture::Texture(const math::Vec2& size, const Color color)
+Texture::Texture(const math::Vec2& size, const Color& color)
 {
     if (!create(size, color))
         throw Exception("Failed to create texture");
@@ -61,7 +62,7 @@ bool Texture::loadFromFile(const std::string& filePath)
     return true;
 }
 
-bool Texture::create(const math::Vec2& size, const Color color)
+bool Texture::create(const math::Vec2& size, const Color& color)
 {
     if (texture)
     {
@@ -196,7 +197,10 @@ Rect Texture::getRect() const
 
 SDL_Texture* Texture::getSDL() const { return texture; }
 
-void Texture::setTint(Color tint) const { SDL_SetTextureColorMod(texture, tint.r, tint.g, tint.b); }
+void Texture::setTint(const Color& tint) const
+{
+    SDL_SetTextureColorMod(texture, tint.r, tint.g, tint.b);
+}
 
 Color Texture::getTint() const
 {

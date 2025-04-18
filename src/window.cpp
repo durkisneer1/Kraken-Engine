@@ -1,6 +1,8 @@
 #include <SDL_image.h>
 #include <SDL_mixer.h>
 #include <SDL_ttf.h>
+#include <inttypes.h>
+#include <vector>
 
 #include "ErrorLogger.hpp"
 #include "Math.hpp"
@@ -8,6 +10,8 @@
 #include "Texture.hpp"
 #include "Window.hpp"
 #include "_globals.hpp"
+
+#include "icon/kraken_icon.h"
 
 namespace kn::window
 {
@@ -93,7 +97,12 @@ bool init(const math::Vec2& resolution, const std::string& title, const bool sca
         SDL_RenderSetLogicalSize(_renderer, resolutionWidth, resolutionHeight);
 
     setTitle(title);
-    // setIcon("../example/assets/kraken_engine_window_icon.png");
+
+    SDL_RWops* rw = SDL_RWFromMem((void*)kraken_icon_png, kraken_icon_png_len);
+    SDL_Surface* icon = IMG_Load_RW(rw, 1); // 1 = auto-free rw after load
+    SDL_SetWindowIcon(_window, icon);
+    SDL_FreeSurface(icon);
+
     SDL_SetRenderDrawBlendMode(_renderer, SDL_BLENDMODE_BLEND);
 
     _isOpen = true;
@@ -207,7 +216,7 @@ int pollEvent(Event& event)
     return pending;
 }
 
-void clear(const Color color)
+void clear(const Color& color)
 {
     if (!_renderer)
         WARN("Cannot clear screen before creating the window")
@@ -413,6 +422,36 @@ void setIcon(const std::string& path)
 
     SDL_SetWindowIcon(_window, icon);
     SDL_FreeSurface(icon);
+}
+
+bool saveScreenshot(const std::string& filePath)
+{
+    if (!_window || !_renderer)
+    {
+        WARN("Cannot save screenshot before creating the window or renderer")
+        return false;
+    }
+
+    int width, height;
+    SDL_GetRendererOutputSize(_renderer, &width, &height);
+    SDL_Surface* surface =
+        SDL_CreateRGBSurfaceWithFormat(0, width, height, 32, SDL_PIXELFORMAT_RGBA32);
+    if (!surface)
+        return false;
+
+    if (SDL_RenderReadPixels(_renderer, nullptr, surface->format->format, surface->pixels,
+                             surface->pitch) < 0)
+    {
+        SDL_FreeSurface(surface);
+        return false;
+    }
+
+    // Save the surface as PNG
+    bool success = (IMG_SavePNG(surface, filePath.c_str()) == 0);
+    SDL_FreeSurface(surface);
+    return success;
+
+    return true;
 }
 
 } // namespace kn::window

@@ -81,6 +81,6 @@ Kraken Engine provides a set of predefined color constants that you can use to s
     <span class="nc">kn</span>::<span class="nc">Texture</span> <span class="n">yellowTex</span>({<span class="mi">16</span>, <span class="mi">16</span>}, <span class="nc">kn</span>::<span class="nc">color</span>::<span class="n">YELLOW</span>);
     </pre></div>
 
-All available color constants can be found in :doc:`../reference/constants`.
+All available color constants can be found in :doc:`../reference/color`.
 
 .. note:: This page is a work in progress and will be updated as more information becomes available.

@@ -5,6 +5,7 @@
 #include "Math.hpp"
 #include "Rect.hpp"
 #include "Window.hpp"
+#include "Color.hpp"
 
 namespace kn::draw
 {

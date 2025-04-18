@@ -5,7 +5,6 @@
 int main()
 {
     kn::window::init({320, 180}, "Night Terror", true);
-    // kn::window::setFullscreen(true);
     kn::Clock clock;
     kn::camera = {-32, -26};
 
@@ -88,6 +87,9 @@ int main()
 
     int circleRadius = 10;
 
+    kn::Font font("kraken-retro", 8);
+    kn::Texture score = font.render("Points: 0", false, kn::color::WHITE);
+
     kn::Event event;
     while (kn::window::isOpen())
     {
@@ -134,6 +136,8 @@ int main()
         if (kn::key::isJustPressed(kn::S_p))
             circleRadius++;
         kn::draw::circle(kn::mouse::getPos(), circleRadius, {255, 255, 40, 100});
+
+        kn::window::blit(score);
 
         kn::window::flip();
     }

@@ -1,9 +1,8 @@
 #pragma once
 
-#include "Constants.hpp"
-
 namespace kn
 {
+struct Color;
 struct Rect;
 namespace math
 {

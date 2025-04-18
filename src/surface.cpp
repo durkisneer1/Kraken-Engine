@@ -1,7 +1,9 @@
 #include "Surface.hpp"
+#include "Color.hpp"
 #include "ErrorLogger.hpp"
 #include "Math.hpp"
 #include "Rect.hpp"
+
 #include <SDL_image.h>
 
 using namespace kn;
@@ -79,7 +81,7 @@ bool Surface::loadFromSDL(SDL_Surface* sdlSurface)
     return surface != nullptr;
 }
 
-void Surface::fill(Color color)
+void Surface::fill(const Color& color)
 {
     uint32_t colorMap = SDL_MapRGBA(surface->format, color.r, color.g, color.b, color.a);
     SDL_FillRect(surface, nullptr, colorMap);

@@ -4,6 +4,7 @@
 
 #include <SDL.h>
 
+#include "Color.hpp"
 #include "Constants.hpp"
 #include "Math.hpp"
 #include "Rect.hpp"
@@ -49,7 +50,7 @@ void close();
  *
  * @param color The color to clear the screen.
  */
-void clear(Color color = {0, 0, 0, 255});
+void clear(const Color& color = {0, 0, 0, 255});
 
 /**
  * @brief Flip the render frame buffer.
@@ -143,6 +144,14 @@ void quit();
  * @param path The path to the icon image file.
  */
 void setIcon(const std::string& path);
+
+/**
+ * @brief Save a screenshot of the current frame to a file.
+ *
+ * @param path The path to save the screenshot to.
+ * @return ``true`` if the screenshot was saved successfully, ``false`` otherwise.
+ */
+bool saveScreenshot(const std::string& filePath);
 
 } // namespace window
 } // namespace kn

@@ -3,13 +3,13 @@
 #include <SDL.h>
 #include <string>
 
-#include "Constants.hpp"
 #include "Math.hpp"
 #include "Rect.hpp"
 
 namespace kn
 {
 class Surface;
+struct Color;
 
 class Texture
 {
@@ -58,7 +58,7 @@ class Texture
      * @param size The size of the texture.
      * @param color The color of the texture.
      */
-    Texture(const math::Vec2& size, Color color);
+    Texture(const math::Vec2& size, const Color& color);
 
     /**
      * @brief Load a texture from an array of pixel data.
@@ -87,7 +87,7 @@ class Texture
      * @param size The size of the texture.
      * @param color The color of the texture.
      */
-    [[maybe_unused]] bool create(const math::Vec2& size, Color color);
+    [[maybe_unused]] bool create(const math::Vec2& size, const Color& color);
 
     /**
      * @brief Load a texture from an array of pixel data.
@@ -137,7 +137,7 @@ class Texture
      * 
      * @param tint The color to multiply the texture color pixels by during rendering.
      */
-    void setTint(Color tint) const;
+    void setTint(const Color& tint) const;
 
     /**
      * @brief Get the color mod (tint) for the texture.

@@ -9,7 +9,6 @@ typedef SDL_Keycode Keycode;
 typedef SDL_GameControllerButton ControllerButton;
 typedef SDL_GameControllerAxis ControllerAxis;
 typedef SDL_Event Event;
-typedef SDL_Color Color;
 typedef SDL_EventType EventType;
 
 // Mouse buttons
@@ -49,31 +48,6 @@ constexpr Anchor RIGHT_MID = Anchor::RightMid;
 constexpr Anchor BOTTOM_LEFT = Anchor::BottomLeft;
 constexpr Anchor BOTTOM_MID = Anchor::BottomMid;
 constexpr Anchor BOTTOM_RIGHT = Anchor::BottomRight;
-
-namespace color
-{
-constexpr Color BLACK = {0, 0, 0, 255};
-constexpr Color WHITE = {255, 255, 255, 255};
-constexpr Color RED = {255, 0, 0, 255};
-constexpr Color GREEN = {0, 255, 0, 255};
-constexpr Color BLUE = {0, 0, 255, 255};
-constexpr Color YELLOW = {255, 255, 0, 255};
-constexpr Color MAGENTA = {255, 0, 255, 255};
-constexpr Color CYAN = {0, 255, 255, 255};
-constexpr Color GRAY = {128, 128, 128, 255};
-constexpr Color GREY = GRAY;
-constexpr Color DARK_GRAY = {64, 64, 64, 255};
-constexpr Color DARK_GREY = DARK_GRAY;
-constexpr Color LIGHT_GRAY = {192, 192, 192, 255};
-constexpr Color LIGHT_GREY = LIGHT_GRAY;
-constexpr Color ORANGE = {255, 165, 0, 255};
-constexpr Color BROWN = {139, 69, 19, 255};
-constexpr Color PINK = {255, 192, 203, 255};
-constexpr Color PURPLE = {128, 0, 128, 255};
-constexpr Color NAVY = {0, 0, 128, 255};
-constexpr Color TEAL = {0, 128, 128, 255};
-constexpr Color OLIVE = {128, 128, 0, 255};
-} // namespace color
 
 // Scancodes
 constexpr Scancode S_a = SDL_SCANCODE_A;
