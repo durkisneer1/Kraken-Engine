@@ -3,6 +3,7 @@
 
 #include <cmath>
 #include <iomanip>
+#include <sstream>
 
 namespace kn::color
 {
