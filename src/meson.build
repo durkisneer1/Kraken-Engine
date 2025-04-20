@@ -2,6 +2,7 @@ subdir('gfx')
 sources = [
     'src/_globals.cpp',
     'src/animation_controller.cpp',
+    'src/color.cpp',
     'src/draw.cpp',
     'src/ease.cpp',
     'src/font.cpp',

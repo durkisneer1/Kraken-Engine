@@ -1,5 +1,7 @@
 #pragma once
 
+#include <SDL.h>
+#include <cstdint>
 #include <string_view>
 
 namespace kn
@@ -23,13 +25,6 @@ struct Color
      * @brief The alpha value [0, 255]
      */
     uint8_t a = 255;
-
-    constexpr Color() = default;
-
-    constexpr Color(uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha = 255)
-        : r(red), g(green), b(blue), a(alpha)
-    {
-    }
 
     operator SDL_Color() const { return SDL_Color{r, g, b, a}; }
 };
