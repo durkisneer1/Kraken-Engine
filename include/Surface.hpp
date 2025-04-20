@@ -9,7 +9,7 @@ namespace math
 {
 class Vec2;
 } // namespace math
-class Rect;
+struct Rect;
 struct Color;
 
 class Surface

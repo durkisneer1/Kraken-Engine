@@ -9,7 +9,7 @@ namespace math
 class Vec2;
 }
 class Surface;
-class Rect;
+struct Rect;
 
 class Mask
 {

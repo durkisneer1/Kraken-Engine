@@ -12,7 +12,7 @@
 namespace kn
 {
 
-struct Layer;
+class Layer;
 struct Group;
 struct Rect;
 
@@ -65,7 +65,7 @@ class Layer
      */
     std::vector<Tile> tiles;
 
-    Layer() = default;
+    Layer() = delete;
     Layer(Type type, bool isVisible, const std::string& name,
           const std::shared_ptr<Texture>& tileSetTexture);
     ~Layer() = default;
