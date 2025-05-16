@@ -15,6 +15,35 @@ bool Rect::collidePoint(const math::Vec2& pos) const
 }
 
 bool Rect::collideRect(const Rect& rect) const { return SDL_HasIntersectionF(this, &rect); }
+bool Rect::collideCircle(Vec2 center, float radius) const
+{
+    Vec2 circle_distance;
+    circle_distance.x = abs(center.x - x);
+    circle_distance.y = abs(center.y - y);
+
+    if (circle_distance.x > (w / 2 + radius))
+    {
+        return false;
+    }
+    if (circle_distance.y > (h / 2 + radius))
+    {
+        return false;
+    }
+
+    if (circle_distance.x <= (w / 2))
+    {
+        return true;
+    }
+    if (circle_distance.y <= (h / 2))
+    {
+        return true;
+    }
+
+    float corner_distance_squared =
+        (circle_distance.x - w / 2) ^ 2 + (circle_distance.y - h / 2) ^ 2;
+
+    return (corner_distance_squared <= (radius * radius));
+}
 
 void Rect::clamp(const math::Vec2& min, const math::Vec2& max)
 {
