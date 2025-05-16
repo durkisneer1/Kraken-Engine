@@ -81,6 +81,17 @@ struct Rect : SDL_FRect
     [[nodiscard]] bool collideRect(const Rect& rect) const;
 
     /**
+     * @brief Check if the rectangle collides with a circle.
+     *
+     * @param center The center coordinates of the circle to check.
+     *
+     * @param radius The radius of the circle to check.
+     *
+     * @return Whether the rectangle collides with a circle.
+     */
+    [[nodiscard]] bool collideCircle(Vec2 center, float radius) const;
+
+    /**
      * @brief Clamp the rectangle within two points.
      *
      * @param min The minimum value.
@@ -97,7 +108,7 @@ struct Rect : SDL_FRect
 
     /**
      * @brief Scale the rectangle by a factor.
-     * 
+     *
      * @param factor The factor to scale by.
      */
     void scaleBy(float factor);
